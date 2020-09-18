@@ -81,6 +81,41 @@ th {
 	-o-user-select: none;
 }
 
+#coalition {
+	position: absolute;
+	margin-top: 370px;
+	border: none;
+	padding: 10px;
+	background-color: #d4d4d4;
+	color: #a3a3a3;
+	border-radius: 5px;
+	font-size: 14px;
+	font-weight: bold;
+	
+	width: 100px;
+	left: 50%;
+	margin-left: -50px;
+	
+	user-select: none;
+    -moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+}
+
+#coalition:hover {
+	filter: brightness(90%);
+}
+
+#coalition:active {
+	filter: brightness(80%);
+	top: 2px;
+}
+
+#coalition:focus {
+	outline: 0;
+}
+
 *::-webkit-scrollbar {
 	width: 5px;
 }

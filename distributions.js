@@ -16,7 +16,8 @@ dists.push({
 		{name:"SGP",amt:3},
 		{name:"PVV",amt:20},
 		{name:"FvD",amt:2},
-	]
+	],
+	coalition: ["D66","CU","CDA","VVD"],
 });
 
 dists.push({
@@ -33,7 +34,8 @@ dists.push({
 		{name:"VVD",amt:41},
 		{name:"SGP",amt:3},
 		{name:"PVV",amt:15},
-	]
+	],
+	coalition: ["VVD","PvdA"],
 });
 
 dists.push({
@@ -49,7 +51,8 @@ dists.push({
 		{name:"VVD",amt:31},
 		{name:"SGP",amt:2},
 		{name:"PVV",amt:24},
-	]
+	],
+	coalition: ["VVD","CDA","PVV"],
 });
 
 dists.push({
@@ -65,7 +68,8 @@ dists.push({
 		{name:"VVD",amt:22},
 		{name:"SGP",amt:2},
 		{name:"PVV",amt:9},
-	]
+	],
+	coalition: ["PvdA","CDA","CU"],
 });
 
 dists.push({
@@ -80,7 +84,8 @@ dists.push({
 		{name:"VVD",amt:28},
 		{name:"SGP",amt:2},
 		{name:"LPF",amt:8},
-	]
+	],
+	coalition: ["D66","CDA","VVD"],
 });
 
 dists.push({
@@ -96,7 +101,8 @@ dists.push({
 		{name:"SGP",amt:2},
 		{name:"LN",amt:2},
 		{name:"LPF",amt:26},
-	]
+	],
+	coalition: ["CDA","LPF","VVD"],
 });
 
 dists.push({
@@ -111,7 +117,8 @@ dists.push({
 		{name:"CDA",amt:29},
 		{name:"VVD",amt:38},
 		{name:"SGP",amt:3},
-	]
+	],
+	coalition: ["PvdA","VVD","D66"],
 });
 
 dists.push({
@@ -129,7 +136,8 @@ dists.push({
 		{name:"VVD",amt:31},
 		{name:"CD",amt:3},
 		{name:"SGP",amt:2},
-	]
+	],
+	coalition: ["PvdA","VVD","D66"],
 });
 
 dists.push({
@@ -144,7 +152,8 @@ dists.push({
 		{name:"VVD",amt:22},
 		{name:"CD",amt:1},
 		{name:"SGP",amt:3},
-	]
+	],
+	coalition: ["CDA","PvdA"],
 });
 
 dists.push({
@@ -159,7 +168,8 @@ dists.push({
 		{name:"CDA",amt:54},
 		{name:"VVD",amt:27},
 		{name:"SGP",amt:3},
-	]
+	],
+	coalition: ["CDA","VVD"],
 });
 
 dists.push({
@@ -177,7 +187,8 @@ dists.push({
 		{name:"VVD",amt:36},
 		{name:"CP",amt:1},
 		{name:"SGP",amt:3},
-	]
+	],
+	coalition: ["CDA","VVD"],
 });
 
 dists.push({
@@ -193,7 +204,8 @@ dists.push({
 		{name:"CDA",amt:48},
 		{name:"VVD",amt:26},
 		{name:"SGP",amt:3},
-	]
+	],
+	coalition: ["CDA","D66","PvdA"],
 });
 
 dists.push({
@@ -210,7 +222,8 @@ dists.push({
 		{name:"VVD",amt:28},
 		{name:"BP",amt:1},
 		{name:"SGP",amt:3},
-	]
+	],
+	coalition: ["CDA","VVD"],
 });
 
 dists.push({
@@ -230,7 +243,8 @@ dists.push({
 		{name:"BP",amt:3},
 		{name:"RKPN",amt:1},
 		{name:"SGP",amt:3},
-	]
+	],
+	coalition: ["PvdA","KVP","ARP","PPR","D66"],
 });
 
 dists.push({
@@ -250,7 +264,8 @@ dists.push({
 		{name:"VVD",amt:16},
 		{name:"BP",amt:1},
 		{name:"SGP",amt:3},
-	]
+	],
+	coalition: ["KVP","VVD","ARP","CHU","DS'70"],
 });
 
 dists.push({
@@ -267,7 +282,8 @@ dists.push({
 		{name:"VVD",amt:17},
 		{name:"BP",amt:7},
 		{name:"SGP",amt:3},
-	]
+	],
+	coalition: ["KVP","VVD","ARP","CHU"],
 });
 
 dists.push({
@@ -283,7 +299,8 @@ dists.push({
 		{name:"VVD",amt:16},
 		{name:"BP",amt:3},
 		{name:"SGP",amt:3},
-	]
+	],
+	coalition: ["KVP","VVD","ARP","CHU"],
 });
 
 dists.push({
@@ -297,5 +314,6 @@ dists.push({
 		{name:"CHU",amt:12},
 		{name:"VVD",amt:19},
 		{name:"SGP",amt:3},
-	]
+	],
+	coalition: ["KVP","VVD","ARP","CHU"],
 });

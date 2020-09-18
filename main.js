@@ -11,9 +11,17 @@ var lastScrollY = 0;
 
 var currentYear = 2017;
 var highlighted = null;
+var coalition = false;
+var coAmt = 0;
 
 function update() {
 	ctx.clearRect(0,0,c.width,c.height);
+	
+	if (coalition) {
+		coAmt = (19 * coAmt + 1) / 20;
+	} else {
+		coAmt *= 0.98;
+	}
 	
 	drawSeats();
 	drawYearMenu();
@@ -66,15 +74,17 @@ function setSeats(year) {
 function drawSeats(dist) {
 	// draw seats
 	for (seat of seats) {
+		let dim = !getDist(currentYear).coalition.includes(seat.party.name);
+		
 		// determine size
 		if (highlighted) {
 			if (highlighted == seat.party.name) {
-				seat.size = ((14 * seat.size) + 25) / 15;
+				seat.size = ((9 * seat.size) + 25) / 10;
 			} else {
-				seat.size = ((14 * seat.size) + 7) / 15;
+				seat.size = ((9 * seat.size) + 7) / 10;
 			}
 		} else {
-			seat.size = ((14 * seat.size) + 18) / 15;
+			seat.size = ((9 * seat.size) + 18) / 10;
 		}
 		
 		let distToMouse = distanceToMouse(seat.x, seat.y);
@@ -84,18 +94,20 @@ function drawSeats(dist) {
 		let pushY = (seat.y - mouseY)*1;
 		pushX *= 2.5 * (0.07*distToMouse) * (2.7 ** -(0.07*distToMouse));
 		pushY *= 2.5 * (0.07*distToMouse) * (2.7 ** -(0.07*distToMouse));
-		vx += pushX;
-		vy += pushY;
+		vx += pushX * (dim ? 1-coAmt : 1);
+		vy += pushY * (dim ? 1-coAmt : 1);
 		seat.tx = (3*seat.tx + vx)/4;
 		seat.ty = (3*seat.ty + vy)/4;
 		
 		let visualSize = seat.size;
 		if (distToMouse < 80) {
-			visualSize = seat.size + 0.5*(80-distToMouse);
+			visualSize = seat.size + (0.5*(80-distToMouse))*(dim ? 1-coAmt : 1);
+		}
+		if (dim) {
+			visualSize *= 1 - coAmt/4;
 		}
 		
 		// draw circle
-		ctx.fillStyle = seat.party.color;
 		ctx.fillStyle = seat.party.color;
 		ctx.beginPath();
 		ctx.arc(
@@ -117,6 +129,24 @@ function drawSeats(dist) {
 				0.78*visualSize*2
 			);
 		}
+		
+		if (dim) {
+			ctx.globalAlpha = coAmt;
+		} else {
+			ctx.globalAlpha = 0;
+		}
+		
+		ctx.fillStyle = "#FFFFFFCC";
+		ctx.beginPath();
+		ctx.arc(
+			seat.tx,
+			seat.ty,
+			visualSize + 1,
+			0,
+			2*Math.PI
+		);
+		ctx.fill();
+		ctx.globalAlpha = 1;
 	}
 }
 
@@ -194,6 +224,13 @@ function table(year) {
 }
 
 function highlight(name) {
+	if (name) {
+		coalition = false;
+		let button = document.getElementById("coalition");
+		button.style.backgroundColor = "#d4d4d4";
+		button.style.color = "#a3a3a3";
+	}
+	
 	highlighted = name;
 }
 
@@ -217,6 +254,20 @@ function distanceToMouse(x, y) {
 
 function sortByDistance(a, b) {
 	return distanceToMouse(b.x, b.y) - distanceToMouse(a.x, a.y);
+}
+
+function toggleCoalition() {
+	coalition = !coalition;
+	
+	let button = document.getElementById("coalition");
+	
+	if (coalition) {
+		button.style.backgroundColor = "#a2e0f5";
+		button.style.color = "#000000";
+	} else {
+		button.style.backgroundColor = "#d4d4d4";
+		button.style.color = "#a3a3a3";
+	}
 }
 
 window.addEventListener("mousemove", function(evt) {
