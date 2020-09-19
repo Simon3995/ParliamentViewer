@@ -121,13 +121,15 @@ function drawSeats(dist) {
 		pushY *= 2.5 * (0.07*distToMouse) * (2.7 ** -(0.07*distToMouse));
 		vx += pushX * (dim ? 1-coAmt : 1);	// add push to visual coords
 		vy += pushY * (dim ? 1-coAmt : 1);
-		seat.tx = (3*seat.tx + vx)/4;
+		seat.tx = (3*seat.tx + vx)/4;		// trail towards visual coords
 		seat.ty = (3*seat.ty + vy)/4;
 		
 		let visualSize = seat.size;
+		// increase visual size if mouse is close
 		if (distToMouse < 80) {
 			visualSize = seat.size + (0.5*(80-distToMouse))*(dim ? 1-coAmt : 1);
 		}
+		// make seat smaller if dimmed
 		if (dim) {
 			visualSize *= 1 - coAmt/4;
 		}
@@ -144,7 +146,7 @@ function drawSeats(dist) {
 		);
 		ctx.fill();
 		
-		// draw img
+		// draw img / party logo
 		if (imgs[seat.party.name]) {
 			ctx.drawImage(
 				imgs[seat.party.name],
@@ -161,6 +163,7 @@ function drawSeats(dist) {
 			ctx.globalAlpha = 0;
 		}
 		
+		// draw half transparent white circle over dimmed seats
 		ctx.fillStyle = "#FFFFFFCC";
 		ctx.beginPath();
 		ctx.arc(
@@ -213,13 +216,14 @@ function drawYearMenu() {
 
 function table(year) {
 	let string = "";
-	let dist = getDist(year);
+	let dist = getDist(year); // distribution
 	
 	string += `<table>`;
 	
 	let listCopy = [...dist.involved];
 	listCopy.sort((a,b)=>b.amt-a.amt);
 	
+	// write all table HTML to a string
 	for (let party of listCopy) {
 		string += '<tr class="tablerow" onmouseover="highlight(`'+party.name+'`)">';
 		string += "<td width='100px'>" + party.name + "</td>";
@@ -245,20 +249,23 @@ function table(year) {
 	}
 	string += "</table>";
 	
+	// insert HTML string into document
 	document.getElementById("table").innerHTML = string;
 }
 
+// highlights party with given name
 function highlight(name) {
 	if (name) {
-		coalition = false;
+		coalition = false; // disable coalition view when party is highlighted
 		let button = document.getElementById("coalition");
 		button.style.backgroundColor = "#d4d4d4";
 		button.style.color = "#a3a3a3";
 	}
 	
-	highlighted = name;
+	highlighted = name; // set highlight
 }
 
+// returns party with given name
 function getParty(name) {
 	for (let party of parties) {
 		if (party.name == name) return party;
@@ -266,6 +273,7 @@ function getParty(name) {
 	return null;
 }
 
+// returns seat distribution of given year
 function getDist(year) {
 	for (let dist of dists) {
 		if (dist.year == year) return dist;
@@ -273,19 +281,23 @@ function getDist(year) {
 	return null;
 }
 
+// returns distance to mouse from given point
 function distanceToMouse(x, y) {
 	return Math.sqrt((x - mouseX)**2 + (y - mouseY)**2);
 }
 
+// sorts given objects by distance from mouse
 function sortByDistance(a, b) {
 	return distanceToMouse(b.x, b.y) - distanceToMouse(a.x, a.y);
 }
 
+// toggles coalition view
 function toggleCoalition() {
 	coalition = !coalition;
 	
 	let button = document.getElementById("coalition");
 	
+	// change button color in CSS
 	if (coalition) {
 		button.style.backgroundColor = "#a2e0f5";
 		button.style.color = "#000000";
@@ -295,6 +307,7 @@ function toggleCoalition() {
 	}
 }
 
+// make sure highlight it set to null when mouse hovers outside table
 function fixTableEventListeners() {
 	window.addEventListener("mouseover", function(evt) {
 		highlight(null);
@@ -306,13 +319,17 @@ function fixTableEventListeners() {
 	});
 }
 
+// mousemove event
 window.addEventListener("mousemove", function(evt) {
 	let rect = document.getElementById("myCanvas").getBoundingClientRect();
+	// update mouse coordinates
 	mouseX = evt.clientX - rect.left;
 	mouseY = evt.clientY - rect.top;
+	// sort seats by distance from mouse
 	seats.sort(sortByDistance);
 }, false);
 
+// mousedown event
 window.addEventListener("mousedown", function(evt) {
 	// arrow left
 	if (Math.sqrt((mouseX - 475)**2 + (mouseY - 485)**2) <= 27) {
@@ -341,10 +358,12 @@ window.addEventListener("mousedown", function(evt) {
 	}
 }, false);
 
+// fit table in screen height
 window.onload = function() {
 	document.getElementById("table").style.height = window.innerHeight - 560 + "px";
 }
 
+// fit table in screen height
 window.onresize = function() {
 	document.getElementById("table").style.height = window.innerHeight - 560 + "px";
 }
