@@ -6,33 +6,33 @@ var seats = [];
 
 var mouseX = 0;
 var mouseY = 0;
-var lastScrollX = 0;
-var lastScrollY = 0;
 
-var currentYear = 2017;
-var highlighted = null;
-var coalition = false;
-var coAmt = 0;
+var currentYear = 2017;		// i think you can guess what this one does
+var highlighted = null;		// party hovered over in table
+var coalition = false;		// coalition view toggled
+var coAmt = 0;				// variable for smooth transition in coalition view
 
 function update() {
+	// clear screen
 	ctx.clearRect(0,0,c.width,c.height);
 	
+	// smooth transition between coalition enabled and disabled
 	if (coalition) {
 		coAmt = (19 * coAmt + 1) / 20;
 	} else {
 		coAmt *= 0.98;
 	}
 	
+	// graphics on canvas
 	drawSeats();
 	drawYearMenu();
 	
 	window.requestAnimationFrame(update);
 }
 
-setSeats(currentYear);
-table(currentYear);
-fixTableEventListeners();
-update();
+setSeats(currentYear);		// calculate seat layout
+table(currentYear);			// print table with data	
+update();					// start update loop
 
 function setSeats(year) {
 	seats = [];
@@ -71,8 +71,8 @@ function setSeats(year) {
 	}
 }
 
+// draw seats on canvas
 function drawSeats(dist) {
-	// draw seats
 	for (seat of seats) {
 		let dim = !getDist(currentYear).coalition.includes(seat.party.name);
 		
@@ -277,13 +277,6 @@ window.addEventListener("mousemove", function(evt) {
 	seats.sort(sortByDistance);
 }, false);
 
-window.addEventListener("scroll", function(evt) {
-	mouseX += window.scrollX - lastScrollX;
-	mouseY += window.scrollY - lastScrollY;
-	lastScrollX = window.scrollX;
-	lastScrollY = window.scrollY;
-}, false);
-
 window.addEventListener("mousedown", function(evt) {
 	// arrow left
 	if (Math.sqrt((mouseX - 475)**2 + (mouseY - 485)**2) <= 27) {
@@ -311,17 +304,6 @@ window.addEventListener("mousedown", function(evt) {
 		}
 	}
 }, false);
-
-function fixTableEventListeners() {
-	window.addEventListener("mouseover", function(evt) {
-		highlight(null);
-	}, false);
-	document.querySelectorAll('.tablerow').forEach(item => {
-		item.addEventListener("mouseover", function (evt) {
-			evt.stopPropagation();
-		});
-	});
-}
 
 window.onload = function() {
 	document.getElementById("table").style.height = window.innerHeight - 560 + "px";
