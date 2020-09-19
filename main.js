@@ -32,7 +32,8 @@ function update() {
 }
 
 setSeats(currentYear);		// calculate seat layout
-table(currentYear);			// print table with data	
+table(currentYear);			// print table with data
+fixTableEventListeners();	// highlight null when mouse is outside table
 update();					// start update loop
 
 // calculate seat layout for given year
@@ -99,22 +100,26 @@ function drawSeats(dist) {
 		// determine size
 		if (highlighted) {
 			if (highlighted == seat.party.name) {
+				// highlighted seat; bigger size
 				seat.size = ((9 * seat.size) + 25) / 10;
 			} else {
+				// non highlighted seat; smaller size
 				seat.size = ((9 * seat.size) + 7) / 10;
 			}
 		} else {
+			// no highlight, all seats have same size
 			seat.size = ((9 * seat.size) + 18) / 10;
 		}
 		
 		let distToMouse = distanceToMouse(seat.x, seat.y);
-		let vx = seat.x;
+		let vx = seat.x;					// 'visual' coords, real coords aren't affected
 		let vy = seat.y;
-		let pushX = (seat.x - mouseX)*1;
+		let pushX = (seat.x - mouseX)*1;	// amount to push seat away
 		let pushY = (seat.y - mouseY)*1;
+											// push amt changes based on distance to mouse
 		pushX *= 2.5 * (0.07*distToMouse) * (2.7 ** -(0.07*distToMouse));
 		pushY *= 2.5 * (0.07*distToMouse) * (2.7 ** -(0.07*distToMouse));
-		vx += pushX * (dim ? 1-coAmt : 1);
+		vx += pushX * (dim ? 1-coAmt : 1);	// add push to visual coords
 		vy += pushY * (dim ? 1-coAmt : 1);
 		seat.tx = (3*seat.tx + vx)/4;
 		seat.ty = (3*seat.ty + vy)/4;
@@ -288,6 +293,17 @@ function toggleCoalition() {
 		button.style.backgroundColor = "#d4d4d4";
 		button.style.color = "#a3a3a3";
 	}
+}
+
+function fixTableEventListeners() {
+	window.addEventListener("mouseover", function(evt) {
+		highlight(null);
+	}, false);
+	document.querySelectorAll('.tablerow').forEach(item => {
+		item.addEventListener("mouseover", function (evt) {
+			evt.stopPropagation();
+		});
+	});
 }
 
 window.addEventListener("mousemove", function(evt) {
