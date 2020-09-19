@@ -12,6 +12,7 @@ var highlighted = null;		// party hovered over in table
 var coalition = false;		// coalition view toggled
 var coAmt = 0;				// variable for smooth transition in coalition view
 
+// main update loop
 function update() {
 	// clear screen
 	ctx.clearRect(0,0,c.width,c.height);
@@ -34,10 +35,27 @@ setSeats(currentYear);		// calculate seat layout
 table(currentYear);			// print table with data	
 update();					// start update loop
 
+// calculate seat layout for given year
 function setSeats(year) {
-	seats = [];
 	let dist = getDist(year);
 	let colors = [];
+	/* colors is a 2D array, first index is row,
+	 * 2nd index is seat within row. contains only
+	 * the party name. yes "colors" is kind of an
+	 * odd name for this but I don't feel like
+	 * changing it.
+	 */
+	 seats = [];
+	 /* seats is basically an extended version of
+	  * colors that now also contains the coordinates
+	  * (real x/y, and trailing coords for smooth animation
+	  * tx/ty) and the size. I don't really remember
+	  * why I implemented it this way but it works so ¯\_(ツ)_/¯
+	  * 
+	  * I might make this solution more elegant in the future
+	  */
+	
+	// make 2D array
 	for (let i=0; i<7; i++) colors[i] = [];
 	
 	// create distribution of seats over rows
@@ -57,6 +75,7 @@ function setSeats(year) {
 		}
 	}
 	
+	// calculate coordinates and set size
 	for (let i=0; i<=7; i++) {
 		for (let j=0; j<rows[i]; j++) {
 			seats.push({
@@ -74,6 +93,7 @@ function setSeats(year) {
 // draw seats on canvas
 function drawSeats(dist) {
 	for (seat of seats) {
+		// true if current seat is NOT part of coalition (seat should be dimmed)
 		let dim = !getDist(currentYear).coalition.includes(seat.party.name);
 		
 		// determine size
