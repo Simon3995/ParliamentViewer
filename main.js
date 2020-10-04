@@ -1,7 +1,10 @@
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 
-var rows = [30,26,24,21,19,16,14];
+var rows = [];
+rows[150] = [30,26,24,21,19,16,14];
+rows[100] = [23,20,18,15,13,11];
+rows[68]  = [18,16,14,11,9];
 var seats = [];
 
 var mouseX = 0;
@@ -64,11 +67,11 @@ function setSeats(year) {
 	// create distribution of seats over rows
 	for (party of dist.involved) {
 		for (let k=0; k<party.amt; k++) {
-			let proportion = (1 / rows[0])*colors[0].length;
+			let proportion = (1 / rows[150][0])*colors[0].length;
 			let index = 0;
 			for (let i=1; i<7; i++) {
-				if ((1 / rows[i])*colors[i].length < proportion) {
-					proportion = (1 / rows[i])*colors[i].length;
+				if ((1 / rows[150][i])*colors[i].length < proportion) {
+					proportion = (1 / rows[150][i])*colors[i].length;
 					index = i;
 				}
 			}
@@ -80,13 +83,13 @@ function setSeats(year) {
 	
 	// calculate coordinates and set size
 	for (let i=0; i<=7; i++) {
-		for (let j=0; j<rows[i]; j++) {
+		for (let j=0; j<rows[150][i]; j++) {
 			seats.push({
 				party: colors[i][j].party,
-				x: c.width/2 + (450-42*i)*Math.cos(Math.PI - Math.PI*j/(rows[i]-1)),
-				y: 500 - (450-42*i)*Math.sin(Math.PI - Math.PI*j/(rows[i]-1)),
-				tx: c.width/2 + (450-42*i)*Math.cos(Math.PI - Math.PI*j/(rows[i]-1)),
-				ty: 500 - (450-42*i)*Math.sin(Math.PI - Math.PI*j/(rows[i]-1)),
+				x: c.width/2 + (450-42*i)*Math.cos(Math.PI - Math.PI*j/(rows[150][i]-1)),
+				y: 500 - (450-42*i)*Math.sin(Math.PI - Math.PI*j/(rows[150][i]-1)),
+				tx: c.width/2 + (450-42*i)*Math.cos(Math.PI - Math.PI*j/(rows[150][i]-1)),
+				ty: 500 - (450-42*i)*Math.sin(Math.PI - Math.PI*j/(rows[150][i]-1)),
 				size: 18,
 			});
 		}
