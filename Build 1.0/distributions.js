@@ -1,4 +1,4 @@
-var dists = [];
+let dists = [];
 
 dists.push({ //peilingwijzer 31 oktober
 	year: 9999,

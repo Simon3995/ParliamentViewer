@@ -1,5 +1,5 @@
 // draw seats on canvas
-function drawSeats(dist) {
+const drawSeats = function(dist) {
 	for (seat of seats) {
 		// true if current seat is NOT part of coalition (seat should be dimmed)
 		let dim = !getDist(currentYear).coalition.includes(seat.party.name);
@@ -86,7 +86,7 @@ function drawSeats(dist) {
 	}
 }
 
-function drawYearMenu() {
+const drawYearMenu = function() {
 	if (currentYear == 9999) {
       	// Peilingwijzer 31 okt 2023
       	ctx.fillStyle = "#0390fc";
@@ -135,7 +135,7 @@ function drawYearMenu() {
 	ctx.drawImage(arrow_right, 710, 470, 30, 30);
 }
 
-function table(year) {
+const table = function(year) {
 	let string = "";
 	let dist = getDist(year); // distribution
 	

@@ -1,5 +1,5 @@
 // make sure highlight it set to null when mouse hovers outside table
-function fixTableEventListeners() {
+const fixTableEventListeners = function() {
 	window.addEventListener("mouseover", function(evt) {
 		highlight(null);
 	}, false);

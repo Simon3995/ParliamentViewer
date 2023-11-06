@@ -19,7 +19,7 @@ let coAmt = 0;				// variable for smooth transition in coalition view
 let lang = "nl";
 
 // main update loop
-function update() {
+const update = function() {
 	// clear screen
 	ctx.clearRect(0,0,c.width,c.height);
 	
@@ -34,7 +34,7 @@ function update() {
 	drawSeats();
 	drawYearMenu();
 	
-	window.requestAnimationFrame(update);
+	requestAnimationFrame(update);
 }
 
 setSeats(currentYear);		// calculate seat layout

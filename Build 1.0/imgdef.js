@@ -1,4 +1,4 @@
-var imgs = [];
+let imgs = [];
 
 imgs["NSC"] = new Image();
 imgs["NSC"].src = "logos/NSC.png";
