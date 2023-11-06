@@ -81,26 +81,28 @@ th {
 	-o-user-select: none;
 }
 
-#coalition {
-	position: absolute;
-	margin-top: 370px;
+button {
 	border: none;
 	padding: 10px;
-	background-color: #d4d4d4;
-	color: #a3a3a3;
 	border-radius: 5px;
 	font-size: 14px;
 	font-weight: bold;
-	
-	width: 100px;
-	left: 50%;
-	margin-left: -50px;
-	
 	user-select: none;
     -moz-user-select: none;
 	-khtml-user-select: none;
 	-webkit-user-select: none;
 	-o-user-select: none;
+	cursor: pointer;
+}
+
+#coalition {
+	position: absolute;
+	margin-top: 375px;
+	width: 100px;
+	left: calc(50% - 50px);
+	margin-left: -50px;
+	background-color: #d4d4d4;
+	color: #a3a3a3;
 }
 
 #coalition:hover {
@@ -112,8 +114,24 @@ th {
 	top: 2px;
 }
 
-#coalition:focus {
+button:focus {
 	outline: 0;
+}
+
+#language {
+	position: absolute;
+	margin-top: 375px;
+	width: 80px;
+	left: calc(50% + 10px);
+}
+
+#language:hover {
+	background-color: #a2e0f5;
+}
+
+#language:active {
+	top: 2px;
+	filter: brightness(80%);
 }
 
 *::-webkit-scrollbar {

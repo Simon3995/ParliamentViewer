@@ -15,7 +15,8 @@ function drawSeats(dist) {
 			}
 		} else {
 			// no highlight, all seats have same size
-			seat.size = ((9 * seat.size) + 18) / 10;
+			let size = (seatAmt == 150) ? 18 : (seatAmt == 100) ? 22 : 22;
+			seat.size = ((9 * seat.size) + size) / 10;
 		}
 		
 		let distToMouse = distanceToMouse(seat.x, seat.y);
@@ -86,16 +87,29 @@ function drawSeats(dist) {
 }
 
 function drawYearMenu() {
-	// "Tweede Kamerverkiezingen"
-	ctx.fillStyle = "#111";
-	ctx.font = "bold 16px Arial";
-	ctx.textAlign = "center";
-	ctx.fillText("TWEEDE KAMERVERKIEZINGEN", c.width/2, 440);
-	
-	// draw year text
-	ctx.fillStyle = "#000";
-	ctx.font = "80px Arial";
-	ctx.fillText(currentYear, c.width/2, 510);
+	if (currentYear == 9999) {
+      	// Peilingwijzer 31 okt 2023
+      	ctx.fillStyle = "#0390fc";
+		ctx.font = "bold 16px Arial";
+		ctx.textAlign = "center";
+		ctx.fillText((lang=="nl")?"Peilingwijzer 31 oktober 2023":"Combined polling 31 october 2023", c.width/2, 440);
+		
+		// draw year text
+		ctx.fillStyle = "#0390fc";
+		ctx.font = "80px Arial";
+		ctx.fillText("----", c.width/2, 510);
+    } else {
+		// "Tweede Kamerverkiezingen"
+		ctx.fillStyle = "#111";
+		ctx.font = "bold 16px Arial";
+		ctx.textAlign = "center";
+		ctx.fillText((lang=="nl")?"TWEEDE KAMERVERKIEZINGEN":"GENERAL ELECTIONS", c.width/2, 440);
+		
+		// draw year text
+		ctx.fillStyle = "#000";
+		ctx.font = "80px Arial";
+		ctx.fillText(currentYear, c.width/2, 510);
+	}
 	
 	// arrow button circles
 	ctx.beginPath();
@@ -140,7 +154,20 @@ function table(year) {
 
 		let previous = dists[dists.indexOf(dist)+1];
 		if (previous == null || previous.involved.filter(a=>a.name==party.name).length == 0) {
-			string += new_sprite.outerHTML + "Nieuw";
+			// merger
+			if  (party.name == "GL-PvdA") {
+				let prv_amt = previous.involved.filter(a=>a.name=="GL")[0].amt;
+				prv_amt += previous.involved.filter(a=>a.name=="PvdA")[0].amt;
+				if (prv_amt == party.amt) {
+					string += nch_sprite.outerHTML + "0";
+				} else if (prv_amt < party.amt) {
+					string += inc_sprite.outerHTML + "+ "+(party.amt - prv_amt);
+				} else {
+					string += dec_sprite.outerHTML + "- "+(prv_amt - party.amt);
+				}
+			} else {
+				string += new_sprite.outerHTML + (lang=="nl"?"Nieuw":"New");
+			}
 		} else {
 			previous = previous.involved.filter(a=>a.name==party.name)[0];
 			if (previous.amt == party.amt) {

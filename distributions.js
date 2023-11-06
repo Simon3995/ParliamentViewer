@@ -1,5 +1,51 @@
 var dists = [];
 
+dists.push({ //peilingwijzer 31 oktober
+	year: 9999,
+	involved: [
+      	{name:"SP",amt:5},
+		{name:"PvdD",amt:7},
+		{name:"GL-PvdA",amt:24},
+		{name:"DENK",amt:3},
+		{name:"Volt",amt:4},
+		{name:"D66",amt:7},
+		{name:"CU",amt:4},
+		{name:"NSC",amt:27},
+		{name:"CDA",amt:4},
+		{name:"BBB",amt:12},
+		{name:"VVD",amt:27},
+		{name:"SGP",amt:3},
+		{name:"JA21",amt:2},
+		{name:"PVV",amt:17},
+		{name:"FvD",amt:4},
+	],
+	coalition: [],
+});
+
+dists.push({
+	year: 2021,
+	involved: [
+		{name:"BIJ1",amt:1},
+		{name:"SP",amt:9},
+		{name:"PvdD",amt:6},
+		{name:"GL",amt:8},
+		{name:"PvdA",amt:9},
+		{name:"DENK",amt:3},
+		{name:"Volt",amt:3},
+		{name:"D66",amt:24},
+		{name:"CU",amt:5},
+		{name:"50PLUS",amt:1},
+		{name:"CDA",amt:15},
+		{name:"BBB",amt:1},
+		{name:"VVD",amt:34},
+		{name:"SGP",amt:3},
+		{name:"JA21",amt:3},
+		{name:"PVV",amt:17},
+		{name:"FvD",amt:8},
+	],
+	coalition: ["D66","CU","CDA","VVD"],
+});
+
 dists.push({
 	year: 2017,
 	involved: [
@@ -185,8 +231,8 @@ dists.push({
 		{name:"RPF",amt:2},
 		{name:"CDA",amt:45},
 		{name:"VVD",amt:36},
-		{name:"CP",amt:1},
 		{name:"SGP",amt:3},
+		{name:"CP",amt:1},
 	],
 	coalition: ["CDA","VVD"],
 });
@@ -316,4 +362,79 @@ dists.push({
 		{name:"SGP",amt:3},
 	],
 	coalition: ["KVP","VVD","ARP","CHU"],
+});
+
+dists.push({
+	year: 1956,
+	involved: [
+		{name:"CPN",amt:4},
+		{name:"PvdA",amt:34},
+		{name:"KVP",amt:33},
+		{name:"ARP",amt:10},
+		{name:"CHU",amt:8},
+		{name:"VVD",amt:9},
+		{name:"SGP",amt:2},
+	],
+	coalition: ["PvdA","KVP","ARP","CHU"],
+});
+
+dists.push({
+	year: 1952,
+	involved: [
+		{name:"CPN",amt:6},
+		{name:"PvdA",amt:30},
+		{name:"KVP",amt:30},
+		{name:"ARP",amt:12},
+		{name:"CHU",amt:9},
+		{name:"VVD",amt:9},
+		{name:"KNP",amt:2},
+		{name:"SGP",amt:2},
+	],
+	coalition: ["PvdA","KVP","ARP","CHU"],
+});
+
+dists.push({
+	year: 1948,
+	involved: [
+		{name:"CPN",amt:8},
+		{name:"PvdA",amt:27},
+		{name:"KVP",amt:32},
+		{name:"ARP",amt:13},
+		{name:"CHU",amt:9},
+		{name:"VVD",amt:8},
+		{name:"LW",amt:1},
+		{name:"SGP",amt:2},
+	],
+	coalition: ["PvdA","KVP","VVD","CHU"],
+});
+
+dists.push({
+	year: 1946,
+	involved: [
+		{name:"CPN",amt:10},
+		{name:"PvdA",amt:29},
+		{name:"KVP",amt:32},
+		{name:"ARP",amt:13},
+		{name:"CHU",amt:8},
+		{name:"PvdV",amt:6},
+		{name:"SGP",amt:2},
+	],
+	coalition: ["PvdA","KVP"],
+});
+
+dists.push({
+	year: 1937,
+	involved: [
+		{name:"CPN",amt:3},
+		{name:"SDAP",amt:23},
+		{name:"VDB",amt:6},
+		{name:"CDU",amt:2},
+		{name:"RKSP",amt:31},
+		{name:"ARP",amt:17},
+		{name:"CHU",amt:8},
+		{name:"LSP",amt:4},
+		{name:"SGP",amt:2},
+		{name:"NSB",amt:4},
+	],
+	coalition: ["RKSP","ARP","CHU"],
 });

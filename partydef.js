@@ -1,6 +1,78 @@
 var parties = [];
 
 parties.push({
+	name: "NSC",
+	fullname: {
+		nl: "Nieuw Sociaal Contract",
+		en: "New Social Contract",
+	},
+	color: "#181d57",
+});
+
+parties.push({
+	name: "BvNL",
+	fullname: {
+		nl: "Belang van Nederland",
+		en: "Interest of the Netherlands",
+	},
+	color: "#001240",
+});
+
+parties.push({
+	name: "GL-PvdA",
+	fullname: {
+		nl: "GroenLinks / Partij van de Arbeid",
+		en: "GreenLeft / Labour Party",
+	},
+	color: "#01af40",
+});
+
+parties.push({
+	name: "Volt",
+	fullname: {
+		nl: "Volt",
+		en: "Volt",
+	},
+	color: "#683ba8",
+});
+
+parties.push({
+	name: "BBB",
+	fullname: {
+		nl: "BoerBurgerBeweging",
+		en: "Farmer-Citizen Movement",
+	},
+	color: "#8fbb1f",
+});
+
+parties.push({
+	name: "JL",
+	fullname: {
+		nl: "Jezus Leeft",
+		en: "Jesus Lives",
+	},
+	color: "#769ccf",
+});
+
+parties.push({
+	name: "BIJ1",
+	fullname: {
+		nl: "BIJ1",
+		en: "BIJ1 (TOGETHER)",
+	},
+	color: "#111111",
+});
+
+parties.push({
+	name: "JA21",
+	fullname: {
+		nl: "Juiste Antwoord 2021",
+		en: "Right Answer 2021",
+	},
+	color: "#21276a",
+});
+
+parties.push({
 	name: "VVD",
 	fullname: {
 		nl: "Volkspartij voor Vrijheid en Democratie",
@@ -42,7 +114,7 @@ parties.push({
 		nl: "Partij voor de Vrijheid",
 		en: "Party for Freedom",
 	},
-	color: "#bfd6ff",
+	color: "#82b2ff",
 });
 
 parties.push({
@@ -103,7 +175,7 @@ parties.push({
 	name: "DENK",
 	fullname: {
 		nl: "DENK",
-		en: "DENK",
+		en: "DENK (THINK)",
 	},
 	color: "#38bfc2",
 });
@@ -121,7 +193,7 @@ parties.push({
 	name: "LPF",
 	fullname: {
 		nl: "Lijst Pim Fortuyn",
-		en: "Pim Fortuyn List",
+		en: "List Pim Fortuyn",
 	},
 	color: "#1849db",
 });
@@ -177,7 +249,7 @@ parties.push({
 		nl: "Unie55+",
 		en: "Union55+",
 	},
-	color: "#64cce3",
+	color: "#4456b3",
 });
 
 parties.push({
@@ -286,4 +358,85 @@ parties.push({
 		en: "New Middle Party",
 	},
 	color: "#bddcf0",
+});
+
+parties.push({
+	name: "KNP",
+	fullname: {
+		nl: "Katholiek Nationale Partij",
+		en: "Catholic National Party",
+	},
+	color: "#40516e",
+});
+
+parties.push({
+	name: "LW",
+	fullname: {
+		nl: "Lijst Welter",
+		en: "List Welter",
+	},
+	color: "#5270a3"
+});
+
+parties.push({
+	name: "PvdV",
+	fullname: {
+		nl: "Partij van de Vrijheid",
+		en: "Freedom Party",
+	},
+	color: "#00806c"
+});
+
+parties.push({
+	name: "RKSP",
+	fullname: {
+		nl: "Roomsch-Katholieke Staatspartij",
+		en: "Roman Catholic State Party",
+	},
+	color: "#3f8de0"
+});
+
+parties.push({
+	name: "SDAP",
+	fullname: {
+		nl: "Sociaal-Democratische Arbeiderspartij",
+		en: "Social Democratic Workers' Party",
+	},
+	color: "#df111b"
+});
+
+parties.push({
+	name: "VDB",
+	fullname: {
+		nl: "Vrijzinnig-Democratische Bond",
+		en: "Free-thinking Democratic League",
+	},
+	color: "#691610"
+});
+
+parties.push({
+	name: "NSB",
+	fullname: {
+		nl: "Nationaal-Socialistische Beweging",
+		en: "National Socialist Movement",
+	},
+	color: "#000000"
+});
+
+parties.push({
+	name: "LSP",
+	fullname: {
+		nl: "Liberale Staatspartij",
+		en: "Liberal State Party",
+	},
+	color: "#103e73"
+});
+
+parties.push({
+	name: "CDU",
+	fullname: {
+		nl: "Christelijk-Democratische Unie",
+		en: "Christian Democratic Union",
+	},
+	color: "#5723b8"
 });

@@ -1,5 +1,29 @@
 var imgs = [];
 
+imgs["NSC"] = new Image();
+imgs["NSC"].src = "logos/NSC.png";
+
+imgs["BvNL"] = new Image();
+imgs["BvNL"].src = "logos/BvNL.png";
+
+imgs["GL-PvdA"] = new Image();
+imgs["GL-PvdA"].src = "logos/GvdL.png";
+
+imgs["BIJ1"] = new Image();
+imgs["BIJ1"].src = "logos/BIJ1.png";
+
+imgs["BBB"] = new Image();
+imgs["BBB"].src = "logos/BBB.png";
+
+imgs["JL"] = new Image();
+imgs["JL"].src = "logos/JL.png";
+
+imgs["Volt"] = new Image();
+imgs["Volt"].src = "logos/Volt.png";
+
+imgs["JA21"] = new Image();
+imgs["JA21"].src = "logos/JA21.png";
+
 imgs["VVD"] = new Image();
 imgs["VVD"].src = "logos/VVD.png";
 
@@ -95,6 +119,33 @@ imgs["RKPN"].src = "logos/RKPN.png";
 
 imgs["NMP"] = new Image();
 imgs["NMP"].src = "logos/NMP.png";
+
+imgs["KNP"] = new Image();
+imgs["KNP"].src = "logos/KNP.png";
+
+imgs["LW"] = new Image();
+imgs["LW"].src = "logos/LW.png";
+
+imgs["PvdV"] = new Image();
+imgs["PvdV"].src = "logos/PvdV.png";
+
+imgs["RKSP"] = new Image();
+imgs["RKSP"].src = "logos/RKSP.png";
+
+imgs["SDAP"] = new Image();
+imgs["SDAP"].src = "logos/SDAP.png";
+
+imgs["VDB"] = new Image();
+imgs["VDB"].src = "logos/VDB.png";
+
+imgs["NSB"] = new Image();
+imgs["NSB"].src = "logos/NSB.png";
+
+imgs["LSP"] = new Image();
+imgs["LSP"].src = "logos/LSP.png";
+
+imgs["CDU"] = new Image();
+imgs["CDU"].src = "logos/CDU.png";
 
 /*******************/
 
