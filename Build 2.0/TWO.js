@@ -20,7 +20,7 @@ TWO._strokeRect = function(x, y, w, h) {
 
 TWO._fillText = function(text, x, y, maxWidth=undefined) {
     this.applyTransformations();
-    maxWidth ? this.fillText(text. x, y, maxWidth) : this.fillText(text, x, y);
+    maxWidth ? this.fillText(text, x, y, maxWidth) : this.fillText(text, x, y);
     this.resetTransform();
 }
 
