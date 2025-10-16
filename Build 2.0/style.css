@@ -7,13 +7,15 @@
 
 #sidebar {
     position: fixed;
-    top: 0vh;
-    left: 66.67vw;
+    top: 0px;
+    right: 0px;
     height: 100vh;
     width: 33.33vw;
     padding: 10px 15px;
+}
 
-    container-type: inline-size;
+#sidebar h1 {
+    margin-bottom: 10px;
 }
 
 #logo {
@@ -28,19 +30,37 @@
 }
 
 table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
     border: 5px solid black;
     filter: drop-shadow(5px 5px 0px black);
-    border-collapse: collapse;
-    width: 100%;
-    position: sticky;
-    right: 5px;
 }
 
-th,
-td {
-    padding: 2px 10px;
-    text-align: center;
+.col_l {
+    width: 100px;
+}
+
+.col_m {
+    width: 100%;
+}
+
+.col_r {
+    width: 60px;
+}
+
+td, th {
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    padding: 2px 0px;
+}
+
+th {
+    color: gold;
+    background-color: #444;
+    font-weight: bold;
 }
 
 tr:nth-child(odd) {
@@ -51,15 +71,14 @@ tr:nth-child(even) {
     background-color: rgb(255, 238, 142);
 }
 
-@container (max-width: 490px) {
-
-    td:nth-child(2),
-    th:nth-child(2) {
-        display: none;
-    }
+@font-face {
+    font-family: Atkinson;
+    src: url(./AtkinsonHyperlegible-Regular.ttf);
+    font-weight: normal;
 }
 
 @font-face {
     font-family: Atkinson;
-    src: url(./AtkinsonHyperlegible-Regular.ttf);
+    src: url(./AtkinsonHyperlegible-Bold.ttf);
+    font-weight: bold;
 }
