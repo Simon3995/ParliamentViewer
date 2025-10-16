@@ -29,6 +29,14 @@
     filter: drop-shadow(5px 5px 0px black);
 }
 
+#logo h1 {
+    margin-bottom: -8px;
+}
+
+#logo h2 {
+    color: #444;
+}
+
 table {
     border-collapse: collapse;
     table-layout: fixed;

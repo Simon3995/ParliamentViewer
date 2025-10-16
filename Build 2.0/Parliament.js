@@ -52,6 +52,17 @@ class Parliament {
                 context.beginPath()
                 context._arc(seat[0], seat[1], r, 0, 4*Math.PI);
                 context.fill();
+
+                if (fraction.party.image) {
+                    let s = 0.027;
+                    context._drawImage(
+                        fraction.party.image,
+                        seat[0] - s,
+                        seat[1] - s,
+                        2*s,
+                        2*s
+                    );
+                }
             }
         }
     }
