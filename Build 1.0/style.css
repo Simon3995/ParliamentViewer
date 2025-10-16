@@ -56,9 +56,9 @@ th {
 	overflow: auto;
 	width: 680px;
 	/*background-color: #ff000022;*/
-	
+
 	user-select: none;
-    -moz-user-select: none;
+	-moz-user-select: none;
 	-khtml-user-select: none;
 	-webkit-user-select: none;
 	-o-user-select: none;
@@ -73,9 +73,9 @@ th {
 	margin-top: 525px;
 	margin-left: -340px;
 	left: 50%;
-	
+
 	user-select: none;
-    -moz-user-select: none;
+	-moz-user-select: none;
 	-khtml-user-select: none;
 	-webkit-user-select: none;
 	-o-user-select: none;
@@ -88,7 +88,7 @@ button {
 	font-size: 14px;
 	font-weight: bold;
 	user-select: none;
-    -moz-user-select: none;
+	-moz-user-select: none;
 	-khtml-user-select: none;
 	-webkit-user-select: none;
 	-o-user-select: none;
@@ -137,9 +137,11 @@ button:focus {
 *::-webkit-scrollbar {
 	width: 5px;
 }
+
 *::-webkit-scrollbar-track {
 	background: #ccc;
 }
+
 *::-webkit-scrollbar-thumb {
 	background: #333;
 }

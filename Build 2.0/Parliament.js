@@ -45,28 +45,13 @@ class Parliament {
     }
 
     draw(context) {
-        let z = context.getZoom();
         for (let fraction of this.fractions) {
-            
             const r = 0.75 * get_row_thickness(get_nrows_from_nseats(this.seat_amt()));
             for (const seat of fraction.seat_centers) {
                 context.fillStyle = fraction.party.color;
                 context.beginPath()
                 context._arc(seat[0], seat[1], r, 0, 4*Math.PI);
                 context.fill();
-
-                
-                const coords = context.w2v(seat[0], seat[1]);
-                context.font = `normal 900 ${Math.round(r*z)}px Arial`;
-                context.textAlign = "center";
-                context.textBaseline = "middle";
-                context.strokeStyle = "#00000088";
-                context.lineWidth = r*z*0.3;
-                context.beginPath();
-                context.strokeText(fraction.party.name, coords.x, coords.y + 1, r*z*1.5);
-                context.stroke();
-                context.fillStyle = "white";
-                context.fillText(fraction.party.name, coords.x, coords.y + 1, r*z*1.5);
             }
         }
     }
