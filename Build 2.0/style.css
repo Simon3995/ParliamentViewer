@@ -15,14 +15,17 @@
 }
 
 #sidebar h1 {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+#sidebar h2 {
+    margin-bottom: 4px;
 }
 
 #logo {
     position: fixed;
     top: 20px;
-    left: 30px;
-    font-family: sans-serif;
+    left: 20px;
     background-color: gold;
     padding: 5px 12px;
     border: 5px solid black;
@@ -43,6 +46,7 @@ table {
     width: 100%;
     border: 5px solid black;
     filter: drop-shadow(5px 5px 0px black);
+    margin-bottom: 15px;
 }
 
 .col_l {

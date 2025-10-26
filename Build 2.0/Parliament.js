@@ -50,7 +50,7 @@ class Parliament {
             for (const seat of fraction.seat_centers) {
                 context.fillStyle = fraction.party.color;
                 context.beginPath()
-                context._arc(seat[0], seat[1], r, 0, 4*Math.PI);
+                context._arc(seat[0], seat[1], r, 0, 2*Math.PI);
                 context.fill();
 
                 if (fraction.party.image) {

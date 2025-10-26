@@ -6,4 +6,3 @@ class Party {
         this.image = image;
     }
 }
-
