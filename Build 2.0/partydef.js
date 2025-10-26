@@ -1,19 +1,21 @@
-let $sp = new Party("SP", "Socialistische Partij", "#ed1b24", new Image());
-let $pvdd = new Party("PvdD", "Partij voor de Dieren", "#016b2d", new Image());
-let $glpvda = new Party("GL/PvdA", "GroenLinks / Partij voor de Arbeid", "#01af40", new Image());
-let $denk = new Party("DENK", "DENK", "#38bfc2", new Image());
-let $volt = new Party("Volt", "Volt", "#683ba8", new Image());
-let $d66 = new Party("D66", "Democraten 66", "#01af40", new Image());
-let $cu = new Party("CU", "ChristenUnie", "#8fd1eb", new Image());
-let $cda = new Party("CDA", "Christen-Democratisch Appèl", "#007c5e", new Image());
-let $nsc = new Party("NSC", "Nieuw Sociaal Contract", "#181d57", new Image());
-let $50plus = new Party("50PLUS", "50PLUS", "#92278f", new Image());
-let $vvd = new Party("VVD", "Volkspartij voor Vrijheid en Democratie", "#21276a", new Image());
-let $bbb = new Party("BBB", "BoerBurgerBeweging", "#8fbb1f", new Image());
-let $ja21 = new Party("JA21", "Juiste Antwoord 21", "#21276a", new Image());
-let $sgp = new Party("SGP", "Staatkundig Gereformeerde Partij", "#e95d0e", new Image());
-let $pvv = new Party("PVV", "Partij voor de Vrijheid", "#82b2ff", new Image());
-let $fvd = new Party("FvD", "Forum voor Democratie", "#841818", new Image());
+let parliaments = [];
+
+const $sp = new Party("SP", "Socialistische Partij", "#ed1b24", new Image());
+const $pvdd = new Party("PvdD", "Partij voor de Dieren", "#016b2d", new Image());
+const $glpvda = new Party("GL/PvdA", "GroenLinks / Partij voor de Arbeid", "#01af40", new Image());
+const $denk = new Party("DENK", "DENK", "#38bfc2", new Image());
+const $volt = new Party("Volt", "Volt", "#683ba8", new Image());
+const $d66 = new Party("D66", "Democraten 66", "#01af40", new Image());
+const $cu = new Party("CU", "ChristenUnie", "#8fd1eb", new Image());
+const $cda = new Party("CDA", "Christen-Democratisch Appèl", "#007c5e", new Image());
+const $nsc = new Party("NSC", "Nieuw Sociaal Contract", "#181d57", new Image());
+const $50plus = new Party("50PLUS", "50PLUS", "#92278f", new Image());
+const $vvd = new Party("VVD", "Volkspartij voor Vrijheid en Democratie", "#21276a", new Image());
+const $bbb = new Party("BBB", "BoerBurgerBeweging", "#8fbb1f", new Image());
+const $ja21 = new Party("JA21", "Juiste Antwoord 21", "#21276a", new Image());
+const $sgp = new Party("SGP", "Staatkundig Gereformeerde Partij", "#e95d0e", new Image());
+const $pvv = new Party("PVV", "Partij voor de Vrijheid", "#82b2ff", new Image());
+const $fvd = new Party("FvD", "Forum voor Democratie", "#841818", new Image());
 
 $sp.image.src = "logos/SP.png";
 $pvdd.image.src = "logos/PvdD.png";
@@ -31,3 +33,5 @@ $ja21.image.src = "logos/JA21.png";
 $sgp.image.src = "logos/SGP.png";
 $pvv.image.src = "logos/PVV.png";
 $fvd.image.src = "logos/FvD.png";
+
+parliaments.push(new Parliament(2023))
