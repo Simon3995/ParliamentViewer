@@ -1,6 +1,7 @@
 // translation from https://github.com/Gouvernathor/parliamentarch/blob/main/src/parliamentarch/geometry.py
 
 const DEFAULT_SPAN_ANGLE = 180;
+const GMULT = 100; // global scale multiplier
 
 function sum(array) {
     let s = 0;
@@ -126,7 +127,7 @@ function get_seats_centers(nseats, min_nrows = 0, span_angle = DEFAULT_SPAN_ANGL
         const row_arc_radius = 0.5 + 2 * r * row_thicc;
 
         if (nseats_this_row === 1) {
-            positions.push([1, -row_arc_radius, Math.PI/2]);
+            positions.push([1 * GMULT, -row_arc_radius * GMULT, Math.PI/2]);
         } else {
             // the angle necessary in this row to put the first (and last) seats fully in the canvas
             let angle_margin = Math.asin(row_thicc/row_arc_radius);
@@ -143,7 +144,7 @@ function get_seats_centers(nseats, min_nrows = 0, span_angle = DEFAULT_SPAN_ANGL
             for (let s = 0; s < nseats_this_row; s++) {
                 let angle = angle_margin + s * angle_increment;
                 // an oriented angle, so it goes trig positive (counterclockwise)
-                positions.push([row_arc_radius * Math.cos(angle)+1, -row_arc_radius * Math.sin(angle), angle]);
+                positions.push([(row_arc_radius * Math.cos(angle) + 1) * GMULT, (-row_arc_radius * Math.sin(angle)) * GMULT, angle]);
             }
         }
     }

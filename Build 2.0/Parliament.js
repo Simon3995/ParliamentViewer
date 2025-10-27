@@ -1,7 +1,10 @@
 class Parliament {
-    constructor(year = 0) {
-        this.fractions = [];
+    constructor(fractions = [], description = "Parliament", year = 0) {
+        this.fractions = fractions;
+        this.description = description;
         this.year = year;
+
+        this.distribute_seats();
     }
 
     add_fraction(fraction) {
@@ -46,7 +49,7 @@ class Parliament {
 
     draw(context) {
         for (let fraction of this.fractions) {
-            const r = 0.75 * get_row_thickness(get_nrows_from_nseats(this.seat_amt()));
+            const r = 0.75 * get_row_thickness(get_nrows_from_nseats(this.seat_amt())) * GMULT;
             for (const seat of fraction.seat_centers) {
                 context.fillStyle = fraction.party.color;
                 context.beginPath()
@@ -54,7 +57,7 @@ class Parliament {
                 context.fill();
 
                 if (fraction.party.image) {
-                    let s = 0.027;
+                    let s = 0.0083 * GMULT * r;
                     context._drawImage(
                         fraction.party.image,
                         seat[0] - s,

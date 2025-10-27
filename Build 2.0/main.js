@@ -1,34 +1,17 @@
-let c = document.getElementById("canvas");
-let ctx = TWO.getEnhancedContext(c);
+const c = document.getElementById("canvas");
+const ctx = TWO.getEnhancedContext(c);
 TWO.maximize(c);
-ctx.setCameraPosition(1.5, -0.5);
+ctx.setCameraPosition(1.5 * GMULT, -0.5 * GMULT);
 
-let p = new Parliament();
-p.add_fraction(new Fraction($sp, 4));
-p.add_fraction(new Fraction($pvdd, 4));
-p.add_fraction(new Fraction($glpvda, 24));
-p.add_fraction(new Fraction($denk, 3));
-p.add_fraction(new Fraction($volt, 3));
-p.add_fraction(new Fraction($d66, 21));
-p.add_fraction(new Fraction($cu, 3));
-p.add_fraction(new Fraction($cda, 20));
-p.add_fraction(new Fraction($50plus, 2));
-p.add_fraction(new Fraction($vvd, 16));
-p.add_fraction(new Fraction($bbb, 3));
-p.add_fraction(new Fraction($ja21, 12));
-p.add_fraction(new Fraction($sgp, 3));
-p.add_fraction(new Fraction($pvv, 28));
-p.add_fraction(new Fraction($fvd, 4));
-
-table(p);
+table(T.parliaments[0]);
 
 update();
 
 function update() {
     requestAnimationFrame(update);
     ctx.clearRect(0, 0, c.width, c.height);
-    p.draw(ctx);
-    ctx.setZoom(c.width / 3.05);
+    T.parliaments[0].draw(ctx);
+	ctx.setZoom(0.325 * c.width / GMULT);
 }
 
 function table(parliament) {

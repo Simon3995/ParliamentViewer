@@ -1,4 +1,4 @@
-let parliaments = [];
+let T = new Timeline("Netherlands");
 
 const $sp = new Party("SP", "Socialistische Partij", "#ed1b24", new Image());
 const $pvdd = new Party("PvdD", "Partij voor de Dieren", "#016b2d", new Image());
@@ -34,4 +34,20 @@ $sgp.image.src = "logos/SGP.png";
 $pvv.image.src = "logos/PVV.png";
 $fvd.image.src = "logos/FvD.png";
 
-parliaments.push(new Parliament(2023))
+T.add_parliament(new Parliament([
+    new Fraction($sp, 4),
+    new Fraction($pvdd, 4),
+    new Fraction($glpvda, 23),
+    new Fraction($denk, 3),
+    new Fraction($volt, 3),
+    new Fraction($d66, 22),
+    new Fraction($cu, 3),
+    new Fraction($cda, 20),
+    new Fraction($50plus, 2),
+    new Fraction($vvd, 16),
+    new Fraction($bbb, 4),
+    new Fraction($ja21, 12),
+    new Fraction($sgp, 3),
+    new Fraction($pvv, 26),
+    new Fraction($fvd, 5)
+], "Ipsos I&O Peiling 25 oktober 2025", 2025));
