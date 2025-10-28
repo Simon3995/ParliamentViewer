@@ -1,3 +1,4 @@
+// a class for a party fraction in one election
 class Fraction {
     constructor(party, seat_amt) {
         this.party = party;

@@ -1,19 +1,24 @@
+// init
 const c = document.getElementById("canvas");
 const ctx = TWO.getEnhancedContext(c);
 TWO.maximize(c);
 ctx.setCameraPosition(1.5 * GMULT, -0.5 * GMULT);
 
+set_zoom_level();
 table(T.parliaments[0]);
 
 update();
 
+// main update loop
 function update() {
     requestAnimationFrame(update);
-    ctx.clearRect(0, 0, c.width, c.height);
+    
+	// draw seats
+	ctx.clearRect(0, 0, c.width, c.height);
     T.parliaments[0].draw(ctx);
-	ctx.setZoom(0.325 * c.width / GMULT);
 }
 
+// generate a seat table based on a parliament object
 function table(parliament) {
 	let string = "";
 	let total_seats = 0;
@@ -52,3 +57,11 @@ function table(parliament) {
 	// insert HTML string into document
 	document.getElementById("table").innerHTML = string;
 }
+
+// set the correct zoom level for the canvas for the current window size
+function set_zoom_level() {
+	ctx.setZoom(0.325 * c.width / GMULT);
+}
+
+// fix zoom level when window size changes
+window.addEventListener("resize", set_zoom_level, false);

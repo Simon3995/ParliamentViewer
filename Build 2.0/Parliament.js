@@ -1,3 +1,4 @@
+// a class for one election result
 class Parliament {
     constructor(fractions = [], description = "Parliament", year = 0) {
         this.fractions = fractions;
