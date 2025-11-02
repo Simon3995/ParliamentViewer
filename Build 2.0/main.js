@@ -60,7 +60,7 @@ function table(parliament) {
 
 		// find difference
 		let diff = 0;
-		const prevIdx = (T.parliaments.indexOf(parliament) + 1) % T.parliaments.length;
+		const prevIdx = (T.parliaments.indexOf(parliament) + 1);
 		const prevParl = T.parliaments[prevIdx];
 		if (prevParl) {
 			const prevFrac = prevParl.fractions.find(f => f.party.name === frac.party.name);
@@ -94,17 +94,32 @@ function table(parliament) {
 	document.getElementById("table").innerHTML = string;
 
 	// find parties that left parliament
-	// note: AI Generated, check for correctness!
 	let left_plm = [];
-	const prevIdx = (T.parliaments.indexOf(parliament) + 1) % T.parliaments.length;
-	const prevParl = T.parliaments[prevIdx];
-	if (prevParl) {
-		const currPartyNames = new Set(parliament.fractions.map(f => f.party.name));
-		left_plm = prevParl.fractions
-			.filter(f => !currPartyNames.has(f.party.name))
+	const prev_idx = (T.parliaments.indexOf(parliament) + 1);
+	const prev_parl = T.parliaments[prev_idx];
+	if (prev_parl) {
+		const curr_party_names = new Set(parliament.fractions.map(f => f.party.name));
+		left_plm = prev_parl.fractions
+			.filter(f => !curr_party_names.has(f.party.name))
 			.map(f => f.party);
 	} else {
 		left_plm = [];
+	}
+	if (left_plm.length) {
+		let left_string = '<h2>&#8618; Left Parliament</h2>';
+		left_string += '<table><tr><th class="col_l">Party</th><th class="col_m">Full Name</th><th class="col_r">Seats</th></tr>';
+		for (const party of left_plm) {
+			left_string += '<tr>';
+			left_string += `<td>${party.name}</td>`;
+			left_string += `<td>${party.fullname}</td>`;
+			const prev_frac = prev_parl.fractions.find(f => f.party.name === party.name);
+			left_string += `<td>0 (<span class="red">&#9660;${prev_frac ? prev_frac.seat_amt : 0}</span>)</td>`;
+			left_string += '</tr>';
+		}
+		left_string += '</table>';
+		document.getElementById("left_plm").innerHTML = left_string;
+	} else {
+		document.getElementById("left_plm").innerHTML = '';
 	}
 }
 

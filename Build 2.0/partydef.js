@@ -21,7 +21,8 @@ T.parties = {
     $ja21: new Party("JA21", "Juiste Antwoord 2021", "#21276a", new Image()),
     $sgp: new Party("SGP", "Staatkundig Gereformeerde Partij", "#e95d0e", new Image()),
     $pvv: new Party("PVV", "Partij voor de Vrijheid", "#82b2ff", new Image()),
-    $fvd: new Party("FvD", "Forum voor Democratie", "#841818", new Image())
+    $fvd: new Party("FvD", "Forum voor Democratie", "#841818", new Image()),
+    $lpf: new Party("LPF", "Lijst Pim Fortuyn", "#f7be00ff", new Image())
 }
 
 T.parties.$bij1.image.src = "logos/BIJ1.png";
@@ -142,3 +143,28 @@ T.add_parliament(new Parliament([
     new Fraction(T.parties.$sgp, 2),
     new Fraction(T.parties.$pvv, 24)
 ], "Tweede Kamerverkiezingen 2010", new Date("2010-06-09")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$sp, 25),
+    new Fraction(T.parties.$pvdd, 2),
+    new Fraction(T.parties.$gl, 7),
+    new Fraction(T.parties.$pvda, 33),
+    new Fraction(T.parties.$d66, 3),
+    new Fraction(T.parties.$cu, 6),
+    new Fraction(T.parties.$cda, 41),
+    new Fraction(T.parties.$vvd, 22),
+    new Fraction(T.parties.$sgp, 2),
+    new Fraction(T.parties.$pvv, 9)
+], "Tweede Kamerverkiezingen 2006", new Date("2006-11-22")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$sp, 9),
+    new Fraction(T.parties.$gl, 8),
+    new Fraction(T.parties.$pvda, 42),
+    new Fraction(T.parties.$d66, 6),
+    new Fraction(T.parties.$cu, 3),
+    new Fraction(T.parties.$cda, 44),
+    new Fraction(T.parties.$vvd, 28),
+    new Fraction(T.parties.$sgp, 2),
+    new Fraction(T.parties.$lpf, 8)
+], "Tweede Kamerverkiezingen 2003", new Date("2003-01-22")));
