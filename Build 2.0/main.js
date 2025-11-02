@@ -58,10 +58,26 @@ function table(parliament) {
 		i = Number(i);
         const frac = fracs[i];
 
-        string += '<tr class="tablerow">';
+		// find difference
+		let diff = 0;
+		const prevIdx = (T.parliaments.indexOf(parliament) + 1) % T.parliaments.length;
+		const prevParl = T.parliaments[prevIdx];
+		if (prevParl) {
+			const prevFrac = prevParl.fractions.find(f => f.party.name === frac.party.name);
+			diff = prevFrac ? frac.seat_amt - prevFrac.seat_amt : frac.seat_amt;
+		}
+		if (diff > 0)
+			diff = '<span class="green">&#9650;' + diff + '</span>';
+		if (diff < 0) {
+			diff = '<span class="red">&#9660;' + Math.abs(diff) + '</span>';
+		} else if (diff === 0) {
+			diff = '<span class="blue">=</span>';
+		}
+
+		string += '<tr class="tablerow">';
 		string += "<td>" + frac.party.name + "</td>";
 		string += "<td>" + frac.party.fullname + "</td>";
-		string += "<td>" + frac.seat_amt + "</td>";
+		string += `<td>${frac.seat_amt} (${diff})</td>`;
 
 		total_seats += frac.seat_amt;
 	}
@@ -76,6 +92,20 @@ function table(parliament) {
 	
 	// insert HTML string into document
 	document.getElementById("table").innerHTML = string;
+
+	// find parties that left parliament
+	// note: AI Generated, check for correctness!
+	let left_plm = [];
+	const prevIdx = (T.parliaments.indexOf(parliament) + 1) % T.parliaments.length;
+	const prevParl = T.parliaments[prevIdx];
+	if (prevParl) {
+		const currPartyNames = new Set(parliament.fractions.map(f => f.party.name));
+		left_plm = prevParl.fractions
+			.filter(f => !currPartyNames.has(f.party.name))
+			.map(f => f.party);
+	} else {
+		left_plm = [];
+	}
 }
 
 // set the correct zoom level for the canvas for the current window size

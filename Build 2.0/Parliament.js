@@ -66,8 +66,10 @@ class Parliament {
                 context._arc(seat[0], seat[1], r, 0, 2*Math.PI);
                 context.fill();
 
-                if (fraction.party.image) {
-                    let s = 0.0083 * GMULT * r;
+                let s = 0.0083 * GMULT * r;
+
+                if (fraction.party.image.src) {
+                    
                     context._drawImage(
                         fraction.party.image,
                         seat[0] - s,
@@ -75,6 +77,12 @@ class Parliament {
                         2*s,
                         2*s
                     );
+                } else {
+                    context.fillStyle = "white";
+                    context.textAlign = "center";
+                    context.textBaseline = "middle";
+                    context.font = `bold ${1.2*s}px Atkinson`;
+                    context._fillText(fraction.party.name, seat[0], seat[1] + s*0.1, s*2);
                 }
             }
         }

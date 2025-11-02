@@ -18,7 +18,7 @@ T.parties = {
     $50plus: new Party("50PLUS", "50PLUS", "#92278f", new Image()),
     $vvd: new Party("VVD", "Volkspartij voor Vrijheid en Democratie", "#21276a", new Image()),
     $bbb: new Party("BBB", "BoerBurgerBeweging", "#8fbb1f", new Image()),
-    $ja21: new Party("JA21", "Juiste Antwoord 21", "#21276a", new Image()),
+    $ja21: new Party("JA21", "Juiste Antwoord 2021", "#21276a", new Image()),
     $sgp: new Party("SGP", "Staatkundig Gereformeerde Partij", "#e95d0e", new Image()),
     $pvv: new Party("PVV", "Partij voor de Vrijheid", "#82b2ff", new Image()),
     $fvd: new Party("FvD", "Forum voor Democratie", "#841818", new Image())
@@ -99,3 +99,46 @@ T.add_parliament(new Parliament([
     new Fraction(T.parties.$pvv, 17),
     new Fraction(T.parties.$fvd, 8)
 ], "Tweede Kamerverkiezingen 2021", new Date("2021-03-17")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$sp, 14),
+    new Fraction(T.parties.$pvdd, 5),
+    new Fraction(T.parties.$gl, 14),
+    new Fraction(T.parties.$pvda, 9),
+    new Fraction(T.parties.$denk, 3),
+    new Fraction(T.parties.$d66, 19),
+    new Fraction(T.parties.$cu, 5),
+    new Fraction(T.parties.$cda, 19),
+    new Fraction(T.parties.$50plus, 4),
+    new Fraction(T.parties.$vvd, 33),
+    new Fraction(T.parties.$sgp, 3),
+    new Fraction(T.parties.$pvv, 20),
+    new Fraction(T.parties.$fvd, 2)
+], "Tweede Kamerverkiezingen 2017", new Date("2017-03-15")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$sp, 15),
+    new Fraction(T.parties.$pvdd, 2),
+    new Fraction(T.parties.$gl, 4),
+    new Fraction(T.parties.$pvda, 38),
+    new Fraction(T.parties.$d66, 12),
+    new Fraction(T.parties.$cu, 5),
+    new Fraction(T.parties.$cda, 13),
+    new Fraction(T.parties.$50plus, 2),
+    new Fraction(T.parties.$vvd, 41),
+    new Fraction(T.parties.$sgp, 3),
+    new Fraction(T.parties.$pvv, 15)
+], "Tweede Kamerverkiezingen 2012", new Date("2012-09-12")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$sp, 15),
+    new Fraction(T.parties.$pvdd, 2),
+    new Fraction(T.parties.$gl, 10),
+    new Fraction(T.parties.$pvda, 30),
+    new Fraction(T.parties.$d66, 10),
+    new Fraction(T.parties.$cu, 5),
+    new Fraction(T.parties.$cda, 21),
+    new Fraction(T.parties.$vvd, 31),
+    new Fraction(T.parties.$sgp, 2),
+    new Fraction(T.parties.$pvv, 24)
+], "Tweede Kamerverkiezingen 2010", new Date("2010-06-09")));

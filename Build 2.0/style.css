@@ -109,6 +109,19 @@ button:active {
     right: 15px;
 }
 
+.green {
+    color: rgb(0, 161, 35);
+}
+
+.red {
+    color: rgb(233, 0, 0);
+}
+
+.blue {
+    color: dodgerblue;
+    font-weight: bold;
+}
+
 @font-face {
     font-family: Atkinson;
     src: url(./fonts/AtkinsonHyperlegible-Regular.ttf);
