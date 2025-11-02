@@ -24,8 +24,8 @@
 
 #logo {
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 10px;
+    left: 10px;
     background-color: gold;
     padding: 5px 12px;
     border: 5px solid black;
@@ -58,7 +58,7 @@ table {
 }
 
 .col_r {
-    width: 60px;
+    width: 75px;
 }
 
 td, th {
@@ -81,6 +81,32 @@ tr:nth-child(odd) {
 
 tr:nth-child(even) {
     background-color: rgb(255, 238, 142);
+}
+
+button {
+    background-color: gold;
+    border: 5px solid black;
+    font-weight: bold;
+    font-size: 18px;
+    filter: drop-shadow(5px 5px 0px black);
+    margin-bottom: 8px;
+    padding: 3px 8px;
+    width: 120px;
+}
+
+button:hover {
+    background-color: rgb(255, 238, 142);
+}
+
+button:active {
+    transform: translateY(5px) translateX(5px);
+    background-color: rgb(255, 238, 142);
+    filter: none;
+}
+
+.rbutton {
+    position: absolute;
+    right: 15px;
 }
 
 @font-face {

@@ -1,11 +1,20 @@
 // a class for one election result
 class Parliament {
-    constructor(fractions = [], description = "Parliament", year = 0) {
+    constructor(fractions = [], description = "Parliament", date = new Date()) {
         this.fractions = fractions;
         this.description = description;
-        this.year = year;
+        this.date = date;
 
         this.distribute_seats();
+    }
+
+    get_party_seats(party) {
+        for (const fraction of this.fractions) {
+            if (fraction.party.name == party) {
+                return fraction.seat_amt;
+            }
+        }
+        return 0;
     }
 
     add_fraction(fraction) {

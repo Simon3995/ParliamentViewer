@@ -2,6 +2,7 @@
 class Timeline {
     constructor (country = null) {
         this.parliaments = [];
+        this.parties = {};
         this.country = country;
     }
 
