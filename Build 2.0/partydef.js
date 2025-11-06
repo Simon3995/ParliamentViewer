@@ -22,7 +22,17 @@ T.parties = {
     $sgp: new Party("SGP", "Staatkundig Gereformeerde Partij", "#e95d0e", new Image()),
     $pvv: new Party("PVV", "Partij voor de Vrijheid", "#82b2ff", new Image()),
     $fvd: new Party("FvD", "Forum voor Democratie", "#841818", new Image()),
-    $lpf: new Party("LPF", "Lijst Pim Fortuyn", "#f7be00ff", new Image())
+    $lpf: new Party("LPF", "Lijst Pim Fortuyn", "#f7be00ff", new Image()),
+    $ln: new Party("LN", "Leefbaar Nederland", "#ff6600ff", new Image()),
+    $rpf: new Party("RPF", "Reformatorische Politieke Federatie", "#000080", new Image()),
+    $gpv: new Party("GPV", "Gereformeerd Politiek Verbond", "#0000ff", new Image()),
+    $aov: new Party("AOV", "Algemeen Ouderen Verbond", "#808080", new Image()),
+    $u55p: new Party("U55+", "Unie 55+", "#808080", new Image()),
+    $cd: new Party("CD", "Centrumdemocraten", "#800000", new Image()),
+    $psp: new Party("PSP", "Pacifistisch Socialistische Partij", "#e62525ff", new Image()),
+    $ppr: new Party("PPR", "Politieke Partij Radikalen", "#e92f7cff", new Image()),
+    $evp: new Party("EVP", "Evangelische Volkspartij", "#ffcc00ff", new Image()),
+    $cpn: new Party("CPN", "Communistische Partij Nederland", "#ff0000", new Image())
 }
 
 T.parties.$bij1.image.src = "logos/BIJ1.png";
@@ -168,3 +178,82 @@ T.add_parliament(new Parliament([
     new Fraction(T.parties.$sgp, 2),
     new Fraction(T.parties.$lpf, 8)
 ], "Tweede Kamerverkiezingen 2003", new Date("2003-01-22")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$sp, 9),
+    new Fraction(T.parties.$gl, 10),
+    new Fraction(T.parties.$pvda, 23),
+    new Fraction(T.parties.$d66, 7),
+    new Fraction(T.parties.$cu, 4),
+    new Fraction(T.parties.$cda, 43),
+    new Fraction(T.parties.$vvd, 24),
+    new Fraction(T.parties.$ln, 2),
+    new Fraction(T.parties.$sgp, 2),
+    new Fraction(T.parties.$lpf, 26)
+], "Tweede Kamerverkiezingen 2002", new Date("2002-05-15")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$sp, 5),
+    new Fraction(T.parties.$gl, 11),
+    new Fraction(T.parties.$pvda, 45),
+    new Fraction(T.parties.$d66, 14),
+    new Fraction(T.parties.$cda, 29),
+    new Fraction(T.parties.$rpf, 3),
+    new Fraction(T.parties.$gpv, 2),
+    new Fraction(T.parties.$vvd, 38),
+    new Fraction(T.parties.$sgp, 3)
+], "Tweede Kamerverkiezingen 1998", new Date("1998-05-06")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$sp, 2),
+    new Fraction(T.parties.$gl, 5),
+    new Fraction(T.parties.$pvda, 37),
+    new Fraction(T.parties.$d66, 24),
+    new Fraction(T.parties.$cda, 34),
+    new Fraction(T.parties.$aov, 6),
+    new Fraction(T.parties.$u55p, 1),
+    new Fraction(T.parties.$rpf, 3),
+    new Fraction(T.parties.$gpv, 2),
+    new Fraction(T.parties.$vvd, 31),
+    new Fraction(T.parties.$sgp, 2),
+    new Fraction(T.parties.$cd, 3)
+], "Tweede Kamerverkiezingen 1994", new Date("1994-05-03")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$gl, 6),
+    new Fraction(T.parties.$pvda, 49),
+    new Fraction(T.parties.$d66, 12),
+    new Fraction(T.parties.$cda, 54),
+    new Fraction(T.parties.$rpf, 1),
+    new Fraction(T.parties.$gpv, 2),
+    new Fraction(T.parties.$vvd, 22),
+    new Fraction(T.parties.$sgp, 3),
+    new Fraction(T.parties.$cd, 1)
+], "Tweede Kamerverkiezingen 1989", new Date("1989-09-06")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$psp, 1),
+    new Fraction(T.parties.$ppr, 2),
+    new Fraction(T.parties.$pvda, 52),
+    new Fraction(T.parties.$d66, 9),
+    new Fraction(T.parties.$cda, 54),
+    new Fraction(T.parties.$rpf, 1),
+    new Fraction(T.parties.$gpv, 1),
+    new Fraction(T.parties.$vvd, 27),
+    new Fraction(T.parties.$sgp, 3)
+], "Tweede Kamerverkiezingen 1986", new Date("1986-05-21")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$cpn, 3),
+    new Fraction(T.parties.$psp, 3),
+    new Fraction(T.parties.$evp, 1),
+    new Fraction(T.parties.$ppr, 2),
+    new Fraction(T.parties.$pvda, 47),
+    new Fraction(T.parties.$d66, 6),
+    new Fraction(T.parties.$cda, 45),
+    new Fraction(T.parties.$rpf, 2),
+    new Fraction(T.parties.$gpv, 1),
+    new Fraction(T.parties.$vvd, 36),
+    new Fraction(T.parties.$sgp, 3),
+    new Fraction(T.parties.$cd, 1)
+], "Tweede Kamerverkiezingen 1982", new Date("1982-09-08")));
