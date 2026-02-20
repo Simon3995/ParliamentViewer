@@ -22,7 +22,7 @@ T.parties = {
     $sgp: new Party("SGP", "Staatkundig Gereformeerde Partij", "#e95d0e", new Image()),
     $pvv: new Party("PVV", "Partij voor de Vrijheid", "#82b2ff", new Image()),
     $fvd: new Party("FvD", "Forum voor Democratie", "#841818", new Image()),
-    $lpf: new Party("LPF", "Lijst Pim Fortuyn", "#f7be00ff", new Image()),
+    $lpf: new Party("LPF", "Lijst Pim Fortuyn", "rgb(18, 74, 158)", new Image()),
     $ln: new Party("LN", "Leefbaar Nederland", "#ff6600ff", new Image()),
     $rpf: new Party("RPF", "Reformatorische Politieke Federatie", "#000080", new Image()),
     $gpv: new Party("GPV", "Gereformeerd Politiek Verbond", "#0000ff", new Image()),
@@ -54,7 +54,9 @@ T.parties.$bij1.image.src = "logos/BIJ1.png";
 T.parties.$ppnl.image.src = "logos/PPNL.png";
 T.parties.$sp.image.src = "logos/SP.png";
 T.parties.$pvdd.image.src = "logos/PvdD.png";
+T.parties.$gl.image.src = "logos/GL.png";
 T.parties.$glpvda.image.src = "logos/GvdL.png";
+T.parties.$pvda.image.src = "logos/PvdA.png";
 T.parties.$denk.image.src = "logos/DENK.png";
 T.parties.$volt.image.src = "logos/Volt.png";
 T.parties.$d66.image.src = "logos/D66.png";
@@ -69,6 +71,32 @@ T.parties.$ja21.image.src = "logos/JA21.png";
 T.parties.$sgp.image.src = "logos/SGP.png";
 T.parties.$pvv.image.src = "logos/PVV.png";
 T.parties.$fvd.image.src = "logos/FvD.png";
+T.parties.$lpf.image.src = "logos/LPF.png";
+T.parties.$ln.image.src = "logos/LN.png";
+T.parties.$rpf.image.src = "logos/RPF.png";
+T.parties.$gpv.image.src = "logos/GPV.png";
+T.parties.$aov.image.src = "logos/AOV.png";
+T.parties.$u55p.image.src = "logos/Unie55+.png";
+T.parties.$cd.image.src = "logos/CD.png";
+T.parties.$psp.image.src = "logos/PSP.png";
+T.parties.$ppr.image.src = "logos/PPR.png";
+T.parties.$evp.image.src = "logos/EVP.png";
+T.parties.$cpn.image.src = "logos/CPN.png";
+T.parties.$bp.image.src = "logos/BP.png";
+T.parties.$ds70.image.src = "logos/DS70.png";
+T.parties.$kvp.image.src = "logos/KVP.png";
+T.parties.$chu.image.src = "logos/CHU.png";
+T.parties.$arp.image.src = "logos/ARP.png";
+T.parties.$rkpn.image.src = "logos/RKPN.png";
+T.parties.$nmp.image.src = "logos/NMP.png";
+T.parties.$knp.image.src = "logos/KNP.png";
+T.parties.$pvdv.image.src = "logos/PvdV.png";
+T.parties.$rksp.image.src = "logos/RKSP.png";
+T.parties.$sdap.image.src = "logos/SDAP.png";
+T.parties.$vdb.image.src = "logos/VDB.png";
+T.parties.$nsb.image.src = "logos/NSB.png";
+T.parties.$lsp.image.src = "logos/LSP.png";
+T.parties.$cdu.image.src = "logos/CDU.png";
 
 T.add_parliament(new Parliament([
     new Fraction(T.parties.$sp, 3),

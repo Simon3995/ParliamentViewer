@@ -6,7 +6,7 @@ ctx.setCameraPosition(1.5 * GMULT, -0.5 * GMULT);
 
 set_zoom_level();
 let cur_plm = T.parliaments[0];
-let cur_hlt = "CDA";
+let cur_hlt = null;
 load_parliament(cur_plm);
 
 update();
