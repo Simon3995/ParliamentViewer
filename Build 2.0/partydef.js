@@ -80,23 +80,15 @@ T.parties.$u55p.image.src = "logos/Unie55+.png";
 T.parties.$cd.image.src = "logos/CD.png";
 T.parties.$psp.image.src = "logos/PSP.png";
 T.parties.$ppr.image.src = "logos/PPR.png";
-T.parties.$evp.image.src = "logos/EVP.png";
 T.parties.$cpn.image.src = "logos/CPN.png";
-T.parties.$bp.image.src = "logos/BP.png";
 T.parties.$ds70.image.src = "logos/DS70.png";
 T.parties.$kvp.image.src = "logos/KVP.png";
 T.parties.$chu.image.src = "logos/CHU.png";
 T.parties.$arp.image.src = "logos/ARP.png";
-T.parties.$rkpn.image.src = "logos/RKPN.png";
-T.parties.$nmp.image.src = "logos/NMP.png";
-T.parties.$knp.image.src = "logos/KNP.png";
 T.parties.$pvdv.image.src = "logos/PvdV.png";
-T.parties.$rksp.image.src = "logos/RKSP.png";
 T.parties.$sdap.image.src = "logos/SDAP.png";
 T.parties.$vdb.image.src = "logos/VDB.png";
 T.parties.$nsb.image.src = "logos/NSB.png";
-T.parties.$lsp.image.src = "logos/LSP.png";
-T.parties.$cdu.image.src = "logos/CDU.png";
 
 T.add_parliament(new Parliament([
     new Fraction(T.parties.$sp, 3),
