@@ -15,7 +15,9 @@
 }
 
 #sidebar h1 {
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    margin-top: 5px;
+    font-size: 28px;
 }
 
 #sidebar h2 {
@@ -61,7 +63,8 @@ table {
     width: 75px;
 }
 
-td, th {
+td,
+th {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

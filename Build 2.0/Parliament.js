@@ -58,19 +58,27 @@ class Parliament {
     }
 
     draw(context) {
+        const off = document.createElement("canvas");
+        const off_ctx = TWO.getEnhancedContext(off);
+        off.width = c.width;
+        off.height = c.height;
+        off_ctx.$zoom = context.$zoom;
+        off_ctx.$cam_x = context.$cam_x;
+        off_ctx.$cam_y = context.$cam_y;
+                
         for (let fraction of this.fractions) {
             const r = 0.75 * get_row_thickness(get_nrows_from_nseats(this.seat_amt())) * GMULT;
             for (const seat of fraction.seat_centers) {
-                context.fillStyle = fraction.party.color;
-                context.beginPath()
-                context._arc(seat[0], seat[1], r, 0, 2*Math.PI);
-                context.fill();
+                off_ctx.fillStyle = fraction.party.color;
+                off_ctx.beginPath()
+                off_ctx._arc(seat[0], seat[1], r, 0, 2*Math.PI);
+                off_ctx.fill();
 
                 let s = 0.0083 * GMULT * r;
 
                 if (fraction.party.image.src) {
                     
-                    context._drawImage(
+                    off_ctx._drawImage(
                         fraction.party.image,
                         seat[0] - s,
                         seat[1] - s,
@@ -78,11 +86,47 @@ class Parliament {
                         2*s
                     );
                 } else {
-                    context.fillStyle = "white";
-                    context.textAlign = "center";
-                    context.textBaseline = "middle";
-                    context.font = `bold ${1.2*s}px Atkinson`;
-                    context._fillText(fraction.party.name, seat[0], seat[1] + s*0.1, s*2);
+                    off_ctx.fillStyle = "white";
+                    off_ctx.textAlign = "center";
+                    off_ctx.textBaseline = "middle";
+                    off_ctx.font = `bold ${1.2*s}px Atkinson`;
+                    off_ctx._fillText(fraction.party.name, seat[0], seat[1] + s*0.1, s*2);
+                }
+            }
+        }
+        
+        context.globalAlpha = cur_hlt ? 0.3 : 1;
+        context.drawImage(off, 0, 0);
+        context.globalAlpha = 1;
+
+        if (cur_hlt) {
+            for (let fraction of this.fractions) {
+                if (fraction.party.name != cur_hlt) continue;
+                const r = 0.75 * get_row_thickness(get_nrows_from_nseats(this.seat_amt())) * GMULT;
+                for (const seat of fraction.seat_centers) {
+                    context.fillStyle = fraction.party.color;
+                    context.beginPath()
+                    context._arc(seat[0], seat[1], r, 0, 2*Math.PI);
+                    context.fill();
+
+                    let s = 0.0083 * GMULT * r;
+
+                    if (fraction.party.image.src) {
+                        
+                        context._drawImage(
+                            fraction.party.image,
+                            seat[0] - s,
+                            seat[1] - s,
+                            2*s,
+                            2*s
+                        );
+                    } else {
+                        context.fillStyle = "white";
+                        context.textAlign = "center";
+                        context.textBaseline = "middle";
+                        context.font = `bold ${1.2*s}px Atkinson`;
+                        context._fillText(fraction.party.name, seat[0], seat[1] + s*0.1, s*2);
+                    }
                 }
             }
         }
