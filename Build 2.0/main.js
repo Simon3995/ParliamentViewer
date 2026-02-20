@@ -22,14 +22,14 @@ function update() {
 
 function prev() {
 	const idx = T.parliaments.indexOf(cur_plm);
-	const newIdx = (idx >= 0 ? (idx + 1) % T.parliaments.length : 0);
+	const newIdx = Math.min(idx + 1, T.parliaments.length - 1);
 	cur_plm = T.parliaments[newIdx];
 	load_parliament(cur_plm);
 }
 
 function next() {
 	const idx = T.parliaments.indexOf(cur_plm);
-	const newIdx = (idx >= 0 ? (idx - 1 + T.parliaments.length) % T.parliaments.length : 0);
+	const newIdx = Math.max(idx - 1, 0);
 	cur_plm = T.parliaments[newIdx];
 	load_parliament(cur_plm);
 }
