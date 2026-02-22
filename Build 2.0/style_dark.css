@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Atkinson, sans-serif;
+}
+
+body {
+    background-color: #1b1b23;
+    color: white;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    width: 33.33vw;
+    padding: 10px 15px;
+}
+
+#sidebar h1 {
+    margin-bottom: 2px;
+    margin-top: 5px;
+    font-size: 28px;
+}
+
+#sidebar h2 {
+    margin-bottom: 4px;
+}
+
+#logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #483d8b;
+    padding: 5px 12px;
+    border: 5px solid #2a273d;
+    filter: drop-shadow(5px 5px 0px #2a273d);
+}
+
+#logo h1 {
+    margin-bottom: -8px;
+}
+
+#logo h2 {
+    color: #adb5ff;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    border: 5px solid #2a273d;
+    filter: drop-shadow(5px 5px 0px #2a273d);
+    margin-bottom: 15px;
+}
+
+.col_l {
+    width: 100px;
+}
+
+.col_m {
+    width: 100%;
+}
+
+.col_r {
+    width: 90px;
+}
+
+td,
+th {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    padding: 2px 0px;
+}
+
+th {
+    color: #adb5ff;
+    background-color: #131227;
+    font-weight: bold;
+}
+
+tr:nth-child(odd) {
+    background-color: #483d8b;
+}
+
+tr:nth-child(even) {
+    background-color: #3d3574;
+}
+
+button {
+    color: white;
+    background-color: #483d8b;
+    border: 5px solid #2a273d;
+    font-weight: bold;
+    font-size: 18px;
+    filter: drop-shadow(5px 5px 0px #2a273d);
+    margin-bottom: 8px;
+    padding: 3px 8px;
+    width: 120px;
+}
+
+button:hover {
+    background-color: #6456be;
+}
+
+button:active {
+    transform: translateY(5px) translateX(5px);
+    background-color: #7566da;
+    filter: none;
+}
+
+.rbutton {
+    position: absolute;
+    right: 15px;
+}
+
+.green {
+    color: #8bffa4;
+}
+
+.red {
+    color: #ff6b6b;
+}
+
+.blue {
+    color: rgb(93, 174, 255);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Atkinson;
+    src: url(./fonts/AtkinsonHyperlegible-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Atkinson;
+    src: url(./fonts/AtkinsonHyperlegible-Bold.ttf);
+    font-weight: bold;
+}

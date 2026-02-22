@@ -106,6 +106,24 @@ T.add_parliament(new Parliament([
     new Fraction(T.parties.$sgp, 3),
     new Fraction(T.parties.$pvv, 26),
     new Fraction(T.parties.$fvd, 7)
+], "Current Situation", new Date()));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$sp, 3),
+    new Fraction(T.parties.$pvdd, 3),
+    new Fraction(T.parties.$glpvda, 20),
+    new Fraction(T.parties.$denk, 3),
+    new Fraction(T.parties.$volt, 1),
+    new Fraction(T.parties.$d66, 26),
+    new Fraction(T.parties.$cu, 3),
+    new Fraction(T.parties.$50plus, 2),
+    new Fraction(T.parties.$cda, 18),
+    new Fraction(T.parties.$vvd, 22),
+    new Fraction(T.parties.$bbb, 4),
+    new Fraction(T.parties.$ja21, 9),
+    new Fraction(T.parties.$sgp, 3),
+    new Fraction(T.parties.$pvv, 26),
+    new Fraction(T.parties.$fvd, 7)
 ], "Tweede Kamerverkiezingen 2025", new Date("2025-10-29")));
 
 T.add_parliament(new Parliament([
