@@ -21,6 +21,7 @@ T.parties = {
     $ja21: new Party("JA21", "Juiste Antwoord 2021", "#21276a", new Image()),
     $sgp: new Party("SGP", "Staatkundig Gereformeerde Partij", "#e95d0e", new Image()),
     $pvv: new Party("PVV", "Partij voor de Vrijheid", "#82b2ff", new Image()),
+    $gm: new Party("GM", "Groep Markuszower", "#169793ff", new Image()),
     $fvd: new Party("FvD", "Forum voor Democratie", "#841818", new Image()),
     $lpf: new Party("LPF", "Lijst Pim Fortuyn", "rgb(18, 74, 158)", new Image()),
     $ln: new Party("LN", "Leefbaar Nederland", "#ff6600ff", new Image()),
@@ -104,7 +105,8 @@ T.add_parliament(new Parliament([
     new Fraction(T.parties.$bbb, 4),
     new Fraction(T.parties.$ja21, 9),
     new Fraction(T.parties.$sgp, 3),
-    new Fraction(T.parties.$pvv, 26),
+    new Fraction(T.parties.$gm, 7),
+    new Fraction(T.parties.$pvv, 19),
     new Fraction(T.parties.$fvd, 7)
 ], "Current Situation", new Date()));
 
