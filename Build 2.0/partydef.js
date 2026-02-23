@@ -49,7 +49,43 @@ T.parties = {
     $nsb: new Party("NSB", "Nationaal-Socialistische Beweging", "#000000ff", new Image()),
     $lsp: new Party("LSP", "Liberale Staatspartij", "#0d6486ff", new Image()),
     $cdu: new Party("CDU", "Christelijk-Democratische Unie", "#eb6c05ff", new Image()),
+    $rsp: new Party("RSP", "Revolutionair Socialistische Partij", "#a70909ff", new Image()),
+    // couldnt find *any* poster for NBTMP, just went for BBB color
+    $nbtmp: new Party("NBTMP", "Nationale Boeren-, Tuinders- en Middenstandspartij", "#9ee65aff", new Image()),
+    $rkvp: new Party("RKVP", "Rooms-Katholieke Volkspartij", "#802008ff", new Image()),
+    // couldnt find *any* poster for HGSP, idk im just going dark blue why not
+    $hgsp: new Party("HGSP", "Hervormd-Gereformeerde Staatspartij", "#030557ff", new Image()),
+    $vnh: new Party("VNH", "Verbond voor Nationaal Herstel", "#ca8c19ff", new Image()),
 }
+
+/**
+ * Some notes about parties that we may need to deal with later.
+ * Thought it was a good idea to keep track of these somewhere
+ * - How do we display party fusions? Below is a known list:
+ *      - GL + PvdA -> GL/PvdA
+ *      - KVP + ARP + CHU -> CDA
+ *      - PPR + PSP + CPN + EVP -> GL
+ * 
+ * - How do we display rebrands or renaming? Below is a known list:
+ *      - Lijst Welter -> KNP (rebranded before 1952 election)
+ *      - Plattelandersbond -> NBTMP (rebranded before 1933 election)
+ * 
+ * 
+ * - Rebrands make me think, we can also consider supporting party logos throughout the ages,
+ *   though this is probably not worth the effort.
+ * 
+ * - There's some post-WW2 rebrands, and a post-WW2 fusion.
+ *   My recommendation would be to treat these rebrands as entirely new parties,
+ *   but to treat the fusion as a regular party fusion.
+ *   Reason for this being that the rebrands are typically considered
+ *   separate organizations from their pre-war predecessors,
+ *   which is abnormal for a rebranded party but not for a party fusion.
+ *      - LSP -> PvdD (rebrand)
+ *      - RKSP -> KVP (rebrand)
+ *      - SDAP + VDB + CDU -> PvdA (fusion)
+ * 
+ * - Frank
+ */
 
 T.parties.$bij1.image.src = "logos/BIJ1.png";
 T.parties.$ppnl.image.src = "logos/PPNL.png";
@@ -466,3 +502,20 @@ T.add_parliament(new Parliament([
     new Fraction(T.parties.$sgp, 2),
     new Fraction(T.parties.$nsb, 4),
 ], "Tweede Kamerverkiezingen 1937", new Date("1937-05-26")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$rsp, 1),
+    new Fraction(T.parties.$cpn, 4),
+    new Fraction(T.parties.$sdap, 22),
+    new Fraction(T.parties.$cdu, 1),
+    new Fraction(T.parties.$vdb, 6),
+    new Fraction(T.parties.$rkvp, 1),
+    new Fraction(T.parties.$chu, 10),
+    new Fraction(T.parties.$rksp, 28),
+    new Fraction(T.parties.$arp, 14),
+    new Fraction(T.parties.$lsp, 7),
+    new Fraction(T.parties.$nbtmp, 1),
+    new Fraction(T.parties.$hgsp, 1),
+    new Fraction(T.parties.$sgp, 3),
+    new Fraction(T.parties.$vnh, 1),
+], "Tweede Kamerverkiezingen 1933", new Date("1933-04-26")));
