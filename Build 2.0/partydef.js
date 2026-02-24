@@ -51,7 +51,7 @@ T.parties = {
     $cdu: new Party("CDU", "Christelijk-Democratische Unie", "#eb6c05ff", new Image()),
     $rsp: new Party("RSP", "Revolutionair Socialistische Partij", "#a70909ff", new Image()),
     // couldnt find *any* poster for NBTMP, just went for BBB color
-    $nbtmp: new Party("NBTMP", "Nationale Boeren-, Tuinders- en Middenstandspartij", "#9ee65aff", new Image()),
+    $nbtmp: new Party("NBTMP", "Nationale Boeren-, Tuinders- en Middenstandspartij", "#79aa4aff", new Image()),
     $rkvp: new Party("RKVP", "Rooms-Katholieke Volkspartij", "#802008ff", new Image()),
     // couldnt find *any* poster for HGSP, idk im just going dark blue why not
     $hgsp: new Party("HGSP", "Hervormd-Gereformeerde Staatspartij", "#030557ff", new Image()),
