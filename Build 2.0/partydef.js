@@ -56,6 +56,7 @@ T.parties = {
     // couldnt find *any* poster for HGSP, idk im just going dark blue why not
     $hgsp: new Party("HGSP", "Hervormd-Gereformeerde Staatspartij", "#030557ff", new Image()),
     $vnh: new Party("VNH", "Verbond voor Nationaal Herstel", "#ca8c19ff", new Image()),
+    $lk: new Party("LK", "Lid Keijzer", "#378747ff", new Image()),
 }
 
 /**
@@ -138,7 +139,8 @@ T.add_parliament(new Parliament([
     new Fraction(T.parties.$50plus, 2),
     new Fraction(T.parties.$cda, 18),
     new Fraction(T.parties.$vvd, 22),
-    new Fraction(T.parties.$bbb, 4),
+    new Fraction(T.parties.$bbb, 3),
+    new Fraction(T.parties.$lk, 1),
     new Fraction(T.parties.$ja21, 9),
     new Fraction(T.parties.$sgp, 3),
     new Fraction(T.parties.$gm, 7),
