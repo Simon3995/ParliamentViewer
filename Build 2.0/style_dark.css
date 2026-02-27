@@ -39,10 +39,6 @@ body {
     filter: drop-shadow(5px 5px 0px #2a273d);
 }
 
-#logo h1 {
-    margin-bottom: -8px;
-}
-
 #logo h2 {
     color: #adb5ff;
 }
