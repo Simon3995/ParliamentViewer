@@ -1,4 +1,4 @@
-let T = new Timeline("Netherlands");
+let T = new Timeline("Netherlands - Tweede Kamer");
 
 T.parties = {
     $bij1: new Party("BIJ1", "BIJ1", "#000000", new Image()),
