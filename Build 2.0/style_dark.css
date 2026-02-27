@@ -47,6 +47,16 @@ body {
     color: #adb5ff;
 }
 
+#logo select {
+    width: 100%;
+    margin: 6px 0px;
+    font-size: 15px;
+    background-color: #00000040;
+    color: white;
+    border: none;
+    padding: 4px 6px;
+}
+
 table {
     border-collapse: collapse;
     table-layout: fixed;

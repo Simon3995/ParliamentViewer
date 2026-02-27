@@ -1,4 +1,4 @@
-let T = new Timeline("Netherlands - Tweede Kamer");
+T = new Timeline("Netherlands - Tweede Kamer");
 
 T.parties = {
     $bij1: new Party("BIJ1", "BIJ1", "#000000", new Image()),
@@ -521,3 +521,5 @@ T.add_parliament(new Parliament([
     new Fraction(T.parties.$sgp, 3),
     new Fraction(T.parties.$vnh, 1),
 ], "Tweede Kamerverkiezingen 1933", new Date("1933-04-26")));
+
+Timelines["nl_tweedekamer"] = T;

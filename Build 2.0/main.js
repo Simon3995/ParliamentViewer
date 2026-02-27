@@ -5,7 +5,9 @@ TWO.maximize(c);
 ctx.setCameraPosition(1.5 * GMULT, -0.5 * GMULT);
 
 set_zoom_level();
-let cur_plm = T.parliaments[0];
+
+let cur_tml = Timelines["nl_tweedekamer"];
+let cur_plm = cur_tml.parliaments[0];
 let cur_hlt = null;
 load_parliament(cur_plm);
 
@@ -21,22 +23,26 @@ function update() {
 }
 
 function prev() {
-	const idx = T.parliaments.indexOf(cur_plm);
-	const newIdx = Math.min(idx + 1, T.parliaments.length - 1);
-	cur_plm = T.parliaments[newIdx];
+	const idx = cur_tml.parliaments.indexOf(cur_plm);
+	const newIdx = Math.min(idx + 1, cur_tml.parliaments.length - 1);
+	cur_plm = cur_tml.parliaments[newIdx];
 	load_parliament(cur_plm);
 }
 
 function next() {
-	const idx = T.parliaments.indexOf(cur_plm);
+	const idx = cur_tml.parliaments.indexOf(cur_plm);
 	const newIdx = Math.max(idx - 1, 0);
-	cur_plm = T.parliaments[newIdx];
+	cur_plm = cur_tml.parliaments[newIdx];
 	load_parliament(cur_plm);
 }
 
 function load_parliament(parliament) {
 	document.getElementById("title").innerHTML = parliament.description;
 	table(parliament);
+}
+
+function load_timeline(name) {
+	cur_tml = Timelines[name];
 }
 
 // generate a seat table based on a parliament object
@@ -61,8 +67,8 @@ function table(parliament) {
 
 		// find difference
 		let diff = 0;
-		const prevIdx = (T.parliaments.indexOf(parliament) + 1);
-		const prevParl = T.parliaments[prevIdx];
+		const prevIdx = (cur_tml.parliaments.indexOf(parliament) + 1);
+		const prevParl = cur_tml.parliaments[prevIdx];
 		if (prevParl) {
 			const prevFrac = prevParl.fractions.find(f => f.party.name === frac.party.name);
 			diff = prevFrac ? frac.seat_amt - prevFrac.seat_amt : frac.seat_amt;
@@ -96,8 +102,8 @@ function table(parliament) {
 
 	// find parties that left parliament
 	let left_plm = [];
-	const prev_idx = (T.parliaments.indexOf(parliament) + 1);
-	const prev_parl = T.parliaments[prev_idx];
+	const prev_idx = (cur_tml.parliaments.indexOf(parliament) + 1);
+	const prev_parl = cur_tml.parliaments[prev_idx];
 	if (prev_parl) {
 		const curr_party_names = new Set(parliament.fractions.map(f => f.party.name));
 		left_plm = prev_parl.fractions
@@ -137,3 +143,12 @@ document.addEventListener('keydown', (e) => {
 	if (e.key === 'ArrowLeft') prev();
 	if (e.key === 'ArrowRight') next();
 });
+
+document.getElementById("select-timeline").onchange = (e) => {
+	load_timeline(e.target.value);
+	cur_plm = cur_tml.parliaments[0];
+	cur_hlt = null;
+	load_parliament(cur_plm);
+
+	update();
+}
