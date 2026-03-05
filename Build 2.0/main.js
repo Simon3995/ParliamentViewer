@@ -13,8 +13,11 @@ update();
 function update() {
 	requestAnimationFrame(update);
 	
-	// draw seats
-	ctx.clearRect(0, 0, c.width, c.height);
+	ctx.setTransform(1, 0, 0, 1, 0, 0);
+	ctx.translate(0, canvas.height);
+	ctx.scale(c.width / 2, c.height);
+
+	//ctx.clearRect(0, 0, c.width, c.height);
 	cur_plm.draw();
 }
 

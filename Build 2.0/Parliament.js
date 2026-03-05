@@ -59,14 +59,14 @@ class Parliament {
 
     draw() {     
         for (let fraction of this.fractions) {
-            const r = 0.75 * get_row_thickness(get_nrows_from_nseats(this.seat_amt())) * GMULT;
+            const r = 0.75 * get_row_thickness(get_nrows_from_nseats(this.seat_amt()));
             for (const seat of fraction.seat_centers) {
                 ctx.fillStyle = fraction.party.color;
                 ctx.beginPath()
                 ctx.arc(seat[0], seat[1], r, 0, 2*Math.PI);
                 ctx.fill();
 
-                let s = 0.0083 * GMULT * r;
+                let s = 0.0083 * r;
 
                 if (fraction.party.image.src) {
                     
@@ -90,14 +90,14 @@ class Parliament {
         if (cur_hlt) {
             for (let fraction of this.fractions) {
                 if (fraction.party.name != cur_hlt) continue;
-                const r = 0.75 * get_row_thickness(get_nrows_from_nseats(this.seat_amt())) * GMULT;
+                const r = 0.75 * get_row_thickness(get_nrows_from_nseats(this.seat_amt()));
                 for (const seat of fraction.seat_centers) {
                     ctx.fillStyle = fraction.party.color;
                     ctx.beginPath()
                     ctx.arc(seat[0], seat[1], r, 0, 2*Math.PI);
                     ctx.fill();
 
-                    let s = 0.0083 * GMULT * r;
+                    let s = 0.0083 * r;
 
                     if (fraction.party.image.src) {
                         
