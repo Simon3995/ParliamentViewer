@@ -21,6 +21,11 @@ function update() {
 	cur_plm.draw();
 }
 
+function resize_canvas() {
+	c.width = window.innerWidth;
+	c.height = window.innerHeight;
+}
+
 function prev() {
 	const idx = cur_tml.parliaments.indexOf(cur_plm);
 	const newIdx = Math.min(idx + 1, cur_tml.parliaments.length - 1);
@@ -133,6 +138,14 @@ function table(parliament) {
 document.addEventListener('keydown', (e) => {
 	if (e.key === 'ArrowLeft') prev();
 	if (e.key === 'ArrowRight') next();
+});
+
+window.addEventListener('resize', (e) => {
+	resize_canvas();
+});
+
+document.addEventListener('DOMContentLoaded', (e) => {
+	resize_canvas();
 });
 
 document.getElementById("select-timeline").onchange = (e) => {
