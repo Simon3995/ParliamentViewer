@@ -59,17 +59,16 @@ class Parliament {
 
     draw() {     
         for (let fraction of this.fractions) {
-            const r = 0.75 * get_row_thickness(get_nrows_from_nseats(this.seat_amt()));
+            const r = 0.8 * get_row_thickness(get_nrows_from_nseats(this.seat_amt()));
             for (const seat of fraction.seat_centers) {
                 ctx.fillStyle = fraction.party.color;
                 ctx.beginPath()
                 ctx.arc(seat[0], seat[1], r, 0, 2*Math.PI);
                 ctx.fill();
 
-                let s = 0.0083 * r;
+                let s = 0.83 * r;
 
                 if (fraction.party.image.src) {
-                    
                     ctx.drawImage(
                         fraction.party.image,
                         seat[0] - s,
@@ -83,38 +82,6 @@ class Parliament {
                     ctx.textBaseline = "middle";
                     ctx.font = `bold ${1.2*s}px Atkinson`;
                     ctx.fillText(fraction.party.name, seat[0], seat[1] + s*0.1, s*2);
-                }
-            }
-        }
-
-        if (cur_hlt) {
-            for (let fraction of this.fractions) {
-                if (fraction.party.name != cur_hlt) continue;
-                const r = 0.75 * get_row_thickness(get_nrows_from_nseats(this.seat_amt()));
-                for (const seat of fraction.seat_centers) {
-                    ctx.fillStyle = fraction.party.color;
-                    ctx.beginPath()
-                    ctx.arc(seat[0], seat[1], r, 0, 2*Math.PI);
-                    ctx.fill();
-
-                    let s = 0.0083 * r;
-
-                    if (fraction.party.image.src) {
-                        
-                        ctx.drawImage(
-                            fraction.party.image,
-                            seat[0] - s,
-                            seat[1] - s,
-                            2*s,
-                            2*s
-                        );
-                    } else {
-                        ctx.fillStyle = "white";
-                        ctx.textAlign = "center";
-                        ctx.textBaseline = "middle";
-                        ctx.font = `bold ${1.2*s}px Atkinson`;
-                        ctx.fillText(fraction.party.name, seat[0], seat[1] + s*0.1, s*2);
-                    }
                 }
             }
         }

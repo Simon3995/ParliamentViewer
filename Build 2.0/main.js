@@ -17,7 +17,7 @@ function update() {
 	ctx.translate(0, canvas.height);
 	ctx.scale(c.width / 2, c.height);
 
-	//ctx.clearRect(0, 0, c.width, c.height);
+	ctx.clearRect(0, 0, 2, -1);
 	cur_plm.draw();
 }
 
