@@ -34,6 +34,7 @@ T.parties = {
     $ppr: new Party("PPR", "Politieke Partij Radikalen", "#e92f7cff", new Image()),
     $evp: new Party("EVP", "Evangelische Volkspartij", "rgb(240, 176, 0)", new Image()),
     $cpn: new Party("CPN", "Communistische Partij Nederland", "#ff0000", new Image()),
+    $sdp: new Party("SDP", "Sociaal-Democratische Partij", "#ff0000", new Image()),
     $bp: new Party("BP", "Boerenpartij", "rgb(81, 148, 54)", new Image()),
     $ds70: new Party("DS'70", "Democratisch Socialisten '70", "#d40000ff", new Image()),
     $kvp: new Party("KVP", "Katholieke Volkspartij", "#362511ff", new Image()),
@@ -50,13 +51,27 @@ T.parties = {
     $lsp: new Party("LSP", "Liberale Staatspartij", "#0d6486ff", new Image()),
     $cdu: new Party("CDU", "Christelijk-Democratische Unie", "#eb6c05ff", new Image()),
     $rsp: new Party("RSP", "Revolutionair Socialistische Partij", "#a70909ff", new Image()),
-    // couldnt find *any* poster for NBTMP, just went for BBB color
+    // A decent amount of prties below don't seem to have any known associated colors
+    // Nor could I find posters for them. 
     $nbtmp: new Party("NBTMP", "Nationale Boeren-, Tuinders- en Middenstandspartij", "#79aa4aff", new Image()),
+    $pb: new Party("PB", "Plattelandersbond", "#79aa4aff", new Image()),
     $rkvp: new Party("RKVP", "Rooms-Katholieke Volkspartij", "#802008ff", new Image()),
-    // couldnt find *any* poster for HGSP, idk im just going dark blue why not
     $hgsp: new Party("HGSP", "Hervormd-Gereformeerde Staatspartij", "#030557ff", new Image()),
     $vnh: new Party("VNH", "Verbond voor Nationaal Herstel", "#ca8c19ff", new Image()),
     $lk: new Party("LK", "Lid Keijzer", "#378747ff", new Image()),
+    $mpsl: new Party("MPSL", "Middenpartij voor Stad en Land", "#000000FF", new Image()),
+    $ab: new Party("AB", "Algemeene Bond", "#000000FF", new Image()),
+    $lp: new Party("LP", "Liberale Partij", "#1f5192ff", new Image()),
+    $mp: new Party("MP", "Middenstandspartij", "#b8bb19ff", new Image()),
+    $eb: new Party("EB", "Economische Bond", "#591ba0ff", new Image()),
+    $lu: new Party("LU", "Liberale Unie", "#1b76a0ff", new Image()),
+    $bvl: new Party("BVL", "Bond van Vrije Liberale", "#5879e9ff", new Image()),
+    $cdp: new Party("CDP", "Christen-Democratische Partij", "#464040ff", new Image()),
+    $sp_1918: new Party("SP", "Socialistische Partij", "#df0e0eff", new Image()),
+    $bcs: new Party("BCS", "Bond van Christen-Socialisten", "#681010ff", new Image()),
+    $csp: new Party("CSP", "Christelijk-Sociale Partij", "#8b5c14ff", new Image()),
+    $np: new Party("NP", "Neutrale Partij", "#8b1481ff", new Image()),
+    $vdw: new Party("VDW", "Verbond tot Democratisering der Weermacht", "#0c501bff", new Image()),
 }
 
 /**
@@ -521,5 +536,66 @@ T.add_parliament(new Parliament([
     new Fraction(T.parties.$sgp, 3),
     new Fraction(T.parties.$vnh, 1),
 ], "Tweede Kamerverkiezingen 1933", new Date("1933-04-26")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$cpn, 2),
+    new Fraction(T.parties.$sdap, 24),
+    new Fraction(T.parties.$vdb, 7),
+    new Fraction(T.parties.$chu, 11),
+    new Fraction(T.parties.$rksp, 30),
+    new Fraction(T.parties.$arp, 12),
+    new Fraction(T.parties.$lsp, 8),
+    new Fraction(T.parties.$mpsl, 1),
+    new Fraction(T.parties.$pb, 1),
+    new Fraction(T.parties.$hgsp, 1),
+    new Fraction(T.parties.$sgp, 3),
+], "Tweede Kamerverkiezingen 1929", new Date("1929-07-03")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$cpn, 1),
+    new Fraction(T.parties.$sdap, 24),
+    new Fraction(T.parties.$vdb, 7),
+    new Fraction(T.parties.$rkvp, 1),
+    new Fraction(T.parties.$chu, 11),
+    new Fraction(T.parties.$ab, 30),
+    new Fraction(T.parties.$arp, 13),
+    new Fraction(T.parties.$lsp, 9),
+    new Fraction(T.parties.$pb, 1),
+    new Fraction(T.parties.$hgsp, 1),
+    new Fraction(T.parties.$sgp, 2),
+], "Tweede Kamerverkiezingen 1925", new Date("1925-07-01")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$cpn, 2),
+    new Fraction(T.parties.$sdap, 20),
+    new Fraction(T.parties.$vdb, 5),
+    new Fraction(T.parties.$chu, 11),
+    new Fraction(T.parties.$ab, 32),
+    new Fraction(T.parties.$arp, 16),
+    new Fraction(T.parties.$lsp, 10),
+    new Fraction(T.parties.$lp, 1),
+    new Fraction(T.parties.$pb, 2),
+    new Fraction(T.parties.$sgp, 1),
+], "Tweede Kamerverkiezingen 1922", new Date("1922-07-05")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$sdp, 2),
+    new Fraction(T.parties.$sp_1918, 1),
+    new Fraction(T.parties.$bcs, 1),
+    new Fraction(T.parties.$sdap, 22),
+    new Fraction(T.parties.$csp, 1),
+    new Fraction(T.parties.$vdb, 5),
+    new Fraction(T.parties.$np, 1),
+    new Fraction(T.parties.$cdp, 1),
+    new Fraction(T.parties.$chu, 7),
+    new Fraction(T.parties.$ab, 30),
+    new Fraction(T.parties.$arp, 13),
+    new Fraction(T.parties.$mp, 1),
+    new Fraction(T.parties.$eb, 3),
+    new Fraction(T.parties.$lu, 6),
+    new Fraction(T.parties.$bvl, 4),
+    new Fraction(T.parties.$vdw, 1),
+    new Fraction(T.parties.$pb, 1),
+], "Tweede Kamerverkiezingen 1918", new Date("1918-07-03")));
 
 Timelines["nl_tweedekamer"] = T;
