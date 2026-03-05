@@ -1,10 +1,6 @@
 // init
 const c = document.getElementById("canvas");
-const ctx = TWO.getEnhancedContext(c);
-TWO.maximize(c);
-ctx.setCameraPosition(1.5 * GMULT, -0.5 * GMULT);
-
-set_zoom_level();
+const ctx = c.getContext("2d");
 
 let cur_tml = Timelines["nl_tweedekamer"];
 let cur_plm = cur_tml.parliaments[0];
@@ -19,7 +15,7 @@ function update() {
 	
 	// draw seats
 	ctx.clearRect(0, 0, c.width, c.height);
-	cur_plm.draw(ctx);
+	cur_plm.draw();
 }
 
 function prev() {
@@ -129,14 +125,6 @@ function table(parliament) {
 		document.getElementById("left_plm").innerHTML = '';
 	}
 }
-
-// set the correct zoom level for the canvas for the current window size
-function set_zoom_level() {
-	ctx.setZoom(0.325 * c.width / GMULT);
-}
-
-// fix zoom level when window size changes
-window.addEventListener("resize", set_zoom_level, false);
 
 // add keyboard controls
 document.addEventListener('keydown', (e) => {

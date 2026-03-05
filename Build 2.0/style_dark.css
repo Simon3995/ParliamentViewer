@@ -10,6 +10,10 @@ body {
     color: white;
 }
 
+canvas {
+    border: 2px solid red;
+}
+
 #sidebar {
     position: fixed;
     top: 0px;
