@@ -6,6 +6,9 @@ T.parties = {
     $vac: new Party("Vac", "Vacant Seats", "#808080", new Image()),
 }
 
+T.parties.$dem.image.src = "logos/us/dem.png";
+T.parties.$rep.image.src = "logos/us/rep.png";
+
 T.add_parliament(new Parliament([
     new Fraction(T.parties.$dem, 215),
     new Fraction(T.parties.$rep, 220),
