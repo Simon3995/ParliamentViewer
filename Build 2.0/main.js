@@ -12,11 +12,6 @@ update();
 // main update loop
 function update() {
 	requestAnimationFrame(update);
-	
-	ctx.setTransform(1, 0, 0, 1, 0, 0);
-	ctx.translate(0, canvas.height);
-	ctx.scale(c.width / 2, c.height);
-
 	ctx.clearRect(0, 0, 2, -1);
 	cur_plm.draw();
 }
@@ -24,6 +19,18 @@ function update() {
 function resize_canvas() {
 	c.width = window.innerWidth;
 	c.height = window.innerHeight;
+}
+
+function transform_ctx() {
+	const target_w = c.width * (2/3);
+	const target_h = c.height;
+	const scale = Math.min(target_w / 2, target_h / 1);
+	const offset_x = (target_w - (scale * 2)) / 2;
+	const offset_y = (target_h - (scale * 1)) / 2;
+	
+	ctx.setTransform(1, 0, 0, 1, 0, 0);
+	ctx.translate(offset_x, canvas.height - offset_y);
+	ctx.scale(scale, scale);
 }
 
 function prev() {
@@ -142,10 +149,12 @@ document.addEventListener('keydown', (e) => {
 
 window.addEventListener('resize', (e) => {
 	resize_canvas();
+	transform_ctx();
 });
 
 document.addEventListener('DOMContentLoaded', (e) => {
 	resize_canvas();
+	transform_ctx();
 });
 
 document.getElementById("select-timeline").onchange = (e) => {

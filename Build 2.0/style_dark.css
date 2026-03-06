@@ -8,6 +8,7 @@
 body {
     background-color: #1b1b23;
     color: white;
+    overflow: hidden;
 }
 
 #sidebar {

@@ -80,8 +80,8 @@ class Parliament {
                     ctx.fillStyle = "white";
                     ctx.textAlign = "center";
                     ctx.textBaseline = "middle";
-                    ctx.font = `bold ${1.2*s}px Atkinson`;
-                    ctx.fillText(fraction.party.name, seat[0], seat[1]-0.25, s*2);
+                    ctx.font = `bold 1px Arial`;
+                    //ctx.fillText(fraction.party.name, seat[0], seat[1]-0.25, 2*s);
                 }
             }
         }
