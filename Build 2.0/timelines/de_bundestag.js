@@ -1,14 +1,14 @@
 T = new Timeline("Germany - Bundestag");
 
 T.parties = {
-    $linke: new Party("Linke", "Die Linke", "#ba0076ff", new Image()),
-    $grune: new Party("Grüne", "Bündnis 90/Die Grünen", "#3aab3a", new Image()),
-    $spd: new Party("SPD", "Sozialdemokratische Partei Deutschlands", "#ff0000", new Image()),
-    $cducsu: new Party("CDU/CSU", "Unionsparteien", "#303030", new Image()),
-    $fdp: new Party("FDP", "Freie Demokratische Partei", "#ffd000", new Image()),
-    $afd: new Party("AfD", "Alternative für Deutschland", "#3d9eff", new Image()),
-    $ssw: new Party("SSW", "Südschleswigscher Wählerverband", "#2424aeff", new Image()),
-    $pds: new Party("PDS", "Partei des Demokratischen Sozialismus", "#ff5e00", new Image()),
+    $linke: new Party("Linke", "Die Linke", "$linke", "#ba0076ff", new Image()),
+    $grune: new Party("Grüne", "Bündnis 90/Die Grünen", "$grune", "#3aab3a", new Image()),
+    $spd: new Party("SPD", "Sozialdemokratische Partei Deutschlands", "$spd", "#ff0000", new Image()),
+    $cducsu: new Party("CDU/CSU", "Unionsparteien", "$cducsu", "#303030", new Image()),
+    $fdp: new Party("FDP", "Freie Demokratische Partei", "$fdp", "#ffd000", new Image()),
+    $afd: new Party("AfD", "Alternative für Deutschland", "$afd", "#3d9eff", new Image()),
+    $ssw: new Party("SSW", "Südschleswigscher Wählerverband", "$ssw", "#2424aeff", new Image()),
+    $pds: new Party("PDS", "Partei des Demokratischen Sozialismus", "$pds", "#ff5e00", new Image()),
 }
 
 T.add_parliament(new Parliament([
