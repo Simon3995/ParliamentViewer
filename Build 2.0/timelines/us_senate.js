@@ -13,6 +13,6 @@ T.add_parliament(new Parliament([
     new Fraction(T.parties.$dem, 45),
     new Fraction(T.parties.$ind, 2),
     new Fraction(T.parties.$rep, 53),
-], "2024 United States Senate Elections", new Date("2024-11-05")));
+], "2024 Senate Elections", new Date("2024-11-05")));
 
 Timelines["us_senate"] = T;
