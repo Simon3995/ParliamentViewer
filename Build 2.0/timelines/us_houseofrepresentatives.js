@@ -1,9 +1,9 @@
 T = new Timeline("United States - House of Representatives");
 
 T.parties = {
-    $dem: new Party("Dem", "Democratic Party", "#3360db", new Image()),
-    $rep: new Party("Rep", "Republican Party", "#e02929", new Image()),
-    $vac: new Party("Vac", "Vacant Seats", "#808080", new Image()),
+    $dem: new Party("Dem", "Democratic Party", "$dem", "#3360db", new Image()),
+    $rep: new Party("Rep", "Republican Party", "$rep", "#e02929", new Image()),
+    $vac: new Party("Vac", "Vacant Seats", "$vac", "#808080", new Image()),
 }
 
 T.parties.$dem.image.src = "logos/us/dem.png";
