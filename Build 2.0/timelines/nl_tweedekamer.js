@@ -65,7 +65,7 @@ T.parties = {
     $mp: new Party("MP", "Middenstandspartij", "#b8bb19ff", new Image()),
     $eb: new Party("EB", "Economische Bond", "#591ba0ff", new Image()),
     $lu: new Party("LU", "Liberale Unie", "#1b76a0ff", new Image()),
-    $bvl: new Party("BVL", "Bond van Vrije Liberale", "#5879e9ff", new Image()),
+    $bvl: new Party("BVL", "Bond van Vrije Liberalen", "#5879e9ff", new Image()),
     $cdp: new Party("CDP", "Christen-Democratische Partij", "#464040ff", new Image()),
     $sp_1918: new Party("SP", "Socialistische Partij", "#df0e0eff", new Image()),
     $bcs: new Party("BCS", "Bond van Christen-Socialisten", "#681010ff", new Image()),
