@@ -81,6 +81,7 @@ class Parliament {
                     ctx.textAlign = "center";
                     ctx.textBaseline = "middle";
                     ctx.font = `bold 1px Arial`;
+                    // text is broken atm
                     //ctx.fillText(fraction.party.name, seat[0], seat[1]-0.25, 2*s);
                 }
             }
