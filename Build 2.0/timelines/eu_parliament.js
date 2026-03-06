@@ -1,22 +1,22 @@
 T = new Timeline("European Union - European Parliament");
 
 T.parties = {
-    $independent: new Party("NI", "Non-attached Members", "#696969", new Image()),
+    $independent: new Party("NI", "Non-attached Members", "$independent", "#696969", new Image()),
 
-    $epp: new Party("EPP", "European People's Party Group", "#3399FF", new Image()),
-    $sd: new Party("S&D", "Progressive Alliance of Socialists and Democrats", "#FF0000", new Image()),
-    $pfe: new Party("PfE", "Patriots for Europe", "#013366", new Image()),
-    $ecr: new Party("ECR", "European Conservatives and Reformists Group", "#0054A5", new Image()),
-    $re: new Party("Renew", "Renew Europe", "#0099FF", new Image()),
-    $greens: new Party("Greens/EFA", "The Greens/European Free Alliance", "#009900", new Image()),
-    $left: new Party("Left", "The Left in the European Parliament - GUE/NGL", "#990000", new Image()),
-    $esn: new Party("ESN", "Europe of Severeign Nations Group", "#13517E", new Image()),
-    $id: new Party("ID", "Identity and Democracy", "#164289", new Image()),
-    $alde: new Party("ALDE", "Alliance of Liberals and Democrats for Europe Group", "#FFFF00", new Image()),
-    $guengl: new Party("GUE/NGL", "Confederated Group of the European United Left - Nordic Green Left", "#990000", new Image()),
-    $efdd: new Party("EFDD", "Europe of Freedom and Direct Democracy", "#24B9B9", new Image()),
-    $enf: new Party("ENF", "Europe of Nations and Freedom", "#2B3856", new Image()),
-    $efd: new Party("EFD", "Europe of Freedom and Democracy", "#24B9B9", new Image()),
+    $epp: new Party("EPP", "European People's Party Group", "$epp", "#3399FF", new Image()),
+    $sd: new Party("S&D", "Progressive Alliance of Socialists and Democrats", "$sd", "#FF0000", new Image()),
+    $pfe: new Party("PfE", "Patriots for Europe", "$pfe", "#013366", new Image()),
+    $ecr: new Party("ECR", "European Conservatives and Reformists Group", "$ecr", "#0054A5", new Image()),
+    $re: new Party("Renew", "Renew Europe", "$re", "#0099FF", new Image()),
+    $greens: new Party("Greens/EFA", "The Greens/European Free Alliance", "$greens", "#009900", new Image()),
+    $left: new Party("Left", "The Left in the European Parliament - GUE/NGL", "$left", "#990000", new Image()),
+    $esn: new Party("ESN", "Europe of Severeign Nations Group", "$esn", "#13517E", new Image()),
+    $id: new Party("ID", "Identity and Democracy", "$id", "#164289", new Image()),
+    $alde: new Party("ALDE", "Alliance of Liberals and Democrats for Europe Group", "$alde", "#FFFF00", new Image()),
+    $guengl: new Party("GUE/NGL", "Confederated Group of the European United Left - Nordic Green Left", "$guengl", "#990000", new Image()),
+    $efdd: new Party("EFDD", "Europe of Freedom and Direct Democracy", "$efdd", "#24B9B9", new Image()),
+    $enf: new Party("ENF", "Europe of Nations and Freedom", "$enf", "#2B3856", new Image()),
+    $efd: new Party("EFD", "Europe of Freedom and Democracy", "$efd", "#24B9B9", new Image()),
 }
 
 T.add_parliament(new Parliament([
