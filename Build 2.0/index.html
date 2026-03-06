@@ -7,8 +7,10 @@
 </head>
 
 <body>
+    <!-- Full-screen canvas -->
     <canvas width="800" height="400" id="canvas"></canvas>
 
+    <!-- Top left logo/menu -->
     <div id="logo">
         <h1>Parliament Viewer</h1>
 
@@ -22,16 +24,21 @@
         </select>
     </div>
 
+    <!-- Right sidebar -->
     <div id="sidebar">
         <button onclick="prev()">Previous</button><button onclick="next()" class="rbutton">Next</button>
         <h1 id="title"></h1>
         <div id="table"></div>
         <div id="left_plm"></div>
     </div>
+
+    <!-- temporary, debugging -->
+    <div id="offscreen"></div>
 </body>
 
 </html>
 
+<!-- Scripts -->
 <script src="geometry.js"></script>
 
 <script src="Party.js"></script>

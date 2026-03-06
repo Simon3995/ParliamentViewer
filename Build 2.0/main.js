@@ -1,12 +1,8 @@
 // init
 const c = document.getElementById("canvas");
 const ctx = c.getContext("2d");
-
-let cur_tml = Timelines["nl_tweedekamer"];
-let cur_plm = cur_tml.parliaments[0];
-let cur_hlt = null;
-load_parliament(cur_plm);
-
+let cur_tml, cur_plm, cur_hlt, party_imgs;
+load_timeline("nl_tweedekamer");
 update();
 
 // main update loop
@@ -54,6 +50,34 @@ function load_parliament(parliament) {
 
 function load_timeline(name) {
 	cur_tml = Timelines[name];
+	cur_plm = cur_tml.parliaments[0];
+	load_parliament(cur_plm);
+	generate_party_imgs();
+}
+
+function generate_party_imgs() {
+	party_imgs = [];
+	const s = 100;
+	for (const name in cur_tml.parties) {
+		const party = cur_tml.parties[name];
+		const sprite = document.createElement("canvas");
+		const sctx = sprite.getContext("2d");
+		sprite.width = sprite.height = s;
+		sctx.fillStyle = party.color;
+		sctx.arc(50, 50, 50, 0, 2*Math.PI);
+		sctx.fill();
+		if (party.image.src) {
+			const scale = 40;
+			sctx.drawImage(party.image, 50-scale, 50-scale, 2*scale, 2*scale);
+		} else {
+			sctx.fillStyle = "white";
+			sctx.textAlign = "center";
+			sctx.textBaseline = "middle";
+			sctx.font = `bold 56px Atkinson`;
+			sctx.fillText(party.name, 50, 53, 85);
+		}
+		party_imgs[party.id] = sprite;
+	}
 }
 
 // generate a seat table based on a parliament object
@@ -158,9 +182,10 @@ window.addEventListener('resize', (e) => {
 	transform_ctx();
 });
 
-document.addEventListener('DOMContentLoaded', (e) => {
+window.addEventListener('load', (e) => {
 	resize_canvas();
 	transform_ctx();
+	generate_party_imgs();
 });
 
 document.getElementById("select-timeline").onchange = (e) => {

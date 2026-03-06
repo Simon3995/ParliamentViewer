@@ -57,33 +57,16 @@ class Parliament {
         return amt;
     }
 
-    draw() {     
+    draw() {
         for (let fraction of this.fractions) {
             const r = 0.8 * get_row_thickness(get_nrows_from_nseats(this.seat_amt()));
             for (const seat of fraction.seat_centers) {
-                ctx.fillStyle = fraction.party.color;
-                ctx.beginPath()
-                ctx.arc(seat[0], seat[1], r, 0, 2*Math.PI);
-                ctx.fill();
-
-                let s = 0.83 * r;
-
-                if (fraction.party.image.src) {
-                    ctx.drawImage(
-                        fraction.party.image,
-                        seat[0] - s,
-                        seat[1] - s,
-                        2*s,
-                        2*s
-                    );
-                } else {
-                    ctx.fillStyle = "white";
-                    ctx.textAlign = "center";
-                    ctx.textBaseline = "middle";
-                    ctx.font = `bold 1px Arial`;
-                    // text is broken atm
-                    //ctx.fillText(fraction.party.name, seat[0], seat[1]-0.25, 2*s);
-                }
+                ctx.drawImage(
+                    party_imgs[fraction.party.id],
+                    seat[0] - r,
+                    seat[1] - r,
+                    2*r, 2*r
+                );
             }
         }
     }
