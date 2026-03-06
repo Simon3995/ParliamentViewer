@@ -143,8 +143,14 @@ function table(parliament) {
 
 // add keyboard controls
 document.addEventListener('keydown', (e) => {
-	if (e.key === 'ArrowLeft') prev();
-	if (e.key === 'ArrowRight') next();
+	if (e.key === 'ArrowLeft') {
+		e.preventDefault();
+		prev();
+	}
+	if (e.key === 'ArrowRight') {
+		e.preventDefault();
+		next();
+	}
 });
 
 window.addEventListener('resize', (e) => {
