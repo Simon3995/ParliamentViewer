@@ -24,6 +24,15 @@ function resize_canvas() {
 
 function highlight(id) {
 	cur_hlt = id;
+
+	document.querySelectorAll("tr.highlighted").forEach(row => {
+		row.classList.remove("highlighted");
+	});
+
+	const hl_row = document.getElementById(id);
+	if (hl_row && hl_row.tagName === 'TR') {
+		hl_row.classList.add("highlighted");
+	}
 }
 
 function transform_ctx() {
@@ -127,8 +136,9 @@ function table(parliament) {
 
 		// click event
 		let onclick = `onclick="highlight('${frac.party.id}')"`;
+		let id = `id=${frac.party.id}`;
 
-		string += `<tr ${onclick} class="tablerow">`;
+		string += `<tr ${id} ${onclick} class="tablerow">`;
 		string += "<td>" + frac.party.name + "</td>";
 		string += "<td>" + frac.party.fullname + "</td>";
 		string += `<td>${frac.seat_amt} (${diff})</td>`;
@@ -175,6 +185,8 @@ function table(parliament) {
 	} else {
 		document.getElementById("left_plm").innerHTML = '';
 	}
+
+	highlight(cur_hlt);  // re-highlight
 }
 
 // add keyboard controls
@@ -217,18 +229,18 @@ c.addEventListener("mousedown", (e) => {
 		for (const seat of fraction.seat_centers) {
 			const dist = Math.hypot(seat[0] - mouse_x, seat[1] - mouse_y);
 			if (dist <= cur_plm.get_seat_radius() && cur_hlt == null) {
-				cur_hlt = fraction.party.id;
+				highlight(fraction.party.id);
 				return;
 			}
 		}
 	}
-	cur_hlt = null;
+	highlight(null);
 });
 
 document.getElementById("select-timeline").onchange = (e) => {
 	load_timeline(e.target.value);
 	cur_plm = cur_tml.parliaments[0];
-	cur_hlt = null;
+	highlight(null);
 	load_parliament(cur_plm);
 
 	update();

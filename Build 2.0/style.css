@@ -54,6 +54,12 @@ body {
     padding: 4px 6px;
 }
 
+.highlighted {
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #5474cc !important;
+}
+
 table {
     border-collapse: collapse;
     table-layout: fixed;
