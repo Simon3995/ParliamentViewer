@@ -39,4 +39,28 @@ T.add_parliament(new Parliament([
     new Fraction(T.parties.$rep, 52),
 ], "2016 Senate Elections", new Date("2016-11-08")));
 
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$dem, 44),
+    new Fraction(T.parties.$ind, 2),
+    new Fraction(T.parties.$rep, 54),
+], "2014 Senate Elections", new Date("2014-11-04")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$dem, 53),
+    new Fraction(T.parties.$ind, 2),
+    new Fraction(T.parties.$rep, 45),
+], "2012 Senate Elections", new Date("2012-11-06")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$dem, 51),
+    new Fraction(T.parties.$ind, 2),
+    new Fraction(T.parties.$rep, 47),
+], "2010 Senate Elections", new Date("2010-11-02")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$dem, 57),
+    new Fraction(T.parties.$ind, 2),
+    new Fraction(T.parties.$rep, 41),
+], "2008 Senate Elections", new Date("2008-11-04")));
+
 Timelines["us_senate"] = T;
