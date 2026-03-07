@@ -202,8 +202,27 @@ window.addEventListener('load', (e) => {
 
 window.addEventListener('mousemove', (e) => {
 	const rect = c.getBoundingClientRect();
-	mouse_x = e.clientX - rect.left;
-	mouse_y = e.clientY - rect.top;
+	const mx = e.clientX - rect.left;
+	const my = e.clientY - rect.top;
+	const transform = ctx.getTransform();
+	const inverse = transform.inverse();
+	const mouse_point = new DOMPoint(mx, my);
+	const mouse = mouse_point.matrixTransform(inverse);
+	mouse_x = mouse.x;
+	mouse_y = mouse.y;
+});
+
+c.addEventListener("mousedown", (e) => {
+	for (const fraction of cur_plm.fractions) {
+		for (const seat of fraction.seat_centers) {
+			const dist = Math.hypot(seat[0] - mouse_x, seat[1] - mouse_y);
+			if (dist <= cur_plm.get_seat_radius() && cur_hlt == null) {
+				cur_hlt = fraction.party.id;
+				return;
+			}
+		}
+	}
+	cur_hlt = null;
 });
 
 document.getElementById("select-timeline").onchange = (e) => {
