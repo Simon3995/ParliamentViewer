@@ -3,13 +3,22 @@ T = new Timeline("Germany - Bundestag");
 T.parties = {
     $linke: new Party("Linke", "Die Linke", "$linke", "#ba0076ff", new Image()),
     $grune: new Party("Grüne", "Bündnis 90/Die Grünen", "$grune", "#3aab3a", new Image()),
-    $spd: new Party("SPD", "Sozialdemokratische Partei Deutschlands", "$spd", "#ff0000", new Image()),
+    $spd: new Party("SPD", "Sozialdemokratische Partei Deutschlands", "$spd", "#ee2121", new Image()),
     $cducsu: new Party("CDU/CSU", "Unionsparteien", "$cducsu", "#303030", new Image()),
-    $fdp: new Party("FDP", "Freie Demokratische Partei", "$fdp", "#ffd000", new Image()),
+    $fdp: new Party("FDP", "Freie Demokratische Partei", "$fdp", "#ffe600", new Image()),
     $afd: new Party("AfD", "Alternative für Deutschland", "$afd", "#3d9eff", new Image()),
-    $ssw: new Party("SSW", "Südschleswigscher Wählerverband", "$ssw", "#2424aeff", new Image()),
+    $ssw: new Party("SSW", "Südschleswigscher Wählerverband", "$ssw", "rgb(22, 40, 122)", new Image()),
     $pds: new Party("PDS", "Partei des Demokratischen Sozialismus", "$pds", "#ff5e00", new Image()),
 }
+
+T.parties.$linke.image.src = "logos/de/linke.png";
+T.parties.$grune.image.src = "logos/de/grune.png";
+T.parties.$spd.image.src = "logos/de/spd.png";
+T.parties.$ssw.image.src = "logos/de/ssw.png";
+T.parties.$cducsu.image.src = "logos/de/cducsu.png";
+T.parties.$afd.image.src = "logos/de/afd.png";
+T.parties.$fdp.image.src = "logos/de/fdp.png";
+T.parties.$pds.image.src = "logos/de/pds.png";
 
 T.add_parliament(new Parliament([
     new Fraction(T.parties.$linke, 64),
