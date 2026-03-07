@@ -15,4 +15,28 @@ T.add_parliament(new Parliament([
     new Fraction(T.parties.$rep, 53),
 ], "2024 Senate Elections", new Date("2024-11-05")));
 
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$dem, 49),
+    new Fraction(T.parties.$ind, 2),
+    new Fraction(T.parties.$rep, 49),
+], "2022 Senate Elections", new Date("2022-11-08")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$dem, 48),
+    new Fraction(T.parties.$ind, 2),
+    new Fraction(T.parties.$rep, 50),
+], "2020 Senate Elections", new Date("2020-11-03")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$dem, 45),
+    new Fraction(T.parties.$ind, 2),
+    new Fraction(T.parties.$rep, 53),
+], "2018 Senate Elections", new Date("2018-11-06")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$dem, 46),
+    new Fraction(T.parties.$ind, 2),
+    new Fraction(T.parties.$rep, 52),
+], "2016 Senate Elections", new Date("2016-11-08")));
+
 Timelines["us_senate"] = T;
