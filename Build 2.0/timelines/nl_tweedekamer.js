@@ -6,7 +6,7 @@ T.parties = {
     $sp: new Party("SP", "Socialistische Partij", "$sp", "#ed1b24", new Image()),
     $pvdd: new Party("PvdD", "Partij voor de Dieren", "$pvdd", "#016b2d", new Image()),
     $gl: new Party("GL", "GroenLinks", "$gl", "#00cc00", new Image()),
-    $glpvda: new Party("GL/PvdA", "GroenLinks / Partij voor de Arbeid", "$glpvda", "#01af40", new Image()),
+    $glpvda: new Party("GL/PvdA", "GroenLinks / Partij van de Arbeid", "$glpvda", "#01af40", new Image()),
     $pvda: new Party("PvdA", "Partij van de Arbeid", "$pvda", "#ff0000", new Image()),
     $denk: new Party("DENK", "DENK", "$denk", "#38bfc2", new Image()),
     $volt: new Party("Volt", "Volt", "$volt", "#683ba8", new Image()),
