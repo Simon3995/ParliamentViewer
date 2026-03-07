@@ -1,14 +1,19 @@
 // init
 const c = document.getElementById("canvas");
 const ctx = c.getContext("2d");
-let cur_tml, cur_plm, cur_hlt, party_imgs;
+let cur_tml, cur_plm, cur_hlt, party_imgs, mouse_x, mouse_y;
 load_timeline("nl_tweedekamer");
 update();
 
 // main update loop
 function update() {
 	requestAnimationFrame(update);
-	ctx.clearRect(0, 0, 2, -1);
+
+	ctx.save();
+	ctx.setTransform(1, 0, 0, 1, 0, 0);
+	ctx.clearRect(0, 0, c.width, c.height);
+	ctx.restore();
+
 	cur_plm.draw();
 }
 
@@ -57,24 +62,24 @@ function load_timeline(name) {
 
 function generate_party_imgs() {
 	party_imgs = [];
-	const s = 100;
+	const s = 200;
 	for (const name in cur_tml.parties) {
 		const party = cur_tml.parties[name];
 		const sprite = document.createElement("canvas");
 		const sctx = sprite.getContext("2d");
 		sprite.width = sprite.height = s;
 		sctx.fillStyle = party.color;
-		sctx.arc(50, 50, 50, 0, 2*Math.PI);
+		sctx.arc(s/2, s/2, s/2, 0, 2*Math.PI);
 		sctx.fill();
 		if (party.image.src) {
-			const scale = 40;
-			sctx.drawImage(party.image, 50-scale, 50-scale, 2*scale, 2*scale);
+			const scale = 0.4*s;
+			sctx.drawImage(party.image, s/2-scale, s/2-scale, 2*scale, 2*scale);
 		} else {
 			sctx.fillStyle = "white";
 			sctx.textAlign = "center";
 			sctx.textBaseline = "middle";
-			sctx.font = `bold 56px Atkinson`;
-			sctx.fillText(party.name, 50, 53, 85);
+			sctx.font = `bold ${0.56*s}px Atkinson`;
+			sctx.fillText(party.name, s/2, 0.54*s, 0.85*s);
 		}
 		party_imgs[party.id] = sprite;
 	}
@@ -186,6 +191,12 @@ window.addEventListener('load', (e) => {
 	resize_canvas();
 	transform_ctx();
 	generate_party_imgs();
+});
+
+window.addEventListener('mousemove', (e) => {
+	const rect = c.getBoundingClientRect();
+	mouse_x = e.clientX - rect.left;
+	mouse_y = e.clientY - rect.top;
 });
 
 document.getElementById("select-timeline").onchange = (e) => {

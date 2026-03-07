@@ -59,13 +59,27 @@ class Parliament {
 
     draw() {
         for (let fraction of this.fractions) {
-            const r = 0.8 * get_row_thickness(get_nrows_from_nseats(this.seat_amt()));
+            let r = 0.8 * get_row_thickness(get_nrows_from_nseats(this.seat_amt()));
             for (const seat of fraction.seat_centers) {
+                const transform = ctx.getTransform();
+                const inverse = transform.inverse();
+                const mouse_point = new DOMPoint(mouse_x, mouse_y);
+                const mouse_trans = mouse_point.matrixTransform(inverse);
+                let f;
+                if (Math.hypot(mouse_trans.x - seat[0], mouse_trans.y - seat[1]) < r) {
+                    f = 0.12;
+                    ctx.globalCompositeOperation = "source-over";
+                } else {
+                    f = r;
+                    ctx.globalCompositeOperation = "destination-over";
+                }
+                
+                
                 ctx.drawImage(
                     party_imgs[fraction.party.id],
-                    seat[0] - r,
-                    seat[1] - r,
-                    2*r, 2*r
+                    seat[0] - f,
+                    seat[1] - f,
+                    2 * f, 2 * f
                 );
             }
         }
