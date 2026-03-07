@@ -1,7 +1,7 @@
 // init
 const c = document.getElementById("canvas");
 const ctx = c.getContext("2d");
-let cur_tml, cur_plm, cur_hlt, party_imgs, mouse_x, mouse_y;
+let cur_tml, cur_plm, cur_hlt = null, party_imgs, mouse_x, mouse_y;
 load_timeline("nl_tweedekamer");
 update();
 
@@ -20,6 +20,10 @@ function update() {
 function resize_canvas() {
 	c.width = window.innerWidth;
 	c.height = window.innerHeight;
+}
+
+function highlight(id) {
+	cur_hlt = id;
 }
 
 function transform_ctx() {
@@ -121,7 +125,10 @@ function table(parliament) {
 			diff = '<span class="blue">=</span>';
 		}
 
-		string += '<tr class="tablerow">';
+		// click event
+		let onclick = `onclick="highlight('${frac.party.id}')"`;
+
+		string += `<tr ${onclick} class="tablerow">`;
 		string += "<td>" + frac.party.name + "</td>";
 		string += "<td>" + frac.party.fullname + "</td>";
 		string += `<td>${frac.seat_amt} (${diff})</td>`;

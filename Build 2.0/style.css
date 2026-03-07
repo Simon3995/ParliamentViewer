@@ -82,6 +82,16 @@ th {
     text-overflow: ellipsis;
     text-align: center;
     padding: 2px 0px;
+    user-select: none;
+}
+
+tr:hover {
+    color: #85d8ff;
+    cursor: pointer;
+}
+
+tr:active {
+    color: #569fc0;
 }
 
 th {
