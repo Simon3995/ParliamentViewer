@@ -1,16 +1,26 @@
 T = new Timeline("Norway - Storting");
 
 T.parties = {
-    $ap: new Party("Ap", "Arbeiderpartiet", "$ap", "#c70000", new Image()),
-    $frp: new Party("FrP", "Fremskrittspartiet", "$frp", "#0e8fff", new Image()),
+    $ap: new Party("Ap", "Arbeiderpartiet", "$ap", "#e61515", new Image()),
+    $frp: new Party("FrP", "Fremskrittspartiet", "$frp", "#186eb9", new Image()),
     $h: new Party("H", "Høyre", "$h", "#026ac5", new Image()),
     $sv: new Party("SV", "Sosialistisk Venstreparti", "$sv", "#d80b60", new Image()),
-    $sp: new Party("Sp", "Senterpartiet", "$sp", "#53ce53", new Image()),
+    $sp: new Party("Sp", "Senterpartiet", "$sp", "#109710", new Image()),
     $rodt: new Party("R", "Rødt", "#rodt", "#cc0000", new Image()),
-    $mdg: new Party("MDG", "Miljøpartiet De Grønne", "$mdg", "#7bbd00", new Image()),
-    $krf: new Party("KrF", "Kristelig Folkeparti", "$krf", "#c28400", new Image()),
+    $mdg: new Party("MDG", "Miljøpartiet De Grønne", "$mdg", "#37a803", new Image()),
+    $krf: new Party("KrF", "Kristelig Folkeparti", "$krf", "#ffe922", new Image()),
     $v: new Party("V", "Venstre", "$v", "#007575", new Image()),
 }
+
+T.parties.$ap.image.src = "logos/no/ap.png";
+T.parties.$sv.image.src = "logos/no/sv.png";
+T.parties.$rodt.image.src = "logos/no/rodt.png";
+T.parties.$sp.image.src = "logos/no/sp.png";
+T.parties.$mdg.image.src = "logos/no/mdg.png";
+T.parties.$krf.image.src = "logos/no/krf.png";
+T.parties.$v.image.src = "logos/no/v.png";
+T.parties.$h.image.src = "logos/no/h.png";
+T.parties.$frp.image.src = "logos/no/frp.png";
 
 T.add_parliament(new Parliament([
     new Fraction(T.parties.$rodt, 9),
