@@ -61,15 +61,34 @@ class Parliament {
         return 0.8 * get_row_thickness(get_nrows_from_nseats(this.seat_amt()));
     }
 
+    get_seat_hitbox_radius() {
+        return this.get_seat_radius() * 1.7;
+    }
+
     draw() {
+        let cur_hover = null;
+        const r = this.get_seat_radius();
+        const hb = this.get_seat_hitbox_radius();
+
+        outer:
         for (let fraction of this.fractions) {
-            const opacity = (cur_hlt.includes(fraction.party.id)) ? 1 : cur_hlt.length ? 0.3 : 1;
-            
-            let r = this.get_seat_radius();
+            for (const seat of fraction.seat_centers) {
+                if (Math.hypot(mouse_x - seat[0], mouse_y - seat[1]) < hb) {
+                    cur_hover = fraction.party.id;
+                    break outer;
+                }
+            }
+        }
+
+        let has_enlarged = false;
+        for (let fraction of this.fractions) {
+            let opacity = (cur_hlt.includes(fraction.party.id)) ? 1 : (cur_hlt.length ? (cur_hover === fraction.party.id ? 0.6 : 0.3) : 1);
+
             for (const seat of fraction.seat_centers) {
                 
                 let f;
-                if (Math.hypot(mouse_x - seat[0], mouse_y - seat[1]) < r && opacity == 1) {
+                if (!has_enlarged && Math.hypot(mouse_x - seat[0], mouse_y - seat[1]) < hb && opacity == 1) {
+                    has_enlarged = true;
                     f = 0.12;
                     ctx.globalCompositeOperation = "source-over";
                 } else {

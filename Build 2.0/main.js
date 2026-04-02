@@ -240,7 +240,7 @@ c.addEventListener("mousedown", (e) => {
 	for (const fraction of cur_plm.fractions) {
 		for (const seat of fraction.seat_centers) {
 			const dist = Math.hypot(seat[0] - mouse_x, seat[1] - mouse_y);
-			if (dist <= cur_plm.get_seat_radius() && cur_hlt.length === 0) {
+			if (dist <= cur_plm.get_seat_hitbox_radius()) {
 				highlight(fraction.party.id);
 				return;
 			}
