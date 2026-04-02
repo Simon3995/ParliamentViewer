@@ -63,7 +63,7 @@ class Parliament {
 
     draw() {
         for (let fraction of this.fractions) {
-            const opacity = (cur_hlt == fraction.party.id) ? 1 : cur_hlt ? 0.3 : 1;
+            const opacity = (cur_hlt.includes(fraction.party.id)) ? 1 : cur_hlt.length ? 0.3 : 1;
             
             let r = this.get_seat_radius();
             for (const seat of fraction.seat_centers) {

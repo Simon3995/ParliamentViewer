@@ -1,7 +1,7 @@
 // init
 const c = document.getElementById("canvas");
 const ctx = c.getContext("2d");
-let cur_tml, cur_plm, cur_hlt = null, party_imgs, mouse_x, mouse_y;
+let cur_tml, cur_plm, cur_hlt = [], party_imgs, mouse_x, mouse_y;
 load_timeline("nl_tweedekamer");
 update();
 
@@ -22,17 +22,29 @@ function resize_canvas() {
 	c.height = window.innerHeight;
 }
 
-function highlight(id) {
-	cur_hlt = id;
-
+function table_highlight() {
 	document.querySelectorAll("tr.highlighted").forEach(row => {
 		row.classList.remove("highlighted");
 	});
 
-	const hl_row = document.getElementById(id);
-	if (hl_row && hl_row.tagName === 'TR') {
-		hl_row.classList.add("highlighted");
+	for (const pid of cur_hlt) {
+		const hl_row = document.getElementById(pid);
+		if (hl_row && hl_row.tagName === 'TR') {
+			hl_row.classList.add("highlighted");
+		}
 	}
+}
+
+function highlight(id) {
+	if (id == null) {
+		cur_hlt = [];
+	} else if (cur_hlt.includes(id)) {
+		cur_hlt.splice(cur_hlt.indexOf(id), 1);
+	} else {
+		cur_hlt.push(id);
+	}
+
+	table_highlight();
 }
 
 function transform_ctx() {
@@ -186,7 +198,7 @@ function table(parliament) {
 		document.getElementById("left_plm").innerHTML = '';
 	}
 
-	highlight(cur_hlt);  // re-highlight
+	table_highlight();
 }
 
 // add keyboard controls
@@ -228,7 +240,7 @@ c.addEventListener("mousedown", (e) => {
 	for (const fraction of cur_plm.fractions) {
 		for (const seat of fraction.seat_centers) {
 			const dist = Math.hypot(seat[0] - mouse_x, seat[1] - mouse_y);
-			if (dist <= cur_plm.get_seat_radius() && cur_hlt == null) {
+			if (dist <= cur_plm.get_seat_radius() && cur_hlt.length === 0) {
 				highlight(fraction.party.id);
 				return;
 			}
