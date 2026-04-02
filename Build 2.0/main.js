@@ -45,6 +45,7 @@ function highlight(id) {
 	}
 
 	table_highlight();
+	table(cur_plm);
 }
 
 function transform_ctx() {
@@ -114,6 +115,7 @@ function generate_party_imgs() {
 function table(parliament) {
 	let string = "";
 	let total_seats = 0;
+	let total_hlt = 0;
 	string += `<table>`;
 	
 	let fracs = [...parliament.fractions];
@@ -156,12 +158,17 @@ function table(parliament) {
 		string += `<td>${frac.seat_amt} (${diff})</td>`;
 
 		total_seats += frac.seat_amt;
+		if (cur_hlt.includes(frac.party.id)) total_hlt += frac.seat_amt;
 	}
 
 	string += '<tr>';
 	string += '<th>Total</th>';
 	string += '<th></th>';
-	string += '<th>' + total_seats + '</th>';
+	if (total_hlt > 0) {
+		string += `<th>${total_hlt}/${total_seats}</th>`;
+	} else {
+		string += '<th>' + total_seats + '</th>';
+	}
 	string += '</tr>';
 
 	string += "</table>";
