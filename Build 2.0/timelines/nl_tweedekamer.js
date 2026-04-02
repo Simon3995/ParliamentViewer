@@ -7,6 +7,7 @@ T.parties = {
     $pvdd: new Party("PvdD", "Partij voor de Dieren", "$pvdd", "#016b2d", new Image()),
     $gl: new Party("GL", "GroenLinks", "$gl", "#00cc00", new Image()),
     $glpvda: new Party("GL/PvdA", "GroenLinks / Partij van de Arbeid", "$glpvda", "#01af40", new Image()),
+    $pro: new Party("PRO", "Progressief Nederland", "$pro", "#d0ffcc", new Image()),
     $pvda: new Party("PvdA", "Partij van de Arbeid", "$pvda", "#ff0000", new Image()),
     $denk: new Party("DENK", "DENK", "$denk", "#38bfc2", new Image()),
     $volt: new Party("Volt", "Volt", "$volt", "#683ba8", new Image()),
@@ -109,6 +110,7 @@ T.parties.$sp.image.src = "logos/nl/SP.png";
 T.parties.$pvdd.image.src = "logos/nl/PvdD.png";
 T.parties.$gl.image.src = "logos/nl/GL.png";
 T.parties.$glpvda.image.src = "logos/nl/GvdL.png";
+T.parties.$pro.image.src = "logos/nl/PRO.png";
 T.parties.$pvda.image.src = "logos/nl/PvdA.png";
 T.parties.$denk.image.src = "logos/nl/DENK.png";
 T.parties.$volt.image.src = "logos/nl/Volt.png";
