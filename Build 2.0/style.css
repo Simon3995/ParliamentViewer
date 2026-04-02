@@ -60,6 +60,23 @@ body {
     background-color: #5474cc !important;
 }
 
+.ralign {
+    text-align: right;
+    padding-right: 30px;
+}
+
+.chlf {
+    color: gold;
+}
+
+.cmin {
+    color: #ff6b6b;
+}
+
+.cmaj {
+    color: #8bffa4;
+}
+
 table {
     border-collapse: collapse;
     table-layout: fixed;

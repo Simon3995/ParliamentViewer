@@ -163,11 +163,18 @@ function table(parliament) {
 
 	string += '<tr>';
 	string += '<th>Total</th>';
-	string += '<th></th>';
 	if (total_hlt > 0) {
-		string += `<th>${total_hlt}/${total_seats}</th>`;
+		let coalition_comment;
+		if (total_hlt * 2 == total_seats) {
+			coalition_comment = "<span class='chlf'>Half</span>";
+		} else if (total_hlt * 2 < total_seats) {
+			coalition_comment = "<span class='cmin'>Minority</span>";
+		} else {
+			coalition_comment = "<span class='cmaj'>Majority</span>";
+		}
+		string += `<th class="ralign" colspan="2">${total_hlt}/${total_seats} (${coalition_comment})</th>`;
 	} else {
-		string += '<th>' + total_seats + '</th>';
+		string += '<th class="ralign" colspan="2">' + total_seats + '</th>';
 	}
 	string += '</tr>';
 

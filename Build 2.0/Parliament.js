@@ -82,7 +82,7 @@ class Parliament {
 
         let has_enlarged = false;
         for (let fraction of this.fractions) {
-            let opacity = (cur_hlt.includes(fraction.party.id)) ? 1 : (cur_hlt.length ? (cur_hover === fraction.party.id ? 0.6 : 0.3) : 1);
+            let opacity = (cur_hlt.includes(fraction.party.id)) ? 1 : (cur_hlt.length ? (cur_hover === fraction.party.id ? 0.6 : 0.2) : 1);
 
             for (const seat of fraction.seat_centers) {
                 
