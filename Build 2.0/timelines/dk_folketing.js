@@ -37,6 +37,6 @@ T.add_parliament(new Parliament([
     new Fraction(T.parties.$æ, 10),
     new Fraction(T.parties.$df, 16),
     new Fraction(T.parties.$h, 4),
-], "Election", new Date("0000-00-00")));
+], "2026 General Election", new Date("2026-03-24")));
 
 Timelines["dk_folketing"] = T;
