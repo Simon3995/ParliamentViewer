@@ -11,6 +11,7 @@ T.parties = {
     $kd: new Party("KD", "Suomen Kristillisdemokraatit", "$kd", "#2c7bd5", new Image()),
     $liik: new Party("Liik", "Liike Nyt", "$liik", "#ff00b3", new Image()),
     $vkk: new Party("VKK", "Valta kuuluu kansalle", "$vkk", "#101010", new Image()),
+    $fa: new Party("FÅ", "För Åland", "$fa", "#404040", new Image()),
 }
 
 T.add_parliament(new Parliament([
@@ -25,5 +26,18 @@ T.add_parliament(new Parliament([
     new Fraction(T.parties.$ps, 46),
     new Fraction(T.parties.$vkk, 1),
 ], "2023 Parliamentary Election", new Date("2023-04-02")));
+
+T.add_parliament(new Parliament([
+    new Fraction(T.parties.$vas, 16),
+    new Fraction(T.parties.$sdp, 40),
+    new Fraction(T.parties.$vihr, 20),
+    new Fraction(T.parties.$kesk, 31),
+    new Fraction(T.parties.$fa, 1),
+    new Fraction(T.parties.$sfp, 9),
+    new Fraction(T.parties.$liik, 1),
+    new Fraction(T.parties.$kd, 5),
+    new Fraction(T.parties.$kok, 38),
+    new Fraction(T.parties.$ps, 39),
+], "2019 Parliamentary Election", new Date("2019-04-14")));
 
 Timelines["fi_eduskunta"] = T;
