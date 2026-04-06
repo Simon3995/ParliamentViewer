@@ -7,7 +7,7 @@ T.parties = {
     $pvdd: new Party("PvdD", "Partij voor de Dieren", "$pvdd", "#016b2d", new Image()),
     $gl: new Party("GL", "GroenLinks", "$gl", "#00cc00", new Image()),
     $glpvda: new Party("GL/PvdA", "GroenLinks / Partij van de Arbeid", "$glpvda", "#01af40", new Image()),
-    $pro: new Party("PRO", "Progressief Nederland", "$pro", "#d0ffcc", new Image()),
+    $pro: new Party("PRO", "Progressief Nederland", "$pro", "#e82323", new Image()),
     $pvda: new Party("PvdA", "Partij van de Arbeid", "$pvda", "#ff0000", new Image()),
     $denk: new Party("DENK", "DENK", "$denk", "#38bfc2", new Image()),
     $volt: new Party("Volt", "Volt", "$volt", "#683ba8", new Image()),
@@ -148,7 +148,7 @@ T.parties.$nsb.image.src = "logos/nl/NSB.png";
 T.add_parliament(new Parliament([
     new Fraction(T.parties.$sp, 3),
     new Fraction(T.parties.$pvdd, 3),
-    new Fraction(T.parties.$glpvda, 20),
+    new Fraction(T.parties.$pro, 20),
     new Fraction(T.parties.$denk, 3),
     new Fraction(T.parties.$volt, 1),
     new Fraction(T.parties.$d66, 26),
