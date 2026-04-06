@@ -11,6 +11,10 @@ body {
     overflow: hidden;
 }
 
+a {
+    color: #adb5ff;
+}
+
 #sidebar {
     position: fixed;
     top: 0px;
