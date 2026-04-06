@@ -169,6 +169,7 @@ function table(parliament) {
 			coalition_comment = "<span class='chlf'>Half</span>";
 		} else if (total_hlt * 2 < total_seats) {
 			coalition_comment = "<span class='cmin'>Minority</span>";
+			coalition_comment +=  `, ${Math.ceil((total_seats / 2) + 0.2)} needed for majority`;
 		} else {
 			coalition_comment = "<span class='cmaj'>Majority</span>";
 		}
