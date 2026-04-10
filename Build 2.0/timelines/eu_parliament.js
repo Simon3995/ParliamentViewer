@@ -10,7 +10,7 @@ T.parties = {
     $re: new Party("Renew", "Renew Europe", "$re", "#0099FF", new Image()),
     $greens: new Party("Greens/EFA", "The Greens/European Free Alliance", "$greens", "#009900", new Image()),
     $left: new Party("Left", "The Left in the European Parliament - GUE/NGL", "$left", "#990000", new Image()),
-    $esn: new Party("ESN", "Europe of Severeign Nations Group", "$esn", "#13517E", new Image()),
+    $esn: new Party("ESN", "Europe of Sovereign Nations Group", "$esn", "#13517E", new Image()),
     $id: new Party("ID", "Identity and Democracy", "$id", "#164289", new Image()),
     $alde: new Party("ALDE", "Alliance of Liberals and Democrats for Europe Group", "$alde", "#FFFF00", new Image()),
     $guengl: new Party("GUE/NGL", "Confederated Group of the European United Left - Nordic Green Left", "$guengl", "#990000", new Image()),
