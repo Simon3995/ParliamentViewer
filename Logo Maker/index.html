@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            canvas {
+                border: 1px solid black;
+            }
+            input {
+                vertical-align: middle;
+                height: 20px;
+                border: none;
+                padding: 0;
+            }
+            p {
+                line-height: 20px;
+                margin: 0;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas" width="400" height="400"></canvas>
+        <p>Main Circle Color: <input id="main_col" type="color"></p>
+        <p><input id="use_sec" type="checkbox"> Use Secondary Circle</p>
+        <p>Secondary Circle Color: <input id="sec_col" type="color"></p>
+    </body>
+</html>
+
+<script type="text/javascript">
+    const c = document.getElementById("canvas");
+    const ctx = c.getContext("2d");
+    let logo = new Image();
+
+    update();
+    
+    function update() {
+        draw_transparent_checkerboard();
+        ctx.drawImage(logo, 0, 0, c.width, c.height);
+        requestAnimationFrame(update);
+    }
+
+    function draw_transparent_checkerboard() {
+        const scale = 20;
+        for (let i=0; i<=c.width/scale; i++) {
+            for (let j=0; j<=c.height/scale; j++) {
+                ctx.fillStyle = ((i+j)%2) ? "#ffffff" : "#eeeeee";
+                ctx.fillRect(scale*i, scale*j, scale, scale);
+            }
+        }
+    }
+
+    window.addEventListener("paste", function(e) {
+        const clip_data = e.clipboardData;
+        if (clip_data.files.length > 0) {
+            const file = clip_data.files[0];
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                logo.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+        } else {
+            const url = clip_data.getData("text/plain");
+            if (url && (url.startsWith("http"))) {
+                logo.crossOrigin = "Anonymous";
+                logo.src = url;
+            }
+        }
+    });
+
+    c.addEventListener("drag", function(e) {
+        console.log(e);
+    });
+</script>
