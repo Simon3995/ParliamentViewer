@@ -22,7 +22,7 @@
         <canvas id="canvas" width="400" height="400"></canvas>
         <p>Main Circle Color: <input id="main_col" type="color" autocomplete="off"></p>
         <p><input id="use_sec" type="checkbox" autocomplete="off"> Use Secondary Circle</p>
-        <p>Secondary Circle Color: <input id="sec_col" type="color" autocomplete="off"></p>
+        <p>Secondary Circle Color: <input id="sec_col" type="color" autocomplete="off" value="#ffffff"></p>
         <p>Secondary Circle Radius: <input id="sec_rat" type="range" min="0.5" max="1" step="0.02" autocomplete="off"></p>
     </body>
 </html>
@@ -42,7 +42,7 @@
         draw_transparent_checkerboard();
         draw_main_circle();
         if (use_sec) draw_secondary_circle();
-        ctx.drawImage(logo, 0, 0, c.width, c.height);
+        draw_logo();
         requestAnimationFrame(update);
     }
 
@@ -68,6 +68,17 @@
         ctx.beginPath();
         ctx.arc(c.width/2, c.height/2, sec_rat*c.width/2, 0, 2*Math.PI);
         ctx.fill();
+    }
+
+    function draw_logo() {
+        let scale_factor = (logo.width > logo.height) ? c.width/logo.width : c.height/logo.height;
+        ctx.drawImage(
+            logo,
+            c.width/2 - scale_factor * logo.width/2,
+            c.height/2 - scale_factor * logo.height/2,
+            scale_factor * logo.width,
+            scale_factor * logo.height
+        );
     }
 
     window.addEventListener("paste", function(e) {
