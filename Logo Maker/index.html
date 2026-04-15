@@ -11,6 +11,9 @@
                 border: none;
                 padding: 0;
             }
+            input[type=range] {
+                width: 300px;
+            }
             p {
                 line-height: 20px;
                 margin: 0;
@@ -21,20 +24,27 @@
     <body>
         <canvas id="canvas" width="400" height="400"></canvas>
         <p>Main Circle Color: <input id="main_col" type="color" autocomplete="off"></p>
-        <p><input id="use_sec" type="checkbox" autocomplete="off"> Use Secondary Circle</p>
+        <p><label><input id="use_sec" type="checkbox" autocomplete="off"> Use Secondary Circle</label></p>
         <p>Secondary Circle Color: <input id="sec_col" type="color" autocomplete="off" value="#ffffff"></p>
-        <p>Secondary Circle Radius: <input id="sec_rat" type="range" min="0.5" max="1" step="0.02" autocomplete="off"></p>
+        <p>Secondary Circle Radius: <input id="sec_rat" type="range" min="0.5" max="1" step="0.01" autocomplete="off"></p>
+        <p>Logo BG Color: <input id="bg_col" type="color" autocomplete="off"></p>
+        <p>Logo BG Erase Threshold: <input id="bg_thres" type="range" min="0" max="255" step="0.1" autocomplete="off"></p>
     </body>
 </html>
 
 <script type="text/javascript">
     const c = document.getElementById("canvas");
     const ctx = c.getContext("2d");
+    const oc = document.createElement("canvas");
+    const octx = oc.getContext("2d");
+    let oc_sweep = 0;
     let logo = new Image();
     let main_col = document.getElementById("main_col").value;
     let use_sec = document.getElementById("use_sec").checked;
     let sec_col = document.getElementById("sec_col").value;
-    let sec_rat = document.getElementById("sec_rat").value;
+    let sec_rat = Number(document.getElementById("sec_rat").value);
+    let bg_col = document.getElementById("bg_col").value;
+    let bg_thres = Number(document.getElementById("bg_thres").value);
 
     update();
     
@@ -42,6 +52,7 @@
         draw_transparent_checkerboard();
         draw_main_circle();
         if (use_sec) draw_secondary_circle();
+        process_offscreen_logo();
         draw_logo();
         requestAnimationFrame(update);
     }
@@ -71,17 +82,58 @@
     }
 
     function draw_logo() {
-        let scale_factor = (logo.width > logo.height) ? c.width/logo.width : c.height/logo.height;
+        let scale_factor = (oc.width > oc.height) ? c.width/oc.width : c.height/oc.height;
         ctx.drawImage(
-            logo,
-            c.width/2 - scale_factor * logo.width/2,
-            c.height/2 - scale_factor * logo.height/2,
-            scale_factor * logo.width,
-            scale_factor * logo.height
+            oc,
+            c.width/2 - scale_factor * oc.width/2,
+            c.height/2 - scale_factor * oc.height/2,
+            scale_factor * oc.width,
+            scale_factor * oc.height
         );
     }
 
-    window.addEventListener("paste", function(e) {
+    function hex2rgb(hex) {
+        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        return result ? {
+            r: parseInt(result[1], 16),
+            g: parseInt(result[2], 16),
+            b: parseInt(result[3], 16)
+        } : null;
+    }
+
+    function rgb2hex(r, g, b) {
+        return "#" + component2hex(r) + component2hex(g) + component2hex(b);
+    }
+
+    function component2hex(c) {
+        var hex = c.toString(16);
+        return hex.length == 1 ? "0" + hex : hex;
+    }
+
+    function init_offscreen_logo() {
+        const max_dim = 200;
+        const scale_factor = (logo.width > logo.height) ? ((logo.width > max_dim) ? max_dim/logo.width : 1) : ((logo.height > max_dim) ? max_dim/logo.height : 1);
+        [oc.width, oc.height] = [logo.width * scale_factor, logo.height * scale_factor];
+        octx.drawImage(logo, 0, 0, oc.width, oc.height);
+        oc_sweep = 0;
+    }
+
+    function process_offscreen_logo() {
+        if (oc_sweep > oc.width) return;
+        // erase all pixels that are too close to bg color
+        const bg = hex2rgb(bg_col);
+        for (let j=0; j<oc.height; j++) {
+            const cur_col = octx.getImageData(oc_sweep, j, 1, 1).data;
+            const dist = Math.hypot(cur_col[0]-bg.r, cur_col[1]-bg.g, cur_col[2]-bg.b)
+            if (dist < bg_thres) {
+                octx.clearRect(oc_sweep, j, 1, 1);
+            }
+        }
+
+        oc_sweep++;
+    }
+
+    window.addEventListener("paste", async function(e) {
         const clip_data = e.clipboardData;
         if (clip_data.files.length > 0) {
             const file = clip_data.files[0];
@@ -97,6 +149,8 @@
                 logo.src = url;
             }
         }
+
+        setTimeout(init_offscreen_logo, 100);
     });
 
     document.getElementById("main_col").addEventListener("input", function(e) {
@@ -112,6 +166,16 @@
     });
 
     document.getElementById("sec_rat").addEventListener("input", function(e) {
-        sec_rat = e.target.value;
+        sec_rat = Number(e.target.value);
+    });
+
+    document.getElementById("bg_col").addEventListener("change", function(e) {
+        bg_col = e.target.value;
+        init_offscreen_logo();
+    });
+
+    document.getElementById("bg_thres").addEventListener("change", function(e) {
+        bg_thres = Number(e.target.value);
+        init_offscreen_logo();
     });
 </script>
