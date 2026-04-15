@@ -28,18 +28,18 @@
     </head>
     <body>
         <canvas id="canvas" width="400" height="400"></canvas>
-        <button onclick="reset_logo()">Reset Logo Scale + Offset</button>
+        <p><button onclick="reset_logo()">Reset Logo Scale + Offset</button></p>
         <p>Main Circle Color: <input id="main_col" type="color" autocomplete="off"></p>
         <p><label><input id="use_sec" type="checkbox" autocomplete="off"> Use Secondary Circle</label></p>
         <p>Secondary Circle Color: <input id="sec_col" type="color" autocomplete="off" value="#ffffff"></p>
         <p>Secondary Circle Radius: <input id="sec_rat" type="range" min="0.5" max="1" step="0.01" autocomplete="off"></p>
-        <p>Logo BG Color: <input id="bg_col" type="color" autocomplete="off"></p>
+        <p>Logo BG Color: <input id="bg_col" type="color" autocomplete="off" value="#ffffff"></p>
         <p>Logo BG Erase Threshold: <input id="bg_thres" type="range" min="0" max="255" step="0.1" autocomplete="off"></p>
         <p><label><input id="whiteout" type="checkbox" autocomplete="off"> Whiteout</label></p>
         <p><label><input id="blackout" type="checkbox" autocomplete="off"> Blackout</label></p>
         <p><label><input id="invert" type="checkbox" autocomplete="off"> Invert</label></p>
         <p><label><input id="grayscale" type="checkbox" autocomplete="off"> Grayscale</label></p>
-        <button onclick="export_img()">Export Image</button>
+        <p><button onclick="export_img()">Export Image</button></p>
     </body>
 </html>
 
@@ -48,6 +48,10 @@
     const ctx = c.getContext("2d");
     const oc = document.createElement("canvas");
     const octx = oc.getContext("2d");
+    const ec = document.createElement("canvas");  // export canvas
+    const ectx = ec.getContext("2d");
+    ec.width = 200;
+    ec.height = 200;
     let oc_sweep = 0;
     let logo = new Image();
     let offset_x = 0;
@@ -148,15 +152,15 @@
             if (dist < bg_thres) {
                 octx.clearRect(oc_sweep, j, 1, 1);
             } else {
-                if (cur_col[4] < 20) continue;
+                if (cur_col[3] < 20) continue;
 
                 if (whiteout) {
-                    octx.globalAlpha = cur_col[4] / 255;
+                    octx.globalAlpha = cur_col[3] / 255;
                     octx.fillStyle = "white";
                     octx.fillRect(oc_sweep, j, 1, 1);
                     octx.globalAlpha = 1;
                 } else if (blackout) {
-                    octx.globalAlpha = cur_col[4] / 255;
+                    octx.globalAlpha = cur_col[3] / 255;
                     octx.fillStyle = "black";
                     octx.fillRect(oc_sweep, j, 1, 1);
                     octx.globalAlpha = 1;
@@ -181,9 +185,10 @@
         ctx.clearRect(0, 0, c.width, c.height);
         if (use_sec) draw_secondary_circle();
         draw_logo();
+        ectx.drawImage(c, 0, 0, ec.width, ec.height);
         let downloadLink = document.createElement('a');
         downloadLink.setAttribute('download', 'logo.png');
-        let dataURL = c.toDataURL('image/png');
+        let dataURL = ec.toDataURL('image/png');
         let url = dataURL.replace(/^data:image\/png/,'data:application/octet-stream');
         downloadLink.setAttribute('href', url);
         downloadLink.click();

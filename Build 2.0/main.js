@@ -98,7 +98,7 @@ function generate_party_imgs() {
 		sctx.arc(s/2, s/2, s/2, 0, 2*Math.PI);
 		sctx.fill();
 		if (party.image.src) {
-			const scale = 0.4*s;
+			const scale = s/2;
 			sctx.drawImage(party.image, s/2-scale, s/2-scale, 2*scale, 2*scale);
 		} else {
 			sctx.fillStyle = "white";
