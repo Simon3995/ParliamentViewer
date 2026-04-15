@@ -4,6 +4,7 @@
         <style>
             canvas {
                 border: 1px solid black;
+                user-select: none;
             }
             input {
                 vertical-align: middle;
@@ -14,21 +15,31 @@
             input[type=range] {
                 width: 300px;
             }
-            p {
+            input[type=color] {
+                width: 150px;
+            }
+            p, button {
                 line-height: 20px;
                 margin: 0;
                 font-family: 'Courier New', Courier, monospace;
+                font-size: 16px;
             }
         </style>
     </head>
     <body>
         <canvas id="canvas" width="400" height="400"></canvas>
+        <button onclick="reset_logo()">Reset Logo Scale + Offset</button>
         <p>Main Circle Color: <input id="main_col" type="color" autocomplete="off"></p>
         <p><label><input id="use_sec" type="checkbox" autocomplete="off"> Use Secondary Circle</label></p>
         <p>Secondary Circle Color: <input id="sec_col" type="color" autocomplete="off" value="#ffffff"></p>
         <p>Secondary Circle Radius: <input id="sec_rat" type="range" min="0.5" max="1" step="0.01" autocomplete="off"></p>
         <p>Logo BG Color: <input id="bg_col" type="color" autocomplete="off"></p>
         <p>Logo BG Erase Threshold: <input id="bg_thres" type="range" min="0" max="255" step="0.1" autocomplete="off"></p>
+        <p><label><input id="whiteout" type="checkbox" autocomplete="off"> Whiteout</label></p>
+        <p><label><input id="blackout" type="checkbox" autocomplete="off"> Blackout</label></p>
+        <p><label><input id="invert" type="checkbox" autocomplete="off"> Invert</label></p>
+        <p><label><input id="grayscale" type="checkbox" autocomplete="off"> Grayscale</label></p>
+        <button onclick="export_img()">Export Image</button>
     </body>
 </html>
 
@@ -39,12 +50,20 @@
     const octx = oc.getContext("2d");
     let oc_sweep = 0;
     let logo = new Image();
+    let offset_x = 0;
+    let offset_y = 0;
+    let logo_scale = 1;
+    let mouse_down = false;
     let main_col = document.getElementById("main_col").value;
     let use_sec = document.getElementById("use_sec").checked;
     let sec_col = document.getElementById("sec_col").value;
     let sec_rat = Number(document.getElementById("sec_rat").value);
     let bg_col = document.getElementById("bg_col").value;
     let bg_thres = Number(document.getElementById("bg_thres").value);
+    let whiteout = document.getElementById("whiteout").checked;
+    let blackout = document.getElementById("blackout").checked;
+    let invert = document.getElementById("invert").checked;
+    let grayscale = document.getElementById("grayscale").checked;
 
     update();
     
@@ -83,10 +102,11 @@
 
     function draw_logo() {
         let scale_factor = (oc.width > oc.height) ? c.width/oc.width : c.height/oc.height;
+        scale_factor *= logo_scale;
         ctx.drawImage(
             oc,
-            c.width/2 - scale_factor * oc.width/2,
-            c.height/2 - scale_factor * oc.height/2,
+            c.width/2 - scale_factor * oc.width/2 + offset_x,
+            c.height/2 - scale_factor * oc.height/2 + offset_y,
             scale_factor * oc.width,
             scale_factor * oc.height
         );
@@ -127,10 +147,46 @@
             const dist = Math.hypot(cur_col[0]-bg.r, cur_col[1]-bg.g, cur_col[2]-bg.b)
             if (dist < bg_thres) {
                 octx.clearRect(oc_sweep, j, 1, 1);
+            } else {
+                if (cur_col[4] < 20) continue;
+
+                if (whiteout) {
+                    octx.globalAlpha = cur_col[4] / 255;
+                    octx.fillStyle = "white";
+                    octx.fillRect(oc_sweep, j, 1, 1);
+                    octx.globalAlpha = 1;
+                } else if (blackout) {
+                    octx.globalAlpha = cur_col[4] / 255;
+                    octx.fillStyle = "black";
+                    octx.fillRect(oc_sweep, j, 1, 1);
+                    octx.globalAlpha = 1;
+                }
+
+                if (invert) {
+                    octx.fillStyle = `rgba(${255-cur_col[0]}, ${255-cur_col[1]}, ${255-cur_col[2]}, 1.0)`;
+                    octx.fillRect(oc_sweep, j, 1, 1);
+                }
+
+                if (grayscale) {
+                    octx.fillStyle = `rgba(${cur_col[0]}, ${cur_col[0]}, ${cur_col[0]}, 1.0)`;
+                    octx.fillRect(oc_sweep, j, 1, 1);
+                }
             }
         }
 
         oc_sweep++;
+    }
+
+    function export_img() {
+        ctx.clearRect(0, 0, c.width, c.height);
+        if (use_sec) draw_secondary_circle();
+        draw_logo();
+        let downloadLink = document.createElement('a');
+        downloadLink.setAttribute('download', 'logo.png');
+        let dataURL = c.toDataURL('image/png');
+        let url = dataURL.replace(/^data:image\/png/,'data:application/octet-stream');
+        downloadLink.setAttribute('href', url);
+        downloadLink.click();
     }
 
     window.addEventListener("paste", async function(e) {
@@ -152,6 +208,12 @@
 
         setTimeout(init_offscreen_logo, 100);
     });
+
+    function reset_logo() {
+        offset_x = 0;
+        offset_y = 0;
+        logo_scale = 1;
+    }
 
     document.getElementById("main_col").addEventListener("input", function(e) {
         main_col = e.target.value;
@@ -178,4 +240,36 @@
         bg_thres = Number(e.target.value);
         init_offscreen_logo();
     });
+
+    document.getElementById("whiteout").addEventListener("input", function(e) {
+        whiteout = e.target.checked;
+        init_offscreen_logo();
+    });
+
+    document.getElementById("blackout").addEventListener("input", function(e) {
+        blackout = e.target.checked;
+        init_offscreen_logo();
+    });
+
+    document.getElementById("grayscale").addEventListener("input", function(e) {
+        grayscale = e.target.checked;
+        init_offscreen_logo();
+    });
+
+    document.getElementById("invert").addEventListener("input", function(e) {
+        invert = e.target.checked;
+        init_offscreen_logo();
+    });
+
+    c.onmousedown = (e) => { mouse_down = true; }
+    window.onmouseup = (e) => { mouse_down = false; }
+    window.onmousemove = (e) => {
+        if (mouse_down) {
+            offset_x += e.movementX;
+            offset_y += e.movementY;
+        }
+    }
+    c.onwheel = (e) => {
+        logo_scale *= 1.01**(e.deltaY/60);
+    }
 </script>
