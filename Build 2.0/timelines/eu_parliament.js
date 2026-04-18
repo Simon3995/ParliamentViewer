@@ -12,7 +12,7 @@ T.parties = {
     $left: new Party("Left", "The Left in the European Parliament - GUE/NGL", "$left", "#e71f1f", new Image()),
     $esn: new Party("ESN", "Europe of Sovereign Nations Group", "$esn", "#13517E", new Image()),
     $id: new Party("ID", "Identity and Democracy", "$id", "#164289", new Image()),
-    $alde: new Party("ALDE", "Alliance of Liberals and Democrats for Europe Group", "$alde", "#FFFF00", new Image()),
+    $alde: new Party("ALDE", "Alliance of Liberals and Democrats for Europe Group", "$alde", "#36A9E0", new Image()),
     $guengl: new Party("GUE/NGL", "Confederated Group of the European United Left - Nordic Green Left", "$guengl", "#990000", new Image()),
     $efdd: new Party("EFDD", "Europe of Freedom and Direct Democracy", "$efdd", "#24B9B9", new Image()),
     $enf: new Party("ENF", "Europe of Nations and Freedom", "$enf", "#2B3856", new Image()),
@@ -28,6 +28,7 @@ T.parties.$ecr.image.src = "logos/eu/ecr.png";
 T.parties.$pfe.image.src = "logos/eu/pfe.png";
 T.parties.$esn.image.src = "logos/eu/esn.png";
 T.parties.$id.image.src = "logos/eu/id.png";
+T.parties.$alde.image.src = "logos/eu/alde.png";
 
 T.add_parliament(new Parliament([
     new Fraction(T.parties.$left, 46),
