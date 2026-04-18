@@ -148,7 +148,7 @@ T.parties.$nsb.image.src = "logos/nl/NSB.png";
 T.add_parliament(new Parliament([
     new Fraction(T.parties.$sp, 3),
     new Fraction(T.parties.$pvdd, 3),
-    new Fraction(T.parties.$pro, 20),
+    new Fraction(T.parties.$glpvda, 20),
     new Fraction(T.parties.$denk, 3),
     new Fraction(T.parties.$volt, 1),
     new Fraction(T.parties.$d66, 26),
