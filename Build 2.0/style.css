@@ -176,6 +176,12 @@ button:active {
     color: #8bffa4;
 }
 
+.greener {
+    animation-name: pulseColor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
 .red {
     color: #ff6b6b;
 }
@@ -183,6 +189,12 @@ button:active {
 .blue {
     color: rgb(93, 174, 255);
     font-weight: bold;
+}
+
+@keyframes pulseColor {
+    0% { color: #8bffd6; }
+    50% { color: #00ddff; }
+    100% { color: #8bffd6; }
 }
 
 @font-face {

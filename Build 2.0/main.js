@@ -140,9 +140,12 @@ function table(parliament) {
 			const prevFrac = prevParl.fractions.find(f => f.party.name === frac.party.name);
 			diff = prevFrac ? frac.seat_amt - prevFrac.seat_amt : frac.seat_amt;
 		}
-		if (diff > 0)
+		
+		if (diff == frac.seat_amt) {
+			diff = `<span class="greener">&#9650;${diff}</span>`;
+		} else if (diff > 0) {
 			diff = '<span class="green">&#9650;' + diff + '</span>';
-		if (diff < 0) {
+		} else if (diff < 0) {
 			diff = '<span class="red">&#9660;' + Math.abs(diff) + '</span>';
 		} else if (diff === 0) {
 			diff = '<span class="blue">=</span>';
