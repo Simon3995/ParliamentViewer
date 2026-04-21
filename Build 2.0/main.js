@@ -1,6 +1,8 @@
 // init
 const c = document.getElementById("canvas");
 const ctx = c.getContext("2d");
+const prev_btn = document.getElementById("prev_btn");
+const next_btn = document.getElementById("next_btn");
 let cur_tml, cur_plm, cur_hlt = [], party_imgs, mouse_x, mouse_y;
 load_timeline("nl_tweedekamer");
 update();
@@ -65,6 +67,9 @@ function prev() {
 	const newIdx = Math.min(idx + 1, cur_tml.parliaments.length - 1);
 	cur_plm = cur_tml.parliaments[newIdx];
 	load_parliament(cur_plm);
+
+	prev_btn.disabled = (newIdx+1 == cur_tml.parliaments.length);
+	next_btn.disabled = (newIdx == 0);
 }
 
 function next() {
@@ -72,6 +77,9 @@ function next() {
 	const newIdx = Math.max(idx - 1, 0);
 	cur_plm = cur_tml.parliaments[newIdx];
 	load_parliament(cur_plm);
+
+	prev_btn.disabled = (newIdx+1 == cur_tml.parliaments.length);
+	next_btn.disabled = (newIdx == 0);
 }
 
 function load_parliament(parliament) {
@@ -84,6 +92,7 @@ function load_timeline(name) {
 	cur_plm = cur_tml.parliaments[0];
 	load_parliament(cur_plm);
 	generate_party_imgs();
+	next();
 }
 
 function generate_party_imgs() {
