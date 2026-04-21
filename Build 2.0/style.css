@@ -153,15 +153,21 @@ button {
     font-size: 18px;
     filter: drop-shadow(5px 5px 0px #2a273d);
     margin-bottom: 8px;
+    margin-right: 8px;
     padding: 3px 8px;
     width: 120px;
 }
 
-button:hover {
+button:disabled {
+    color: #ffffff60;
+    background-color: #332d4c;
+}
+
+button:hover:enabled {
     background-color: #6456be;
 }
 
-button:active {
+button:active:enabled {
     transform: translateY(5px) translateX(5px);
     background-color: #7566da;
     filter: none;
