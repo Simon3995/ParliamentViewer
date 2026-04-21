@@ -15,6 +15,12 @@ a {
     color: #adb5ff;
 }
 
+hr {
+    border: 2px solid hsl(248, 22%, 35%);
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
 #sidebar {
     position: fixed;
     top: 0px;
@@ -22,6 +28,10 @@ a {
     height: 100vh;
     width: 33.33vw;
     padding: 10px 15px;
+}
+
+.small {
+    font-size: 15px;
 }
 
 #sidebar h1 {
