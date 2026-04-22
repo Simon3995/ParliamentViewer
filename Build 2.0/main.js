@@ -5,6 +5,7 @@ const prev_btn = document.getElementById("prev_btn");
 const next_btn = document.getElementById("next_btn");
 let cur_tml, cur_plm, cur_hlt = [], party_imgs, mouse_x, mouse_y;
 let dragging = false;
+let edit_mode = false;
 load_timeline("nl_tweedekamer");
 update();
 
@@ -49,6 +50,32 @@ function highlight(id) {
 
 	table_highlight();
 	update_table_footer();
+	update_buttons();
+}
+
+function toggle_edit_mode() {
+	edit_mode = !edit_mode;
+	update_sidebar();
+}
+
+function delete_hlt() {
+	for (const id of cur_hlt) {
+		cur_plm.remove_fraction(id);
+	}
+
+	highlight(null);
+	update_sidebar();
+}
+
+function update_sidebar() {
+	if (edit_mode) {
+		table_edit_mode();
+	} else {
+		table();
+	}
+	table_highlight();
+	update_table_footer();
+	update_buttons();
 }
 
 function transform_ctx() {
@@ -85,7 +112,8 @@ function next() {
 
 function load_parliament(parliament) {
 	document.getElementById("title").innerHTML = parliament.description;
-	table(parliament);
+	
+	update_sidebar();
 }
 
 function load_timeline(name) {
@@ -127,6 +155,7 @@ function table() {
 	let string = "";
 	let total_seats = 0;
 	let total_hlt = 0;
+	edit_mode = false;
 	string += `<table>`;
 	string += `<thead>`
 	
@@ -212,11 +241,6 @@ function table() {
 	} else {
 		document.getElementById("left_plm").innerHTML = '';
 	}
-
-	document.getElementById("reset_btn").disabled = true;
-
-	table_highlight();
-	update_table_footer();
 }
 
 function table_edit_mode() {
@@ -224,6 +248,7 @@ function table_edit_mode() {
 	let string = "";
 	let total_seats = 0;
 	let total_hlt = 0;
+	edit_mode = true;
 	string += `<table class="sortable">`;
 	string += `<thead>`
 	
@@ -282,10 +307,8 @@ function table_edit_mode() {
 	// insert HTML string into document
 	document.getElementById("table").innerHTML = string;
 	document.getElementById("left_plm").innerHTML = '';
-	document.getElementById("reset_btn").disabled = false;
-	table_highlight();
+
 	make_table_sortable();
-	update_table_footer();
 }
 
 function update_table_footer() {
@@ -314,6 +337,31 @@ function update_table_footer() {
 	}
 
 	footer.innerHTML = string;
+}
+
+function update_buttons() {
+	const edit_btn = document.getElementById("edit_btn");
+	const add_btn = document.getElementById("add_btn");
+	const delete_btn = document.getElementById("delete_btn");
+	const left_btn = document.getElementById("left_btn");
+	const right_btn = document.getElementById("right_btn");
+	const sort_btn = document.getElementById("sort_btn");
+
+	if (edit_mode) {
+		edit_btn.style.backgroundColor = "#488cae";
+		add_btn.disabled = false;
+		sort_btn.disabled = false;
+		left_btn.disabled = (cur_hlt.length != 1);
+		right_btn.disabled = (cur_hlt.length != 1);
+		delete_btn.disabled = (cur_hlt.length == 0);
+	} else {
+		edit_btn.style.backgroundColor = "#483d8b";
+		add_btn.disabled = true;
+		delete_btn.disabled = true;
+		left_btn.disabled = true;
+		right_btn.disabled = true;
+		sort_btn.disabled = true;
+	}
 }
 
 // add keyboard controls

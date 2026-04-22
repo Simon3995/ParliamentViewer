@@ -34,9 +34,9 @@ class Parliament {
         this.distribute_seats();
     }
 
-    remove_fraction(name) {
+    remove_fraction(id) {
         for (let i = 0; i < this.fractions.length; i++) {
-            if (this.fractions[i].party.name === name) {
+            if (this.fractions[i].party.id === id) {
                 this.fractions.splice(i, 1);
                 this.distribute_seats();
                 return;
