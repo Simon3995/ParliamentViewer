@@ -165,10 +165,9 @@ function table() {
 		}
 
 		// click event
-		let onclick = `onclick="highlight('${frac.party.id}')"`;
 		let id = `id=${frac.party.id}`;
 
-		string += `<tr ${id} ${onclick} class="tablerow">`;
+		string += `<tr ${id} class="tablerow">`;
 		string += "<td>" + frac.party.name + "</td>";
 		string += "<td>" + frac.party.fullname + "</td>";
 		string += `<td>${frac.seat_amt} (${diff})</td>`;
