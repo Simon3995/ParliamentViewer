@@ -399,6 +399,16 @@ $(document).on("click", "tr", function(e) {
     }
 });
 
+// lose focus on enter press in number input
+$(document).on("keyup", "input", function(e) {
+	if (e.key === 'Enter') e.currentTarget.blur();
+});
+
+// prevent number inputs from being empty
+$(document).on("change", "input", function(e) {
+	if (e.target.value == '') e.target.value = 0;
+});
+
 // helper function to keep table cell widths consistent during drag
 function fixWidth(e, ui) {
 	ui.children().each(function() {
