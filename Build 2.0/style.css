@@ -145,6 +145,14 @@ tr:nth-child(even) {
     background-color: #3d3574;
 }
 
+.sortable tr:nth-child(odd) {
+    background-color: hsl(200, 39%, 39%);
+}
+
+.sortable tr:nth-child(even) {
+    background-color: hsl(200, 37%, 33%);
+}
+
 button {
     color: white;
     background-color: #483d8b;

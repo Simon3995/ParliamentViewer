@@ -47,7 +47,6 @@ function highlight(id) {
 	}
 
 	table_highlight();
-	table(cur_plm);
 }
 
 function transform_ctx() {
@@ -121,11 +120,13 @@ function generate_party_imgs() {
 }
 
 // generate a seat table based on a parliament object
-function table(parliament) {
+function table() {
+	let parliament = cur_plm;
 	let string = "";
 	let total_seats = 0;
 	let total_hlt = 0;
 	string += `<table>`;
+	string += `<thead>`
 	
 	let fracs = [...parliament.fractions];
 	fracs.sort((a, b) => b.seat_amt - a.seat_amt);
@@ -135,6 +136,8 @@ function table(parliament) {
     string += '<th class="col_m">Full Name</th>';
     string += '<th class="col_r">Seats</th>';
     string += '</tr>';
+
+	string += `</thead><tbody>`;
 
     // write all table HTML to a string
 	for (let i in fracs) {
@@ -191,7 +194,7 @@ function table(parliament) {
 	}
 	string += '</tr>';
 
-	string += "</table>";
+	string += "</tbody></table>";
 	
 	// insert HTML string into document
 	document.getElementById("table").innerHTML = string;
@@ -225,7 +228,93 @@ function table(parliament) {
 		document.getElementById("left_plm").innerHTML = '';
 	}
 
+	document.getElementById("reset_btn").disabled = true;
+
 	table_highlight();
+}
+
+function table_edit_mode() {
+	let parliament = cur_plm;
+	let string = "";
+	let total_seats = 0;
+	let total_hlt = 0;
+	string += `<table class="sortable">`;
+	string += `<thead>`
+	
+	let fracs = [...parliament.fractions];
+	fracs.sort((a, b) => b.seat_amt - a.seat_amt);
+	
+	string += '<tr>';
+	string += '<th class="col_l">Party</th>';
+    string += '<th class="col_m">Full Name</th>';
+    string += '<th class="col_r">Seats</th>';
+    string += '</tr>';
+
+	string += `</thead><tbody>`;
+
+    // write all table HTML to a string
+	for (let i in fracs) {
+		i = Number(i);
+        const frac = fracs[i];
+
+		// find difference
+		let diff = 0;
+		const prevIdx = (cur_tml.parliaments.indexOf(parliament) + 1);
+		const prevParl = cur_tml.parliaments[prevIdx];
+		if (prevParl) {
+			const prevFrac = prevParl.fractions.find(f => f.party.name === frac.party.name);
+			diff = prevFrac ? frac.seat_amt - prevFrac.seat_amt : frac.seat_amt;
+		}
+		
+		if (diff == frac.seat_amt) {
+			diff = `<span class="greener">&#9650;${diff}</span>`;
+		} else if (diff > 0) {
+			diff = '<span class="green">&#9650;' + diff + '</span>';
+		} else if (diff < 0) {
+			diff = '<span class="red">&#9660;' + Math.abs(diff) + '</span>';
+		} else if (diff === 0) {
+			diff = '<span class="blue">=</span>';
+		}
+
+		// click event
+		let onclick = `onclick="highlight('${frac.party.id}')"`;
+		let id = `id=${frac.party.id}`;
+
+		string += `<tr ${id} class="tablerow">`;
+		string += "<td>" + frac.party.name + "</td>";
+		string += "<td>" + frac.party.fullname + "</td>";
+		string += `<td>${frac.seat_amt} (${diff})</td>`;
+
+		total_seats += frac.seat_amt;
+		if (cur_hlt.includes(frac.party.id)) total_hlt += frac.seat_amt;
+	}
+
+	string += '<tr>';
+	string += '<th>Total</th>';
+	if (total_hlt > 0) {
+		let coalition_comment;
+		if (total_hlt * 2 == total_seats) {
+			coalition_comment = "<span class='chlf'>Half</span>";
+		} else if (total_hlt * 2 < total_seats) {
+			coalition_comment = "<span class='cmin'>Minority</span>";
+			coalition_comment +=  `, ${Math.ceil((total_seats / 2) + 0.2)} needed for majority`;
+		} else {
+			coalition_comment = "<span class='cmaj'>Majority</span>";
+		}
+		string += `<th class="ralign" colspan="2">${total_hlt}/${total_seats} (${coalition_comment})</th>`;
+	} else {
+		string += '<th class="ralign" colspan="2">' + total_seats + '</th>';
+	}
+	string += '</tr>';
+
+	string += `</tbody>`;
+	string += "</table>";
+	
+	// insert HTML string into document
+	document.getElementById("table").innerHTML = string;
+	document.getElementById("reset_btn").disabled = false;
+	table_highlight();
+	make_table_sortable();
 }
 
 // add keyboard controls
@@ -283,4 +372,24 @@ document.getElementById("select-timeline").onchange = (e) => {
 	load_parliament(cur_plm);
 
 	update();
+}
+
+// jQuery sortable table
+function make_table_sortable() {
+	$(".sortable tbody").sortable({
+		helper: fixWidth,        // Keeps the row from collapsing while dragging
+		cursor: "move",          // Changes cursor to a 'move' icon
+		update: function(event, ui) {
+			console.log("New order saved!");
+			// You can get the new order of IDs here if needed
+		}
+	}).disableSelection();
+}
+
+// helper function to keep table cell widths consistent during drag
+function fixWidth(e, ui) {
+	ui.children().each(function() {
+		$(this).width($(this).width());
+	});
+	return ui;
 }

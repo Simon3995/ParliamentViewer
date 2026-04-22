@@ -45,8 +45,8 @@
         <h1 id="title"></h1>
         <div id="table"></div>
         <div id="left_plm"></div>
-        <button>Edit Mode</button>
-        <button disabled>Reset</button>
+        <button id="edit_btn" onclick="table_edit_mode()">Edit Mode</button>
+        <button id="reset_btn" onclick="table()" disabled>Reset</button>
         <hr>
         <div class="small" id="links">
             View this project on <a target="#" href="https://github.com/Simon3995/ParliamentViewer">GitHub</a>
@@ -60,6 +60,15 @@
 </html>
 
 <!-- Scripts -->
+<script
+    src="https://code.jquery.com/jquery-4.0.0.min.js"
+    integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+    crossorigin="anonymous"></script>
+<script
+    src="https://code.jquery.com/ui/1.14.2/jquery-ui.min.js"
+    integrity="sha256-mblSWfbYzaq/f+4akyMhE6XELCou4jbkgPv+JQPER2M="
+    crossorigin="anonymous"></script>
+
 <script src="geometry.js"></script>
 
 <script src="Party.js"></script>
