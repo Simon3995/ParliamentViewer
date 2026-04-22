@@ -8,13 +8,25 @@ class Parliament {
         this.distribute_seats();
     }
 
-    get_party_seats(party) {
-        for (const fraction of this.fractions) {
-            if (fraction.party.name == party) {
+    get_party_seats(id) {
+        for (const fraction of this.fractions)
+            if (fraction.party.id == id)
                 return fraction.seat_amt;
+        return 0;
+    }
+
+    set_party_seats(id, amt) {
+        amt = Number(amt);
+        if (isNaN(amt)) {
+            console.error("Tried to set non-number seat amount.");
+            return;
+        }
+        for (let fraction of this.fractions) {
+            if (fraction.party.id == id) {
+                fraction.seat_amt = amt;
             }
         }
-        return 0;
+        this.distribute_seats();
     }
 
     add_fraction(fraction) {
