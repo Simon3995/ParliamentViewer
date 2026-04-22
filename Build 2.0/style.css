@@ -219,8 +219,8 @@ input[type=number] {
 span.icon {
     background-size: contain !important;
     float: left;
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
 }
 
 button:disabled span.icon {
@@ -233,6 +233,7 @@ span.edit { background: url(./icons/edit.svg) no-repeat; }
 span.add { background: url(./icons/add.svg) no-repeat; }
 span.delete { background: url(./icons/delete.svg) no-repeat; }
 span.reset { background: url(./icons/reset.svg) no-repeat; }
+span.sort { background: url(./icons/sort.svg) no-repeat; }
 
 @keyframes pulseColor {
     0% { color: #8bffd6; }
