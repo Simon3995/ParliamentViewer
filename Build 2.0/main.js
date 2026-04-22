@@ -281,6 +281,7 @@ function table_edit_mode() {
 	
 	// insert HTML string into document
 	document.getElementById("table").innerHTML = string;
+	document.getElementById("left_plm").innerHTML = '';
 	document.getElementById("reset_btn").disabled = false;
 	table_highlight();
 	make_table_sortable();

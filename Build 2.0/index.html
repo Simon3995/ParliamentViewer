@@ -41,12 +41,17 @@
 
     <!-- Right sidebar -->
     <div id="sidebar">
-        <button id="prev_btn" onclick="prev()">Previous</button><button id="next_btn" onclick="next()" class="rbutton">Next</button>
+        <button id="prev_btn" onclick="prev()" class="wide">Previous</button>
+        <button id="next_btn" onclick="next()" class="wide rbutton">Next</button>
         <h1 id="title"></h1>
         <div id="table"></div>
         <div id="left_plm"></div>
-        <button id="edit_btn" onclick="table_edit_mode()">Edit Mode</button>
-        <button id="reset_btn" onclick="table()" disabled>Reset</button>
+        <button id="edit_btn" onclick="table_edit_mode()"><span class="icon edit"></span></button>
+        <button id="reset_btn" onclick="table()" disabled><span class="icon reset"></span></button>
+        <button id="add_btn" disabled><span class="icon add"></span></button>
+        <button id="delete_btn" disabled><span class="icon delete"></span></button>
+        <button id="left_btn" disabled><span class="icon left"></span></button>
+        <button id="right_btn" disabled><span class="icon right"></span></button>
         <hr>
         <div class="small" id="links">
             View this project on <a target="#" href="https://github.com/Simon3995/ParliamentViewer">GitHub</a>
