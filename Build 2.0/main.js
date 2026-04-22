@@ -47,6 +47,7 @@ function highlight(id) {
 	}
 
 	table_highlight();
+	update_table_footer();
 }
 
 function transform_ctx() {
@@ -176,23 +177,7 @@ function table() {
 		if (cur_hlt.includes(frac.party.id)) total_hlt += frac.seat_amt;
 	}
 
-	string += '<tr>';
-	string += '<th>Total</th>';
-	if (total_hlt > 0) {
-		let coalition_comment;
-		if (total_hlt * 2 == total_seats) {
-			coalition_comment = "<span class='chlf'>Half</span>";
-		} else if (total_hlt * 2 < total_seats) {
-			coalition_comment = "<span class='cmin'>Minority</span>";
-			coalition_comment +=  `, ${Math.ceil((total_seats / 2) + 0.2)} needed for majority`;
-		} else {
-			coalition_comment = "<span class='cmaj'>Majority</span>";
-		}
-		string += `<th class="ralign" colspan="2">${total_hlt}/${total_seats} (${coalition_comment})</th>`;
-	} else {
-		string += '<th class="ralign" colspan="2">' + total_seats + '</th>';
-	}
-	string += '</tr>';
+	string += `<tr id="footer"></tr>`;
 
 	string += "</tbody></table>";
 	
@@ -231,6 +216,7 @@ function table() {
 	document.getElementById("reset_btn").disabled = true;
 
 	table_highlight();
+	update_table_footer();
 }
 
 function table_edit_mode() {
@@ -288,7 +274,28 @@ function table_edit_mode() {
 		if (cur_hlt.includes(frac.party.id)) total_hlt += frac.seat_amt;
 	}
 
-	string += '<tr>';
+	string += `<tr id="footer"></tr>`;
+
+	string += `</tbody>`;
+	string += "</table>";
+	
+	// insert HTML string into document
+	document.getElementById("table").innerHTML = string;
+	document.getElementById("reset_btn").disabled = false;
+	table_highlight();
+	make_table_sortable();
+	update_table_footer();
+}
+
+function update_table_footer() {
+	const footer = document.getElementById("footer");
+	const total_seats = cur_plm.seat_amt();
+	let total_hlt = 0;
+	for (const frac of cur_plm.fractions)
+		if (cur_hlt.includes(frac.party.id))
+			total_hlt += frac.seat_amt;
+	let string = "";
+	
 	string += '<th>Total</th>';
 	if (total_hlt > 0) {
 		let coalition_comment;
@@ -304,16 +311,8 @@ function table_edit_mode() {
 	} else {
 		string += '<th class="ralign" colspan="2">' + total_seats + '</th>';
 	}
-	string += '</tr>';
 
-	string += `</tbody>`;
-	string += "</table>";
-	
-	// insert HTML string into document
-	document.getElementById("table").innerHTML = string;
-	document.getElementById("reset_btn").disabled = false;
-	table_highlight();
-	make_table_sortable();
+	footer.innerHTML = string;
 }
 
 // add keyboard controls
@@ -376,11 +375,10 @@ document.getElementById("select-timeline").onchange = (e) => {
 // jQuery sortable table
 function make_table_sortable() {
 	$(".sortable tbody").sortable({
-		helper: fixWidth,        // Keeps the row from collapsing while dragging
-		cursor: "move",          // Changes cursor to a 'move' icon
+		helper: fixWidth,        // keeps the row from collapsing while dragging
+		cursor: "move",          // changes cursor to a 'move' icon
 		update: function(event, ui) {
-			console.log("New order saved!");
-			// You can get the new order of IDs here if needed
+			// you can get the new order of IDs here if needed
 		}
 	}).disableSelection();
 }
