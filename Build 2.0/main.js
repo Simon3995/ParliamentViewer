@@ -392,7 +392,9 @@ function make_table_sortable() {
 }
 
 $(document).on("click", "tr", function(e) {
-    if (!dragging) {
+    if ($(e.target).is("input")) return;
+	
+	if (!dragging) {
         highlight(e.currentTarget.id);
     }
 });
