@@ -4,6 +4,7 @@ const ctx = c.getContext("2d");
 const prev_btn = document.getElementById("prev_btn");
 const next_btn = document.getElementById("next_btn");
 let cur_tml, cur_plm, cur_hlt = [], party_imgs, mouse_x, mouse_y;
+let dragging = false;
 load_timeline("nl_tweedekamer");
 update();
 
@@ -375,6 +376,13 @@ document.getElementById("select-timeline").onchange = (e) => {
 // jQuery sortable table
 function make_table_sortable() {
 	$(".sortable tbody").sortable({
+		distance: 10,
+		start: function() {
+			dragging = true;
+		},
+		stop: function() {
+			setTimeout(() => { dragging = false; }, 100);
+		},
 		helper: fixWidth,        // keeps the row from collapsing while dragging
 		cursor: "move",          // changes cursor to a 'move' icon
 		update: function(event, ui) {
@@ -382,6 +390,12 @@ function make_table_sortable() {
 		}
 	}).disableSelection();
 }
+
+$(document).on("click", "tr", function(e) {
+    if (!dragging) {
+        highlight(e.currentTarget.id);
+    }
+});
 
 // helper function to keep table cell widths consistent during drag
 function fixWidth(e, ui) {
