@@ -277,13 +277,12 @@ function table_edit_mode() {
 		}
 
 		// click event
-		let onclick = `onclick="highlight('${frac.party.id}')"`;
 		let id = `id=${frac.party.id}`;
 
 		string += `<tr ${id} class="tablerow">`;
 		string += "<td>" + frac.party.name + "</td>";
 		string += "<td>" + frac.party.fullname + "</td>";
-		string += `<td>${frac.seat_amt} (${diff})</td>`;
+		string += `<td><input type="number" value="${frac.seat_amt}" min="0" max="5000"></td>`;
 
 		total_seats += frac.seat_amt;
 		if (cur_hlt.includes(frac.party.id)) total_hlt += frac.seat_amt;

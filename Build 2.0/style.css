@@ -205,6 +205,14 @@ button:active:enabled {
     font-weight: bold;
 }
 
+input[type=number] {
+    background-color: #00000020;
+    font-size: 16px;
+    color: white;
+    border: none;
+    text-align: center;
+}
+
 @keyframes pulseColor {
     0% { color: #8bffd6; }
     50% { color: #00ddff; }
