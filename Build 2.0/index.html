@@ -29,7 +29,7 @@
                 <option value="se_riksdag">Sweden - Riksdag</option>
                 <option value="uk_houseofcommons">United Kingdom - House of Commons</option>
             </optgroup>
-            <optgroup label="North America">    
+            <optgroup label="North America">
                 <option value="us_houseofrepresentatives">United States - House of Representatives</option>
                 <option value="us_senate">United States - Senate</option>
             </optgroup>
@@ -48,10 +48,12 @@
         <div id="left_plm"></div>
         <button title="Edit Mode" id="edit_btn" onclick="toggle_edit_mode()"><span class="icon edit"></span></button>
         <button title="Add Party" id="add_btn" disabled><span class="icon add"></span></button>
-        <button title="Delete Selected" id="delete_btn" onclick="delete_hlt()" disabled><span class="icon delete"></span></button>
+        <button title="Delete Selected" id="delete_btn" onclick="delete_hlt()" disabled><span
+                class="icon delete"></span></button>
         <button title="Move Party Left" id="left_btn" disabled><span class="icon left"></span></button>
         <button title="Move Party Right" id="right_btn" disabled><span class="icon right"></span></button>
-        <button title="Sort Table" id="sort_btn" disabled><span class="icon sort"></span></button>
+        <button title="Sort Table" id="sort_btn" onclick="sort_table_by_seats()" disabled><span
+                class="icon sort"></span></button>
         <hr>
         <div class="small" id="links">
             View this project on <a target="#" href="https://github.com/Simon3995/ParliamentViewer">GitHub</a>
@@ -65,14 +67,10 @@
 </html>
 
 <!-- Scripts -->
-<script
-    src="https://code.jquery.com/jquery-4.0.0.min.js"
-    integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
-    crossorigin="anonymous"></script>
-<script
-    src="https://code.jquery.com/ui/1.14.2/jquery-ui.min.js"
-    integrity="sha256-mblSWfbYzaq/f+4akyMhE6XELCou4jbkgPv+JQPER2M="
-    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-4.0.0.min.js"
+    integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.14.2/jquery-ui.min.js"
+    integrity="sha256-mblSWfbYzaq/f+4akyMhE6XELCou4jbkgPv+JQPER2M=" crossorigin="anonymous"></script>
 
 <script src="geometry.js"></script>
 

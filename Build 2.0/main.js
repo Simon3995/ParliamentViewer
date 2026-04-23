@@ -253,7 +253,7 @@ function table_edit_mode() {
 	string += `<thead>`
 	
 	let fracs = [...parliament.fractions];
-	fracs.sort((a, b) => b.seat_amt - a.seat_amt);
+	//fracs.sort((a, b) => b.seat_amt - a.seat_amt);
 	
 	string += '<tr>';
 	string += '<th class="col_l">Party</th>';
@@ -439,6 +439,18 @@ function make_table_sortable() {
 	}).disableSelection();
 }
 
+function sort_table_by_seats() {
+	let tbody = $(".sortable tbody");
+	let rows = tbody.children('tr').get();
+	rows.sort(function(a, b) {
+		const regexp = /(?<=value=")\d+/g; // matches the number of seats in an innerHTML string
+		return b.innerHTML.match(regexp) - a.innerHTML.match(regexp); 
+	});
+	$.each(rows, function(idx, itm) {
+        tbody.append(itm);
+    });
+}
+
 $(document).on("click", "tr", function(e) {
     if ($(e.target).is("input")) return;
 	
@@ -452,14 +464,6 @@ $(document).on("change", "input", function(e) {
 	cur_plm.set_party_seats(e.target.name, e.target.value);
 	update_table_footer();
 });
-
-// // set seat amount on input change
-// 	document.querySelectorAll("input[type=number]").forEach(function(input) {
-// 		input.addEventListener("change", function(e) {
-// 			if (e.target.value = '') e.target.value = 0;
-// 			cur_plm.set_party_seats(e.target.name, e.target.value);
-// 		});
-// 	});
 
 // lose focus on enter press in number input
 $(document).on("keyup", "input", function(e) {

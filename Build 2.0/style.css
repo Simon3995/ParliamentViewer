@@ -227,18 +227,46 @@ button:disabled span.icon {
     opacity: 40%;
 }
 
-span.left { background: url(./icons/left.svg) no-repeat; }
-span.right { background: url(./icons/right.svg) no-repeat; }
-span.edit { background: url(./icons/edit.svg) no-repeat; }
-span.add { background: url(./icons/add.svg) no-repeat; }
-span.delete { background: url(./icons/delete.svg) no-repeat; }
-span.reset { background: url(./icons/reset.svg) no-repeat; }
-span.sort { background: url(./icons/sort.svg) no-repeat; }
+span.left {
+    background: url(./icons/left.svg) no-repeat;
+}
+
+span.right {
+    background: url(./icons/right.svg) no-repeat;
+}
+
+span.edit {
+    background: url(./icons/edit.svg) no-repeat;
+}
+
+span.add {
+    background: url(./icons/add.svg) no-repeat;
+}
+
+span.delete {
+    background: url(./icons/delete.svg) no-repeat;
+}
+
+span.reset {
+    background: url(./icons/reset.svg) no-repeat;
+}
+
+span.sort {
+    background: url(./icons/sort.svg) no-repeat;
+}
 
 @keyframes pulseColor {
-    0% { color: #8bffd6; }
-    50% { color: #00ddff; }
-    100% { color: #8bffd6; }
+    0% {
+        color: #8bffd6;
+    }
+
+    50% {
+        color: #00ddff;
+    }
+
+    100% {
+        color: #8bffd6;
+    }
 }
 
 @font-face {
