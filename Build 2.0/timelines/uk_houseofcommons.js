@@ -19,7 +19,7 @@ T.parties = {
 }
 
 T.parties.$lab.image.src = "logos/uk/lab.png";
-T.parties.$con.image.src = "logos/uk/con.png";
+T.parties.$con.image.src = "logos/uk/cns.png";
 T.parties.$libdem.image.src = "logos/uk/libdem.png";
 T.parties.$snp.image.src = "logos/uk/snp.png";
 T.parties.$sf.image.src = "logos/uk/sf.png";
