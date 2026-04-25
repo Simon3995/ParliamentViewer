@@ -1,3 +1,16 @@
+// a class for a parliament timeline, containing a series of election results
+class Timeline {
+    constructor (country = null) {
+        this.parliaments = [];
+        this.parties = {};
+        this.country = country;
+    }
+
+    add_parliament(parliament) {
+        this.parliaments.push(parliament);
+    }
+}
+
 // a class for one election result
 class Parliament {
     constructor(fractions = [], description = "Parliament", date = new Date()) {
@@ -118,5 +131,25 @@ class Parliament {
                 );
             }
         }
+    }
+}
+
+// a class for a party fraction in one election
+class Fraction {
+    constructor(party, seat_amt) {
+        this.party = party;
+        this.seat_amt = seat_amt;
+        this.seat_centers = [];
+    }
+}
+
+// a class for a political party, independent of year or election
+class Party {
+    constructor(name, fullname, id, color = "#000000", image = null) {
+        this.name = name;
+        this.fullname = fullname;
+        this.id = id;
+        this.color = color;
+        this.image = image;
     }
 }

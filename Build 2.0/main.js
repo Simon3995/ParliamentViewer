@@ -1,11 +1,20 @@
 // init
 const c = document.getElementById("canvas");
 const ctx = c.getContext("2d");
-const prev_btn = document.getElementById("prev_btn");
-const next_btn = document.getElementById("next_btn");
-let cur_tml, cur_plm, cur_hlt = [], party_imgs, mouse_x, mouse_y;
-let dragging = false;
-let edit_mode = false;
+let cur_tml = null;		// current timeline object
+let cur_plm = null;		// current parliament object
+let cur_hlt = [];		// current highlighted parties
+let edit_mode = false;	// whether edit mode is enabled
+let dragging = false;	// whether a dragging action is currently happening
+let party_imgs = null;	// array of icons for all parties in current parliament
+let mouse_x = 0;		// current mouse X coord
+let mouse_y = 0;		// current mouse Y coord
+let ord_tab = [];		// party order in the table
+let ord_vis = [];		// party order left-right visually
+
+const btn_prev = document.getElementById("btn_prev");
+const btn_next = document.getElementById("btn_next");
+
 load_timeline("nl_tweedekamer");
 update();
 
@@ -96,8 +105,8 @@ function prev() {
 	cur_plm = cur_tml.parliaments[newIdx];
 	load_parliament(cur_plm);
 
-	prev_btn.disabled = (newIdx+1 == cur_tml.parliaments.length);
-	next_btn.disabled = (newIdx == 0);
+	btn_prev.disabled = (newIdx+1 == cur_tml.parliaments.length);
+	btn_next.disabled = (newIdx == 0);
 }
 
 function next() {
@@ -106,8 +115,8 @@ function next() {
 	cur_plm = cur_tml.parliaments[newIdx];
 	load_parliament(cur_plm);
 
-	prev_btn.disabled = (newIdx+1 == cur_tml.parliaments.length);
-	next_btn.disabled = (newIdx == 0);
+	btn_prev.disabled = (newIdx+1 == cur_tml.parliaments.length);
+	btn_next.disabled = (newIdx == 0);
 }
 
 function load_parliament(parliament) {
@@ -340,27 +349,27 @@ function update_table_footer() {
 }
 
 function update_buttons() {
-	const edit_btn = document.getElementById("edit_btn");
-	const add_btn = document.getElementById("add_btn");
-	const delete_btn = document.getElementById("delete_btn");
-	const left_btn = document.getElementById("left_btn");
-	const right_btn = document.getElementById("right_btn");
-	const sort_btn = document.getElementById("sort_btn");
+	const btn_edit = document.getElementById("btn_edit");
+	const btn_add = document.getElementById("btn_add");
+	const btn_del = document.getElementById("btn_del");
+	const btn_left = document.getElementById("btn_left");
+	const btn_right = document.getElementById("btn_right");
+	const btn_sort = document.getElementById("btn_sort");
 
 	if (edit_mode) {
-		edit_btn.style.backgroundColor = "#488cae";
-		add_btn.disabled = false;
-		sort_btn.disabled = false;
-		left_btn.disabled = (cur_hlt.length != 1);
-		right_btn.disabled = (cur_hlt.length != 1);
-		delete_btn.disabled = (cur_hlt.length == 0);
+		btn_edit.style.backgroundColor = "#488cae";
+		btn_add.disabled = false;
+		btn_sort.disabled = false;
+		btn_left.disabled = (cur_hlt.length != 1);
+		btn_right.disabled = (cur_hlt.length != 1);
+		btn_del.disabled = (cur_hlt.length == 0);
 	} else {
-		edit_btn.style.backgroundColor = "#483d8b";
-		add_btn.disabled = true;
-		delete_btn.disabled = true;
-		left_btn.disabled = true;
-		right_btn.disabled = true;
-		sort_btn.disabled = true;
+		btn_edit.style.backgroundColor = "#483d8b";
+		btn_add.disabled = true;
+		btn_del.disabled = true;
+		btn_left.disabled = true;
+		btn_right.disabled = true;
+		btn_sort.disabled = true;
 	}
 }
 
