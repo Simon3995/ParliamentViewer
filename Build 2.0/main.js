@@ -15,7 +15,6 @@ let ord_vis = [];		// party order left-right visually
 const btn_prev = document.getElementById("btn_prev");
 const btn_next = document.getElementById("btn_next");
 
-load_timeline("nl_tweedekamer");
 update();
 
 // main update loop
@@ -27,7 +26,7 @@ function update() {
 	ctx.clearRect(0, 0, c.width, c.height);
 	ctx.restore();
 
-	cur_plm.draw();
+	cur_plm?.draw();
 }
 
 function resize_canvas() {
@@ -393,7 +392,6 @@ window.addEventListener('resize', (e) => {
 window.addEventListener('load', (e) => {
 	resize_canvas();
 	transform_ctx();
-	generate_party_imgs();
 });
 
 window.addEventListener('mousemove', (e) => {
