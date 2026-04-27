@@ -1,0 +1,76 @@
+{
+    "name": "Norway - Storting",
+    "parties": {
+        "ap": {
+            "shortname": "Ap",
+            "fullname": "Arbeiderpartiet",
+            "color": "#e61515",
+            "image": "logos/no/ap.png"        
+        },
+        "frp": {
+            "shortname": "FrP",
+            "fullname": "Fremskrittspartiet",
+            "color": "#186eb9",
+            "image": "logos/no/frp.png"
+        },
+        "h": {
+            "shortname": "H",
+            "fullname": "Høyre",
+            "color": "#026ac5",
+            "image": "logos/no/h.png"
+        },
+        "sv": {
+            "shortname": "SV",
+            "fullname": "Sosialistisk Venstreparti",
+            "color": "#d80b60",
+            "image": "logos/no/sv.png"
+        },
+        "sp": {
+            "shortname": "Sp",
+            "fullname": "Senterpartiet",
+            "color": "#109710",
+            "image": "logos/no/sp.png"
+        },
+        "rodt": {
+            "shortname": "R",
+            "fullname": "Rødt",
+            "color": "#cc0000",
+            "image": "logos/no/rodt.png"
+        },
+        "mdg": {
+            "shortname": "MDG",
+            "fullname": "Miljøpartiet De Grønne",
+            "color": "#37a803",
+            "image": "logos/no/mdg.png"
+        },
+        "krf": {
+            "shortname": "KrF",
+            "fullname": "Kristelig Folkeparti",
+            "color": "#ffe922",
+            "image": "logos/no/krf.png"
+        },
+        "v": {
+            "shortname": "V",
+            "fullname": "Venstre",
+            "color": "#007575",
+            "image": "logos/no/v.png"
+        }
+    },
+    "parliaments": [
+        {
+            "name": "2025 Parliamentary Election",
+            "date": "2025-09-08",
+            "fractions": [
+                { "id": "rodt", "seats": 9 },
+                { "id": "sv", "seats": 9 },
+                { "id": "ap", "seats": 53 },
+                { "id": "sp", "seats": 9 },
+                { "id": "mdg", "seats": 8 },
+                { "id": "krf", "seats": 7 },
+                { "id": "v", "seats": 3 },
+                { "id": "h", "seats": 24 },
+                { "id": "frp", "seats": 47 }
+            ]
+        }
+    ]
+}
