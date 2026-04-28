@@ -200,12 +200,11 @@ function table() {
 	let string = "";
 	let total_seats = 0;
 	let total_hlt = 0;
-	edit_mode = false;
 	string += `<table>`;
 	string += `<thead>`
 	
 	let fracs = [...parliament.fractions];
-	fracs.sort((a, b) => b.seat_amt - a.seat_amt);
+	//fracs.sort((a, b) => b.seat_amt - a.seat_amt);
 	
 	string += '<tr>';
 	string += '<th class="col_l">Party</th>';
@@ -293,7 +292,6 @@ function table_edit_mode() {
 	let string = "";
 	let total_seats = 0;
 	let total_hlt = 0;
-	edit_mode = true;
 	string += `<table class="sortable">`;
 	string += `<thead>`
 	
@@ -344,9 +342,10 @@ function table_edit_mode() {
 		if (cur_hlt.includes(frac.party.id)) total_hlt += frac.seat_amt;
 	}
 
+	string += `</tbody>`;
+
 	string += `<tr id="footer"></tr>`;
 
-	string += `</tbody>`;
 	string += "</table>";
 	
 	// insert HTML string into document
@@ -464,6 +463,7 @@ document.getElementById("select-timeline").onchange = (e) => {
 function make_table_sortable() {
 	$(".sortable tbody").sortable({
 		distance: 10,
+		cancel: '#footer',
 		start: function() {
 			dragging = true;
 		},
@@ -492,6 +492,7 @@ function sort_table_by_seats() {
 
 $(document).on("click", "tr", function(e) {
     if ($(e.target).is("input")) return;
+	if (e.currentTarget.id == "footer") return;
 	
 	if (!dragging) {
         highlight(e.currentTarget.id);
