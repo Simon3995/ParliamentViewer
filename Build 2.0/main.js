@@ -118,26 +118,50 @@ function next() {
 	btn_next.disabled = (newIdx == 0);
 }
 
+function load_img(party, src) {
+    return new Promise((resolve, reject) => {
+        party.image.onload = () => resolve(party);
+        party.image.onerror = reject;
+        party.image.src = src;
+    });
+}
+
 async function load_timeline(name) {
 	const file = await fetch('./timelines/no_storting.json');
 	const data = await file.json();
 	cur_tml = new Timeline(data.name);
 
+	// track image loading
+	const image_promises = [];
+	
 	// construct list of parties
 	for (const party_id in data.parties) {
 		const pdata = data.parties[party_id];
 		const party = new Party(pdata.shortname, pdata.fullname, party_id, pdata.color, new Image());
-		party.image.src = pdata.image;
+		image_promises.push(load_img(party, pdata.image));
 		cur_tml.parties[party_id] = party;
 	}
 
-	console.log(data);
+	// wait for all images to load
+	try {
+		await Promise.all(image_promises);
+	} catch (err) {
+		console.warn("One or more party logos failed to load", err);
+	}
+
+	// construct list of parliaments
+	cur_tml.parliaments = data.parliaments.map(par => {
+		return new Parliament(par.fractions.map(frac => {
+			return new Fraction(cur_tml.parties[frac.id], frac.seats);
+			//return "bingus";
+		}), par.name, new Date(par.date));
+	});
 	
-	// cur_plm = cur_tml.parliaments[0];
-	// load_parliament(cur_plm);
-	// generate_party_imgs();
-	// highlight(null);
-	// update();
+	cur_plm = cur_tml.parliaments[0];
+	load_parliament(cur_plm);
+	generate_party_imgs();
+	highlight(null);
+	update();
 }
 
 function load_parliament(parliament) {
