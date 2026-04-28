@@ -118,22 +118,35 @@ function next() {
 	btn_next.disabled = (newIdx == 0);
 }
 
+async function load_timeline(name) {
+	const file = await fetch('./timelines/no_storting.json');
+	const data = await file.json();
+	cur_tml = new Timeline(data.name);
+
+	// construct list of parties
+	for (const party_id in data.parties) {
+		const pdata = data.parties[party_id];
+		const party = new Party(pdata.shortname, pdata.fullname, party_id, pdata.color, new Image());
+		party.image.src = pdata.image;
+		cur_tml.parties[party_id] = party;
+	}
+
+	console.log(data);
+	
+	// cur_plm = cur_tml.parliaments[0];
+	// load_parliament(cur_plm);
+	// generate_party_imgs();
+	// highlight(null);
+	// update();
+}
+
 function load_parliament(parliament) {
 	document.getElementById("title").innerHTML = parliament.description;
-	
 	update_sidebar();
 }
 
-function load_timeline(name) {
-	cur_tml = Timelines[name];
-	cur_plm = cur_tml.parliaments[0];
-	load_parliament(cur_plm);
-	generate_party_imgs();
-	next();
-}
-
 function generate_party_imgs() {
-	party_imgs = [];
+	party_imgs = {};
 	const s = 200;
 	for (const name in cur_tml.parties) {
 		const party = cur_tml.parties[name];
@@ -421,11 +434,6 @@ c.addEventListener("mousedown", (e) => {
 
 document.getElementById("select-timeline").onchange = (e) => {
 	load_timeline(e.target.value);
-	cur_plm = cur_tml.parliaments[0];
-	highlight(null);
-	load_parliament(cur_plm);
-
-	update();
 }
 
 // jQuery sortable table

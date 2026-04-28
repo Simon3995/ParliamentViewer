@@ -1,9 +1,9 @@
 // a class for a parliament timeline, containing a series of election results
 class Timeline {
-    constructor (country = null) {
+    constructor (name = null) {
         this.parliaments = [];
         this.parties = {};
-        this.country = country;
+        this.name = name;
     }
 
     add_parliament(parliament) {
@@ -146,9 +146,9 @@ class Fraction {
 // a class for a political party, independent of year or election
 class Party {
     constructor(name, fullname, id, color = "#000000", image = null) {
+        this.id = id;
         this.name = name;
         this.fullname = fullname;
-        this.id = id;
         this.color = color;
         this.image = image;
     }
