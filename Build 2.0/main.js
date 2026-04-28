@@ -250,9 +250,9 @@ function table() {
 		if (cur_hlt.includes(frac.party.id)) total_hlt += frac.seat_amt;
 	}
 
-	string += `<tr id="footer"></tr>`;
-
-	string += "</tbody></table>";
+	string += `</tbody>`;
+	string += `<tfoot><tr id="footer"></tr></tfoot>`;
+	string += `</table>`;
 	
 	// insert HTML string into document
 	document.getElementById("table").innerHTML = string;
@@ -343,9 +343,7 @@ function table_edit_mode() {
 	}
 
 	string += `</tbody>`;
-
-	string += `<tr id="footer"></tr>`;
-
+	string += `<tfoot><tr id="footer"></tr></tfoot>`;
 	string += "</table>";
 	
 	// insert HTML string into document
@@ -463,7 +461,6 @@ document.getElementById("select-timeline").onchange = (e) => {
 function make_table_sortable() {
 	$(".sortable tbody").sortable({
 		distance: 10,
-		cancel: '#footer',
 		start: function() {
 			dragging = true;
 		},
@@ -490,9 +487,8 @@ function sort_table_by_seats() {
     });
 }
 
-$(document).on("click", "tr", function(e) {
+$(document).on("click", "tbody tr", function(e) {
     if ($(e.target).is("input")) return;
-	if (e.currentTarget.id == "footer") return;
 	
 	if (!dragging) {
         highlight(e.currentTarget.id);
