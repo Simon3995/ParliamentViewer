@@ -2,7 +2,6 @@ T = new Timeline("European Union - European Parliament");
 
 T.parties = {
     $independent: new Party("NI", "Non-attached Members", "$independent", "#696969", new Image()),
-
     $epp: new Party("EPP", "European People's Party Group", "$epp", "#3399FF", new Image()),
     $sd: new Party("S&D", "Progressive Alliance of Socialists and Democrats", "$sd", "#FF0000", new Image()),
     $pfe: new Party("PfE", "Patriots for Europe", "$pfe", "#013366", new Image()),

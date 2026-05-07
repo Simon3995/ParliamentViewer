@@ -1,0 +1,161 @@
+{
+    "name": "United Kingdom - House of Commons",
+    "parties": {
+        "s": {
+            "shortname": "Speaker",
+            "fullname": "Speaker of the House of Commons",
+            "color": "#202020"
+        },
+        "lab": {
+            "shortname": "Lab",
+            "fullname": "Labour Party",
+            "color": "#ff0000",
+            "image": "logos/uk/lab.png"
+        },
+        "con": {
+            "shortname": "Con",
+            "fullname": "Conservative Party",
+            "color": "#3189e1",
+            "image": "logos/uk/cns.png"
+        },
+        "libdem": {
+            "shortname": "LibDem",
+            "fullname": "Liberal Democrats",
+            "color": "#ffbb00",
+            "image": "logos/uk/libdem.png"
+        },
+        "snp": {
+            "shortname": "SNP",
+            "fullname": "Scottish National Party",
+            "color": "#ffdd33",
+            "image": "logos/uk/snp.png"
+        },
+        "sf": {
+            "shortname": "SF",
+            "fullname": "Sinn Féin",
+            "color": "#305b30",
+            "image": "logos/uk/sf.png"
+        },
+        "ind": {
+            "shortname": "Ind",
+            "fullname": "Independent",
+            "color": "#a0a0a0"
+        },
+        "reform": {
+            "shortname": "Reform",
+            "fullname": "Reform UK",
+            "color": "#12d4ff",
+            "image": "logos/uk/reform.png"
+        },
+        "dup": {
+            "shortname": "DUP",
+            "fullname": "Democratic Unionist Party",
+            "color": "#b55f3e",
+            "image": "logos/uk/dup.png"
+        },
+        "greens": {
+            "shortname": "Greens",
+            "fullname": "Green Party of England and Wales",
+            "color": "#4ab446",
+            "image": "logos/uk/greens.png"
+        },
+        "plaid": {
+            "shortname": "Plaid",
+            "fullname": "Plaid Cymru",
+            "color": "#3b8560",
+            "image": "logos/uk/plaid.png"
+        },
+        "sdlp": {
+            "shortname": "SDLP",
+            "fullname": "Social Democratic and Labour Party",
+            "color": "#519d51",
+            "image": "logos/uk/sdlp.png"
+        },
+        "apni": {
+            "shortname": "APNI",
+            "fullname": "Alliance Party of Northern Ireland",
+            "color": "#ffbb00",
+            "image": "logos/uk/apni.png"
+        },
+        "uup": {
+            "shortname": "UUP",
+            "fullname": "Ulster Unionist Party",
+            "color": "#254c73",
+            "image": "logos/uk/uup.png"
+        },
+        "tuv": {
+            "shortname": "TUV",
+            "fullname": "Traditional Unionist Voice",
+            "color": "#004080",
+            "image": "logos/uk/tuv.png"
+        }
+    },
+    "parliaments": [
+        {
+            "name": "2024 General Election",
+            "date": "2024-07-04",
+            "fractions": [
+                {
+                    "id": "sf",
+                    "seats": 7
+                },
+                {
+                    "id": "plaid",
+                    "seats": 4
+                },
+                {
+                    "id": "greens",
+                    "seats": 4
+                },
+                {
+                    "id": "snp",
+                    "seats": 9
+                },
+                {
+                    "id": "sdlp",
+                    "seats": 2
+                },
+                {
+                    "id": "lab",
+                    "seats": 411
+                },
+                {
+                    "id": "libdem",
+                    "seats": 72
+                },
+                {
+                    "id": "apni",
+                    "seats": 1
+                },
+                {
+                    "id": "con",
+                    "seats": 121
+                },
+                {
+                    "id": "uup",
+                    "seats": 1
+                },
+                {
+                    "id": "dup",
+                    "seats": 5
+                },
+                {
+                    "id": "tuv",
+                    "seats": 1
+                },
+                {
+                    "id": "reform",
+                    "seats": 5
+                },
+                {
+                    "id": "ind",
+                    "seats": 6
+                },
+                {
+                    "id": "s",
+                    "seats": 1
+                }
+            ]
+        }
+    ]
+}

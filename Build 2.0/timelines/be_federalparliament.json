@@ -1,0 +1,133 @@
+{
+    "name": "be_federalparliament",
+    "parties": {
+        "nva": {
+            "shortname": "N-VA",
+            "fullname": "Nieuw-Vlaamse Alliantie",
+            "color": "#ffd000",
+            "image": "logos/be/nva.png"
+        },
+        "vb": {
+            "shortname": "VB",
+            "fullname": "Vlaams Belang",
+            "color": "#ffe600",
+            "image": "logos/be/vb.png"
+        },
+        "mr": {
+            "shortname": "MR",
+            "fullname": "Mouvement réformateur",
+            "color": "#6000FF",
+            "image": "logos/be/mr.png"
+        },
+        "pvdaptb": {
+            "shortname": "PVDA-PTB",
+            "fullname": "Partij van de Arbeid/Parti du travail de Belgique",
+            "color": "#e92020",
+            "image": "logos/be/pvdaptb.png"
+        },
+        "ps": {
+            "shortname": "PS",
+            "fullname": "Parti socialiste",
+            "color": "#ff0000",
+            "image": "logos/be/ps.png"
+        },
+        "vooruit": {
+            "shortname": "Vooruit",
+            "fullname": "Vooruit",
+            "color": "#ff0000",
+            "image": "logos/be/vooruit.png"
+        },
+        "cdv": {
+            "shortname": "CD&V",
+            "fullname": "Christen-Democratisch en Vlaams",
+            "color": "#ff8000",
+            "image": "logos/be/cdv.png"
+        },
+        "le": {
+            "shortname": "LE",
+            "fullname": "Les Engagés",
+            "color": "#17cfba",
+            "image": "logos/be/le.png"
+        },
+        "anders": {
+            "shortname": "Anders",
+            "fullname": "Anders",
+            "color": "#7100FF",
+            "image": "logos/be/anders.png"
+        },
+        "groen": {
+            "shortname": "Groen",
+            "fullname": "Groen",
+            "color": "#43b143",
+            "image": "logos/be/groen.png"
+        },
+        "ecolo": {
+            "shortname": "Ecolo",
+            "fullname": "Écologistes Confédérés pour l'organisation de luttes originales",
+            "color": "#21ce21",
+            "image": "logos/be/ecolo.png"
+        },
+        "defi": {
+            "shortname": "DéFI",
+            "fullname": "Démocrate fédéraliste indépendant",
+            "color": "#ff517c",
+            "image": "logos/be/defi.png"
+        }
+    },
+    "parliaments": [
+        {
+            "name": "2024 Federal Election",
+            "date": "2024-06-09",
+            "fractions": [
+                {
+                    "id": "pvdaptb",
+                    "seats": 15
+                },
+                {
+                    "id": "vooruit",
+                    "seats": 13
+                },
+                {
+                    "id": "ps",
+                    "seats": 16
+                },
+                {
+                    "id": "ecolo",
+                    "seats": 3
+                },
+                {
+                    "id": "groen",
+                    "seats": 6
+                },
+                {
+                    "id": "defi",
+                    "seats": 1
+                },
+                {
+                    "id": "le",
+                    "seats": 14
+                },
+                {
+                    "id": "cdv",
+                    "seats": 11
+                },
+                {
+                    "id": "anders",
+                    "seats": 7
+                },
+                {
+                    "id": "mr",
+                    "seats": 20
+                },
+                {
+                    "id": "nva",
+                    "seats": 24
+                },
+                {
+                    "id": "vb",
+                    "seats": 20
+                }
+            ]
+        }
+    ]
+}

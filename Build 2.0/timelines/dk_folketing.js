@@ -13,7 +13,6 @@ T.parties = {
     $æ: new Party("Æ", "Danmarksdemokraterne", "$æ", "#0088dd", new Image()),
     $å: new Party("Å", "Alternativet", "$å", "#56da56", new Image()),
     $h: new Party("H", "Borgernes Parti", "$h", "#0091ff", new Image()),
-
     $jf: new Party("JF", "Javnaðarflokkurin", "$jf", "#D71635", new Image()),
     $b: new Party("B", "Sambandsflokkurin", "$b", "#439cdc", new Image()),
     $n: new Party("N", "Naleraq", "$n", "#ff6d24", new Image()),

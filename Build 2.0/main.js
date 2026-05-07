@@ -118,16 +118,28 @@ function next() {
 	btn_next.disabled = (newIdx == 0);
 }
 
+// dankjewel claude
 function load_img(party, src) {
-    return new Promise((resolve, reject) => {
-        party.image.onload = () => resolve(party);
-        party.image.onerror = reject;
+    return new Promise((resolve) => {  // no reject parameter!
+        if (!src) {
+			party.image_loaded = false;
+			resolve(party);
+			return;
+		}
+		party.image.onload = () => {
+            party.image_loaded = true;
+            resolve(party);
+        };
+        party.image.onerror = () => {
+            party.image_loaded = false;  // mark as failed
+            resolve(party);             // still resolve, not reject
+        };
         party.image.src = src;
     });
 }
 
 async function load_timeline(name) {
-	const file = await fetch('./timelines/no_storting.json');
+	const file = await fetch(`./timelines/${name}.json`);
 	const data = await file.json();
 	cur_tml = new Timeline(data.name);
 
@@ -142,12 +154,7 @@ async function load_timeline(name) {
 		cur_tml.parties[party_id] = party;
 	}
 
-	// wait for all images to load
-	try {
-		await Promise.all(image_promises);
-	} catch (err) {
-		console.warn("One or more party logos failed to load", err);
-	}
+	await Promise.all(image_promises);
 
 	// construct list of parliaments
 	cur_tml.parliaments = data.parliaments.map(par => {
@@ -180,7 +187,7 @@ function generate_party_imgs() {
 		sctx.fillStyle = party.color;
 		sctx.arc(s/2, s/2, s/2, 0, 2*Math.PI);
 		sctx.fill();
-		if (party.image.src) {
+		if (party.image_loaded) {
 			const scale = s/2;
 			sctx.drawImage(party.image, s/2-scale, s/2-scale, 2*scale, 2*scale);
 		} else {

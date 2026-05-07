@@ -1,0 +1,93 @@
+{
+    "name": "Sweden - Riksdag",
+    "parties": {
+        "v": {
+            "shortname": "V",
+            "fullname": "Vänsterpartiet",
+            "color": "#850000",
+            "image": "logos/se/v.png"
+        },
+        "mp": {
+            "shortname": "MP",
+            "fullname": "Miljöpartiet",
+            "color": "#5fc951",
+            "image": "logos/se/mp.png"
+        },
+        "s": {
+            "shortname": "S",
+            "fullname": "Socialdemokraterna",
+            "color": "#ff0000",
+            "image": "logos/se/s.png"
+        },
+        "c": {
+            "shortname": "C",
+            "fullname": "Centerpartiet",
+            "color": "#3f6b3f",
+            "image": "logos/se/c.png"
+        },
+        "l": {
+            "shortname": "L",
+            "fullname": "Liberalerna",
+            "color": "#3496f1",
+            "image": "logos/se/l.png"
+        },
+        "kd": {
+            "shortname": "KD",
+            "fullname": "Kristdemokraterna",
+            "color": "#000083",
+            "image": "logos/se/kd.png"
+        },
+        "m": {
+            "shortname": "M",
+            "fullname": "Moderaterna",
+            "color": "#2354da",
+            "image": "logos/se/m.png"
+        },
+        "sd": {
+            "shortname": "SD",
+            "fullname": "Sverigedemokraterna",
+            "color": "#263f75",
+            "image": "logos/se/sd.png"
+        }
+    },
+    "parliaments": [
+        {
+            "name": "2022 General Election",
+            "date": "2022-09-11",
+            "fractions": [
+                {
+                    "id": "v",
+                    "seats": 24
+                },
+                {
+                    "id": "s",
+                    "seats": 107
+                },
+                {
+                    "id": "mp",
+                    "seats": 18
+                },
+                {
+                    "id": "c",
+                    "seats": 24
+                },
+                {
+                    "id": "l",
+                    "seats": 16
+                },
+                {
+                    "id": "kd",
+                    "seats": 19
+                },
+                {
+                    "id": "m",
+                    "seats": 68
+                },
+                {
+                    "id": "sd",
+                    "seats": 73
+                }
+            ]
+        }
+    ]
+}

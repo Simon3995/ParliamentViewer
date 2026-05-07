@@ -52,8 +52,6 @@ T.parties = {
     $lsp: new Party("LSP", "Liberale Staatspartij", "$lsp", "#0d6486ff", new Image()),
     $cdu: new Party("CDU", "Christelijk-Democratische Unie", "$cdu", "#eb6c05ff", new Image()),
     $rsp: new Party("RSP", "Revolutionair Socialistische Partij", "$rsp", "#a70909ff", new Image()),
-    // A decent amount of prties below don't seem to have any known associated colors
-    // Nor could I find posters for them. 
     $nbtmp: new Party("NBTMP", "Nationale Boeren-, Tuinders- en Middenstandspartij", "$nbtmp", "#79aa4aff", new Image()),
     $pb: new Party("PB", "Plattelandersbond", "$pb", "#79aa4aff", new Image()),
     $rkvp: new Party("RKVP", "Rooms-Katholieke Volkspartij", "$rkvp", "#802008ff", new Image()),
@@ -74,35 +72,6 @@ T.parties = {
     $np: new Party("NP", "Neutrale Partij", "$np", "#8b1481ff", new Image()),
     $vdw: new Party("VDW", "Verbond tot Democratisering der Weermacht", "$vdw", "#0c501bff", new Image()),
 }
-
-/**
- * Some notes about parties that we may need to deal with later.
- * Thought it was a good idea to keep track of these somewhere
- * - How do we display party fusions? Below is a known list:
- *      - GL + PvdA -> GL/PvdA
- *      - KVP + ARP + CHU -> CDA
- *      - PPR + PSP + CPN + EVP -> GL
- * 
- * - How do we display rebrands or renaming? Below is a known list:
- *      - Lijst Welter -> KNP (rebranded before 1952 election)
- *      - Plattelandersbond -> NBTMP (rebranded before 1933 election)
- * 
- * 
- * - Rebrands make me think, we can also consider supporting party logos throughout the ages,
- *   though this is probably not worth the effort.
- * 
- * - There's some post-WW2 rebrands, and a post-WW2 fusion.
- *   My recommendation would be to treat these rebrands as entirely new parties,
- *   but to treat the fusion as a regular party fusion.
- *   Reason for this being that the rebrands are typically considered
- *   separate organizations from their pre-war predecessors,
- *   which is abnormal for a rebranded party but not for a party fusion.
- *      - LSP -> PvdD (rebrand)
- *      - RKSP -> KVP (rebrand)
- *      - SDAP + VDB + CDU -> PvdA (fusion)
- * 
- * - Frank
- */
 
 T.parties.$bij1.image.src = "logos/nl/BIJ1.png";
 T.parties.$ppnl.image.src = "logos/nl/PPNL.png";
