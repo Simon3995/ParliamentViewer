@@ -85,216 +85,90 @@
             "name": "2021 Federal Election",
             "date": "2021-09-26",
             "fractions": [
-                {
-                    "id": "linke",
-                    "seats": 39
-                },
-                {
-                    "id": "spd",
-                    "seats": 206
-                },
-                {
-                    "id": "grune",
-                    "seats": 118
-                },
-                {
-                    "id": "ssw",
-                    "seats": 1
-                },
-                {
-                    "id": "fdp",
-                    "seats": 91
-                },
-                {
-                    "id": "cducsu",
-                    "seats": 197
-                },
-                {
-                    "id": "afd",
-                    "seats": 83
-                }
+                { "id": "linke", "seats": 39 },
+                { "id": "spd", "seats": 206 },
+                { "id": "grune", "seats": 118 },
+                { "id": "ssw", "seats": 1 },
+                { "id": "fdp", "seats": 91 },
+                { "id": "cducsu", "seats": 197 },
+                { "id": "afd", "seats": 83 }
             ]
         },
         {
             "name": "2017 Federal Election",
             "date": "2017-09-24",
             "fractions": [
-                {
-                    "id": "linke",
-                    "seats": 69
-                },
-                {
-                    "id": "spd",
-                    "seats": 153
-                },
-                {
-                    "id": "grune",
-                    "seats": 67
-                },
-                {
-                    "id": "fdp",
-                    "seats": 80
-                },
-                {
-                    "id": "cducsu",
-                    "seats": 246
-                },
-                {
-                    "id": "afd",
-                    "seats": 94
-                }
+                { "id": "linke", "seats": 69 },
+                { "id": "spd", "seats": 153 },
+                { "id": "grune", "seats": 67 },
+                { "id": "fdp", "seats": 80 },
+                { "id": "cducsu", "seats": 246 },
+                { "id": "afd", "seats": 94 }
             ]
         },
         {
             "name": "2013 Federal Election",
             "date": "2013-09-22",
             "fractions": [
-                {
-                    "id": "linke",
-                    "seats": 64
-                },
-                {
-                    "id": "spd",
-                    "seats": 193
-                },
-                {
-                    "id": "grune",
-                    "seats": 63
-                },
-                {
-                    "id": "cducsu",
-                    "seats": 311
-                }
+                { "id": "linke", "seats": 64 },
+                { "id": "spd", "seats": 193 },
+                { "id": "grune", "seats": 63 },
+                { "id": "cducsu", "seats": 311 }
             ]
         },
         {
             "name": "2009 Federal Election",
             "date": "2009-09-27",
             "fractions": [
-                {
-                    "id": "linke",
-                    "seats": 76
-                },
-                {
-                    "id": "spd",
-                    "seats": 146
-                },
-                {
-                    "id": "grune",
-                    "seats": 68
-                },
-                {
-                    "id": "fdp",
-                    "seats": 93
-                },
-                {
-                    "id": "cducsu",
-                    "seats": 239
-                }
+                { "id": "linke", "seats": 76 },
+                { "id": "spd", "seats": 146 },
+                { "id": "grune", "seats": 68 },
+                { "id": "fdp", "seats": 93 },
+                { "id": "cducsu", "seats": 239 }
             ]
         },
         {
             "name": "2005 Federal Election",
             "date": "2005-09-18",
             "fractions": [
-                {
-                    "id": "linke",
-                    "seats": 54
-                },
-                {
-                    "id": "spd",
-                    "seats": 222
-                },
-                {
-                    "id": "grune",
-                    "seats": 51
-                },
-                {
-                    "id": "fdp",
-                    "seats": 61
-                },
-                {
-                    "id": "cducsu",
-                    "seats": 226
-                }
+                { "id": "linke", "seats": 54 },
+                { "id": "spd", "seats": 222 },
+                { "id": "grune", "seats": 51 },
+                { "id": "fdp", "seats": 61 },
+                { "id": "cducsu", "seats": 226 }
             ]
         },
         {
             "name": "2002 Federal Election",
             "date": "2002-09-22",
             "fractions": [
-                {
-                    "id": "pds",
-                    "seats": 2
-                },
-                {
-                    "id": "spd",
-                    "seats": 251
-                },
-                {
-                    "id": "grune",
-                    "seats": 55
-                },
-                {
-                    "id": "fdp",
-                    "seats": 47
-                },
-                {
-                    "id": "cducsu",
-                    "seats": 248
-                }
+                { "id": "pds", "seats": 2 },
+                { "id": "spd", "seats": 251 },
+                { "id": "grune", "seats": 55 },
+                { "id": "fdp", "seats": 47 },
+                { "id": "cducsu", "seats": 248 }
             ]
         },
         {
             "name": "1998 Federal Election",
             "date": "1998-09-27",
             "fractions": [
-                {
-                    "id": "pds",
-                    "seats": 36
-                },
-                {
-                    "id": "spd",
-                    "seats": 298
-                },
-                {
-                    "id": "grune",
-                    "seats": 47
-                },
-                {
-                    "id": "fdp",
-                    "seats": 43
-                },
-                {
-                    "id": "cducsu",
-                    "seats": 245
-                }
+                { "id": "pds", "seats": 36 },
+                { "id": "spd", "seats": 298 },
+                { "id": "grune", "seats": 47 },
+                { "id": "fdp", "seats": 43 },
+                { "id": "cducsu", "seats": 245 }
             ]
         },
         {
             "name": "1994 Federal Election",
             "date": "1994-10-16",
             "fractions": [
-                {
-                    "id": "pds",
-                    "seats": 30
-                },
-                {
-                    "id": "spd",
-                    "seats": 252
-                },
-                {
-                    "id": "grune",
-                    "seats": 49
-                },
-                {
-                    "id": "fdp",
-                    "seats": 47
-                },
-                {
-                    "id": "cducsu",
-                    "seats": 294
-                }
+                { "id": "pds", "seats": 30 },
+                { "id": "spd", "seats": 252 },
+                { "id": "grune", "seats": 49 },
+                { "id": "fdp", "seats": 47 },
+                { "id": "cducsu", "seats": 294 }
             ]
         }
     ]
