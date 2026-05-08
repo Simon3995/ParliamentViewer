@@ -44,15 +44,15 @@
     <div id="sidebar">
         <button id="btn_prev" onclick="prev()" class="wide">Previous</button>
         <button id="btn_next" onclick="next()" class="wide rbutton">Next</button>
-        <h1 id="title"></h1>
+        <h1><span id="title"></span><span id="title_ps"></span></h1>
         <div id="table"></div>
         <div id="left_plm"></div>
         <button title="Edit Mode" id="btn_edit" onclick="toggle_edit_mode()"><span class="icon edit"></span></button>
         <button title="Add Party" id="btn_add" disabled><span class="icon add"></span></button>
         <button title="Delete Selected" id="btn_del" onclick="delete_hlt()" disabled><span
                 class="icon delete"></span></button>
-        <button title="Move Party Left" id="btn_left" disabled><span class="icon left"></span></button>
-        <button title="Move Party Right" id="btn_right" disabled><span class="icon right"></span></button>
+        <button title="Move Party Left" id="btn_left" onclick="move_party_left()" disabled><span class="icon left"></span></button>
+        <button title="Move Party Right" id="btn_right" onclick="move_party_right()" disabled><span class="icon right"></span></button>
         <button title="Sort Table" id="btn_sort" onclick="sort_table_by_seats()" disabled><span
                 class="icon sort"></span></button>
         <hr>

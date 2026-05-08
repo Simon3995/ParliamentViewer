@@ -67,7 +67,8 @@ class Parliament {
         // distribute seats
         let seats_centers = get_seats_centers(this.seat_amt());
         seats_centers.sort((a, b) => b[2] - a[2]);
-        for (let fraction of this.fractions) {
+        const order = (ord_vis.length > 0) ? ord_vis : this.fractions;
+        for (let fraction of order) {
             while (fraction.seat_centers.length < fraction.seat_amt) {
                 fraction.seat_centers.push(seats_centers.shift());
             }

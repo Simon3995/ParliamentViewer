@@ -69,6 +69,8 @@ function toggle_edit_mode() {
 function delete_hlt() {
 	for (const id of cur_hlt) {
 		cur_plm.remove_fraction(id);
+		ord_tab = ord_tab.filter((frac) => frac.party.id != id);
+		ord_vis = ord_vis.filter((frac) => frac.party.id != id);
 	}
 
 	highlight(null);
@@ -141,6 +143,8 @@ function load_img(party, src) {
 async function load_timeline(name) {
 	const file = await fetch(`./timelines/${name}.json`);
 	const data = await file.json();
+	ord_tab = [];
+	ord_vis = [];
 	cur_tml = new Timeline(data.name);
 
 	// track image loading
@@ -172,6 +176,17 @@ async function load_timeline(name) {
 }
 
 function load_parliament(parliament) {
+	// set initial table order + visual order
+	ord_tab = [];
+	ord_vis = [];
+	for (const frac of cur_plm.fractions) {
+		ord_tab.push(frac);
+		ord_vis.push(frac);
+	}
+
+	// sort the table order by seat amount
+	ord_tab.sort((a,b) => {return b.seat_amt - a.seat_amt});
+
 	document.getElementById("title").innerHTML = parliament.description;
 	update_sidebar();
 }
@@ -210,8 +225,7 @@ function table() {
 	string += `<table>`;
 	string += `<thead>`
 	
-	let fracs = [...parliament.fractions];
-	//fracs.sort((a, b) => b.seat_amt - a.seat_amt);
+	let fracs = [...ord_tab];
 	
 	string += '<tr>';
 	string += '<th class="col_l">Party</th>';
@@ -302,8 +316,7 @@ function table_edit_mode() {
 	string += `<table class="sortable">`;
 	string += `<thead>`
 	
-	let fracs = [...parliament.fractions];
-	//fracs.sort((a, b) => b.seat_amt - a.seat_amt);
+	let fracs = [...ord_tab];
 	
 	string += '<tr>';
 	string += '<th class="col_l">Party</th>';
@@ -472,26 +485,36 @@ function make_table_sortable() {
 			dragging = true;
 		},
 		stop: function() {
-			setTimeout(() => { dragging = false; }, 100);
+			setTimeout(() => { dragging = false }, 100);
 		},
-		helper: fixWidth,        // keeps the row from collapsing while dragging
-		cursor: "move",          // changes cursor to a 'move' icon
+		helper: fixWidth,  // keeps the row from collapsing while dragging
+		cursor: "move",
 		update: function(event, ui) {
-			// you can get the new order of IDs here if needed
+			// sort ord_tab to match the new table order
+			const new_order = [...event.target.childNodes].map(x => x.id);
+			ord_tab.sort((a, b) => { return new_order.indexOf(a.party.id) - new_order.indexOf(b.party.id) });
 		}
 	}).disableSelection();
 }
 
 function sort_table_by_seats() {
-	let tbody = $(".sortable tbody");
-	let rows = tbody.children('tr').get();
-	rows.sort(function(a, b) {
-		const regexp = /(?<=value=")\d+/g; // matches the number of seats in an innerHTML string
-		return b.innerHTML.match(regexp) - a.innerHTML.match(regexp); 
-	});
-	$.each(rows, function(idx, itm) {
-        tbody.append(itm);
-    });
+	ord_tab.sort((a, b) => b.seat_amt - a.seat_amt);
+
+	update_sidebar();
+}
+
+function move_party_left() {
+	const idx = ord_vis.findIndex(elem => elem.party.id === cur_hlt[0]);
+	if (idx <= 0) return; // can't move further left
+	[ord_vis[idx - 1], ord_vis[idx]] = [ord_vis[idx], ord_vis[idx - 1]];
+	cur_plm.distribute_seats();
+}
+
+function move_party_right() {
+	const idx = ord_vis.findIndex(elem => elem.party.id === cur_hlt[0]);
+	if (idx === -1 || idx >= ord_vis.length - 1) return; // can´t move further right
+	[ord_vis[idx + 1], ord_vis[idx]] = [ord_vis[idx], ord_vis[idx + 1]];
+	cur_plm.distribute_seats();
 }
 
 $(document).on("click", "tbody tr", function(e) {
