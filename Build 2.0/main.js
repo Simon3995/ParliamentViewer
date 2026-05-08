@@ -235,7 +235,7 @@ function generate_party_imgs() {
 
 // generate a seat table based on a parliament object
 function table() {
-	let parliament = cur_plm;
+	let parliament = ori_plm;
 	let string = "";
 	let total_seats = 0;
 	let total_hlt = 0;
@@ -326,7 +326,7 @@ function table() {
 }
 
 function table_edit_mode() {
-	let parliament = cur_plm;
+	let parliament = ori_plm;
 	let string = "";
 	let total_seats = 0;
 	let total_hlt = 0;
