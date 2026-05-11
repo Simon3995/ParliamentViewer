@@ -497,6 +497,7 @@ c.addEventListener("mousedown", (e) => {
 
 document.getElementById("select-timeline").onchange = (e) => {
 	document.getElementById("sidebar").style.display = "inline-block";
+	document.getElementById("welcome").style.display = "none";
 	load_timeline(e.target.value);
 }
 
