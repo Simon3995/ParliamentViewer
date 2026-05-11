@@ -119,6 +119,7 @@ function prev() {
 	const newIdx = Math.min(idx + 1, cur_tml.parliaments.length - 1);
 	ori_plm = cur_tml.parliaments[newIdx];
 	cur_plm = ori_plm.clone();
+	edit_mode = false;
 	load_parliament(cur_plm);
 
 	btn_prev.disabled = (newIdx+1 == cur_tml.parliaments.length);
@@ -130,6 +131,7 @@ function next() {
 	const newIdx = Math.max(idx - 1, 0);
 	ori_plm = cur_tml.parliaments[newIdx];
 	cur_plm = ori_plm.clone();
+	edit_mode = false;
 	load_parliament(cur_plm);
 
 	btn_prev.disabled = (newIdx+1 == cur_tml.parliaments.length);
@@ -302,7 +304,7 @@ function table() {
 	const prev_idx = (cur_tml.parliaments.indexOf(parliament) + 1);
 	const prev_parl = cur_tml.parliaments[prev_idx];
 	if (prev_parl) {
-		const curr_party_names = new Set(parliament.fractions.map(f => f.party.name));
+		const curr_party_names = new Set(cur_plm.fractions.map(f => f.party.name));
 		left_plm = prev_parl.fractions
 			.filter(f => !curr_party_names.has(f.party.name))
 			.map(f => f.party);
