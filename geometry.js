@@ -33,7 +33,7 @@ function get_rows_from_nrows(nrows, span_angle = DEFAULT_SPAN_ANGLE) {
 }
 
 // Returns the minimal number of rows necessary to contain nseats seats.
-function get_nrows_from_nseats(nseats, span_angle = DEFAULT_SPAN_ANGLE) {
+export function get_nrows_from_nseats(nseats, span_angle = DEFAULT_SPAN_ANGLE) {
     let i = 1;
     while (sum(get_rows_from_nrows(i, span_angle)) < nseats) i++;
     return i;

@@ -160,13 +160,21 @@ function table_edit_mode() {
 
 // jQuery sortable table
 function make_table_sortable() {
+	// helper function to keep table cell widths consistent during drag
+	function fix_width(e, ui) {
+		ui.children().each(function() {
+			$(this).width($(this).width());
+		});
+		return ui;
+	}
+	
 	$(".sortable tbody").sortable({
 		distance: 10,
 		start: function() {
-			dragging = true;
+			S.dragging = true;
 		},
 		stop: function() {
-			setTimeout(() => { dragging = false }, 100);
+			setTimeout(() => { S.dragging = false }, 100);
 		},
 		helper: fix_width,  // keeps the row from collapsing while dragging
 		cursor: "move",

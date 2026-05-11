@@ -1,5 +1,6 @@
-import { get_seats_centers, get_row_thickness } from "./geometry.js";
 import { S } from "./main.js";
+import { c, ctx } from "./canvas.js";
+import { get_seats_centers, get_row_thickness, get_nrows_from_nseats } from "./geometry.js";
 
 // a class for a parliament timeline, containing a series of election results
 export class Timeline {
@@ -112,7 +113,7 @@ export class Parliament {
         outer:
         for (let fraction of this.fractions) {
             for (const seat of fraction.seat_centers) {
-                if (Math.hypot(mouse_x - seat[0], mouse_y - seat[1]) < hb) {
+                if (Math.hypot(S.mouse_x - seat[0], S.mouse_y - seat[1]) < hb) {
                     cur_hover = fraction.party.id;
                     break outer;
                 }
@@ -121,12 +122,12 @@ export class Parliament {
 
         let has_enlarged = false;
         for (let fraction of this.fractions) {
-            let opacity = (cur_hlt.includes(fraction.party.id)) ? 1 : (cur_hlt.length ? (cur_hover === fraction.party.id ? 0.6 : 0.2) : 1);
+            let opacity = (S.cur_hlt.includes(fraction.party.id)) ? 1 : (S.cur_hlt.length ? (cur_hover === fraction.party.id ? 0.6 : 0.2) : 1);
 
             for (const seat of fraction.seat_centers) {
                 
                 let f;
-                if (!has_enlarged && Math.hypot(mouse_x - seat[0], mouse_y - seat[1]) < hb && opacity == 1) {
+                if (!has_enlarged && Math.hypot(S.mouse_x - seat[0], S.mouse_y - seat[1]) < hb && opacity == 1) {
                     has_enlarged = true;
                     f = 0.12;
                     ctx.globalCompositeOperation = "source-over";
@@ -138,7 +139,7 @@ export class Parliament {
                 ctx.globalAlpha = opacity;
                 
                 ctx.drawImage(
-                    party_imgs[fraction.party.id],
+                    S.party_imgs[fraction.party.id],
                     seat[0] - f,
                     seat[1] - f,
                     2 * f, 2 * f

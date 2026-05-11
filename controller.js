@@ -2,12 +2,23 @@ import { S } from "./main.js";
 import { c, ctx, resize_canvas, transform_ctx } from "./canvas.js";
 import { load_parliament, load_timeline } from "./loading.js";
 import { table_highlight, update_table_footer, update_buttons } from "./sidebar.js";
+import { add_party, cancel_add_party, delete_hlt, move_party_left, move_party_right, reset_plm, show_add_menu, sort_table_by_seats, toggle_edit_mode } from "./editing.js";
 
 export let mouse_x = 0;		// current mouse X coord
 export let mouse_y = 0;		// current mouse Y coord
 
 const btn_prev = document.getElementById("btn_prev");
 const btn_next = document.getElementById("btn_next");
+
+document.getElementById("btn_edit").onclick = toggle_edit_mode;
+document.getElementById("btn_reset").onclick = reset_plm;
+document.getElementById("btn_add").onclick = show_add_menu;
+document.getElementById("btn_del").onclick = delete_hlt;
+document.getElementById("btn_left").onclick = move_party_left;
+document.getElementById("btn_right").onclick = move_party_right;
+document.getElementById("btn_sort").onclick = sort_table_by_seats;
+document.getElementById("add_party").onclick = add_party;
+document.getElementById("cancel_add_party").onclick = cancel_add_party;
 
 // lose focus on enter press in number input
 $(document).on("keyup", "input", function(e) {
@@ -44,7 +55,7 @@ $(document).on("change", "input", function(e) {
 $(document).on("click", "tbody tr", function(e) {
     if ($(e.target).is("input")) return;
 	
-	if (!dragging) {
+	if (!S.dragging) {
         highlight(e.currentTarget.id);
     }
 });
@@ -111,14 +122,6 @@ document.addEventListener('keydown', (e) => {
 		next();
 	}
 });
-
-// helper function to keep table cell widths consistent during drag
-function fix_width(e, ui) {
-	ui.children().each(function() {
-		$(this).width($(this).width());
-	});
-	return ui;
-}
 
 // go to previous parliament in the timeline
 export function prev() {

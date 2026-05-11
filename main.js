@@ -18,7 +18,7 @@ update();
 
 // main update loop
 function update() {
-	//requestAnimationFrame(update);
+	requestAnimationFrame(update);
 
 	ctx.save();
 	ctx.setTransform(1, 0, 0, 1, 0, 0);

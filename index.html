@@ -59,19 +59,19 @@
         <button id="btn_next" onclick="next()" class="wide rbutton" autocomplete="off">Next</button>
         <h1><span id="title"></span><span id="title_ps"></span></h1>
         <div id="table"></div>
-        <button title="Edit Mode" id="btn_edit" onclick="toggle_edit_mode()" autocomplete="off"><span class="icon edit"></span></button>
-        <button title="Reset" id="btn_reset" onclick="reset_plm()" disabled autocomplete="off"><span class="icon reset"></span></button>
-        <button title="Add Party" id="btn_add" onclick="show_add_menu()" disabled autocomplete="off"><span class="icon add" autocomplete="off"></span></button>
-        <button title="Delete Selected" id="btn_del" onclick="delete_hlt()" disabled autocomplete="off"><span class="icon delete"></span></button>
-        <button title="Move Party Left" id="btn_left" onclick="move_party_left()" disabled autocomplete="off"><span class="icon left"></span></button>
-        <button title="Move Party Right" id="btn_right" onclick="move_party_right()" disabled autocomplete="off"><span class="icon right"></span></button>
-        <button title="Sort Table" id="btn_sort" onclick="sort_table_by_seats()" disabled autocomplete="off"><span class="icon sort"></span></button>
+        <button title="Edit Mode" id="btn_edit" autocomplete="off"><span class="icon edit"></span></button>
+        <button title="Reset" id="btn_reset" disabled autocomplete="off"><span class="icon reset"></span></button>
+        <button title="Add Party" id="btn_add" disabled autocomplete="off"><span class="icon add" autocomplete="off"></span></button>
+        <button title="Delete Selected" id="btn_del" disabled autocomplete="off"><span class="icon delete"></span></button>
+        <button title="Move Party Left" id="btn_left" disabled autocomplete="off"><span class="icon left"></span></button>
+        <button title="Move Party Right" id="btn_right" disabled autocomplete="off"><span class="icon right"></span></button>
+        <button title="Sort Table" id="btn_sort" disabled autocomplete="off"><span class="icon sort"></span></button>
         <div id="add_party" style="display: none">
             <p>Short Name:<input id="add_shortname" type="text" autocomplete="off"></p>
             <p>Full Name:<input id="add_fullname" type="text" autocomplete="off"></p>
             <p>Color: <input id="add_color" type="color" autocomplete="off"></p>
-            <button onclick="add_party()">Add</button>
-            <button onclick="cancel_add_party()">Cancel</button>
+            <button id="add_party">Add</button>
+            <button id="cancel_add_party">Cancel</button>
         </div>
         <div id="left_plm"></div>
         <hr>
