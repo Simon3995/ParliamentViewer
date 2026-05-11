@@ -24,162 +24,81 @@
             "name": "2024 Senate Elections",
             "date": "2024-11-05",
             "fractions": [
-                {
-                    "id": "dem",
-                    "seats": 45
-                },
-                {
-                    "id": "ind",
-                    "seats": 2
-                },
-                {
-                    "id": "rep",
-                    "seats": 53
-                }
+                { "id": "dem", "seats": 45 },
+                { "id": "ind", "seats": 2 },
+                { "id": "rep", "seats": 53 }
             ]
         },
         {
             "name": "2022 Senate Elections",
             "date": "2022-11-08",
             "fractions": [
-                {
-                    "id": "dem",
-                    "seats": 49
-                },
-                {
-                    "id": "ind",
-                    "seats": 2
-                },
-                {
-                    "id": "rep",
-                    "seats": 49
-                }
+                { "id": "dem", "seats": 49 },
+                { "id": "ind", "seats": 2 },
+                { "id": "rep", "seats": 49 }
             ]
         },
         {
             "name": "2020 Senate Elections",
             "date": "2020-11-03",
             "fractions": [
-                {
-                    "id": "dem",
-                    "seats": 48
-                },
-                {
-                    "id": "ind",
-                    "seats": 2
-                },
-                {
-                    "id": "rep",
-                    "seats": 50
-                }
+                { "id": "dem", "seats": 48 },
+                { "id": "ind", "seats": 2 },
+                { "id": "rep", "seats": 50 }
             ]
         },
         {
             "name": "2018 Senate Elections",
             "date": "2018-11-06",
             "fractions": [
-                {
-                    "id": "dem",
-                    "seats": 45
-                },
-                {
-                    "id": "ind",
-                    "seats": 2
-                },
-                {
-                    "id": "rep",
-                    "seats": 53
-                }
+                { "id": "dem", "seats": 45 },
+                { "id": "ind", "seats": 2 },
+                { "id": "rep", "seats": 53 }
             ]
         },
         {
             "name": "2016 Senate Elections",
             "date": "2016-11-08",
             "fractions": [
-                {
-                    "id": "dem",
-                    "seats": 46
-                },
-                {
-                    "id": "ind",
-                    "seats": 2
-                },
-                {
-                    "id": "rep",
-                    "seats": 52
-                }
+                { "id": "dem", "seats": 46 },
+                { "id": "ind", "seats": 2 },
+                { "id": "rep", "seats": 52 }
             ]
         },
         {
             "name": "2014 Senate Elections",
             "date": "2014-11-04",
             "fractions": [
-                {
-                    "id": "dem",
-                    "seats": 44
-                },
-                {
-                    "id": "ind",
-                    "seats": 2
-                },
-                {
-                    "id": "rep",
-                    "seats": 54
-                }
+                { "id": "dem", "seats": 44 },
+                { "id": "ind", "seats": 2 },
+                { "id": "rep", "seats": 54 }
             ]
         },
         {
             "name": "2012 Senate Elections",
             "date": "2012-11-06",
             "fractions": [
-                {
-                    "id": "dem",
-                    "seats": 53
-                },
-                {
-                    "id": "ind",
-                    "seats": 2
-                },
-                {
-                    "id": "rep",
-                    "seats": 45
-                }
+                { "id": "dem", "seats": 53 },
+                { "id": "ind", "seats": 2 },
+                { "id": "rep", "seats": 45 }
             ]
         },
         {
             "name": "2010 Senate Elections",
             "date": "2010-11-02",
             "fractions": [
-                {
-                    "id": "dem",
-                    "seats": 51
-                },
-                {
-                    "id": "ind",
-                    "seats": 2
-                },
-                {
-                    "id": "rep",
-                    "seats": 47
-                }
+                { "id": "dem", "seats": 51 },
+                { "id": "ind", "seats": 2 },
+                { "id": "rep", "seats": 47 }
             ]
         },
         {
             "name": "2008 Senate Elections",
             "date": "2008-11-04",
             "fractions": [
-                {
-                    "id": "dem",
-                    "seats": 57
-                },
-                {
-                    "id": "ind",
-                    "seats": 2
-                },
-                {
-                    "id": "rep",
-                    "seats": 41
-                }
+                { "id": "dem", "seats": 57 },
+                { "id": "ind", "seats": 2 },
+                { "id": "rep", "seats": 41 }
             ]
         }
     ]
