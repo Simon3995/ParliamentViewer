@@ -103,70 +103,22 @@
             "name": "2026 General Election",
             "date": "2026-03-24",
             "fractions": [
-                {
-                    "id": "ø",
-                    "seats": 11
-                },
-                {
-                    "id": "ia",
-                    "seats": 1
-                },
-                {
-                    "id": "sf",
-                    "seats": 20
-                },
-                {
-                    "id": "å",
-                    "seats": 5
-                },
-                {
-                    "id": "a",
-                    "seats": 38
-                },
-                {
-                    "id": "jf",
-                    "seats": 1
-                },
-                {
-                    "id": "rv",
-                    "seats": 10
-                },
-                {
-                    "id": "m",
-                    "seats": 14
-                },
-                {
-                    "id": "n",
-                    "seats": 1
-                },
-                {
-                    "id": "v",
-                    "seats": 18
-                },
-                {
-                    "id": "b",
-                    "seats": 1
-                },
-                {
-                    "id": "c",
-                    "seats": 13
-                },
-                {
-                    "id": "la",
-                    "seats": 16
-                },
-                {
-                    "id": "æ",
-                    "seats": 10
-                },
-                {
-                    "id": "df",
-                    "seats": 16
-                },
-                {
-                    "id": "h",
-                    "seats": 4
-                }
+                { "id": "ø", "seats": 11 },
+                { "id": "ia", "seats": 1 },
+                { "id": "sf", "seats": 20 },
+                { "id": "å", "seats": 5 },
+                { "id": "a", "seats": 38 },
+                { "id": "jf", "seats": 1 },
+                { "id": "rv", "seats": 10 },
+                { "id": "m", "seats": 14 },
+                { "id": "n", "seats": 1 },
+                { "id": "v", "seats": 18 },
+                { "id": "b", "seats": 1 },
+                { "id": "c", "seats": 13 },
+                { "id": "la", "seats": 16 },
+                { "id": "æ", "seats": 10 },
+                { "id": "df", "seats": 16 },
+                { "id": "h", "seats": 4 }
             ]
         }
     ]
