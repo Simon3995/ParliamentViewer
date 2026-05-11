@@ -1,5 +1,8 @@
+import { get_seats_centers, get_row_thickness } from "./geometry.js";
+import { S } from "./main.js";
+
 // a class for a parliament timeline, containing a series of election results
-class Timeline {
+export class Timeline {
     constructor (name = null) {
         this.parliaments = [];
         this.parties = {};
@@ -13,7 +16,7 @@ class Timeline {
 }
 
 // a class for one election result
-class Parliament {
+export class Parliament {
     constructor(fractions = [], description = "Parliament", date = new Date()) {
         this.fractions = fractions;
         this.description = description;
@@ -73,7 +76,7 @@ class Parliament {
         // distribute seats
         let seats_centers = get_seats_centers(this.seat_amt());
         seats_centers.sort((a, b) => b[2] - a[2]);
-        const order = (ord_vis.length > 0) ? ord_vis : this.fractions;
+        const order = (S.ord_vis.length > 0) ? S.ord_vis : this.fractions;
         for (let fraction of order) {
             while (fraction.seat_centers.length < fraction.seat_amt) {
                 fraction.seat_centers.push(seats_centers.shift());
@@ -160,7 +163,7 @@ class Parliament {
 }
 
 // a class for a party fraction in one election
-class Fraction {
+export class Fraction {
     constructor(party, seat_amt) {
         this.party = party;
         this.seat_amt = seat_amt;
@@ -176,7 +179,7 @@ class Fraction {
 }
 
 // a class for a political party, independent of year or election
-class Party {
+export class Party {
     constructor(name, fullname, id, color = "#000000", image = null) {
         this.name = name;
         this.fullname = fullname;

@@ -1,13 +1,15 @@
+import { S } from "./main.js";
+
 // generate a seat table for the current parliament object
 function table() {
-	let parliament = ori_plm;
+	let parliament = S.ori_plm;
 	let string = "";
 	let total_seats = 0;
 	let total_hlt = 0;
 	string += `<table>`;
 	string += `<thead>`
 	
-	let fracs = [...ord_tab];
+	let fracs = [...S.ord_tab];
 	
 	string += '<tr>';
 	string += '<th class="col_l">Party</th>';
@@ -24,8 +26,8 @@ function table() {
 
 		// find difference
 		let diff = 0;
-		const prevIdx = (cur_tml.parliaments.indexOf(parliament) + 1);
-		const prevParl = cur_tml.parliaments[prevIdx];
+		const prevIdx = (S.cur_tml.parliaments.indexOf(parliament) + 1);
+		const prevParl = S.cur_tml.parliaments[prevIdx];
 		if (prevParl) {
 			const prevFrac = prevParl.fractions.find(f => f.party.name === frac.party.name);
 			diff = prevFrac ? frac.seat_amt - prevFrac.seat_amt : frac.seat_amt;
@@ -50,7 +52,7 @@ function table() {
 		string += `<td>${frac.seat_amt} (${diff})</td>`;
 
 		total_seats += frac.seat_amt;
-		if (cur_hlt.includes(frac.party.id)) total_hlt += frac.seat_amt;
+		if (S.cur_hlt.includes(frac.party.id)) total_hlt += frac.seat_amt;
 	}
 
 	string += `</tbody>`;
@@ -62,10 +64,10 @@ function table() {
 
 	// find parties that left parliament
 	let left_plm = [];
-	const prev_idx = (cur_tml.parliaments.indexOf(parliament) + 1);
-	const prev_parl = cur_tml.parliaments[prev_idx];
+	const prev_idx = (S.cur_tml.parliaments.indexOf(parliament) + 1);
+	const prev_parl = S.cur_tml.parliaments[prev_idx];
 	if (prev_parl) {
-		const curr_party_names = new Set(cur_plm.fractions.map(f => f.party.name));
+		const curr_party_names = new Set(S.cur_plm.fractions.map(f => f.party.name));
 		left_plm = prev_parl.fractions
 			.filter(f => !curr_party_names.has(f.party.name))
 			.map(f => f.party);
@@ -92,14 +94,14 @@ function table() {
 
 // generate an editable seat table for the current parliament object
 function table_edit_mode() {
-	let parliament = ori_plm;
+	let parliament = S.ori_plm;
 	let string = "";
 	let total_seats = 0;
 	let total_hlt = 0;
 	string += `<table class="sortable">`;
 	string += `<thead>`
 	
-	let fracs = [...ord_tab];
+	let fracs = [...S.ord_tab];
 	
 	string += '<tr>';
 	string += '<th class="col_l">Party</th>';
@@ -116,8 +118,8 @@ function table_edit_mode() {
 
 		// find difference
 		let diff = 0;
-		const prevIdx = (cur_tml.parliaments.indexOf(parliament) + 1);
-		const prevParl = cur_tml.parliaments[prevIdx];
+		const prevIdx = (S.cur_tml.parliaments.indexOf(parliament) + 1);
+		const prevParl = S.cur_tml.parliaments[prevIdx];
 		if (prevParl) {
 			const prevFrac = prevParl.fractions.find(f => f.party.name === frac.party.name);
 			diff = prevFrac ? frac.seat_amt - prevFrac.seat_amt : frac.seat_amt;
@@ -142,7 +144,7 @@ function table_edit_mode() {
 		string += `<td><input name="${frac.party.id}" type="number" value="${frac.seat_amt}" min="0" max="10000"></td>`;
 
 		total_seats += frac.seat_amt;
-		if (cur_hlt.includes(frac.party.id)) total_hlt += frac.seat_amt;
+		if (S.cur_hlt.includes(frac.party.id)) total_hlt += frac.seat_amt;
 	}
 
 	string += `</tbody>`;
@@ -156,13 +158,33 @@ function table_edit_mode() {
 	make_table_sortable();
 }
 
+// jQuery sortable table
+function make_table_sortable() {
+	$(".sortable tbody").sortable({
+		distance: 10,
+		start: function() {
+			dragging = true;
+		},
+		stop: function() {
+			setTimeout(() => { dragging = false }, 100);
+		},
+		helper: fix_width,  // keeps the row from collapsing while dragging
+		cursor: "move",
+		update: function(event, ui) {
+			// sort S.ord_tab to match the new table order
+			const new_order = [...event.target.childNodes].map(x => x.id);
+			S.ord_tab.sort((a, b) => { return new_order.indexOf(a.party.id) - new_order.indexOf(b.party.id) });
+		}
+	}).disableSelection();
+}
+
 // update table footer with seat totals and minority/majority stats
-function update_table_footer() {
+export function update_table_footer() {
 	const footer = document.getElementById("footer");
-	const total_seats = cur_plm.seat_amt();
+	const total_seats = S.cur_plm.seat_amt();
 	let total_hlt = 0;
-	for (const frac of cur_plm.fractions)
-		if (cur_hlt.includes(frac.party.id))
+	for (const frac of S.cur_plm.fractions)
+		if (S.cur_hlt.includes(frac.party.id))
 			total_hlt += frac.seat_amt;
 	let string = "";
 	
@@ -186,12 +208,12 @@ function update_table_footer() {
 }
 
 // set the correct rows of the table as highlighted
-function table_highlight() {
+export function table_highlight() {
 	document.querySelectorAll("tr.highlighted").forEach(row => {
 		row.classList.remove("highlighted");
 	});
 
-	for (const pid of cur_hlt) {
+	for (const pid of S.cur_hlt) {
 		const hl_row = document.getElementById(pid);
 		if (hl_row && hl_row.tagName === 'TR') {
 			hl_row.classList.add("highlighted");
@@ -200,7 +222,7 @@ function table_highlight() {
 }
 
 // update all buttons enabled/disabled based on context
-function update_buttons() {
+export function update_buttons() {
 	const btn_edit = document.getElementById("btn_edit");
 	const btn_add = document.getElementById("btn_add");
 	const btn_del = document.getElementById("btn_del");
@@ -208,13 +230,13 @@ function update_buttons() {
 	const btn_right = document.getElementById("btn_right");
 	const btn_sort = document.getElementById("btn_sort");
 
-	if (edit_mode) {
+	if (S.edit_mode) {
 		btn_edit.style.backgroundColor = "#488cae";
 		btn_add.disabled = false;
 		btn_sort.disabled = false;
-		btn_left.disabled = (cur_hlt.length != 1);
-		btn_right.disabled = (cur_hlt.length != 1);
-		btn_del.disabled = (cur_hlt.length == 0);
+		btn_left.disabled = (S.cur_hlt.length != 1);
+		btn_right.disabled = (S.cur_hlt.length != 1);
+		btn_del.disabled = (S.cur_hlt.length == 0);
 	} else {
 		btn_edit.style.backgroundColor = "#483d8b";
 		btn_add.disabled = true;
@@ -226,8 +248,8 @@ function update_buttons() {
 }
 
 // update all sidebar info
-function update_sidebar() {
-	if (edit_mode) {
+export function update_sidebar() {
+	if (S.edit_mode) {
 		table_edit_mode();
 	} else {
 		table();

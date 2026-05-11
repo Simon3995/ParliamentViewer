@@ -9,7 +9,7 @@ function sum(array) {
 }
 
 // Returns the thickness of a row in the same unit as the coordinates.
-function get_row_thickness(nrows) {
+export function get_row_thickness(nrows) {
     return 1 / (4*nrows - 2);
 }
 
@@ -61,7 +61,7 @@ function get_nrows_from_nseats(nseats, span_angle = DEFAULT_SPAN_ANGLE) {
     It defaults to 180° to make a true hemicycle.
     Values above 180° are not supported.
 */
-function get_seats_centers(nseats, min_nrows = 0, span_angle = DEFAULT_SPAN_ANGLE, filling_strategy = "DEFAULT") {
+export function get_seats_centers(nseats, min_nrows = 0, span_angle = DEFAULT_SPAN_ANGLE, filling_strategy = "DEFAULT") {
     const nrows = Math.max(min_nrows, get_nrows_from_nseats(nseats, span_angle));
     // thickness of a row in the same unit as the coordinates
     const row_thicc = get_row_thickness(nrows);

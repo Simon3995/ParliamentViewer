@@ -1,15 +1,20 @@
+import { S } from "./main.js";
+import { Party, Fraction, Parliament, Timeline } from "./classes.js";
+import { update_sidebar } from "./sidebar.js";
+import { highlight, next, prev } from "./controller.js";
+
 // load a new parliament and update sidebar info
-function load_parliament(parliament) {
+export function load_parliament(parliament) {
 	// set initial table order + visual order
-	ord_tab = [];
-	ord_vis = [];
-	for (const frac of cur_plm.fractions) {
-		ord_tab.push(frac);
-		ord_vis.push(frac);
+	S.ord_tab = [];
+	S.ord_vis = [];
+	for (const frac of S.cur_plm.fractions) {
+		S.ord_tab.push(frac);
+		S.ord_vis.push(frac);
 	}
 
 	// sort the table order by seat amount
-	ord_tab.sort((a,b) => {return b.seat_amt - a.seat_amt});
+	S.ord_tab.sort((a,b) => {return b.seat_amt - a.seat_amt});
 
 	document.getElementById("title").innerHTML = parliament.description;
 	document.getElementById("title_ps").innerHTML = "";
@@ -17,12 +22,12 @@ function load_parliament(parliament) {
 }
 
 // load a new timeline
-async function load_timeline(name) {
+export async function load_timeline(name) {
 	const file = await fetch(`./timelines/${name}.json`);
 	const data = await file.json();
-	ord_tab = [];
-	ord_vis = [];
-	cur_tml = new Timeline(data.name);
+	S.ord_tab = [];
+	S.ord_vis = [];
+	S.cur_tml = new Timeline(data.name);
 
 	// track image loading
 	const image_promises = [];
@@ -32,26 +37,24 @@ async function load_timeline(name) {
 		const pdata = data.parties[party_id];
 		const party = new Party(pdata.shortname, pdata.fullname, party_id, pdata.color, new Image());
 		image_promises.push(load_img(party, pdata.image));
-		cur_tml.parties[party_id] = party;
+		S.cur_tml.parties[party_id] = party;
 	}
 
 	await Promise.all(image_promises);
 
 	// construct list of parliaments
-	cur_tml.parliaments = data.parliaments.map(par => {
+	S.cur_tml.parliaments = data.parliaments.map(par => {
 		return new Parliament(par.fractions.map(frac => {
-			return new Fraction(cur_tml.parties[frac.id], frac.seats);
-			//return "bingus";
+			return new Fraction(S.cur_tml.parties[frac.id], frac.seats);
 		}), par.name, new Date(par.date));
 	});
 	
-	ori_plm = cur_tml.parliaments[0];
-	cur_plm = ori_plm.clone();
-	load_parliament(cur_plm);
+	S.ori_plm = S.cur_tml.parliaments[0];
+	S.cur_plm = S.ori_plm.clone();
+	load_parliament(S.cur_plm);
 	generate_party_imgs();
 	highlight(null);
 	next();
-	update();
 }
 
 // return a promise for loading an image
@@ -76,10 +79,10 @@ function load_img(party, src) {
 
 // generate circular seat icons for each party in the current timeline
 function generate_party_imgs() {
-	party_imgs = {};
+	S.party_imgs = {};
 	const s = 200;
-	for (const name in cur_tml.parties) {
-		const party = cur_tml.parties[name];
+	for (const name in S.cur_tml.parties) {
+		const party = S.cur_tml.parties[name];
 		const sprite = document.createElement("canvas");
 		const sctx = sprite.getContext("2d");
 		sprite.width = sprite.height = s;
@@ -96,6 +99,6 @@ function generate_party_imgs() {
 			sctx.font = `bold ${0.56*s}px Atkinson`;
 			sctx.fillText(party.name, s/2, 0.54*s, 0.85*s);
 		}
-		party_imgs[party.id] = sprite;
+		S.party_imgs[party.id] = sprite;
 	}
 }

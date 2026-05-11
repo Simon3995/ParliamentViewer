@@ -1,3 +1,11 @@
+import { S } from "./main.js";
+import { c, ctx, resize_canvas, transform_ctx } from "./canvas.js";
+import { load_parliament, load_timeline } from "./loading.js";
+import { table_highlight, update_table_footer, update_buttons } from "./sidebar.js";
+
+export let mouse_x = 0;		// current mouse X coord
+export let mouse_y = 0;		// current mouse Y coord
+
 const btn_prev = document.getElementById("btn_prev");
 const btn_next = document.getElementById("btn_next");
 
@@ -16,14 +24,14 @@ $(document).on("change", "input", function(e) {
 		if (value < 0) e.target.value = 0;
 
 		// find new total seat amount, possible surplus
-		cur_plm.set_party_seats(e.target.name, e.target.value);
-		let new_amt = cur_plm.seat_amt();
+		S.cur_plm.set_party_seats(e.target.name, e.target.value);
+		let new_amt = S.cur_plm.seat_amt();
 		const surplus = Math.max(0, new_amt - 10000);
 
 		// subtract surplus if there is one
 		if (surplus > 0) {
 			value -= surplus;
-			cur_plm.set_party_seats(e.target.name, value);
+			S.cur_plm.set_party_seats(e.target.name, value);
 		}
 
         // apply changes
@@ -50,11 +58,11 @@ document.getElementById("select-timeline").onchange = (e) => {
 
 // if party seat is clicked, highlight that party
 c.addEventListener("mousedown", (e) => {
-	if (!cur_tml) return;
-	for (const fraction of cur_plm.fractions) {
+	if (!S.cur_tml) return;
+	for (const fraction of S.cur_plm.fractions) {
 		for (const seat of fraction.seat_centers) {
 			const dist = Math.hypot(seat[0] - mouse_x, seat[1] - mouse_y);
-			if (dist <= cur_plm.get_seat_hitbox_radius()) {
+			if (dist <= S.cur_plm.get_seat_hitbox_radius()) {
 				highlight(fraction.party.id);
 				return;
 			}
@@ -104,28 +112,8 @@ document.addEventListener('keydown', (e) => {
 	}
 });
 
-// jQuery sortable table
-function make_table_sortable() {
-	$(".sortable tbody").sortable({
-		distance: 10,
-		start: function() {
-			dragging = true;
-		},
-		stop: function() {
-			setTimeout(() => { dragging = false }, 100);
-		},
-		helper: fixWidth,  // keeps the row from collapsing while dragging
-		cursor: "move",
-		update: function(event, ui) {
-			// sort ord_tab to match the new table order
-			const new_order = [...event.target.childNodes].map(x => x.id);
-			ord_tab.sort((a, b) => { return new_order.indexOf(a.party.id) - new_order.indexOf(b.party.id) });
-		}
-	}).disableSelection();
-}
-
 // helper function to keep table cell widths consistent during drag
-function fixWidth(e, ui) {
+function fix_width(e, ui) {
 	ui.children().each(function() {
 		$(this).width($(this).width());
 	});
@@ -133,42 +121,42 @@ function fixWidth(e, ui) {
 }
 
 // go to previous parliament in the timeline
-function prev() {
-	const idx = cur_tml.parliaments.indexOf(ori_plm);
-	const newIdx = Math.min(idx + 1, cur_tml.parliaments.length - 1);
-	ori_plm = cur_tml.parliaments[newIdx];
-	cur_plm = ori_plm.clone();
-	edit_mode = false;
-	load_parliament(cur_plm);
+export function prev() {
+	const idx = S.cur_tml.parliaments.indexOf(S.ori_plm);
+	const newIdx = Math.min(idx + 1, S.cur_tml.parliaments.length - 1);
+	S.ori_plm = S.cur_tml.parliaments[newIdx];
+	S.cur_plm = S.ori_plm.clone();
+	S.edit_mode = false;
+	load_parliament(S.cur_plm);
 
-	btn_prev.disabled = (newIdx+1 == cur_tml.parliaments.length);
+	btn_prev.disabled = (newIdx+1 == S.cur_tml.parliaments.length);
 	btn_next.disabled = (newIdx == 0);
 }
 
 // go to next parliament in the timeline
-function next() {
-	const idx = cur_tml.parliaments.indexOf(ori_plm);
+export function next() {
+	const idx = S.cur_tml.parliaments.indexOf(S.ori_plm);
 	const newIdx = Math.max(idx - 1, 0);
-	ori_plm = cur_tml.parliaments[newIdx];
-	cur_plm = ori_plm.clone();
-	edit_mode = false;
-	load_parliament(cur_plm);
+	S.ori_plm = S.cur_tml.parliaments[newIdx];
+	S.cur_plm = S.ori_plm.clone();
+	S.edit_mode = false;
+	load_parliament(S.cur_plm);
 
-	btn_prev.disabled = (newIdx+1 == cur_tml.parliaments.length);
+	btn_prev.disabled = (newIdx+1 == S.cur_tml.parliaments.length);
 	btn_next.disabled = (newIdx == 0);
 }
 
 // add or remove party from the list of highlighted
-function highlight(id) {
+export function highlight(id) {
 	if (id == null) {
 		// remove all highlighted
-        cur_hlt = [];
-	} else if (cur_hlt.includes(id)) {
+        S.cur_hlt = [];
+	} else if (S.cur_hlt.includes(id)) {
         // remove this party from highlighted
-		cur_hlt.splice(cur_hlt.indexOf(id), 1);
+		S.cur_hlt.splice(S.cur_hlt.indexOf(id), 1);
 	} else {
         // add this party to highlighted
-		cur_hlt.push(id);
+		S.cur_hlt.push(id);
 	}
 
 	table_highlight();
