@@ -449,6 +449,8 @@ function update_buttons() {
 
 // add keyboard controls
 document.addEventListener('keydown', (e) => {
+	if (e.target.closest('input[type="number"]')) return;
+	
 	if (e.key === 'ArrowLeft') {
 		e.preventDefault();
 		prev();
