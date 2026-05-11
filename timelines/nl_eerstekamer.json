@@ -418,410 +418,134 @@
             "name": "Current Situation",
             "date": "",
             "fractions": [
-                {
-                    "id": "sp",
-                    "seats": 3
-                },
-                {
-                    "id": "fvh",
-                    "seats": 1
-                },
-                {
-                    "id": "pvdd",
-                    "seats": 2
-                },
-                {
-                    "id": "glpvda",
-                    "seats": 14
-                },
-                {
-                    "id": "volt",
-                    "seats": 2
-                },
-                {
-                    "id": "d66",
-                    "seats": 7
-                },
-                {
-                    "id": "cu",
-                    "seats": 3
-                },
-                {
-                    "id": "opnl",
-                    "seats": 1
-                },
-                {
-                    "id": "50plus",
-                    "seats": 1
-                },
-                {
-                    "id": "cda",
-                    "seats": 6
-                },
-                {
-                    "id": "fvds",
-                    "seats": 1
-                },
-                {
-                    "id": "vvd",
-                    "seats": 9
-                },
-                {
-                    "id": "fw",
-                    "seats": 1
-                },
-                {
-                    "id": "bbb",
-                    "seats": 12
-                },
-                {
-                    "id": "fb",
-                    "seats": 1
-                },
-                {
-                    "id": "ja21",
-                    "seats": 2
-                },
-                {
-                    "id": "sgp",
-                    "seats": 2
-                },
-                {
-                    "id": "pvv",
-                    "seats": 4
-                },
-                {
-                    "id": "fvd",
-                    "seats": 3
-                }
+                { "id": "sp", "seats": 3 },
+                { "id": "fvh", "seats": 1 },
+                { "id": "pvdd", "seats": 2 },
+                { "id": "glpvda", "seats": 14 },
+                { "id": "volt", "seats": 2 },
+                { "id": "d66", "seats": 7 },
+                { "id": "cu", "seats": 3 },
+                { "id": "opnl", "seats": 1 },
+                { "id": "50plus", "seats": 1 },
+                { "id": "cda", "seats": 6 },
+                { "id": "fvds", "seats": 1 },
+                { "id": "vvd", "seats": 9 },
+                { "id": "fw", "seats": 1 },
+                { "id": "bbb", "seats": 12 },
+                { "id": "fb", "seats": 1 },
+                { "id": "ja21", "seats": 2 },
+                { "id": "sgp", "seats": 2 },
+                { "id": "pvv", "seats": 4 },
+                { "id": "fvd", "seats": 3 }
             ]
         },
         {
             "name": "Eerste Kamerverkiezingen 2023",
             "date": "2023-06-01",
             "fractions": [
-                {
-                    "id": "sp",
-                    "seats": 3
-                },
-                {
-                    "id": "pvdd",
-                    "seats": 3
-                },
-                {
-                    "id": "gl",
-                    "seats": 7
-                },
-                {
-                    "id": "pvda",
-                    "seats": 7
-                },
-                {
-                    "id": "volt",
-                    "seats": 2
-                },
-                {
-                    "id": "d66",
-                    "seats": 5
-                },
-                {
-                    "id": "cu",
-                    "seats": 3
-                },
-                {
-                    "id": "opnl",
-                    "seats": 1
-                },
-                {
-                    "id": "50plus",
-                    "seats": 1
-                },
-                {
-                    "id": "cda",
-                    "seats": 6
-                },
-                {
-                    "id": "vvd",
-                    "seats": 10
-                },
-                {
-                    "id": "bbb",
-                    "seats": 16
-                },
-                {
-                    "id": "ja21",
-                    "seats": 3
-                },
-                {
-                    "id": "sgp",
-                    "seats": 2
-                },
-                {
-                    "id": "pvv",
-                    "seats": 4
-                },
-                {
-                    "id": "fvd",
-                    "seats": 2
-                }
+                { "id": "sp", "seats": 3 },
+                { "id": "pvdd", "seats": 3 },
+                { "id": "gl", "seats": 7 },
+                { "id": "pvda", "seats": 7 },
+                { "id": "volt", "seats": 2 },
+                { "id": "d66", "seats": 5 },
+                { "id": "cu", "seats": 3 },
+                { "id": "opnl", "seats": 1 },
+                { "id": "50plus", "seats": 1 },
+                { "id": "cda", "seats": 6 },
+                { "id": "vvd", "seats": 10 },
+                { "id": "bbb", "seats": 16 },
+                { "id": "ja21", "seats": 3 },
+                { "id": "sgp", "seats": 2 },
+                { "id": "pvv", "seats": 4 },
+                { "id": "fvd", "seats": 2 }
             ]
         },
         {
             "name": "Eerste Kamerverkiezingen 2019",
             "date": "2019-05-31",
             "fractions": [
-                {
-                    "id": "sp",
-                    "seats": 4
-                },
-                {
-                    "id": "pvdd",
-                    "seats": 3
-                },
-                {
-                    "id": "gl",
-                    "seats": 8
-                },
-                {
-                    "id": "pvda",
-                    "seats": 6
-                },
-                {
-                    "id": "d66",
-                    "seats": 7
-                },
-                {
-                    "id": "cu",
-                    "seats": 4
-                },
-                {
-                    "id": "osf",
-                    "seats": 1
-                },
-                {
-                    "id": "50plus",
-                    "seats": 2
-                },
-                {
-                    "id": "cda",
-                    "seats": 9
-                },
-                {
-                    "id": "vvd",
-                    "seats": 12
-                },
-                {
-                    "id": "sgp",
-                    "seats": 2
-                },
-                {
-                    "id": "pvv",
-                    "seats": 5
-                },
-                {
-                    "id": "fvd",
-                    "seats": 12
-                }
+                { "id": "sp", "seats": 4 },
+                { "id": "pvdd", "seats": 3 },
+                { "id": "gl", "seats": 8 },
+                { "id": "pvda", "seats": 6 },
+                { "id": "d66", "seats": 7 },
+                { "id": "cu", "seats": 4 },
+                { "id": "osf", "seats": 1 },
+                { "id": "50plus", "seats": 2 },
+                { "id": "cda", "seats": 9 },
+                { "id": "vvd", "seats": 12 },
+                { "id": "sgp", "seats": 2 },
+                { "id": "pvv", "seats": 5 },
+                { "id": "fvd", "seats": 12 }
             ]
         },
         {
             "name": "Eerste Kamerverkiezingen 2015",
             "date": "2015-05-28",
             "fractions": [
-                {
-                    "id": "sp",
-                    "seats": 9
-                },
-                {
-                    "id": "pvdd",
-                    "seats": 2
-                },
-                {
-                    "id": "gl",
-                    "seats": 4
-                },
-                {
-                    "id": "pvda",
-                    "seats": 8
-                },
-                {
-                    "id": "d66",
-                    "seats": 10
-                },
-                {
-                    "id": "cu",
-                    "seats": 3
-                },
-                {
-                    "id": "osf",
-                    "seats": 1
-                },
-                {
-                    "id": "50plus",
-                    "seats": 2
-                },
-                {
-                    "id": "cda",
-                    "seats": 12
-                },
-                {
-                    "id": "vvd",
-                    "seats": 13
-                },
-                {
-                    "id": "sgp",
-                    "seats": 2
-                },
-                {
-                    "id": "pvv",
-                    "seats": 9
-                }
+                { "id": "sp", "seats": 9 },
+                { "id": "pvdd", "seats": 2 },
+                { "id": "gl", "seats": 4 },
+                { "id": "pvda", "seats": 8 },
+                { "id": "d66", "seats": 10 },
+                { "id": "cu", "seats": 3 },
+                { "id": "osf", "seats": 1 },
+                { "id": "50plus", "seats": 2 },
+                { "id": "cda", "seats": 12 },
+                { "id": "vvd", "seats": 13 },
+                { "id": "sgp", "seats": 2 },
+                { "id": "pvv", "seats": 9 }
             ]
         },
         {
             "name": "Eerste Kamerverkiezingen 2011",
             "date": "2011-05-25",
             "fractions": [
-                {
-                    "id": "sp",
-                    "seats": 8
-                },
-                {
-                    "id": "pvdd",
-                    "seats": 1
-                },
-                {
-                    "id": "gl",
-                    "seats": 5
-                },
-                {
-                    "id": "pvda",
-                    "seats": 14
-                },
-                {
-                    "id": "d66",
-                    "seats": 5
-                },
-                {
-                    "id": "cu",
-                    "seats": 2
-                },
-                {
-                    "id": "osf",
-                    "seats": 1
-                },
-                {
-                    "id": "50plus",
-                    "seats": 1
-                },
-                {
-                    "id": "cda",
-                    "seats": 11
-                },
-                {
-                    "id": "vvd",
-                    "seats": 16
-                },
-                {
-                    "id": "sgp",
-                    "seats": 1
-                },
-                {
-                    "id": "pvv",
-                    "seats": 10
-                }
+                { "id": "sp", "seats": 8 },
+                { "id": "pvdd", "seats": 1 },
+                { "id": "gl", "seats": 5 },
+                { "id": "pvda", "seats": 14 },
+                { "id": "d66", "seats": 5 },
+                { "id": "cu", "seats": 2 },
+                { "id": "osf", "seats": 1 },
+                { "id": "50plus", "seats": 1 },
+                { "id": "cda", "seats": 11 },
+                { "id": "vvd", "seats": 16 },
+                { "id": "sgp", "seats": 1 },
+                { "id": "pvv", "seats": 10 }
             ]
         },
         {
             "name": "Eerste Kamerverkiezingen 2007",
             "date": "2007-05-29",
             "fractions": [
-                {
-                    "id": "sp",
-                    "seats": 12
-                },
-                {
-                    "id": "pvdd",
-                    "seats": 1
-                },
-                {
-                    "id": "gl",
-                    "seats": 4
-                },
-                {
-                    "id": "pvda",
-                    "seats": 14
-                },
-                {
-                    "id": "d66",
-                    "seats": 2
-                },
-                {
-                    "id": "cu",
-                    "seats": 4
-                },
-                {
-                    "id": "osf",
-                    "seats": 1
-                },
-                {
-                    "id": "cda",
-                    "seats": 21
-                },
-                {
-                    "id": "vvd",
-                    "seats": 14
-                },
-                {
-                    "id": "sgp",
-                    "seats": 2
-                }
+                { "id": "sp", "seats": 12 },
+                { "id": "pvdd", "seats": 1 },
+                { "id": "gl", "seats": 4 },
+                { "id": "pvda", "seats": 14 },
+                { "id": "d66", "seats": 2 },
+                { "id": "cu", "seats": 4 },
+                { "id": "osf", "seats": 1 },
+                { "id": "cda", "seats": 21 },
+                { "id": "vvd", "seats": 14 },
+                { "id": "sgp", "seats": 2 }
             ]
         },
         {
             "name": "Eerste Kamerverkiezingen 2003",
             "date": "2003-05-26",
             "fractions": [
-                {
-                    "id": "sp",
-                    "seats": 4
-                },
-                {
-                    "id": "gl",
-                    "seats": 5
-                },
-                {
-                    "id": "pvda",
-                    "seats": 19
-                },
-                {
-                    "id": "d66",
-                    "seats": 3
-                },
-                {
-                    "id": "cu",
-                    "seats": 2
-                },
-                {
-                    "id": "osf",
-                    "seats": 1
-                },
-                {
-                    "id": "cda",
-                    "seats": 23
-                },
-                {
-                    "id": "vvd",
-                    "seats": 15
-                },
-                {
-                    "id": "sgp",
-                    "seats": 2
-                },
-                {
-                    "id": "lpf",
-                    "seats": 1
-                }
+                { "id": "sp", "seats": 4 },
+                { "id": "gl", "seats": 5 },
+                { "id": "pvda", "seats": 19 },
+                { "id": "d66", "seats": 3 },
+                { "id": "cu", "seats": 2 },
+                { "id": "osf", "seats": 1 },
+                { "id": "cda", "seats": 23 },
+                { "id": "vvd", "seats": 15 },
+                { "id": "sgp", "seats": 2 },
+                { "id": "lpf", "seats": 1 }
             ]
         }
     ]
