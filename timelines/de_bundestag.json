@@ -55,30 +55,12 @@
             "name": "2025 Federal Election",
             "date": "2025-02-23",
             "fractions": [
-                {
-                    "id": "linke",
-                    "seats": 64
-                },
-                {
-                    "id": "spd",
-                    "seats": 120
-                },
-                {
-                    "id": "grune",
-                    "seats": 85
-                },
-                {
-                    "id": "ssw",
-                    "seats": 1
-                },
-                {
-                    "id": "cducsu",
-                    "seats": 208
-                },
-                {
-                    "id": "afd",
-                    "seats": 152
-                }
+                { "id": "linke", "seats": 64 },
+                { "id": "spd", "seats": 120 },
+                { "id": "grune", "seats": 85 },
+                { "id": "ssw", "seats": 1 },
+                { "id": "cducsu", "seats": 208 },
+                { "id": "afd", "seats": 152 }
             ]
         },
         {
