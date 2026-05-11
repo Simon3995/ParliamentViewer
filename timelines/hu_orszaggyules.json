@@ -37,40 +37,19 @@
             "name": "2026 Parliamentary Election",
             "date": "2026-04-12",
             "fractions": [
-                {
-                    "id": "tisza",
-                    "seats": 138
-                },
-                {
-                    "id": "fidesz",
-                    "seats": 55
-                },
-                {
-                    "id": "mh",
-                    "seats": 6
-                }
+                { "id": "tisza", "seats": 138 },
+                { "id": "fidesz", "seats": 55 },
+                { "id": "mh", "seats": 6 }
             ]
         },
         {
             "name": "2022 Parliamentary Election",
             "date": "2022-04-03",
             "fractions": [
-                {
-                    "id": "em",
-                    "seats": 57
-                },
-                {
-                    "id": "ldu",
-                    "seats": 1
-                },
-                {
-                    "id": "fidesz",
-                    "seats": 135
-                },
-                {
-                    "id": "mh",
-                    "seats": 6
-                }
+                { "id": "em", "seats": 57 },
+                { "id": "ldu", "seats": 1 },
+                { "id": "fidesz", "seats": 135 },
+                { "id": "mh", "seats": 6 }
             ]
         }
     ]
