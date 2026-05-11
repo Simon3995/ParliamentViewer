@@ -1,4 +1,4 @@
-// translation from https://github.com/Gouvernathor/parliamentarch/blob/main/src/parliamentarch/geometry.py
+// translation of https://github.com/Gouvernathor/parliamentarch/blob/main/src/parliamentarch/geometry.py
 
 const DEFAULT_SPAN_ANGLE = 180;
 
