@@ -182,3 +182,52 @@ function update_table_footer() {
 
 	footer.innerHTML = string;
 }
+
+function table_highlight() {
+	document.querySelectorAll("tr.highlighted").forEach(row => {
+		row.classList.remove("highlighted");
+	});
+
+	for (const pid of cur_hlt) {
+		const hl_row = document.getElementById(pid);
+		if (hl_row && hl_row.tagName === 'TR') {
+			hl_row.classList.add("highlighted");
+		}
+	}
+}
+
+function update_buttons() {
+	const btn_edit = document.getElementById("btn_edit");
+	const btn_add = document.getElementById("btn_add");
+	const btn_del = document.getElementById("btn_del");
+	const btn_left = document.getElementById("btn_left");
+	const btn_right = document.getElementById("btn_right");
+	const btn_sort = document.getElementById("btn_sort");
+
+	if (edit_mode) {
+		btn_edit.style.backgroundColor = "#488cae";
+		btn_add.disabled = false;
+		btn_sort.disabled = false;
+		btn_left.disabled = (cur_hlt.length != 1);
+		btn_right.disabled = (cur_hlt.length != 1);
+		btn_del.disabled = (cur_hlt.length == 0);
+	} else {
+		btn_edit.style.backgroundColor = "#483d8b";
+		btn_add.disabled = true;
+		btn_del.disabled = true;
+		btn_left.disabled = true;
+		btn_right.disabled = true;
+		btn_sort.disabled = true;
+	}
+}
+
+function update_sidebar() {
+	if (edit_mode) {
+		table_edit_mode();
+	} else {
+		table();
+	}
+	table_highlight();
+	update_table_footer();
+	update_buttons();
+}

@@ -142,3 +142,17 @@ function next() {
 	btn_prev.disabled = (newIdx+1 == cur_tml.parliaments.length);
 	btn_next.disabled = (newIdx == 0);
 }
+
+function highlight(id) {
+	if (id == null) {
+		cur_hlt = [];
+	} else if (cur_hlt.includes(id)) {
+		cur_hlt.splice(cur_hlt.indexOf(id), 1);
+	} else {
+		cur_hlt.push(id);
+	}
+
+	table_highlight();
+	update_table_footer();
+	update_buttons();
+}
