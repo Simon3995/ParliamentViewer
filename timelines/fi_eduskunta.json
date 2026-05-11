@@ -72,92 +72,32 @@
             "name": "2023 Parliamentary Election",
             "date": "2023-04-02",
             "fractions": [
-                {
-                    "id": "vas",
-                    "seats": 11
-                },
-                {
-                    "id": "sdp",
-                    "seats": 43
-                },
-                {
-                    "id": "vihr",
-                    "seats": 13
-                },
-                {
-                    "id": "kesk",
-                    "seats": 23
-                },
-                {
-                    "id": "sfp",
-                    "seats": 9
-                },
-                {
-                    "id": "liik",
-                    "seats": 1
-                },
-                {
-                    "id": "kd",
-                    "seats": 5
-                },
-                {
-                    "id": "kok",
-                    "seats": 48
-                },
-                {
-                    "id": "ps",
-                    "seats": 46
-                },
-                {
-                    "id": "vkk",
-                    "seats": 1
-                }
+                { "id": "vas", "seats": 11 },
+                { "id": "sdp", "seats": 43 },
+                { "id": "vihr", "seats": 13 },
+                { "id": "kesk", "seats": 23 },
+                { "id": "sfp", "seats": 9 },
+                { "id": "liik", "seats": 1 },
+                { "id": "kd", "seats": 5 },
+                { "id": "kok", "seats": 48 },
+                { "id": "ps", "seats": 46 },
+                { "id": "vkk", "seats": 1 }
             ]
         },
         {
             "name": "2019 Parliamentary Election",
             "date": "2019-04-14",
             "fractions": [
-                {
-                    "id": "vas",
-                    "seats": 16
-                },
-                {
-                    "id": "sdp",
-                    "seats": 40
-                },
-                {
-                    "id": "vihr",
-                    "seats": 20
-                },
-                {
-                    "id": "kesk",
-                    "seats": 31
-                },
-                {
-                    "id": "fa",
-                    "seats": 1
-                },
-                {
-                    "id": "sfp",
-                    "seats": 9
-                },
-                {
-                    "id": "liik",
-                    "seats": 1
-                },
-                {
-                    "id": "kd",
-                    "seats": 5
-                },
-                {
-                    "id": "kok",
-                    "seats": 38
-                },
-                {
-                    "id": "ps",
-                    "seats": 39
-                }
+                { "id": "vas", "seats": 16 },
+                { "id": "sdp", "seats": 40 },
+                { "id": "vihr", "seats": 20 },
+                { "id": "kesk", "seats": 31 },
+                { "id": "fa", "seats": 1 },
+                { "id": "sfp", "seats": 9 },
+                { "id": "liik", "seats": 1 },
+                { "id": "kd", "seats": 5 },
+                { "id": "kok", "seats": 38 },
+                { "id": "ps", "seats": 39 }
             ]
         }
     ]
