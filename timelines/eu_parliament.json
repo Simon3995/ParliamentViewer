@@ -92,160 +92,58 @@
             "name": "2024 European Parliament Elections",
             "date": "2024-06-09",
             "fractions": [
-                {
-                    "id": "left",
-                    "seats": 46
-                },
-                {
-                    "id": "sd",
-                    "seats": 136
-                },
-                {
-                    "id": "greens",
-                    "seats": 53
-                },
-                {
-                    "id": "re",
-                    "seats": 77
-                },
-                {
-                    "id": "epp",
-                    "seats": 188
-                },
-                {
-                    "id": "ecr",
-                    "seats": 78
-                },
-                {
-                    "id": "pfe",
-                    "seats": 84
-                },
-                {
-                    "id": "esn",
-                    "seats": 25
-                },
-                {
-                    "id": "independent",
-                    "seats": 33
-                }
+                { "id": "left", "seats": 46 },
+                { "id": "sd", "seats": 136 },
+                { "id": "greens", "seats": 53 },
+                { "id": "re", "seats": 77 },
+                { "id": "epp", "seats": 188 },
+                { "id": "ecr", "seats": 78 },
+                { "id": "pfe", "seats": 84 },
+                { "id": "esn", "seats": 25 },
+                { "id": "independent", "seats": 33 }
             ]
         },
         {
             "name": "2019 European Parliament Elections",
             "date": "2019-05-26",
             "fractions": [
-                {
-                    "id": "left",
-                    "seats": 37
-                },
-                {
-                    "id": "sd",
-                    "seats": 138
-                },
-                {
-                    "id": "greens",
-                    "seats": 70
-                },
-                {
-                    "id": "re",
-                    "seats": 98
-                },
-                {
-                    "id": "epp",
-                    "seats": 179
-                },
-                {
-                    "id": "ecr",
-                    "seats": 69
-                },
-                {
-                    "id": "id",
-                    "seats": 49
-                },
-                {
-                    "id": "independent",
-                    "seats": 63
-                }
+                { "id": "left", "seats": 37 },
+                { "id": "sd", "seats": 138 },
+                { "id": "greens", "seats": 70 },
+                { "id": "re", "seats": 98 },
+                { "id": "epp", "seats": 179 },
+                { "id": "ecr", "seats": 69 },
+                { "id": "id", "seats": 49 },
+                { "id": "independent", "seats": 63 }
             ]
         },
         {
             "name": "2014 European Parliament Elections",
             "date": "2014-05-25",
             "fractions": [
-                {
-                    "id": "guengl",
-                    "seats": 52
-                },
-                {
-                    "id": "sd",
-                    "seats": 185
-                },
-                {
-                    "id": "greens",
-                    "seats": 52
-                },
-                {
-                    "id": "alde",
-                    "seats": 69
-                },
-                {
-                    "id": "epp",
-                    "seats": 216
-                },
-                {
-                    "id": "ecr",
-                    "seats": 77
-                },
-                {
-                    "id": "efdd",
-                    "seats": 42
-                },
-                {
-                    "id": "enf",
-                    "seats": 36
-                },
-                {
-                    "id": "independent",
-                    "seats": 20
-                }
+                { "id": "guengl", "seats": 52 },
+                { "id": "sd", "seats": 185 },
+                { "id": "greens", "seats": 52 },
+                { "id": "alde", "seats": 69 },
+                { "id": "epp", "seats": 216 },
+                { "id": "ecr", "seats": 77 },
+                { "id": "efdd", "seats": 42 },
+                { "id": "enf", "seats": 36 },
+                { "id": "independent", "seats": 20 }
             ]
         },
         {
             "name": "2009 European Parliament Elections",
             "date": "2009-06-07",
             "fractions": [
-                {
-                    "id": "guengl",
-                    "seats": 35
-                },
-                {
-                    "id": "sd",
-                    "seats": 195
-                },
-                {
-                    "id": "greens",
-                    "seats": 57
-                },
-                {
-                    "id": "alde",
-                    "seats": 83
-                },
-                {
-                    "id": "epp",
-                    "seats": 273
-                },
-                {
-                    "id": "ecr",
-                    "seats": 57
-                },
-                {
-                    "id": "efd",
-                    "seats": 31
-                },
-                {
-                    "id": "independent",
-                    "seats": 33
-                }
+                { "id": "guengl", "seats": 35 },
+                { "id": "sd", "seats": 195 },
+                { "id": "greens", "seats": 57 },
+                { "id": "alde", "seats": 83 },
+                { "id": "epp", "seats": 273 },
+                { "id": "ecr", "seats": 57 },
+                { "id": "efd", "seats": 31 },
+                { "id": "independent", "seats": 33 }
             ]
         }
     ]
