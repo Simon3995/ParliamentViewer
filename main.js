@@ -11,14 +11,11 @@ let mouse_y = 0;		// current mouse Y coord
 let ord_tab = [];		// party order in the table
 let ord_vis = [];		// party order left-right visually
 
-const btn_prev = document.getElementById("btn_prev");
-const btn_next = document.getElementById("btn_next");
-
 update();
 
 // main update loop
 function update() {
-	requestAnimationFrame(update);
+	//requestAnimationFrame(update);
 
 	ctx.save();
 	ctx.setTransform(1, 0, 0, 1, 0, 0);

@@ -1,3 +1,4 @@
+// load a new parliament and update sidebar info
 function load_parliament(parliament) {
 	// set initial table order + visual order
 	ord_tab = [];
@@ -15,6 +16,7 @@ function load_parliament(parliament) {
 	update_sidebar();
 }
 
+// load a new timeline
 async function load_timeline(name) {
 	const file = await fetch(`./timelines/${name}.json`);
 	const data = await file.json();
@@ -52,8 +54,9 @@ async function load_timeline(name) {
 	update();
 }
 
+// return a promise for loading an image
 function load_img(party, src) {
-    return new Promise((resolve) => {  // no reject parameter!
+    return new Promise((resolve) => {
         if (!src) {
 			party.image_loaded = false;
 			resolve(party);
@@ -65,12 +68,13 @@ function load_img(party, src) {
         };
         party.image.onerror = () => {
             party.image_loaded = false;  // mark as failed
-            resolve(party);             // still resolve, not reject
+            resolve(party);  // still resolve, not reject
         };
         party.image.src = src;
     });
 }
 
+// generate circular seat icons for each party in the current timeline
 function generate_party_imgs() {
 	party_imgs = {};
 	const s = 200;

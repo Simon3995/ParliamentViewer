@@ -1,12 +1,16 @@
+const btn_prev = document.getElementById("btn_prev");
+const btn_next = document.getElementById("btn_next");
+
 // lose focus on enter press in number input
 $(document).on("keyup", "input", function(e) {
 	if (e.key === 'Enter') e.currentTarget.blur();
 });
 
+// process number input changes
 $(document).on("change", "input", function(e) {
 	if (e.target.type === 'number') {
 		let value = Number(e.target.value);
-		e.target.value = value;
+		e.target.value = value;  // if value is empty, this sets it to 0
 
 		// don´t allow negative value in number field
 		if (value < 0) e.target.value = 0;
@@ -22,11 +26,13 @@ $(document).on("change", "input", function(e) {
 			cur_plm.set_party_seats(e.target.name, value);
 		}
 
+        // apply changes
 		e.target.value = value;
 		update_table_footer();
 	}
 });
 
+// click a table row to highlight it
 $(document).on("click", "tbody tr", function(e) {
     if ($(e.target).is("input")) return;
 	
@@ -35,12 +41,14 @@ $(document).on("click", "tbody tr", function(e) {
     }
 });
 
+// when timeline is selected, show sidebar and hide welcome message
 document.getElementById("select-timeline").onchange = (e) => {
 	document.getElementById("sidebar").style.display = "inline-block";
 	document.getElementById("welcome").style.display = "none";
 	load_timeline(e.target.value);
 }
 
+// if party seat is clicked, highlight that party
 c.addEventListener("mousedown", (e) => {
 	if (!cur_tml) return;
 	for (const fraction of cur_plm.fractions) {
@@ -52,19 +60,24 @@ c.addEventListener("mousedown", (e) => {
 			}
 		}
 	}
+
+    // if no seat is clicked, remove highlights
 	highlight(null);
 });
 
-window.addEventListener('resize', (e) => {
-	resize_canvas();
-	transform_ctx();
-});
-
+// resize canvas to fill the screen
 window.addEventListener('load', (e) => {
 	resize_canvas();
 	transform_ctx();
 });
 
+// continue resizing canvas to fill the screen
+window.addEventListener('resize', (e) => {
+	resize_canvas();
+	transform_ctx();
+});
+
+// transform mouse coords
 window.addEventListener('mousemove', (e) => {
 	const rect = c.getBoundingClientRect();
 	const mx = e.clientX - rect.left;
@@ -119,6 +132,7 @@ function fixWidth(e, ui) {
 	return ui;
 }
 
+// go to previous parliament in the timeline
 function prev() {
 	const idx = cur_tml.parliaments.indexOf(ori_plm);
 	const newIdx = Math.min(idx + 1, cur_tml.parliaments.length - 1);
@@ -131,6 +145,7 @@ function prev() {
 	btn_next.disabled = (newIdx == 0);
 }
 
+// go to next parliament in the timeline
 function next() {
 	const idx = cur_tml.parliaments.indexOf(ori_plm);
 	const newIdx = Math.max(idx - 1, 0);
@@ -143,12 +158,16 @@ function next() {
 	btn_next.disabled = (newIdx == 0);
 }
 
+// add or remove party from the list of highlighted
 function highlight(id) {
 	if (id == null) {
-		cur_hlt = [];
+		// remove all highlighted
+        cur_hlt = [];
 	} else if (cur_hlt.includes(id)) {
+        // remove this party from highlighted
 		cur_hlt.splice(cur_hlt.indexOf(id), 1);
 	} else {
+        // add this party to highlighted
 		cur_hlt.push(id);
 	}
 

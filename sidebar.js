@@ -1,4 +1,4 @@
-// generate a seat table based on a parliament object
+// generate a seat table for the current parliament object
 function table() {
 	let parliament = ori_plm;
 	let string = "";
@@ -90,6 +90,7 @@ function table() {
 	}
 }
 
+// generate an editable seat table for the current parliament object
 function table_edit_mode() {
 	let parliament = ori_plm;
 	let string = "";
@@ -155,6 +156,7 @@ function table_edit_mode() {
 	make_table_sortable();
 }
 
+// update table footer with seat totals and minority/majority stats
 function update_table_footer() {
 	const footer = document.getElementById("footer");
 	const total_seats = cur_plm.seat_amt();
@@ -183,6 +185,7 @@ function update_table_footer() {
 	footer.innerHTML = string;
 }
 
+// set the correct rows of the table as highlighted
 function table_highlight() {
 	document.querySelectorAll("tr.highlighted").forEach(row => {
 		row.classList.remove("highlighted");
@@ -196,6 +199,7 @@ function table_highlight() {
 	}
 }
 
+// update all buttons enabled/disabled based on context
 function update_buttons() {
 	const btn_edit = document.getElementById("btn_edit");
 	const btn_add = document.getElementById("btn_add");
@@ -221,6 +225,7 @@ function update_buttons() {
 	}
 }
 
+// update all sidebar info
 function update_sidebar() {
 	if (edit_mode) {
 		table_edit_mode();

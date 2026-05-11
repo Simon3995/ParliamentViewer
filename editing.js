@@ -1,3 +1,4 @@
+// toggle edit mode on/off and update the sidebar
 function toggle_edit_mode() {
 	edit_mode = !edit_mode;
 	if (edit_mode) document.getElementById("title_ps").innerHTML = " (Edited)";
@@ -5,11 +6,13 @@ function toggle_edit_mode() {
 	update_sidebar();
 }
 
+// sort the table by seats in descending order
 function sort_table_by_seats() {
 	ord_tab.sort((a, b) => b.seat_amt - a.seat_amt);
 	update_sidebar();
 }
 
+// move the selected party one step to the left on the parliament chart
 function move_party_left() {
 	const idx = ord_vis.findIndex(elem => elem.party.id === cur_hlt[0]);
 	if (idx <= 0) return; // can't move further left
@@ -17,6 +20,7 @@ function move_party_left() {
 	cur_plm.distribute_seats();
 }
 
+// move the selected party one step to the right on the parliament chart
 function move_party_right() {
 	const idx = ord_vis.findIndex(elem => elem.party.id === cur_hlt[0]);
 	if (idx === -1 || idx >= ord_vis.length - 1) return; // can´t move further right
@@ -24,10 +28,12 @@ function move_party_right() {
 	cur_plm.distribute_seats();
 }
 
+// show the dialog for adding a new party
 function show_add_menu() {
 	document.getElementById("add_party").style.display = "inline-block";
 }
 
+// add a new party to the current parliament
 function add_party() {
 	const add_shortname = document.getElementById("add_shortname").value;
 	const add_fullname = document.getElementById("add_fullname").value;
@@ -43,9 +49,12 @@ function add_party() {
 		return;
 	}
 
+    // create unique id
 	const id = add_shortname.toLowerCase();
 	let num = 0;
 	while (cur_tml.parties[id+num]) num++;
+
+    // apply
 	const new_party = new Party(add_shortname, add_fullname, id+num, add_color, new Image());
 	cur_tml.parties[id+num] = new_party;
 	const new_frac = new Fraction(new_party, 1);
@@ -57,6 +66,7 @@ function add_party() {
 	cancel_add_party();
 }
 
+// reset inputs and hide add party dialog
 function cancel_add_party() {
 	document.getElementById("add_shortname").value = "";
 	document.getElementById("add_fullname").value = "";
@@ -64,6 +74,7 @@ function cancel_add_party() {
 	document.getElementById("add_party").style.display = "none";
 }
 
+// delete all currently highlighted parties
 function delete_hlt() {
 	for (const id of cur_hlt) {
 		cur_plm.remove_fraction(id);
@@ -75,6 +86,7 @@ function delete_hlt() {
 	update_sidebar();
 }
 
+// undo all edits to current parliament
 function reset_plm() {
 	document.getElementById("title_ps").innerHTML = "";
 	document.getElementById("btn_reset").disabled = true;

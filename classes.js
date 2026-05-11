@@ -6,6 +6,7 @@ class Timeline {
         this.name = name;
     }
 
+    // add a new election result to the timeline
     add_parliament(parliament) {
         this.parliaments.push(parliament);
     }
@@ -21,6 +22,7 @@ class Parliament {
         this.distribute_seats();
     }
 
+    // get seat amount of a fraction
     get_party_seats(id) {
         for (const fraction of this.fractions)
             if (fraction.party.id == id)
@@ -28,6 +30,7 @@ class Parliament {
         return 0;
     }
 
+    // set seat amount of a fraction
     set_party_seats(id, amt) {
         amt = Number(amt);
         if (isNaN(amt)) {
@@ -42,11 +45,13 @@ class Parliament {
         this.distribute_seats();
     }
 
+    // add a new fraction to this parliament
     add_fraction(fraction) {
         this.fractions.push(fraction);
         this.distribute_seats();
     }
 
+    // remove a fraction from this parliament
     remove_fraction(id) {
         for (let i = 0; i < this.fractions.length; i++) {
             if (this.fractions[i].party.id === id) {
@@ -58,6 +63,7 @@ class Parliament {
         console.warn(`Removing fraction "${name}" failed!`);
     }
 
+    // recalculate seat locations and seat distribution across fractions
     distribute_seats() {
         // empty existing
         for (const fraction of this.fractions) {
@@ -75,6 +81,7 @@ class Parliament {
         }
     }
 
+    // get total parliament seat amount
     seat_amt() {
         let amt = 0;
         for (const frac of this.fractions) {
@@ -83,14 +90,17 @@ class Parliament {
         return amt;
     }
 
+    // get visual radius of one seat circle
     get_seat_radius() {
         return 0.8 * get_row_thickness(get_nrows_from_nseats(this.seat_amt()));
     }
 
+    // get hitbox/clickable radius of one seat circle
     get_seat_hitbox_radius() {
         return this.get_seat_radius() * 1.7;
     }
 
+    // draw the parliament chart
     draw() {
         let cur_hover = null;
         const r = this.get_seat_radius();
@@ -134,13 +144,14 @@ class Parliament {
         }
     }
 
+    // clone this parliament without reference to the original
     clone() {
         const p = new Parliament(
             this.fractions.map(frac => frac.clone()),
             this.description,
             this.date
         );
-        // Restore seat_centers after constructor overwrote them
+        // restore seat_centers
         p.fractions.forEach((frac, i) => {
             frac.seat_centers = structuredClone(this.fractions[i].seat_centers);
         });
@@ -156,6 +167,7 @@ class Fraction {
         this.seat_centers = [];
     }
 
+    // clone this fraction without reference to the original
     clone() {
         let frac = new Fraction(this.party.clone(), this.seat_amt);
         frac.seat_centers = structuredClone(this.seat_centers);
@@ -173,6 +185,7 @@ class Party {
         this.image = image;
     }
 
+    // clone this party without reference to the original
     clone() {
         return new Party(this.name, this.fullname, this.id, this.color, this.image);
     }
