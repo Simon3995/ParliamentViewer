@@ -1,6 +1,10 @@
 import { S } from "./main.js";
 import { update_sidebar } from "./sidebar.js";
 import { load_parliament } from "./loading.js";
+import { Party, Fraction, Parliament, Timeline } from "./classes.js";
+import { generate_party_imgs } from "./loading.js";
+import { highlight } from "./controller.js";
+
 
 // toggle edit mode on/off and update the sidebar
 export function toggle_edit_mode() {
@@ -80,7 +84,7 @@ export function cancel_add_party() {
 
 // delete all currently highlighted parties
 export function delete_hlt() {
-	for (const id of cur_hlt) {
+	for (const id of S.cur_hlt) {
 		S.cur_plm.remove_fraction(id);
 		S.ord_tab = S.ord_tab.filter((frac) => frac.party.id != id);
 		S.ord_vis = S.ord_vis.filter((frac) => frac.party.id != id);

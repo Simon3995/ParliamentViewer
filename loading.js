@@ -78,7 +78,7 @@ function load_img(party, src) {
 }
 
 // generate circular seat icons for each party in the current timeline
-function generate_party_imgs() {
+export function generate_party_imgs() {
 	S.party_imgs = {};
 	const s = 200;
 	for (const name in S.cur_tml.parties) {

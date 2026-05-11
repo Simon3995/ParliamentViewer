@@ -4,9 +4,6 @@ import { load_parliament, load_timeline } from "./loading.js";
 import { table_highlight, update_table_footer, update_buttons } from "./sidebar.js";
 import { add_party, cancel_add_party, delete_hlt, move_party_left, move_party_right, reset_plm, show_add_menu, sort_table_by_seats, toggle_edit_mode } from "./editing.js";
 
-export let mouse_x = 0;		// current mouse X coord
-export let mouse_y = 0;		// current mouse Y coord
-
 const btn_prev = document.getElementById("btn_prev");
 const btn_next = document.getElementById("btn_next");
 
@@ -17,8 +14,10 @@ document.getElementById("btn_del").onclick = delete_hlt;
 document.getElementById("btn_left").onclick = move_party_left;
 document.getElementById("btn_right").onclick = move_party_right;
 document.getElementById("btn_sort").onclick = sort_table_by_seats;
-document.getElementById("add_party").onclick = add_party;
-document.getElementById("cancel_add_party").onclick = cancel_add_party;
+document.getElementById("btn_confirm_add").onclick = add_party;
+document.getElementById("btn_cancel_add").onclick = cancel_add_party;
+document.getElementById("btn_prev").onclick = prev;
+document.getElementById("btn_next").onclick = next;
 
 // lose focus on enter press in number input
 $(document).on("keyup", "input", function(e) {
@@ -72,7 +71,7 @@ c.addEventListener("mousedown", (e) => {
 	if (!S.cur_tml) return;
 	for (const fraction of S.cur_plm.fractions) {
 		for (const seat of fraction.seat_centers) {
-			const dist = Math.hypot(seat[0] - mouse_x, seat[1] - mouse_y);
+			const dist = Math.hypot(seat[0] - S.mouse_x, seat[1] - S.mouse_y);
 			if (dist <= S.cur_plm.get_seat_hitbox_radius()) {
 				highlight(fraction.party.id);
 				return;
@@ -105,8 +104,8 @@ window.addEventListener('mousemove', (e) => {
 	const inverse = transform.inverse();
 	const mouse_point = new DOMPoint(mx, my);
 	const mouse = mouse_point.matrixTransform(inverse);
-	mouse_x = mouse.x;
-	mouse_y = mouse.y;
+	S.mouse_x = mouse.x;
+	S.mouse_y = mouse.y;
 });
 
 // add keyboard controls

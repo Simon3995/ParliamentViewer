@@ -12,6 +12,8 @@ export const S = {
 	edit_mode: false,	// whether edit mode is enabled
 	dragging: false,	// whether a dragging action is currently happening
 	party_imgs: null,	// array of icons for all parties in current parliament
+	mouse_x: 0,
+	mouse_y: 0,
 }
 
 update();
