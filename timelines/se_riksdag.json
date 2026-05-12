@@ -55,38 +55,14 @@
             "name": "2022 General Election",
             "date": "2022-09-11",
             "fractions": [
-                {
-                    "id": "v",
-                    "seats": 24
-                },
-                {
-                    "id": "s",
-                    "seats": 107
-                },
-                {
-                    "id": "mp",
-                    "seats": 18
-                },
-                {
-                    "id": "c",
-                    "seats": 24
-                },
-                {
-                    "id": "l",
-                    "seats": 16
-                },
-                {
-                    "id": "kd",
-                    "seats": 19
-                },
-                {
-                    "id": "m",
-                    "seats": 68
-                },
-                {
-                    "id": "sd",
-                    "seats": 73
-                }
+                { "id": "v", "seats": 24 },
+                { "id": "s", "seats": 107 },
+                { "id": "mp", "seats": 18 },
+                { "id": "c", "seats": 24 },
+                { "id": "l", "seats": 16 },
+                { "id": "kd", "seats": 19 },
+                { "id": "m", "seats": 68 },
+                { "id": "sd", "seats": 73 }
             ]
         }
     ]
