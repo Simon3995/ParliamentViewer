@@ -16,8 +16,6 @@ export const S = {
 	mouse_y: 0,
 }
 
-update();
-
 // main update loop
 function update() {
 	requestAnimationFrame(update);
@@ -29,3 +27,5 @@ function update() {
 
 	S.cur_plm?.draw();
 }
+
+update();
