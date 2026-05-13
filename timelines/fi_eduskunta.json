@@ -65,7 +65,7 @@
         {
             "name": "2023 Parliamentary Election",
             "date": "2023-04-02",
-            "source": "https://vaalit.yle.fi/ev2023/tulospalvelu/",
+            "source": "https://tulospalvelu.vaalit.fi/EKV-2023/en/tulos_kokomaa.html",
             "fractions": [
                 { "id": "vas", "seats": 11 },
                 { "id": "sdp", "seats": 43 },
@@ -82,7 +82,7 @@
         {
             "name": "2019 Parliamentary Election",
             "date": "2019-04-14",
-            "source": "https://vaalit.yle.fi/ev2019/fi/parties",
+            "source": "https://tulospalvelu.vaalit.fi/EKV-2019/en/tulos_kokomaa.html",
             "fractions": [
                 { "id": "vas", "seats": 16 },
                 { "id": "sdp", "seats": 40 },
