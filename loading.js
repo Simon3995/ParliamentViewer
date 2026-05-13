@@ -18,7 +18,7 @@ export function load_parliament(parliament) {
 
 	document.getElementById("title").innerHTML = parliament.description;
 	document.getElementById("title_ps").innerHTML = "";
-	document.getElementById("source").innerHTML = `Source: <a target="#" href="${parliament.source}">${parliament.source}</a>`;
+	document.getElementById("source").innerHTML = (parliament.source) ? `Source: <a target="#" href="${parliament.source}">${parliament.source}</a>` : "";
 	update_sidebar();
 }
 
