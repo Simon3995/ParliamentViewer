@@ -156,6 +156,11 @@
             "color": "#ff7b00",
             "image": "logos/nl/GPV.png"
         },
+        "rpfgpv": {
+            "shortname": "RPF/GPV",
+            "fullname": "Reformatorische Politieke Federatie / Gereformeerd Politiek Verbond",
+            "color": "#000080"
+        },
         "aov": {
             "shortname": "AOV",
             "fullname": "Algemeen Ouderen Verbond",
@@ -417,6 +422,7 @@
         {
             "name": "Current Situation",
             "date": "",
+            "source": "https://www.eerstekamer.nl/fracties",
             "fractions": [
                 { "id": "sp", "seats": 3 },
                 { "id": "fvh", "seats": 1 },
@@ -442,6 +448,7 @@
         {
             "name": "Eerste Kamerverkiezingen 2023",
             "date": "2023-06-01",
+            "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2",
             "fractions": [
                 { "id": "sp", "seats": 3 },
                 { "id": "pvdd", "seats": 3 },
@@ -464,6 +471,7 @@
         {
             "name": "Eerste Kamerverkiezingen 2019",
             "date": "2019-05-31",
+            "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2",
             "fractions": [
                 { "id": "sp", "seats": 4 },
                 { "id": "pvdd", "seats": 3 },
@@ -483,6 +491,7 @@
         {
             "name": "Eerste Kamerverkiezingen 2015",
             "date": "2015-05-28",
+            "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2",
             "fractions": [
                 { "id": "sp", "seats": 9 },
                 { "id": "pvdd", "seats": 2 },
@@ -501,6 +510,7 @@
         {
             "name": "Eerste Kamerverkiezingen 2011",
             "date": "2011-05-25",
+            "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2",
             "fractions": [
                 { "id": "sp", "seats": 8 },
                 { "id": "pvdd", "seats": 1 },
@@ -519,6 +529,7 @@
         {
             "name": "Eerste Kamerverkiezingen 2007",
             "date": "2007-05-29",
+            "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2",
             "fractions": [
                 { "id": "sp", "seats": 12 },
                 { "id": "pvdd", "seats": 1 },
@@ -546,6 +557,38 @@
                 { "id": "vvd", "seats": 15 },
                 { "id": "sgp", "seats": 2 },
                 { "id": "lpf", "seats": 1 }
+            ]
+        },
+        {
+            "name": "Eerste Kamerverkiezingen 1999",
+            "date": "1999-05-25",
+            "fractions": [
+                { "id": "sp", "seats": 2 },
+                { "id": "gl", "seats": 8 },
+                { "id": "pvda", "seats": 15 },
+                { "id": "d66", "seats": 4 },
+                { "id": "osf", "seats": 1 },
+                { "id": "cda", "seats": 20 },
+                { "id": "rpfgpv", "seats": 4 },
+                { "id": "vvd", "seats": 19 },
+                { "id": "sgp", "seats": 2 }
+            ]
+        },
+        {
+            "name": "Eerste Kamerverkiezingen 1995",
+            "date": "1995-05-29",
+            "fractions": [
+                { "id": "sp", "seats": 1 },
+                { "id": "gl", "seats": 4 },
+                { "id": "pvda", "seats": 14 },
+                { "id": "d66", "seats": 7 },
+                { "id": "osf", "seats": 1 },
+                { "id": "cda", "seats": 19 },
+                { "id": "aov", "seats": 2 },
+                { "id": "rpf", "seats": 1 },
+                { "id": "gpv", "seats": 1 },
+                { "id": "vvd", "seats": 23 },
+                { "id": "sgp", "seats": 2 }
             ]
         }
     ]
