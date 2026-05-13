@@ -18,10 +18,11 @@ export class Timeline {
 
 // a class for one election result
 export class Parliament {
-    constructor(fractions = [], description = "Parliament", date = new Date()) {
+    constructor(fractions = [], description = "Parliament", date = new Date(), source = "") {
         this.fractions = fractions;
         this.description = description;
         this.date = date;
+        this.source = source;
 
         this.distribute_seats();
     }
@@ -153,7 +154,8 @@ export class Parliament {
         const p = new Parliament(
             this.fractions.map(frac => frac.clone()),
             this.description,
-            this.date
+            this.date,
+            this.source
         );
         // restore seat_centers
         p.fractions.forEach((frac, i) => {

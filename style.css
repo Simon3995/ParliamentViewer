@@ -35,6 +35,10 @@ hr {
     font-size: 15px;
 }
 
+.small p {
+    margin-bottom: 8px;
+}
+
 #welcome {
     display: flex;
     justify-content: center;
