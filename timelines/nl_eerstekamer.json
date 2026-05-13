@@ -546,6 +546,7 @@
         {
             "name": "Eerste Kamerverkiezingen 2003",
             "date": "2003-05-26",
+            "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2",
             "fractions": [
                 { "id": "sp", "seats": 4 },
                 { "id": "gl", "seats": 5 },
@@ -562,6 +563,7 @@
         {
             "name": "Eerste Kamerverkiezingen 1999",
             "date": "1999-05-25",
+            "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2",
             "fractions": [
                 { "id": "sp", "seats": 2 },
                 { "id": "gl", "seats": 8 },
@@ -577,6 +579,7 @@
         {
             "name": "Eerste Kamerverkiezingen 1995",
             "date": "1995-05-29",
+            "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2",
             "fractions": [
                 { "id": "sp", "seats": 1 },
                 { "id": "gl", "seats": 4 },
