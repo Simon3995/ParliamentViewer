@@ -94,6 +94,7 @@
         {
             "name": "2024 General Election",
             "date": "2024-07-04",
+            "source": "https://electionresults.parliament.uk/general-elections/6",
             "fractions": [
                 { "id": "sf", "seats": 7 },
                 { "id": "plaid", "seats": 4 },

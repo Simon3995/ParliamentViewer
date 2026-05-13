@@ -54,6 +54,7 @@
         {
             "name": "2022 General Election",
             "date": "2022-09-11",
+            "source": "https://www.val.se/valresultat-och-statistik/riksdags--region--och-kommunval/valresultat-2022",
             "fractions": [
                 { "id": "v", "seats": 24 },
                 { "id": "s", "seats": 107 },

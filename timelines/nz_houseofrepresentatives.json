@@ -42,6 +42,7 @@
         {
             "name": "2023 General Election",
             "date": "2023-10-14",
+            "source": "https://electionresults.govt.nz/electionresults_2023/",
             "fractions": [
                 { "id": "green", "seats": 15 },
                 { "id": "maori", "seats": 6 },
