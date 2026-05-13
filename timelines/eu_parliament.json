@@ -91,6 +91,7 @@
         {
             "name": "2024 European Parliament Elections",
             "date": "2024-06-09",
+            "source": "https://results.elections.europa.eu/en/european-results/2024-2029/",
             "fractions": [
                 { "id": "left", "seats": 46 },
                 { "id": "sd", "seats": 136 },
@@ -106,6 +107,7 @@
         {
             "name": "2019 European Parliament Elections",
             "date": "2019-05-26",
+            "source": "https://results.elections.europa.eu/en/european-results/2019-2024/outgoing-parliament/",
             "fractions": [
                 { "id": "left", "seats": 37 },
                 { "id": "sd", "seats": 138 },
@@ -120,6 +122,7 @@
         {
             "name": "2014 European Parliament Elections",
             "date": "2014-05-25",
+            "source": "https://results.elections.europa.eu/en/european-results/2014-2019/outgoing-parliament/",
             "fractions": [
                 { "id": "guengl", "seats": 52 },
                 { "id": "sd", "seats": 185 },
@@ -135,6 +138,7 @@
         {
             "name": "2009 European Parliament Elections",
             "date": "2009-06-07",
+            "source": "https://results.elections.europa.eu/en/european-results/2009-2014/outgoing-parliament/",
             "fractions": [
                 { "id": "guengl", "seats": 35 },
                 { "id": "sd", "seats": 195 },
