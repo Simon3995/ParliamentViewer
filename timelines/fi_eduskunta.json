@@ -55,44 +55,40 @@
             "color": "#ff00b3",
             "image": "logos/fi/liik.png"
         },
-        "vkk": {
-            "shortname": "VKK",
-            "fullname": "Valta kuuluu kansalle",
-            "color": "#101010",
-            "image": "logos/fi/vkk.png"
-        },
-        "fa": {
-            "shortname": "FÅ",
-            "fullname": "För Åland",
-            "color": "#404040"
+        "as": {
+            "shortname": "ÅS",
+            "fullname": "Ålandsk Samling",
+            "color": "#808080"
         }
     },
     "parliaments": [
         {
             "name": "2023 Parliamentary Election",
             "date": "2023-04-02",
+            "source": "https://vaalit.yle.fi/ev2023/tulospalvelu/",
             "fractions": [
                 { "id": "vas", "seats": 11 },
                 { "id": "sdp", "seats": 43 },
                 { "id": "vihr", "seats": 13 },
                 { "id": "kesk", "seats": 23 },
+                { "id": "as", "seats": 1 },
                 { "id": "sfp", "seats": 9 },
                 { "id": "liik", "seats": 1 },
                 { "id": "kd", "seats": 5 },
                 { "id": "kok", "seats": 48 },
-                { "id": "ps", "seats": 46 },
-                { "id": "vkk", "seats": 1 }
+                { "id": "ps", "seats": 46 }
             ]
         },
         {
             "name": "2019 Parliamentary Election",
             "date": "2019-04-14",
+            "source": "https://vaalit.yle.fi/ev2019/fi/parties",
             "fractions": [
                 { "id": "vas", "seats": 16 },
                 { "id": "sdp", "seats": 40 },
                 { "id": "vihr", "seats": 20 },
                 { "id": "kesk", "seats": 31 },
-                { "id": "fa", "seats": 1 },
+                { "id": "as", "seats": 1 },
                 { "id": "sfp", "seats": 9 },
                 { "id": "liik", "seats": 1 },
                 { "id": "kd", "seats": 5 },
