@@ -78,6 +78,7 @@
         {
             "name": "2024 Federal Election",
             "date": "2024-06-09",
+            "source": "https://verkiezingsresultaten.belgium.be/nl/election-results/kamer-van-volksvertegenwoordigers/2024/rijk/251712",
             "fractions": [
                 { "id": "pvdaptb", "seats": 15 },
                 { "id": "vooruit", "seats": 13 },
