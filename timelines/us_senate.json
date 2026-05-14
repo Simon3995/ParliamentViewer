@@ -23,7 +23,7 @@
         {
             "name": "2024 Senate Elections",
             "date": "2024-11-05",
-            "source": "https://ballotpedia.org/United_States_Senate_elections,_2024",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 45 },
                 { "id": "ind", "seats": 2 },
@@ -33,7 +33,7 @@
         {
             "name": "2022 Senate Elections",
             "date": "2022-11-08",
-            "source": "https://ballotpedia.org/United_States_Senate_elections,_2022",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 49 },
                 { "id": "ind", "seats": 2 },

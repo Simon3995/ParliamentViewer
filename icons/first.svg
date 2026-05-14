@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
 
 <svg
-   width="466.66528"
-   height="400"
-   viewBox="0 0 13.999958 12"
+   width="64"
+   height="64"
+   viewBox="0 0 14 14"
    fill="none"
    version="1.1"
    id="svg1"
@@ -13,11 +12,8 @@
   <defs
      id="defs1" />
   <path
-     d="M 12.999959,11 7.9999586,6 12.999959,1 M 5.9999586,11 0.99995859,6 5.9999586,1"
-     stroke="#000000"
+     d="M 13,12 8,7 13,2 M 6,12 1,7 6,2"
+     stroke="#ffffff"
      stroke-width="2"
-     stroke-linecap="round"
-     stroke-linejoin="round"
-     id="path1"
-     style="stroke:#ffffff;stroke-opacity:1" />
+     id="path1" />
 </svg>
