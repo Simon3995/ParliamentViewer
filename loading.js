@@ -18,6 +18,7 @@ export function load_parliament(parliament) {
 
 	document.getElementById("title").innerHTML = parliament.description;
 	document.getElementById("title_ps").innerHTML = "";
+	document.getElementById("source").innerHTML = (parliament.source) ? `Source: <a target="#" href="${parliament.source}">${parliament.source}</a>` : "";
 	update_sidebar();
 }
 
@@ -46,7 +47,7 @@ export async function load_timeline(name) {
 	S.cur_tml.parliaments = data.parliaments.map(par => {
 		return new Parliament(par.fractions.map(frac => {
 			return new Fraction(S.cur_tml.parties[frac.id], frac.seats);
-		}), par.name, new Date(par.date));
+		}), par.name, new Date(par.date), par.source);
 	});
 	
 	S.ori_plm = S.cur_tml.parliaments[0];

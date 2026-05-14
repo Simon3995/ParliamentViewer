@@ -7,6 +7,7 @@
     <meta name="keywords" content="politics, political, parliament, viewer, editor, government, data, visualization, chart, seats, distribution, senate, congress, house, representatives, country, world, history, historical, current, tool">
     <title>Parliament Viewer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./favicon.ico">
 </head>
 
 <body>
@@ -57,10 +58,15 @@
 
     <!-- Right sidebar -->
     <div id="sidebar" style="display:none">
+        <!-- Navigation -->
         <button id="btn_prev" class="wide" autocomplete="off">Previous</button>
         <button id="btn_next" class="wide rbutton" autocomplete="off">Next</button>
+        
+        <!-- Main table -->
         <h1><span id="title"></span><span id="title_ps"></span></h1>
         <div id="table"></div>
+        
+        <!-- Edit mode buttons -->
         <button title="Edit Mode" id="btn_edit" autocomplete="off"><span class="icon edit"></span></button>
         <button title="Reset" id="btn_reset" disabled autocomplete="off"><span class="icon reset"></span></button>
         <button title="Add Party" id="btn_add" disabled autocomplete="off"><span class="icon add" autocomplete="off"></span></button>
@@ -68,6 +74,8 @@
         <button title="Move Party Left" id="btn_left" disabled autocomplete="off"><span class="icon left"></span></button>
         <button title="Move Party Right" id="btn_right" disabled autocomplete="off"><span class="icon right"></span></button>
         <button title="Sort Table" id="btn_sort" disabled autocomplete="off"><span class="icon sort"></span></button>
+        
+        <!-- Party adding menu -->
         <div id="add_party" style="display: none">
             <p>Short Name:<input id="add_shortname" type="text" autocomplete="off"></p>
             <p>Full Name:<input id="add_fullname" type="text" autocomplete="off"></p>
@@ -75,9 +83,15 @@
             <button id="btn_confirm_add">Add</button>
             <button id="btn_cancel_add">Cancel</button>
         </div>
+        
+        <!-- Left parliament table -->
         <div id="left_plm"></div>
+        
         <hr>
+
+        <!-- Links -->
         <div class="small" id="links">
+            <p id="source"></p>
             <p>View this project on <a target="#" href="https://github.com/Simon3995/ParliamentViewer">GitHub</a></p>
             <p class="small">Licensed under <a target="#" href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL-3.0</a></p>
         </div>

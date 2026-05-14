@@ -54,6 +54,7 @@
         {
             "name": "2025 Federal Election",
             "date": "2025-02-23",
+            "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/2025/ergebnisse/bund-99.html",
             "fractions": [
                 { "id": "linke", "seats": 64 },
                 { "id": "spd", "seats": 120 },
@@ -66,6 +67,7 @@
         {
             "name": "2021 Federal Election",
             "date": "2021-09-26",
+            "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/2021/ergebnisse/bund-99.html",
             "fractions": [
                 { "id": "linke", "seats": 39 },
                 { "id": "spd", "seats": 206 },
@@ -79,6 +81,7 @@
         {
             "name": "2017 Federal Election",
             "date": "2017-09-24",
+            "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/2017/ergebnisse/bund-99.html",
             "fractions": [
                 { "id": "linke", "seats": 69 },
                 { "id": "spd", "seats": 153 },
@@ -91,6 +94,7 @@
         {
             "name": "2013 Federal Election",
             "date": "2013-09-22",
+            "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/2013/ergebnisse/bund-99.html",
             "fractions": [
                 { "id": "linke", "seats": 64 },
                 { "id": "spd", "seats": 193 },
@@ -101,6 +105,7 @@
         {
             "name": "2009 Federal Election",
             "date": "2009-09-27",
+            "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/2009.html",
             "fractions": [
                 { "id": "linke", "seats": 76 },
                 { "id": "spd", "seats": 146 },
@@ -112,6 +117,7 @@
         {
             "name": "2005 Federal Election",
             "date": "2005-09-18",
+            "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/2005.html",
             "fractions": [
                 { "id": "linke", "seats": 54 },
                 { "id": "spd", "seats": 222 },
@@ -123,6 +129,7 @@
         {
             "name": "2002 Federal Election",
             "date": "2002-09-22",
+            "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/2002.html",
             "fractions": [
                 { "id": "pds", "seats": 2 },
                 { "id": "spd", "seats": 251 },
@@ -134,6 +141,7 @@
         {
             "name": "1998 Federal Election",
             "date": "1998-09-27",
+            "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/1998.html",
             "fractions": [
                 { "id": "pds", "seats": 36 },
                 { "id": "spd", "seats": 298 },
@@ -145,6 +153,7 @@
         {
             "name": "1994 Federal Election",
             "date": "1994-10-16",
+            "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/1994.html",
             "fractions": [
                 { "id": "pds", "seats": 30 },
                 { "id": "spd", "seats": 252 },

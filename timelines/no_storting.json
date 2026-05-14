@@ -60,6 +60,7 @@
         {
             "name": "2025 Parliamentary Election",
             "date": "2025-09-08",
+            "source": "https://valgresultat.no/valg/2025/st#seats",
             "fractions": [
                 { "id": "rodt", "seats": 9 },
                 { "id": "sv", "seats": 9 },

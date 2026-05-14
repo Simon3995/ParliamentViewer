@@ -36,15 +36,17 @@
         {
             "name": "2026 Parliamentary Election",
             "date": "2026-04-12",
+            "source": "https://vtr.valasztas.hu/ogy2026",
             "fractions": [
-                { "id": "tisza", "seats": 138 },
-                { "id": "fidesz", "seats": 55 },
+                { "id": "tisza", "seats": 141 },
+                { "id": "fidesz", "seats": 52 },
                 { "id": "mh", "seats": 6 }
             ]
         },
         {
             "name": "2022 Parliamentary Election",
             "date": "2022-04-03",
+            "source": "https://vtr.valasztas.hu/ogy2022",
             "fractions": [
                 { "id": "em", "seats": 57 },
                 { "id": "ldu", "seats": 1 },
