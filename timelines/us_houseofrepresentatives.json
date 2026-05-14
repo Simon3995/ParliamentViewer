@@ -38,6 +38,7 @@
         {
             "name": "2024 House of Representatives Elections",
             "date": "2024-11-05",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 215 },
                 { "id": "rep", "seats": 220 }
@@ -46,6 +47,7 @@
         {
             "name": "2022 House of Representatives Elections",
             "date": "2022-11-08",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 213 },
                 { "id": "rep", "seats": 222 }
@@ -54,6 +56,7 @@
         {
             "name": "2020 House of Representatives Elections",
             "date": "2020-11-03",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 222 },
                 { "id": "rep", "seats": 213 }
@@ -62,6 +65,7 @@
         {
             "name": "2018 House of Representatives Elections",
             "date": "2018-11-06",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 235 },
                 { "id": "vac", "seats": 1 },
@@ -71,6 +75,7 @@
         {
             "name": "2016 House of Representatives Elections",
             "date": "2016-11-08",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 194 },
                 { "id": "rep", "seats": 241 }
@@ -79,6 +84,7 @@
         {
             "name": "2014 House of Representatives Elections",
             "date": "2014-11-04",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 188 },
                 { "id": "rep", "seats": 247 }
@@ -87,6 +93,7 @@
         {
             "name": "2012 House of Representatives Elections",
             "date": "2012-11-06",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 201 },
                 { "id": "rep", "seats": 234 }
@@ -95,6 +102,7 @@
         {
             "name": "2010 House of Representatives Elections",
             "date": "2010-11-02",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 193 },
                 { "id": "rep", "seats": 242 }
@@ -103,6 +111,7 @@
         {
             "name": "2008 House of Representatives Elections",
             "date": "2008-11-04",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 257 },
                 { "id": "rep", "seats": 178 }
@@ -111,6 +120,7 @@
         {
             "name": "2006 House of Representatives Elections",
             "date": "2006-11-07",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 233 },
                 { "id": "rep", "seats": 202 }
@@ -119,6 +129,7 @@
         {
             "name": "2004 House of Representatives Elections",
             "date": "2004-11-02",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 202 },
                 { "id": "ind", "seats": 1 },
@@ -128,6 +139,7 @@
         {
             "name": "2002 House of Representatives Elections",
             "date": "2002-11-05",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 205 },
                 { "id": "ind", "seats": 1 },
@@ -137,6 +149,7 @@
         {
             "name": "2000 House of Representatives Elections",
             "date": "2000-11-07",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 212 },
                 { "id": "ind", "seats": 2 },
@@ -146,6 +159,7 @@
         {
             "name": "1998 House of Representatives Elections",
             "date": "1998-11-03",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 211 },
                 { "id": "ind", "seats": 1 },
@@ -155,6 +169,7 @@
         {
             "name": "1996 House of Representatives Elections",
             "date": "1996-11-05",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 207 },
                 { "id": "ind", "seats": 2 },
@@ -164,6 +179,7 @@
         {
             "name": "1994 House of Representatives Elections",
             "date": "1994-11-08",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 204 },
                 { "id": "ind", "seats": 1 },
@@ -173,6 +189,7 @@
         {
             "name": "1992 House of Representatives Elections",
             "date": "1992-11-03",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 258 },
                 { "id": "ind", "seats": 1 },
@@ -182,6 +199,7 @@
         {
             "name": "1990 House of Representatives Elections",
             "date": "1990-11-06",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 267 },
                 { "id": "ind", "seats": 1 },
@@ -191,6 +209,7 @@
         {
             "name": "1988 House of Representatives Elections",
             "date": "1988-11-08",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 260 },
                 { "id": "rep", "seats": 175 }
@@ -199,6 +218,7 @@
         {
             "name": "1986 House of Representatives Elections",
             "date": "1986-11-04",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 258 },
                 { "id": "rep", "seats": 177 }
@@ -207,6 +227,7 @@
         {
             "name": "1984 House of Representatives Elections",
             "date": "1984-11-06",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 253 },
                 { "id": "rep", "seats": 181 },
@@ -216,6 +237,7 @@
         {
             "name": "1982 House of Representatives Elections",
             "date": "1982-11-02",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 269 },
                 { "id": "rep", "seats": 165 },
@@ -225,6 +247,7 @@
         {
             "name": "1980 House of Representatives Elections",
             "date": "1980-11-04",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 242 },
                 { "id": "ind", "seats": 1 },
@@ -235,6 +258,7 @@
         {
             "name": "1978 House of Representatives Elections",
             "date": "1978-11-07",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 277 },
                 { "id": "rep", "seats": 157 },
@@ -244,6 +268,7 @@
         {
             "name": "1976 House of Representatives Elections",
             "date": "1976-11-02",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 292 },
                 { "id": "rep", "seats": 143 }
@@ -252,6 +277,7 @@
         {
             "name": "1974 House of Representatives Elections",
             "date": "1974-11-05",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 291 },
                 { "id": "rep", "seats": 144 }
@@ -260,6 +286,7 @@
         {
             "name": "1972 House of Representatives Elections",
             "date": "1972-11-07",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 242 },
                 { "id": "ind", "seats": 1 },
@@ -269,6 +296,7 @@
         {
             "name": "1970 House of Representatives Elections",
             "date": "1970-11-03",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 255 },
                 { "id": "rep", "seats": 180 }
@@ -277,6 +305,7 @@
         {
             "name": "1968 House of Representatives Elections",
             "date": "1968-11-05",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 243 },
                 { "id": "rep", "seats": 192 }
@@ -285,6 +314,7 @@
         {
             "name": "1966 House of Representatives Elections",
             "date": "1966-11-08",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 248 },
                 { "id": "rep", "seats": 187 }
@@ -293,6 +323,7 @@
         {
             "name": "1964 House of Representatives Elections",
             "date": "1964-11-03",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 295 },
                 { "id": "rep", "seats": 140 }
@@ -301,6 +332,7 @@
         {
             "name": "1962 House of Representatives Elections",
             "date": "1962-11-06",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 259 },
                 { "id": "rep", "seats": 176 }
@@ -309,6 +341,7 @@
         {
             "name": "1960 House of Representatives Elections",
             "date": "1960-11-08",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 262 },
                 { "id": "rep", "seats": 175 }
@@ -317,6 +350,7 @@
         {
             "name": "1958 House of Representatives Elections",
             "date": "1958-11-04",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 283 },
                 { "id": "rep", "seats": 153 }
@@ -325,6 +359,7 @@
         {
             "name": "1956 House of Representatives Elections",
             "date": "1956-11-06",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 234 },
                 { "id": "rep", "seats": 201 }
@@ -333,6 +368,7 @@
         {
             "name": "1954 House of Representatives Elections",
             "date": "1954-11-02",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 232 },
                 { "id": "rep", "seats": 203 }
@@ -341,6 +377,7 @@
         {
             "name": "1952 House of Representatives Elections",
             "date": "1952-11-04",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 213 },
                 { "id": "ind", "seats": 1 },
@@ -350,6 +387,7 @@
         {
             "name": "1950 House of Representatives Elections",
             "date": "1950-11-07",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "dem", "seats": 235 },
                 { "id": "ind", "seats": 1 },
@@ -359,6 +397,7 @@
         {
             "name": "1948 House of Representatives Elections",
             "date": "1948-11-02",
+            "source": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
             "fractions": [
                 { "id": "alp", "seats": 1 },
                 { "id": "dem", "seats": 263 },
