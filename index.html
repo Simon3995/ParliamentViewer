@@ -59,8 +59,16 @@
     <!-- Right sidebar -->
     <div id="sidebar" style="display:none">
         <!-- Navigation -->
-        <button id="btn_prev" class="wide" autocomplete="off">Previous</button>
-        <button id="btn_next" class="wide rbutton" autocomplete="off">Next</button>
+        <div class="navbar">
+            <div class="lbutton">
+                <button autocomplete="off"><span class="icon first"></span></button>
+                <button id="btn_prev" autocomplete="off"><span class="icon left"></span></button>
+            </div>
+            <div class="rbutton">
+                <button id="btn_next" autocomplete="off"><span class="icon right"></span></button>
+                <button autocomplete="off"><span class="icon last"></span></button>
+            </div>
+        </div>
         
         <!-- Main table -->
         <h1><span id="title"></span><span id="title_ps"></span></h1>
