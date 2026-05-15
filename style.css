@@ -319,6 +319,8 @@ span.reset { background: url(./icons/reset.svg) no-repeat; }
 span.sort { background: url(./icons/sort.svg) no-repeat; }
 span.first { background: url(./icons/first.svg) no-repeat; }
 span.last { background: url(./icons/last.svg) no-repeat; }
+span.prev { background: url(./icons/prev.svg) no-repeat; }
+span.next { background: url(./icons/next.svg) no-repeat; }
 
 @keyframes pulseColor {
     0% {
