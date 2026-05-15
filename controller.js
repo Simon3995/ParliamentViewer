@@ -6,6 +6,8 @@ import { add_party, cancel_add_party, delete_hlt, move_party_left, move_party_ri
 
 const btn_prev = document.getElementById("btn_prev");
 const btn_next = document.getElementById("btn_next");
+const btn_first = document.getElementById("btn_first");
+const btn_last = document.getElementById("btn_last");
 
 document.getElementById("btn_edit").onclick = toggle_edit_mode;
 document.getElementById("btn_reset").onclick = reset_plm;
@@ -16,8 +18,10 @@ document.getElementById("btn_right").onclick = move_party_right;
 document.getElementById("btn_sort").onclick = sort_table_by_seats;
 document.getElementById("btn_confirm_add").onclick = add_party;
 document.getElementById("btn_cancel_add").onclick = cancel_add_party;
-document.getElementById("btn_prev").onclick = prev;
-document.getElementById("btn_next").onclick = next;
+btn_prev.onclick = prev;
+btn_next.onclick = next;
+btn_first.onclick = first;
+btn_last.onclick = last;
 
 // lose focus on enter press in number input
 $(document).on("keyup", "input", function(e) {
@@ -131,8 +135,8 @@ export function prev() {
 	S.edit_mode = false;
 	load_parliament(S.cur_plm);
 
-	btn_prev.disabled = (newIdx+1 == S.cur_tml.parliaments.length);
-	btn_next.disabled = (newIdx == 0);
+	btn_prev.disabled = btn_first.disabled = (newIdx+1 == S.cur_tml.parliaments.length);
+	btn_next.disabled = btn_last.disabled = (newIdx == 0);
 }
 
 // go to next parliament in the timeline
@@ -144,8 +148,29 @@ export function next() {
 	S.edit_mode = false;
 	load_parliament(S.cur_plm);
 
-	btn_prev.disabled = (newIdx+1 == S.cur_tml.parliaments.length);
-	btn_next.disabled = (newIdx == 0);
+	btn_prev.disabled = btn_first.disabled = (newIdx+1 == S.cur_tml.parliaments.length);
+	btn_next.disabled = btn_last.disabled = (newIdx == 0);
+}
+
+export function first() {
+	S.ori_plm = S.cur_tml.parliaments[S.cur_tml.parliaments.length - 1];
+	S.cur_plm = S.ori_plm.clone();
+	S.edit_mode = false;
+	load_parliament(S.cur_plm);
+
+	btn_prev.disabled = btn_first.disabled = true;
+	btn_next.disabled = btn_last.disabled = false;
+	
+}
+
+export function last() {
+	S.ori_plm = S.cur_tml.parliaments[0];
+	S.cur_plm = S.ori_plm.clone();
+	S.edit_mode = false;
+	load_parliament(S.cur_plm);
+
+	btn_prev.disabled = btn_first.disabled = false;
+	btn_next.disabled = btn_last.disabled = true;
 }
 
 // add or remove party from the list of highlighted
