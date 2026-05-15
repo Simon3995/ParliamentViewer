@@ -199,6 +199,7 @@ button {
     margin-bottom: 8px;
     margin-right: 8px;
     padding: 6px;
+    cursor: pointer;
 }
 
 button.wide {
