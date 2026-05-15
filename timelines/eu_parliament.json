@@ -69,22 +69,26 @@
         "guengl": {
             "shortname": "GUE/NGL",
             "fullname": "Confederated Group of the European United Left - Nordic Green Left",
-            "color": "#990000"
+            "color": "#990000",
+            "image": "logos/eu/guengl.png"
         },
         "efdd": {
             "shortname": "EFDD",
             "fullname": "Europe of Freedom and Direct Democracy",
-            "color": "#24B9B9"
+            "color": "#24B9B9",
+            "image": "logos/eu/efdd.png"
         },
         "enf": {
             "shortname": "ENF",
             "fullname": "Europe of Nations and Freedom",
-            "color": "#2B3856"
+            "color": "#2B3856",
+            "image": "logos/eu/enf.png"
         },
         "efd": {
             "shortname": "EFD",
             "fullname": "Europe of Freedom and Democracy",
-            "color": "#24B9B9"
+            "color": "#24B9B9",
+            "image": "logos/eu/efd.png"
         }
     },
     "parliaments": [
