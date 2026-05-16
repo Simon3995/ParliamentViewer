@@ -89,6 +89,11 @@
             "fullname": "Europe of Freedom and Democracy",
             "color": "#24B9B9",
             "image": "logos/eu/efd.png"
+        },
+        "pse": {
+            "shortname": "PSE",
+            "fullname": "Socialist Group in the European Parliament",
+            "color": "#ff0000"
         }
     },
     "parliaments": [
