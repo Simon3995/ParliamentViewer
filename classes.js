@@ -1,4 +1,4 @@
-import { S } from "./main.js";
+import { S, schedule_frame } from "./main.js";
 import { c, ctx } from "./canvas.js";
 import { get_seats_centers, get_row_thickness, get_nrows_from_nseats } from "./geometry.js";
 
@@ -84,6 +84,7 @@ export class Parliament {
                 fraction.seat_centers.push(seats_centers.shift());
             }
         }
+        schedule_frame();
     }
 
     // get total parliament seat amount

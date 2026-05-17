@@ -1,4 +1,4 @@
-import { S } from "./main.js";
+import { S, schedule_frame } from "./main.js";
 import { c, ctx, resize_canvas, transform_ctx } from "./canvas.js";
 import { load_parliament, load_timeline } from "./loading.js";
 import { table_highlight, update_table_footer, update_buttons } from "./sidebar.js";
@@ -110,6 +110,7 @@ window.addEventListener('mousemove', (e) => {
 	const mouse = mouse_point.matrixTransform(inverse);
 	S.mouse_x = mouse.x;
 	S.mouse_y = mouse.y;
+	schedule_frame();
 });
 
 // add keyboard controls
@@ -189,4 +190,5 @@ export function highlight(id) {
 	table_highlight();
 	update_table_footer();
 	update_buttons();
+	schedule_frame();
 }
