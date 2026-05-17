@@ -6,6 +6,7 @@
             * {
                 font-family: monospace;
                 font-size: 16px;
+                margin: 0;
             }
             body {
                 padding: 20px;
@@ -15,18 +16,51 @@
             p {
                 margin: 0px 30px;
             }
+            .party {
+                border: 1px solid dodgerblue;
+                margin-bottom: 6px;
+            }
+            input[type=color] {
+                border: none;
+                padding: 0;
+                height: 20px;
+                vertical-align: middle;
+            }
         </style>
     </head>
     <body>
+        <button>EXPORT JSON</button>
+        <button>IMPORT JSON</button>
+        <br><br>
+
         <h1>GENERAL INFO</h1>
         <p>Name (e.g. nl_tweedekamer): <input id="name"></p>
+        <br>
 
         <h1>PARTIES</h1>
         <div id="parties"></div>
-        <button>ADD PARTY</button>
+        <button onclick="add_party()">ADD PARTY</button>
+        <br><br>
+
+        <h1>PARLIAMENTS</h1>
+        <div id="parliaments"></div>
+        <button onclick="add_plm()">ADD PARLIAMENT</button>
+        <br><br>
     </body>
 </html>
 
 <script type="text/javascript">
+    const div_parties = document.getElementById("parties");
+    const div_plms = document.getElementById("parliaments");
     
+    function add_party() {
+        let str = '<div class="party">';
+        str += `<p>`;
+        str += `Short Name: <input id="TODO"><br>`;
+        str += `Full Name: <input id="TODO"><br>`;
+        str += `Color: <input type="color"><br>`;
+        str += `<button>DELETE PARTY</button> `;
+        str += `</div>`
+        div_parties.innerHTML += str;
+    }
 </script>
