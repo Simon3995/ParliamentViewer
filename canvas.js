@@ -1,3 +1,5 @@
+import { schedule_frame } from "./main.js";
+
 export const c = document.getElementById("canvas");
 export const ctx = c.getContext("2d");
 
@@ -18,4 +20,5 @@ export function transform_ctx() {
 	ctx.setTransform(1, 0, 0, 1, 0, 0);
 	ctx.translate(offset_x, canvas.height - offset_y);
 	ctx.scale(scale, scale);
+	schedule_frame();
 }

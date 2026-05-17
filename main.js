@@ -16,9 +16,15 @@ export const S = {
 	mouse_y: 0,
 }
 
-// main update loop
+let frameID = null;
+
+export function schedule_frame() {
+	if (frameID !== null) return;
+	frameID = requestAnimationFrame(update);
+}
+
+// main update function
 function update() {
-	requestAnimationFrame(update);
 
 	ctx.save();
 	ctx.setTransform(1, 0, 0, 1, 0, 0);
@@ -26,6 +32,7 @@ function update() {
 	ctx.restore();
 
 	S.cur_plm?.draw();
-}
 
-update();
+	// clean up scheduled frame
+	frameID = null;
+}

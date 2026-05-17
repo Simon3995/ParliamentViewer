@@ -1,4 +1,4 @@
-import { S } from "./main.js";
+import { S, schedule_frame } from "./main.js";
 import { Party, Fraction, Parliament, Timeline } from "./classes.js";
 import { update_sidebar } from "./sidebar.js";
 import { highlight, next, prev } from "./controller.js";
@@ -20,6 +20,7 @@ export function load_parliament(parliament) {
 	document.getElementById("title_ps").innerHTML = "";
 	document.getElementById("source").innerHTML = (parliament.source) ? `Source: <a target="#" href="${parliament.source}">${parliament.source}</a>` : "";
 	update_sidebar();
+	schedule_frame();
 }
 
 // load a new timeline
