@@ -11,6 +11,7 @@ export function toggle_edit_mode() {
 	S.edit_mode = !S.edit_mode;
 	if (S.edit_mode) document.getElementById("title_ps").innerHTML = " (Edited)";
 	document.getElementById("btn_reset").disabled = false;
+	document.getElementById("source").innerHTML = "";
 	update_sidebar();
 }
 
