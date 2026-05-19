@@ -31,6 +31,13 @@ function table() {
 		if (prevParl) {
 			const prevFrac = prevParl.fractions.find(f => f.party.name === frac.party.name);
 			diff = prevFrac ? frac.seat_amt - prevFrac.seat_amt : frac.seat_amt;
+			// subtract seats from diff if party is a merger or rebrand this election
+			if (frac.party.established === S.cur_plm.description && frac.party.founded_by) {
+				for (const ancestor of prevParl.fractions) {
+					if (!frac.party.founded_by.includes(ancestor.party.id)) continue;
+					diff -= ancestor.seat_amt;
+				}
+			}
 		}
 		
 		if (diff == frac.seat_amt) {
