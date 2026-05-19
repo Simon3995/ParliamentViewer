@@ -196,6 +196,6 @@ export class Party {
 
     // clone this party without reference to the original
     clone() {
-        return new Party(this.name, this.fullname, this.id, this.color, this.image);
+        return new Party(this.name, this.fullname, this.id, this.color, this.image, this.established, this.founded_by);
     }
 }
