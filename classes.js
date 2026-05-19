@@ -184,12 +184,14 @@ export class Fraction {
 
 // a class for a political party, independent of year or election
 export class Party {
-    constructor(name, fullname, id, color = "#000000", image = null) {
+    constructor(name, fullname, id, color = "#000000", image = null, established = null, founded_by = null) {
         this.name = name;
         this.fullname = fullname;
         this.id = id;
         this.color = color;
         this.image = image;
+        this.established = established;
+        this.founded_by = founded_by;
     }
 
     // clone this party without reference to the original
