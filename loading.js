@@ -3,6 +3,8 @@ import { Party, Fraction, Parliament, Timeline } from "./classes.js";
 import { update_sidebar } from "./sidebar.js";
 import { highlight, next, prev } from "./controller.js";
 
+const SPRITE_SIZE = 200;
+
 // load a new parliament and update sidebar info
 export function load_parliament(parliament) {
 	// set initial table order + visual order
@@ -42,8 +44,6 @@ export async function load_timeline(name) {
 		S.cur_tml.parties[party_id] = party;
 	}
 
-	await Promise.all(image_promises);
-
 	// construct list of parliaments
 	S.cur_tml.parliaments = data.parliaments.map(par => {
 		return new Parliament(par.fractions.map(frac => {
@@ -57,6 +57,7 @@ export async function load_timeline(name) {
 	generate_party_imgs();
 	highlight(null);
 	next();
+	await Promise.all(image_promises);
 }
 
 // return a promise for loading an image
@@ -68,7 +69,9 @@ function load_img(party, src) {
 			return;
 		}
 		party.image.onload = () => {
-            party.image_loaded = true;
+			party.image_loaded = true;
+			build_party_sprite(party);
+			schedule_frame();
             resolve(party);
         };
         party.image.onerror = () => {
@@ -82,25 +85,42 @@ function load_img(party, src) {
 // generate circular seat icons for each party in the current timeline
 export function generate_party_imgs() {
 	S.party_imgs = {};
-	const s = 200;
+	const s = SPRITE_SIZE;
 	for (const name in S.cur_tml.parties) {
 		const party = S.cur_tml.parties[name];
-		const sprite = document.createElement("canvas");
-		const sctx = sprite.getContext("2d");
-		sprite.width = sprite.height = s;
-		sctx.fillStyle = party.color;
-		sctx.arc(s/2, s/2, s/2, 0, 2*Math.PI);
-		sctx.fill();
-		if (party.image_loaded) {
-			const scale = s/2;
-			sctx.drawImage(party.image, s/2-scale, s/2-scale, 2*scale, 2*scale);
+		if (!party.image_loaded) {
+			build_base_img(party);
 		} else {
-			sctx.fillStyle = "white";
-			sctx.textAlign = "center";
-			sctx.textBaseline = "middle";
-			sctx.font = `bold ${0.56*s}px Atkinson`;
-			sctx.fillText(party.name, s/2, 0.54*s, 0.85*s);
+			build_party_sprite(party);
 		}
-		S.party_imgs[party.id] = sprite;
 	}
+}
+
+// generates a base sprite for a party with no logo loaded
+function build_base_img(party) {
+	const sprite = document.createElement("canvas");
+	const sctx = sprite.getContext("2d");
+	sprite.width = sprite.height = SPRITE_SIZE;
+	sctx.fillStyle = party.color;
+	sctx.arc(SPRITE_SIZE/2, SPRITE_SIZE/2, SPRITE_SIZE/2, 0, 2*Math.PI);
+	sctx.fill();
+	sctx.fillStyle = "white";
+	sctx.textAlign = "center";
+	sctx.textBaseline = "middle";
+	sctx.font = `bold ${0.56*SPRITE_SIZE}px Atkinson`;
+	sctx.fillText(party.name, SPRITE_SIZE/2, 0.54*SPRITE_SIZE, 0.85*SPRITE_SIZE);
+	S.party_imgs[party.id] = sprite;
+}
+
+// produces the sprite of a party logo and overwrites the party's base sprite
+function build_party_sprite(party) {
+	const sprite = document.createElement("canvas");
+	const sctx = sprite.getContext("2d");
+	sprite.width = sprite.height = SPRITE_SIZE;
+	sctx.fillStyle = party.color;
+	sctx.arc(SPRITE_SIZE/2, SPRITE_SIZE/2, SPRITE_SIZE/2, 0, 2*Math.PI);
+	sctx.fill();
+	const scale = SPRITE_SIZE/2;
+	sctx.drawImage(party.image, SPRITE_SIZE/2-scale, SPRITE_SIZE/2-scale, 2*scale, 2*scale);
+	S.party_imgs[party.id] = sprite;
 }
