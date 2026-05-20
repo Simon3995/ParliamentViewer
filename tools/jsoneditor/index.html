@@ -70,11 +70,18 @@
     const div_parties = document.getElementById("parties");
     const div_plms = document.getElementById("parliaments");
     let parties = [];
+    let plms = [];
 
     // find the lowest unused party index
     function new_party_index() {
         let id = 0;
         while (parties[id]) id++;
+        return id;
+    }
+
+    function new_plm_index() {
+        let id = 0;
+        while (plms[id]) id++;
         return id;
     }
     
@@ -114,5 +121,9 @@
             document.getElementById(id).remove();
             delete parties[id];
         }
+    }
+
+    function add_plm() {
+        
     }
 </script>
