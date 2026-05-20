@@ -77,6 +77,7 @@ function table() {
 		const curr_party_names = new Set(S.cur_plm.fractions.map(f => f.party.name));
 		left_plm = prev_parl.fractions
 			.filter(f => !curr_party_names.has(f.party.name))
+			.filter(f => !fracs.some(x => x.party.established === parliament.description && x.party.founded_by?.includes(f.party.id)))
 			.map(f => f.party);
 	} else {
 		left_plm = [];
