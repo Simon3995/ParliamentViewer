@@ -103,14 +103,15 @@
                 <img src=""><br>
             </div>
         `;
-        div_parties.innerHTML += str;
+
+        div_parties.insertAdjacentHTML('beforeend', str);
     }
 
     // remove party from the DOM and from the parties array
     function delete_party(id) {
-        if (confirm(`Remove party ${id}?`)) {
+        if (confirm(`Remove party ${parties[id].name}? (ID=${id})`)) {
             document.getElementById(id).remove();
-            parties.splice(id, 1);
+            delete parties[id];
         }
     }
 </script>
