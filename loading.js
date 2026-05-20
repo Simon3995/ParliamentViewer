@@ -37,7 +37,7 @@ export async function load_timeline(name) {
 	// construct list of parties
 	for (const party_id in data.parties) {
 		const pdata = data.parties[party_id];
-		const party = new Party(pdata.shortname, pdata.fullname, party_id, pdata.color, new Image());
+		const party = new Party(pdata.shortname, pdata.fullname, party_id, pdata.color, new Image(), pdata.established, pdata.founded_by, pdata.split_from);
 		image_promises.push(load_img(party, pdata.image));
 		S.cur_tml.parties[party_id] = party;
 	}

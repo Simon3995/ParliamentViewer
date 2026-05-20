@@ -184,16 +184,19 @@ export class Fraction {
 
 // a class for a political party, independent of year or election
 export class Party {
-    constructor(name, fullname, id, color = "#000000", image = null) {
+    constructor(name, fullname, id, color = "#000000", image = null, established = null, founded_by = null, split_from = null) {
         this.name = name;
         this.fullname = fullname;
         this.id = id;
         this.color = color;
         this.image = image;
+        this.established = established;
+        this.founded_by = founded_by;
+        this.split_from = split_from;
     }
 
     // clone this party without reference to the original
     clone() {
-        return new Party(this.name, this.fullname, this.id, this.color, this.image);
+        return new Party(this.name, this.fullname, this.id, this.color, this.image, this.established, this.founded_by, this.split_from);
     }
 }

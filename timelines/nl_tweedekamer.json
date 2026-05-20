@@ -5,7 +5,9 @@
             "shortname": "BIJ1",
             "fullname": "BIJ1",
             "color": "#000000",
-            "image": "logos/nl/BIJ1.png"
+            "image": "logos/nl/BIJ1.png",
+            "established": "Tweede Kamerverkiezingen 2017",
+            "split_from": ["denk"]
         },
         "ppnl": {
             "shortname": "PPNL",
@@ -29,31 +31,41 @@
             "shortname": "GL",
             "fullname": "GroenLinks",
             "color": "#00cc00",
-            "image": "logos/nl/GL.png"
+            "image": "logos/nl/GL.png",
+            "established": "Tweede Kamerverkiezingen 1989",
+            "founded_by": ["cpn", "psp", "evp", "ppr"]
         },
         "glpvda": {
             "shortname": "GL/PvdA",
             "fullname": "GroenLinks / Partij van de Arbeid",
             "color": "#01af40",
-            "image": "logos/nl/GLPvdA.png"
+            "image": "logos/nl/GLPvdA.png",
+            "established": "Tweede Kamerverkiezingen 2023",
+            "founded_by": ["pvda", "gl"]
         },
         "pro": {
             "shortname": "PRO",
             "fullname": "Progressief Nederland",
             "color": "#e82323",
-            "image": "logos/nl/PRO.png"
+            "image": "logos/nl/PRO.png",
+            "established": "Current Situation",
+            "founded_by": ["glpvda"]
         },
         "pvda": {
             "shortname": "PvdA",
             "fullname": "Partij van de Arbeid",
             "color": "#ff0000",
-            "image": "logos/nl/PvdA.png"
+            "image": "logos/nl/PvdA.png",
+            "established": "Tweede Kamerverkiezingen 1946",
+            "founded_by": ["sdap", "vdb", "cdu"]
         },
         "denk": {
             "shortname": "DENK",
             "fullname": "DENK",
             "color": "#38bfc2",
-            "image": "logos/nl/DENK.png"
+            "image": "logos/nl/DENK.png",
+            "established":"Tweede Kamerverkiezingen 2017",
+            "split_from": ["pvda"]
         },
         "volt": {
             "shortname": "Volt",
@@ -71,7 +83,9 @@
             "shortname": "CU",
             "fullname": "ChristenUnie",
             "color": "#8fd1eb",
-            "image": "logos/nl/CU.png"
+            "image": "logos/nl/CU.png",
+            "established": "Tweede Kamerverkiezingen 2002",
+            "founded_by": ["rpf", "gpv"]
         },
         "fnp": {
             "shortname": "FNP",
@@ -83,13 +97,17 @@
             "shortname": "CDA",
             "fullname": "Christen-Democratisch Appèl",
             "color": "#007c5e",
-            "image": "logos/nl/CDA.png"
+            "image": "logos/nl/CDA.png",
+            "established": "Tweede Kamerverkiezingen 1977",
+            "founded_by": ["kvp", "chu", "arp"]
         },
         "nsc": {
             "shortname": "NSC",
             "fullname": "Nieuw Sociaal Contract",
             "color": "#181d57",
-            "image": "logos/nl/NSC.png"
+            "image": "logos/nl/NSC.png",
+            "established": "Tweede Kamerverkiezingen 2023",
+            "split_from": ["cda"]
         },
         "50plus": {
             "shortname": "50PLUS",
@@ -101,7 +119,10 @@
             "shortname": "VVD",
             "fullname": "Volkspartij voor Vrijheid en Democratie",
             "color": "#21276a",
-            "image": "logos/nl/VVD.png"
+            "image": "logos/nl/VVD.png",
+            "established": "Tweede Kamerverkiezingen 1948",
+            "founded_by": ["pvdv"],
+            "split_from": ["pvda"]
         },
         "bbb": {
             "shortname": "BBB",
@@ -113,7 +134,9 @@
             "shortname": "JA21",
             "fullname": "Juiste Antwoord 2021",
             "color": "#21276a",
-            "image": "logos/nl/JA21.png"
+            "image": "logos/nl/JA21.png",
+            "established": "Tweede Kamerverkiezingen 2021",
+            "split_from": ["fvd"]
         },
         "sgp": {
             "shortname": "SGP",
@@ -125,12 +148,16 @@
             "shortname": "PVV",
             "fullname": "Partij voor de Vrijheid",
             "color": "#82b2ff",
-            "image": "logos/nl/PVV.png"
+            "image": "logos/nl/PVV.png",
+            "established":"Tweede Kamerverkiezingen 2006",
+            "split_from": ["vvd"]
         },
         "gm": {
             "shortname": "GM",
             "fullname": "Groep Markuszower",
-            "color": "#169793ff"
+            "color": "#169793ff",
+            "established": "Current Situation",
+            "split_from": ["pvv"]
         },
         "fvd": {
             "shortname": "FvD",
@@ -142,7 +169,9 @@
             "shortname": "LPF",
             "fullname": "Lijst Pim Fortuyn",
             "color": "rgb(18, 74, 158)",
-            "image": "logos/nl/LPF.png"
+            "image": "logos/nl/LPF.png",
+            "established": "Tweede Kamerverkiezingen 2002",
+            "split_from": ["ln"]
         },
         "ln": {
             "shortname": "LN",
@@ -160,7 +189,9 @@
             "shortname": "GPV",
             "fullname": "Gereformeerd Politiek Verbond",
             "color": "#ff7b00",
-            "image": "logos/nl/GPV.png"
+            "image": "logos/nl/GPV.png",
+            "established":"Tweede Kamerverkiezingen 1952",
+            "split_from": ["arp"]
         },
         "aov": {
             "shortname": "AOV",
@@ -178,7 +209,15 @@
             "shortname": "CD",
             "fullname": "Centrumdemocraten",
             "color": "#c9dfff",
-            "image": "logos/nl/CD.png"
+            "image": "logos/nl/CD.png",
+            "established": "Tweede Kamerverkiezingen 1986",
+            "split_from": ["cp"]
+        },
+        "cp": {
+            "shortname": "CP",
+            "fullname": "Centrumpartij",
+            "color": "#ffffff",
+            "image": "logos/nl/CP.png"
         },
         "psp": {
             "shortname": "PSP",
@@ -190,12 +229,17 @@
             "shortname": "PPR",
             "fullname": "Politieke Partij Radikalen",
             "color": "#e92f7cff",
-            "image": "logos/nl/PPR.png"
+            "image": "logos/nl/PPR.png",
+            "established": "Tweede Kamerverkiezingen 1971",
+            "split_from": ["kvp"]
         },
         "evp": {
             "shortname": "EVP",
             "fullname": "Evangelische Volkspartij",
-            "color": "rgb(240, 176, 0)"
+            "color": "rgb(240, 176, 0)",
+            "established": "Tweede Kamerverkiezingen 1981",
+            "founded_by": ["epv"],
+            "split_from": ["cda", "arp"]
         },
         "cpn": {
             "shortname": "CPN",
@@ -217,13 +261,17 @@
             "shortname": "DS'70",
             "fullname": "Democratisch Socialisten '70",
             "color": "#d40000ff",
-            "image": "logos/nl/DS70.png"
+            "image": "logos/nl/DS70.png",
+            "established": "Tweede Kamerverkiezingen 1971",
+            "split_from": "pvda"
         },
         "kvp": {
             "shortname": "KVP",
             "fullname": "Katholieke Volkspartij",
             "color": "#362511ff",
-            "image": "logos/nl/KVP.png"
+            "image": "logos/nl/KVP.png",
+            "established": "Tweede Kamerverkiezingen 1946",
+            "founded_by": ["rksp"]
         },
         "chu": {
             "shortname": "CHU",
@@ -256,7 +304,9 @@
             "shortname": "PvdV",
             "fullname": "Partij van de Vrijheid",
             "color": "#092447ff",
-            "image": "logos/nl/PvdV.png"
+            "image": "logos/nl/PvdV.png",
+            "established": "Tweede Kamerverkiezingen 1946",
+            "founded_by": ["lsp"]
         },
         "rksp": {
             "shortname": "RKSP",
@@ -673,7 +723,7 @@
                 { "id": "gpv", "seats": 1 },
                 { "id": "vvd", "seats": 36 },
                 { "id": "sgp", "seats": 3 },
-                { "id": "cd", "seats": 1 }
+                { "id": "cp", "seats": 1 }
             ]
         },
         {

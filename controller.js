@@ -9,19 +9,44 @@ const btn_next = document.getElementById("btn_next");
 const btn_first = document.getElementById("btn_first");
 const btn_last = document.getElementById("btn_last");
 
-document.getElementById("btn_edit").onclick = toggle_edit_mode;
-document.getElementById("btn_reset").onclick = reset_plm;
-document.getElementById("btn_add").onclick = show_add_menu;
-document.getElementById("btn_del").onclick = delete_hlt;
-document.getElementById("btn_left").onclick = move_party_left;
-document.getElementById("btn_right").onclick = move_party_right;
-document.getElementById("btn_sort").onclick = sort_table_by_seats;
-document.getElementById("btn_confirm_add").onclick = add_party;
-document.getElementById("btn_cancel_add").onclick = cancel_add_party;
-btn_prev.onclick = prev;
-btn_next.onclick = next;
-btn_first.onclick = first;
-btn_last.onclick = last;
+// The globals, function and body-eventlistener below all solve a problem with the button animations.
+// When a button is pressed, it moves due to an animation.
+// If the mouse is at a part where the button moved away from, 
+// it will no longer be captured by btn.onclick.
+let pressed_rect = null;
+let mouseup_fn = null;
+function on_click(btn, fn) {
+	btn.addEventListener('mousedown', function (e) {
+		pressed_rect = btn.getBoundingClientRect();
+		mouseup_fn = fn;
+	});
+}
+document.body.addEventListener('mouseup', function (e) {
+	if (pressed_rect &&
+		e.clientX >= pressed_rect.left &&
+		e.clientX <= pressed_rect.right &&
+		e.clientY >= pressed_rect.top &&
+		e.clientY <= pressed_rect.bottom
+	) {
+		mouseup_fn();
+	}
+	pressed_rect = null;
+	mouseup_fn = null;
+});
+
+on_click(document.getElementById("btn_edit"), toggle_edit_mode);
+on_click(document.getElementById("btn_reset"), reset_plm);
+on_click(document.getElementById("btn_add"), show_add_menu);
+on_click(document.getElementById("btn_del"), delete_hlt);
+on_click(document.getElementById("btn_left"), move_party_left);
+on_click(document.getElementById("btn_right"), move_party_right);
+on_click(document.getElementById("btn_sort"), sort_table_by_seats);
+on_click(document.getElementById("btn_confirm_add"), add_party);
+on_click(document.getElementById("btn_cancel_add"), cancel_add_party);
+on_click(btn_prev, prev);
+on_click(btn_next, next);
+on_click(btn_first, first);
+on_click(btn_last, last);
 
 // lose focus on enter press in number input
 $(document).on("keyup", "input", function(e) {
