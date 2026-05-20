@@ -19,6 +19,13 @@
             .party {
                 background-color: #fff2;
                 margin-bottom: 10px;
+                position: relative;
+            }
+            .indent {
+                margin-left: 120px;
+            }
+            input[type=text] {
+                width: 400px;
             }
             input[type=color] {
                 border: none;
@@ -32,6 +39,9 @@
                 border-radius: 50px;
                 border: none;
                 background-color: white;
+                position: absolute;
+                top: 10px;
+                left: 10px;
             }
         </style>
     </head>
@@ -68,23 +78,35 @@
         return id;
     }
     
+    // add a 
     function add_party() {
         const id = new_party_index();
-        parties[id] = "party placeholder";
+        parties[id] = {
+            id: null,
+            name: null,
+            fullname: null,
+            color: null,
+            image: null,
+        }
         
-        let str = `<div id="${id}" class="party">`;
-        str += `<p>`;
-        str += `Unique ID: <input><br>`;
-        str += `Short Name: <input><br>`;
-        str += `Full Name: <input><br>`;
-        str += `Color: <input value="#ff0000" type="color"><br>`;
-        str += `Image: <input type="file"><br>`;
-        str += `<img src=""><br>`;
-        str += `<button onclick="delete_party(${id})">DELETE PARTY</button> `;
-        str += `</div>`
+        let str = `
+        <div id="${id}" class="party">
+            <div class="indent">
+                Unique ID: <input type="text"><br>
+                Short Name: <input type="text"><br>
+                Full Name: <input type="text"><br>
+                Color: <input value="#ff0000" type="color"><br>
+                Image: <input type="file"><br>
+                
+            </div>
+            <button onclick="delete_party(${id})">DELETE PARTY</button>
+            <img src=""><br>
+        </div>
+        `;
         div_parties.innerHTML += str;
     }
 
+    // remove party from the DOM and from the parties array
     function delete_party(id) {
         if (confirm(`Remove party ${id}?`)) {
             document.getElementById(id).remove();
