@@ -78,7 +78,8 @@
         return id;
     }
     
-    // add a 
+    // add a party adding menu to the DOM
+    // add new party entry in the parties array
     function add_party() {
         const id = new_party_index();
         parties[id] = {
@@ -90,18 +91,17 @@
         }
         
         let str = `
-        <div id="${id}" class="party">
-            <div class="indent">
-                Unique ID: <input type="text"><br>
-                Short Name: <input type="text"><br>
-                Full Name: <input type="text"><br>
-                Color: <input value="#ff0000" type="color"><br>
-                Image: <input type="file"><br>
-                
+            <div id="${id}" class="party">
+                <div class="indent">
+                    Unique ID: <input type="text" oninput="parties[${id}].id = this.value"><br>
+                    Short Name: <input type="text" oninput="parties[${id}].name = this.value"><br>
+                    Full Name: <input type="text" oninput="parties[${id}].fullname = this.value"><br>
+                    Color: <input type="color" oninput="parties[${id}].color = this.value"><br>
+                    Image SRC: <input type="text" oninput="parties[${id}].image = this.value"><br>
+                </div>
+                <button onclick="delete_party(${id})">DELETE PARTY</button>
+                <img src=""><br>
             </div>
-            <button onclick="delete_party(${id})">DELETE PARTY</button>
-            <img src=""><br>
-        </div>
         `;
         div_parties.innerHTML += str;
     }
