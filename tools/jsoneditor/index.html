@@ -17,14 +17,21 @@
                 margin: 0px 30px;
             }
             .party {
-                border: 1px solid dodgerblue;
-                margin-bottom: 6px;
+                background-color: #fff2;
+                margin-bottom: 10px;
             }
             input[type=color] {
                 border: none;
                 padding: 0;
                 height: 20px;
                 vertical-align: middle;
+            }
+            img {
+                height: 100px;
+                width: 100px;
+                border-radius: 50px;
+                border: none;
+                background-color: white;
             }
         </style>
     </head>
@@ -52,13 +59,24 @@
 <script type="text/javascript">
     const div_parties = document.getElementById("parties");
     const div_plms = document.getElementById("parliaments");
+    let parties = [];
+
+    // find the lowest unused party index
+    function new_party_index() {
+        let id = 0;
+        while (parties[id]) id++;
+        return id;
+    }
     
     function add_party() {
         let str = '<div class="party">';
         str += `<p>`;
-        str += `Short Name: <input id="TODO"><br>`;
-        str += `Full Name: <input id="TODO"><br>`;
-        str += `Color: <input type="color"><br>`;
+        str += `Unique ID: <input><br>`;
+        str += `Short Name: <input><br>`;
+        str += `Full Name: <input><br>`;
+        str += `Color: <input value="#ff0000" type="color"><br>`;
+        str += `Image: <input type="file"><br>`;
+        str += `<img src=""><br>`;
         str += `<button>DELETE PARTY</button> `;
         str += `</div>`
         div_parties.innerHTML += str;
