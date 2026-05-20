@@ -69,7 +69,10 @@
     }
     
     function add_party() {
-        let str = '<div class="party">';
+        const id = new_party_index();
+        parties[id] = "party placeholder";
+        
+        let str = `<div id="${id}" class="party">`;
         str += `<p>`;
         str += `Unique ID: <input><br>`;
         str += `Short Name: <input><br>`;
@@ -77,8 +80,15 @@
         str += `Color: <input value="#ff0000" type="color"><br>`;
         str += `Image: <input type="file"><br>`;
         str += `<img src=""><br>`;
-        str += `<button>DELETE PARTY</button> `;
+        str += `<button onclick="delete_party(${id})">DELETE PARTY</button> `;
         str += `</div>`
         div_parties.innerHTML += str;
+    }
+
+    function delete_party(id) {
+        if (confirm(`Remove party ${id}?`)) {
+            document.getElementById(id).remove();
+            parties.splice(id, 1);
+        }
     }
 </script>
