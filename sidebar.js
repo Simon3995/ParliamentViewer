@@ -1,28 +1,34 @@
 import { S } from "./main.js";
 
+// generate all tables in the sidebar
+function build_sidebar() {
+	seat_dist_table();
+	left_parl_table();
+}
+
 // generate a seat table for the current parliament object
-function table() {
+function seat_dist_table() {
 	let parliament = S.ori_plm;
 	let string = "";
 	let total_seats = 0;
 	let total_hlt = 0;
 	string += `<table>`;
 	string += `<thead>`
-	
+
 	let fracs = [...S.ord_tab];
-	
+
 	string += '<tr>';
 	string += '<th class="col_l">Party</th>';
-    string += '<th class="col_m">Full Name</th>';
-    string += '<th class="col_r">Seats</th>';
-    string += '</tr>';
+	string += '<th class="col_m">Full Name</th>';
+	string += '<th class="col_r">Seats</th>';
+	string += '</tr>';
 
 	string += `</thead><tbody>`;
 
-    // write all table HTML to a string
+	// write all table HTML to a string
 	for (let i in fracs) {
 		i = Number(i);
-        const frac = fracs[i];
+		const frac = fracs[i];
 
 		// find difference
 		let diff = 0;
@@ -39,7 +45,7 @@ function table() {
 				}
 			}
 		}
-		
+
 		if (diff == frac.seat_amt) {
 			diff = `<span class="greener">&#9650;${diff}</span>`;
 		} else if (diff > 0) {
@@ -65,11 +71,16 @@ function table() {
 	string += `</tbody>`;
 	string += `<tfoot><tr id="footer"></tr></tfoot>`;
 	string += `</table>`;
-	
+
 	// insert HTML string into document
 	document.getElementById("table").innerHTML = string;
+}
 
+// generate the table of parties that have left parliament if available
+function left_parl_table() {
 	// find parties that left parliament
+	let parliament = S.ori_plm;
+	let fracs = [...S.ord_tab];
 	let left_plm = [];
 	const prev_idx = (S.cur_tml.parliaments.indexOf(parliament) + 1);
 	const prev_parl = S.cur_tml.parliaments[prev_idx];
@@ -268,7 +279,7 @@ export function update_sidebar() {
 	if (S.edit_mode) {
 		table_edit_mode();
 	} else {
-		table();
+		build_sidebar();
 	}
 	table_highlight();
 	update_table_footer();
