@@ -109,7 +109,8 @@
 
     // remove party from the DOM and from the parties array
     function delete_party(id) {
-        if (confirm(`Remove party ${parties[id].name}? (ID=${id})`)) {
+        const p = parties[id];
+        if (confirm(`Remove party?\n\tid: ${p.id}\n\tname: ${p.name}\n\tfullname: ${p.fullname}`)) {
             document.getElementById(id).remove();
             delete parties[id];
         }
