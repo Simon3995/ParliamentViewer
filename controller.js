@@ -214,7 +214,6 @@ export function highlight(id) {
 		S.cur_hlt.push(id);
 	}
 
-	console.log(S.cur_hlt);
 	table_highlight();
 	update_table_footer();
 	update_buttons();
