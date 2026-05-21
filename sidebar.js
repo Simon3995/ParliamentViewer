@@ -131,6 +131,14 @@ function changes_table() {
 			str += `<td>${party.name}</td>`;
 			str += '</tr>';
 		}
+		if (party.founded_by?.length > 1 && !party.split_from) {
+			// case 2: parties merged
+			str += '<tr>';
+			str += `<td>${party.founded_by.map(p => S.cur_tml.parties[p].name).join(', ')}</td>`;
+			str += '<td>Merged to</td>';
+			str += `<td>${party.name}</td>`;
+			str += '</tr>';
+		}
 	}
 	if (str) {
 		let full_str = '<h2>Party Changes</h2>';
