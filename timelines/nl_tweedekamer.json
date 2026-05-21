@@ -263,7 +263,7 @@
             "color": "#d40000ff",
             "image": "logos/nl/DS70.png",
             "established": "Tweede Kamerverkiezingen 1971",
-            "split_from": "pvda"
+            "split_from": ["pvda"]
         },
         "kvp": {
             "shortname": "KVP",

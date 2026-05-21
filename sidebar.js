@@ -139,7 +139,7 @@ function changes_table() {
 			str += `<td>${party.founded_by.map(p => S.cur_tml.parties[p].name).join(', ')}</td>`;
 			str += '</tr>';
 		}
-		if (party.split_from?.length > 0 && !party.founded_by) {
+		if (party.split_from && !party.founded_by) {
 			// case 3: party split
 			str += '<tr>';
 			str += `<td>${party.name}</td>`;
