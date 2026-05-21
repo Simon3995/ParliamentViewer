@@ -46,12 +46,15 @@
         </style>
     </head>
     <body>
-        <button>EXPORT JSON</button>
-        <button>IMPORT JSON</button>
+        Import JSON: <input type="file" id="import"><br>
+        <button onclick="exportJSON()">EXPORT JSON</button>
+        
         <br><br>
 
         <h1>GENERAL INFO</h1>
-        <p>Name (e.g. nl_tweedekamer): <input id="name"></p>
+        <p class="row"><label>Name (e.g. nl_tweedekamer): </label><input id="name"></p>
+        <p class="row"><label>Title (e.g. Tweede Kamer): </label><input id="title"></p>
+        <p class="row"><label>Country (e.g. Netherlands): </label><input id="country"></p>
         <br>
 
         <h1>PARTIES</h1>
@@ -79,39 +82,100 @@
         return id;
     }
 
+    // find the lowest unused parliament index
     function new_plm_index() {
         let id = 0;
         while (plms[id]) id++;
         return id;
     }
+
+    // toggle whether a checkbox list is shown or hidden
+    function toggle_collapse(el) {
+        const list = el.nextElementSibling;
+        const open = list.classList.toggle('open');
+        el.textContent = open ? 'HIDE' : 'SHOW';
+    }
+
+    // create a checkbox list for given party
+    function build_checkbox_list(container_id, party_id, field, selected_ids) {
+        const wrap = document.getElementById(container_id);
+        if (!wrap) return;
+        wrap.innerHTML = '';
+        for (const [i, p] in Object.entries(parties)) {
+            if (!p || i === party_id) continue;  // the party itself should not be included in the list
+            const checked = selected_ids.includes(i) ? 'checked' : '';
+            const item = document.createElement('label');  // label element ensures the text is clickable too
+            item.className = 'checkbox-item';
+            // if party has no name, display name "party [id]"
+            item.innerHTML = `<input type="checkbox" ${checked} onchange="toggle_checkbox(${party_id},'${field}',${i},this.checked)"><span>${p.name || ('party ' + i)}</span>`;
+            wrap.appendChild(item);
+        }
+
+        // show specific message if there are no other parties to pick from
+        if (wrap.children.length === 0) {
+            wrap.innerHTML = '<span style="color:#666;font-size:13px">No other parties</span>';
+        }
+    }
+
+    // update merged/split array after a checkbox has been clicked
+    function toggle_checkbox(party_id, field, other_id, checked) {
+        const arr = parties[party_id][field] || [];
+        if (checked) {
+            // add the other party to this party's merged/split array
+            if (!arr.includes(other_id)) arr.push(other_id);
+        } else {
+            // find idx of other party and remove it from merged/split array
+            const idx = arr.indexOf(other_id);
+            if (idx > -1) arr.splice(idx, 1);
+        }
+        parties[party_id][field] = arr;  // apply the updated array
+    }
+
+    // when a party is added or removed, update all checkbox lists on the page accordingly
+    function refresh_all_checkbox_lists() {
+        for (const [id, p] in Object.entries(parties)) {
+            if (!p) continue;
+            build_checkbox_list('merged-list-' + id, id, 'merged_from', p.merged_from || []);
+            build_checkbox_list('split-list-' + id, id, 'split_from', p.split_from || []);
+        }
+    }
     
     // add a party adding menu to the DOM
     // add new party entry in the parties array
-    function add_party() {
+    function add_party(data) {
         const id = new_party_index();
-        parties[id] = {
-            id: null,
-            name: null,
-            fullname: null,
-            color: null,
-            image: null,
-        }
-        
-        let str = `
-            <div id="${id}" class="party">
-                <div class="indent">
-                    Unique ID: <input type="text" oninput="parties[${id}].id = this.value"><br>
-                    Short Name: <input type="text" oninput="parties[${id}].name = this.value"><br>
-                    Full Name: <input type="text" oninput="parties[${id}].fullname = this.value"><br>
-                    Color: <input type="color" oninput="parties[${id}].color = this.value"><br>
-                    Image SRC: <input type="text" oninput="parties[${id}].image = this.value"><br>
+        parties[id] = data ? { ...data } : { id: '', name: '', fullname: '', name_en: '', fullname_en: '', color: '#aaaaaa', image: '', established: '', merged_from: [], split_from: [] };
+        const p = parties[id];
+        const str = `
+            <div id="party-${id}" class="party">
+                <div class="img-wrap"><img id="img-${id}" src="${esc(p.image || '')}"></div>
+                <div class="row"><label>Unique ID:</label><input type="text" value="${esc(p.id)}" oninput="parties[${id}].id=this.value"></div>
+                <div class="row"><label>Short Name:</label><input type="text" value="${esc(p.name)}" oninput="parties[${id}].name=this.value;refresh_all_checkbox_lists()"></div>
+                <div class="row"><label>Full Name:</label><input type="text" value="${esc(p.fullname)}" oninput="parties[${id}].fullname=this.value"></div>
+                <div class="row"><label>Short Name (EN):</label><input type="text" value="${esc(p.name_en || '')}" oninput="parties[${id}].name_en=this.value"></div>
+                <div class="row"><label>Full Name (EN):</label><input type="text" value="${esc(p.fullname_en || '')}" oninput="parties[${id}].fullname_en=this.value"></div>
+                <div class="row"><label>Color:</label><input type="color" value="${p.color || '#aaaaaa'}" oninput="parties[${id}].color=this.value"></div>
+                <div class="row"><label>Image URL:</label><input type="text" value="${esc(p.image || '')}" oninput="parties[${id}].image=this.value;document.getElementById('img-${id}').src=this.value"></div>
+                <div class="row"><label>Established (year):</label><input type="number" value="${p.established || ''}" style="width:100px" oninput="parties[${id}].established=this.value?+this.value:''"></div>
+                <div class="row">
+                <span class="collapsible-label">Merged from:</span>
+                <div class="collapse-wrap">
+                    <button class="collapse-toggle" onclick="toggle_collapse(this)">SHOW</button>
+                    <div class="checkbox-list" id="merged-list-${id}"></div>
                 </div>
-                <button onclick="delete_party(${id})">DELETE PARTY</button>
-                <img src=""><br>
+            </div>
+            <div class="row">
+                <span class="collapsible-label">Split from:</span>
+                <div class="collapse-wrap">
+                    <button class="collapse-toggle" onclick="toggle_collapse(this)">SHOW</button>
+                    <div class="checkbox-list" id="split-list-${id}"></div>
+                </div>
+                </div>
+                <button class="del-btn" onclick="delete_party(${id})">✕ DELETE PARTY</button>
             </div>
         `;
-
         div_parties.insertAdjacentHTML('beforeend', str);
+        refresh_all_checkbox_lists();
     }
 
     // remove party from the DOM and from the parties array
@@ -124,6 +188,13 @@
     }
 
     function add_plm() {
-        
+        // todo
+    }
+
+    function esc(s) {
+        return String(s || '')
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/</g, '&lt;');
     }
 </script>
