@@ -158,12 +158,12 @@ th {
     user-select: none;
 }
 
-tr:hover {
+#table tr:hover {
     color: #85d8ff;
     cursor: pointer;
 }
 
-tr:active {
+#table tr:active {
     color: #569fc0;
 }
 
