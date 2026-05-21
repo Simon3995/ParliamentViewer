@@ -4,6 +4,7 @@ import { S } from "./main.js";
 function build_sidebar() {
 	seat_dist_table();
 	left_parl_table();
+	changes_table();
 }
 
 // generate a seat table for the current parliament object
@@ -108,6 +109,37 @@ function left_parl_table() {
 		document.getElementById("left_plm").innerHTML = left_string;
 	} else {
 		document.getElementById("left_plm").innerHTML = '';
+	}
+}
+
+
+// generate the table indicating party mergers, rebrands and splits
+function changes_table() { 
+	const parliament = S.ori_plm;
+	const fracs = [...S.ord_tab];
+	let str = "";
+	for (const frac of fracs) {
+		const party = frac.party;
+		if (party.established !== parliament.description) {
+			continue;
+		}
+		if (party.founded_by?.length === 1 && !party.split_from) {
+			// case 1: single party rebranded
+			str += '<tr>';
+			str += `<td>${S.cur_tml.parties[party.founded_by[0]].name}</td>`;
+			str += '<td>Rebranded to</td>';
+			str += `<td>${party.name}</td>`;
+			str += '</tr>';
+		}
+	}
+	if (str) {
+		let full_str = '<h2>Party Changes</h2>';
+		full_str += '<table><tr><th class="col_l">Previous</th><th class="col_m">How</th><th class="col_r">New Party</th></tr>';
+		full_str += str;
+		full_str += '</table';
+		document.getElementById("party_changes").innerHTML = full_str;
+	} else {
+		document.getElementById("party_changes").innerHTML = '';
 	}
 }
 
