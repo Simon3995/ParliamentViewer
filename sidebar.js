@@ -147,6 +147,14 @@ function changes_table() {
 			str += `<td>${party.split_from.map(p => S.cur_tml.parties[p].name).join(', ')}</td>`;
 			str += '</tr>';
 		}
+		if (party.split_from && party.founded_by) {
+			// case 4: split & merge
+			str += '<tr>';
+			str += `<td>${party.name}</td>`;
+			str += '<td>Split & Merged from</td>';
+			str += `<td>${[...party.split_from, ...party.founded_by].map(p => S.cur_tml.parties[p].name).join(', ')}</td>`;
+			str += '</tr>';
+		}
 	}
 	if (str) {
 		let full_str = '<h2>Party Changes</h2>';
