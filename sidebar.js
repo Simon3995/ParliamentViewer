@@ -126,23 +126,31 @@ function changes_table() {
 		if (party.founded_by?.length === 1 && !party.split_from) {
 			// case 1: single party rebranded
 			str += '<tr>';
-			str += `<td>${S.cur_tml.parties[party.founded_by[0]].name}</td>`;
-			str += '<td>Rebranded to</td>';
 			str += `<td>${party.name}</td>`;
+			str += '<td>Rebranded to</td>';
+			str += `<td>${S.cur_tml.parties[party.founded_by[0]].name}</td>`;
 			str += '</tr>';
 		}
 		if (party.founded_by?.length > 1 && !party.split_from) {
 			// case 2: parties merged
 			str += '<tr>';
-			str += `<td>${party.founded_by.map(p => S.cur_tml.parties[p].name).join(', ')}</td>`;
-			str += '<td>Merged to</td>';
 			str += `<td>${party.name}</td>`;
+			str += '<td>Merged from</td>';
+			str += `<td>${party.founded_by.map(p => S.cur_tml.parties[p].name).join(', ')}</td>`;
+			str += '</tr>';
+		}
+		if (party.split_from?.length > 0 && !party.founded_by) {
+			// case 3: party split
+			str += '<tr>';
+			str += `<td>${party.name}</td>`;
+			str += '<td>Split from</td>';
+			str += `<td>${party.split_from.map(p => S.cur_tml.parties[p].name).join(', ')}</td>`;
 			str += '</tr>';
 		}
 	}
 	if (str) {
 		let full_str = '<h2>Party Changes</h2>';
-		full_str += '<table><tr><th class="col_l">Previous</th><th class="col_m">How</th><th class="col_r">New Party</th></tr>';
+		full_str += '<table><tr><th class="col_l">New party</th><th class="col_m">How</th><th class="col_r">Previously</th></tr>';
 		full_str += str;
 		full_str += '</table';
 		document.getElementById("party_changes").innerHTML = full_str;
