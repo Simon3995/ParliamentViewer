@@ -127,7 +127,7 @@ function changes_table() {
 			// case 1: single party rebranded
 			str += '<tr>';
 			str += `<td>${party.name}</td>`;
-			str += '<td>Rebranded to</td>';
+			str += '<td>Rebranded from</td>';
 			str += `<td>${S.cur_tml.parties[party.founded_by[0]].name}</td>`;
 			str += '</tr>';
 		}

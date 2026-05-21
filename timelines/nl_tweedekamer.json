@@ -374,7 +374,9 @@
         "lk": {
             "shortname": "LK",
             "fullname": "Lid Keijzer",
-            "color": "#378747ff"
+            "color": "#378747ff",
+            "established": "Current Situation",
+            "split_from": ["bbb"]
         },
         "mpsl": {
             "shortname": "MPSL",
