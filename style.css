@@ -136,34 +136,23 @@ table {
     margin-bottom: 15px;
 }
 
-.col_l {
-    width: 100px;
-}
-
-.col_m {
-    width: 100%;
-}
-
-.col_r {
-    width: 90px;
-}
-
-td,
-th {
+.col_l, .col_r {
+    width: 20%;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+}
+
+td, th {
     text-align: center;
     padding: 2px 0px;
     user-select: none;
 }
 
-tr:hover {
+#table tr:hover {
     color: #85d8ff;
     cursor: pointer;
 }
 
-tr:active {
+#table tr:active {
     color: #569fc0;
 }
 
@@ -259,6 +248,7 @@ input[type=number] {
     color: white;
     border: none;
     text-align: center;
+    width: 75px;
 }
 
 span.icon {
