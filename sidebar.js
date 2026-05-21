@@ -160,7 +160,7 @@ function changes_table() {
 		let full_str = '<h2>Party Changes</h2>';
 		full_str += '<table><tr><th class="col_l">New party</th><th class="col_m">How</th><th class="col_r">Previously</th></tr>';
 		full_str += str;
-		full_str += '</table';
+		full_str += '</table>';
 		document.getElementById("party_changes").innerHTML = full_str;
 	} else {
 		document.getElementById("party_changes").innerHTML = '';
