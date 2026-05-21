@@ -82,8 +82,10 @@ $(document).on("change", "input", function(e) {
 // click a table row to highlight it
 $(document).on("click", "tbody tr", function(e) {
     if ($(e.target).is("input")) return;
+
+	const table_id = e.currentTarget.parentElement.parentElement.parentElement.id;
 	
-	if (!S.dragging) {
+	if (!S.dragging && table_id === "table") {
         highlight(e.currentTarget.id);
     }
 });

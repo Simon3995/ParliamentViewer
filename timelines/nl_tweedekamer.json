@@ -263,7 +263,7 @@
             "color": "#d40000ff",
             "image": "logos/nl/DS70.png",
             "established": "Tweede Kamerverkiezingen 1971",
-            "split_from": "pvda"
+            "split_from": ["pvda"]
         },
         "kvp": {
             "shortname": "KVP",
@@ -374,7 +374,9 @@
         "lk": {
             "shortname": "LK",
             "fullname": "Lid Keijzer",
-            "color": "#378747ff"
+            "color": "#378747ff",
+            "established": "Current Situation",
+            "split_from": ["bbb"]
         },
         "mpsl": {
             "shortname": "MPSL",
