@@ -50,6 +50,12 @@
                 top: 10px;
                 left: 10px;
             }
+            .checkbox-list {
+                display: none;
+            }
+            .checkbox-list.open {
+                display: inline-block;
+            }
         </style>
     </head>
     <body>
@@ -105,10 +111,12 @@
 
     // create a checkbox list for given party
     function build_checkbox_list(container_id, party_id, field, selected_ids) {
+        console.log("Trying to build at container_id", container_id);
         const container = document.getElementById(container_id);
+        console.log("container", container);
         if (!container) return;
         container.innerHTML = '';
-        for (const [i, p] in Object.entries(parties)) {
+        for (const [i, p] of Object.entries(parties)) {
             if (!p || i === party_id) continue;  // the party itself should not be included in the list
             const checked = selected_ids.includes(i) ? 'checked' : '';
             const item = document.createElement('label');  // label element ensures the text is clickable too
@@ -140,7 +148,8 @@
 
     // when a party is added or removed, update all checkbox lists on the page accordingly
     function refresh_all_checkbox_lists() {
-        for (const [id, p] in Object.entries(parties)) {
+        console.log("Refreshing checkbox lists!");
+        for (const [id, p] of Object.entries(parties)) {
             if (!p) continue;
             build_checkbox_list('merged-list-' + id, id, 'merged_from', p.merged_from || []);
             build_checkbox_list('split-list-' + id, id, 'split_from', p.split_from || []);
