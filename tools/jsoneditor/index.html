@@ -105,9 +105,9 @@
 
     // create a checkbox list for given party
     function build_checkbox_list(container_id, party_id, field, selected_ids) {
-        const wrap = document.getElementById(container_id);
-        if (!wrap) return;
-        wrap.innerHTML = '';
+        const container = document.getElementById(container_id);
+        if (!container) return;
+        container.innerHTML = '';
         for (const [i, p] in Object.entries(parties)) {
             if (!p || i === party_id) continue;  // the party itself should not be included in the list
             const checked = selected_ids.includes(i) ? 'checked' : '';
@@ -115,12 +115,12 @@
             item.className = 'checkbox-item';
             // if party has no name, display name "party [id]"
             item.innerHTML = `<input type="checkbox" ${checked} onchange="toggle_checkbox(${party_id},'${field}',${i},this.checked)"><span>${p.name || ('party ' + i)}</span>`;
-            wrap.appendChild(item);
+            container.appendChild(item);
         }
 
         // show specific message if there are no other parties to pick from
-        if (wrap.children.length === 0) {
-            wrap.innerHTML = '<span style="color:#666;font-size:13px">No other parties</span>';
+        if (container.children.length === 0) {
+            container.innerHTML = '<span style="color:#666;font-size:13px">No other parties</span>';
         }
     }
 
@@ -199,7 +199,7 @@
     // add a new parliament entry in the plms array
     function add_plm(data) {
         const id = new_plm_index();
-        plms[id] = data || {};
+        plms[id] = data || { name: null, date: null, fractions: [] };
         const q = plms[id];
         const str = `
             <div id="plm-${id}" class="plm">
@@ -216,8 +216,40 @@
         for (const seat of (q.seats || [])) add_seat(id, seat);
     }
 
+    // add a new fraction to this parliament and construct a menu for editing it
     function add_fraction(plm_id, data) {
-        // TODO
+        const fraction_id = plms[plm_id].fractions.length;                  // if there are n fractions, new fraction id is n+1
+        plms[plm_id].fractions.push(data || { party: null, seats: 0 });     // create new fraction
+        const f = plms[plm_id].fractions[fraction_id];                      // reference to the newly added fraction
+        const container = document.getElementById('fraction-' + plm_id);       // HTML containing element
+        const el = document.createElement('div');                           // create element for editing new fraction
+        
+        el.className = 'seat-entry';
+        el.id = `seat-${plm_id}-${fraction_id}`;
+                
+        const options = [];                                                 // start dropdown list of parties
+        for (const [i, p] of parties.entries()) {
+            if (!p) continue;
+            const isSelected = f.party == i ? 'selected' : '';              // HTML selected attribute
+            const name = p.name || 'party ' + i;                            
+            options.push(`<option value="${i}" ${isSelected}>${name}</option>`);
+        }
+        const opts = options.join('');                                      // string containing all <option> elements in a row
+        
+        // construct final fraction editing menu
+        el.innerHTML = `
+            <select onchange="plms[${plm_id}].fractions[${fraction_id}].party=this.value?+this.value:null">
+                <option value="">-- NONE --</option>
+                ${opts}
+            </select>
+            <input type="number" value="${f.seats || 0}" style="width: 70px" oninput="plms[${plm_id}].fractions[${fraction_id}].seats=+this.value">
+            <button onclick="
+                this.parentElement.remove();
+                plms[${plm_id}].fractions.splice(${fraction_id},1);
+            " style="padding:2px 6px">✕</button>
+        `;
+        
+        container.appendChild(el);
     }
 
     function delete_plm(id) {
