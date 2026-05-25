@@ -1,5 +1,5 @@
 import { S } from "./main.js";
-import { is_highlighted } from "./controller.js";
+import { get_highlighted, is_highlighted } from "./controller.js";
 
 // generate all tables in the sidebar
 function build_sidebar() {
@@ -67,7 +67,7 @@ function seat_dist_table() {
 		string += `<td>${frac.seat_amt} (${diff})</td>`;
 
 		total_seats += frac.seat_amt;
-		if (S.cur_hlt.includes(frac.party.id)) total_hlt += frac.seat_amt;
+		if (get_highlighted().includes(frac.party.id)) total_hlt += frac.seat_amt;
 	}
 
 	string += `</tbody>`;
@@ -220,7 +220,7 @@ function table_edit_mode() {
 		string += `<td><input name="${frac.party.id}" type="number" value="${frac.seat_amt}" min="0" max="10000"></td>`;
 
 		total_seats += frac.seat_amt;
-		if (S.cur_hlt.includes(frac.party.id)) total_hlt += frac.seat_amt;
+		if (get_highlighted().includes(frac.party.id)) total_hlt += frac.seat_amt;
 	}
 
 	string += `</tbody>`;

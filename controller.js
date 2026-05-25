@@ -249,3 +249,12 @@ export function is_highlighted(id) {
 	}
 	return false;
 }
+
+// get a list of all highlighted parties
+export function get_highlighted() {
+	const h = [];
+	for (const p of S.cur_hlt) {
+		h.push(p.party, ...p.ancestors);
+	}
+	return h;
+}
