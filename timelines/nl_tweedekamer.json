@@ -238,7 +238,6 @@
             "fullname": "Evangelische Volkspartij",
             "color": "rgb(240, 176, 0)",
             "established": "Tweede Kamerverkiezingen 1981",
-            "founded_by": ["epv"],
             "split_from": ["cda", "arp"]
         },
         "cpn": {

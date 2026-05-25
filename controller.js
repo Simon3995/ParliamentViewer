@@ -211,14 +211,31 @@ export function highlight(id) {
 		for (let i = 0; i < S.cur_hlt.length; i++) {
 			if (S.cur_hlt[i].party === id) {
 				S.cur_hlt.splice(i, 1);
+				break;
+			}
+			if (S.cur_hlt[i].ancestors.includes(id)) {
+				S.cur_hlt[i].ancestors.splice(S.cur_hlt[i].ancestors.indexOf(id), 1);
+				break;
 			}
 		}
 	} else {
-        // add this party to highlighted
-		S.cur_hlt.push({
-			'party': id
-		});
+		// check special case first: party isn't highlighted but its descendant is
+		// course of action is to add this party to its ancestors
+		const descendants = S.cur_tml.get_descendants(id);
+		const entry = S.cur_hlt.find(h => descendants.includes(h.party));
+		if (entry) {
+			entry.ancestors.push(id);
+		} else {
+			// just add this party to highlighted
+			S.cur_hlt.push({
+				'party': id,
+				'ancestors': S.cur_tml.get_ancestors(id)
+			});
+		}
+        
 	}
+
+	console.log(S.cur_hlt);
 
 	table_highlight();
 	update_table_footer();
@@ -230,6 +247,7 @@ export function highlight(id) {
 export function is_highlighted(id) {
 	for (const p of S.cur_hlt) {
 		if (p.party === id) return true;
+		if (p.ancestors.includes(id)) return true;
 	}
 	return false;
 }

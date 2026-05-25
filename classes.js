@@ -15,6 +15,25 @@ export class Timeline {
     add_parliament(parliament) {
         this.parliaments.push(parliament);
     }
+
+    get_ancestors(party_id) {
+        if (this.parties[party_id].founded_by === null)
+            return [];
+        const ancestors = [...this.parties[party_id].founded_by];
+        for (const p of this.parties[party_id].founded_by) {
+            ancestors.push(... this.get_ancestors(p));
+        }
+        return ancestors;
+    }
+
+    get_descendants(party_id) {
+        for (const [id, party] of Object.entries(this.parties)) {
+            if (party.founded_by?.includes(party_id)) {
+                return [id, ...this.get_descendants(id)];
+            }
+        }
+        return [];
+    }
 }
 
 // a class for one election result
