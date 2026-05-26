@@ -59,15 +59,15 @@
         </style>
     </head>
     <body>
-        Import JSON: <input type="file" id="import"><br>
+        Import JSON: <input type="file" id="import" autocomplete="off"><br>
         <button onclick="exportJSON()">EXPORT JSON</button>
         
         <br><br>
 
         <h1>GENERAL INFO</h1>
-        <p class="row"><label>Name: </label><input placeholder="e.g. nl_tweedekamer" id="name"></p>
-        <p class="row"><label>Title: </label><input placeholder="e.g. Tweede Kamer" id="title"></p>
-        <p class="row"><label>Country: </label><input placeholder="e.g. Netherlands" id="country"></p>
+        <p class="row"><label>Name: </label><input placeholder="e.g. nl_tweedekamer" id="name" autocomplete="off"></p>
+        <p class="row"><label>Title: </label><input placeholder="e.g. Tweede Kamer" id="title" autocomplete="off"></p>
+        <p class="row"><label>Country: </label><input placeholder="e.g. Netherlands" id="country" autocomplete="off"></p>
         <br>
 
         <h1>PARTIES</h1>
@@ -116,11 +116,11 @@
         container.innerHTML = '';
         for (const [i, p] of Object.entries(parties)) {
             if (!p || i === party_id) continue;  // the party itself should not be included in the list
-            const checked = selected_ids.includes(i) ? 'checked' : '';
+            const checked = selected_ids.includes(p.id) ? 'checked' : '';
             const item = document.createElement('label');  // label element ensures the text is clickable too
             item.className = 'checkbox-item';
             // if party has no name, display name "party [id]"
-            item.innerHTML = `<input type="checkbox" ${checked} onchange="toggle_checkbox(${party_id},'${field}',${i},this.checked)"><span>${p.id || ('unnamed party ' + i)}</span>`;
+            item.innerHTML = `<input type="checkbox" ${checked} onchange="toggle_checkbox(${party_id},'${field}',${p.id},this.checked)"><span>${p.id || ('unnamed party ' + i)}</span>`;
             container.appendChild(item);
         }
 
@@ -166,9 +166,9 @@
                 const options = ['<option value="">-- NONE --</option>'];
                 for (const [i, p] of parties.entries()) {
                     if (!p) continue;
-                    const isSelected = current == i ? 'selected' : '';
+                    const isSelected = current === (p.id || '') ? 'selected' : '';
                     const name = p.id || 'unnamed party ' + i;
-                    options.push(`<option value="${i}" ${isSelected}>${name}</option>`);
+                    options.push(`<option value="${p.id || ''}" ${isSelected}>${name}</option>`);
                 }
                 select.innerHTML = options.join('');
             }
@@ -186,8 +186,8 @@
             for (const [i, q] of Object.entries(plms)) {
                 if (!q) continue;
                 const label = q.name || 'unnamed parliament ' + i;
-                const isSelected = current == i ? 'selected' : '';
-                options.push(`<option value="${i}" ${isSelected}>${label}</option>`);
+                const isSelected = current === (q.name || '') ? 'selected' : '';
+                options.push(`<option value="${q.name || ''}" ${isSelected}>${label}</option>`);
             }
             select.innerHTML = options.join('');
         }
@@ -195,7 +195,7 @@
     
     // add a party adding menu to the DOM
     // add new party entry in the parties array
-    function add_party(data) {
+    function add_party(data, suppressRefresh = false) {
         const id = new_party_index();
         parties[id] = data ? { ...data } : {};
         const p = parties[id];
@@ -228,9 +228,12 @@
             </div>
         `;
         div_parties.insertAdjacentHTML('beforeend', str);
-        refresh_all_checkbox_lists();
-        refresh_all_fraction_dropdowns();
-        refresh_all_established_dropdowns();
+        
+        if (!suppressRefresh) {
+            refresh_all_checkbox_lists();
+            refresh_all_fraction_dropdowns();
+            refresh_all_established_dropdowns();
+        }
     }
 
     // remove party from the DOM and from the parties array
@@ -246,9 +249,11 @@
 
     // add a parliament editing menu to the DOM
     // add a new parliament entry in the plms array
-    function add_plm(data) {
+    function add_plm(data, suppressRefresh = false) {
         const id = new_plm_index();
-        plms[id] = data || { name: null, date: null, fractions: [] };
+        
+        plms[id] = data ? { ...data, fractions: [...(data.fractions || [])] } : { name: null, date: null, fractions: [] };
+
         const q = plms[id];
         const str = `
             <div id="plm-${id}" class="plm">
@@ -262,15 +267,19 @@
             </div>
         `;
         div_plms.insertAdjacentHTML('beforeend', str);
-        for (const fraction of (q.fractions || [])) add_fraction(id, fraction);
+        for (const fraction of [...(q.fractions || [])]) {
+            add_fraction(id, fraction);
+        }
 
-        refresh_all_established_dropdowns();
+        if (!suppressRefresh) {
+            refresh_all_established_dropdowns();
+        }
     }
 
     // add a new fraction to this parliament and construct a menu for editing it
     function add_fraction(plm_id, data) {
         const fraction_id = plms[plm_id].fractions.length;                  // if there are n fractions, new fraction id is n+1
-        plms[plm_id].fractions.push(data || { party: null, seats: 0 });     // create new fraction
+        plms[plm_id].fractions.push(data || { id: null, seats: 0 });        // create new fraction
         const f = plms[plm_id].fractions[fraction_id];                      // reference to the newly added fraction
         const container = document.getElementById('fraction-' + plm_id);       // HTML containing element
         const el = document.createElement('div');                           // create element for editing new fraction
@@ -281,15 +290,15 @@
         const options = [];                                                 // start dropdown list of parties
         for (const [i, p] of parties.entries()) {
             if (!p) continue;
-            const isSelected = f.party == i ? 'selected' : '';              // HTML selected attribute
+            const isSelected = f.id === p.id ? 'selected' : '';          // HTML selected attribute
             const name = p.id || 'unnamed party ' + i;                            
-            options.push(`<option value="${i}" ${isSelected}>${name}</option>`);
+            options.push(`<option value="${p.id || ''}" ${isSelected}>${name}</option>`);
         }
         const opts = options.join('');                                      // string containing all <option> elements in a row
         
         // construct final fraction editing menu
         el.innerHTML = `
-            <select onchange="plms[${plm_id}].fractions[${fraction_id}].party=this.value?+this.value:null">
+            <select onchange="plms[${plm_id}].fractions[${fraction_id}].id=this.value||null">
                 <option value="">-- NONE --</option>
                 ${opts}
             </select>
@@ -324,7 +333,10 @@
             title: document.getElementById('title').value,
             country: document.getElementById('country').value,
             parties: parties.filter(Boolean).map(p => ({ ...p })),  // filter(Boolean) removes null/undefined entries
-            parliaments: plms.filter(Boolean).map(q => ({ ...q, seats: (q.seats || []).filter(s => s.party !== null) }))
+            parliaments: plms.filter(Boolean).map(q => ({
+                ...q,
+                fractions: (q.fractions || []).filter(f => f.id !== null)
+            }))
         };
         const blob = new Blob([JSON.stringify(obj)], { type: 'application/json' });
         const a = document.createElement('a');
@@ -349,11 +361,25 @@
             div_plms.innerHTML = '';
 
             // add parties and parliaments
-            for (const p of (obj.parties     || [])) add_party(p);
-            for (const q of (obj.parliaments || [])) add_plm(q);
+            for (const [id, p] of Object.entries(obj.parties || {})) {
+                add_party({
+                    id:id,
+                    name:p.shortname || id,
+                    fullname:p.fullname || '',
+                    color: p.color || '#ffffff',
+                    image: p.image || ''
+                }, true);
+            }
+            for (const q of (obj.parliaments || [])) {
+                add_plm(q, true);
+            }
+
+            refresh_all_checkbox_lists();
+            refresh_all_fraction_dropdowns();
+            refresh_all_established_dropdowns();
 
         } catch(e) {
-            alert('Invalid JSON file.');
+            alert('Invalid JSON file:' + e);
         }
     }
 
