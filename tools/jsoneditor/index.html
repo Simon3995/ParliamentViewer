@@ -258,7 +258,8 @@
         const str = `
             <div id="plm-${id}" class="plm">
                 <div class="row"><label>Name:</label><input type="text" value="${esc(q.name || '')}" oninput="plms[${id}].name=this.value;refresh_all_established_dropdowns()"></div>
-                <div class="row"><label>Date (YYYY-MM-DD):</label><input type="text" value="${esc(q.date || '')}" oninput="plms[${id}].date=this.value?+this.value:null"></div>
+                <div class="row"><label>Date (YYYY-MM-DD):</label><input type="text" value="${esc(q.date || '')}" oninput="plms[${id}].date=this.value"></div>
+                <div class="row"><label>Source:</label><input type="text" value="${esc(q.source || '')}" oninput="plms[${id}].source=this.value" style="width:600px"></div>
                 <div class="row"><label>Fractions:</label>
                     <div id="fraction-${id}" class="fraction-row"></div>
                     <button onclick="add_fraction(${id})">+ ADD FRACTION</button>
