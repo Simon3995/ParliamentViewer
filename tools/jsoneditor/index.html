@@ -120,7 +120,7 @@
             const item = document.createElement('label');  // label element ensures the text is clickable too
             item.className = 'checkbox-item';
             // if party has no name, display name "party [id]"
-            item.innerHTML = `<input type="checkbox" ${checked} onchange="toggle_checkbox(${party_id},'${field}',${i},this.checked)"><span>${p.name || ('party ' + i)}</span>`;
+            item.innerHTML = `<input type="checkbox" ${checked} onchange="toggle_checkbox(${party_id},'${field}',${i},this.checked)"><span>${p.id || ('unnamed party ' + i)}</span>`;
             container.appendChild(item);
         }
 
@@ -167,7 +167,7 @@
                 for (const [i, p] of parties.entries()) {
                     if (!p) continue;
                     const isSelected = current == i ? 'selected' : '';
-                    const name = p.name || 'party ' + i;
+                    const name = p.id || 'unnamed party ' + i;
                     options.push(`<option value="${i}" ${isSelected}>${name}</option>`);
                 }
                 select.innerHTML = options.join('');
@@ -184,8 +184,8 @@
         const str = `
             <div id="party-${id}" class="party">
                 <div class="img-wrap"><img id="img-${id}" src="${esc(p.image || '')}"></div>
-                <div class="row"><label>Unique ID:</label><input type="text" value="${esc(p.id)}" oninput="parties[${id}].id=this.value"></div>
-                <div class="row"><label>Abbreviation:</label><input type="text" value="${esc(p.name)}" oninput="parties[${id}].name=this.value;refresh_all_checkbox_lists();refresh_all_fraction_dropdowns()"></div>
+                <div class="row"><label>Unique ID:</label><input type="text" value="${esc(p.id)}" oninput="parties[${id}].id=this.value;refresh_all_checkbox_lists();refresh_all_fraction_dropdowns()"></div>
+                <div class="row"><label>Abbreviation:</label><input type="text" value="${esc(p.name)}" oninput="parties[${id}].name=this.value"></div>
                 <div class="row"><label>Full Name (Local):</label><input type="text" value="${esc(p.fullname)}" oninput="parties[${id}].fullname=this.value"></div>
                 <div class="row"><label>Full Name (Local, Romanised):</label><input type="text" value="${esc(p.fullname_rm)}" oninput="parties[${id}].fullname_rm=this.value"></div>
                 <div class="row"><label>Full Name (English):</label><input type="text" value="${esc(p.fullname_en || '')}" oninput="parties[${id}].fullname_en=this.value"></div>
@@ -261,7 +261,7 @@
         for (const [i, p] of parties.entries()) {
             if (!p) continue;
             const isSelected = f.party == i ? 'selected' : '';              // HTML selected attribute
-            const name = p.name || 'party ' + i;                            
+            const name = p.id || 'unnamed party ' + i;                            
             options.push(`<option value="${i}" ${isSelected}>${name}</option>`);
         }
         const opts = options.join('');                                      // string containing all <option> elements in a row
