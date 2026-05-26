@@ -262,7 +262,7 @@
             </div>
         `;
         div_plms.insertAdjacentHTML('beforeend', str);
-        for (const seat of (q.seats || [])) add_seat(id, seat);
+        for (const fraction of (q.fractions || [])) add_fraction(id, fraction);
 
         refresh_all_established_dropdowns();
     }
@@ -333,8 +333,28 @@
         a.click();
     }
 
-    function importJSON() {
-        // TODO
+    function importJSON(text) {
+        try {
+            const obj = JSON.parse(text);
+
+            // general info fields
+            document.getElementById('name').value    = obj.name    || '';
+            document.getElementById('title').value   = obj.title   || '';
+            document.getElementById('country').value = obj.country || '';
+
+            // clear existing data
+            parties.length = 0;
+            plms.length = 0;
+            div_parties.innerHTML = '';
+            div_plms.innerHTML = '';
+
+            // add parties and parliaments
+            for (const p of (obj.parties     || [])) add_party(p);
+            for (const q of (obj.parliaments || [])) add_plm(q);
+
+        } catch(e) {
+            alert('Invalid JSON file.');
+        }
     }
 
     function esc(s) {
@@ -343,4 +363,12 @@
             .replace(/"/g, '&quot;')
             .replace(/</g, '&lt;');
     }
+
+    document.getElementById('import').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(e) { importJSON(e.target.result); };
+        reader.readAsText(file);
+    });
 </script>
