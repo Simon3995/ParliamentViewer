@@ -174,6 +174,24 @@
             }
         }
     }
+
+    // rebuild the dropdown menus for selecting in which parliament a party was established
+    function refresh_all_established_dropdowns() {
+        for (const [id, p] of Object.entries(parties)) {
+            if (!p) continue;
+            const select = document.getElementById('established-' + id);
+            if (!select) continue;
+            const current = select.value;
+            const options = ['<option value="">-- NONE --</option>'];
+            for (const [i, q] of Object.entries(plms)) {
+                if (!q) continue;
+                const label = q.name || 'unnamed parliament ' + i;
+                const isSelected = current == i ? 'selected' : '';
+                options.push(`<option value="${i}" ${isSelected}>${label}</option>`);
+            }
+            select.innerHTML = options.join('');
+        }
+    }
     
     // add a party adding menu to the DOM
     // add new party entry in the parties array
@@ -189,9 +207,9 @@
                 <div class="row"><label>Full Name (Local):</label><input type="text" value="${esc(p.fullname)}" oninput="parties[${id}].fullname=this.value"></div>
                 <div class="row"><label>Full Name (Local, Romanised):</label><input type="text" value="${esc(p.fullname_rm)}" oninput="parties[${id}].fullname_rm=this.value"></div>
                 <div class="row"><label>Full Name (English):</label><input type="text" value="${esc(p.fullname_en || '')}" oninput="parties[${id}].fullname_en=this.value"></div>
-                <div class="row"><label>Color:</label><input type="color" value="${p.color || '#aaaaaa'}" oninput="parties[${id}].color=this.value"></div>
+                <div class="row"><label>Color:</label><input type="color" value="${p.color || '#ffffff'}" oninput="parties[${id}].color=this.value;document.getElementById('img-${id}').style.backgroundColor=this.value"></div>
                 <div class="row"><label>Image URL:</label><input type="text" value="${esc(p.image || '')}" oninput="parties[${id}].image=this.value;document.getElementById('img-${id}').src=this.value"></div>
-                <div class="row"><label>Established (year):</label><input type="number" value="${p.established || ''}" style="width:100px" oninput="parties[${id}].established=this.value?+this.value:''"></div>
+                <div class="row"><label>Established (parliament):</label><select id="established-${id}" onchange="parties[${id}].established=this.value||null"><option value="">-- NONE --</option></select></div>
                 <div class="row">
                 <span class="collapsible-label">Merged from:</span>
                 <div class="collapse-wrap">
@@ -212,12 +230,13 @@
         div_parties.insertAdjacentHTML('beforeend', str);
         refresh_all_checkbox_lists();
         refresh_all_fraction_dropdowns();
+        refresh_all_established_dropdowns();
     }
 
     // remove party from the DOM and from the parties array
     function delete_party(id) {
         const p = parties[id];
-        if (confirm(`Remove party?\n\tid: ${p.id}\n\tname: ${p.name}`)) {
+        if (confirm(`Remove party?\n\n\tid: ${p.id}\n\tname: ${p.name}`)) {
             document.getElementById('party-' + id).remove();
             delete parties[id];
             refresh_all_checkbox_lists();
@@ -233,7 +252,7 @@
         const q = plms[id];
         const str = `
             <div id="plm-${id}" class="plm">
-                <div class="row"><label>Name:</label><input type="text" value="${esc(q.name || '')}" oninput="plms[${id}].name=this.value"></div>
+                <div class="row"><label>Name:</label><input type="text" value="${esc(q.name || '')}" oninput="plms[${id}].name=this.value;refresh_all_established_dropdowns()"></div>
                 <div class="row"><label>Date (YYYY-MM-DD):</label><input type="text" value="${esc(q.date || '')}" oninput="plms[${id}].date=this.value?+this.value:null"></div>
                 <div class="row"><label>Fractions:</label>
                     <div id="fraction-${id}" class="fraction-row"></div>
@@ -244,6 +263,8 @@
         `;
         div_plms.insertAdjacentHTML('beforeend', str);
         for (const seat of (q.seats || [])) add_seat(id, seat);
+
+        refresh_all_established_dropdowns();
     }
 
     // add a new fraction to this parliament and construct a menu for editing it
@@ -287,6 +308,7 @@
         if (confirm(`Delete parliament "${plm.name}"?`)) {
             document.getElementById("plm-" + id).remove();
             delete plms[id];
+            refresh_all_established_dropdowns();
         }
     }
 
