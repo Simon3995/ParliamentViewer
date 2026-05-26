@@ -65,9 +65,9 @@
         <br><br>
 
         <h1>GENERAL INFO</h1>
-        <p class="row"><label>Name (e.g. nl_tweedekamer): </label><input id="name"></p>
-        <p class="row"><label>Title (e.g. Tweede Kamer): </label><input id="title"></p>
-        <p class="row"><label>Country (e.g. Netherlands): </label><input id="country"></p>
+        <p class="row"><label>Name: </label><input placeholder="e.g. nl_tweedekamer" id="name"></p>
+        <p class="row"><label>Title: </label><input placeholder="e.g. Tweede Kamer" id="title"></p>
+        <p class="row"><label>Country: </label><input placeholder="e.g. Netherlands" id="country"></p>
         <br>
 
         <h1>PARTIES</h1>
@@ -208,7 +208,7 @@
                 <div class="row"><label>Full Name (Local, Romanised):</label><input type="text" placeholder="(optional)" value="${esc(p.fullname_rm)}" oninput="parties[${id}].fullname_rm=this.value"></div>
                 <div class="row"><label>Full Name (English):</label><input type="text" value="${esc(p.fullname_en || '')}" oninput="parties[${id}].fullname_en=this.value"></div>
                 <div class="row"><label>Color:</label><input type="color" value="${p.color || '#ffffff'}" oninput="parties[${id}].color=this.value;document.getElementById('img-${id}').style.backgroundColor=this.value"></div>
-                <div class="row"><label>Image URL:</label><input type="text" value="${esc(p.image || '')}" oninput="parties[${id}].image=this.value;document.getElementById('img-${id}').src=this.value"></div>
+                <div class="row"><label>Logo URL:</label><input type="text" placeholder="/logos/..." value="${esc(p.image || '')}" oninput="parties[${id}].image=this.value;document.getElementById('img-${id}').src=this.value"></div>
                 <div class="row"><label>Established (parliament):</label><select id="established-${id}" onchange="parties[${id}].established=this.value||null"><option value="">-- NONE --</option></select></div>
                 <div class="row">
                 <span class="collapsible-label">Merged from:</span>
