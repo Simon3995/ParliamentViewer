@@ -41,6 +41,17 @@ export function set_inner_radius(value) {
     InnerRadius = value;
 }
 
+export function get_diagram_bbox() {
+    const upper = (SpanAngle < 180);
+    const halfAngleRad = (SpanAngle / 2) * (Math.PI / 180);
+    const xmin = upper ? (1 - Math.sin(halfAngleRad)) : 0;
+    const xmax = 2 - xmin;
+    const ymin = (upper ? InnerRadius : 1) * Math.cos(halfAngleRad);
+    const ymax = 1;
+
+    return { xmin, xmax, ymin, ymax };
+}
+
 function sum(array) {
     let s = 0;
     for (let elem of array) s += elem;

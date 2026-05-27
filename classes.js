@@ -1,6 +1,6 @@
 import { S, schedule_frame } from "./main.js";
 import { c, ctx } from "./canvas.js";
-import { get_seats_centers, get_row_thickness, get_nrows_from_nseats } from "./geometry.js";
+import { get_seats_centers, get_row_thickness, get_nrows_from_nseats, get_diagram_bbox } from "./geometry.js";
 
 // a class for a parliament timeline, containing a series of election results
 export class Timeline {

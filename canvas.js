@@ -1,3 +1,4 @@
+import { get_diagram_bbox } from "./geometry.js";
 import { schedule_frame } from "./main.js";
 
 export const c = document.getElementById("canvas");
@@ -13,12 +14,16 @@ export function resize_canvas() {
 export function transform_ctx() {
 	const target_w = c.width * (2/3);
 	const target_h = c.height;
-	const scale = Math.min(target_w / 2, target_h / 1);
-	const offset_x = (target_w - (scale * 2)) / 2;
-	const offset_y = (target_h - (scale * 1)) / 2;
-	
+	const bbox = get_diagram_bbox();
+	const diagram_w = bbox.xmax - bbox.xmin;
+	const diagram_h = bbox.ymax - bbox.ymin;
+	const scale = Math.min(target_w / diagram_w, target_h / diagram_h);
+	const offset_x = (target_w - (scale * diagram_w)) / 2;
+	const offset_y = (target_h - (scale * diagram_h)) / 2;
+
 	ctx.setTransform(1, 0, 0, 1, 0, 0);
-	ctx.translate(offset_x, canvas.height - offset_y);
+	ctx.translate(offset_x, target_h - offset_y);
 	ctx.scale(scale, scale);
+	ctx.translate(-bbox.xmin, bbox.ymin);
 	schedule_frame();
 }

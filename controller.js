@@ -159,12 +159,14 @@ document.addEventListener('keydown', (e) => {
 document.getElementById("span_angle").onchange = function(e) {
     set_span_angle(Number(e.target.value));
 	S.cur_plm.distribute_seats();
+	transform_ctx();
 	
 }
 
 document.getElementById("inner_radius").onchange = function(e) {
     set_inner_radius(Number(e.target.value));
 	S.cur_plm.distribute_seats();
+	transform_ctx();
 }
 
 // go to previous parliament in the timeline
