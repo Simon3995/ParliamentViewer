@@ -3,6 +3,7 @@ import { c, ctx, resize_canvas, transform_ctx } from "./canvas.js";
 import { load_parliament, load_timeline } from "./loading.js";
 import { table_highlight, update_table_footer, update_buttons } from "./sidebar.js";
 import { add_party, cancel_add_party, delete_hlt, move_party_left, move_party_right, reset_plm, show_add_menu, sort_table_by_seats, toggle_edit_mode } from "./editing.js";
+import { set_span_angle, set_inner_radius } from "./geometry.js";
 
 const btn_prev = document.getElementById("btn_prev");
 const btn_next = document.getElementById("btn_next");
@@ -153,6 +154,17 @@ document.addEventListener('keydown', (e) => {
 		next();
 	}
 });
+
+document.getElementById("span_angle").onchange = function(e) {
+    set_span_angle(Number(e.target.value));
+	S.cur_plm.distribute_seats();
+	
+}
+
+document.getElementById("inner_radius").onchange = function(e) {
+    set_inner_radius(Number(e.target.value));
+	S.cur_plm.distribute_seats();
+}
 
 // go to previous parliament in the timeline
 export function prev() {

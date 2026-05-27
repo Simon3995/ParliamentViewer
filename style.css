@@ -250,6 +250,10 @@ input[type=number] {
     width: 75px;
 }
 
+input[type=range] {
+    width: 200px;
+}
+
 span.icon {
     background-size: contain !important;
     float: left;

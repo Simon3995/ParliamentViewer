@@ -103,4 +103,5 @@ export function reset_plm() {
 	load_parliament(S.cur_plm);
 	S.edit_mode = false;
 	update_sidebar();
+	S.cur_plm.distribute_seats();
 }
