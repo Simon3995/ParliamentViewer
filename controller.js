@@ -244,4 +244,5 @@ export function reset_settings() {
 	document.getElementById("span_angle").oninput();
 
 	S.cur_plm.distribute_seats();
+	transform_ctx();
 }
