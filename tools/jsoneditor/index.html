@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSON Editor</title>
+        <style>
+            * {
+                font-family: monospace;
+                font-size: 16px;
+                margin: 0;
+            }
+            body {
+                padding: 20px;
+                background-color: #222;
+                color: white;
+            }
+            p {
+                margin: 0px 30px;
+            }
+            label {
+                width: 300px;
+                display: inline-block;
+            }
+            .party, .plm {
+                background-color: #fff2;
+                margin-bottom: 10px;
+                position: relative;
+            }
+            .party {
+                padding-left: 120px;
+            }
+            .indent {
+                margin-left: 120px;
+            }
+            input[type=text] {
+                width: 400px;
+            }
+            input[type=color] {
+                border: none;
+                padding: 0;
+                height: 20px;
+                vertical-align: middle;
+            }
+            img {
+                height: 100px;
+                width: 100px;
+                border-radius: 50px;
+                border: none;
+                background-color: white;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+            }
+            .checkbox-list {
+                display: none;
+            }
+            .checkbox-list.open {
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        Import JSON: <input type="file" id="import" autocomplete="off"><br>
+        <button onclick="exportJSON()">EXPORT JSON</button>
+        
+        <br><br>
+
+        <h1>GENERAL INFO</h1>
+        <p class="row"><label>Name: </label><input placeholder="e.g. nl_tweedekamer" id="name" autocomplete="off"></p>
+        <p class="row"><label>Title: </label><input placeholder="e.g. Tweede Kamer" id="title" autocomplete="off"></p>
+        <p class="row"><label>Country: </label><input placeholder="e.g. Netherlands" id="country" autocomplete="off"></p>
+        <br>
+
+        <h1>PARTIES</h1>
+        <div id="parties"></div>
+        <button onclick="add_party()">ADD PARTY</button>
+        <br><br>
+
+        <h1>PARLIAMENTS</h1>
+        <div id="parliaments"></div>
+        <button onclick="add_plm()">ADD PARLIAMENT</button>
+        <br><br>
+    </body>
+</html>
+
+<script type="text/javascript">
+    const div_parties = document.getElementById("parties");
+    const div_plms = document.getElementById("parliaments");
+    let parties = [];
+    let plms = [];
+
+    // find the lowest unused party index
+    function new_party_index() {
+        let id = 0;
+        while (parties[id]) id++;
+        return id;
+    }
+
+    // find the lowest unused parliament index
+    function new_plm_index() {
+        let id = 0;
+        while (plms[id]) id++;
+        return id;
+    }
+
+    // toggle whether a checkbox list is shown or hidden
+    function toggle_collapse(el) {
+        const list = el.nextElementSibling;
+        const open = list.classList.toggle('open');
+        el.textContent = open ? 'HIDE' : 'SHOW';
+    }
+
+    // create a checkbox list for given party
+    function build_checkbox_list(container_id, party_id, field, selected_ids) {
+        const container = document.getElementById(container_id);
+        if (!container) return;
+        container.innerHTML = '';
+        for (const [i, p] of Object.entries(parties)) {
+            if (!p || i === party_id) continue;  // the party itself should not be included in the list
+            const checked = selected_ids.includes(p.id) ? 'checked' : '';
+            const item = document.createElement('label');  // label element ensures the text is clickable too
+            item.className = 'checkbox-item';
+            // if party has no name, display name "party [id]"
+            item.innerHTML = `<input type="checkbox" ${checked} onchange="toggle_checkbox(${party_id},'${field}',${p.id},this.checked)"><span>${p.id || ('unnamed party ' + i)}</span>`;
+            container.appendChild(item);
+        }
+
+        // show specific message if there are no other parties to pick from
+        if (container.children.length === 0) {
+            container.innerHTML = 'No other parties';
+        }
+    }
+
+    // update merged/split array after a checkbox has been clicked
+    function toggle_checkbox(party_id, field, other_id, checked) {
+        const arr = parties[party_id][field] || [];
+        if (checked) {
+            // add the other party to this party's merged/split array
+            if (!arr.includes(other_id)) arr.push(other_id);
+        } else {
+            // find idx of other party and remove it from merged/split array
+            const idx = arr.indexOf(other_id);
+            if (idx > -1) arr.splice(idx, 1);
+        }
+        parties[party_id][field] = arr;  // apply the updated array
+    }
+
+    // when a party is added or removed, update all checkbox lists on the page accordingly
+    function refresh_all_checkbox_lists() {
+        for (const [id, p] of Object.entries(parties)) {
+            if (!p) continue;
+            build_checkbox_list('merged-list-' + id, id, 'merged_from', p.merged_from || []);
+            build_checkbox_list('split-list-' + id, id, 'split_from', p.split_from || []);
+        }
+    }
+
+    // rebuild the party <select> options inside every fraction row across all parliaments
+    function refresh_all_fraction_dropdowns() {
+        for (const [plm_id, q] of Object.entries(plms)) {
+            if (!q) continue;
+            for (let fraction_id = 0; fraction_id < q.fractions.length; fraction_id++) {
+                const el = document.getElementById(`seat-${plm_id}-${fraction_id}`);
+                if (!el) continue;
+                const select = el.querySelector('select');
+                if (!select) continue;
+                const current = select.value;   // preserve current selection
+                const options = ['<option value="">-- NONE --</option>'];
+                for (const [i, p] of parties.entries()) {
+                    if (!p) continue;
+                    const isSelected = current === (p.id || '') ? 'selected' : '';
+                    const name = p.id || 'unnamed party ' + i;
+                    options.push(`<option value="${p.id || ''}" ${isSelected}>${name}</option>`);
+                }
+                select.innerHTML = options.join('');
+            }
+        }
+    }
+
+    // rebuild the dropdown menus for selecting in which parliament a party was established
+    function refresh_all_established_dropdowns() {
+        for (const [id, p] of Object.entries(parties)) {
+            if (!p) continue;
+            const select = document.getElementById('established-' + id);
+            if (!select) continue;
+            const current = select.value;
+            const options = ['<option value="">-- NONE --</option>'];
+            for (const [i, q] of Object.entries(plms)) {
+                if (!q) continue;
+                const label = q.name || 'unnamed parliament ' + i;
+                const isSelected = current === (q.name || '') ? 'selected' : '';
+                options.push(`<option value="${q.name || ''}" ${isSelected}>${label}</option>`);
+            }
+            select.innerHTML = options.join('');
+        }
+    }
+    
+    // add a party adding menu to the DOM
+    // add new party entry in the parties array
+    function add_party(data, suppressRefresh = false) {
+        const id = new_party_index();
+        parties[id] = data ? { ...data } : {};
+        const p = parties[id];
+        const str = `
+            <div id="party-${id}" class="party">
+                <div class="img-wrap"><img id="img-${id}" src="${esc(p.image || '')}" style="background-color:${p.color || "#ffffff"}"></div>
+                <div class="row"><label>Unique ID:</label><input type="text" value="${esc(p.id)}" oninput="parties[${id}].id=this.value;refresh_all_checkbox_lists();refresh_all_fraction_dropdowns()"></div>
+                <div class="row"><label>Abbreviation:</label><input type="text" value="${esc(p.name)}" oninput="parties[${id}].name=this.value"></div>
+                <div class="row"><label>Full Name (Local):</label><input type="text" value="${esc(p.fullname)}" oninput="parties[${id}].fullname=this.value"></div>
+                <div class="row"><label>Full Name (Local, Romanised):</label><input type="text" placeholder="(optional)" value="${esc(p.fullname_rm)}" oninput="parties[${id}].fullname_rm=this.value"></div>
+                <div class="row"><label>Full Name (English):</label><input type="text" value="${esc(p.fullname_en || '')}" oninput="parties[${id}].fullname_en=this.value"></div>
+                <div class="row"><label>Color:</label><input type="color" value="${p.color || '#ffffff'}" oninput="parties[${id}].color=this.value;document.getElementById('img-${id}').style.backgroundColor=this.value"></div>
+                <div class="row"><label>Logo URL:</label><input type="text" placeholder="/logos/..." value="${esc(p.image || '')}" oninput="parties[${id}].image=this.value;document.getElementById('img-${id}').src=this.value"></div>
+                <div class="row"><label>Established (parliament):</label><select id="established-${id}" onchange="parties[${id}].established=this.value||null"><option value="">-- NONE --</option></select></div>
+                <div class="row">
+                <span class="collapsible-label">Merged from:</span>
+                <div class="collapse-wrap">
+                    <button class="collapse-toggle" onclick="toggle_collapse(this)">SHOW</button>
+                    <div class="checkbox-list" id="merged-list-${id}"></div>
+                </div>
+            </div>
+            <div class="row">
+                <span class="collapsible-label">Split from:</span>
+                <div class="collapse-wrap">
+                    <button class="collapse-toggle" onclick="toggle_collapse(this)">SHOW</button>
+                    <div class="checkbox-list" id="split-list-${id}"></div>
+                </div>
+                </div>
+                <button class="del-btn" onclick="delete_party(${id})">✕ DELETE PARTY</button>
+            </div>
+        `;
+        div_parties.insertAdjacentHTML('beforeend', str);
+        
+        if (!suppressRefresh) {
+            refresh_all_checkbox_lists();
+            refresh_all_fraction_dropdowns();
+            refresh_all_established_dropdowns();
+        }
+    }
+
+    // remove party from the DOM and from the parties array
+    function delete_party(id) {
+        const p = parties[id];
+        if (confirm(`Remove party?\n\n\tid: ${p.id}\n\tname: ${p.name}`)) {
+            document.getElementById('party-' + id).remove();
+            delete parties[id];
+            refresh_all_checkbox_lists();
+            refresh_all_fraction_dropdowns();
+        }
+    }
+
+    // add a parliament editing menu to the DOM
+    // add a new parliament entry in the plms array
+    function add_plm(data, suppressRefresh = false) {
+        const id = new_plm_index();
+        
+        plms[id] = data ? { ...data, fractions: [...(data.fractions || [])] } : { name: null, date: null, fractions: [] };
+
+        const q = plms[id];
+        const str = `
+            <div id="plm-${id}" class="plm">
+                <div class="row"><label>Name:</label><input type="text" value="${esc(q.name || '')}" oninput="plms[${id}].name=this.value;refresh_all_established_dropdowns()"></div>
+                <div class="row"><label>Date (YYYY-MM-DD):</label><input type="text" value="${esc(q.date || '')}" oninput="plms[${id}].date=this.value"></div>
+                <div class="row"><label>Source:</label><input type="text" value="${esc(q.source || '')}" oninput="plms[${id}].source=this.value" style="width:600px"></div>
+                <div class="row"><label>Fractions:</label>
+                    <div id="fraction-${id}" class="fraction-row"></div>
+                    <button onclick="add_fraction(${id})">+ ADD FRACTION</button>
+                </div>
+                <button class="del-btn" onclick="delete_plm(${id})">✕ DELETE PARLIAMENT</button>
+            </div>
+        `;
+        div_plms.insertAdjacentHTML('beforeend', str);
+        for (const fraction of [...(q.fractions || [])]) {
+            add_fraction(id, fraction);
+        }
+
+        if (!suppressRefresh) {
+            refresh_all_established_dropdowns();
+        }
+    }
+
+    // add a new fraction to this parliament and construct a menu for editing it
+    function add_fraction(plm_id, data) {
+        const fraction_id = plms[plm_id].fractions.length;                  // if there are n fractions, new fraction id is n+1
+        plms[plm_id].fractions.push(data || { id: null, seats: 0 });        // create new fraction
+        const f = plms[plm_id].fractions[fraction_id];                      // reference to the newly added fraction
+        const container = document.getElementById('fraction-' + plm_id);       // HTML containing element
+        const el = document.createElement('div');                           // create element for editing new fraction
+        
+        el.className = 'seat-entry';
+        el.id = `seat-${plm_id}-${fraction_id}`;
+                
+        const options = [];                                                 // start dropdown list of parties
+        for (const [i, p] of parties.entries()) {
+            if (!p) continue;
+            const isSelected = f.id === p.id ? 'selected' : '';          // HTML selected attribute
+            const name = p.id || 'unnamed party ' + i;                            
+            options.push(`<option value="${p.id || ''}" ${isSelected}>${name}</option>`);
+        }
+        const opts = options.join('');                                      // string containing all <option> elements in a row
+        
+        // construct final fraction editing menu
+        el.innerHTML = `
+            <select onchange="plms[${plm_id}].fractions[${fraction_id}].id=this.value||null">
+                <option value="">-- NONE --</option>
+                ${opts}
+            </select>
+            <input type="number" value="${f.seats || 0}" style="width: 70px" oninput="plms[${plm_id}].fractions[${fraction_id}].seats=+this.value">
+            <button onclick="
+                this.parentElement.remove();
+                plms[${plm_id}].fractions.splice(${fraction_id},1);
+            " style="padding:2px 6px">✕</button>
+        `;
+        
+        container.appendChild(el);
+    }
+
+    function delete_plm(id) {
+        const plm = plms[id];
+        if (confirm(`Delete parliament "${plm.name}"?`)) {
+            document.getElementById("plm-" + id).remove();
+            delete plms[id];
+            refresh_all_established_dropdowns();
+        }
+    }
+
+    function exportJSON() {
+        // before export, warn for: (todo)
+        // empty input fields
+        // duplicate unique IDs
+        // duplicate fractions
+        
+        // start export
+        const obj = {
+            name: document.getElementById('name').value,
+            title: document.getElementById('title').value,
+            country: document.getElementById('country').value,
+            parties: parties.filter(Boolean).map(p => ({ ...p })),  // filter(Boolean) removes null/undefined entries
+            parliaments: plms.filter(Boolean).map(q => ({
+                ...q,
+                fractions: (q.fractions || []).filter(f => f.id !== null)
+            }))
+        };
+        const blob = new Blob([JSON.stringify(obj)], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = (obj.name || 'parliament') + '.json';
+        a.click();
+    }
+
+    function importJSON(text) {
+        try {
+            const obj = JSON.parse(text);
+
+            // general info fields
+            document.getElementById('name').value    = obj.name    || '';
+            document.getElementById('title').value   = obj.title   || '';
+            document.getElementById('country').value = obj.country || '';
+
+            // clear existing data
+            parties.length = 0;
+            plms.length = 0;
+            div_parties.innerHTML = '';
+            div_plms.innerHTML = '';
+
+            // add parties and parliaments
+            for (const [id, p] of Object.entries(obj.parties || {})) {
+                add_party({
+                    id:id,
+                    name:p.shortname || id,
+                    fullname:p.fullname || '',
+                    color: p.color || '#ffffff',
+                    image: p.image || ''
+                }, true);
+            }
+            for (const q of (obj.parliaments || [])) {
+                add_plm(q, true);
+            }
+
+            refresh_all_checkbox_lists();
+            refresh_all_fraction_dropdowns();
+            refresh_all_established_dropdowns();
+
+        } catch(e) {
+            alert('Invalid JSON file:' + e);
+        }
+    }
+
+    function esc(s) {
+        return String(s || '')
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/</g, '&lt;');
+    }
+
+    document.getElementById('import').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(e) { importJSON(e.target.result); };
+        reader.readAsText(file);
+    });
+</script>
