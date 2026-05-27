@@ -35,6 +35,10 @@ document.body.addEventListener('mouseup', function (e) {
 	mouseup_fn = null;
 });
 
+on_click(btn_prev, prev);
+on_click(btn_next, next);
+on_click(btn_first, first);
+on_click(btn_last, last);
 on_click(document.getElementById("btn_edit"), toggle_edit_mode);
 on_click(document.getElementById("btn_reset"), reset_plm);
 on_click(document.getElementById("btn_add"), show_add_menu);
@@ -44,10 +48,7 @@ on_click(document.getElementById("btn_right"), move_party_right);
 on_click(document.getElementById("btn_sort"), sort_table_by_seats);
 on_click(document.getElementById("btn_confirm_add"), add_party);
 on_click(document.getElementById("btn_cancel_add"), cancel_add_party);
-on_click(btn_prev, prev);
-on_click(btn_next, next);
-on_click(btn_first, first);
-on_click(btn_last, last);
+on_click(document.getElementById("btn_reset_settings"), reset_settings);
 
 // lose focus on enter press in number input
 $(document).on("keyup", "input", function(e) {
@@ -230,4 +231,15 @@ export function highlight(id) {
 	update_table_footer();
 	update_buttons();
 	schedule_frame();
+}
+
+export function reset_settings() {
+	set_inner_radius(0.4);
+	document.getElementById("inner_radius").value = 0.4;
+	document.getElementById("inner_radius").oninput();
+	set_span_angle(180);
+	document.getElementById("span_angle").value = 180;
+	document.getElementById("span_angle").oninput();
+
+	S.cur_plm.distribute_seats();
 }

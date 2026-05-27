@@ -188,6 +188,7 @@ button {
     margin-right: 8px;
     padding: 6px;
     cursor: pointer;
+    vertical-align: middle;
 }
 
 button.wide {
@@ -252,6 +253,13 @@ input[type=number] {
 
 input[type=range] {
     width: 200px;
+    margin: 4px 10px;
+    vertical-align: middle;
+}
+
+.fixwidth {
+    width: 180px;
+    display: inline-block;
 }
 
 span.icon {
