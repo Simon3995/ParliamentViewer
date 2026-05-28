@@ -169,6 +169,10 @@ document.getElementById("inner_radius").onchange = function(e) {
 	transform_ctx();
 }
 
+document.getElementById("sel_ancestors").onchange = function(e) {
+	S.sel_ancestors = document.getElementById("sel_ancestors").checked;
+}
+
 // go to previous parliament in the timeline
 export function prev() {
 	const idx = S.cur_tml.parliaments.indexOf(S.ori_plm);
@@ -234,20 +238,26 @@ export function highlight(id) {
 			}
 		}
 	} else {
-		// check special case first: party isn't highlighted but its descendant is
-		// course of action is to add this party to its ancestors
-		const descendants = S.cur_tml.get_descendants(id);
-		const entry = S.cur_hlt.find(h => descendants.includes(h.party));
-		if (entry) {
-			entry.ancestors.push(id);
+		if (S.sel_ancestors === true) {
+			// check special case first: party isn't highlighted but its descendant is
+			// course of action is to add this party to its ancestors
+			const descendants = S.cur_tml.get_descendants(id);
+			const entry = S.cur_hlt.find(h => descendants.includes(h.party));
+			if (entry) {
+				entry.ancestors.push(id);
+			} else {
+				// just add this party to highlighted
+				S.cur_hlt.push({
+					'party': id,
+					'ancestors': S.cur_tml.get_ancestors(id)
+				});
+			}
 		} else {
-			// just add this party to highlighted
 			S.cur_hlt.push({
 				'party': id,
-				'ancestors': S.cur_tml.get_ancestors(id)
+				'ancestors': []
 			});
 		}
-        
 	}
 
 	table_highlight();
@@ -281,6 +291,8 @@ export function reset_settings() {
 	set_span_angle(180);
 	document.getElementById("span_angle").value = 180;
 	document.getElementById("span_angle").oninput();
+
+	S.sel_ancestors = document.getElementById("sel_ancestors").checked = false;
 
 	S.cur_plm.distribute_seats();
 	transform_ctx();
