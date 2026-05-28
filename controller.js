@@ -3,6 +3,7 @@ import { c, ctx, resize_canvas, transform_ctx } from "./canvas.js";
 import { load_parliament, load_timeline } from "./loading.js";
 import { table_highlight, update_table_footer, update_buttons } from "./sidebar.js";
 import { add_party, cancel_add_party, delete_hlt, move_party_left, move_party_right, reset_plm, show_add_menu, sort_table_by_seats, toggle_edit_mode } from "./editing.js";
+import { set_span_angle, set_inner_radius } from "./geometry.js";
 
 const btn_prev = document.getElementById("btn_prev");
 const btn_next = document.getElementById("btn_next");
@@ -34,6 +35,10 @@ document.body.addEventListener('mouseup', function (e) {
 	mouseup_fn = null;
 });
 
+on_click(btn_prev, prev);
+on_click(btn_next, next);
+on_click(btn_first, first);
+on_click(btn_last, last);
 on_click(document.getElementById("btn_edit"), toggle_edit_mode);
 on_click(document.getElementById("btn_reset"), reset_plm);
 on_click(document.getElementById("btn_add"), show_add_menu);
@@ -43,10 +48,7 @@ on_click(document.getElementById("btn_right"), move_party_right);
 on_click(document.getElementById("btn_sort"), sort_table_by_seats);
 on_click(document.getElementById("btn_confirm_add"), add_party);
 on_click(document.getElementById("btn_cancel_add"), cancel_add_party);
-on_click(btn_prev, prev);
-on_click(btn_next, next);
-on_click(btn_first, first);
-on_click(btn_last, last);
+on_click(document.getElementById("btn_reset_settings"), reset_settings);
 
 // lose focus on enter press in number input
 $(document).on("keyup", "input", function(e) {
@@ -92,7 +94,7 @@ $(document).on("click", "tbody tr", function(e) {
 
 // when timeline is selected, show sidebar and hide welcome message
 document.getElementById("select-timeline").onchange = (e) => {
-	document.getElementById("sidebar").style.display = "inline-block";
+	document.getElementById("sidebar_hidden").style.display = "inline-block";
 	document.getElementById("welcome").style.display = "none";
 	load_timeline(e.target.value);
 }
@@ -153,6 +155,19 @@ document.addEventListener('keydown', (e) => {
 		next();
 	}
 });
+
+document.getElementById("span_angle").onchange = function(e) {
+    set_span_angle(Number(e.target.value));
+	S.cur_plm.distribute_seats();
+	transform_ctx();
+	
+}
+
+document.getElementById("inner_radius").onchange = function(e) {
+    set_inner_radius(Number(e.target.value));
+	S.cur_plm.distribute_seats();
+	transform_ctx();
+}
 
 // go to previous parliament in the timeline
 export function prev() {
@@ -218,4 +233,16 @@ export function highlight(id) {
 	update_table_footer();
 	update_buttons();
 	schedule_frame();
+}
+
+export function reset_settings() {
+	set_inner_radius(0.4);
+	document.getElementById("inner_radius").value = 0.4;
+	document.getElementById("inner_radius").oninput();
+	set_span_angle(180);
+	document.getElementById("span_angle").value = 180;
+	document.getElementById("span_angle").oninput();
+
+	S.cur_plm.distribute_seats();
+	transform_ctx();
 }

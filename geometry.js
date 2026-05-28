@@ -1,4 +1,4 @@
-// This code is a translation (from Python to Javascript) of
+// This code is a translation (from Python to Javascript) and adaptation of
 // https://github.com/Gouvernathor/parliamentarch/blob/main/src/parliamentarch/geometry.py
 // 
 // This code is licensed under the BSD 3-Clause License
@@ -30,7 +30,27 @@
 // OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-const DEFAULT_SPAN_ANGLE = 180;
+let SpanAngle = 180;
+let InnerRadius = 0.4;  // The inner radius of the arch relative to the outer radius
+
+export function set_span_angle(value) {
+    SpanAngle = value;
+}
+
+export function set_inner_radius(value) {
+    InnerRadius = value;
+}
+
+export function get_diagram_bbox() {
+    const upper = (SpanAngle < 180);
+    const halfAngleRad = (SpanAngle / 2) * (Math.PI / 180);
+    const xmin = upper ? (1 - Math.sin(halfAngleRad)) : 0;
+    const xmax = 2 - xmin;
+    const ymin = (upper ? InnerRadius : 1) * Math.cos(halfAngleRad);
+    const ymax = 1;
+
+    return { xmin, xmax, ymin, ymax };
+}
 
 function sum(array) {
     let s = 0;
@@ -40,7 +60,7 @@ function sum(array) {
 
 // Returns the thickness of a row in the same unit as the coordinates.
 export function get_row_thickness(nrows) {
-    return 1 / (4*nrows - 2);
+    return (1 - InnerRadius) / (2*nrows - 1);
 }
 
 /*
@@ -49,13 +69,13 @@ export function get_row_thickness(nrows) {
     The length of the list is nrows.
     span_angle, if provided, is the angle in degrees that the hemicycle, as an annulus arc, covers.
 */
-function get_rows_from_nrows(nrows, span_angle = DEFAULT_SPAN_ANGLE) {
+function get_rows_from_nrows(nrows, span_angle = SpanAngle) {
     const rv = [];
     const rad = get_row_thickness(nrows);
     const radian_span_angle = Math.PI * span_angle / 180;
 
     for (let r = 0; r < nrows; r++) {
-        const row_arc_radius = 0.5 + 2 * r * rad;
+        const row_arc_radius = InnerRadius + 2 * r * rad;
         rv.push(Math.round(radian_span_angle * row_arc_radius / (2 * rad)));
     }
 
@@ -63,7 +83,7 @@ function get_rows_from_nrows(nrows, span_angle = DEFAULT_SPAN_ANGLE) {
 }
 
 // Returns the minimal number of rows necessary to contain nseats seats.
-export function get_nrows_from_nseats(nseats, span_angle = DEFAULT_SPAN_ANGLE) {
+export function get_nrows_from_nseats(nseats, span_angle = SpanAngle) {
     let i = 1;
     while (sum(get_rows_from_nrows(i, span_angle)) < nseats) i++;
     return i;
@@ -91,7 +111,7 @@ export function get_nrows_from_nseats(nseats, span_angle = DEFAULT_SPAN_ANGLE) {
     It defaults to 180° to make a true hemicycle.
     Values above 180° are not supported.
 */
-export function get_seats_centers(nseats, min_nrows = 0, span_angle = DEFAULT_SPAN_ANGLE, filling_strategy = "DEFAULT") {
+export function get_seats_centers(nseats, min_nrows = 0, span_angle = SpanAngle, filling_strategy = "DEFAULT") {
     const nrows = Math.max(min_nrows, get_nrows_from_nseats(nseats, span_angle));
     // thickness of a row in the same unit as the coordinates
     const row_thicc = get_row_thickness(nrows);
@@ -153,7 +173,7 @@ export function get_seats_centers(nseats, min_nrows = 0, span_angle = DEFAULT_SP
         }
 
         // row radius : the radius of the circle crossing the center of each seat in the row
-        const row_arc_radius = 0.5 + 2 * r * row_thicc;
+        const row_arc_radius = InnerRadius + 2 * r * row_thicc;
 
         if (nseats_this_row === 1) {
             positions.push([1, -row_arc_radius, Math.PI/2]);

@@ -22,6 +22,7 @@ export function load_parliament(parliament) {
 	document.getElementById("title_ps").innerHTML = "";
 	document.getElementById("source").innerHTML = (parliament.source) ? `Source: <a target="#" href="${parliament.source}">${parliament.source}</a>` : "";
 	update_sidebar();
+	S.cur_plm.distribute_seats();
 	schedule_frame();
 }
 
