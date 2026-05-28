@@ -281,6 +281,7 @@ button:active:enabled {
     width: 100%;
     min-width: 0;
     padding: 1px 3px;
+    font-size: 18px;
 }
 
 .green {
