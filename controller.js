@@ -94,7 +94,7 @@ $(document).on("click", "tbody tr", function(e) {
 
 // when timeline is selected, show sidebar and hide welcome message
 document.getElementById("select-timeline").onchange = (e) => {
-	document.getElementById("sidebar").style.display = "inline-block";
+	document.getElementById("sidebar_hidden").style.display = "inline-block";
 	document.getElementById("welcome").style.display = "none";
 	load_timeline(e.target.value);
 }

@@ -84,24 +84,13 @@ hr {
 
 #logo {
     position: fixed;
-    top: 10px;
+    top: 8px;
     left: 10px;
-    background-color: #483d8b;
-    padding: 5px 12px;
-    border: 5px solid #2a273d;
-    filter: drop-shadow(5px 5px 0px #2a273d);
-}
-
-#logo h2 {
-    color: #adb5ff;
-}
-
-#logo select {
-    width: 100%;
-    margin: 10px 0px;
-    font-size: 15px;
-    border: none;
-    padding: 2px 6px;
+    line-height: 20pt;
+    letter-spacing: -0.5pt;
+    font-size: 12pt;
+    filter: drop-shadow(3px 3px 1px #adb5ffa0);
+    user-select: none;
 }
 
 .highlighted {
@@ -212,15 +201,28 @@ button:active:enabled {
 
 .navbar {
     height: 50px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .lbutton {
-    position: absolute;
-    left: 15px;
+    flex-direction: row;
 }
 .rbutton {
-    position: absolute;
-    right: 15px;
+    flex-direction: row;
+}
+
+.plm_selector {
+    flex: 1;
+    min-width: 0;
+    padding: 0px 12px;
+    margin: auto 0;
+}
+
+.plm_selector select {
+    width: 100%;
+    min-width: 0;
+    padding: 5px 10px;
 }
 
 .green {

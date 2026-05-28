@@ -12,16 +12,16 @@ export function resize_canvas() {
 
 // transform so that seats are drawn left of the sidebar
 export function transform_ctx() {
-	const target_w = c.width * (2/3);
-	const target_h = c.height;
+	const padding = 50;
+	const target_w = c.width * (2/3) - 2 * padding;
+	const target_h = c.height - 2 * padding;
 	const bbox = get_diagram_bbox();
 	const diagram_w = bbox.xmax - bbox.xmin;
 	const diagram_h = bbox.ymax - bbox.ymin;
 	const scale = Math.min(target_w / diagram_w, target_h / diagram_h);
-	const offset_x = (target_w - (scale * diagram_w)) / 2;
-	const offset_y = (target_h - (scale * diagram_h)) / 2;
+	const offset_x = (target_w - (scale * diagram_w)) / 2 + padding;
+	const offset_y = (target_h - (scale * diagram_h)) / 2 - padding;
 	S.ctx_scale = scale;
-	console.log(scale);
 
 	ctx.setTransform(1, 0, 0, 1, 0, 0);
 	ctx.translate(offset_x, target_h - offset_y);

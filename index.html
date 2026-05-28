@@ -20,7 +20,7 @@
             <h2>Welcome to Parliament Viewer!</h2>
             <img src="./imgs/parliament95.svg">
             <p>This is a tool to view current and historical seat distributions of various parliaments, senates, congresses, and other political bodies from around the world.</p>
-            <p>Choose a parliament in the top left menu to get started.</p>
+            <p>Choose a parliament in the top right menu to get started.</p>
             <hr>
             <p class="small">View this project on <a target="#" href="https://github.com/Simon3995/ParliamentViewer">GitHub</a></p>
             <p class="small">Licensed under <a target="#" href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL-3.0</a></p>
@@ -29,87 +29,90 @@
     
     <!-- Top left logo/menu -->
     <div id="logo">
-        <h1>Parliament Viewer</h1>
-
-        <select id="select-timeline" autocomplete="off">
-            <option value="" selected disabled hidden>=== Select Parliament ===</option>
-            <optgroup label="Europe">
-                <option value="be_federalparliament">Belgium - Federaal Parlement/Parlement Fédéral</option>
-                <option value="dk_folketing">Denmark - Folketing</option>
-                <option value="de_bundestag">Germany - Bundestag</option>
-                <option value="eu_parliament">European Union - European Parliament</option>
-                <option value="fi_eduskunta">Finland - Eduskunta</option>
-                <option value="hu_orszaggyules">Hungary - Országgyűlés</option>
-                <option value="nl_eerstekamer">Netherlands - Eerste Kamer</option>
-                <option value="nl_tweedekamer">Netherlands - Tweede Kamer</option>
-                <option value="no_storting">Norway - Storting</option>
-                <option value="se_riksdag">Sweden - Riksdag</option>
-                <option value="uk_houseofcommons">United Kingdom - House of Commons</option>
-            </optgroup>
-            <optgroup label="North America">
-                <option value="us_houseofrepresentatives">United States - House of Representatives</option>
-                <option value="us_senate">United States - Senate</option>
-            </optgroup>
-            <optgroup label="Oceania">
-                <option value="nz_houseofrepresentatives">New Zealand - House of Representatives</option>
-            </optgroup>
-        </select>
+        <h1>Parliament<br>Viewer</h1>
     </div>
 
     <!-- Right sidebar -->
-    <div id="sidebar" style="display:none">
+    <div id="sidebar">
         <!-- Navigation -->
         <div class="navbar">
             <div class="lbutton">
-                <button title="Go to first parliament in timeline" id="btn_first" autocomplete="off"><span class="icon first"></span></button>
-                <button title="Go to previous parliament in timeline" id="btn_prev" autocomplete="off"><span class="icon prev"></span></button>
+                <button title="Go to first parliament in timeline" id="btn_first" autocomplete="off" disabled><span class="icon first"></span></button>
+                <button title="Go to previous parliament in timeline" id="btn_prev" autocomplete="off" disabled><span class="icon prev"></span></button>
+            </div>
+            <div class="plm_selector">
+                <select id="select-timeline" autocomplete="off">
+                    <option value="" selected disabled hidden>=== Select Parliament ===</option>
+                    <optgroup label="Europe">
+                        <option value="be_federalparliament">Belgium - Federaal Parlement/Parlement Fédéral</option>
+                        <option value="dk_folketing">Denmark - Folketing</option>
+                        <option value="de_bundestag">Germany - Bundestag</option>
+                        <option value="eu_parliament">European Union - European Parliament</option>
+                        <option value="fi_eduskunta">Finland - Eduskunta</option>
+                        <option value="hu_orszaggyules">Hungary - Országgyűlés</option>
+                        <option value="nl_eerstekamer">Netherlands - Eerste Kamer</option>
+                        <option value="nl_tweedekamer">Netherlands - Tweede Kamer</option>
+                        <option value="no_storting">Norway - Storting</option>
+                        <option value="se_riksdag">Sweden - Riksdag</option>
+                        <option value="uk_houseofcommons">United Kingdom - House of Commons</option>
+                    </optgroup>
+                    <optgroup label="North America">
+                        <option value="us_houseofrepresentatives">United States - House of Representatives</option>
+                        <option value="us_senate">United States - Senate</option>
+                    </optgroup>
+                    <optgroup label="Oceania">
+                        <option value="nz_houseofrepresentatives">New Zealand - House of Representatives</option>
+                    </optgroup>
+                </select>
             </div>
             <div class="rbutton">
-                <button title="Go to next parliament in timeline" id="btn_next" autocomplete="off"><span class="icon next"></span></button>
-                <button title="Go to last parliament in timeline" id="btn_last" autocomplete="off"><span class="icon last"></span></button>
+                <button title="Go to next parliament in timeline" id="btn_next" autocomplete="off" disabled><span class="icon next"></span></button>
+                <button title="Go to last parliament in timeline" id="btn_last" autocomplete="off" disabled><span class="icon last"></span></button>
             </div>
         </div>
         
-        <!-- Main table -->
-        <h1><span id="title"></span><span id="title_ps"></span></h1>
-        <div id="table"></div>
-        
-        <!-- Edit mode buttons -->
-        <button title="Edit Mode" id="btn_edit" autocomplete="off"><span class="icon edit"></span></button>
-        <button title="Reset" id="btn_reset" disabled autocomplete="off"><span class="icon reset"></span></button>
-        <button title="Add Party" id="btn_add" disabled autocomplete="off"><span class="icon add" autocomplete="off"></span></button>
-        <button title="Delete Selected" id="btn_del" disabled autocomplete="off"><span class="icon delete"></span></button>
-        <button title="Move Party Left" id="btn_left" disabled autocomplete="off"><span class="icon left"></span></button>
-        <button title="Move Party Right" id="btn_right" disabled autocomplete="off"><span class="icon right"></span></button>
-        <button title="Sort Table" id="btn_sort" disabled autocomplete="off"><span class="icon sort"></span></button>
-        
-        <!-- Party adding menu -->
-        <div id="add_party" style="display: none">
-            <p>Short Name:<input id="add_shortname" type="text" autocomplete="off"></p>
-            <p>Full Name:<input id="add_fullname" type="text" autocomplete="off"></p>
-            <p>Color: <input id="add_color" type="color" autocomplete="off"></p>
-            <button id="btn_confirm_add">Add</button>
-            <button id="btn_cancel_add">Cancel</button>
-        </div>
-        
-        <!-- Left parliament table -->
-        <div id="left_plm"></div>
+        <div id="sidebar_hidden" style="display:none">
+            <!-- Main table -->
+            <h1><span id="title"></span><span id="title_ps"></span></h1>
+            <div id="table"></div>
+            
+            <!-- Edit mode buttons -->
+            <button title="Edit Mode" id="btn_edit" autocomplete="off"><span class="icon edit"></span></button>
+            <button title="Reset" id="btn_reset" disabled autocomplete="off"><span class="icon reset"></span></button>
+            <button title="Add Party" id="btn_add" disabled autocomplete="off"><span class="icon add" autocomplete="off"></span></button>
+            <button title="Delete Selected" id="btn_del" disabled autocomplete="off"><span class="icon delete"></span></button>
+            <button title="Move Party Left" id="btn_left" disabled autocomplete="off"><span class="icon left"></span></button>
+            <button title="Move Party Right" id="btn_right" disabled autocomplete="off"><span class="icon right"></span></button>
+            <button title="Sort Table" id="btn_sort" disabled autocomplete="off"><span class="icon sort"></span></button>
+            
+            <!-- Party adding menu -->
+            <div id="add_party" style="display: none">
+                <p>Short Name:<input id="add_shortname" type="text" autocomplete="off"></p>
+                <p>Full Name:<input id="add_fullname" type="text" autocomplete="off"></p>
+                <p>Color: <input id="add_color" type="color" autocomplete="off"></p>
+                <button id="btn_confirm_add">Add</button>
+                <button id="btn_cancel_add">Cancel</button>
+            </div>
+            
+            <!-- Left parliament table -->
+            <div id="left_plm"></div>
 
-        <!-- Table for mergers, rebrands and splits -->
-        <div id="party_changes"></div>
-        
-        <hr>
+            <!-- Table for mergers, rebrands and splits -->
+            <div id="party_changes"></div>
+            
+            <hr>
 
-        <h2>Settings <button id="btn_reset_settings" title="Reset Settings"><span class="icon reset"></span></button></h2>
-        <p><div class="fixwidth">Diagram inner radius:</div><input id="inner_radius" type="range" value="0.4" min="0.1" max="0.9" step="0.02" autocomplete="off" oninput="this.nextElementSibling.value = this.value"><output>0.4</output></p>
-        <p><div class="fixwidth">Diagram span angle:</div><input id="span_angle" type="range" value="180" min="10" max="360" step="5" autocomplete="off" oninput="this.nextElementSibling.value = this.value"><output>180</output></p>
-        <hr>
+            <h2>Settings <button id="btn_reset_settings" title="Reset Settings"><span class="icon reset"></span></button></h2>
+            <p><div class="fixwidth">Diagram inner radius:</div><input id="inner_radius" type="range" value="0.4" min="0.1" max="0.9" step="0.02" autocomplete="off" oninput="this.nextElementSibling.value = this.value"><output>0.4</output></p>
+            <p><div class="fixwidth">Diagram span angle:</div><input id="span_angle" type="range" value="180" min="10" max="360" step="5" autocomplete="off" oninput="this.nextElementSibling.value = this.value"><output>180</output></p>
+            <hr>
 
-        <!-- Links -->
-        <div class="small" id="links">
-            <p id="source"></p>
-            <p>View this project on <a target="#" href="https://github.com/Simon3995/ParliamentViewer">GitHub</a></p>
-            <p class="small">Licensed under <a target="#" href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL-3.0</a></p>
+            <!-- Links -->
+            <div class="small" id="links">
+                <p id="source"></p>
+                <p>View this project on <a target="#" href="https://github.com/Simon3995/ParliamentViewer">GitHub</a></p>
+                <p class="small">Licensed under <a target="#" href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL-3.0</a></p>
+            </div>
         </div>
     </div>
 </body>
