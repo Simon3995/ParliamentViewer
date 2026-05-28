@@ -6,14 +6,14 @@ export const ctx = c.getContext("2d");
 
 // resize canvas to fill viewport
 export function resize_canvas() {
-	c.width = window.innerWidth;
-	c.height = window.innerHeight;
+	c.width = c.getBoundingClientRect().width;
+	c.height = c.getBoundingClientRect().height;
 }
 
 // transform so that seats are drawn left of the sidebar
 export function transform_ctx() {
 	const padding = 50;
-	const target_w = c.width * (2/3) - 2 * padding;
+	const target_w = c.width - 2 * padding;
 	const target_h = c.height - 2 * padding;
 	const bbox = get_diagram_bbox();
 	const diagram_w = bbox.xmax - bbox.xmin;
