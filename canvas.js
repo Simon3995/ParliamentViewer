@@ -1,5 +1,5 @@
 import { get_diagram_bbox } from "./geometry.js";
-import { schedule_frame } from "./main.js";
+import { S, schedule_frame } from "./main.js";
 
 export const c = document.getElementById("canvas");
 export const ctx = c.getContext("2d");
@@ -20,6 +20,8 @@ export function transform_ctx() {
 	const scale = Math.min(target_w / diagram_w, target_h / diagram_h);
 	const offset_x = (target_w - (scale * diagram_w)) / 2;
 	const offset_y = (target_h - (scale * diagram_h)) / 2;
+	S.ctx_scale = scale;
+	console.log(scale);
 
 	ctx.setTransform(1, 0, 0, 1, 0, 0);
 	ctx.translate(offset_x, target_h - offset_y);

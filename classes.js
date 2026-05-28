@@ -131,7 +131,7 @@ export class Parliament {
                 let f;
                 if (!has_enlarged && Math.hypot(S.mouse_x - seat[0], S.mouse_y - seat[1]) < hb && opacity == 1) {
                     has_enlarged = true;
-                    f = 0.12;
+                    f = Math.max(60 / S.ctx_scale, r * 1.5);
                     ctx.globalCompositeOperation = "source-over";
                 } else {
                     f = r;
