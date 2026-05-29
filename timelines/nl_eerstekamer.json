@@ -397,24 +397,9 @@
             "color": "#505050",
             "image": "logos/nl/OPNL.png"
         },
-        "fvh": {
-            "shortname": "FVH",
-            "fullname": "Fractie-Visseren-Hamakers",
-            "color": "#808080"
-        },
-        "fvds": {
-            "shortname": "FVdS",
-            "fullname": "Fractie-Van de Sanden",
-            "color": "#808080"
-        },
-        "fw": {
-            "shortname": "FW",
-            "fullname": "Fractie-Walenkamp",
-            "color": "#808080"
-        },
-        "fb": {
-            "shortname": "FB",
-            "fullname": "Fractie-Beukering",
+        "ind": {
+            "shortname": "Ind",
+            "fullname": "Independent",
             "color": "#808080"
         }
     },
@@ -425,7 +410,6 @@
             "source": "https://www.eerstekamer.nl/fracties",
             "fractions": [
                 { "id": "sp", "seats": 3 },
-                { "id": "fvh", "seats": 1 },
                 { "id": "pvdd", "seats": 2 },
                 { "id": "glpvda", "seats": 14 },
                 { "id": "volt", "seats": 2 },
@@ -434,15 +418,13 @@
                 { "id": "opnl", "seats": 1 },
                 { "id": "50plus", "seats": 1 },
                 { "id": "cda", "seats": 6 },
-                { "id": "fvds", "seats": 1 },
                 { "id": "vvd", "seats": 9 },
-                { "id": "fw", "seats": 1 },
-                { "id": "bbb", "seats": 12 },
-                { "id": "fb", "seats": 1 },
+                { "id": "bbb", "seats": 11 },
                 { "id": "ja21", "seats": 2 },
                 { "id": "sgp", "seats": 2 },
                 { "id": "pvv", "seats": 4 },
-                { "id": "fvd", "seats": 3 }
+                { "id": "fvd", "seats": 3 },
+                { "id": "ind", "seats": 5 }
             ]
         },
         {
