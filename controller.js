@@ -232,39 +232,12 @@ export function highlight(id) {
 			parties.push(... S.cur_tml.get_ancestors(id));
 		} 
 
-		for (let i = 0; i < S.cur_hlt.length; i++) {
-			if (parties.includes(S.cur_hlt[i].party)) {
-				if (S.sel_ancestors === true || !S.cur_hlt[i].ancestors.length) {
-					S.cur_hlt.splice(i, 1);
-				} else {
-					// weird case; root descendant isn't highlighted anymore but its ancestors are
-					// all ancestors now become roots
-					S.cur_hlt.push(...S.cur_hlt[i].ancestors.map(p => {
-						return { 'party': p, 'ancestors': [] }
-					}));
-					// then remove original root
-					S.cur_hlt.splice(i, 1);
-					break;
-				}
-				// we've definitely removed a node here. for proper iteration we stay at the same step
-				i--;
-				continue;
-			}
-
-			// filter ancestors
-			S.cur_hlt[i].ancestors = S.cur_hlt[i].ancestors.filter(p => !parties.includes(p));
-		}
+		S.cur_hlt = S.cur_hlt.filter(p => !parties.includes(p));
 	} else {
 		if (S.sel_ancestors === true) {
-			S.cur_hlt.push({
-				'party': id,
-				'ancestors': S.cur_tml.get_ancestors(id)
-			});
+			S.cur_hlt.push(id, ... S.cur_tml.get_ancestors(id));
 		} else {
-			S.cur_hlt.push({
-				'party': id,
-				'ancestors': []
-			});
+			S.cur_hlt.push(id);
 		}
 	}
 
@@ -276,20 +249,12 @@ export function highlight(id) {
 
 // helper function to determine whether or not a party is highlighted
 export function is_highlighted(id) {
-	for (const p of S.cur_hlt) {
-		if (p.party === id) return true;
-		if (p.ancestors.includes(id)) return true;
-	}
-	return false;
+	return S.cur_hlt.includes(id);
 }
 
 // get a list of all highlighted parties
 export function get_highlighted() {
-	const h = [];
-	for (const p of S.cur_hlt) {
-		h.push(p.party, ...p.ancestors);
-	}
-	return h;
+	return S.cur_hlt;
 }
 
 export function reset_settings() {
