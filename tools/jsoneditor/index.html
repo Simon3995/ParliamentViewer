@@ -268,7 +268,9 @@
             </div>
         `;
         div_plms.insertAdjacentHTML('beforeend', str);
-        for (const fraction of [...(q.fractions || [])]) {
+
+        plms[id].fractions = [];
+        for (const fraction of [...(data?.fractions || [])]) {
             add_fraction(id, fraction);
         }
 
