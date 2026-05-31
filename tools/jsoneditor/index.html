@@ -148,7 +148,7 @@
     function refresh_all_checkbox_lists() {
         for (const [id, p] of Object.entries(parties)) {
             if (!p) continue;
-            build_checkbox_list('merged-list-' + id, id, 'merged_from', p.merged_from || []);
+            build_checkbox_list('merged-list-' + id, id, 'founded_by', p.founded_by || []);
             build_checkbox_list('split-list-' + id, id, 'split_from', p.split_from || []);
         }
     }
@@ -186,7 +186,7 @@
             for (const [i, q] of Object.entries(plms)) {
                 if (!q) continue;
                 const label = q.name || 'unnamed parliament ' + i;
-                const isSelected = current === (q.name || '') ? 'selected' : '';
+                const isSelected = (p.established === q.name) ? 'selected' : (current === q.name ? 'selected' : '');
                 options.push(`<option value="${q.name || ''}" ${isSelected}>${label}</option>`);
             }
             select.innerHTML = options.join('');
@@ -211,7 +211,7 @@
                 <div class="row"><label>Logo URL:</label><input type="text" placeholder="/logos/..." value="${esc(p.image || '')}" oninput="parties[${id}].image=this.value;document.getElementById('img-${id}').src=this.value"></div>
                 <div class="row"><label>Established (parliament):</label><select id="established-${id}" onchange="parties[${id}].established=this.value||null"><option value="">-- NONE --</option></select></div>
                 <div class="row">
-                <span class="collapsible-label">Merged from:</span>
+                <span class="collapsible-label">Founded by:</span>
                 <div class="collapse-wrap">
                     <button class="collapse-toggle" onclick="toggle_collapse(this)">SHOW</button>
                     <div class="checkbox-list" id="merged-list-${id}"></div>
@@ -268,7 +268,9 @@
             </div>
         `;
         div_plms.insertAdjacentHTML('beforeend', str);
-        for (const fraction of [...(q.fractions || [])]) {
+
+        plms[id].fractions = [];
+        for (const fraction of [...(data?.fractions || [])]) {
             add_fraction(id, fraction);
         }
 
@@ -291,7 +293,7 @@
         const options = [];                                                 // start dropdown list of parties
         for (const [i, p] of parties.entries()) {
             if (!p) continue;
-            const isSelected = f.id === p.id ? 'selected' : '';          // HTML selected attribute
+            const isSelected = f.id === p.id ? 'selected' : '';             // HTML selected attribute
             const name = p.id || 'unnamed party ' + i;                            
             options.push(`<option value="${p.id || ''}" ${isSelected}>${name}</option>`);
         }
@@ -329,11 +331,17 @@
         // duplicate fractions
         
         // start export
+        const partiesObj = {};
+        for (const p of parties.filter(Boolean)) {
+            const { id, ...rest } = p;
+            partiesObj[id] = rest;
+        }
+
         const obj = {
             name: document.getElementById('name').value,
             title: document.getElementById('title').value,
             country: document.getElementById('country').value,
-            parties: parties.filter(Boolean).map(p => ({ ...p })),  // filter(Boolean) removes null/undefined entries
+            parties: partiesObj,
             parliaments: plms.filter(Boolean).map(q => ({
                 ...q,
                 fractions: (q.fractions || []).filter(f => f.id !== null)
@@ -364,13 +372,30 @@
             // add parties and parliaments
             for (const [id, p] of Object.entries(obj.parties || {})) {
                 add_party({
-                    id:id,
-                    name:p.shortname || id,
-                    fullname:p.fullname || '',
+                    id: id,
+                    name: p.name || id,
+                    fullname: p.fullname || '',
+                    fullname_rm: p.fullname_rm || '',
+                    fullname_en: p.fullname_en || '',
                     color: p.color || '#ffffff',
-                    image: p.image || ''
+                    image: p.image || '',
+                    established: p.established,
+                    founded_by: p.founded_by,
+                    split_from: p.split_from,
                 }, true);
             }
+
+            // map party id strings to indices for founded/split properties
+            for (const [i, p] of Object.entries(parties)) {
+                for (const field of ['founded_by', 'split_from']) {
+                    if (!p[field]) continue;
+                    p[field] = p[field].map(stringID =>
+                        parties.find(q => q && q.id === stringID)?.id
+                    ).filter(Boolean);
+                }
+            }
+
+            // add parliaments
             for (const q of (obj.parliaments || [])) {
                 add_plm(q, true);
             }
