@@ -1,6 +1,7 @@
 import { S, schedule_frame } from "./main.js";
 import { c, ctx } from "./canvas.js";
 import { get_seats_centers, get_row_thickness, get_nrows_from_nseats, get_diagram_bbox } from "./geometry.js";
+import { is_highlighted } from "./controller.js";
 
 // a class for a parliament timeline, containing a series of election results
 export class Timeline {
@@ -13,6 +14,25 @@ export class Timeline {
     // add a new election result to the timeline
     add_parliament(parliament) {
         this.parliaments.push(parliament);
+    }
+
+    get_ancestors(party_id) {
+        if (this.parties[party_id].founded_by === null)
+            return [];
+        const ancestors = [...this.parties[party_id].founded_by];
+        for (const p of this.parties[party_id].founded_by) {
+            ancestors.push(... this.get_ancestors(p));
+        }
+        return ancestors;
+    }
+
+    get_descendants(party_id) {
+        for (const [id, party] of Object.entries(this.parties)) {
+            if (party.founded_by?.includes(party_id)) {
+                return [id, ...this.get_descendants(id)];
+            }
+        }
+        return [];
     }
 }
 
@@ -124,7 +144,7 @@ export class Parliament {
 
         let has_enlarged = false;
         for (let fraction of this.fractions) {
-            let opacity = (S.cur_hlt.includes(fraction.party.id)) ? 1 : (S.cur_hlt.length ? (cur_hover === fraction.party.id ? 0.6 : 0.2) : 1);
+            let opacity = (is_highlighted(fraction.party.id)) ? 1 : (S.cur_hlt.length ? (cur_hover === fraction.party.id ? 0.6 : 0.2) : 1);
 
             for (const seat of fraction.seat_centers) {
                 
