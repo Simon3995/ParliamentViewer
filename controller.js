@@ -226,32 +226,40 @@ export function highlight(id) {
 		// remove all highlighted
         S.cur_hlt = [];
 	} else if (is_highlighted(id)) {
-        // remove this party from highlighted
+		const parties = [id];
+		if (S.sel_ancestors === true) {
+			// remove this party and its ancestors from highlighted
+			parties.push(... S.cur_tml.get_ancestors(id));
+		} 
+
 		for (let i = 0; i < S.cur_hlt.length; i++) {
-			if (S.cur_hlt[i].party === id) {
-				S.cur_hlt.splice(i, 1);
-				break;
+			if (parties.includes(S.cur_hlt[i].party)) {
+				if (S.sel_ancestors === true || !S.cur_hlt[i].ancestors.length) {
+					S.cur_hlt.splice(i, 1);
+				} else {
+					// weird case; root descendant isn't highlighted anymore but its ancestors are
+					// all ancestors now become roots
+					S.cur_hlt.push(...S.cur_hlt[i].ancestors.map(p => {
+						return { 'party': p, 'ancestors': [] }
+					}));
+					// then remove original root
+					S.cur_hlt.splice(i, 1);
+					break;
+				}
+				// we've definitely removed a node here. for proper iteration we stay at the same step
+				i--;
+				continue;
 			}
-			if (S.cur_hlt[i].ancestors.includes(id)) {
-				S.cur_hlt[i].ancestors.splice(S.cur_hlt[i].ancestors.indexOf(id), 1);
-				break;
-			}
+
+			// filter ancestors
+			S.cur_hlt[i].ancestors = S.cur_hlt[i].ancestors.filter(p => !parties.includes(p));
 		}
 	} else {
 		if (S.sel_ancestors === true) {
-			// check special case first: party isn't highlighted but its descendant is
-			// course of action is to add this party to its ancestors
-			const descendants = S.cur_tml.get_descendants(id);
-			const entry = S.cur_hlt.find(h => descendants.includes(h.party));
-			if (entry) {
-				entry.ancestors.push(id);
-			} else {
-				// just add this party to highlighted
-				S.cur_hlt.push({
-					'party': id,
-					'ancestors': S.cur_tml.get_ancestors(id)
-				});
-			}
+			S.cur_hlt.push({
+				'party': id,
+				'ancestors': S.cur_tml.get_ancestors(id)
+			});
 		} else {
 			S.cur_hlt.push({
 				'party': id,
