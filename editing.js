@@ -85,7 +85,7 @@ export function cancel_add_party() {
 
 // delete all currently highlighted parties
 export function delete_hlt() {
-	for (const id of get_highlighted) {
+	for (const id of get_highlighted()) {
 		S.cur_plm.remove_fraction(id);
 		S.ord_tab = S.ord_tab.filter((frac) => frac.party.id != id);
 		S.ord_vis = S.ord_vis.filter((frac) => frac.party.id != id);
