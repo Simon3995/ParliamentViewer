@@ -35,28 +35,6 @@ document.body.addEventListener('pointerup', function (e) {
 	}
 	pressed_rect = null;
 	mouseup_fn = null;
-
-	if (pointer_mvmt < 20) {
-		for (const fraction of S.cur_plm.fractions) {
-			for (const seat of fraction.seat_centers) {
-				const dist = Math.hypot(seat[0] - S.mouse_x, seat[1] - S.mouse_y);
-				if (dist <= S.cur_plm.get_seat_hitbox_radius()) {
-					highlight(fraction.party.id);
-
-					// avoid hovering on touch screens
-					if (e.pointerType !== 'mouse') {
-						S.mouse_x = null;
-						S.mouse_y = null;
-					}
-
-					return;
-				}
-			}
-		}
-
-		// if no seat is clicked, remove highlights
-		highlight(null);
-	}
 });
 
 on_click(btn_prev, prev);
@@ -142,6 +120,30 @@ c.addEventListener("pointerdown", (e) => {
         S.mouse_x = mouse.x;
         S.mouse_y = mouse.y;
     }
+});
+
+c.addEventListener("pointerup", (e) => {
+	if (pointer_mvmt < 20) {
+		for (const fraction of S.cur_plm.fractions) {
+			for (const seat of fraction.seat_centers) {
+				const dist = Math.hypot(seat[0] - S.mouse_x, seat[1] - S.mouse_y);
+				if (dist <= S.cur_plm.get_seat_hitbox_radius()) {
+					highlight(fraction.party.id);
+
+					// avoid hovering on touch screens
+					if (e.pointerType !== 'mouse') {
+						S.mouse_x = null;
+						S.mouse_y = null;
+					}
+
+					return;
+				}
+			}
+		}
+
+		// if no seat is clicked, remove highlights
+		highlight(null);
+	}
 });
 
 // resize canvas to fill the screen
