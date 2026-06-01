@@ -50,7 +50,7 @@
 }
 
 /* DEFAULT DESKTOP VERSION */
-@media (min-width: 1001px) {
+@media (min-width: 1000px) {
     #sidebar {
         position: fixed;
         top: 0px;
