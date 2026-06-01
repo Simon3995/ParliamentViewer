@@ -141,7 +141,7 @@ hr {
 }
 
 #logo {
-    position: fixed;
+    position: absolute;
     top: 8px;
     left: 10px;
     line-height: 20pt;
