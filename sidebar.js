@@ -1,4 +1,5 @@
 import { S } from "./main.js";
+import { get_highlighted, is_highlighted } from "./controller.js";
 
 // generate all tables in the sidebar
 function build_sidebar() {
@@ -66,7 +67,7 @@ function seat_dist_table() {
 		string += `<td>${frac.seat_amt} (${diff})</td>`;
 
 		total_seats += frac.seat_amt;
-		if (S.cur_hlt.includes(frac.party.id)) total_hlt += frac.seat_amt;
+		if (get_highlighted().includes(frac.party.id)) total_hlt += frac.seat_amt;
 	}
 
 	string += `</tbody>`;
@@ -219,7 +220,7 @@ function table_edit_mode() {
 		string += `<td><input name="${frac.party.id}" type="number" value="${frac.seat_amt}" min="0" max="10000"></td>`;
 
 		total_seats += frac.seat_amt;
-		if (S.cur_hlt.includes(frac.party.id)) total_hlt += frac.seat_amt;
+		if (get_highlighted().includes(frac.party.id)) total_hlt += frac.seat_amt;
 	}
 
 	string += `</tbody>`;
@@ -267,7 +268,7 @@ export function update_table_footer() {
 	const total_seats = S.cur_plm.seat_amt();
 	let total_hlt = 0;
 	for (const frac of S.cur_plm.fractions)
-		if (S.cur_hlt.includes(frac.party.id))
+		if (is_highlighted(frac.party.id))
 			total_hlt += frac.seat_amt;
 	let string = "";
 	
@@ -296,7 +297,9 @@ export function table_highlight() {
 		row.classList.remove("highlighted");
 	});
 
-	for (const pid of S.cur_hlt) {
+	for (const frac of S.cur_plm.fractions) {
+		const pid = frac.party.id;
+		if (!is_highlighted(pid)) continue;
 		const hl_row = document.getElementById(pid);
 		if (hl_row && hl_row.tagName === 'TR') {
 			hl_row.classList.add("highlighted");

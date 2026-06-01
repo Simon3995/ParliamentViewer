@@ -169,6 +169,10 @@ document.getElementById("inner_radius").onchange = function(e) {
 	transform_ctx();
 }
 
+document.getElementById("sel_ancestors").onchange = function(e) {
+	S.sel_ancestors = document.getElementById("sel_ancestors").checked;
+}
+
 // go to previous parliament in the timeline
 export function prev() {
 	const idx = S.cur_tml.parliaments.indexOf(S.ori_plm);
@@ -221,18 +225,36 @@ export function highlight(id) {
 	if (id == null) {
 		// remove all highlighted
         S.cur_hlt = [];
-	} else if (S.cur_hlt.includes(id)) {
-        // remove this party from highlighted
-		S.cur_hlt.splice(S.cur_hlt.indexOf(id), 1);
+	} else if (is_highlighted(id)) {
+		const parties = [id];
+		if (S.sel_ancestors === true) {
+			// remove this party and its ancestors from highlighted
+			parties.push(... S.cur_tml.get_ancestors(id));
+		} 
+
+		S.cur_hlt = S.cur_hlt.filter(p => !parties.includes(p));
 	} else {
-        // add this party to highlighted
-		S.cur_hlt.push(id);
+		if (S.sel_ancestors === true) {
+			S.cur_hlt.push(id, ... S.cur_tml.get_ancestors(id));
+		} else {
+			S.cur_hlt.push(id);
+		}
 	}
 
 	table_highlight();
 	update_table_footer();
 	update_buttons();
 	schedule_frame();
+}
+
+// helper function to determine whether or not a party is highlighted
+export function is_highlighted(id) {
+	return S.cur_hlt.includes(id);
+}
+
+// get a list of all highlighted parties
+export function get_highlighted() {
+	return S.cur_hlt;
 }
 
 export function reset_settings() {
@@ -242,6 +264,8 @@ export function reset_settings() {
 	set_span_angle(180);
 	document.getElementById("span_angle").value = 180;
 	document.getElementById("span_angle").oninput();
+
+	S.sel_ancestors = document.getElementById("sel_ancestors").checked = false;
 
 	S.cur_plm.distribute_seats();
 	transform_ctx();
