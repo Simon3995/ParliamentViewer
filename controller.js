@@ -26,6 +26,7 @@ function on_click(btn, fn) {
 		mouseup_fn = fn;
 	});
 }
+
 document.body.addEventListener('pointerup', function (e) {	
 	if (pressed_rect &&
 		e.clientX >= pressed_rect.left &&
@@ -37,28 +38,6 @@ document.body.addEventListener('pointerup', function (e) {
 	}
 	pressed_rect = null;
 	mouseup_fn = null;
-
-	if (pointer_mvmt < 20) {
-		for (const fraction of S.cur_plm.fractions) {
-			for (const seat of fraction.seat_centers) {
-				const dist = Math.hypot(seat[0] - S.mouse_x, seat[1] - S.mouse_y);
-				if (dist <= S.cur_plm.get_seat_hitbox_radius()) {
-					highlight(fraction.party.id);
-
-					// avoid hovering on touch screens
-					if (e.pointerType !== 'mouse') {
-						S.mouse_x = null;
-						S.mouse_y = null;
-					}
-
-					return;
-				}
-			}
-		}
-
-		// if no seat is clicked, remove highlights
-		highlight(null);
-	}
 });
 
 on_click(btn_prev, prev);
@@ -121,7 +100,12 @@ $(document).on("click", "tbody tr", function(e) {
 function show_sidebar() {
 	document.getElementById("sidebar_hidden").style.display = "inline-block";
 	document.getElementById("welcome").style.display = "none";
-	document.getElementById("plm_selector").appendChild(document.getElementById("select-timeline"))
+	document.getElementById("plm_selector").appendChild(document.getElementById("select-timeline"));
+}
+
+// when timeline is selected, show sidebar and hide welcome message
+document.getElementById("select-timeline").onchange = (e) => {
+	show_sidebar();
 	load_timeline(e.target.value);
 }
 
@@ -145,6 +129,30 @@ c.addEventListener("pointerdown", (e) => {
     }
 });
 
+c.addEventListener("pointerup", (e) => {
+	if (pointer_mvmt < 20) {
+		for (const fraction of S.cur_plm.fractions) {
+			for (const seat of fraction.seat_centers) {
+				const dist = Math.hypot(seat[0] - S.mouse_x, seat[1] - S.mouse_y);
+				if (dist <= S.cur_plm.get_seat_hitbox_radius()) {
+					highlight(fraction.party.id);
+
+					// avoid hovering on touch screens
+					if (e.pointerType !== 'mouse') {
+						S.mouse_x = null;
+						S.mouse_y = null;
+					}
+
+					return;
+				}
+			}
+		}
+
+		// if no seat is clicked, remove highlights
+		highlight(null);
+	}
+});
+
 // resize canvas to fill the screen
 window.addEventListener('load', (e) => {
 	resize_canvas();
@@ -156,6 +164,7 @@ window.addEventListener('load', (e) => {
 	if (t) {
 		show_sidebar();
 		load_timeline(t).then(() => {
+			document.getElementById("select-timeline").value = t;
 			if (p) navigate(p);
 		});
 		
