@@ -117,13 +117,13 @@ function add_party(data, suppressRefresh = false) {
     const str = `
         <div id="party-${id}" class="party">
             <div class="img-wrap"><img id="img-${id}" src="${esc(p.image || '')}" style="background-color:${p.color || "#ffffff"}"></div>
-            <div class="row"><label>Unique ID:</label><input type="text" value="${esc(p.id)}" oninput="parties[${id}].id=this.value;refresh_all_checkbox_lists();refresh_all_fraction_dropdowns()"></div>
-            <div class="row"><label>Abbreviation:</label><input type="text" value="${esc(p.name)}" oninput="parties[${id}].name=this.value"></div>
-            <div class="row"><label>Full Name (Local):</label><input type="text" value="${esc(p.fullname)}" oninput="parties[${id}].fullname=this.value"></div>
-            <div class="row"><label>Full Name (Local, Romanised):</label><input type="text" placeholder="(optional)" value="${esc(p.fullname_rm)}" oninput="parties[${id}].fullname_rm=this.value"></div>
-            <div class="row"><label>Full Name (English):</label><input type="text" value="${esc(p.fullname_en || '')}" oninput="parties[${id}].fullname_en=this.value"></div>
-            <div class="row"><label>Color:</label><input type="color" value="${p.color || '#ffffff'}" oninput="parties[${id}].color=this.value;document.getElementById('img-${id}').style.backgroundColor=this.value"></div>
-            <div class="row"><label>Logo URL:</label><input type="text" placeholder="/logos/..." value="${esc(p.image || '')}" oninput="parties[${id}].image=this.value;document.getElementById('img-${id}').src=this.value"></div>
+            <div class="row"><label>Unique ID:</label><input type="text" value="${esc(p.id)}" onchange="parties[${id}].id=this.value;refresh_all_checkbox_lists();refresh_all_fraction_dropdowns()"></div>
+            <div class="row"><label>Abbreviation:</label><input type="text" value="${esc(p.name)}" onchange="parties[${id}].name=this.value"></div>
+            <div class="row"><label>Full Name (Local):</label><input type="text" value="${esc(p.fullname)}" onchange="parties[${id}].fullname=this.value"></div>
+            <div class="row"><label>Full Name (Local, Romanised):</label><input type="text" placeholder="(optional)" value="${esc(p.fullname_rm)}" onchange="parties[${id}].fullname_rm=this.value"></div>
+            <div class="row"><label>Full Name (English):</label><input type="text" value="${esc(p.fullname_en || '')}" onchange="parties[${id}].fullname_en=this.value"></div>
+            <div class="row"><label>Color:</label><input type="color" value="${p.color || '#ffffff'}" onchange="parties[${id}].color=this.value;document.getElementById('img-${id}').style.backgroundColor=this.value"></div>
+            <div class="row"><label>Logo URL:</label><input type="text" placeholder="/logos/..." value="${esc(p.image || '')}" onchange="parties[${id}].image=this.value;document.getElementById('img-${id}').src=this.value"></div>
             <div class="row"><label>Established (parliament):</label><select id="established-${id}" onchange="parties[${id}].established=this.value||null"><option value="">-- NONE --</option></select></div>
             <div class="row">
             <span class="collapsible-label">Founded by:</span>
@@ -172,9 +172,9 @@ function add_plm(data, suppressRefresh = false) {
     const q = plms[id];
     const str = `
         <div id="plm-${id}" class="plm">
-            <div class="row"><label>Name:</label><input type="text" value="${esc(q.name || '')}" oninput="plms[${id}].name=this.value;refresh_all_established_dropdowns()"></div>
-            <div class="row"><label>Date (YYYY-MM-DD):</label><input type="text" value="${esc(q.date || '')}" oninput="plms[${id}].date=this.value"></div>
-            <div class="row"><label>Source:</label><input type="text" value="${esc(q.source || '')}" oninput="plms[${id}].source=this.value" style="width:600px"></div>
+            <div class="row"><label>Name:</label><input type="text" value="${esc(q.name || '')}" onchange="plms[${id}].name=this.value;refresh_all_established_dropdowns()"></div>
+            <div class="row"><label>Date (YYYY-MM-DD):</label><input type="text" value="${esc(q.date || '')}" onchange="plms[${id}].date=this.value"></div>
+            <div class="row"><label>Source:</label><input type="text" value="${esc(q.source || '')}" onchange="plms[${id}].source=this.value" style="width:600px"></div>
             <div class="row"><label>Fractions:</label>
                 <div id="fraction-${id}" class="fraction-row"></div>
                 <button onclick="add_fraction(${id})">+ ADD FRACTION</button>
@@ -220,7 +220,7 @@ function add_fraction(plm_id, data) {
             <option value="">-- NONE --</option>
             ${opts}
         </select>
-        <input type="number" value="${f.seats || 0}" style="width: 70px" oninput="plms[${plm_id}].fractions[${fraction_id}].seats=+this.value">
+        <input type="number" value="${f.seats || 0}" style="width: 70px" onchange="plms[${plm_id}].fractions[${fraction_id}].seats=+this.value">
         <button onclick="
             this.parentElement.remove();
             plms[${plm_id}].fractions.splice(${fraction_id},1);
