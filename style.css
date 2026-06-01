@@ -262,7 +262,6 @@ button:active:enabled {
 }
 
 .navbar {
-    height: 50px;
     display: flex;
     justify-content: space-between;
 }
@@ -279,6 +278,19 @@ button:active:enabled {
     min-width: 0;
     padding: 0px 6px;
     margin: auto 0;
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    #plm_selector {
+        order: -1;
+        width: 100%;
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
 }
 
 select {
