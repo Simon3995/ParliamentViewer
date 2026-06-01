@@ -1,1 +1,91 @@
-{"name":"hu_orszaggyules","title":"Országgyűlés","country":"Hungary","parties":{"tisza":{"name":"TISZA","fullname":"Tisztelet és Szabadság Párt","fullname_rm":"","fullname_en":"Respect and Freedom Party","color":"#4dbbff","image":"/logos/hu/tisza.png"},"fidesz":{"name":"Fidesz","fullname":"Fidesz – Magyar Polgári Szövetség","fullname_rm":"","fullname_en":"Fidesz – Hungarian Civic Alliance","color":"#FF5800","image":"/logos/hu/fidesz.png"},"mh":{"name":"MH","fullname":"Mi Hazánk Mozgalom","fullname_rm":"","fullname_en":"Our Homeland Movement","color":"#2f9d2f","image":"/logos/hu/mh.png"},"em":{"name":"EM","fullname":"Egységben Magyarországért","fullname_rm":"","fullname_en":"United for Hungary","color":"#3ae2b2","image":"/logos/hu/em.png"},"ldu":{"name":"LdU","fullname":"Landesselbstverwaltung der Ungarndeutschen","fullname_rm":"","fullname_en":"National Self-Government of Germans in Hungary","color":"#325699","image":"/logos/hu/ldu.png"}},"parliaments":[{"name":"2026 Parliamentary Election","date":"2026-04-12","source":"https://vtr.valasztas.hu/ogy2026","fractions":[{"id":"tisza","seats":141},{"id":"fidesz","seats":52},{"id":"mh","seats":6}]},{"name":"2022 Parliamentary Election","date":"2022-04-03","source":"https://vtr.valasztas.hu/ogy2022","fractions":[{"id":"em","seats":57},{"id":"ldu","seats":1},{"id":"fidesz","seats":135},{"id":"mh","seats":6}]}]}
+{
+ "name": "hu_orszaggyules",
+ "title": "Országgyűlés",
+ "country": "Hungary",
+ "parties": {
+  "tisza": {
+   "name": "TISZA",
+   "fullname": "Tisztelet és Szabadság Párt",
+   "fullname_rm": "",
+   "fullname_en": "Respect and Freedom Party",
+   "color": "#4dbbff",
+   "image": "/logos/hu/tisza.png"
+  },
+  "fidesz": {
+   "name": "Fidesz",
+   "fullname": "Fidesz – Magyar Polgári Szövetség",
+   "fullname_rm": "",
+   "fullname_en": "Fidesz – Hungarian Civic Alliance",
+   "color": "#FF5800",
+   "image": "/logos/hu/fidesz.png"
+  },
+  "mh": {
+   "name": "MH",
+   "fullname": "Mi Hazánk Mozgalom",
+   "fullname_rm": "",
+   "fullname_en": "Our Homeland Movement",
+   "color": "#2f9d2f",
+   "image": "/logos/hu/mh.png"
+  },
+  "em": {
+   "name": "EM",
+   "fullname": "Egységben Magyarországért",
+   "fullname_rm": "",
+   "fullname_en": "United for Hungary",
+   "color": "#3ae2b2",
+   "image": "/logos/hu/em.png"
+  },
+  "ldu": {
+   "name": "LdU",
+   "fullname": "Landesselbstverwaltung der Ungarndeutschen",
+   "fullname_rm": "",
+   "fullname_en": "National Self-Government of Germans in Hungary",
+   "color": "#325699",
+   "image": "/logos/hu/ldu.png"
+  }
+ },
+ "parliaments": [
+  {
+   "name": "2026 Parliamentary Election",
+   "date": "2026-04-12",
+   "source": "https://vtr.valasztas.hu/ogy2026",
+   "fractions": [
+    {
+     "id": "tisza",
+     "seats": 141
+    },
+    {
+     "id": "fidesz",
+     "seats": 52
+    },
+    {
+     "id": "mh",
+     "seats": 6
+    }
+   ]
+  },
+  {
+   "name": "2022 Parliamentary Election",
+   "date": "2022-04-03",
+   "source": "https://vtr.valasztas.hu/ogy2022",
+   "fractions": [
+    {
+     "id": "em",
+     "seats": 57
+    },
+    {
+     "id": "ldu",
+     "seats": 1
+    },
+    {
+     "id": "fidesz",
+     "seats": 135
+    },
+    {
+     "id": "mh",
+     "seats": 6
+    }
+   ]
+  }
+ ]
+}
