@@ -216,14 +216,17 @@ function add_fraction(plm_id, data) {
     
     // construct final fraction editing menu
     el.innerHTML = `
+        <div class="fraction-arrows">
+            <button onclick="move_fraction(${plm_id}, ${fraction_id}, -1)">▲</button>
+            <button onclick="move_fraction(${plm_id}, ${fraction_id}, 1)">▼</button>
+        </div>
         <select onchange="plms[${plm_id}].fractions[${fraction_id}].id=this.value||null">
             <option value="">-- NONE --</option>
             ${opts}
         </select>
         <input type="number" value="${f.seats || 0}" style="width: 70px" onchange="plms[${plm_id}].fractions[${fraction_id}].seats=+this.value">
         <button onclick="
-            this.parentElement.remove();
-            plms[${plm_id}].fractions.splice(${fraction_id},1);
+            delete_fraction(${plm_id}, ${fraction_id})
         " style="padding:2px 6px">✕</button>
     `;
     
@@ -262,7 +265,7 @@ function exportJSON() {
             fractions: (q.fractions || []).filter(f => f.id !== null)
         }))
     };
-    const blob = new Blob([JSON.stringify(obj)], { type: 'application/json' });
+    const blob = new Blob([JSON.stringify(obj, 1, 1)], { type: 'application/json' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
     a.download = (obj.name || 'parliament') + '.json';
@@ -321,6 +324,32 @@ function importJSON(text) {
 
     } catch(e) {
         alert('Invalid JSON file:' + e);
+    }
+}
+
+// move a fraction up or down the list in the parliament editor menu
+function move_fraction(plm_id, fraction_id, direction) {
+    const fractions = plms[plm_id].fractions;
+    const target = fraction_id + direction;
+    if (target < 0 || target >= fractions.length) return;
+    [fractions[fraction_id], fractions[target]] = [fractions[target], fractions[fraction_id]];
+    rebuild_fractions(plm_id);
+}
+
+// remove a fraction from the list in the parliament editor menu
+function delete_fraction(plm_id, fraction_id) {
+    plms[plm_id].fractions.splice(fraction_id, 1);
+    rebuild_fractions(plm_id);
+}
+
+// rebuild the fractions list after order is changed
+function rebuild_fractions(plm_id) {
+    const container = document.getElementById('fraction-' + plm_id);
+    container.innerHTML = '';
+    const fractions = [...plms[plm_id].fractions];
+    plms[plm_id].fractions = [];
+    for (const fraction of fractions) {
+        add_fraction(plm_id, fraction);
     }
 }
 

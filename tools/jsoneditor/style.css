@@ -62,3 +62,7 @@ img {
 .checkbox-list.open {
     display: inline-block;
 }
+
+.fraction-arrows {
+    display: inline-block;
+}
