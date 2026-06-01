@@ -101,13 +101,34 @@ document.getElementById("select-timeline").onchange = (e) => {
 }
 
 // if party seat is clicked, highlight that party
-c.addEventListener("mousedown", (e) => {
+c.addEventListener("pointerdown", (e) => {
 	if (!S.cur_tml) return;
+
+	// for touch, update mouse coords before hit-test, then clear to avoid hovering
+	if (e.pointerType !== 'mouse') {
+        const rect = c.getBoundingClientRect();
+        const mx = (e.clientX - rect.left) * RES_MULT;
+        const my = (e.clientY - rect.top) * RES_MULT;
+        const transform = ctx.getTransform();
+        const inverse = transform.inverse();
+        const mouse_point = new DOMPoint(mx, my);
+        const mouse = mouse_point.matrixTransform(inverse);
+        S.mouse_x = mouse.x;
+        S.mouse_y = mouse.y;
+    }
+
 	for (const fraction of S.cur_plm.fractions) {
 		for (const seat of fraction.seat_centers) {
 			const dist = Math.hypot(seat[0] - S.mouse_x, seat[1] - S.mouse_y);
 			if (dist <= S.cur_plm.get_seat_hitbox_radius()) {
 				highlight(fraction.party.id);
+
+				// avoid hovering on touch screens
+				if (e.pointerType !== 'mouse') {
+					S.mouse_x = null;
+					S.mouse_y = null;
+				}
+
 				return;
 			}
 		}
@@ -130,7 +151,8 @@ window.addEventListener('resize', (e) => {
 });
 
 // transform mouse coords
-window.addEventListener('mousemove', (e) => {
+window.addEventListener('pointermove', (e) => {
+	if (e.pointerType !== 'mouse') return;  // ignore touch
 	const rect = c.getBoundingClientRect();
 	const mx = (e.clientX - rect.left) * RES_MULT;
 	const my = (e.clientY - rect.top) * RES_MULT;
