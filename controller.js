@@ -1,5 +1,5 @@
 import { S, schedule_frame } from "./main.js";
-import { c, ctx, resize_canvas, transform_ctx } from "./canvas.js";
+import { c, ctx, resize_canvas, transform_ctx, RES_MULT } from "./canvas.js";
 import { load_parliament, load_timeline } from "./loading.js";
 import { table_highlight, update_table_footer, update_buttons } from "./sidebar.js";
 import { add_party, cancel_add_party, delete_hlt, move_party_left, move_party_right, reset_plm, show_add_menu, sort_table_by_seats, toggle_edit_mode } from "./editing.js";
@@ -132,8 +132,8 @@ window.addEventListener('resize', (e) => {
 // transform mouse coords
 window.addEventListener('mousemove', (e) => {
 	const rect = c.getBoundingClientRect();
-	const mx = e.clientX - rect.left;
-	const my = e.clientY - rect.top;
+	const mx = (e.clientX - rect.left) * RES_MULT;
+	const my = (e.clientY - rect.top) * RES_MULT;
 	const transform = ctx.getTransform();
 	const inverse = transform.inverse();
 	const mouse_point = new DOMPoint(mx, my);

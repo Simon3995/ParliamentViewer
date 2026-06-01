@@ -3,11 +3,12 @@ import { S, schedule_frame } from "./main.js";
 
 export const c = document.getElementById("canvas");
 export const ctx = c.getContext("2d");
+export const RES_MULT = 3;  // render resolution multiplier
 
 // resize canvas to fill viewport
 export function resize_canvas() {
-	c.width = c.getBoundingClientRect().width;
-	c.height = c.getBoundingClientRect().height;
+	c.width = c.getBoundingClientRect().width * RES_MULT;
+	c.height = c.getBoundingClientRect().height * RES_MULT;
 }
 
 // transform so that seats are drawn left of the sidebar
