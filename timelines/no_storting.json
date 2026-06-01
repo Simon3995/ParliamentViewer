@@ -1,1 +1,124 @@
-{"name":"no_storting","title":"Storting","country":"Norway","parties":{"ap":{"name":"Ap","fullname":"Arbeiderpartiet","fullname_rm":"","fullname_en":"Labour Party","color":"#e61515","image":"/logos/no/ap.png"},"frp":{"name":"FrP","fullname":"Fremskrittspartiet","fullname_rm":"","fullname_en":"Progress Party","color":"#186eb9","image":"/logos/no/frp.png"},"h":{"name":"H","fullname":"Høyre","fullname_rm":"","fullname_en":"The Right","color":"#026ac5","image":"/logos/no/h.png"},"sv":{"name":"SV","fullname":"Sosialistisk Venstreparti","fullname_rm":"","fullname_en":"Socialist Left Party","color":"#d80b60","image":"/logos/no/sv.png"},"sp":{"name":"SP","fullname":"Senterpartiet","fullname_rm":"","fullname_en":"Centre Party","color":"#109710","image":"/logos/no/sp.png"},"rodt":{"name":"Rødt","fullname":"Rødt","fullname_rm":"","fullname_en":"Red","color":"#cc0000","image":"/logos/no/rodt.png"},"mdg":{"name":"MDG","fullname":"Miljøpartiet De Grønne","fullname_rm":"","fullname_en":"The Greens","color":"#37a803","image":"/logos/no/mdg.png"},"krf":{"name":"KrF","fullname":"Kristelig Folkeparti","fullname_rm":"","fullname_en":"Christian People's Party","color":"#ffe922","image":"/logos/no/krf.png"},"v":{"name":"V","fullname":"Venstre","fullname_rm":"","fullname_en":"The Left","color":"#007575","image":"/logos/no/v.png"}},"parliaments":[{"name":"2025 Parliamentary Election","date":"2025-09-08","source":"https://valgresultat.no/valg/2025/st#seats","fractions":[{"id":"rodt","seats":9},{"id":"sv","seats":9},{"id":"ap","seats":53},{"id":"mdg","seats":8},{"id":"sp","seats":9},{"id":"krf","seats":7},{"id":"v","seats":3},{"id":"h","seats":24},{"id":"frp","seats":47}]}]}
+{
+ "name": "no_storting",
+ "title": "Storting",
+ "country": "Norway",
+ "parties": {
+  "ap": {
+   "name": "Ap",
+   "fullname": "Arbeiderpartiet",
+   "fullname_rm": "",
+   "fullname_en": "Labour Party",
+   "color": "#e61515",
+   "image": "/logos/no/ap.png"
+  },
+  "frp": {
+   "name": "FrP",
+   "fullname": "Fremskrittspartiet",
+   "fullname_rm": "",
+   "fullname_en": "Progress Party",
+   "color": "#186eb9",
+   "image": "/logos/no/frp.png"
+  },
+  "h": {
+   "name": "H",
+   "fullname": "Høyre",
+   "fullname_rm": "",
+   "fullname_en": "The Right",
+   "color": "#026ac5",
+   "image": "/logos/no/h.png"
+  },
+  "sv": {
+   "name": "SV",
+   "fullname": "Sosialistisk Venstreparti",
+   "fullname_rm": "",
+   "fullname_en": "Socialist Left Party",
+   "color": "#d80b60",
+   "image": "/logos/no/sv.png"
+  },
+  "sp": {
+   "name": "SP",
+   "fullname": "Senterpartiet",
+   "fullname_rm": "",
+   "fullname_en": "Centre Party",
+   "color": "#109710",
+   "image": "/logos/no/sp.png"
+  },
+  "rodt": {
+   "name": "Rødt",
+   "fullname": "Rødt",
+   "fullname_rm": "",
+   "fullname_en": "Red",
+   "color": "#cc0000",
+   "image": "/logos/no/rodt.png"
+  },
+  "mdg": {
+   "name": "MDG",
+   "fullname": "Miljøpartiet De Grønne",
+   "fullname_rm": "",
+   "fullname_en": "The Greens",
+   "color": "#37a803",
+   "image": "/logos/no/mdg.png"
+  },
+  "krf": {
+   "name": "KrF",
+   "fullname": "Kristelig Folkeparti",
+   "fullname_rm": "",
+   "fullname_en": "Christian People's Party",
+   "color": "#ffe922",
+   "image": "/logos/no/krf.png"
+  },
+  "v": {
+   "name": "V",
+   "fullname": "Venstre",
+   "fullname_rm": "",
+   "fullname_en": "The Left",
+   "color": "#007575",
+   "image": "/logos/no/v.png"
+  }
+ },
+ "parliaments": [
+  {
+   "name": "2025 Parliamentary Election",
+   "date": "2025-09-08",
+   "source": "https://valgresultat.no/valg/2025/st#seats",
+   "fractions": [
+    {
+     "id": "rodt",
+     "seats": 9
+    },
+    {
+     "id": "sv",
+     "seats": 9
+    },
+    {
+     "id": "ap",
+     "seats": 53
+    },
+    {
+     "id": "mdg",
+     "seats": 8
+    },
+    {
+     "id": "sp",
+     "seats": 9
+    },
+    {
+     "id": "krf",
+     "seats": 7
+    },
+    {
+     "id": "v",
+     "seats": 3
+    },
+    {
+     "id": "h",
+     "seats": 24
+    },
+    {
+     "id": "frp",
+     "seats": 47
+    }
+   ]
+  }
+ ]
+}

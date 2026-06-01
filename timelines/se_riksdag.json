@@ -1,1 +1,112 @@
-{"name":"se_riksdag","title":"Riksdag","country":"Sweden","parties":{"v":{"name":"V","fullname":"Vänsterpartiet","fullname_rm":"","fullname_en":"Left Party","color":"#850000","image":"/logos/se/v.png"},"mp":{"name":"MP","fullname":"Miljöpartiet","fullname_rm":"","fullname_en":"Green Party","color":"#5fc951","image":"/logos/se/mp.png"},"s":{"name":"S","fullname":"Socialdemokraterna","fullname_rm":"","fullname_en":"Social Democrats","color":"#ff0000","image":"/logos/se/s.png"},"c":{"name":"C","fullname":"Centerpartiet","fullname_rm":"","fullname_en":"Centre Party","color":"#3f6b3f","image":"/logos/se/c.png"},"l":{"name":"L","fullname":"Liberalerna","fullname_rm":"","fullname_en":"Liberals","color":"#3496f1","image":"/logos/se/l.png"},"kd":{"name":"KD","fullname":"Kristdemokraterna","fullname_rm":"","fullname_en":"Christian Democrats","color":"#000083","image":"/logos/se/kd.png"},"m":{"name":"M","fullname":"Moderaterna","fullname_rm":"","fullname_en":"Moderates","color":"#2354da","image":"/logos/se/m.png"},"sd":{"name":"SD","fullname":"Sverigedemokraterna","fullname_rm":"","fullname_en":"Sweden Democrats","color":"#263f75","image":"/logos/se/sd.png"}},"parliaments":[{"name":"2022 General Election","date":"2022-09-11","source":"https://www.val.se/valresultat-och-statistik/riksdags--region--och-kommunval/valresultat-2022","fractions":[{"id":"v","seats":24},{"id":"s","seats":107},{"id":"mp","seats":18},{"id":"c","seats":24},{"id":"l","seats":16},{"id":"kd","seats":19},{"id":"m","seats":68},{"id":"sd","seats":73}]}]}
+{
+ "name": "se_riksdag",
+ "title": "Riksdag",
+ "country": "Sweden",
+ "parties": {
+  "v": {
+   "name": "V",
+   "fullname": "Vänsterpartiet",
+   "fullname_rm": "",
+   "fullname_en": "Left Party",
+   "color": "#850000",
+   "image": "/logos/se/v.png"
+  },
+  "mp": {
+   "name": "MP",
+   "fullname": "Miljöpartiet",
+   "fullname_rm": "",
+   "fullname_en": "Green Party",
+   "color": "#5fc951",
+   "image": "/logos/se/mp.png"
+  },
+  "s": {
+   "name": "S",
+   "fullname": "Socialdemokraterna",
+   "fullname_rm": "",
+   "fullname_en": "Social Democrats",
+   "color": "#ff0000",
+   "image": "/logos/se/s.png"
+  },
+  "c": {
+   "name": "C",
+   "fullname": "Centerpartiet",
+   "fullname_rm": "",
+   "fullname_en": "Centre Party",
+   "color": "#3f6b3f",
+   "image": "/logos/se/c.png"
+  },
+  "l": {
+   "name": "L",
+   "fullname": "Liberalerna",
+   "fullname_rm": "",
+   "fullname_en": "Liberals",
+   "color": "#3496f1",
+   "image": "/logos/se/l.png"
+  },
+  "kd": {
+   "name": "KD",
+   "fullname": "Kristdemokraterna",
+   "fullname_rm": "",
+   "fullname_en": "Christian Democrats",
+   "color": "#000083",
+   "image": "/logos/se/kd.png"
+  },
+  "m": {
+   "name": "M",
+   "fullname": "Moderaterna",
+   "fullname_rm": "",
+   "fullname_en": "Moderates",
+   "color": "#2354da",
+   "image": "/logos/se/m.png"
+  },
+  "sd": {
+   "name": "SD",
+   "fullname": "Sverigedemokraterna",
+   "fullname_rm": "",
+   "fullname_en": "Sweden Democrats",
+   "color": "#263f75",
+   "image": "/logos/se/sd.png"
+  }
+ },
+ "parliaments": [
+  {
+   "name": "2022 General Election",
+   "date": "2022-09-11",
+   "source": "https://www.val.se/valresultat-och-statistik/riksdags--region--och-kommunval/valresultat-2022",
+   "fractions": [
+    {
+     "id": "v",
+     "seats": 24
+    },
+    {
+     "id": "s",
+     "seats": 107
+    },
+    {
+     "id": "mp",
+     "seats": 18
+    },
+    {
+     "id": "c",
+     "seats": 24
+    },
+    {
+     "id": "l",
+     "seats": 16
+    },
+    {
+     "id": "kd",
+     "seats": 19
+    },
+    {
+     "id": "m",
+     "seats": 68
+    },
+    {
+     "id": "sd",
+     "seats": 73
+    }
+   ]
+  }
+ ]
+}

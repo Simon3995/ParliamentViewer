@@ -1,0 +1,68 @@
+* {
+    font-family: monospace;
+    font-size: 16px;
+    margin: 0;
+}
+
+body {
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+p {
+    margin: 0px 30px;
+}
+
+label {
+    width: 300px;
+    display: inline-block;
+}
+
+.party, .plm {
+    background-color: #fff2;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.party {
+    padding-left: 120px;
+}
+
+.indent {
+    margin-left: 120px;
+}
+
+input[type=text] {
+    width: 400px;
+}
+
+input[type=color] {
+    border: none;
+    padding: 0;
+    height: 20px;
+    vertical-align: middle;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.checkbox-list {
+    display: none;
+}
+
+.checkbox-list.open {
+    display: inline-block;
+}
+
+.fraction-arrows {
+    display: inline-block;
+}

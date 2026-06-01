@@ -1,1 +1,328 @@
-{"name":"de_bundestag","title":"Bundestag","country":"Germany","parties":{"linke":{"name":"Linke","fullname":"Die Linke","fullname_rm":"","fullname_en":"The Left","color":"#ba0076ff","image":"/logos/de/linke.png"},"grune":{"name":"Grüne","fullname":"Bündnis 90/Die Grünen","fullname_rm":"","fullname_en":"Aliiance 90/The Greens","color":"#3aab3a","image":"/logos/de/grune.png"},"spd":{"name":"SPD","fullname":"Sozialdemokratische Partei Deutschlands","fullname_rm":"","fullname_en":"Social-Democratic Party of Germany","color":"#ee2121","image":"/logos/de/spd.png"},"cducsu":{"name":"CDU/CSU","fullname":"Unionsparteien","fullname_rm":"","fullname_en":"Union Parties","color":"#303030","image":"/logos/de/cducsu.png"},"fdp":{"name":"FDP","fullname":"Freie Demokratische Partei","fullname_rm":"","fullname_en":"Free Democratic Party","color":"#ffe600","image":"/logos/de/fdp.png"},"afd":{"name":"AfD","fullname":"Alternative für Deutschland","fullname_rm":"","fullname_en":"Alternatives for Germany","color":"#3d9eff","image":"/logos/de/afd.png"},"ssw":{"name":"SSW","fullname":"Südschleswigscher Wählerverband","fullname_rm":"","fullname_en":"South Schleswig Voters' Association","color":"rgb(22, 40, 122)","image":"/logos/de/ssw.png"},"pds":{"name":"PDS","fullname":"Partei des Demokratischen Sozialismus","fullname_rm":"","fullname_en":"Party of Democratic Socialism","color":"#ff5e00","image":"/logos/de/pds.png"}},"parliaments":[{"name":"2025 Federal Election","date":"2025-02-23","source":"https://www.bundeswahlleiterin.de/bundestagswahlen/2025/ergebnisse/bund-99.html","fractions":[{"id":"linke","seats":64},{"id":"spd","seats":120},{"id":"grune","seats":85},{"id":"ssw","seats":1},{"id":"cducsu","seats":208},{"id":"afd","seats":152}]},{"name":"2021 Federal Election","date":"2021-09-26","source":"https://www.bundeswahlleiterin.de/bundestagswahlen/2021/ergebnisse/bund-99.html","fractions":[{"id":"linke","seats":39},{"id":"spd","seats":206},{"id":"grune","seats":118},{"id":"ssw","seats":1},{"id":"fdp","seats":91},{"id":"cducsu","seats":197},{"id":"afd","seats":83}]},{"name":"2017 Federal Election","date":"2017-09-24","source":"https://www.bundeswahlleiterin.de/bundestagswahlen/2017/ergebnisse/bund-99.html","fractions":[{"id":"linke","seats":69},{"id":"spd","seats":153},{"id":"grune","seats":67},{"id":"fdp","seats":80},{"id":"cducsu","seats":246},{"id":"afd","seats":94}]},{"name":"2013 Federal Election","date":"2013-09-22","source":"https://www.bundeswahlleiterin.de/bundestagswahlen/2013/ergebnisse/bund-99.html","fractions":[{"id":"linke","seats":64},{"id":"spd","seats":193},{"id":"grune","seats":63},{"id":"cducsu","seats":311}]},{"name":"2009 Federal Election","date":"2009-09-27","source":"https://www.bundeswahlleiterin.de/bundestagswahlen/2009.html","fractions":[{"id":"linke","seats":76},{"id":"spd","seats":146},{"id":"grune","seats":68},{"id":"fdp","seats":93},{"id":"cducsu","seats":239}]},{"name":"2005 Federal Election","date":"2005-09-18","source":"https://www.bundeswahlleiterin.de/bundestagswahlen/2005.html","fractions":[{"id":"linke","seats":54},{"id":"spd","seats":222},{"id":"grune","seats":51},{"id":"fdp","seats":61},{"id":"cducsu","seats":226}]},{"name":"2002 Federal Election","date":"2002-09-22","source":"https://www.bundeswahlleiterin.de/bundestagswahlen/2002.html","fractions":[{"id":"pds","seats":2},{"id":"spd","seats":251},{"id":"grune","seats":55},{"id":"fdp","seats":47},{"id":"cducsu","seats":248}]},{"name":"1998 Federal Election","date":"1998-09-27","source":"https://www.bundeswahlleiterin.de/bundestagswahlen/1998.html","fractions":[{"id":"pds","seats":36},{"id":"spd","seats":298},{"id":"grune","seats":47},{"id":"fdp","seats":43},{"id":"cducsu","seats":245}]},{"name":"1994 Federal Election","date":"1994-10-16","source":"https://www.bundeswahlleiterin.de/bundestagswahlen/1994.html","fractions":[{"id":"pds","seats":30},{"id":"spd","seats":252},{"id":"grune","seats":49},{"id":"fdp","seats":47},{"id":"cducsu","seats":294}]}]}
+{
+ "name": "de_bundestag",
+ "title": "Bundestag",
+ "country": "Germany",
+ "parties": {
+  "linke": {
+   "name": "Linke",
+   "fullname": "Die Linke",
+   "fullname_rm": "",
+   "fullname_en": "The Left",
+   "color": "#ba0076ff",
+   "image": "/logos/de/linke.png"
+  },
+  "grune": {
+   "name": "Grüne",
+   "fullname": "Bündnis 90/Die Grünen",
+   "fullname_rm": "",
+   "fullname_en": "Aliiance 90/The Greens",
+   "color": "#3aab3a",
+   "image": "/logos/de/grune.png"
+  },
+  "spd": {
+   "name": "SPD",
+   "fullname": "Sozialdemokratische Partei Deutschlands",
+   "fullname_rm": "",
+   "fullname_en": "Social-Democratic Party of Germany",
+   "color": "#ee2121",
+   "image": "/logos/de/spd.png"
+  },
+  "cducsu": {
+   "name": "CDU/CSU",
+   "fullname": "Unionsparteien",
+   "fullname_rm": "",
+   "fullname_en": "Union Parties",
+   "color": "#303030",
+   "image": "/logos/de/cducsu.png"
+  },
+  "fdp": {
+   "name": "FDP",
+   "fullname": "Freie Demokratische Partei",
+   "fullname_rm": "",
+   "fullname_en": "Free Democratic Party",
+   "color": "#ffe600",
+   "image": "/logos/de/fdp.png"
+  },
+  "afd": {
+   "name": "AfD",
+   "fullname": "Alternative für Deutschland",
+   "fullname_rm": "",
+   "fullname_en": "Alternatives for Germany",
+   "color": "#3d9eff",
+   "image": "/logos/de/afd.png"
+  },
+  "ssw": {
+   "name": "SSW",
+   "fullname": "Südschleswigscher Wählerverband",
+   "fullname_rm": "",
+   "fullname_en": "South Schleswig Voters' Association",
+   "color": "rgb(22, 40, 122)",
+   "image": "/logos/de/ssw.png"
+  },
+  "pds": {
+   "name": "PDS",
+   "fullname": "Partei des Demokratischen Sozialismus",
+   "fullname_rm": "",
+   "fullname_en": "Party of Democratic Socialism",
+   "color": "#ff5e00",
+   "image": "/logos/de/pds.png"
+  }
+ },
+ "parliaments": [
+  {
+   "name": "2025 Federal Election",
+   "date": "2025-02-23",
+   "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/2025/ergebnisse/bund-99.html",
+   "fractions": [
+    {
+     "id": "linke",
+     "seats": 64
+    },
+    {
+     "id": "spd",
+     "seats": 120
+    },
+    {
+     "id": "grune",
+     "seats": 85
+    },
+    {
+     "id": "ssw",
+     "seats": 1
+    },
+    {
+     "id": "cducsu",
+     "seats": 208
+    },
+    {
+     "id": "afd",
+     "seats": 152
+    }
+   ]
+  },
+  {
+   "name": "2021 Federal Election",
+   "date": "2021-09-26",
+   "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/2021/ergebnisse/bund-99.html",
+   "fractions": [
+    {
+     "id": "linke",
+     "seats": 39
+    },
+    {
+     "id": "spd",
+     "seats": 206
+    },
+    {
+     "id": "grune",
+     "seats": 118
+    },
+    {
+     "id": "ssw",
+     "seats": 1
+    },
+    {
+     "id": "fdp",
+     "seats": 91
+    },
+    {
+     "id": "cducsu",
+     "seats": 197
+    },
+    {
+     "id": "afd",
+     "seats": 83
+    }
+   ]
+  },
+  {
+   "name": "2017 Federal Election",
+   "date": "2017-09-24",
+   "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/2017/ergebnisse/bund-99.html",
+   "fractions": [
+    {
+     "id": "linke",
+     "seats": 69
+    },
+    {
+     "id": "spd",
+     "seats": 153
+    },
+    {
+     "id": "grune",
+     "seats": 67
+    },
+    {
+     "id": "fdp",
+     "seats": 80
+    },
+    {
+     "id": "cducsu",
+     "seats": 246
+    },
+    {
+     "id": "afd",
+     "seats": 94
+    }
+   ]
+  },
+  {
+   "name": "2013 Federal Election",
+   "date": "2013-09-22",
+   "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/2013/ergebnisse/bund-99.html",
+   "fractions": [
+    {
+     "id": "linke",
+     "seats": 64
+    },
+    {
+     "id": "spd",
+     "seats": 193
+    },
+    {
+     "id": "grune",
+     "seats": 63
+    },
+    {
+     "id": "cducsu",
+     "seats": 311
+    }
+   ]
+  },
+  {
+   "name": "2009 Federal Election",
+   "date": "2009-09-27",
+   "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/2009.html",
+   "fractions": [
+    {
+     "id": "linke",
+     "seats": 76
+    },
+    {
+     "id": "spd",
+     "seats": 146
+    },
+    {
+     "id": "grune",
+     "seats": 68
+    },
+    {
+     "id": "fdp",
+     "seats": 93
+    },
+    {
+     "id": "cducsu",
+     "seats": 239
+    }
+   ]
+  },
+  {
+   "name": "2005 Federal Election",
+   "date": "2005-09-18",
+   "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/2005.html",
+   "fractions": [
+    {
+     "id": "linke",
+     "seats": 54
+    },
+    {
+     "id": "spd",
+     "seats": 222
+    },
+    {
+     "id": "grune",
+     "seats": 51
+    },
+    {
+     "id": "fdp",
+     "seats": 61
+    },
+    {
+     "id": "cducsu",
+     "seats": 226
+    }
+   ]
+  },
+  {
+   "name": "2002 Federal Election",
+   "date": "2002-09-22",
+   "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/2002.html",
+   "fractions": [
+    {
+     "id": "pds",
+     "seats": 2
+    },
+    {
+     "id": "spd",
+     "seats": 251
+    },
+    {
+     "id": "grune",
+     "seats": 55
+    },
+    {
+     "id": "fdp",
+     "seats": 47
+    },
+    {
+     "id": "cducsu",
+     "seats": 248
+    }
+   ]
+  },
+  {
+   "name": "1998 Federal Election",
+   "date": "1998-09-27",
+   "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/1998.html",
+   "fractions": [
+    {
+     "id": "pds",
+     "seats": 36
+    },
+    {
+     "id": "spd",
+     "seats": 298
+    },
+    {
+     "id": "grune",
+     "seats": 47
+    },
+    {
+     "id": "fdp",
+     "seats": 43
+    },
+    {
+     "id": "cducsu",
+     "seats": 245
+    }
+   ]
+  },
+  {
+   "name": "1994 Federal Election",
+   "date": "1994-10-16",
+   "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/1994.html",
+   "fractions": [
+    {
+     "id": "pds",
+     "seats": 30
+    },
+    {
+     "id": "spd",
+     "seats": 252
+    },
+    {
+     "id": "grune",
+     "seats": 49
+    },
+    {
+     "id": "fdp",
+     "seats": 47
+    },
+    {
+     "id": "cducsu",
+     "seats": 294
+    }
+   ]
+  }
+ ]
+}

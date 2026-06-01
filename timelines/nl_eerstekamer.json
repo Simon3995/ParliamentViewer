@@ -1,1 +1,1432 @@
-{"name":"nl_eerstekamer","title":"Eerste Kamer","country":"Netherlands","parties":{"bij1":{"name":"BIJ1","fullname":"BIJ1","fullname_rm":"","fullname_en":"BIJ1 (TOGETHER)","color":"#000000","image":"/logos/nl/BIJ1.png"},"ppnl":{"name":"PPNL","fullname":"Piratenpartij","fullname_rm":"","fullname_en":"Pirate Party","color":"#8300c5ff","image":"/logos/nl/PPNL.png"},"sp":{"name":"SP","fullname":"Socialistische Partij","fullname_rm":"","fullname_en":"Socialist Party","color":"#ed1b24","image":"/logos/nl/SP.png"},"pvdd":{"name":"PvdD","fullname":"Partij voor de Dieren","fullname_rm":"","fullname_en":"Party for the Animals","color":"#016b2d","image":"/logos/nl/PvdD.png"},"gl":{"name":"GL","fullname":"GroenLinks","fullname_rm":"","fullname_en":"GreenLeft","color":"#00cc00","image":"/logos/nl/GL.png"},"glpvda":{"name":"GL/PvdA","fullname":"GroenLinks / Partij van de Arbeid","fullname_rm":"","fullname_en":"GreenLeft / Labour Party","color":"#01af40","image":"/logos/nl/GLPvdA.png"},"pvda":{"name":"PvdA","fullname":"Partij van de Arbeid","fullname_rm":"","fullname_en":"Labour Party","color":"#ff0000","image":"/logos/nl/PvdA.png"},"denk":{"name":"DENK","fullname":"DENK","fullname_rm":"","fullname_en":"DENK (THINK)","color":"#38bfc2","image":"/logos/nl/DENK.png"},"volt":{"name":"Volt","fullname":"Volt","fullname_rm":"","fullname_en":"Volt","color":"#683ba8","image":"/logos/nl/Volt.png"},"d66":{"name":"D66","fullname":"Democraten 66","fullname_rm":"","fullname_en":"Democrats 66","color":"#01af40","image":"/logos/nl/D66.png"},"cu":{"name":"CU","fullname":"ChristenUnie","fullname_rm":"","fullname_en":"ChristianUnion","color":"#8fd1eb","image":"/logos/nl/CU.png"},"fnp":{"name":"FNP","fullname":"Fryske Nasjonale Partij","fullname_rm":"","fullname_en":"Frisian National Party","color":"#003366","image":"/logos/nl/FNP.png"},"cda":{"name":"CDA","fullname":"Christen-Democratisch Appèl","fullname_rm":"","fullname_en":"Christian-Democratic Appeal","color":"#007c5e","image":"/logos/nl/CDA.png"},"nsc":{"name":"NSC","fullname":"Nieuw Sociaal Contract","fullname_rm":"","fullname_en":"New Social Contract","color":"#181d57","image":"/logos/nl/NSC.png"},"50plus":{"name":"50PLUS","fullname":"50PLUS","fullname_rm":"","fullname_en":"50PLUS","color":"#92278f","image":"/logos/nl/50PLUS.png"},"vvd":{"name":"VVD","fullname":"Volkspartij voor Vrijheid en Democratie","fullname_rm":"","fullname_en":"People's Party for Freedom and Democracy","color":"#21276a","image":"/logos/nl/VVD.png"},"bbb":{"name":"BBB","fullname":"BoerBurgerBeweging","fullname_rm":"","fullname_en":"Farmer-Citizen Movement","color":"#8fbb1f","image":"/logos/nl/BBB.png"},"ja21":{"name":"JA21","fullname":"Juiste Antwoord 2021","fullname_rm":"","fullname_en":"Right Answer 2021","color":"#21276a","image":"/logos/nl/JA21.png"},"sgp":{"name":"SGP","fullname":"Staatkundig Gereformeerde Partij","fullname_rm":"","fullname_en":"Reformed Party","color":"#e95d0e","image":"/logos/nl/SGP.png"},"pvv":{"name":"PVV","fullname":"Partij voor de Vrijheid","fullname_rm":"","fullname_en":"Party for Freedom","color":"#82b2ff","image":"/logos/nl/PVV.png"},"gm":{"name":"GM","fullname":"Groep Markuszower","fullname_rm":"","fullname_en":"Markuszower Group","color":"#169793ff","image":""},"fvd":{"name":"FvD","fullname":"Forum voor Democratie","fullname_rm":"","fullname_en":"Forum for Democracy","color":"#841818","image":"/logos/nl/FvD.png"},"lpf":{"name":"LPF","fullname":"Lijst Pim Fortuyn","fullname_rm":"","fullname_en":"Pim Fortuyn List","color":"rgb(18, 74, 158)","image":"/logos/nl/LPF.png"},"ln":{"name":"LN","fullname":"Leefbaar Nederland","fullname_rm":"","fullname_en":"Livable Netherlands","color":"#ff6600ff","image":"/logos/nl/LN.png"},"rpf":{"name":"RPF","fullname":"Reformatorische Politieke Federatie","fullname_rm":"","fullname_en":"Reformatory Political Federation","color":"#000080","image":"/logos/nl/RPF.png"},"gpv":{"name":"GPV","fullname":"Gereformeerd Politiek Verbond","fullname_rm":"","fullname_en":"Reformed Political League","color":"#ff7b00","image":"/logos/nl/GPV.png"},"rpfgpv":{"name":"RPF/GPV","fullname":"Reformatorische Politieke Federatie / Gereformeerd Politiek Verbond","fullname_rm":"","fullname_en":"Reformatory Political Federation / Reformed Political League","color":"#000080","image":""},"aov":{"name":"AOV","fullname":"Algemeen Ouderen Verbond","fullname_rm":"","fullname_en":"General Elderly Alliance","color":"#3083ff","image":"/logos/nl/AOV.png"},"u55p":{"name":"U55+","fullname":"Unie 55+","fullname_rm":"","fullname_en":"Union 55+","color":"#62a0ea","image":"/logos/nl/Unie55+.png"},"cd":{"name":"CD","fullname":"Centrumdemocraten","fullname_rm":"","fullname_en":"Centre Democrats","color":"#c9dfff","image":"/logos/nl/CD.png"},"psp":{"name":"PSP","fullname":"Pacifistisch Socialistische Partij","fullname_rm":"","fullname_en":"Pacifist Socialist Party","color":"#e62525ff","image":"/logos/nl/PSP.png"},"ppr":{"name":"PPR","fullname":"Politieke Partij Radikalen","fullname_rm":"","fullname_en":"Political Party of Radicals","color":"#e92f7cff","image":"/logos/nl/PPR.png"},"evp":{"name":"EVP","fullname":"Evangelische Volkspartij","fullname_rm":"","fullname_en":"Evangelical People's Party","color":"rgb(240, 176, 0)","image":""},"cpn":{"name":"CPN","fullname":"Communistische Partij Nederland","fullname_rm":"","fullname_en":"Communist Party of the Netherlands","color":"#ff0000","image":"/logos/nl/CPN.png"},"sdp":{"name":"SDP","fullname":"Sociaal-Democratische Partij","fullname_rm":"","fullname_en":"Social-Democratic Party","color":"#ff0000","image":""},"bp":{"name":"BP","fullname":"Boerenpartij","fullname_rm":"","fullname_en":"Farmers' Party","color":"#519436","image":""},"ds70":{"name":"DS'70","fullname":"Democratisch Socialisten '70","fullname_rm":"","fullname_en":"Democratic Socialists '70","color":"#d40000ff","image":"/logos/nl/DS70.png"},"kvp":{"name":"KVP","fullname":"Katholieke Volkspartij","fullname_rm":"","fullname_en":"Catholic People's Party","color":"#362511ff","image":"/logos/nl/KVP.png"},"chu":{"name":"CHU","fullname":"Christelijk-Historische Unie","fullname_rm":"","fullname_en":"Christian-Historic Union","color":"#0f1e53ff","image":"/logos/nl/CHU.png"},"arp":{"name":"ARP","fullname":"Anti-Revolutonaire Partij","fullname_rm":"","fullname_en":"Anti-Revolutionary Party","color":"#638ec5","image":"/logos/nl/ARP.png"},"rkpn":{"name":"RKPN","fullname":"Rooms Katholieke Partij Nederland","fullname_rm":"","fullname_en":"Roman Catholic Party of the Netherlands","color":"rgb(206, 165, 31)","image":""},"nmp":{"name":"NMP","fullname":"Nederlandse Middenstands Partij","fullname_rm":"","fullname_en":"New Middle Party","color":"rgb(51, 53, 167)","image":""},"knp":{"name":"KNP","fullname":"Katholieke Nationale Partij","fullname_rm":"","fullname_en":"Catholic National Party","color":"#3faa4e","image":""},"pvdv":{"name":"PvdV","fullname":"Partij voor de Vrijheid","fullname_rm":"","fullname_en":"Party for Freedom","color":"#092447ff","image":"/logos/nl/PvdV.png"},"rksp":{"name":"RKSP","fullname":"Rooms-Katholieke Staatspartij","fullname_rm":"","fullname_en":"Roman Catholic State Party","color":"rgb(187, 90, 0)","image":""},"sdap":{"name":"SDAP","fullname":"Sociaal-Democratische Arbeiderspartij","fullname_rm":"","fullname_en":"Social-Democratic Workers' Party","color":"#e41919ff","image":"/logos/nl/SDAP.png"},"vdb":{"name":"VDB","fullname":"Vrijzinnig Democratische Bond","fullname_rm":"","fullname_en":"Free-Thinking Democratic League","color":"#6e0e0eff","image":"/logos/nl/VDB.png"},"nsb":{"name":"NSB","fullname":"Nationaal-Socialistische Beweging","fullname_rm":"","fullname_en":"National-Socialist Movement","color":"#000000ff","image":"/logos/nl/NSB.png"},"lsp":{"name":"LSP","fullname":"Liberale Staatspartij","fullname_rm":"","fullname_en":"Liberal State Party","color":"#0d6486ff","image":""},"cdu":{"name":"CDU","fullname":"Christelijk-Democratische Unie","fullname_rm":"","fullname_en":"Christian-Democratic Union","color":"#eb6c05ff","image":""},"rsp":{"name":"RSP","fullname":"Revolutionair Socialistische Partij","fullname_rm":"","fullname_en":"Revolutionary Socialist Party","color":"#a70909ff","image":""},"nbtmp":{"name":"NBTMP","fullname":"Nationale Boeren-, Tuinders- en Middenstandspartij","fullname_rm":"","fullname_en":"National Farmers' Horticulturists' and Middle Class Party","color":"#79aa4aff","image":""},"pb":{"name":"PB","fullname":"Plattelandersbond","fullname_rm":"","fullname_en":"Peasants' League","color":"#79aa4aff","image":""},"rkvp":{"name":"RKVP","fullname":"Rooms-Katholieke Volkspartij","fullname_rm":"","fullname_en":"Roman Catholic People's Party","color":"#802008ff","image":""},"hgsp":{"name":"HGSP","fullname":"Hervormd-Gereformeerde Staatspartij","fullname_rm":"","fullname_en":"Reformed Reformed State Party","color":"#030557ff","image":""},"vnh":{"name":"VNH","fullname":"Verbond voor Nationaal Herstel","fullname_rm":"","fullname_en":"Alliance for National Reconstruction","color":"#ca8c19ff","image":""},"mpsl":{"name":"MPSL","fullname":"Middenpartij voor Stad en Land","fullname_rm":"","fullname_en":"Middle Party for City and Country","color":"#000000FF","image":""},"ab":{"name":"AB","fullname":"Algemeene Bond","fullname_rm":"","fullname_en":"General League","color":"#000000FF","image":""},"lp":{"name":"LP","fullname":"Liberale Partij","fullname_rm":"","fullname_en":"Liberal Party","color":"#1f5192ff","image":""},"mp":{"name":"MP","fullname":"Middenstandspartij","fullname_rm":"","fullname_en":"Middle Class Party","color":"#b8bb19ff","image":""},"eb":{"name":"EB","fullname":"Economische Bond","fullname_rm":"","fullname_en":"Economic League","color":"#591ba0ff","image":""},"lu":{"name":"LU","fullname":"Liberale Unie","fullname_rm":"","fullname_en":"Liberal Union","color":"#1b76a0ff","image":""},"bvl":{"name":"BVL","fullname":"Bond van Vrije Liberalen","fullname_rm":"","fullname_en":"League of Free Liberals","color":"#5879e9ff","image":""},"cdp":{"name":"CDP","fullname":"Christen-Democratische Partij","fullname_rm":"","fullname_en":"Christian-Democratic Party","color":"#464040ff","image":""},"sp_1918":{"name":"SP","fullname":"Socialistische Partij","fullname_rm":"","fullname_en":"Socialist Party","color":"#df0e0eff","image":""},"bcs":{"name":"BCS","fullname":"Bond van Christen-Socialisten","fullname_rm":"","fullname_en":"League of Christian-Socialists","color":"#681010ff","image":""},"csp":{"name":"CSP","fullname":"Christelijk-Sociale Partij","fullname_rm":"","fullname_en":"Christian-Social Party","color":"#8b5c14ff","image":""},"np":{"name":"NP","fullname":"Neutrale Partij","fullname_rm":"","fullname_en":"Neutral Party","color":"#8b1481ff","image":""},"vdw":{"name":"VDW","fullname":"Verbond tot Democratisering der Weermacht","fullname_rm":"","fullname_en":"Alliance to Democratise the Forces","color":"#0c501bff","image":""},"opnl":{"name":"OPNL","fullname":"Onafhankelijke Politiek Nederland","fullname_rm":"","fullname_en":"Independent Politics Netherlands","color":"#505050","image":"/logos/nl/OPNL.png"},"osf":{"name":"OSF","fullname":"Onafhankelijke Senaatsfractie","fullname_rm":"","fullname_en":"Independent Senate Fraction","color":"#505050","image":"/logos/nl/OPNL.png"},"ind":{"name":"Ind","fullname":"Independent","fullname_rm":"","fullname_en":"Independent","color":"#808080","image":""}},"parliaments":[{"name":"Current Situation","date":"","source":"https://www.eerstekamer.nl/fracties","fractions":[{"id":"sp","seats":3},{"id":"pvdd","seats":2},{"id":"glpvda","seats":14},{"id":"volt","seats":2},{"id":"d66","seats":7},{"id":"cu","seats":3},{"id":"opnl","seats":1},{"id":"50plus","seats":1},{"id":"cda","seats":6},{"id":"vvd","seats":9},{"id":"bbb","seats":11},{"id":"ja21","seats":2},{"id":"sgp","seats":2},{"id":"pvv","seats":4},{"id":"fvd","seats":3},{"id":"ind","seats":5}]},{"name":"Eerste Kamerverkiezingen 2023","date":"2023-06-01","source":"https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2","fractions":[{"id":"sp","seats":3},{"id":"pvdd","seats":3},{"id":"gl","seats":7},{"id":"pvda","seats":7},{"id":"volt","seats":2},{"id":"d66","seats":5},{"id":"cu","seats":3},{"id":"opnl","seats":1},{"id":"50plus","seats":1},{"id":"cda","seats":6},{"id":"vvd","seats":10},{"id":"bbb","seats":16},{"id":"ja21","seats":3},{"id":"sgp","seats":2},{"id":"pvv","seats":4},{"id":"fvd","seats":2}]},{"name":"Eerste Kamerverkiezingen 2019","date":"2019-05-31","source":"https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2","fractions":[{"id":"sp","seats":4},{"id":"pvdd","seats":3},{"id":"gl","seats":8},{"id":"pvda","seats":6},{"id":"d66","seats":7},{"id":"cu","seats":4},{"id":"osf","seats":1},{"id":"50plus","seats":2},{"id":"cda","seats":9},{"id":"vvd","seats":12},{"id":"sgp","seats":2},{"id":"pvv","seats":5},{"id":"fvd","seats":12}]},{"name":"Eerste Kamerverkiezingen 2015","date":"2015-05-28","source":"https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2","fractions":[{"id":"sp","seats":9},{"id":"pvdd","seats":2},{"id":"gl","seats":4},{"id":"pvda","seats":8},{"id":"d66","seats":10},{"id":"cu","seats":3},{"id":"osf","seats":1},{"id":"50plus","seats":2},{"id":"cda","seats":12},{"id":"vvd","seats":13},{"id":"sgp","seats":2},{"id":"pvv","seats":9}]},{"name":"Eerste Kamerverkiezingen 2011","date":"2011-05-25","source":"https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2","fractions":[{"id":"sp","seats":8},{"id":"pvdd","seats":1},{"id":"gl","seats":5},{"id":"pvda","seats":14},{"id":"d66","seats":5},{"id":"cu","seats":2},{"id":"osf","seats":1},{"id":"50plus","seats":1},{"id":"cda","seats":11},{"id":"vvd","seats":16},{"id":"sgp","seats":1},{"id":"pvv","seats":10}]},{"name":"Eerste Kamerverkiezingen 2007","date":"2007-05-29","source":"https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2","fractions":[{"id":"sp","seats":12},{"id":"pvdd","seats":1},{"id":"gl","seats":4},{"id":"pvda","seats":14},{"id":"d66","seats":2},{"id":"cu","seats":4},{"id":"osf","seats":1},{"id":"cda","seats":21},{"id":"vvd","seats":14},{"id":"sgp","seats":2}]},{"name":"Eerste Kamerverkiezingen 2003","date":"2003-05-26","source":"https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2","fractions":[{"id":"sp","seats":4},{"id":"gl","seats":5},{"id":"pvda","seats":19},{"id":"d66","seats":3},{"id":"cu","seats":2},{"id":"osf","seats":1},{"id":"cda","seats":23},{"id":"vvd","seats":15},{"id":"sgp","seats":2},{"id":"lpf","seats":1}]},{"name":"Eerste Kamerverkiezingen 1999","date":"1999-05-25","source":"https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2","fractions":[{"id":"sp","seats":2},{"id":"gl","seats":8},{"id":"pvda","seats":15},{"id":"d66","seats":4},{"id":"osf","seats":1},{"id":"cda","seats":20},{"id":"rpfgpv","seats":4},{"id":"vvd","seats":19},{"id":"sgp","seats":2}]},{"name":"Eerste Kamerverkiezingen 1995","date":"1995-05-29","source":"https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2","fractions":[{"id":"sp","seats":1},{"id":"gl","seats":4},{"id":"pvda","seats":14},{"id":"d66","seats":7},{"id":"osf","seats":1},{"id":"cda","seats":19},{"id":"aov","seats":2},{"id":"rpf","seats":1},{"id":"gpv","seats":1},{"id":"vvd","seats":23},{"id":"sgp","seats":2}]},{"name":"Eerste Kamerverkiezingen 1991","date":"1991-05-27","fractions":[{"id":"gl","seats":4},{"id":"pvda","seats":16},{"id":"d66","seats":12},{"id":"cda","seats":27},{"id":"rpf","seats":1},{"id":"gpv","seats":1},{"id":"vvd","seats":12},{"id":"sgp","seats":2}],"source":"https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"},{"name":"Eerste Kamerverkiezingen 1987","date":"1987-06-09","fractions":[{"id":"cpn","seats":1},{"id":"psp","seats":1},{"id":"ppr","seats":1},{"id":"pvda","seats":26},{"id":"d66","seats":5},{"id":"cda","seats":26},{"id":"rpf","seats":1},{"id":"gpv","seats":1},{"id":"vvd","seats":12},{"id":"sgp","seats":1}],"source":"https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"},{"name":"Eerste Kamerverkiezingen 1986","date":"1986-05-20","fractions":[{"id":"cpn","seats":2},{"id":"psp","seats":2},{"id":"ppr","seats":2},{"id":"pvda","seats":17},{"id":"d66","seats":6},{"id":"cda","seats":26},{"id":"rpf","seats":1},{"id":"gpv","seats":1},{"id":"vvd","seats":16},{"id":"sgp","seats":2}],"source":"https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"},{"name":"Eerste Kamerverkiezingen 1983","date":"1983-08-31","fractions":[{"id":"cpn","seats":2},{"id":"psp","seats":2},{"id":"ppr","seats":1},{"id":"pvda","seats":17},{"id":"d66","seats":6},{"id":"cda","seats":26},{"id":"rpf","seats":1},{"id":"gpv","seats":1},{"id":"vvd","seats":17},{"id":"sgp","seats":2}],"source":"https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"},{"name":"Eerste Kamerverkiezingen 1981","date":"1981-06-01","fractions":[{"id":"cpn","seats":1},{"id":"ppr","seats":1},{"id":"pvda","seats":28},{"id":"d66","seats":4},{"id":"cda","seats":28},{"id":"vvd","seats":12},{"id":"sgp","seats":1}],"source":"https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"},{"name":"Eerste Kamerverkiezingen 1980","date":"1980-07-02","fractions":[{"id":"cpn","seats":1},{"id":"psp","seats":1},{"id":"ppr","seats":3},{"id":"pvda","seats":26},{"id":"d66","seats":2},{"id":"cda","seats":27},{"id":"gpv","seats":1},{"id":"vvd","seats":13},{"id":"sgp","seats":1}],"source":"https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"},{"name":"Eerste Kamerverkiezingen 1977","date":"1977-07-06","fractions":[{"id":"cpn","seats":2},{"id":"psp","seats":1},{"id":"ppr","seats":5},{"id":"pvda","seats":25},{"id":"cda","seats":24},{"id":"gpv","seats":1},{"id":"vvd","seats":15},{"id":"sgp","seats":1},{"id":"bp","seats":1}],"source":"https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"},{"name":"Eerste Kamerverkiezingen 1974","date":"1974-07-03","fractions":[{"id":"cpn","seats":4},{"id":"ppr","seats":4},{"id":"pvda","seats":21},{"id":"d66","seats":3},{"id":"chu","seats":7},{"id":"kvp","seats":16},{"id":"arp","seats":6},{"id":"vvd","seats":12},{"id":"sgp","seats":1},{"id":"bp","seats":1}],"source":"https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"}]}
+{
+ "name": "nl_eerstekamer",
+ "title": "Eerste Kamer",
+ "country": "Netherlands",
+ "parties": {
+  "bij1": {
+   "name": "BIJ1",
+   "fullname": "BIJ1",
+   "fullname_rm": "",
+   "fullname_en": "BIJ1 (TOGETHER)",
+   "color": "#000000",
+   "image": "/logos/nl/BIJ1.png"
+  },
+  "ppnl": {
+   "name": "PPNL",
+   "fullname": "Piratenpartij",
+   "fullname_rm": "",
+   "fullname_en": "Pirate Party",
+   "color": "#8300c5ff",
+   "image": "/logos/nl/PPNL.png"
+  },
+  "sp": {
+   "name": "SP",
+   "fullname": "Socialistische Partij",
+   "fullname_rm": "",
+   "fullname_en": "Socialist Party",
+   "color": "#ed1b24",
+   "image": "/logos/nl/SP.png"
+  },
+  "pvdd": {
+   "name": "PvdD",
+   "fullname": "Partij voor de Dieren",
+   "fullname_rm": "",
+   "fullname_en": "Party for the Animals",
+   "color": "#016b2d",
+   "image": "/logos/nl/PvdD.png"
+  },
+  "gl": {
+   "name": "GL",
+   "fullname": "GroenLinks",
+   "fullname_rm": "",
+   "fullname_en": "GreenLeft",
+   "color": "#00cc00",
+   "image": "/logos/nl/GL.png"
+  },
+  "glpvda": {
+   "name": "GL/PvdA",
+   "fullname": "GroenLinks / Partij van de Arbeid",
+   "fullname_rm": "",
+   "fullname_en": "GreenLeft / Labour Party",
+   "color": "#01af40",
+   "image": "/logos/nl/GLPvdA.png"
+  },
+  "pvda": {
+   "name": "PvdA",
+   "fullname": "Partij van de Arbeid",
+   "fullname_rm": "",
+   "fullname_en": "Labour Party",
+   "color": "#ff0000",
+   "image": "/logos/nl/PvdA.png"
+  },
+  "denk": {
+   "name": "DENK",
+   "fullname": "DENK",
+   "fullname_rm": "",
+   "fullname_en": "DENK (THINK)",
+   "color": "#38bfc2",
+   "image": "/logos/nl/DENK.png"
+  },
+  "volt": {
+   "name": "Volt",
+   "fullname": "Volt",
+   "fullname_rm": "",
+   "fullname_en": "Volt",
+   "color": "#683ba8",
+   "image": "/logos/nl/Volt.png"
+  },
+  "d66": {
+   "name": "D66",
+   "fullname": "Democraten 66",
+   "fullname_rm": "",
+   "fullname_en": "Democrats 66",
+   "color": "#01af40",
+   "image": "/logos/nl/D66.png"
+  },
+  "cu": {
+   "name": "CU",
+   "fullname": "ChristenUnie",
+   "fullname_rm": "",
+   "fullname_en": "ChristianUnion",
+   "color": "#8fd1eb",
+   "image": "/logos/nl/CU.png"
+  },
+  "fnp": {
+   "name": "FNP",
+   "fullname": "Fryske Nasjonale Partij",
+   "fullname_rm": "",
+   "fullname_en": "Frisian National Party",
+   "color": "#003366",
+   "image": "/logos/nl/FNP.png"
+  },
+  "cda": {
+   "name": "CDA",
+   "fullname": "Christen-Democratisch Appèl",
+   "fullname_rm": "",
+   "fullname_en": "Christian-Democratic Appeal",
+   "color": "#007c5e",
+   "image": "/logos/nl/CDA.png"
+  },
+  "nsc": {
+   "name": "NSC",
+   "fullname": "Nieuw Sociaal Contract",
+   "fullname_rm": "",
+   "fullname_en": "New Social Contract",
+   "color": "#181d57",
+   "image": "/logos/nl/NSC.png"
+  },
+  "50plus": {
+   "name": "50PLUS",
+   "fullname": "50PLUS",
+   "fullname_rm": "",
+   "fullname_en": "50PLUS",
+   "color": "#92278f",
+   "image": "/logos/nl/50PLUS.png"
+  },
+  "vvd": {
+   "name": "VVD",
+   "fullname": "Volkspartij voor Vrijheid en Democratie",
+   "fullname_rm": "",
+   "fullname_en": "People's Party for Freedom and Democracy",
+   "color": "#21276a",
+   "image": "/logos/nl/VVD.png"
+  },
+  "bbb": {
+   "name": "BBB",
+   "fullname": "BoerBurgerBeweging",
+   "fullname_rm": "",
+   "fullname_en": "Farmer-Citizen Movement",
+   "color": "#8fbb1f",
+   "image": "/logos/nl/BBB.png"
+  },
+  "ja21": {
+   "name": "JA21",
+   "fullname": "Juiste Antwoord 2021",
+   "fullname_rm": "",
+   "fullname_en": "Right Answer 2021",
+   "color": "#21276a",
+   "image": "/logos/nl/JA21.png"
+  },
+  "sgp": {
+   "name": "SGP",
+   "fullname": "Staatkundig Gereformeerde Partij",
+   "fullname_rm": "",
+   "fullname_en": "Reformed Party",
+   "color": "#e95d0e",
+   "image": "/logos/nl/SGP.png"
+  },
+  "pvv": {
+   "name": "PVV",
+   "fullname": "Partij voor de Vrijheid",
+   "fullname_rm": "",
+   "fullname_en": "Party for Freedom",
+   "color": "#82b2ff",
+   "image": "/logos/nl/PVV.png"
+  },
+  "gm": {
+   "name": "GM",
+   "fullname": "Groep Markuszower",
+   "fullname_rm": "",
+   "fullname_en": "Markuszower Group",
+   "color": "#169793ff",
+   "image": ""
+  },
+  "fvd": {
+   "name": "FvD",
+   "fullname": "Forum voor Democratie",
+   "fullname_rm": "",
+   "fullname_en": "Forum for Democracy",
+   "color": "#841818",
+   "image": "/logos/nl/FvD.png"
+  },
+  "lpf": {
+   "name": "LPF",
+   "fullname": "Lijst Pim Fortuyn",
+   "fullname_rm": "",
+   "fullname_en": "Pim Fortuyn List",
+   "color": "rgb(18, 74, 158)",
+   "image": "/logos/nl/LPF.png"
+  },
+  "ln": {
+   "name": "LN",
+   "fullname": "Leefbaar Nederland",
+   "fullname_rm": "",
+   "fullname_en": "Livable Netherlands",
+   "color": "#ff6600ff",
+   "image": "/logos/nl/LN.png"
+  },
+  "rpf": {
+   "name": "RPF",
+   "fullname": "Reformatorische Politieke Federatie",
+   "fullname_rm": "",
+   "fullname_en": "Reformatory Political Federation",
+   "color": "#000080",
+   "image": "/logos/nl/RPF.png"
+  },
+  "gpv": {
+   "name": "GPV",
+   "fullname": "Gereformeerd Politiek Verbond",
+   "fullname_rm": "",
+   "fullname_en": "Reformed Political League",
+   "color": "#ff7b00",
+   "image": "/logos/nl/GPV.png"
+  },
+  "rpfgpv": {
+   "name": "RPF/GPV",
+   "fullname": "Reformatorische Politieke Federatie / Gereformeerd Politiek Verbond",
+   "fullname_rm": "",
+   "fullname_en": "Reformatory Political Federation / Reformed Political League",
+   "color": "#000080",
+   "image": ""
+  },
+  "aov": {
+   "name": "AOV",
+   "fullname": "Algemeen Ouderen Verbond",
+   "fullname_rm": "",
+   "fullname_en": "General Elderly Alliance",
+   "color": "#3083ff",
+   "image": "/logos/nl/AOV.png"
+  },
+  "u55p": {
+   "name": "U55+",
+   "fullname": "Unie 55+",
+   "fullname_rm": "",
+   "fullname_en": "Union 55+",
+   "color": "#62a0ea",
+   "image": "/logos/nl/Unie55+.png"
+  },
+  "cd": {
+   "name": "CD",
+   "fullname": "Centrumdemocraten",
+   "fullname_rm": "",
+   "fullname_en": "Centre Democrats",
+   "color": "#c9dfff",
+   "image": "/logos/nl/CD.png"
+  },
+  "psp": {
+   "name": "PSP",
+   "fullname": "Pacifistisch Socialistische Partij",
+   "fullname_rm": "",
+   "fullname_en": "Pacifist Socialist Party",
+   "color": "#e62525ff",
+   "image": "/logos/nl/PSP.png"
+  },
+  "ppr": {
+   "name": "PPR",
+   "fullname": "Politieke Partij Radikalen",
+   "fullname_rm": "",
+   "fullname_en": "Political Party of Radicals",
+   "color": "#e92f7cff",
+   "image": "/logos/nl/PPR.png"
+  },
+  "evp": {
+   "name": "EVP",
+   "fullname": "Evangelische Volkspartij",
+   "fullname_rm": "",
+   "fullname_en": "Evangelical People's Party",
+   "color": "rgb(240, 176, 0)",
+   "image": ""
+  },
+  "cpn": {
+   "name": "CPN",
+   "fullname": "Communistische Partij Nederland",
+   "fullname_rm": "",
+   "fullname_en": "Communist Party of the Netherlands",
+   "color": "#ff0000",
+   "image": "/logos/nl/CPN.png"
+  },
+  "sdp": {
+   "name": "SDP",
+   "fullname": "Sociaal-Democratische Partij",
+   "fullname_rm": "",
+   "fullname_en": "Social-Democratic Party",
+   "color": "#ff0000",
+   "image": ""
+  },
+  "bp": {
+   "name": "BP",
+   "fullname": "Boerenpartij",
+   "fullname_rm": "",
+   "fullname_en": "Farmers' Party",
+   "color": "#519436",
+   "image": ""
+  },
+  "ds70": {
+   "name": "DS'70",
+   "fullname": "Democratisch Socialisten '70",
+   "fullname_rm": "",
+   "fullname_en": "Democratic Socialists '70",
+   "color": "#d40000ff",
+   "image": "/logos/nl/DS70.png"
+  },
+  "kvp": {
+   "name": "KVP",
+   "fullname": "Katholieke Volkspartij",
+   "fullname_rm": "",
+   "fullname_en": "Catholic People's Party",
+   "color": "#362511ff",
+   "image": "/logos/nl/KVP.png"
+  },
+  "chu": {
+   "name": "CHU",
+   "fullname": "Christelijk-Historische Unie",
+   "fullname_rm": "",
+   "fullname_en": "Christian-Historic Union",
+   "color": "#0f1e53ff",
+   "image": "/logos/nl/CHU.png"
+  },
+  "arp": {
+   "name": "ARP",
+   "fullname": "Anti-Revolutonaire Partij",
+   "fullname_rm": "",
+   "fullname_en": "Anti-Revolutionary Party",
+   "color": "#638ec5",
+   "image": "/logos/nl/ARP.png"
+  },
+  "rkpn": {
+   "name": "RKPN",
+   "fullname": "Rooms Katholieke Partij Nederland",
+   "fullname_rm": "",
+   "fullname_en": "Roman Catholic Party of the Netherlands",
+   "color": "rgb(206, 165, 31)",
+   "image": ""
+  },
+  "nmp": {
+   "name": "NMP",
+   "fullname": "Nederlandse Middenstands Partij",
+   "fullname_rm": "",
+   "fullname_en": "New Middle Party",
+   "color": "rgb(51, 53, 167)",
+   "image": ""
+  },
+  "knp": {
+   "name": "KNP",
+   "fullname": "Katholieke Nationale Partij",
+   "fullname_rm": "",
+   "fullname_en": "Catholic National Party",
+   "color": "#3faa4e",
+   "image": ""
+  },
+  "pvdv": {
+   "name": "PvdV",
+   "fullname": "Partij voor de Vrijheid",
+   "fullname_rm": "",
+   "fullname_en": "Party for Freedom",
+   "color": "#092447ff",
+   "image": "/logos/nl/PvdV.png"
+  },
+  "rksp": {
+   "name": "RKSP",
+   "fullname": "Rooms-Katholieke Staatspartij",
+   "fullname_rm": "",
+   "fullname_en": "Roman Catholic State Party",
+   "color": "rgb(187, 90, 0)",
+   "image": ""
+  },
+  "sdap": {
+   "name": "SDAP",
+   "fullname": "Sociaal-Democratische Arbeiderspartij",
+   "fullname_rm": "",
+   "fullname_en": "Social-Democratic Workers' Party",
+   "color": "#e41919ff",
+   "image": "/logos/nl/SDAP.png"
+  },
+  "vdb": {
+   "name": "VDB",
+   "fullname": "Vrijzinnig Democratische Bond",
+   "fullname_rm": "",
+   "fullname_en": "Free-Thinking Democratic League",
+   "color": "#6e0e0eff",
+   "image": "/logos/nl/VDB.png"
+  },
+  "nsb": {
+   "name": "NSB",
+   "fullname": "Nationaal-Socialistische Beweging",
+   "fullname_rm": "",
+   "fullname_en": "National-Socialist Movement",
+   "color": "#000000ff",
+   "image": "/logos/nl/NSB.png"
+  },
+  "lsp": {
+   "name": "LSP",
+   "fullname": "Liberale Staatspartij",
+   "fullname_rm": "",
+   "fullname_en": "Liberal State Party",
+   "color": "#0d6486ff",
+   "image": ""
+  },
+  "cdu": {
+   "name": "CDU",
+   "fullname": "Christelijk-Democratische Unie",
+   "fullname_rm": "",
+   "fullname_en": "Christian-Democratic Union",
+   "color": "#eb6c05ff",
+   "image": ""
+  },
+  "rsp": {
+   "name": "RSP",
+   "fullname": "Revolutionair Socialistische Partij",
+   "fullname_rm": "",
+   "fullname_en": "Revolutionary Socialist Party",
+   "color": "#a70909ff",
+   "image": ""
+  },
+  "nbtmp": {
+   "name": "NBTMP",
+   "fullname": "Nationale Boeren-, Tuinders- en Middenstandspartij",
+   "fullname_rm": "",
+   "fullname_en": "National Farmers' Horticulturists' and Middle Class Party",
+   "color": "#79aa4aff",
+   "image": ""
+  },
+  "pb": {
+   "name": "PB",
+   "fullname": "Plattelandersbond",
+   "fullname_rm": "",
+   "fullname_en": "Peasants' League",
+   "color": "#79aa4aff",
+   "image": ""
+  },
+  "rkvp": {
+   "name": "RKVP",
+   "fullname": "Rooms-Katholieke Volkspartij",
+   "fullname_rm": "",
+   "fullname_en": "Roman Catholic People's Party",
+   "color": "#802008ff",
+   "image": ""
+  },
+  "hgsp": {
+   "name": "HGSP",
+   "fullname": "Hervormd-Gereformeerde Staatspartij",
+   "fullname_rm": "",
+   "fullname_en": "Reformed Reformed State Party",
+   "color": "#030557ff",
+   "image": ""
+  },
+  "vnh": {
+   "name": "VNH",
+   "fullname": "Verbond voor Nationaal Herstel",
+   "fullname_rm": "",
+   "fullname_en": "Alliance for National Reconstruction",
+   "color": "#ca8c19ff",
+   "image": ""
+  },
+  "mpsl": {
+   "name": "MPSL",
+   "fullname": "Middenpartij voor Stad en Land",
+   "fullname_rm": "",
+   "fullname_en": "Middle Party for City and Country",
+   "color": "#000000FF",
+   "image": ""
+  },
+  "ab": {
+   "name": "AB",
+   "fullname": "Algemeene Bond",
+   "fullname_rm": "",
+   "fullname_en": "General League",
+   "color": "#000000FF",
+   "image": ""
+  },
+  "lp": {
+   "name": "LP",
+   "fullname": "Liberale Partij",
+   "fullname_rm": "",
+   "fullname_en": "Liberal Party",
+   "color": "#1f5192ff",
+   "image": ""
+  },
+  "mp": {
+   "name": "MP",
+   "fullname": "Middenstandspartij",
+   "fullname_rm": "",
+   "fullname_en": "Middle Class Party",
+   "color": "#b8bb19ff",
+   "image": ""
+  },
+  "eb": {
+   "name": "EB",
+   "fullname": "Economische Bond",
+   "fullname_rm": "",
+   "fullname_en": "Economic League",
+   "color": "#591ba0ff",
+   "image": ""
+  },
+  "lu": {
+   "name": "LU",
+   "fullname": "Liberale Unie",
+   "fullname_rm": "",
+   "fullname_en": "Liberal Union",
+   "color": "#1b76a0ff",
+   "image": ""
+  },
+  "bvl": {
+   "name": "BVL",
+   "fullname": "Bond van Vrije Liberalen",
+   "fullname_rm": "",
+   "fullname_en": "League of Free Liberals",
+   "color": "#5879e9ff",
+   "image": ""
+  },
+  "cdp": {
+   "name": "CDP",
+   "fullname": "Christen-Democratische Partij",
+   "fullname_rm": "",
+   "fullname_en": "Christian-Democratic Party",
+   "color": "#464040ff",
+   "image": ""
+  },
+  "sp_1918": {
+   "name": "SP",
+   "fullname": "Socialistische Partij",
+   "fullname_rm": "",
+   "fullname_en": "Socialist Party",
+   "color": "#df0e0eff",
+   "image": ""
+  },
+  "bcs": {
+   "name": "BCS",
+   "fullname": "Bond van Christen-Socialisten",
+   "fullname_rm": "",
+   "fullname_en": "League of Christian-Socialists",
+   "color": "#681010ff",
+   "image": ""
+  },
+  "csp": {
+   "name": "CSP",
+   "fullname": "Christelijk-Sociale Partij",
+   "fullname_rm": "",
+   "fullname_en": "Christian-Social Party",
+   "color": "#8b5c14ff",
+   "image": ""
+  },
+  "np": {
+   "name": "NP",
+   "fullname": "Neutrale Partij",
+   "fullname_rm": "",
+   "fullname_en": "Neutral Party",
+   "color": "#8b1481ff",
+   "image": ""
+  },
+  "vdw": {
+   "name": "VDW",
+   "fullname": "Verbond tot Democratisering der Weermacht",
+   "fullname_rm": "",
+   "fullname_en": "Alliance to Democratise the Forces",
+   "color": "#0c501bff",
+   "image": ""
+  },
+  "opnl": {
+   "name": "OPNL",
+   "fullname": "Onafhankelijke Politiek Nederland",
+   "fullname_rm": "",
+   "fullname_en": "Independent Politics Netherlands",
+   "color": "#505050",
+   "image": "/logos/nl/OPNL.png"
+  },
+  "osf": {
+   "name": "OSF",
+   "fullname": "Onafhankelijke Senaatsfractie",
+   "fullname_rm": "",
+   "fullname_en": "Independent Senate Fraction",
+   "color": "#505050",
+   "image": "/logos/nl/OPNL.png"
+  },
+  "ind": {
+   "name": "Ind",
+   "fullname": "Independent",
+   "fullname_rm": "",
+   "fullname_en": "Independent",
+   "color": "#808080",
+   "image": ""
+  }
+ },
+ "parliaments": [
+  {
+   "name": "Current Situation",
+   "date": "",
+   "source": "https://www.eerstekamer.nl/fracties",
+   "fractions": [
+    {
+     "id": "sp",
+     "seats": 3
+    },
+    {
+     "id": "pvdd",
+     "seats": 2
+    },
+    {
+     "id": "glpvda",
+     "seats": 14
+    },
+    {
+     "id": "volt",
+     "seats": 2
+    },
+    {
+     "id": "d66",
+     "seats": 7
+    },
+    {
+     "id": "cu",
+     "seats": 3
+    },
+    {
+     "id": "opnl",
+     "seats": 1
+    },
+    {
+     "id": "50plus",
+     "seats": 1
+    },
+    {
+     "id": "cda",
+     "seats": 6
+    },
+    {
+     "id": "vvd",
+     "seats": 9
+    },
+    {
+     "id": "bbb",
+     "seats": 11
+    },
+    {
+     "id": "ja21",
+     "seats": 2
+    },
+    {
+     "id": "sgp",
+     "seats": 2
+    },
+    {
+     "id": "pvv",
+     "seats": 4
+    },
+    {
+     "id": "fvd",
+     "seats": 3
+    },
+    {
+     "id": "ind",
+     "seats": 5
+    }
+   ]
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 2023",
+   "date": "2023-06-01",
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2",
+   "fractions": [
+    {
+     "id": "sp",
+     "seats": 3
+    },
+    {
+     "id": "pvdd",
+     "seats": 3
+    },
+    {
+     "id": "gl",
+     "seats": 7
+    },
+    {
+     "id": "pvda",
+     "seats": 7
+    },
+    {
+     "id": "volt",
+     "seats": 2
+    },
+    {
+     "id": "d66",
+     "seats": 5
+    },
+    {
+     "id": "cu",
+     "seats": 3
+    },
+    {
+     "id": "opnl",
+     "seats": 1
+    },
+    {
+     "id": "50plus",
+     "seats": 1
+    },
+    {
+     "id": "cda",
+     "seats": 6
+    },
+    {
+     "id": "vvd",
+     "seats": 10
+    },
+    {
+     "id": "bbb",
+     "seats": 16
+    },
+    {
+     "id": "ja21",
+     "seats": 3
+    },
+    {
+     "id": "sgp",
+     "seats": 2
+    },
+    {
+     "id": "pvv",
+     "seats": 4
+    },
+    {
+     "id": "fvd",
+     "seats": 2
+    }
+   ]
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 2019",
+   "date": "2019-05-31",
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2",
+   "fractions": [
+    {
+     "id": "sp",
+     "seats": 4
+    },
+    {
+     "id": "pvdd",
+     "seats": 3
+    },
+    {
+     "id": "gl",
+     "seats": 8
+    },
+    {
+     "id": "pvda",
+     "seats": 6
+    },
+    {
+     "id": "d66",
+     "seats": 7
+    },
+    {
+     "id": "cu",
+     "seats": 4
+    },
+    {
+     "id": "osf",
+     "seats": 1
+    },
+    {
+     "id": "50plus",
+     "seats": 2
+    },
+    {
+     "id": "cda",
+     "seats": 9
+    },
+    {
+     "id": "vvd",
+     "seats": 12
+    },
+    {
+     "id": "sgp",
+     "seats": 2
+    },
+    {
+     "id": "pvv",
+     "seats": 5
+    },
+    {
+     "id": "fvd",
+     "seats": 12
+    }
+   ]
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 2015",
+   "date": "2015-05-28",
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2",
+   "fractions": [
+    {
+     "id": "sp",
+     "seats": 9
+    },
+    {
+     "id": "pvdd",
+     "seats": 2
+    },
+    {
+     "id": "gl",
+     "seats": 4
+    },
+    {
+     "id": "pvda",
+     "seats": 8
+    },
+    {
+     "id": "d66",
+     "seats": 10
+    },
+    {
+     "id": "cu",
+     "seats": 3
+    },
+    {
+     "id": "osf",
+     "seats": 1
+    },
+    {
+     "id": "50plus",
+     "seats": 2
+    },
+    {
+     "id": "cda",
+     "seats": 12
+    },
+    {
+     "id": "vvd",
+     "seats": 13
+    },
+    {
+     "id": "sgp",
+     "seats": 2
+    },
+    {
+     "id": "pvv",
+     "seats": 9
+    }
+   ]
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 2011",
+   "date": "2011-05-25",
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2",
+   "fractions": [
+    {
+     "id": "sp",
+     "seats": 8
+    },
+    {
+     "id": "pvdd",
+     "seats": 1
+    },
+    {
+     "id": "gl",
+     "seats": 5
+    },
+    {
+     "id": "pvda",
+     "seats": 14
+    },
+    {
+     "id": "d66",
+     "seats": 5
+    },
+    {
+     "id": "cu",
+     "seats": 2
+    },
+    {
+     "id": "osf",
+     "seats": 1
+    },
+    {
+     "id": "50plus",
+     "seats": 1
+    },
+    {
+     "id": "cda",
+     "seats": 11
+    },
+    {
+     "id": "vvd",
+     "seats": 16
+    },
+    {
+     "id": "sgp",
+     "seats": 1
+    },
+    {
+     "id": "pvv",
+     "seats": 10
+    }
+   ]
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 2007",
+   "date": "2007-05-29",
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2",
+   "fractions": [
+    {
+     "id": "sp",
+     "seats": 12
+    },
+    {
+     "id": "pvdd",
+     "seats": 1
+    },
+    {
+     "id": "gl",
+     "seats": 4
+    },
+    {
+     "id": "pvda",
+     "seats": 14
+    },
+    {
+     "id": "d66",
+     "seats": 2
+    },
+    {
+     "id": "cu",
+     "seats": 4
+    },
+    {
+     "id": "osf",
+     "seats": 1
+    },
+    {
+     "id": "cda",
+     "seats": 21
+    },
+    {
+     "id": "vvd",
+     "seats": 14
+    },
+    {
+     "id": "sgp",
+     "seats": 2
+    }
+   ]
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 2003",
+   "date": "2003-05-26",
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2",
+   "fractions": [
+    {
+     "id": "sp",
+     "seats": 4
+    },
+    {
+     "id": "gl",
+     "seats": 5
+    },
+    {
+     "id": "pvda",
+     "seats": 19
+    },
+    {
+     "id": "d66",
+     "seats": 3
+    },
+    {
+     "id": "cu",
+     "seats": 2
+    },
+    {
+     "id": "osf",
+     "seats": 1
+    },
+    {
+     "id": "cda",
+     "seats": 23
+    },
+    {
+     "id": "vvd",
+     "seats": 15
+    },
+    {
+     "id": "sgp",
+     "seats": 2
+    },
+    {
+     "id": "lpf",
+     "seats": 1
+    }
+   ]
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1999",
+   "date": "1999-05-25",
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2",
+   "fractions": [
+    {
+     "id": "sp",
+     "seats": 2
+    },
+    {
+     "id": "gl",
+     "seats": 8
+    },
+    {
+     "id": "pvda",
+     "seats": 15
+    },
+    {
+     "id": "d66",
+     "seats": 4
+    },
+    {
+     "id": "osf",
+     "seats": 1
+    },
+    {
+     "id": "cda",
+     "seats": 20
+    },
+    {
+     "id": "rpfgpv",
+     "seats": 4
+    },
+    {
+     "id": "vvd",
+     "seats": 19
+    },
+    {
+     "id": "sgp",
+     "seats": 2
+    }
+   ]
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1995",
+   "date": "1995-05-29",
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2",
+   "fractions": [
+    {
+     "id": "sp",
+     "seats": 1
+    },
+    {
+     "id": "gl",
+     "seats": 4
+    },
+    {
+     "id": "pvda",
+     "seats": 14
+    },
+    {
+     "id": "d66",
+     "seats": 7
+    },
+    {
+     "id": "osf",
+     "seats": 1
+    },
+    {
+     "id": "cda",
+     "seats": 19
+    },
+    {
+     "id": "aov",
+     "seats": 2
+    },
+    {
+     "id": "rpf",
+     "seats": 1
+    },
+    {
+     "id": "gpv",
+     "seats": 1
+    },
+    {
+     "id": "vvd",
+     "seats": 23
+    },
+    {
+     "id": "sgp",
+     "seats": 2
+    }
+   ]
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1991",
+   "date": "1991-05-27",
+   "fractions": [
+    {
+     "id": "gl",
+     "seats": 4
+    },
+    {
+     "id": "pvda",
+     "seats": 16
+    },
+    {
+     "id": "d66",
+     "seats": 12
+    },
+    {
+     "id": "cda",
+     "seats": 27
+    },
+    {
+     "id": "rpf",
+     "seats": 1
+    },
+    {
+     "id": "gpv",
+     "seats": 1
+    },
+    {
+     "id": "vvd",
+     "seats": 12
+    },
+    {
+     "id": "sgp",
+     "seats": 2
+    }
+   ],
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1987",
+   "date": "1987-06-09",
+   "fractions": [
+    {
+     "id": "cpn",
+     "seats": 1
+    },
+    {
+     "id": "psp",
+     "seats": 1
+    },
+    {
+     "id": "ppr",
+     "seats": 1
+    },
+    {
+     "id": "pvda",
+     "seats": 26
+    },
+    {
+     "id": "d66",
+     "seats": 5
+    },
+    {
+     "id": "cda",
+     "seats": 26
+    },
+    {
+     "id": "rpf",
+     "seats": 1
+    },
+    {
+     "id": "gpv",
+     "seats": 1
+    },
+    {
+     "id": "vvd",
+     "seats": 12
+    },
+    {
+     "id": "sgp",
+     "seats": 1
+    }
+   ],
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1986",
+   "date": "1986-05-20",
+   "fractions": [
+    {
+     "id": "cpn",
+     "seats": 2
+    },
+    {
+     "id": "psp",
+     "seats": 2
+    },
+    {
+     "id": "ppr",
+     "seats": 2
+    },
+    {
+     "id": "pvda",
+     "seats": 17
+    },
+    {
+     "id": "d66",
+     "seats": 6
+    },
+    {
+     "id": "cda",
+     "seats": 26
+    },
+    {
+     "id": "rpf",
+     "seats": 1
+    },
+    {
+     "id": "gpv",
+     "seats": 1
+    },
+    {
+     "id": "vvd",
+     "seats": 16
+    },
+    {
+     "id": "sgp",
+     "seats": 2
+    }
+   ],
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1983",
+   "date": "1983-08-31",
+   "fractions": [
+    {
+     "id": "cpn",
+     "seats": 2
+    },
+    {
+     "id": "psp",
+     "seats": 2
+    },
+    {
+     "id": "ppr",
+     "seats": 1
+    },
+    {
+     "id": "pvda",
+     "seats": 17
+    },
+    {
+     "id": "d66",
+     "seats": 6
+    },
+    {
+     "id": "cda",
+     "seats": 26
+    },
+    {
+     "id": "rpf",
+     "seats": 1
+    },
+    {
+     "id": "gpv",
+     "seats": 1
+    },
+    {
+     "id": "vvd",
+     "seats": 17
+    },
+    {
+     "id": "sgp",
+     "seats": 2
+    }
+   ],
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1981",
+   "date": "1981-06-01",
+   "fractions": [
+    {
+     "id": "cpn",
+     "seats": 1
+    },
+    {
+     "id": "ppr",
+     "seats": 1
+    },
+    {
+     "id": "pvda",
+     "seats": 28
+    },
+    {
+     "id": "d66",
+     "seats": 4
+    },
+    {
+     "id": "cda",
+     "seats": 28
+    },
+    {
+     "id": "vvd",
+     "seats": 12
+    },
+    {
+     "id": "sgp",
+     "seats": 1
+    }
+   ],
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1980",
+   "date": "1980-07-02",
+   "fractions": [
+    {
+     "id": "cpn",
+     "seats": 1
+    },
+    {
+     "id": "psp",
+     "seats": 1
+    },
+    {
+     "id": "ppr",
+     "seats": 3
+    },
+    {
+     "id": "pvda",
+     "seats": 26
+    },
+    {
+     "id": "d66",
+     "seats": 2
+    },
+    {
+     "id": "cda",
+     "seats": 27
+    },
+    {
+     "id": "gpv",
+     "seats": 1
+    },
+    {
+     "id": "vvd",
+     "seats": 13
+    },
+    {
+     "id": "sgp",
+     "seats": 1
+    }
+   ],
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1977",
+   "date": "1977-07-06",
+   "fractions": [
+    {
+     "id": "cpn",
+     "seats": 2
+    },
+    {
+     "id": "psp",
+     "seats": 1
+    },
+    {
+     "id": "ppr",
+     "seats": 5
+    },
+    {
+     "id": "pvda",
+     "seats": 25
+    },
+    {
+     "id": "cda",
+     "seats": 24
+    },
+    {
+     "id": "gpv",
+     "seats": 1
+    },
+    {
+     "id": "vvd",
+     "seats": 15
+    },
+    {
+     "id": "sgp",
+     "seats": 1
+    },
+    {
+     "id": "bp",
+     "seats": 1
+    }
+   ],
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1974",
+   "date": "1974-07-03",
+   "fractions": [
+    {
+     "id": "cpn",
+     "seats": 4
+    },
+    {
+     "id": "ppr",
+     "seats": 4
+    },
+    {
+     "id": "pvda",
+     "seats": 21
+    },
+    {
+     "id": "d66",
+     "seats": 3
+    },
+    {
+     "id": "chu",
+     "seats": 7
+    },
+    {
+     "id": "kvp",
+     "seats": 16
+    },
+    {
+     "id": "arp",
+     "seats": 6
+    },
+    {
+     "id": "vvd",
+     "seats": 12
+    },
+    {
+     "id": "sgp",
+     "seats": 1
+    },
+    {
+     "id": "bp",
+     "seats": 1
+    }
+   ],
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"
+  }
+ ]
+}

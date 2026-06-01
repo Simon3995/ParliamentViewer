@@ -6,8 +6,9 @@
     <meta name="description" content="Parliament Viewer: A tool tool to visualise current and historical seat distributions of various parliaments, senates, congresses, and other political bodies from around the world.">
     <meta name="keywords" content="politics, political, parliament, viewer, editor, government, data, visualization, chart, seats, distribution, senate, congress, house, representatives, country, world, history, historical, current, tool">
     <meta name="theme-color" content="#DD0707">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Parliament Viewer</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
 </head>
 
@@ -22,6 +23,29 @@
             <img src="./imgs/parliament95.svg">
             <p>This is a tool to view current and historical seat distributions of various parliaments, senates, congresses, and other political bodies from around the world.</p>
             <p>Choose a parliament from the list to get started.</p>
+            <select id="select-timeline" autocomplete="off">
+                <option value="" selected disabled hidden>Select Parliament</option>
+                <optgroup label="Europe">
+                    <option value="be_federalparliament">🇧🇪 Belgium - Federaal Parlement/Parlement Fédéral</option>
+                    <option value="dk_folketing">🇩🇰 Denmark - Folketing</option>
+                    <option value="de_bundestag">🇩🇪 Germany - Bundestag</option>
+                    <option value="eu_parliament">🇪🇺 European Union - European Parliament</option>
+                    <option value="fi_eduskunta">🇫🇮 Finland - Eduskunta</option>
+                    <option value="hu_orszaggyules">🇭🇺 Hungary - Országgyűlés</option>
+                    <option value="nl_eerstekamer">🇳🇱 Netherlands - Eerste Kamer</option>
+                    <option value="nl_tweedekamer">🇳🇱 Netherlands - Tweede Kamer</option>
+                    <option value="no_storting">🇳🇴 Norway - Storting</option>
+                    <option value="se_riksdag">🇸🇪 Sweden - Riksdag</option>
+                    <option value="uk_houseofcommons">🇬🇧 United Kingdom - House of Commons</option>
+                </optgroup>
+                <optgroup label="North America">
+                    <option value="us_houseofrepresentatives">🇺🇸 United States - House of Representatives</option>
+                    <option value="us_senate">🇺🇸 United States - Senate</option>
+                </optgroup>
+                <optgroup label="Oceania">
+                    <option value="nz_houseofrepresentatives">🇳🇿 New Zealand - House of Representatives</option>
+                </optgroup>
+            </select>
             <hr>
             <p class="small">View this project on <a target="#" href="https://github.com/Simon3995/ParliamentViewer">GitHub</a></p>
             <p class="small">Licensed under <a target="#" href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL-3.0</a></p>
@@ -35,44 +59,24 @@
 
     <!-- Right sidebar -->
     <div id="sidebar">
-        <!-- Navigation -->
-        <div class="navbar">
-            <div class="lbutton">
-                <button title="Go to first parliament in timeline" id="btn_first" autocomplete="off" disabled><span class="icon first"></span></button>
-                <button title="Go to previous parliament in timeline" id="btn_prev" autocomplete="off" disabled><span class="icon prev"></span></button>
-            </div>
-            <div class="plm_selector">
-                <select id="select-timeline" autocomplete="off">
-                    <option value="" selected disabled hidden>Select Parliament</option>
-                    <optgroup label="Europe">
-                        <option value="be_federalparliament">🇧🇪 Belgium - Federaal Parlement/Parlement Fédéral</option>
-                        <option value="dk_folketing">🇩🇰 Denmark - Folketing</option>
-                        <option value="de_bundestag">🇩🇪 Germany - Bundestag</option>
-                        <option value="eu_parliament">🇪🇺 European Union - European Parliament</option>
-                        <option value="fi_eduskunta">🇫🇮 Finland - Eduskunta</option>
-                        <option value="hu_orszaggyules">🇭🇺 Hungary - Országgyűlés</option>
-                        <option value="nl_eerstekamer">🇳🇱 Netherlands - Eerste Kamer</option>
-                        <option value="nl_tweedekamer">🇳🇱 Netherlands - Tweede Kamer</option>
-                        <option value="no_storting">🇳🇴 Norway - Storting</option>
-                        <option value="se_riksdag">🇸🇪 Sweden - Riksdag</option>
-                        <option value="uk_houseofcommons">🇬🇧 United Kingdom - House of Commons</option>
-                    </optgroup>
-                    <optgroup label="North America">
-                        <option value="us_houseofrepresentatives">🇺🇸 United States - House of Representatives</option>
-                        <option value="us_senate">🇺🇸 United States - Senate</option>
-                    </optgroup>
-                    <optgroup label="Oceania">
-                        <option value="nz_houseofrepresentatives">🇳🇿 New Zealand - House of Representatives</option>
-                    </optgroup>
-                </select>
-            </div>
-            <div class="rbutton">
-                <button title="Go to next parliament in timeline" id="btn_next" autocomplete="off" disabled><span class="icon next"></span></button>
-                <button title="Go to last parliament in timeline" id="btn_last" autocomplete="off" disabled><span class="icon last"></span></button>
-            </div>
-        </div>
-        
         <div id="sidebar_hidden" style="display:none">
+            <!-- Navigation -->
+            <div class="navbar">
+                <div class="lbutton">
+                    <button title="Go to first parliament in timeline" id="btn_first" autocomplete="off" disabled><span class="icon first"></span></button>
+                    <button title="Go to previous parliament in timeline" id="btn_prev" autocomplete="off" disabled><span class="icon prev"></span></button>
+                </div>
+                
+                <div id="plm_selector">
+                    <!-- Parliament selector goes here -->
+                </div>
+               
+                <div class="rbutton">
+                    <button title="Go to next parliament in timeline" id="btn_next" autocomplete="off" disabled><span class="icon next"></span></button>
+                    <button title="Go to last parliament in timeline" id="btn_last" autocomplete="off" disabled><span class="icon last"></span></button>
+                </div>
+            </div>
+
             <!-- Main table -->
             <h1><span id="title"></span><span id="title_ps"></span></h1>
             <div id="table"></div>
