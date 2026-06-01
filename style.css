@@ -45,7 +45,7 @@
     }
     
     #welcome img {
-        height: 10vh;
+        height: 20vh;
     }
 }
 
@@ -89,8 +89,12 @@
         padding: 20px 30px;
         border: 5px solid #2a273d;
         filter: drop-shadow(5px 5px 0px #2a273d);
-        width: 500px;
+        width: 700px;
         text-align: center;
+    }
+
+    #welcome img {
+        height: 20vh;
     }
 }
 
