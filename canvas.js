@@ -3,7 +3,7 @@ import { S, schedule_frame } from "./main.js";
 
 export const c = document.getElementById("canvas");
 export const ctx = c.getContext("2d");
-export const RES_MULT = 3;  // render resolution multiplier
+export const RES_MULT = 2 * window.devicePixelRatio;  // render resolution multiplier
 
 // resize canvas to fill viewport
 export function resize_canvas() {
