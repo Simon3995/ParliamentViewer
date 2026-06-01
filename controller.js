@@ -96,6 +96,7 @@ $(document).on("click", "tbody tr", function(e) {
 document.getElementById("select-timeline").onchange = (e) => {
 	document.getElementById("sidebar_hidden").style.display = "inline-block";
 	document.getElementById("welcome").style.display = "none";
+	document.getElementById("plm_selector").appendChild(document.getElementById("select-timeline"))
 	load_timeline(e.target.value);
 }
 
