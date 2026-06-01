@@ -4,6 +4,7 @@ import { load_parliament, load_timeline } from "./loading.js";
 import { table_highlight, update_table_footer, update_buttons } from "./sidebar.js";
 import { add_party, cancel_add_party, delete_hlt, move_party_left, move_party_right, reset_plm, show_add_menu, sort_table_by_seats, toggle_edit_mode } from "./editing.js";
 import { set_span_angle, set_inner_radius } from "./geometry.js";
+import { get_query_param, set_query_param } from "./query.js";
 
 const btn_prev = document.getElementById("btn_prev");
 const btn_next = document.getElementById("btn_next");
@@ -18,12 +19,14 @@ let pointer_mvmt = 0;
 // it will no longer be captured by btn.onclick.
 let pressed_rect = null;
 let mouseup_fn = null;
+
 function on_click(btn, fn) {
 	btn.addEventListener('pointerdown', function (e) {
 		pressed_rect = btn.getBoundingClientRect();
 		mouseup_fn = fn;
 	});
 }
+
 document.body.addEventListener('pointerup', function (e) {	
 	if (pressed_rect &&
 		e.clientX >= pressed_rect.left &&
@@ -35,28 +38,6 @@ document.body.addEventListener('pointerup', function (e) {
 	}
 	pressed_rect = null;
 	mouseup_fn = null;
-
-	if (pointer_mvmt < 20) {
-		for (const fraction of S.cur_plm.fractions) {
-			for (const seat of fraction.seat_centers) {
-				const dist = Math.hypot(seat[0] - S.mouse_x, seat[1] - S.mouse_y);
-				if (dist <= S.cur_plm.get_seat_hitbox_radius()) {
-					highlight(fraction.party.id);
-
-					// avoid hovering on touch screens
-					if (e.pointerType !== 'mouse') {
-						S.mouse_x = null;
-						S.mouse_y = null;
-					}
-
-					return;
-				}
-			}
-		}
-
-		// if no seat is clicked, remove highlights
-		highlight(null);
-	}
 });
 
 on_click(btn_prev, prev);
@@ -116,11 +97,15 @@ $(document).on("click", "tbody tr", function(e) {
     }
 });
 
-// when timeline is selected, show sidebar and hide welcome message
-document.getElementById("select-timeline").onchange = (e) => {
+function show_sidebar() {
 	document.getElementById("sidebar_hidden").style.display = "inline-block";
 	document.getElementById("welcome").style.display = "none";
-	document.getElementById("plm_selector").appendChild(document.getElementById("select-timeline"))
+	document.getElementById("plm_selector").appendChild(document.getElementById("select-timeline"));
+}
+
+// when timeline is selected, show sidebar and hide welcome message
+document.getElementById("select-timeline").onchange = (e) => {
+	show_sidebar();
 	load_timeline(e.target.value);
 }
 
@@ -144,10 +129,48 @@ c.addEventListener("pointerdown", (e) => {
     }
 });
 
+c.addEventListener("pointerup", (e) => {
+	if (pointer_mvmt < 20) {
+		for (const fraction of S.cur_plm.fractions) {
+			for (const seat of fraction.seat_centers) {
+				const dist = Math.hypot(seat[0] - S.mouse_x, seat[1] - S.mouse_y);
+				if (dist <= S.cur_plm.get_seat_hitbox_radius()) {
+					highlight(fraction.party.id);
+
+					// avoid hovering on touch screens
+					if (e.pointerType !== 'mouse') {
+						S.mouse_x = null;
+						S.mouse_y = null;
+					}
+
+					return;
+				}
+			}
+		}
+
+		// if no seat is clicked, remove highlights
+		highlight(null);
+	}
+});
+
 // resize canvas to fill the screen
 window.addEventListener('load', (e) => {
 	resize_canvas();
 	transform_ctx();
+
+	// check for query strings
+	const t = get_query_param("t");
+	const p = Number(get_query_param("p"));
+	if (t) {
+		show_sidebar();
+		load_timeline(t).then(() => {
+			document.getElementById("select-timeline").value = t;
+			if (p) navigate(p);
+		});
+		
+	}
+
+	
 });
 
 // continue resizing canvas to fill the screen
@@ -207,47 +230,34 @@ document.getElementById("sel_ancestors").onchange = function(e) {
 export function prev() {
 	const idx = S.cur_tml.parliaments.indexOf(S.ori_plm);
 	const newIdx = Math.min(idx + 1, S.cur_tml.parliaments.length - 1);
-	S.ori_plm = S.cur_tml.parliaments[newIdx];
-	S.cur_plm = S.ori_plm.clone();
-	S.edit_mode = false;
-	load_parliament(S.cur_plm);
-
-	btn_prev.disabled = btn_first.disabled = (newIdx+1 == S.cur_tml.parliaments.length);
-	btn_next.disabled = btn_last.disabled = (newIdx == 0);
+	navigate(newIdx);
 }
 
 // go to next parliament in the timeline
 export function next() {
 	const idx = S.cur_tml.parliaments.indexOf(S.ori_plm);
 	const newIdx = Math.max(idx - 1, 0);
-	S.ori_plm = S.cur_tml.parliaments[newIdx];
-	S.cur_plm = S.ori_plm.clone();
-	S.edit_mode = false;
-	load_parliament(S.cur_plm);
-
-	btn_prev.disabled = btn_first.disabled = (newIdx+1 == S.cur_tml.parliaments.length);
-	btn_next.disabled = btn_last.disabled = (newIdx == 0);
+	navigate(newIdx);
 }
 
 export function first() {
-	S.ori_plm = S.cur_tml.parliaments[S.cur_tml.parliaments.length - 1];
-	S.cur_plm = S.ori_plm.clone();
-	S.edit_mode = false;
-	load_parliament(S.cur_plm);
-
-	btn_prev.disabled = btn_first.disabled = true;
-	btn_next.disabled = btn_last.disabled = false;
-	
+	navigate(S.cur_tml.parliaments.length - 1);
 }
 
 export function last() {
-	S.ori_plm = S.cur_tml.parliaments[0];
+	navigate(0);
+}
+
+export function navigate(idx) {
+	S.ori_plm = S.cur_tml.parliaments[idx];
 	S.cur_plm = S.ori_plm.clone();
 	S.edit_mode = false;
 	load_parliament(S.cur_plm);
 
-	btn_prev.disabled = btn_first.disabled = false;
-	btn_next.disabled = btn_last.disabled = true;
+	set_query_param("p", idx);
+
+	btn_prev.disabled = btn_first.disabled = (idx+1 == S.cur_tml.parliaments.length);
+	btn_next.disabled = btn_last.disabled = (idx == 0);
 }
 
 // add or remove party from the list of highlighted

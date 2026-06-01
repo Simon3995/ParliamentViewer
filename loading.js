@@ -2,6 +2,7 @@ import { S, schedule_frame } from "./main.js";
 import { Party, Fraction, Parliament, Timeline } from "./classes.js";
 import { update_sidebar } from "./sidebar.js";
 import { highlight, next, prev } from "./controller.js";
+import { set_query_param } from "./query.js";
 
 const SPRITE_SIZE = 200;
 
@@ -33,6 +34,8 @@ export async function load_timeline(name) {
 	S.ord_tab = [];
 	S.ord_vis = [];
 	S.cur_tml = new Timeline(data.name);
+
+	set_query_param("t", name);
 
 	// track image loading
 	const image_promises = [];
