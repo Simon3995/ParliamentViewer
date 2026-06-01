@@ -10,6 +10,8 @@ const btn_next = document.getElementById("btn_next");
 const btn_first = document.getElementById("btn_first");
 const btn_last = document.getElementById("btn_last");
 
+let pointer_mvmt = 0;
+
 // The globals, function and body-eventlistener below all solve a problem with the button animations.
 // When a button is pressed, it moves due to an animation.
 // If the mouse is at a part where the button moved away from, 
@@ -22,7 +24,7 @@ function on_click(btn, fn) {
 		mouseup_fn = fn;
 	});
 }
-document.body.addEventListener('mouseup', function (e) {
+document.body.addEventListener('pointerup', function (e) {	
 	if (pressed_rect &&
 		e.clientX >= pressed_rect.left &&
 		e.clientX <= pressed_rect.right &&
@@ -33,6 +35,28 @@ document.body.addEventListener('mouseup', function (e) {
 	}
 	pressed_rect = null;
 	mouseup_fn = null;
+
+	if (pointer_mvmt < 20) {
+		for (const fraction of S.cur_plm.fractions) {
+			for (const seat of fraction.seat_centers) {
+				const dist = Math.hypot(seat[0] - S.mouse_x, seat[1] - S.mouse_y);
+				if (dist <= S.cur_plm.get_seat_hitbox_radius()) {
+					highlight(fraction.party.id);
+
+					// avoid hovering on touch screens
+					if (e.pointerType !== 'mouse') {
+						S.mouse_x = null;
+						S.mouse_y = null;
+					}
+
+					return;
+				}
+			}
+		}
+
+		// if no seat is clicked, remove highlights
+		highlight(null);
+	}
 });
 
 on_click(btn_prev, prev);
@@ -102,6 +126,8 @@ document.getElementById("select-timeline").onchange = (e) => {
 
 // if party seat is clicked, highlight that party
 c.addEventListener("pointerdown", (e) => {
+	pointer_mvmt = 0;
+
 	if (!S.cur_tml) return;
 
 	// for touch, update mouse coords before hit-test, then clear to avoid hovering
@@ -116,26 +142,6 @@ c.addEventListener("pointerdown", (e) => {
         S.mouse_x = mouse.x;
         S.mouse_y = mouse.y;
     }
-
-	for (const fraction of S.cur_plm.fractions) {
-		for (const seat of fraction.seat_centers) {
-			const dist = Math.hypot(seat[0] - S.mouse_x, seat[1] - S.mouse_y);
-			if (dist <= S.cur_plm.get_seat_hitbox_radius()) {
-				highlight(fraction.party.id);
-
-				// avoid hovering on touch screens
-				if (e.pointerType !== 'mouse') {
-					S.mouse_x = null;
-					S.mouse_y = null;
-				}
-
-				return;
-			}
-		}
-	}
-
-    // if no seat is clicked, remove highlights
-	highlight(null);
 });
 
 // resize canvas to fill the screen
@@ -152,6 +158,7 @@ window.addEventListener('resize', (e) => {
 
 // transform mouse coords
 window.addEventListener('pointermove', (e) => {
+	pointer_mvmt += Math.hypot(e.movementX, e.movementY);
 	if (e.pointerType !== 'mouse') return;  // ignore touch
 	const rect = c.getBoundingClientRect();
 	const mx = (e.clientX - rect.left) * RES_MULT;
