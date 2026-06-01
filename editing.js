@@ -23,7 +23,7 @@ export function sort_table_by_seats() {
 
 // move the selected party one step to the left on the parliament chart
 export function move_party_left() {
-	const idx = S.ord_vis.findIndex(elem => elem.party.id === S.cur_hlt[0].party);
+	const idx = S.ord_vis.findIndex(elem => elem.party.id === S.cur_hlt[0]);
 	if (idx <= 0) return; // can't move further left
 	[S.ord_vis[idx - 1], S.ord_vis[idx]] = [S.ord_vis[idx], S.ord_vis[idx - 1]];
 	S.cur_plm.distribute_seats();
@@ -31,7 +31,7 @@ export function move_party_left() {
 
 // move the selected party one step to the right on the parliament chart
 export function move_party_right() {
-	const idx = S.ord_vis.findIndex(elem => elem.party.id === S.cur_hlt[0].party);
+	const idx = S.ord_vis.findIndex(elem => elem.party.id === S.cur_hlt[0]);
 	if (idx === -1 || idx >= S.ord_vis.length - 1) return; // can´t move further right
 	[S.ord_vis[idx + 1], S.ord_vis[idx]] = [S.ord_vis[idx], S.ord_vis[idx + 1]];
 	S.cur_plm.distribute_seats();

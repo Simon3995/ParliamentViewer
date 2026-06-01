@@ -167,10 +167,7 @@ window.addEventListener('load', (e) => {
 			document.getElementById("select-timeline").value = t;
 			if (p) navigate(p);
 		});
-		
 	}
-
-	
 });
 
 // continue resizing canvas to fill the screen
