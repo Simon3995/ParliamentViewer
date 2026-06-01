@@ -19,7 +19,7 @@ let pointer_mvmt = 0;
 let pressed_rect = null;
 let mouseup_fn = null;
 function on_click(btn, fn) {
-	btn.addEventListener('mousedown', function (e) {
+	btn.addEventListener('pointerdown', function (e) {
 		pressed_rect = btn.getBoundingClientRect();
 		mouseup_fn = fn;
 	});
