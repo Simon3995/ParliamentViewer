@@ -35,7 +35,7 @@ function build_checkbox_list(container_id, party_id, field, selected_ids) {
         const item = document.createElement('label');  // label element ensures the text is clickable too
         item.className = 'checkbox-item';
         // if party has no name, display name "party [id]"
-        item.innerHTML = `<input type="checkbox" ${checked} onchange="toggle_checkbox(${party_id},'${field}',${p.id},this.checked)"><span>${p.id || ('unnamed party ' + i)}</span>`;
+        item.innerHTML = `<input type="checkbox" ${checked} onchange="toggle_checkbox(${party_id},'${field}','${p.id}',this.checked)"><span>${p.id || ('unnamed party ' + i)}</span>`;
         container.appendChild(item);
     }
 
