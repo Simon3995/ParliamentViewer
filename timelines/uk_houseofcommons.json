@@ -191,6 +191,57 @@
      "seats": 1
     }
    ]
+  },
+  {
+   "name": "2019 General Election",
+   "date": "2019-12-12",
+   "fractions": [
+    {
+     "id": "sf",
+     "seats": 7
+    },
+    {
+     "id": "plaid",
+     "seats": 4
+    },
+    {
+     "id": "greens",
+     "seats": 1
+    },
+    {
+     "id": "snp",
+     "seats": 48
+    },
+    {
+     "id": "sdlp",
+     "seats": 2
+    },
+    {
+     "id": "lab",
+     "seats": 202
+    },
+    {
+     "id": "libdem",
+     "seats": 11
+    },
+    {
+     "id": "apni",
+     "seats": 1
+    },
+    {
+     "id": "con",
+     "seats": 365
+    },
+    {
+     "id": "dup",
+     "seats": 8
+    },
+    {
+     "id": "s",
+     "seats": 1
+    }
+   ],
+   "source": "https://electionresults.parliament.uk/general-elections/4"
   }
  ]
 }

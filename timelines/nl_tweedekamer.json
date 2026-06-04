@@ -354,7 +354,7 @@
    "fullname_en": "Evangelical People's Party",
    "color": "rgb(240, 176, 0)",
    "image": "",
-   "established": "Tweede Kamerverkiezingen 1981",
+   "established": "Tweede Kamerverkiezingen 1982",
    "founded_by": [],
    "split_from": [
     "cda",
@@ -367,7 +367,11 @@
    "fullname_rm": "",
    "fullname_en": "Communist Party of the Netherlands",
    "color": "#ff0000",
-   "image": "/logos/nl/CPN.png"
+   "image": "/logos/nl/CPN.png",
+   "established": "Tweede Kamerverkiezingen 1922",
+   "founded_by": [
+    "sdp"
+   ]
   },
   "sdp": {
    "name": "SDP",
@@ -458,7 +462,7 @@
    "image": "/logos/nl/PvdV.png",
    "established": "Tweede Kamerverkiezingen 1946",
    "founded_by": [
-    "lsp"
+    "vb"
    ]
   },
   "rksp": {
@@ -467,7 +471,11 @@
    "fullname_rm": "",
    "fullname_en": "Roman Catholic State Party",
    "color": "rgb(187, 90, 0)",
-   "image": ""
+   "image": "",
+   "established": "Tweede Kamerverkiezingen 1929",
+   "founded_by": [
+    "ab"
+   ]
   },
   "sdap": {
    "name": "SDAP",
@@ -493,13 +501,21 @@
    "color": "#000000ff",
    "image": "/logos/nl/NSB.png"
   },
-  "lsp": {
-   "name": "LSP",
-   "fullname": "Liberale Staatspartij",
+  "vb": {
+   "name": "VB",
+   "fullname": "Vrijheidsbond",
    "fullname_rm": "",
-   "fullname_en": "Liberal State Party",
+   "fullname_en": "Freedom League",
    "color": "#0d6486ff",
-   "image": ""
+   "image": "",
+   "established": "Tweede Kamerverkiezingen 1922",
+   "founded_by": [
+    "lu",
+    "bvl",
+    "eb",
+    "np",
+    "mp"
+   ]
   },
   "cdu": {
    "name": "CDU",
@@ -523,7 +539,11 @@
    "fullname_rm": "",
    "fullname_en": "National Farmers', Horticulturists' and Middle Class Party",
    "color": "#79aa4aff",
-   "image": ""
+   "image": "",
+   "established": "Tweede Kamerverkiezingen 1933",
+   "founded_by": [
+    "pb"
+   ]
   },
   "pb": {
    "name": "PB",
@@ -539,7 +559,11 @@
    "fullname_rm": "",
    "fullname_en": "Roman Catholic People's Party",
    "color": "#802008ff",
-   "image": ""
+   "image": "",
+   "established": "Tweede Kamerverkiezingen 1933",
+   "split_from": [
+    "ab"
+   ]
   },
   "hgsp": {
    "name": "HGSP",
@@ -575,7 +599,14 @@
    "fullname_rm": "",
    "fullname_en": "Middle Party for City and Country",
    "color": "#000000FF",
-   "image": ""
+   "image": "",
+   "established": "Tweede Kamerverkiezingen 1929",
+   "founded_by": [
+    "mp"
+   ],
+   "split_from": [
+    "vb"
+   ]
   },
   "ab": {
    "name": "AB",
@@ -2035,7 +2066,7 @@
      "seats": 17
     },
     {
-     "id": "lsp",
+     "id": "vb",
      "seats": 4
     },
     {
@@ -2090,7 +2121,7 @@
      "seats": 14
     },
     {
-     "id": "lsp",
+     "id": "vb",
      "seats": 7
     },
     {
@@ -2141,7 +2172,7 @@
      "seats": 12
     },
     {
-     "id": "lsp",
+     "id": "vb",
      "seats": 8
     },
     {
@@ -2196,7 +2227,7 @@
      "seats": 13
     },
     {
-     "id": "lsp",
+     "id": "vb",
      "seats": 9
     },
     {
@@ -2243,7 +2274,7 @@
      "seats": 16
     },
     {
-     "id": "lsp",
+     "id": "vb",
      "seats": 10
     },
     {

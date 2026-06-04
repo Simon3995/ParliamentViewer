@@ -3,22 +3,6 @@
  "title": "Eerste Kamer",
  "country": "Netherlands",
  "parties": {
-  "bij1": {
-   "name": "BIJ1",
-   "fullname": "BIJ1",
-   "fullname_rm": "",
-   "fullname_en": "BIJ1 (TOGETHER)",
-   "color": "#000000",
-   "image": "/logos/nl/BIJ1.png"
-  },
-  "ppnl": {
-   "name": "PPNL",
-   "fullname": "Piratenpartij",
-   "fullname_rm": "",
-   "fullname_en": "Pirate Party",
-   "color": "#8300c5ff",
-   "image": "/logos/nl/PPNL.png"
-  },
   "sp": {
    "name": "SP",
    "fullname": "Socialistische Partij",
@@ -90,14 +74,6 @@
    "fullname_en": "ChristianUnion",
    "color": "#8fd1eb",
    "image": "/logos/nl/CU.png"
-  },
-  "fnp": {
-   "name": "FNP",
-   "fullname": "Fryske Nasjonale Partij",
-   "fullname_rm": "",
-   "fullname_en": "Frisian National Party",
-   "color": "#003366",
-   "image": "/logos/nl/FNP.png"
   },
   "cda": {
    "name": "CDA",
@@ -1427,6 +1403,709 @@
     }
    ],
    "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1971",
+   "date": "1971-04-29",
+   "fractions": [
+    {
+     "id": "cpn",
+     "seats": 3
+    },
+    {
+     "id": "psp",
+     "seats": 1
+    },
+    {
+     "id": "ppr",
+     "seats": 2
+    },
+    {
+     "id": "pvda",
+     "seats": 18
+    },
+    {
+     "id": "d66",
+     "seats": 6
+    },
+    {
+     "id": "chu",
+     "seats": 7
+    },
+    {
+     "id": "kvp",
+     "seats": 22
+    },
+    {
+     "id": "arp",
+     "seats": 7
+    },
+    {
+     "id": "vvd",
+     "seats": 8
+    },
+    {
+     "id": "sgp",
+     "seats": 1
+    }
+   ],
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1969",
+   "date": "1969-07-02",
+   "fractions": [
+    {
+     "id": "cpn",
+     "seats": 1
+    },
+    {
+     "id": "psp",
+     "seats": 3
+    },
+    {
+     "id": "ppr",
+     "seats": 1
+    },
+    {
+     "id": "pvda",
+     "seats": 20
+    },
+    {
+     "id": "chu",
+     "seats": 8
+    },
+    {
+     "id": "kvp",
+     "seats": 24
+    },
+    {
+     "id": "arp",
+     "seats": 7
+    },
+    {
+     "id": "vvd",
+     "seats": 8
+    },
+    {
+     "id": "bp",
+     "seats": 3
+    }
+   ],
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1966",
+   "date": "1966-07-06",
+   "fractions": [
+    {
+     "id": "cpn",
+     "seats": 1
+    },
+    {
+     "id": "psp",
+     "seats": 3
+    },
+    {
+     "id": "pvda",
+     "seats": 22
+    },
+    {
+     "id": "chu",
+     "seats": 7
+    },
+    {
+     "id": "kvp",
+     "seats": 25
+    },
+    {
+     "id": "arp",
+     "seats": 7
+    },
+    {
+     "id": "vvd",
+     "seats": 8
+    },
+    {
+     "id": "bp",
+     "seats": 2
+    }
+   ],
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1963",
+   "date": "1963-05-16",
+   "fractions": [
+    {
+     "id": "cpn",
+     "seats": 1
+    },
+    {
+     "id": "psp",
+     "seats": 2
+    },
+    {
+     "id": "pvda",
+     "seats": 25
+    },
+    {
+     "id": "chu",
+     "seats": 7
+    },
+    {
+     "id": "kvp",
+     "seats": 26
+    },
+    {
+     "id": "arp",
+     "seats": 7
+    },
+    {
+     "id": "vvd",
+     "seats": 7
+    }
+   ],
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1960",
+   "date": "1960-06-03",
+   "fractions": [
+    {
+     "id": "cpn",
+     "seats": 2
+    },
+    {
+     "id": "pvda",
+     "seats": 23
+    },
+    {
+     "id": "chu",
+     "seats": 8
+    },
+    {
+     "id": "kvp",
+     "seats": 26
+    },
+    {
+     "id": "arp",
+     "seats": 8
+    },
+    {
+     "id": "vvd",
+     "seats": 8
+    }
+   ],
+   "source": "https://www.eerstekamer.nl/begrip/zetelverdeling_overzicht_1946_2"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1956 (oktober)",
+   "date": "1956-10-11",
+   "fractions": [
+    {
+     "id": "cpn",
+     "seats": 4
+    },
+    {
+     "id": "pvda",
+     "seats": 22
+    },
+    {
+     "id": "chu",
+     "seats": 8
+    },
+    {
+     "id": "kvp",
+     "seats": 25
+    },
+    {
+     "id": "arp",
+     "seats": 8
+    },
+    {
+     "id": "vvd",
+     "seats": 7
+    },
+    {
+     "id": "sgp",
+     "seats": 1
+    }
+   ],
+   "source": "https://www.nlverkiezingen.com/EK1703.html"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1956 (juni)",
+   "date": "1956-06-14",
+   "fractions": [
+    {
+     "id": "cpn",
+     "seats": 1
+    },
+    {
+     "id": "pvda",
+     "seats": 15
+    },
+    {
+     "id": "chu",
+     "seats": 6
+    },
+    {
+     "id": "kvp",
+     "seats": 17
+    },
+    {
+     "id": "arp",
+     "seats": 7
+    },
+    {
+     "id": "vvd",
+     "seats": 4
+    }
+   ],
+   "source": "https://www.nlverkiezingen.com/EK1703.html"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1955",
+   "date": "1955-08-03",
+   "fractions": [
+    {
+     "id": "cpn",
+     "seats": 2
+    },
+    {
+     "id": "pvda",
+     "seats": 14
+    },
+    {
+     "id": "chu",
+     "seats": 6
+    },
+    {
+     "id": "kvp",
+     "seats": 17
+    },
+    {
+     "id": "arp",
+     "seats": 7
+    },
+    {
+     "id": "vvd",
+     "seats": 4
+    }
+   ],
+   "source": "https://www.nlverkiezingen.com/EK1703.html"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1952",
+   "date": "1952-06-26",
+   "fractions": [
+    {
+     "id": "cpn",
+     "seats": 2
+    },
+    {
+     "id": "pvda",
+     "seats": 14
+    },
+    {
+     "id": "chu",
+     "seats": 6
+    },
+    {
+     "id": "kvp",
+     "seats": 17
+    },
+    {
+     "id": "arp",
+     "seats": 7
+    },
+    {
+     "id": "vvd",
+     "seats": 4
+    }
+   ],
+   "source": "https://www.nlverkiezingen.com/EK1703.html"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1951",
+   "date": "1951-07-31",
+   "fractions": [
+    {
+     "id": "cpn",
+     "seats": 3
+    },
+    {
+     "id": "pvda",
+     "seats": 14
+    },
+    {
+     "id": "chu",
+     "seats": 6
+    },
+    {
+     "id": "kvp",
+     "seats": 16
+    },
+    {
+     "id": "arp",
+     "seats": 7
+    },
+    {
+     "id": "vvd",
+     "seats": 4
+    }
+   ],
+   "source": "https://www.nlverkiezingen.com/EK1703.html"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1948",
+   "date": "1948-07-08",
+   "fractions": [
+    {
+     "id": "cpn",
+     "seats": 4
+    },
+    {
+     "id": "pvda",
+     "seats": 14
+    },
+    {
+     "id": "chu",
+     "seats": 5
+    },
+    {
+     "id": "kvp",
+     "seats": 17
+    },
+    {
+     "id": "arp",
+     "seats": 7
+    },
+    {
+     "id": "vvd",
+     "seats": 3
+    }
+   ],
+   "source": "https://www.nlverkiezingen.com/EK1703.html"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1946",
+   "date": "1948-07-12",
+   "fractions": [
+    {
+     "id": "cpn",
+     "seats": 4
+    },
+    {
+     "id": "pvda",
+     "seats": 14
+    },
+    {
+     "id": "chu",
+     "seats": 5
+    },
+    {
+     "id": "kvp",
+     "seats": 17
+    },
+    {
+     "id": "arp",
+     "seats": 7
+    },
+    {
+     "id": "pvdv",
+     "seats": 3
+    }
+   ],
+   "source": "https://www.nlverkiezingen.com/EK1703.html"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1937",
+   "date": "1937-05-27",
+   "fractions": [
+    {
+     "id": "sdap",
+     "seats": 12
+    },
+    {
+     "id": "vdb",
+     "seats": 2
+    },
+    {
+     "id": "chu",
+     "seats": 6
+    },
+    {
+     "id": "rksp",
+     "seats": 16
+    },
+    {
+     "id": "arp",
+     "seats": 7
+    },
+    {
+     "id": "lsp",
+     "seats": 3
+    },
+    {
+     "id": "nsb",
+     "seats": 4
+    }
+   ],
+   "source": "https://www.nlverkiezingen.com/EK1703.html"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1935",
+   "date": "1935-07-26",
+   "fractions": [
+    {
+     "id": "sdap",
+     "seats": 11
+    },
+    {
+     "id": "vdb",
+     "seats": 3
+    },
+    {
+     "id": "chu",
+     "seats": 7
+    },
+    {
+     "id": "rksp",
+     "seats": 16
+    },
+    {
+     "id": "arp",
+     "seats": 6
+    },
+    {
+     "id": "lsp",
+     "seats": 5
+    },
+    {
+     "id": "nsb",
+     "seats": 2
+    }
+   ],
+   "source": "https://www.nlverkiezingen.com/EK1703.html"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1932",
+   "date": "1932-07-29",
+   "fractions": [
+    {
+     "id": "sdap",
+     "seats": 11
+    },
+    {
+     "id": "vdb",
+     "seats": 4
+    },
+    {
+     "id": "chu",
+     "seats": 7
+    },
+    {
+     "id": "rksp",
+     "seats": 16
+    },
+    {
+     "id": "arp",
+     "seats": 6
+    },
+    {
+     "id": "lsp",
+     "seats": 6
+    }
+   ],
+   "source": "https://www.nlverkiezingen.com/EK1703.html"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1929",
+   "date": "1929-07-26",
+   "fractions": [
+    {
+     "id": "sdap",
+     "seats": 11
+    },
+    {
+     "id": "vdb",
+     "seats": 4
+    },
+    {
+     "id": "chu",
+     "seats": 7
+    },
+    {
+     "id": "rksp",
+     "seats": 16
+    },
+    {
+     "id": "arp",
+     "seats": 6
+    },
+    {
+     "id": "lsp",
+     "seats": 6
+    }
+   ],
+   "source": "https://www.nlverkiezingen.com/EK1703.html"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1926",
+   "date": "1926-07-30",
+   "fractions": [
+    {
+     "id": "sdap",
+     "seats": 11
+    },
+    {
+     "id": "vdb",
+     "seats": 3
+    },
+    {
+     "id": "chu",
+     "seats": 7
+    },
+    {
+     "id": "rksp",
+     "seats": 16
+    },
+    {
+     "id": "arp",
+     "seats": 7
+    },
+    {
+     "id": "lsp",
+     "seats": 6
+    }
+   ],
+   "source": "https://www.nlverkiezingen.com/EK1703.html"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1923",
+   "date": "1923-07-27",
+   "fractions": [
+    {
+     "id": "sdap",
+     "seats": 11
+    },
+    {
+     "id": "vdb",
+     "seats": 3
+    },
+    {
+     "id": "chu",
+     "seats": 7
+    },
+    {
+     "id": "ab",
+     "seats": 16
+    },
+    {
+     "id": "arp",
+     "seats": 8
+    },
+    {
+     "id": "lsp",
+     "seats": 5
+    }
+   ],
+   "source": "https://www.nlverkiezingen.com/EK1703.html"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1922",
+   "date": "1922-06-22",
+   "fractions": [
+    {
+     "id": "sdap",
+     "seats": 3
+    },
+    {
+     "id": "vdb",
+     "seats": 4
+    },
+    {
+     "id": "chu",
+     "seats": 7
+    },
+    {
+     "id": "ab",
+     "seats": 21
+    },
+    {
+     "id": "arp",
+     "seats": 14
+    },
+    {
+     "id": "lsp",
+     "seats": 1
+    }
+   ],
+   "source": "https://www.nlverkiezingen.com/EK1703.html"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1919",
+   "date": "1919-07-08",
+   "fractions": [
+    {
+     "id": "sdap",
+     "seats": 4
+    },
+    {
+     "id": "vdb",
+     "seats": 2
+    },
+    {
+     "id": "chu",
+     "seats": 4
+    },
+    {
+     "id": "ab",
+     "seats": 17
+    },
+    {
+     "id": "arp",
+     "seats": 9
+    },
+    {
+     "id": "lsp",
+     "seats": 14
+    }
+   ],
+   "source": "https://www.nlverkiezingen.com/EK1703.html"
+  },
+  {
+   "name": "Eerste Kamerverkiezingen 1917",
+   "date": "1917-07-11",
+   "fractions": [
+    {
+     "id": "sdap",
+     "seats": 2
+    },
+    {
+     "id": "vdb",
+     "seats": 3
+    },
+    {
+     "id": "chu",
+     "seats": 4
+    },
+    {
+     "id": "ab",
+     "seats": 17
+    },
+    {
+     "id": "arp",
+     "seats": 9
+    },
+    {
+     "id": "lsp",
+     "seats": 15
+    }
+   ],
+   "source": "https://www.nlverkiezingen.com/EK1703.html"
   }
  ]
 }
