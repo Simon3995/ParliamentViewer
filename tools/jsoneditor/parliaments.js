@@ -6,7 +6,7 @@ function add_plm(data, suppressRefresh = false) {
 
     div_plms.insertAdjacentHTML('beforeend', `
         <div id="plm-${id}" class="plm">
-            <div class="row"><label>Name:</label><input type="text" value="${esc(q.name || '')}" onchange="plms[${id}].name=this.value"></div>
+            <div class="row"><label>Name:</label><input type="text" value="${esc(q.name || '')}" onchange="rename_parliament(${id}, this.value)"></div>
             <div class="row"><label>Date (YYYY-MM-DD):</label><input type="text" value="${esc(q.date || '')}" onchange="plms[${id}].date=this.value"></div>
             <div class="row"><label>Source:</label><textarea rows="2" cols="40" onchange="plms[${id}].source=this.value">${esc(q.source || '')}</textarea>
             <div class="row"><label>Fractions:</label>
@@ -23,6 +23,11 @@ function add_plm(data, suppressRefresh = false) {
 
     // insert this new parliament into every party's 'established' dropdown
     insert_plm_everywhere(id);
+}
+
+function rename_parliament(id, newName) {
+    plms[id].name = newName;
+    document.querySelectorAll(`[data-plm-ref="${id}"]`).forEach(s => s.textContent = newName);
 }
 
 // delete a parliament from the list entirely
