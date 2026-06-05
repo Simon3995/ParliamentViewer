@@ -3,8 +3,12 @@ function exportJSON() {
     const partiesObj = {};
     for (const p of parties.filter(Boolean)) {
         const { id, ...rest } = p;
+        if (rest.founded_by) rest.founded_by = rest.founded_by.map(i => parties[i]?.id).filter(Boolean);
+        if (rest.split_from) rest.split_from = rest.split_from.map(i => parties[i]?.id).filter(Boolean);
+        if (rest.establised != null) rest.established = plms[rest.established]?.name ?? null;
         partiesObj[id] = rest;
     }
+
     const obj = {
         name:        document.getElementById('name').value,
         title:       document.getElementById('title').value,
@@ -15,6 +19,7 @@ function exportJSON() {
             fractions: (q.fractions || []).filter(f => f.id !== null)
         }))
     };
+
     const a = document.createElement('a');
     a.href = URL.createObjectURL(new Blob([JSON.stringify(obj, 1, 1)], { type: 'application/json' }));
     a.download = (obj.name || 'parliament') + '.json';
@@ -45,16 +50,28 @@ function importJSON(text) {
             }, true);
         }
 
+        // convert established strings to plm array indices
+        for (const p of Object.values(parties)) {
+            if (!p || !p.established) continue;
+            p.established = plms.findIndex(q => q && q.name === p.established);
+            if (p.established === -1) p.established = null;
+        }
+
         // resolve string IDs to actual party IDs
         for (const p of Object.values(parties)) {
             if (!p) continue;
             for (const field of ['founded_by', 'split_from']) {
                 if (!p[field]) continue;
-                p[field] = p[field].map(sid => parties.find(q => q && q.id === sid)?.id).filter(Boolean);
+                p[field] = p[field].map(sid => parties.findIndex(q => q && q.id === sid)).filter(i => i !== -1);
             }
         }
 
-        for (const q of (obj.parliaments || [])) add_plm(q, true);
+        for (const q of (obj.parliaments || [])) {
+            for (const f of q.fractions) {
+                f.id = parties.findIndex(q => q && q.id === f.id);
+            }
+            add_plm(q, true);
+        }
 
         refresh_all_checkbox_lists();
         refresh_all_fraction_dropdowns();

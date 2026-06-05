@@ -2,28 +2,28 @@
 function make_party_checkbox(party_id, field, p, i) {
     const label = document.createElement('label');
     label.className = 'checkbox-item';
-    label.dataset.partyRef = p.id;  // stable key for targeted removal
-    label.innerHTML = `<input type="checkbox" onchange="toggle_checkbox(${party_id},'${field}','${p.id}',this.checked)"><span>${p.id || ('unnamed party ' + i)}</span>`;
+    label.dataset.partyRef = i;  // stable key for targeted removal
+    label.innerHTML = `<input type="checkbox" onchange="toggle_checkbox(${party_id},'${field}',${i},this.checked)"><span>${p.id || ('unnamed party ' + i)}</span>`;
     return label;
 }
 
 // helper function to create one party option for a select element
 function make_party_option(p, i, currentValue) {
     const opt = document.createElement('option');
-    opt.value = p.id || '';
+    opt.value = i;
     opt.textContent = p.id || 'unnamed party ' + i;
-    if (currentValue === (p.id || '')) opt.selected = true;
-    opt.dataset.partyRef = p.id;  // stable key for targeted removal
+    if (currentValue == i) opt.selected = true;
+    opt.dataset.partyRef = i;  // stable key for targeted removal
     return opt;
 }
 
 // helper function to create one parliament option for a select element
 function make_plm_option(q, i, currentValue) {
     const opt = document.createElement('option');
-    opt.value = q.name || '';
+    opt.value = i;
     opt.textContent = q.name || 'unnamed parliament ' + i;
-    if (currentValue === (q.name || '')) opt.selected = true;
-    opt.dataset.plmRef = q.name;  // stable key for targeted removal
+    if (currentValue === i) opt.selected = true;
+    opt.dataset.plmRef = i;  // stable key for targeted removal
     return opt;
 }
 
@@ -35,7 +35,7 @@ function build_checkbox_list(container_id, party_id, field, selected_ids) {
     for (const [i, p] of Object.entries(parties)) {
         if (!p || i === party_id) continue;
         const label = make_party_checkbox(party_id, field, p, i);
-        label.querySelector('input').checked = selected_ids.includes(p.id);
+        label.querySelector('input').checked = selected_ids.includes(i);
         container.appendChild(label);
     }
     if (!container.children.length) container.innerHTML = 'No other parties';

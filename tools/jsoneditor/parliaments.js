@@ -6,7 +6,7 @@ function add_plm(data, suppressRefresh = false) {
 
     div_plms.insertAdjacentHTML('beforeend', `
         <div id="plm-${id}" class="plm">
-            <div class="row"><label>Name:</label><input type="text" value="${esc(q.name || '')}" onchange="plms[${id}].name=this.value;refresh_all_established_dropdowns()"></div>
+            <div class="row"><label>Name:</label><input type="text" value="${esc(q.name || '')}" onchange="plms[${id}].name=this.value"></div>
             <div class="row"><label>Date (YYYY-MM-DD):</label><input type="text" value="${esc(q.date || '')}" onchange="plms[${id}].date=this.value"></div>
             <div class="row"><label>Source:</label><textarea rows="2" cols="40" onchange="plms[${id}].source=this.value">${esc(q.source || '')}</textarea>
             <div class="row"><label>Fractions:</label>

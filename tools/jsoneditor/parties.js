@@ -6,14 +6,14 @@ function add_party(data, suppressRefresh = false) {
     div_parties.insertAdjacentHTML('beforeend', `
         <div id="party-${id}" class="party">
             <div class="img-wrap"><img id="img-${id}" src="${esc(p.image || '')}" style="background-color:${p.color || '#ffffff'}"></div>
-            <div class="row"><label>Unique ID:</label><input type="text" value="${esc(p.id)}" onchange="parties[${id}].id=this.value;refresh_all_checkbox_lists();refresh_all_fraction_dropdowns()"></div>
+            <div class="row"><label>Unique ID:</label><input type="text" value="${esc(p.id)}" onchange="rename_party(${id}, this.value)"></div>
             <div class="row"><label>Abbreviation:</label><input type="text" value="${esc(p.name)}" onchange="parties[${id}].name=this.value"></div>
             <div class="row"><label>Full Name (Local):</label><input type="text" value="${esc(p.fullname)}" onchange="parties[${id}].fullname=this.value"></div>
             <div class="row"><label>Full Name (Local, Romanised):</label><input type="text" placeholder="(optional)" value="${esc(p.fullname_rm)}" onchange="parties[${id}].fullname_rm=this.value"></div>
             <div class="row"><label>Full Name (English):</label><input type="text" value="${esc(p.fullname_en || '')}" onchange="parties[${id}].fullname_en=this.value"></div>
             <div class="row"><label>Color:</label><input type="color" value="${p.color || '#ffffff'}" onchange="parties[${id}].color=this.value;document.getElementById('img-${id}').style.backgroundColor=this.value"></div>
             <div class="row"><label>Logo URL:</label><input type="text" placeholder="/logos/..." value="${esc(p.image || '')}" onchange="parties[${id}].image=this.value;document.getElementById('img-${id}').src=this.value"></div>
-            <div class="row"><label>Established (parliament):</label><select id="established-${id}" onchange="parties[${id}].established=this.value||null"><option value="">-- NONE --</option></select></div>
+            <div class="row"><label>Established (parliament):</label><select id="established-${id}" onchange="parties[${id}].established=+this.value||null"><option value="">-- NONE --</option></select></div>
             <div class="row">
                 <span class="collapsible-label">Founded by:</span>
                 <div class="collapse-wrap">
@@ -46,6 +46,12 @@ function add_party(data, suppressRefresh = false) {
 
     // insert this new party into all existing other lists / dropdowns
     insert_party_everywhere(id);
+}
+
+function rename_party(id, newName) {
+    parties[id].id = newName;
+    document.querySelectorAll(`[data-party-ref="${id}"] span`).forEach(s => s.textContent = newName);
+    document.querySelectorAll(`option[data-party-ref="${id}"]`).forEach(o => o.textContent = newName);
 }
 
 // delete a party from the list entirely
