@@ -35,7 +35,7 @@ function build_checkbox_list(container_id, party_id, field, selected_ids) {
     for (const [i, p] of Object.entries(parties)) {
         if (!p || i === party_id) continue;
         const label = make_party_checkbox(party_id, field, p, i);
-        label.querySelector('input').checked = selected_ids.includes(i);
+        label.querySelector('input').checked = selected_ids.includes(Number(i));
         container.appendChild(label);
     }
     if (!container.children.length) container.innerHTML = 'No other parties';
