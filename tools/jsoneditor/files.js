@@ -1,5 +1,7 @@
 // export current party and parliament lists to JSON file
 function exportJSON() {
+    if (!verify_data()) return;
+
     const partiesObj = {};
     for (const p of parties.filter(Boolean)) {
         const { id, ...rest } = p;
@@ -24,6 +26,62 @@ function exportJSON() {
     a.href = URL.createObjectURL(new Blob([JSON.stringify(obj, 1, 1)], { type: 'application/json' }));
     a.download = (obj.name || 'parliament') + '.json';
     a.click();
+}
+
+function verify_data() {
+    const errors = [];
+
+    // check parties
+    const seenPartyIDs = new Set();
+    for (const [i, p] of parties.entries()) {
+        if (!p) continue;
+        const label = `Party ${i}`;
+        if (!p.id?.trim())   errors.push(`${label}: missing unique ID`);
+        if (!p.name?.trim()) errors.push(`${label} (${p.id}): missing abbreviation`);
+        if (p.id) {
+            if (seenPartyIDs.has(p.id)) errors.push(`Duplicate party ID: "${p.id}"`);
+            else seenPartyIDs.add(p.id);
+        }
+    }
+
+    // check parliaments
+    const seenPlmNames = new Set();
+    for (const [i, q] of plms.entries()) {
+        if (!q) continue;
+        const label = `Parliament ${i}`;
+        if (!q.name?.trim()) errors.push(`${label}: missing name`);
+        if (q.name) {
+            if (seenPlmNames.has(q.name)) errors.push(`Duplicate parliament name: "${q.name}"`);
+            else seenPlmNames.add(q.name);
+        }
+        if (q.date && !/^\d{4}-\d{2}-\d{2}$/.test(q.date))
+            errors.push(`Parliament "${q.name}": date "${q.date}" is not in YYYY-MM-DD format`);
+
+        // check fractions
+        if (q.fractions.length == 0) {
+            errors.push(`parliament ${q.name} has no fractions`);
+        }
+        for (const [fi, f] of (q.fractions || []).entries()) {
+            const flabel = `Parliament "${q.name}", fraction ${fi}`;
+            if (!f.id) errors.push(`${flabel}: no party assigned`);
+            if (!Number.isInteger(f.seats) || f.seats < 0)
+                errors.push(`${flabel}: invalid seat count "${f.seats}"`);
+        }
+
+        // check for duplicate parties within one parliament
+        const seenFractionIDs = new Set();
+        for (const f of (q.fractions || [])) {
+            if (!f.id) continue;
+            if (seenFractionIDs.has(f.id)) errors.push(`Parliament "${q.name}": party "${parties[f.id]?.id}" appears more than once`);
+            else seenFractionIDs.add(f.id);
+        }
+    }
+
+    if (errors.length) {
+        alert('Please fix the following issues before exporting:\n\n' + errors.map(e => '• ' + e).join('\n'));
+        return false;
+    }
+    return true;
 }
 
 // import party and parliament data from JSON file
