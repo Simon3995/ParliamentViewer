@@ -122,6 +122,36 @@
    "fullname_en": "Traditional Unionist Voice",
    "color": "#004080",
    "image": "/logos/uk/tuv.png"
+  },
+  "ukip": {
+   "name": "UKIP",
+   "fullname": "UK Independence Party",
+   "fullname_en": "UK Independence Party",
+   "color": "#692e72"
+  },
+  "rp": {
+   "name": "RP",
+   "fullname": "Respect Party",
+   "fullname_en": "Respect Party",
+   "color": "#b40000"
+  },
+  "ichc": {
+   "name": "ICHC",
+   "fullname": "Independent Community & Health Concern",
+   "fullname_en": "Independent Community & Health Concern",
+   "color": "#241f31"
+  },
+  "upup": {
+   "name": "UPUP",
+   "fullname": "Ulster Popular Unionist Party",
+   "fullname_en": "Ulster Popular Unionist Party",
+   "color": "#0c2c71"
+  },
+  "sdplib": {
+   "name": "SDP-Lib",
+   "fullname": "SDP-Liberal Alliance",
+   "fullname_en": "SDP-Liberal Alliance",
+   "color": "#ffad00"
   }
  },
  "parliaments": [
@@ -242,6 +272,351 @@
     }
    ],
    "source": "https://electionresults.parliament.uk/general-elections/4"
+  },
+  {
+   "name": "2017 General Election",
+   "date": "2017-06-08",
+   "fractions": [
+    {
+     "id": "sf",
+     "seats": 7
+    },
+    {
+     "id": "plaid",
+     "seats": 4
+    },
+    {
+     "id": "greens",
+     "seats": 1
+    },
+    {
+     "id": "snp",
+     "seats": 35
+    },
+    {
+     "id": "lab",
+     "seats": 262
+    },
+    {
+     "id": "libdem",
+     "seats": 12
+    },
+    {
+     "id": "con",
+     "seats": 317
+    },
+    {
+     "id": "dup",
+     "seats": 10
+    },
+    {
+     "id": "s",
+     "seats": 1
+    }
+   ],
+   "source": "https://electionresults.parliament.uk/general-elections/3"
+  },
+  {
+   "name": "2015 General Election",
+   "date": "2015-05-07",
+   "fractions": [
+    {
+     "id": "sf",
+     "seats": 4
+    },
+    {
+     "id": "plaid",
+     "seats": 3
+    },
+    {
+     "id": "greens",
+     "seats": 1
+    },
+    {
+     "id": "snp",
+     "seats": 56
+    },
+    {
+     "id": "sdlp",
+     "seats": 3
+    },
+    {
+     "id": "lab",
+     "seats": 232
+    },
+    {
+     "id": "libdem",
+     "seats": 8
+    },
+    {
+     "id": "con",
+     "seats": 330
+    },
+    {
+     "id": "uup",
+     "seats": 2
+    },
+    {
+     "id": "dup",
+     "seats": 8
+    },
+    {
+     "id": "ukip",
+     "seats": 1
+    }
+   ],
+   "source": "https://electionresults.parliament.uk/general-elections/2"
+  },
+  {
+   "name": "2010 General Election",
+   "date": "2010-05-06",
+   "fractions": [
+    {
+     "id": "sf",
+     "seats": 5
+    },
+    {
+     "id": "plaid",
+     "seats": 3
+    },
+    {
+     "id": "greens",
+     "seats": 1
+    },
+    {
+     "id": "snp",
+     "seats": 6
+    },
+    {
+     "id": "sdlp",
+     "seats": 3
+    },
+    {
+     "id": "lab",
+     "seats": 258
+    },
+    {
+     "id": "libdem",
+     "seats": 57
+    },
+    {
+     "id": "apni",
+     "seats": 1
+    },
+    {
+     "id": "con",
+     "seats": 306
+    },
+    {
+     "id": "dup",
+     "seats": 8
+    }
+   ],
+   "source": "https://electionresults.parliament.uk/general-elections/1"
+  },
+  {
+   "name": "2005 General Election",
+   "date": "2005-05-05",
+   "fractions": [
+    {
+     "id": "rp",
+     "seats": 1
+    },
+    {
+     "id": "sf",
+     "seats": 5
+    },
+    {
+     "id": "plaid",
+     "seats": 3
+    },
+    {
+     "id": "snp",
+     "seats": 6
+    },
+    {
+     "id": "sdlp",
+     "seats": 3
+    },
+    {
+     "id": "ichc",
+     "seats": 1
+    },
+    {
+     "id": "lab",
+     "seats": 356
+    },
+    {
+     "id": "libdem",
+     "seats": 62
+    },
+    {
+     "id": "con",
+     "seats": 198
+    },
+    {
+     "id": "dup",
+     "seats": 9
+    },
+    {
+     "id": "uup",
+     "seats": 1
+    },
+    {
+     "id": "s",
+     "seats": 1
+    }
+   ],
+   "source": "https://web.archive.org/web/20081209144147/http://www.electoralcommission.org.uk/__data/assets/pdf_file/0007/47185/Election2005_constituencies,candidatesandresultsFINAL_20719-15241__E__N__S__W__.pdf"
+  },
+  {
+   "name": "2001 General Election",
+   "date": "2001-06-07",
+   "fractions": [
+    {
+     "id": "sf",
+     "seats": 4
+    },
+    {
+     "id": "plaid",
+     "seats": 4
+    },
+    {
+     "id": "snp",
+     "seats": 5
+    },
+    {
+     "id": "sdlp",
+     "seats": 3
+    },
+    {
+     "id": "ichc",
+     "seats": 1
+    },
+    {
+     "id": "lab",
+     "seats": 412
+    },
+    {
+     "id": "libdem",
+     "seats": 52
+    },
+    {
+     "id": "con",
+     "seats": 166
+    },
+    {
+     "id": "dup",
+     "seats": 5
+    },
+    {
+     "id": "uup",
+     "seats": 6
+    },
+    {
+     "id": "s",
+     "seats": 1
+    }
+   ],
+   "source": "https://researchbriefings.files.parliament.uk/documents/RP01-54/RP01-54.pdf"
+  },
+  {
+   "name": "1997 General Election",
+   "date": "1997-05-01",
+   "fractions": [
+    {
+     "id": "sf",
+     "seats": 2
+    },
+    {
+     "id": "plaid",
+     "seats": 4
+    },
+    {
+     "id": "snp",
+     "seats": 6
+    },
+    {
+     "id": "sdlp",
+     "seats": 3
+    },
+    {
+     "id": "lab",
+     "seats": 418
+    },
+    {
+     "id": "libdem",
+     "seats": 46
+    },
+    {
+     "id": "con",
+     "seats": 165
+    },
+    {
+     "id": "dup",
+     "seats": 2
+    },
+    {
+     "id": "uup",
+     "seats": 10
+    },
+    {
+     "id": "ind",
+     "seats": 1
+    },
+    {
+     "id": "s",
+     "seats": 1
+    }
+   ],
+   "source": "https://www.parliament.uk/globalassets/documents/commons-information-office/m15.pdf"
+  },
+  {
+   "name": "1992 General Election",
+   "date": "1992-04-09",
+   "fractions": [
+    {
+     "id": "plaid",
+     "seats": 4
+    },
+    {
+     "id": "snp",
+     "seats": 3
+    },
+    {
+     "id": "sdlp",
+     "seats": 4
+    },
+    {
+     "id": "lab",
+     "seats": 271
+    },
+    {
+     "id": "libdem",
+     "seats": 20
+    },
+    {
+     "id": "con",
+     "seats": 336
+    },
+    {
+     "id": "dup",
+     "seats": 3
+    },
+    {
+     "id": "uup",
+     "seats": 9
+    },
+    {
+     "id": "upup",
+     "seats": 1
+    },
+    {
+     "id": "s",
+     "seats": 1
+    }
+   ],
+   "source": "https://www.parliament.uk/globalassets/documents/commons-information-office/m13.pdf"
   }
  ]
 }
