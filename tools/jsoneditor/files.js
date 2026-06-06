@@ -7,7 +7,7 @@ function exportJSON() {
         const { id, ...rest } = p;
         if (rest.founded_by) rest.founded_by = rest.founded_by.map(i => parties[i]?.id).filter(Boolean);
         if (rest.split_from) rest.split_from = rest.split_from.map(i => parties[i]?.id).filter(Boolean);
-        if (rest.establised != null) rest.established = plms[rest.established]?.name ?? null;
+        if (rest.established != null) rest.established = plms[rest.established]?.name ?? null;
         partiesObj[id] = rest;
     }
 
@@ -18,7 +18,10 @@ function exportJSON() {
         parties:     partiesObj,
         parliaments: plms.filter(Boolean).map(q => ({
             ...q,
-            fractions: (q.fractions || []).filter(f => f.id !== null)
+            fractions: (q.fractions || [])
+                .filter(f => f.id !== null)
+                .map(f => ({ ...f, id: parties[f.id]?.id ?? null}))
+                .filter(f => f.id !== null)
         }))
     };
 
