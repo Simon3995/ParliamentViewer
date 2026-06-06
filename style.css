@@ -329,64 +329,64 @@ input[type=number] {
 }
 
 input[type=range] {
-    width: 200px;
-    margin: 4px 10px;
-    vertical-align: middle;
+	width: 200px;
+	margin: 4px 10px;
+	vertical-align: middle;
 }
 
 .fixwidth {
-    width: 180px;
-    display: inline-block;
+	width: 180px;
+	display: inline-block;
 }
 
 span.icon {
-    background-size: contain !important;
-    float: left;
-    height: 25px;
-    width: 25px;
+	background-size: contain !important;
+	float: left;
+	height: 25px;
+	width: 25px;
 }
 
 #add_party {
-    background-color: #483d8b;
-    border: 5px solid #2a273d;
-    font-size: 18px;
-    filter: drop-shadow(5px 5px 0px #2a273d);
-    padding: 12px;
-    width: 100%;
+	background-color: #483d8b;
+	border: 5px solid #2a273d;
+	font-size: 18px;
+	filter: drop-shadow(5px 5px 0px #2a273d);
+	padding: 12px;
+	width: 100%;
 }
 
 #add_party input[type=color] {
-    height: 20px;
-    vertical-align: middle;
-    border: none;
-    flex: 1;
-    margin-left: 12px;
-    min-width: 0;
+	height: 20px;
+	vertical-align: middle;
+	border: none;
+	flex: 1;
+	margin-left: 12px;
+	min-width: 0;
 }
 
 #add_party input[type=text] {
-    flex: 1;
-    margin-left: 12px;
-    font-size: 18px;
-    min-width: 0;
-    background-color: #0004;
-    border: 1px solid #fff4;
-    color: white;
+	flex: 1;
+	margin-left: 12px;
+	font-size: 18px;
+	min-width: 0;
+	background-color: #0004;
+	border: 1px solid #fff4;
+	color: white;
 }
 
 #add_party p {
-    line-height: 20px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: baseline;
+	line-height: 20px;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: baseline;
 }
 
 #links {
-    margin-bottom: 40px;
+	margin-bottom: 40px;
 }
 
 button:disabled span.icon {
-    opacity: 40%;
+	opacity: 40%;
 }
 
 span.left { background: url(./icons/left.svg) no-repeat; }
@@ -402,27 +402,27 @@ span.prev { background: url(./icons/prev.svg) no-repeat; }
 span.next { background: url(./icons/next.svg) no-repeat; }
 
 @keyframes pulseColor {
-    0% {
-        color: #48b0ff;
-    }
+	0% {
+		color: #48b0ff;
+	}
 
-    50% {
-        color: #7eddff;
-    }
+	50% {
+		color: #7eddff;
+	}
 
-    100% {
-        color: #48b0ff;
-    }
+	100% {
+		color: #48b0ff;
+	}
 }
 
 @font-face {
-    font-family: Atkinson;
-    src: url(./fonts/AtkinsonHyperlegible-Regular.ttf);
-    font-weight: normal;
+	font-family: Atkinson;
+	src: url(./fonts/AtkinsonHyperlegible-Regular.ttf);
+	font-weight: normal;
 }
 
 @font-face {
-    font-family: Atkinson;
-    src: url(./fonts/AtkinsonHyperlegible-Bold.ttf);
-    font-weight: bold;
+	font-family: Atkinson;
+	src: url(./fonts/AtkinsonHyperlegible-Bold.ttf);
+	font-weight: bold;
 }

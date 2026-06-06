@@ -58,12 +58,12 @@ export function add_party() {
 		return;
 	}
 
-    // create unique id
+	// create unique id
 	const id = add_shortname.toLowerCase();
 	let num = 0;
 	while (S.cur_tml.parties[id+num]) num++;
 
-    // apply
+	// apply
 	const new_party = new Party(add_shortname, add_fullname, id+num, add_color, new Image());
 	S.cur_tml.parties[id+num] = new_party;
 	const new_frac = new Fraction(new_party, 1);

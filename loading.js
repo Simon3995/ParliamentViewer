@@ -68,8 +68,8 @@ export async function load_timeline(name) {
 
 // return a promise for loading an image
 function load_img(party, src) {
-    return new Promise((resolve) => {
-        if (!src) {
+	return new Promise((resolve) => {
+		if (!src) {
 			party.image_loaded = false;
 			resolve(party);
 			return;
@@ -78,14 +78,14 @@ function load_img(party, src) {
 			party.image_loaded = true;
 			build_party_sprite(party);
 			schedule_frame();
-            resolve(party);
-        };
-        party.image.onerror = () => {
-            party.image_loaded = false;  // mark as failed
-            resolve(party);  // still resolve, not reject
-        };
-        party.image.src = src;
-    });
+			resolve(party);
+		};
+		party.image.onerror = () => {
+			party.image_loaded = false;  // mark as failed
+			resolve(party);  // still resolve, not reject
+		};
+		party.image.src = src;
+	});
 }
 
 // generate circular seat icons for each party in the current timeline

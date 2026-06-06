@@ -80,7 +80,7 @@ $(document).on("change", "input", function(e) {
 			S.cur_plm.set_party_seats(e.target.name, value);
 		}
 
-        // apply changes
+		// apply changes
 		e.target.value = value;
 		update_table_footer();
 	}
@@ -88,13 +88,13 @@ $(document).on("change", "input", function(e) {
 
 // click a table row to highlight it
 $(document).on("click", "tbody tr", function(e) {
-    if ($(e.target).is("input")) return;
+	if ($(e.target).is("input")) return;
 
 	const table_id = e.currentTarget.parentElement.parentElement.parentElement.id;
 	
 	if (!S.dragging && table_id === "table") {
-        highlight(e.currentTarget.id);
-    }
+		highlight(e.currentTarget.id);
+	}
 });
 
 function show_sidebar() {
@@ -117,16 +117,16 @@ c.addEventListener("pointerdown", (e) => {
 
 	// for touch, update mouse coords before hit-test, then clear to avoid hovering
 	if (e.pointerType !== 'mouse') {
-        const rect = c.getBoundingClientRect();
-        const mx = (e.clientX - rect.left) * RES_MULT;
-        const my = (e.clientY - rect.top) * RES_MULT;
-        const transform = ctx.getTransform();
-        const inverse = transform.inverse();
-        const mouse_point = new DOMPoint(mx, my);
-        const mouse = mouse_point.matrixTransform(inverse);
-        S.mouse_x = mouse.x;
-        S.mouse_y = mouse.y;
-    }
+		const rect = c.getBoundingClientRect();
+		const mx = (e.clientX - rect.left) * RES_MULT;
+		const my = (e.clientY - rect.top) * RES_MULT;
+		const transform = ctx.getTransform();
+		const inverse = transform.inverse();
+		const mouse_point = new DOMPoint(mx, my);
+		const mouse = mouse_point.matrixTransform(inverse);
+		S.mouse_x = mouse.x;
+		S.mouse_y = mouse.y;
+	}
 });
 
 c.addEventListener("pointerup", (e) => {
@@ -207,14 +207,14 @@ document.addEventListener('keydown', (e) => {
 });
 
 document.getElementById("span_angle").onchange = function(e) {
-    set_span_angle(Number(e.target.value));
+	set_span_angle(Number(e.target.value));
 	S.cur_plm.distribute_seats();
 	transform_ctx();
 	
 }
 
 document.getElementById("inner_radius").onchange = function(e) {
-    set_inner_radius(Number(e.target.value));
+	set_inner_radius(Number(e.target.value));
 	S.cur_plm.distribute_seats();
 	transform_ctx();
 }
@@ -261,7 +261,7 @@ export function navigate(idx) {
 export function highlight(id) {
 	if (id == null) {
 		// remove all highlighted
-        S.cur_hlt = [];
+		S.cur_hlt = [];
 	} else if (is_highlighted(id)) {
 		const parties = [id];
 		if (S.sel_ancestors === true) {

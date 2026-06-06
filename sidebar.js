@@ -181,16 +181,16 @@ function table_edit_mode() {
 	
 	string += '<tr>';
 	string += '<th class="col_l">Party</th>';
-    string += '<th class="col_m">Full Name</th>';
-    string += '<th class="col_r">Seats</th>';
-    string += '</tr>';
+	string += '<th class="col_m">Full Name</th>';
+	string += '<th class="col_r">Seats</th>';
+	string += '</tr>';
 
 	string += `</thead><tbody>`;
 
-    // write all table HTML to a string
+	// write all table HTML to a string
 	for (let i in fracs) {
 		i = Number(i);
-        const frac = fracs[i];
+		const frac = fracs[i];
 
 		// find difference
 		let diff = 0;
