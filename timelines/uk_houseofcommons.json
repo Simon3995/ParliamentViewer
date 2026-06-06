@@ -126,32 +126,48 @@
   "ukip": {
    "name": "UKIP",
    "fullname": "UK Independence Party",
+   "fullname_rm": "",
    "fullname_en": "UK Independence Party",
-   "color": "#692e72"
+   "color": "#692e72",
+   "image": ""
   },
   "rp": {
    "name": "RP",
    "fullname": "Respect Party",
+   "fullname_rm": "",
    "fullname_en": "Respect Party",
-   "color": "#b40000"
+   "color": "#b40000",
+   "image": ""
   },
   "ichc": {
    "name": "ICHC",
    "fullname": "Independent Community & Health Concern",
+   "fullname_rm": "",
    "fullname_en": "Independent Community & Health Concern",
-   "color": "#241f31"
+   "color": "#241f31",
+   "image": ""
   },
   "upup": {
    "name": "UPUP",
    "fullname": "Ulster Popular Unionist Party",
+   "fullname_rm": "",
    "fullname_en": "Ulster Popular Unionist Party",
-   "color": "#0c2c71"
+   "color": "#0c2c71",
+   "image": ""
   },
   "sdplib": {
    "name": "SDP-Lib",
    "fullname": "SDP-Liberal Alliance",
+   "fullname_rm": "",
    "fullname_en": "SDP-Liberal Alliance",
-   "color": "#ffad00"
+   "color": "#ffad00",
+   "image": ""
+  },
+  "ukup": {
+   "name": "UKUP",
+   "fullname": "UK Unionist Party",
+   "fullname_en": "UK Unionist Party",
+   "color": "#813d9c"
   }
  },
  "parliaments": [
@@ -310,6 +326,10 @@
      "seats": 10
     },
     {
+     "id": "ind",
+     "seats": 1
+    },
+    {
      "id": "s",
      "seats": 1
     }
@@ -363,6 +383,14 @@
     {
      "id": "ukip",
      "seats": 1
+    },
+    {
+     "id": "ind",
+     "seats": 1
+    },
+    {
+     "id": "s",
+     "seats": 1
     }
    ],
    "source": "https://electionresults.parliament.uk/general-elections/2"
@@ -410,6 +438,14 @@
     {
      "id": "dup",
      "seats": 8
+    },
+    {
+     "id": "ind",
+     "seats": 1
+    },
+    {
+     "id": "s",
+     "seats": 1
     }
    ],
    "source": "https://electionresults.parliament.uk/general-elections/1"
@@ -553,6 +589,10 @@
      "seats": 165
     },
     {
+     "id": "ukup",
+     "seats": 1
+    },
+    {
      "id": "dup",
      "seats": 2
     },
@@ -609,10 +649,6 @@
     },
     {
      "id": "upup",
-     "seats": 1
-    },
-    {
-     "id": "s",
      "seats": 1
     }
    ],
