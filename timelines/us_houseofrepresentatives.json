@@ -1,7 +1,7 @@
 {
  "name": "us_houseofrepresentatives",
  "title": "House of Representatives",
- "country": "United States of America",
+ "country": "United States",
  "parties": {
   "dem": {
    "name": "Dem",

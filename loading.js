@@ -37,6 +37,8 @@ export async function load_timeline(name) {
 
 	set_query_param("t", name);
 
+	document.title = `${data.country} - ${data.title} | Parliament Viewer`;
+
 	// track image loading
 	const image_promises = [];
 	
