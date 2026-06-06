@@ -51,10 +51,9 @@ function insert_plm_everywhere(new_id) {
 
 // remove this parliament from every 'established' dropdown on parties.
 function remove_plm_everywhere(plm_id) {
-    const ref = plms[plm_id]?.name;
     for (const [id, p] of Object.entries(parties)) {
         if (!p) continue;
         const select = document.getElementById('established-' + id);
-        select?.querySelector(`[data-plm-ref="${ref}"]`)?.remove();
+        select?.querySelector(`[data-plm-ref="${plm_id}"]`)?.remove();
     }
 }

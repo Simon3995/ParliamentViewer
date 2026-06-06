@@ -31,6 +31,14 @@ function exportJSON() {
 function verify_data() {
     const errors = [];
 
+    // check general info
+    if (!document.getElementById('name').value)
+        errors.push("General info: Missing name");
+    if (!document.getElementById('title').value)
+        errors.push("General info: Missing title");
+    if (!document.getElementById('country').value)
+        errors.push("General info: Missing country");
+
     // check parties
     const seenPartyIDs = new Set();
     for (const [i, p] of parties.entries()) {
@@ -55,14 +63,14 @@ function verify_data() {
             else seenPlmNames.add(q.name);
         }
         if (q.date && !/^\d{4}-\d{2}-\d{2}$/.test(q.date))
-            errors.push(`Parliament "${q.name}": date "${q.date}" is not in YYYY-MM-DD format`);
+            errors.push(`${label}: date "${q.date}" is not in YYYY-MM-DD format`);
 
         // check fractions
         if (q.fractions.length == 0) {
-            errors.push(`parliament ${q.name} has no fractions`);
+            errors.push(`${label} has no fractions`);
         }
         for (const [fi, f] of (q.fractions || []).entries()) {
-            const flabel = `Parliament "${q.name}", fraction ${fi}`;
+            const flabel = `${label}, fraction ${fi}`;
             if (!f.id) errors.push(`${flabel}: no party assigned`);
             if (!Number.isInteger(f.seats) || f.seats < 0)
                 errors.push(`${flabel}: invalid seat count "${f.seats}"`);

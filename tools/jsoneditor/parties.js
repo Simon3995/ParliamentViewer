@@ -6,7 +6,7 @@ function add_party(data, suppressRefresh = false) {
     div_parties.insertAdjacentHTML('beforeend', `
         <div id="party-${id}" class="party">
             <div class="img-wrap"><img id="img-${id}" src="${esc(p.image || '')}" style="background-color:${p.color || '#ffffff'}"></div>
-            <div class="row"><label>Unique ID:</label><input type="text" value="${esc(p.id)}" onchange="rename_party(${id}, this.value)"></div>
+            <div class="row"><label>Unique ID:</label><input type="text" value="${esc(p.id)}" onchange="rename_party(${id}, this.value)" data-party-ref="${id}"></div>
             <div class="row"><label>Abbreviation:</label><input type="text" value="${esc(p.name)}" onchange="parties[${id}].name=this.value"></div>
             <div class="row"><label>Full Name (Local):</label><input type="text" value="${esc(p.fullname)}" onchange="parties[${id}].fullname=this.value"></div>
             <div class="row"><label>Full Name (Local, Romanised):</label><input type="text" placeholder="(optional)" value="${esc(p.fullname_rm)}" onchange="parties[${id}].fullname_rm=this.value"></div>
@@ -49,9 +49,19 @@ function add_party(data, suppressRefresh = false) {
 }
 
 function rename_party(id, newName) {
-    parties[id].id = newName;
+    // check for duplicate
+    for (const party of parties) {
+        if (party.id == newName) {
+            alert("WARNING: Duplicate ID entered!");
+            rename_party(id, newName + "_copy");
+            return;
+        }
+    }
+
     document.querySelectorAll(`[data-party-ref="${id}"] span`).forEach(s => s.textContent = newName);
     document.querySelectorAll(`option[data-party-ref="${id}"]`).forEach(o => o.textContent = newName);
+    document.querySelectorAll(`input[data-party-ref="${id}"]`).forEach(i => i.value = newName);
+    parties[id].id = newName;
 }
 
 // delete a party from the list entirely
@@ -95,16 +105,13 @@ function insert_party_everywhere(new_id) {
 
 // remove this party from every checkbox list and fraction dropdown.
 function remove_party_everywhere(party_id) {
-    const p = parties[party_id];
-    const ref = p?.id;
-
     // checkbox lists on every other party
     for (const id of Object.keys(parties)) {
         if (id == party_id) continue;
         for (const suffix of ['merged-list-', 'split-list-']) {
             const container = document.getElementById(suffix + id);
             if (!container) continue;
-            container.querySelector(`[data-party-ref="${ref}"]`)?.remove();
+            container.querySelector(`[data-party-ref="${party_id}"]`)?.remove();
             if (!container.children.length) container.innerHTML = 'No other parties';
         }
     }
@@ -114,7 +121,7 @@ function remove_party_everywhere(party_id) {
         if (!q) continue;
         for (let fi = 0; fi < q.fractions.length; fi++) {
             const select = document.querySelector(`#seat-${plm_id}-${fi} select`);
-            select?.querySelector(`[data-party-ref="${ref}"]`)?.remove();
+            select?.querySelector(`[data-party-ref="${party_id}"]`)?.remove();
         }
     }
 }
