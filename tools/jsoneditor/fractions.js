@@ -9,7 +9,10 @@ function add_fraction(plm_id, data) {
     el.id = `seat-${plm_id}-${fraction_id}`;
 
     const select = document.createElement('select');
-    select.onchange = () => { plms[plm_id].fractions[fraction_id].id = select.value || null; };
+    select.onchange = () => {
+        const num = Number(select.value);
+        plms[plm_id].fractions[fraction_id].id = Number.isInteger(num) ? num : null;
+    }
     select.innerHTML = '<option value="">-- NONE --</option>';
     for (const [i, p] of parties.entries()) {
         if (!p) continue;

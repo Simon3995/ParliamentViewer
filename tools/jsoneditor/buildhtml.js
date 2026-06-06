@@ -33,7 +33,6 @@ function build_checkbox_list(container_id, party_id, field, selected_ids) {
     if (!container) return;
     container.innerHTML = '';
     for (const [i, p] of Object.entries(parties)) {
-        console.log("p", p, "i", i, "party_id", party_id);
         if (!p || i == party_id) continue;
         const label = make_party_checkbox(party_id, field, p, i);
         label.querySelector('input').checked = selected_ids.includes(Number(i));

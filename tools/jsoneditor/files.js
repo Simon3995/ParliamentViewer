@@ -71,7 +71,7 @@ function verify_data() {
         }
         for (const [fi, f] of (q.fractions || []).entries()) {
             const flabel = `${label}, fraction ${fi}`;
-            if (!f.id) errors.push(`${flabel}: no party assigned`);
+            if (!Number.isInteger(f.id)) errors.push(`${flabel}: no party assigned`);
             if (!Number.isInteger(f.seats) || f.seats < 0)
                 errors.push(`${flabel}: invalid seat count "${f.seats}"`);
         }
@@ -79,7 +79,7 @@ function verify_data() {
         // check for duplicate parties within one parliament
         const seenFractionIDs = new Set();
         for (const f of (q.fractions || [])) {
-            if (!f.id) continue;
+            if (!Number.isInteger(f.id)) continue;
             if (seenFractionIDs.has(f.id)) errors.push(`Parliament "${q.name}": party "${parties[f.id]?.id}" appears more than once`);
             else seenFractionIDs.add(f.id);
         }
