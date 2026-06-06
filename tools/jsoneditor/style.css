@@ -2,6 +2,7 @@
     font-family: monospace;
     font-size: 16px;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -31,6 +32,19 @@ label {
 
 .indent {
     margin-left: 120px;
+}
+
+.sticky {
+    position: sticky;
+    top: 0px;
+    background-color: #105c7d;
+    z-index: 1;
+    width: 100%;
+    padding: 15px 15px;
+}
+
+.row textarea {
+    vertical-align: middle;
 }
 
 input[type=text] {

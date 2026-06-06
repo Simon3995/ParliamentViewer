@@ -5,10 +5,12 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        Import JSON: <input type="file" id="import" autocomplete="off"><br>
-        <button onclick="exportJSON()">EXPORT JSON</button>
-        
-        <br><br>
+        <div class="sticky">
+            <button onclick="exportJSON()">EXPORT JSON</button>
+             --- Import JSON: <input type="file" id="import" autocomplete="off">
+        </div>
+
+        <br>
 
         <h1>GENERAL INFO</h1>
         <p class="row"><label>Name: </label><input placeholder="e.g. nl_tweedekamer" id="name" autocomplete="off"></p>
@@ -29,3 +31,8 @@
 </html>
 
 <script src="./main.js"></script>
+<script src="./files.js"></script>
+<script src="./fractions.js"></script>
+<script src="./parties.js"></script>
+<script src="./parliaments.js"></script>
+<script src="./buildhtml.js"></script>
