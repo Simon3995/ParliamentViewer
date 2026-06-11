@@ -46,7 +46,7 @@
    "fullname_en": "GreenLeft",
    "color": "#00cc00",
    "image": "/logos/nl/GL.png",
-   "established": "Tweede Kamerverkiezingen 1989",
+   "established": null,
    "founded_by": [
     "cpn",
     "psp",
@@ -61,7 +61,7 @@
    "fullname_en": "GreenLeft / Labour Party",
    "color": "#01af40",
    "image": "/logos/nl/GLPvdA.png",
-   "established": "Tweede Kamerverkiezingen 2023",
+   "established": null,
    "founded_by": [
     "pvda",
     "gl"
@@ -74,7 +74,7 @@
    "fullname_en": "Progressive Netherlands",
    "color": "#e82323",
    "image": "/logos/nl/PRO.png",
-   "established": "Current Situation",
+   "established": null,
    "founded_by": [
     "glpvda"
    ]
@@ -86,7 +86,7 @@
    "fullname_en": "Labour Party",
    "color": "#ff0000",
    "image": "/logos/nl/PvdA.png",
-   "established": "Tweede Kamerverkiezingen 1946",
+   "established": null,
    "founded_by": [
     "sdap",
     "vdb",
@@ -100,7 +100,7 @@
    "fullname_en": "DENK (THINK)",
    "color": "#38bfc2",
    "image": "/logos/nl/DENK.png",
-   "established": "Tweede Kamerverkiezingen 2017",
+   "established": null,
    "split_from": [
     "pvda"
    ]
@@ -128,7 +128,7 @@
    "fullname_en": "Christian Union",
    "color": "#8fd1eb",
    "image": "/logos/nl/CU.png",
-   "established": "Tweede Kamerverkiezingen 2002",
+   "established": null,
    "founded_by": [
     "rpf",
     "gpv"
@@ -149,7 +149,7 @@
    "fullname_en": "Christian-Democratic Appeal",
    "color": "#007c5e",
    "image": "/logos/nl/CDA.png",
-   "established": "Tweede Kamerverkiezingen 1977",
+   "established": null,
    "founded_by": [
     "kvp",
     "chu",
@@ -163,7 +163,7 @@
    "fullname_en": "New Social Contract",
    "color": "#181d57",
    "image": "/logos/nl/NSC.png",
-   "established": "Tweede Kamerverkiezingen 2023",
+   "established": null,
    "split_from": [
     "cda"
    ]
@@ -183,7 +183,7 @@
    "fullname_en": "People's Party for Freedom and Democracy",
    "color": "#21276a",
    "image": "/logos/nl/VVD.png",
-   "established": "Tweede Kamerverkiezingen 1948",
+   "established": null,
    "founded_by": [
     "pvdv"
    ],
@@ -206,7 +206,7 @@
    "fullname_en": "Right Answer 2021",
    "color": "#21276a",
    "image": "/logos/nl/JA21.png",
-   "established": "Tweede Kamerverkiezingen 2021",
+   "established": null,
    "split_from": [
     "fvd"
    ]
@@ -226,7 +226,7 @@
    "fullname_en": "Party for Freedom",
    "color": "#82b2ff",
    "image": "/logos/nl/PVV.png",
-   "established": "Tweede Kamerverkiezingen 2006",
+   "established": null,
    "split_from": [
     "vvd"
    ]
@@ -238,7 +238,7 @@
    "fullname_en": "Markuszower Group",
    "color": "#169793ff",
    "image": "",
-   "established": "Current Situation",
+   "established": null,
    "split_from": [
     "pvv"
    ]
@@ -258,7 +258,7 @@
    "fullname_en": "Pim Fortuyn List",
    "color": "rgb(18, 74, 158)",
    "image": "/logos/nl/LPF.png",
-   "established": "Tweede Kamerverkiezingen 2002",
+   "established": null,
    "split_from": [
     "ln"
    ]
@@ -286,7 +286,7 @@
    "fullname_en": "Reformed Political League",
    "color": "#ff7b00",
    "image": "/logos/nl/GPV.png",
-   "established": "Tweede Kamerverkiezingen 1952",
+   "established": null,
    "split_from": [
     "arp"
    ]
@@ -314,7 +314,7 @@
    "fullname_en": "Centre Democrats",
    "color": "#c9dfff",
    "image": "/logos/nl/CD.png",
-   "established": "Tweede Kamerverkiezingen 1986",
+   "established": null,
    "split_from": [
     "cp"
    ]
@@ -342,7 +342,7 @@
    "fullname_en": "Political Party of Radicals",
    "color": "#e92f7cff",
    "image": "/logos/nl/PPR.png",
-   "established": "Tweede Kamerverkiezingen 1971",
+   "established": null,
    "split_from": [
     "kvp"
    ]
@@ -354,7 +354,7 @@
    "fullname_en": "Evangelical People's Party",
    "color": "rgb(240, 176, 0)",
    "image": "",
-   "established": "Tweede Kamerverkiezingen 1982",
+   "established": null,
    "founded_by": [],
    "split_from": [
     "cda",
@@ -368,7 +368,7 @@
    "fullname_en": "Communist Party of the Netherlands",
    "color": "#ff0000",
    "image": "/logos/nl/CPN.png",
-   "established": "Tweede Kamerverkiezingen 1922",
+   "established": null,
    "founded_by": [
     "sdp"
    ]
@@ -396,7 +396,7 @@
    "fullname_en": "Democratic Socialists '70",
    "color": "#d40000ff",
    "image": "/logos/nl/DS70.png",
-   "established": "Tweede Kamerverkiezingen 1971",
+   "established": null,
    "split_from": [
     "pvda"
    ]
@@ -408,7 +408,7 @@
    "fullname_en": "Catholic People's Party",
    "color": "#362511ff",
    "image": "/logos/nl/KVP.png",
-   "established": "Tweede Kamerverkiezingen 1946",
+   "established": null,
    "founded_by": [
     "rksp"
    ]
@@ -460,7 +460,7 @@
    "fullname_en": "Freedom Party",
    "color": "#092447ff",
    "image": "/logos/nl/PvdV.png",
-   "established": "Tweede Kamerverkiezingen 1946",
+   "established": null,
    "founded_by": [
     "vb"
    ]
@@ -472,7 +472,7 @@
    "fullname_en": "Roman Catholic State Party",
    "color": "rgb(187, 90, 0)",
    "image": "",
-   "established": "Tweede Kamerverkiezingen 1929",
+   "established": null,
    "founded_by": [
     "ab"
    ]
@@ -508,7 +508,7 @@
    "fullname_en": "Freedom League",
    "color": "#0d6486ff",
    "image": "",
-   "established": "Tweede Kamerverkiezingen 1922",
+   "established": null,
    "founded_by": [
     "lu",
     "bvl",
@@ -540,7 +540,7 @@
    "fullname_en": "National Farmers', Horticulturists' and Middle Class Party",
    "color": "#79aa4aff",
    "image": "",
-   "established": "Tweede Kamerverkiezingen 1933",
+   "established": null,
    "founded_by": [
     "pb"
    ]
@@ -560,7 +560,7 @@
    "fullname_en": "Roman Catholic People's Party",
    "color": "#802008ff",
    "image": "",
-   "established": "Tweede Kamerverkiezingen 1933",
+   "established": null,
    "split_from": [
     "ab"
    ]
@@ -588,7 +588,7 @@
    "fullname_en": "Member Keijzer",
    "color": "#378747ff",
    "image": "",
-   "established": "Current Situation",
+   "established": null,
    "split_from": [
     "bbb"
    ]
@@ -600,7 +600,7 @@
    "fullname_en": "Middle Party for City and Country",
    "color": "#000000FF",
    "image": "",
-   "established": "Tweede Kamerverkiezingen 1929",
+   "established": null,
    "founded_by": [
     "mp"
    ],
@@ -707,8 +707,8 @@
  },
  "parliaments": [
   {
-   "name": "Current Situation",
-   "date": "",
+   "name": "Current Situation (11 June 2026)",
+   "date": "2026-06-11",
    "source": "https://www.tweedekamer.nl/kamerleden_en_commissies/fracties",
    "fractions": [
     {
@@ -720,7 +720,7 @@
      "seats": 3
     },
     {
-     "id": "glpvda",
+     "id": "pro",
      "seats": 20
     },
     {
