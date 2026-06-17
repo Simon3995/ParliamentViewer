@@ -9,7 +9,10 @@
    "fullname_rm": "",
    "fullname_en": "New-Flemish Alliance",
    "color": "#ffd000",
-   "image": "/logos/be/nva.png"
+   "image": "/logos/be/nva.png",
+   "split_from": [
+    "cdvnva"
+   ]
   },
   "vb": {
    "name": "VB",
@@ -17,7 +20,10 @@
    "fullname_rm": "",
    "fullname_en": "Flemish Interest",
    "color": "#ffe600",
-   "image": "/logos/be/vb.png"
+   "image": "/logos/be/vb.png",
+   "founded_by": [
+    "vblok"
+   ]
   },
   "mr": {
    "name": "MR",
@@ -49,7 +55,10 @@
    "fullname_rm": "",
    "fullname_en": "Forward",
    "color": "#ff0000",
-   "image": "/logos/be/vooruit.png"
+   "image": "/logos/be/vooruit.png",
+   "founded_by": [
+    "spa"
+   ]
   },
   "cdv": {
    "name": "CD&V",
@@ -57,7 +66,13 @@
    "fullname_rm": "",
    "fullname_en": "Christian-Democratic and Flemish",
    "color": "#ff8000",
-   "image": "/logos/be/cdv.png"
+   "image": "/logos/be/cdv.png",
+   "founded_by": [
+    "cvp"
+   ],
+   "split_from": [
+    "cdvnva"
+   ]
   },
   "le": {
    "name": "LE",
@@ -65,15 +80,21 @@
    "fullname_rm": "",
    "fullname_en": "The Committed Ones",
    "color": "#17cfba",
-   "image": "/logos/be/le.png"
+   "image": "/logos/be/le.png",
+   "founded_by": [
+    "cdh"
+   ]
   },
-  "anders": {
-   "name": "Anders",
-   "fullname": "Anders",
+  "openvld": {
+   "name": "Open Vld",
+   "fullname": "Open Vlaamse Liberalen en Democraten",
    "fullname_rm": "",
-   "fullname_en": "Different",
-   "color": "#7100FF",
-   "image": "/logos/be/anders.png"
+   "fullname_en": "Open Flemish Liberals and Democrats",
+   "color": "#0080ff",
+   "image": "",
+   "founded_by": [
+    "vld"
+   ]
   },
   "groen": {
    "name": "Groen",
@@ -81,7 +102,10 @@
    "fullname_rm": "",
    "fullname_en": "Green",
    "color": "#43b143",
-   "image": "/logos/be/groen.png"
+   "image": "/logos/be/groen.png",
+   "founded_by": [
+    "agalev"
+   ]
   },
   "ecolo": {
    "name": "Ecolo",
@@ -97,7 +121,120 @@
    "fullname_rm": "",
    "fullname_en": "Independ Federalist Democrats",
    "color": "#ff517c",
-   "image": "/logos/be/defi.png"
+   "image": "/logos/be/defi.png",
+   "founded_by": [
+    "fdf"
+   ]
+  },
+  "spa": {
+   "name": "sp.a",
+   "fullname": "Socialistische Partij Anders",
+   "fullname_en": "Socialist Party Different",
+   "color": "#e23636",
+   "founded_by": [
+    "sp"
+   ]
+  },
+  "cdh": {
+   "name": "cdH",
+   "fullname": "Centre Démocrate Humaniste",
+   "fullname_en": "Humanist Democratic Centre",
+   "color": "#ff8000",
+   "founded_by": [
+    "psc"
+   ]
+  },
+  "fdf": {
+   "name": "FDF",
+   "fullname": "Fédéralistes Démocrates Francophones",
+   "fullname_en": "Francophone Democratic Federalists",
+   "color": "#ff517c"
+  },
+  "pp": {
+   "name": "PP",
+   "fullname": "Parti Populaire",
+   "fullname_en": "People's Party",
+   "color": "#ff8000"
+  },
+  "ld": {
+   "name": "LD",
+   "split_from": [
+    "openvld"
+   ],
+   "fullname": "Lijst Dedecker",
+   "fullname_en": "List Dedecker",
+   "color": "#4fe0ff",
+   "founded_by": []
+  },
+  "cdvnva": {
+   "name": "CD&V N-VA",
+   "fullname": "Christen-Democratisch en Vlaams / Nieuw-Vlaamse Alliantie",
+   "fullname_en": "Christian-Democratic and Flemish / New-Flemish Alliance",
+   "color": "#ff8000",
+   "founded_by": [
+    "nva",
+    "cdv"
+   ]
+  },
+  "spaspirit": {
+   "name": "sp.a-Spirit",
+   "fullname": "Socialistische Partij Anders-Spirit",
+   "fullname_en": "Socialist Party Different-Spirit",
+   "color": "#7134a3"
+  },
+  "fn": {
+   "name": "FN",
+   "fullname": "Front National",
+   "fullname_en": "National Front",
+   "color": "#970000"
+  },
+  "vld": {
+   "name": "VLD",
+   "fullname": "Vlaamse Liberalen en Democraten",
+   "fullname_en": "Flemish Liberals and Democrats",
+   "color": "#0080ff"
+  },
+  "vblok": {
+   "name": "VB",
+   "fullname": "VLAAMS BLOK",
+   "fullname_en": "FLEMISH BLOCK",
+   "color": "#303030"
+  },
+  "cvp": {
+   "name": "CVP",
+   "fullname": "Christelijke Volkspartij",
+   "fullname_en": "Christian People's Party",
+   "color": "#ff8000"
+  },
+  "prlfdf": {
+   "name": "PRL-FDF",
+   "fullname": "Parti Réformateur Libéral-Front Démocratique des Francophones",
+   "fullname_en": "Liberal Reformist Party-Francophone Democratic Front",
+   "color": "#0067ce"
+  },
+  "sp": {
+   "name": "SP",
+   "fullname": "Socialistische Partij",
+   "fullname_en": "Socialist Party",
+   "color": "#e42c2c"
+  },
+  "agalev": {
+   "name": "AGALEV",
+   "fullname": "Anders Gaan Leven",
+   "fullname_en": "Live Differently",
+   "color": "#138a73"
+  },
+  "psc": {
+   "name": "PSC",
+   "fullname": "Party Social Chrétien",
+   "fullname_en": "Christian Social Party",
+   "color": "#ff8000"
+  },
+  "vuid": {
+   "name": "VU-ID",
+   "fullname": "Volksunie / Ideeën 21e Eeuw",
+   "fullname_en": "People's Union / 21st Century Ideas",
+   "color": "#ffb70f"
   }
  },
  "parliaments": [
@@ -139,7 +276,7 @@
      "seats": 11
     },
     {
-     "id": "anders",
+     "id": "openvld",
      "seats": 7
     },
     {
@@ -155,6 +292,324 @@
      "seats": 20
     }
    ]
+  },
+  {
+   "name": "2019 Federal Election",
+   "date": "2019-05-26",
+   "fractions": [
+    {
+     "id": "pvdaptb",
+     "seats": 12
+    },
+    {
+     "id": "spa",
+     "seats": 9
+    },
+    {
+     "id": "ps",
+     "seats": 20
+    },
+    {
+     "id": "ecolo",
+     "seats": 13
+    },
+    {
+     "id": "groen",
+     "seats": 8
+    },
+    {
+     "id": "defi",
+     "seats": 2
+    },
+    {
+     "id": "cdh",
+     "seats": 5
+    },
+    {
+     "id": "cdv",
+     "seats": 12
+    },
+    {
+     "id": "openvld",
+     "seats": 12
+    },
+    {
+     "id": "mr",
+     "seats": 14
+    },
+    {
+     "id": "nva",
+     "seats": 25
+    },
+    {
+     "id": "vb",
+     "seats": 18
+    }
+   ],
+   "source": "https://verkiezingsresultaten.belgium.be/nl/election-results/kamer-van-volksvertegenwoordigers/2019/rijk/223373"
+  },
+  {
+   "name": "2014 Federal Election",
+   "date": "2014-05-25",
+   "fractions": [
+    {
+     "id": "pvdaptb",
+     "seats": 2
+    },
+    {
+     "id": "spa",
+     "seats": 13
+    },
+    {
+     "id": "ps",
+     "seats": 23
+    },
+    {
+     "id": "ecolo",
+     "seats": 6
+    },
+    {
+     "id": "groen",
+     "seats": 6
+    },
+    {
+     "id": "fdf",
+     "seats": 2
+    },
+    {
+     "id": "cdh",
+     "seats": 9
+    },
+    {
+     "id": "cdv",
+     "seats": 18
+    },
+    {
+     "id": "openvld",
+     "seats": 14
+    },
+    {
+     "id": "mr",
+     "seats": 20
+    },
+    {
+     "id": "pp",
+     "seats": 1
+    },
+    {
+     "id": "nva",
+     "seats": 33
+    },
+    {
+     "id": "vb",
+     "seats": 3
+    }
+   ],
+   "source": "https://verkiezingsresultaten.belgium.be/nl/election-results/kamer-van-volksvertegenwoordigers/2014/rijk/222892"
+  },
+  {
+   "name": "2010 Federal Election",
+   "date": "2010-06-13",
+   "fractions": [
+    {
+     "id": "spa",
+     "seats": 13
+    },
+    {
+     "id": "ps",
+     "seats": 26
+    },
+    {
+     "id": "ecolo",
+     "seats": 8
+    },
+    {
+     "id": "groen",
+     "seats": 5
+    },
+    {
+     "id": "cdh",
+     "seats": 9
+    },
+    {
+     "id": "cdv",
+     "seats": 17
+    },
+    {
+     "id": "openvld",
+     "seats": 13
+    },
+    {
+     "id": "mr",
+     "seats": 18
+    },
+    {
+     "id": "ld",
+     "seats": 1
+    },
+    {
+     "id": "pp",
+     "seats": 1
+    },
+    {
+     "id": "nva",
+     "seats": 27
+    },
+    {
+     "id": "vb",
+     "seats": 12
+    }
+   ],
+   "source": "https://verkiezingsresultaten.belgium.be/nl/election-results/kamer-van-volksvertegenwoordigers/2010/rijk/222182"
+  },
+  {
+   "name": "2007 Federal Election",
+   "date": "2007-06-10",
+   "fractions": [
+    {
+     "id": "spaspirit",
+     "seats": 14
+    },
+    {
+     "id": "ps",
+     "seats": 20
+    },
+    {
+     "id": "ecolo",
+     "seats": 8
+    },
+    {
+     "id": "groen",
+     "seats": 4
+    },
+    {
+     "id": "cdh",
+     "seats": 10
+    },
+    {
+     "id": "cdvnva",
+     "seats": 30
+    },
+    {
+     "id": "openvld",
+     "seats": 18
+    },
+    {
+     "id": "mr",
+     "seats": 23
+    },
+    {
+     "id": "ld",
+     "seats": 5
+    },
+    {
+     "id": "vb",
+     "seats": 17
+    },
+    {
+     "id": "fn",
+     "seats": 1
+    }
+   ],
+   "source": "https://verkiezingsresultaten.belgium.be/nl/election-results/kamer-van-volksvertegenwoordigers/2007/rijk/221475"
+  },
+  {
+   "name": "2003 Federal Election",
+   "date": "2003-05-18",
+   "fractions": [
+    {
+     "id": "spaspirit",
+     "seats": 23
+    },
+    {
+     "id": "ps",
+     "seats": 25
+    },
+    {
+     "id": "ecolo",
+     "seats": 4
+    },
+    {
+     "id": "cdh",
+     "seats": 8
+    },
+    {
+     "id": "cdv",
+     "seats": 21
+    },
+    {
+     "id": "vld",
+     "seats": 25
+    },
+    {
+     "id": "mr",
+     "seats": 24
+    },
+    {
+     "id": "nva",
+     "seats": 1
+    },
+    {
+     "id": "fn",
+     "seats": 1
+    },
+    {
+     "id": "vblok",
+     "seats": 18
+    }
+   ],
+   "source": "https://verkiezingsresultaten.belgium.be/nl/election-results/kamer-van-volksvertegenwoordigers/2003/rijk/166476"
+  },
+  {
+   "name": "1999 Federal Election",
+   "date": "1999-06-13",
+   "fractions": [
+    {
+     "id": "sp",
+     "seats": 14
+    },
+    {
+     "id": "ps",
+     "seats": 19
+    },
+    {
+     "id": "ecolo",
+     "seats": 11
+    },
+    {
+     "id": "agalev",
+     "seats": 9
+    },
+    {
+     "id": "psc",
+     "seats": 10
+    },
+    {
+     "id": "cvp",
+     "seats": 22
+    },
+    {
+     "id": "vuid",
+     "seats": 8
+    },
+    {
+     "id": "vld",
+     "seats": 23
+    },
+    {
+     "id": "prlfdf",
+     "seats": 18
+    },
+    {
+     "id": "fn",
+     "seats": 1
+    },
+    {
+     "id": "vblok",
+     "seats": 15
+    }
+   ],
+   "source": "https://verkiezingsresultaten.belgium.be/nl/election-results/kamer-van-volksvertegenwoordigers/1999/rijk/155423"
   }
  ]
 }
