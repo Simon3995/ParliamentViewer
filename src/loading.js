@@ -46,7 +46,7 @@ export async function loadTimeline(name) {
 	for (const partyId in data.parties) {
 		const pdata = data.parties[partyId];
 		const party = new Party(pdata.name, pdata.fullname, partyId, pdata.color, new Image(), pdata.established, pdata.foundedBy, pdata.splitFrom);
-		image_promises.push(load_img(party, pdata.image));
+		image_promises.push(loadImage(party, pdata.image));
 		S.currentTimeline.parties[partyId] = party;
 	}
 
@@ -67,21 +67,21 @@ export async function loadTimeline(name) {
 }
 
 // return a promise for loading an image
-function load_img(party, src) {
+function loadImage(party, src) {
 	return new Promise((resolve) => {
 		if (!src) {
-			party.image_loaded = false;
+			party.imageLoaded = false;
 			resolve(party);
 			return;
 		}
 		party.image.onload = () => {
-			party.image_loaded = true;
-			build_party_sprite(party);
+			party.imageLoaded = true;
+			buildPartySprite(party);
 			scheduleFrame();
 			resolve(party);
 		};
 		party.image.onerror = () => {
-			party.image_loaded = false;  // mark as failed
+			party.imageLoaded = false;  // mark as failed
 			resolve(party);  // still resolve, not reject
 		};
 		party.image.src = src;
@@ -94,16 +94,16 @@ export function generatePartyImgs() {
 	const s = SPRITE_SIZE;
 	for (const name in S.currentTimeline.parties) {
 		const party = S.currentTimeline.parties[name];
-		if (!party.image_loaded) {
-			build_base_img(party);
+		if (!party.imageLoaded) {
+			buildBaseImage(party);
 		} else {
-			build_party_sprite(party);
+			buildPartySprite(party);
 		}
 	}
 }
 
 // generates a base sprite for a party with no logo loaded
-function build_base_img(party) {
+function buildBaseImage(party) {
 	const sprite = document.createElement("canvas");
 	const sctx = sprite.getContext("2d");
 	sprite.width = sprite.height = SPRITE_SIZE;
@@ -119,7 +119,7 @@ function build_base_img(party) {
 }
 
 // produces the sprite of a party logo and overwrites the party's base sprite
-function build_party_sprite(party) {
+function buildPartySprite(party) {
 	const sprite = document.createElement("canvas");
 	const sctx = sprite.getContext("2d");
 	sprite.width = sprite.height = SPRITE_SIZE;

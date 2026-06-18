@@ -90,9 +90,9 @@ $(document).on("change", "input", function(e) {
 $(document).on("click", "tbody tr", function(e) {
 	if ($(e.target).is("input")) return;
 
-	const table_id = e.currentTarget.parentElement.parentElement.parentElement.id;
+	const tableId = e.currentTarget.parentElement.parentElement.parentElement.id;
 	
-	if (!S.dragging && table_id === "table") {
+	if (!S.dragging && tableId === "table") {
 		highlight(e.currentTarget.id);
 	}
 });
