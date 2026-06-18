@@ -1,0 +1,366 @@
+{
+ "name": "ca_houseofrepresentatives",
+ "title": "House of Representatives",
+ "country": "Canada",
+ "parties": {
+  "lpc": {
+   "name": "LPC",
+   "fullname": "Liberal Party of Canada / Parti libéral du Canada",
+   "fullname_rm": "",
+   "fullname_en": "Liberal Party of Canada",
+   "color": "#eb1010",
+   "image": "/logos/ca/lpc.png"
+  },
+  "cpc": {
+   "name": "CPC",
+   "fullname": "Conservative Party of Canada / Parti conservateur du Canada",
+   "fullname_rm": "",
+   "fullname_en": "Conservative Party of Canada",
+   "color": "#3a619a",
+   "image": "/logos/ca/cpc.png",
+   "founded_by": [
+    "pc",
+    "ca"
+   ]
+  },
+  "bq": {
+   "name": "BQ",
+   "fullname": "Bloc Québécois",
+   "fullname_rm": "",
+   "fullname_en": "Quebecker Bloc",
+   "color": "#1d4383",
+   "image": "/logos/ca/bq.png"
+  },
+  "ndp": {
+   "name": "NDP",
+   "fullname": "New Democratic Party / Nouveau Parti démocratique",
+   "fullname_rm": "",
+   "fullname_en": "New Democratic Party",
+   "color": "#ff8000",
+   "image": "/logos/ca/ndp.png"
+  },
+  "green": {
+   "name": "Green",
+   "fullname": "Green Party of Canada / Parti vert du Canada",
+   "fullname_rm": "",
+   "fullname_en": "Green Party of Canada",
+   "color": "#2dac40",
+   "image": "/logos/ca/green.png"
+  },
+  "ind": {
+   "name": "Ind",
+   "fullname": "Independent",
+   "fullname_rm": "",
+   "fullname_en": "Independent",
+   "color": "#808080",
+   "image": ""
+  },
+  "pc": {
+   "name": "PC",
+   "fullname": "Progressive Conservative Party of Canada / Parti Progressiste-conservateur du Canada",
+   "fullname_rm": "",
+   "fullname_en": "Progressive Conservative Party of Canada",
+   "color": "#9f9fff",
+   "image": "/logos/ca/pc.png"
+  },
+  "ca": {
+   "name": "CA",
+   "fullname": "Canadian Alliance / Alliance Canadienne",
+   "fullname_rm": "",
+   "fullname_en": "Canadian Allianc",
+   "color": "#4d9999",
+   "image": "/logos/ca/ca.png",
+   "founded_by": [
+    "reform"
+   ]
+  },
+  "reform": {
+   "name": "Reform",
+   "fullname": "Reform Party of Canada / Parti Réformiste du Canada",
+   "fullname_rm": "",
+   "fullname_en": "Reform Party of Canada",
+   "color": "#15c86f",
+   "image": "/logos/ca/reform.png"
+  }
+ },
+ "parliaments": [
+  {
+   "name": "2025 Federal Election",
+   "date": "2025-04-28",
+   "fractions": [
+    {
+     "id": "ndp",
+     "seats": 7
+    },
+    {
+     "id": "green",
+     "seats": 1
+    },
+    {
+     "id": "bq",
+     "seats": 22
+    },
+    {
+     "id": "lpc",
+     "seats": 169
+    },
+    {
+     "id": "cpc",
+     "seats": 144
+    }
+   ],
+   "source": "https://www.sfu.ca/~aheard/elections/1867-present.html"
+  },
+  {
+   "name": "2021 Federal Election",
+   "date": "2021-09-20",
+   "fractions": [
+    {
+     "id": "ndp",
+     "seats": 25
+    },
+    {
+     "id": "green",
+     "seats": 2
+    },
+    {
+     "id": "bq",
+     "seats": 32
+    },
+    {
+     "id": "lpc",
+     "seats": 160
+    },
+    {
+     "id": "cpc",
+     "seats": 119
+    }
+   ],
+   "source": "https://www.sfu.ca/~aheard/elections/1867-present.html"
+  },
+  {
+   "name": "2019 Federal Election",
+   "date": "2019-10-21",
+   "fractions": [
+    {
+     "id": "ndp",
+     "seats": 24
+    },
+    {
+     "id": "green",
+     "seats": 3
+    },
+    {
+     "id": "bq",
+     "seats": 32
+    },
+    {
+     "id": "lpc",
+     "seats": 157
+    },
+    {
+     "id": "cpc",
+     "seats": 121
+    },
+    {
+     "id": "ind",
+     "seats": 1
+    }
+   ],
+   "source": "https://www.sfu.ca/~aheard/elections/1867-present.html"
+  },
+  {
+   "name": "2015 Federal Election",
+   "date": "2015-10-19",
+   "fractions": [
+    {
+     "id": "ndp",
+     "seats": 44
+    },
+    {
+     "id": "green",
+     "seats": 1
+    },
+    {
+     "id": "bq",
+     "seats": 10
+    },
+    {
+     "id": "lpc",
+     "seats": 184
+    },
+    {
+     "id": "cpc",
+     "seats": 99
+    }
+   ],
+   "source": "https://www.sfu.ca/~aheard/elections/1867-present.html"
+  },
+  {
+   "name": "2011 Federal Election",
+   "date": "2011-05-02",
+   "fractions": [
+    {
+     "id": "ndp",
+     "seats": 103
+    },
+    {
+     "id": "green",
+     "seats": 1
+    },
+    {
+     "id": "bq",
+     "seats": 4
+    },
+    {
+     "id": "lpc",
+     "seats": 34
+    },
+    {
+     "id": "cpc",
+     "seats": 166
+    }
+   ],
+   "source": "https://www.sfu.ca/~aheard/elections/1867-present.html"
+  },
+  {
+   "name": "2008 Federal Election",
+   "date": "2008-10-14",
+   "fractions": [
+    {
+     "id": "ndp",
+     "seats": 37
+    },
+    {
+     "id": "bq",
+     "seats": 49
+    },
+    {
+     "id": "lpc",
+     "seats": 77
+    },
+    {
+     "id": "cpc",
+     "seats": 143
+    },
+    {
+     "id": "ind",
+     "seats": 2
+    }
+   ],
+   "source": "https://www.sfu.ca/~aheard/elections/1867-present.html"
+  },
+  {
+   "name": "2006 Federal Election",
+   "date": "2006-01-23",
+   "fractions": [
+    {
+     "id": "ndp",
+     "seats": 29
+    },
+    {
+     "id": "bq",
+     "seats": 51
+    },
+    {
+     "id": "lpc",
+     "seats": 103
+    },
+    {
+     "id": "cpc",
+     "seats": 124
+    },
+    {
+     "id": "ind",
+     "seats": 1
+    }
+   ],
+   "source": "https://www.sfu.ca/~aheard/elections/1867-present.html"
+  },
+  {
+   "name": "2004 Federal Election",
+   "date": "2004-06-28",
+   "fractions": [
+    {
+     "id": "ndp",
+     "seats": 19
+    },
+    {
+     "id": "bq",
+     "seats": 54
+    },
+    {
+     "id": "lpc",
+     "seats": 135
+    },
+    {
+     "id": "cpc",
+     "seats": 99
+    },
+    {
+     "id": "ind",
+     "seats": 1
+    }
+   ],
+   "source": "https://www.sfu.ca/~aheard/elections/1867-present.html"
+  },
+  {
+   "name": "2000 Federal Election",
+   "date": "2000-11-27",
+   "fractions": [
+    {
+     "id": "ndp",
+     "seats": 13
+    },
+    {
+     "id": "bq",
+     "seats": 38
+    },
+    {
+     "id": "lpc",
+     "seats": 172
+    },
+    {
+     "id": "pc",
+     "seats": 12
+    },
+    {
+     "id": "ca",
+     "seats": 66
+    }
+   ],
+   "source": "https://www.sfu.ca/~aheard/elections/1867-present.html"
+  },
+  {
+   "name": "1997 Federal Election",
+   "date": "1997-06-02",
+   "fractions": [
+    {
+     "id": "ndp",
+     "seats": 21
+    },
+    {
+     "id": "bq",
+     "seats": 44
+    },
+    {
+     "id": "lpc",
+     "seats": 155
+    },
+    {
+     "id": "pc",
+     "seats": 20
+    },
+    {
+     "id": "reform",
+     "seats": 60
+    },
+    {
+     "id": "ind",
+     "seats": 1
+    }
+   ],
+   "source": "https://www.sfu.ca/~aheard/elections/1867-present.html"
+  }
+ ]
+}
