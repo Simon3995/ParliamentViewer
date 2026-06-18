@@ -35,8 +35,8 @@ function add_party(data, suppressRefresh = false) {
 	if (suppressRefresh) return;
 
 	// populate this party's own "Founded by" and "Split from" lists
-	build_checkbox_list('merged-list-' + id, id, 'founded_by', p.founded_by || []);
-	build_checkbox_list('split-list-'  + id, id, 'split_from', p.split_from || []);
+	build_checkbox_list('merged-list-' + id, id, 'foundedBy', p.foundedBy || []);
+	build_checkbox_list('split-list-'  + id, id, 'splitFrom', p.splitFrom || []);
 
 	// populate this party's "Established" dropdown with existing parliaments
 	const estSelect = document.getElementById('established-' + id);
@@ -81,8 +81,8 @@ function insert_party_everywhere(new_id) {
 	for (const [id, op] of Object.entries(parties)) {
 		if (!op || id == new_id) continue;
 		for (const [list_id, field] of [
-			['merged-list-' + id, 'founded_by'],
-			['split-list-'  + id, 'split_from'],
+			['merged-list-' + id, 'foundedBy'],
+			['split-list-'  + id, 'splitFrom'],
 		]) {
 			const container = document.getElementById(list_id);
 			if (!container) continue;
@@ -104,14 +104,14 @@ function insert_party_everywhere(new_id) {
 }
 
 // remove this party from every checkbox list and fraction dropdown.
-function remove_party_everywhere(party_id) {
+function remove_party_everywhere(partyId) {
 	// checkbox lists on every other party
 	for (const id of Object.keys(parties)) {
-		if (id == party_id) continue;
+		if (id == partyId) continue;
 		for (const suffix of ['merged-list-', 'split-list-']) {
 			const container = document.getElementById(suffix + id);
 			if (!container) continue;
-			container.querySelector(`[data-party-ref="${party_id}"]`)?.remove();
+			container.querySelector(`[data-party-ref="${partyId}"]`)?.remove();
 			if (!container.children.length) container.innerHTML = 'No other parties';
 		}
 	}
@@ -121,7 +121,7 @@ function remove_party_everywhere(party_id) {
 		if (!q) continue;
 		for (let fi = 0; fi < q.fractions.length; fi++) {
 			const select = document.querySelector(`#seat-${plm_id}-${fi} select`);
-			select?.querySelector(`[data-party-ref="${party_id}"]`)?.remove();
+			select?.querySelector(`[data-party-ref="${partyId}"]`)?.remove();
 		}
 	}
 }

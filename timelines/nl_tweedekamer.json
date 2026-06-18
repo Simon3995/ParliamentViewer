@@ -11,7 +11,7 @@
    "color": "#000000",
    "image": "/logos/nl/BIJ1.png",
    "established": null,
-   "split_from": [
+   "splitFrom": [
     "denk"
    ]
   },
@@ -47,7 +47,7 @@
    "color": "#00cc00",
    "image": "/logos/nl/GL.png",
    "established": null,
-   "founded_by": [
+   "foundedBy": [
     "cpn",
     "psp",
     "evp",
@@ -62,7 +62,7 @@
    "color": "#01af40",
    "image": "/logos/nl/GLPvdA.png",
    "established": null,
-   "founded_by": [
+   "foundedBy": [
     "pvda",
     "gl"
    ]
@@ -75,7 +75,7 @@
    "color": "#e82323",
    "image": "/logos/nl/PRO.png",
    "established": null,
-   "founded_by": [
+   "foundedBy": [
     "glpvda"
    ]
   },
@@ -87,7 +87,7 @@
    "color": "#ff0000",
    "image": "/logos/nl/PvdA.png",
    "established": null,
-   "founded_by": [
+   "foundedBy": [
     "sdap",
     "vdb",
     "cdu"
@@ -101,7 +101,7 @@
    "color": "#38bfc2",
    "image": "/logos/nl/DENK.png",
    "established": null,
-   "split_from": [
+   "splitFrom": [
     "pvda"
    ]
   },
@@ -129,7 +129,7 @@
    "color": "#8fd1eb",
    "image": "/logos/nl/CU.png",
    "established": null,
-   "founded_by": [
+   "foundedBy": [
     "rpf",
     "gpv"
    ]
@@ -150,7 +150,7 @@
    "color": "#007c5e",
    "image": "/logos/nl/CDA.png",
    "established": null,
-   "founded_by": [
+   "foundedBy": [
     "kvp",
     "chu",
     "arp"
@@ -164,7 +164,7 @@
    "color": "#181d57",
    "image": "/logos/nl/NSC.png",
    "established": null,
-   "split_from": [
+   "splitFrom": [
     "cda"
    ]
   },
@@ -184,10 +184,10 @@
    "color": "#21276a",
    "image": "/logos/nl/VVD.png",
    "established": null,
-   "founded_by": [
+   "foundedBy": [
     "pvdv"
    ],
-   "split_from": [
+   "splitFrom": [
     "pvda"
    ]
   },
@@ -207,7 +207,7 @@
    "color": "#21276a",
    "image": "/logos/nl/JA21.png",
    "established": null,
-   "split_from": [
+   "splitFrom": [
     "fvd"
    ]
   },
@@ -227,7 +227,7 @@
    "color": "#82b2ff",
    "image": "/logos/nl/PVV.png",
    "established": null,
-   "split_from": [
+   "splitFrom": [
     "vvd"
    ]
   },
@@ -239,7 +239,7 @@
    "color": "#169793ff",
    "image": "",
    "established": null,
-   "split_from": [
+   "splitFrom": [
     "pvv"
    ]
   },
@@ -259,7 +259,7 @@
    "color": "rgb(18, 74, 158)",
    "image": "/logos/nl/LPF.png",
    "established": null,
-   "split_from": [
+   "splitFrom": [
     "ln"
    ]
   },
@@ -287,7 +287,7 @@
    "color": "#ff7b00",
    "image": "/logos/nl/GPV.png",
    "established": null,
-   "split_from": [
+   "splitFrom": [
     "arp"
    ]
   },
@@ -315,7 +315,7 @@
    "color": "#c9dfff",
    "image": "/logos/nl/CD.png",
    "established": null,
-   "split_from": [
+   "splitFrom": [
     "cp"
    ]
   },
@@ -343,7 +343,7 @@
    "color": "#e92f7cff",
    "image": "/logos/nl/PPR.png",
    "established": null,
-   "split_from": [
+   "splitFrom": [
     "kvp"
    ]
   },
@@ -355,8 +355,8 @@
    "color": "rgb(240, 176, 0)",
    "image": "",
    "established": null,
-   "founded_by": [],
-   "split_from": [
+   "foundedBy": [],
+   "splitFrom": [
     "cda",
     "arp"
    ]
@@ -369,7 +369,7 @@
    "color": "#ff0000",
    "image": "/logos/nl/CPN.png",
    "established": null,
-   "founded_by": [
+   "foundedBy": [
     "sdp"
    ]
   },
@@ -397,7 +397,7 @@
    "color": "#d40000ff",
    "image": "/logos/nl/DS70.png",
    "established": null,
-   "split_from": [
+   "splitFrom": [
     "pvda"
    ]
   },
@@ -409,7 +409,7 @@
    "color": "#362511ff",
    "image": "/logos/nl/KVP.png",
    "established": null,
-   "founded_by": [
+   "foundedBy": [
     "rksp"
    ]
   },
@@ -461,7 +461,7 @@
    "color": "#092447ff",
    "image": "/logos/nl/PvdV.png",
    "established": null,
-   "founded_by": [
+   "foundedBy": [
     "vb"
    ]
   },
@@ -473,7 +473,7 @@
    "color": "rgb(187, 90, 0)",
    "image": "",
    "established": null,
-   "founded_by": [
+   "foundedBy": [
     "ab"
    ]
   },
@@ -509,7 +509,7 @@
    "color": "#0d6486ff",
    "image": "",
    "established": null,
-   "founded_by": [
+   "foundedBy": [
     "lu",
     "bvl",
     "eb",
@@ -541,7 +541,7 @@
    "color": "#79aa4aff",
    "image": "",
    "established": null,
-   "founded_by": [
+   "foundedBy": [
     "pb"
    ]
   },
@@ -561,7 +561,7 @@
    "color": "#802008ff",
    "image": "",
    "established": null,
-   "split_from": [
+   "splitFrom": [
     "ab"
    ]
   },
@@ -589,7 +589,7 @@
    "color": "#378747ff",
    "image": "",
    "established": null,
-   "split_from": [
+   "splitFrom": [
     "bbb"
    ]
   },
@@ -601,10 +601,10 @@
    "color": "#000000FF",
    "image": "",
    "established": null,
-   "founded_by": [
+   "foundedBy": [
     "mp"
    ],
-   "split_from": [
+   "splitFrom": [
     "vb"
    ]
   },

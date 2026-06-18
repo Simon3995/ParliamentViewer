@@ -22,8 +22,8 @@ function toggle_collapse(el) {
 }
 
 // update merged/split array after a checkbox has been clicked
-function toggle_checkbox(party_id, field, other_id, checked) {
-	const arr = parties[party_id][field] ||= [];
+function toggle_checkbox(partyId, field, other_id, checked) {
+	const arr = parties[partyId][field] ||= [];
 	const idx = arr.indexOf(other_id);
 	if (checked && idx === -1) arr.push(other_id);
 	else if (!checked && idx > -1) arr.splice(idx, 1);

@@ -41,7 +41,7 @@ export function set_inner_radius(value) {
 	InnerRadius = value;
 }
 
-export function get_diagram_bbox() {
+export function getDiagramBbox() {
 	const upper = (SpanAngle < 180);
 	const halfAngleRad = (SpanAngle / 2) * (Math.PI / 180);
 	const xmin = upper ? (1 - Math.sin(halfAngleRad)) : 0;
@@ -59,7 +59,7 @@ function sum(array) {
 }
 
 // Returns the thickness of a row in the same unit as the coordinates.
-export function get_row_thickness(nrows) {
+export function getRowThickness(nrows) {
 	return (1 - InnerRadius) / (2*nrows - 1);
 }
 
@@ -71,7 +71,7 @@ export function get_row_thickness(nrows) {
 */
 function get_rows_from_nrows(nrows, span_angle = SpanAngle) {
 	const rv = [];
-	const rad = get_row_thickness(nrows);
+	const rad = getRowThickness(nrows);
 	const radian_span_angle = Math.PI * span_angle / 180;
 
 	for (let r = 0; r < nrows; r++) {
@@ -83,7 +83,7 @@ function get_rows_from_nrows(nrows, span_angle = SpanAngle) {
 }
 
 // Returns the minimal number of rows necessary to contain nseats seats.
-export function get_nrows_from_nseats(nseats, span_angle = SpanAngle) {
+export function getRowCount(nseats, span_angle = SpanAngle) {
 	let i = 1;
 	while (sum(get_rows_from_nrows(i, span_angle)) < nseats) i++;
 	return i;
@@ -111,10 +111,10 @@ export function get_nrows_from_nseats(nseats, span_angle = SpanAngle) {
 	It defaults to 180° to make a true hemicycle.
 	Values above 180° are not supported.
 */
-export function get_seats_centers(nseats, min_nrows = 0, span_angle = SpanAngle, filling_strategy = "DEFAULT") {
-	const nrows = Math.max(min_nrows, get_nrows_from_nseats(nseats, span_angle));
+export function getSeatsCenters(nseats, min_nrows = 0, span_angle = SpanAngle, filling_strategy = "DEFAULT") {
+	const nrows = Math.max(min_nrows, getRowCount(nseats, span_angle));
 	// thickness of a row in the same unit as the coordinates
-	const row_thicc = get_row_thickness(nrows);
+	const row_thicc = getRowThickness(nrows);
 	const span_angle_margin = (1 - span_angle / 180) * Math.PI / 2;
 	const maxed_rows = get_rows_from_nrows(nrows, span_angle);
 

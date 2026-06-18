@@ -5,8 +5,8 @@ function exportJSON() {
 	const partiesObj = {};
 	for (const p of parties.filter(Boolean)) {
 		const { id, ...rest } = p;
-		if (rest.founded_by) rest.founded_by = rest.founded_by.map(i => parties[i]?.id).filter(Boolean);
-		if (rest.split_from) rest.split_from = rest.split_from.map(i => parties[i]?.id).filter(Boolean);
+		if (rest.foundedBy) rest.foundedBy = rest.foundedBy.map(i => parties[i]?.id).filter(Boolean);
+		if (rest.splitFrom) rest.splitFrom = rest.splitFrom.map(i => parties[i]?.id).filter(Boolean);
 		if (rest.established != null) rest.established = plms[rest.established]?.name ?? null;
 		partiesObj[id] = rest;
 	}
@@ -115,7 +115,7 @@ function importJSON(text) {
 				fullname: p.fullname || '', fullname_rm: p.fullname_rm || '',
 				fullname_en: p.fullname_en || '', color: p.color || '#ffffff',
 				image: p.image || '', established: p.established,
-				founded_by: p.founded_by, split_from: p.split_from,
+				foundedBy: p.foundedBy, splitFrom: p.splitFrom,
 			}, true);
 		}
 
@@ -129,7 +129,7 @@ function importJSON(text) {
 		// resolve string IDs to actual party IDs
 		for (const p of Object.values(parties)) {
 			if (!p) continue;
-			for (const field of ['founded_by', 'split_from']) {
+			for (const field of ['foundedBy', 'splitFrom']) {
 				if (!p[field]) continue;
 				p[field] = p[field].map(sid => parties.findIndex(q => q && q.id === sid)).filter(i => i !== -1);
 			}

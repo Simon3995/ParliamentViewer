@@ -1,5 +1,5 @@
 // add new fraction to a parliament
-function add_fraction(plm_id, data) {
+function addFraction(plm_id, data) {
 	const fraction_id = plms[plm_id].fractions.length;
 	plms[plm_id].fractions.push(data || { id: null, seats: 0 });
 	const f = plms[plm_id].fractions[fraction_id];
@@ -53,5 +53,5 @@ function rebuild_fractions(plm_id) {
 	const fractions = [...plms[plm_id].fractions];
 	plms[plm_id].fractions = [];
 	document.getElementById('fraction-' + plm_id).innerHTML = '';
-	for (const fraction of fractions) add_fraction(plm_id, fraction);
+	for (const fraction of fractions) addFraction(plm_id, fraction);
 }

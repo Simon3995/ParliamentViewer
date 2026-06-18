@@ -55,8 +55,8 @@
 	ec.height = 200;
 	let oc_sweep = 0;
 	let logo = new Image();
-	let offset_x = 0;
-	let offset_y = 0;
+	let offsetX = 0;
+	let offsetY = 0;
 	let logo_scale = 1;
 	let mouse_down = false;
 	let main_col = document.getElementById("main_col").value;
@@ -110,8 +110,8 @@
 		scale_factor *= logo_scale;
 		ctx.drawImage(
 			oc,
-			c.width/2 - scale_factor * oc.width/2 + offset_x,
-			c.height/2 - scale_factor * oc.height/2 + offset_y,
+			c.width/2 - scale_factor * oc.width/2 + offsetX,
+			c.height/2 - scale_factor * oc.height/2 + offsetY,
 			scale_factor * oc.width,
 			scale_factor * oc.height
 		);
@@ -216,8 +216,8 @@
 	});
 
 	function reset_logo() {
-		offset_x = 0;
-		offset_y = 0;
+		offsetX = 0;
+		offsetY = 0;
 		logo_scale = 1;
 	}
 
@@ -271,8 +271,8 @@
 	window.onmouseup = (e) => { mouse_down = false; }
 	window.onmousemove = (e) => {
 		if (mouse_down) {
-			offset_x += e.movementX;
-			offset_y += e.movementY;
+			offsetX += e.movementX;
+			offsetY += e.movementY;
 		}
 	}
 	c.onwheel = (e) => {

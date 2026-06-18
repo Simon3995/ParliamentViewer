@@ -1,7 +1,7 @@
-import { S, schedule_frame } from "./main.js";
-import { c, ctx, resize_canvas, transform_ctx, RES_MULT } from "./canvas.js";
-import { load_parliament, load_timeline } from "./loading.js";
-import { table_highlight, update_table_footer, update_buttons } from "./sidebar.js";
+import { S, scheduleFrame } from "./main.js";
+import { c, ctx, resizeCanvas, transformCtx, RES_MULT } from "./canvas.js";
+import { loadParliament, loadTimeline } from "./loading.js";
+import { tableHighlight, updateTableFooter, updateButtons } from "./sidebar.js";
 import { add_party, cancel_add_party, delete_hlt, move_party_left, move_party_right, reset_plm, show_add_menu, sort_table_by_seats, toggle_edit_mode } from "./editing.js";
 import { set_span_angle, set_inner_radius } from "./geometry.js";
 import { get_query_param, set_query_param } from "./query.js";
@@ -70,19 +70,19 @@ $(document).on("change", "input", function(e) {
 		if (value < 0) e.target.value = 0;
 
 		// find new total seat amount, possible surplus
-		S.cur_plm.set_party_seats(e.target.name, e.target.value);
-		let new_amt = S.cur_plm.seat_amt();
+		S.cur_plm.setPartySeats(e.target.name, e.target.value);
+		let new_amt = S.cur_plm.seatAmt();
 		const surplus = Math.max(0, new_amt - 10000);
 
 		// subtract surplus if there is one
 		if (surplus > 0) {
 			value -= surplus;
-			S.cur_plm.set_party_seats(e.target.name, value);
+			S.cur_plm.setPartySeats(e.target.name, value);
 		}
 
 		// apply changes
 		e.target.value = value;
-		update_table_footer();
+		updateTableFooter();
 	}
 });
 
@@ -106,7 +106,7 @@ function show_sidebar() {
 // when timeline is selected, show sidebar and hide welcome message
 document.getElementById("select-timeline").onchange = (e) => {
 	show_sidebar();
-	load_timeline(e.target.value);
+	loadTimeline(e.target.value);
 }
 
 // if party seat is clicked, highlight that party
@@ -124,23 +124,23 @@ c.addEventListener("pointerdown", (e) => {
 		const inverse = transform.inverse();
 		const mouse_point = new DOMPoint(mx, my);
 		const mouse = mouse_point.matrixTransform(inverse);
-		S.mouse_x = mouse.x;
-		S.mouse_y = mouse.y;
+		S.mouseX = mouse.x;
+		S.mouseY = mouse.y;
 	}
 });
 
 c.addEventListener("pointerup", (e) => {
 	if (pointer_mvmt < 20) {
 		for (const fraction of S.cur_plm.fractions) {
-			for (const seat of fraction.seat_centers) {
-				const dist = Math.hypot(seat[0] - S.mouse_x, seat[1] - S.mouse_y);
-				if (dist <= S.cur_plm.get_seat_hitbox_radius()) {
+			for (const seat of fraction.seatCenters) {
+				const dist = Math.hypot(seat[0] - S.mouseX, seat[1] - S.mouseY);
+				if (dist <= S.cur_plm.getSeatHitboxRadius()) {
 					highlight(fraction.party.id);
 
 					// avoid hovering on touch screens
 					if (e.pointerType !== 'mouse') {
-						S.mouse_x = null;
-						S.mouse_y = null;
+						S.mouseX = null;
+						S.mouseY = null;
 					}
 
 					return;
@@ -155,15 +155,15 @@ c.addEventListener("pointerup", (e) => {
 
 // resize canvas to fill the screen
 window.addEventListener('load', (e) => {
-	resize_canvas();
-	transform_ctx();
+	resizeCanvas();
+	transformCtx();
 
 	// check for query strings
 	const t = get_query_param("t");
 	const p = Number(get_query_param("p"));
 	if (t) {
 		show_sidebar();
-		load_timeline(t).then(() => {
+		loadTimeline(t).then(() => {
 			document.getElementById("select-timeline").value = t;
 			if (p) navigate(p);
 		});
@@ -172,8 +172,8 @@ window.addEventListener('load', (e) => {
 
 // continue resizing canvas to fill the screen
 window.addEventListener('resize', (e) => {
-	resize_canvas();
-	transform_ctx();
+	resizeCanvas();
+	transformCtx();
 });
 
 // transform mouse coords
@@ -187,9 +187,9 @@ window.addEventListener('pointermove', (e) => {
 	const inverse = transform.inverse();
 	const mouse_point = new DOMPoint(mx, my);
 	const mouse = mouse_point.matrixTransform(inverse);
-	S.mouse_x = mouse.x;
-	S.mouse_y = mouse.y;
-	schedule_frame();
+	S.mouseX = mouse.x;
+	S.mouseY = mouse.y;
+	scheduleFrame();
 });
 
 // add keyboard controls
@@ -208,15 +208,15 @@ document.addEventListener('keydown', (e) => {
 
 document.getElementById("span_angle").onchange = function(e) {
 	set_span_angle(Number(e.target.value));
-	S.cur_plm.distribute_seats();
-	transform_ctx();
+	S.cur_plm.distributeSeats();
+	transformCtx();
 	
 }
 
 document.getElementById("inner_radius").onchange = function(e) {
 	set_inner_radius(Number(e.target.value));
-	S.cur_plm.distribute_seats();
-	transform_ctx();
+	S.cur_plm.distributeSeats();
+	transformCtx();
 }
 
 document.getElementById("sel_ancestors").onchange = function(e) {
@@ -249,7 +249,7 @@ export function navigate(idx) {
 	S.ori_plm = S.cur_tml.parliaments[idx];
 	S.cur_plm = S.ori_plm.clone();
 	S.edit_mode = false;
-	load_parliament(S.cur_plm);
+	loadParliament(S.cur_plm);
 
 	set_query_param("p", idx);
 
@@ -261,37 +261,37 @@ export function navigate(idx) {
 export function highlight(id) {
 	if (id == null) {
 		// remove all highlighted
-		S.cur_hlt = [];
-	} else if (is_highlighted(id)) {
+		S.currentHighlight = [];
+	} else if (isHighlighted(id)) {
 		const parties = [id];
 		if (S.sel_ancestors === true) {
 			// remove this party and its ancestors from highlighted
-			parties.push(... S.cur_tml.get_ancestors(id));
+			parties.push(... S.cur_tml.getAncestors(id));
 		} 
 
-		S.cur_hlt = S.cur_hlt.filter(p => !parties.includes(p));
+		S.currentHighlight = S.currentHighlight.filter(p => !parties.includes(p));
 	} else {
 		if (S.sel_ancestors === true) {
-			S.cur_hlt.push(id, ... S.cur_tml.get_ancestors(id));
+			S.currentHighlight.push(id, ... S.cur_tml.getAncestors(id));
 		} else {
-			S.cur_hlt.push(id);
+			S.currentHighlight.push(id);
 		}
 	}
 
-	table_highlight();
-	update_table_footer();
-	update_buttons();
-	schedule_frame();
+	tableHighlight();
+	updateTableFooter();
+	updateButtons();
+	scheduleFrame();
 }
 
 // helper function to determine whether or not a party is highlighted
-export function is_highlighted(id) {
-	return S.cur_hlt.includes(id);
+export function isHighlighted(id) {
+	return S.currentHighlight.includes(id);
 }
 
 // get a list of all highlighted parties
 export function get_highlighted() {
-	return S.cur_hlt;
+	return S.currentHighlight;
 }
 
 export function reset_settings() {
@@ -304,6 +304,6 @@ export function reset_settings() {
 
 	S.sel_ancestors = document.getElementById("sel_ancestors").checked = false;
 
-	S.cur_plm.distribute_seats();
-	transform_ctx();
+	S.cur_plm.distributeSeats();
+	transformCtx();
 }

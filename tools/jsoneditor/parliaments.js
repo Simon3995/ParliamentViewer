@@ -11,13 +11,13 @@ function add_plm(data, suppressRefresh = false) {
 			<div class="row"><label>Source:</label><textarea rows="2" cols="40" onchange="plms[${id}].source=this.value">${esc(q.source || '')}</textarea>
 			<div class="row"><label>Fractions:</label>
 				<div id="fraction-${id}" class="fraction-row"></div>
-				<button onclick="add_fraction(${id})">+ ADD FRACTION</button>
+				<button onclick="addFraction(${id})">+ ADD FRACTION</button>
 			</div>
 			<button class="del-btn" onclick="delete_plm(${id})">✕ DELETE PARLIAMENT</button>
 		</div>
 	`);
 
-	for (const fraction of (data?.fractions || [])) add_fraction(id, fraction);
+	for (const fraction of (data?.fractions || [])) addFraction(id, fraction);
 
 	if (suppressRefresh) return;
 

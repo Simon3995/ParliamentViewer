@@ -1,9 +1,9 @@
 // helper function to create one party checkbox
-function make_party_checkbox(party_id, field, p, i) {
+function make_party_checkbox(partyId, field, p, i) {
 	const label = document.createElement('label');
 	label.className = 'checkbox-item';
 	label.dataset.partyRef = i;  // stable key for targeted removal
-	label.innerHTML = `<input type="checkbox" onchange="toggle_checkbox(${party_id},'${field}',${i},this.checked)"><span>${p.id || ('unnamed party ' + i)}</span>`;
+	label.innerHTML = `<input type="checkbox" onchange="toggle_checkbox(${partyId},'${field}',${i},this.checked)"><span>${p.id || ('unnamed party ' + i)}</span>`;
 	return label;
 }
 
@@ -28,13 +28,13 @@ function make_plm_option(q, i, currentValue) {
 }
 
 // rebuild full merged/split checkbox list
-function build_checkbox_list(container_id, party_id, field, selected_ids) {
+function build_checkbox_list(container_id, partyId, field, selected_ids) {
 	const container = document.getElementById(container_id);
 	if (!container) return;
 	container.innerHTML = '';
 	for (const [i, p] of Object.entries(parties)) {
-		if (!p || i == party_id) continue;
-		const label = make_party_checkbox(party_id, field, p, i);
+		if (!p || i == partyId) continue;
+		const label = make_party_checkbox(partyId, field, p, i);
 		label.querySelector('input').checked = selected_ids.includes(Number(i));
 		container.appendChild(label);
 	}
@@ -45,8 +45,8 @@ function build_checkbox_list(container_id, party_id, field, selected_ids) {
 function refresh_all_checkbox_lists() {
 	for (const [id, p] of Object.entries(parties)) {
 		if (!p) continue;
-		build_checkbox_list('merged-list-' + id, id, 'founded_by', p.founded_by || []);
-		build_checkbox_list('split-list-'  + id, id, 'split_from', p.split_from || []);
+		build_checkbox_list('merged-list-' + id, id, 'foundedBy', p.foundedBy || []);
+		build_checkbox_list('split-list-'  + id, id, 'splitFrom', p.splitFrom || []);
 	}
 }
 
