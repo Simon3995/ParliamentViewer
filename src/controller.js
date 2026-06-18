@@ -213,14 +213,14 @@ document.getElementById("spanAngle").onchange = function(e) {
 	
 }
 
-document.getElementById("inner_radius").onchange = function(e) {
+document.getElementById("innerRadius").onchange = function(e) {
 	setInnerRadius(Number(e.target.value));
 	S.currentParliament.distributeSeats();
 	transformCtx();
 }
 
-document.getElementById("sel_ancestors").onchange = function(e) {
-	S.sel_ancestors = document.getElementById("sel_ancestors").checked;
+document.getElementById("selectAncestors").onchange = function(e) {
+	S.selectAncestors = document.getElementById("selectAncestors").checked;
 }
 
 // go to previous parliament in the timeline
@@ -264,14 +264,14 @@ export function highlight(id) {
 		S.currentHighlight = [];
 	} else if (isHighlighted(id)) {
 		const parties = [id];
-		if (S.sel_ancestors === true) {
+		if (S.selectAncestors === true) {
 			// remove this party and its ancestors from highlighted
 			parties.push(... S.currentTimeline.getAncestors(id));
 		} 
 
 		S.currentHighlight = S.currentHighlight.filter(p => !parties.includes(p));
 	} else {
-		if (S.sel_ancestors === true) {
+		if (S.selectAncestors === true) {
 			S.currentHighlight.push(id, ... S.currentTimeline.getAncestors(id));
 		} else {
 			S.currentHighlight.push(id);
@@ -296,13 +296,13 @@ export function getHighlighted() {
 
 export function reset_settings() {
 	setInnerRadius(0.4);
-	document.getElementById("inner_radius").value = 0.4;
-	document.getElementById("inner_radius").oninput();
+	document.getElementById("innerRadius").value = 0.4;
+	document.getElementById("innerRadius").oninput();
 	setSpanAngle(180);
 	document.getElementById("spanAngle").value = 180;
 	document.getElementById("spanAngle").oninput();
 
-	S.sel_ancestors = document.getElementById("sel_ancestors").checked = false;
+	S.selectAncestors = document.getElementById("selectAncestors").checked = false;
 
 	S.currentParliament.distributeSeats();
 	transformCtx();

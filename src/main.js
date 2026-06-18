@@ -15,7 +15,7 @@ export const S = {
 	mouseX: 0,
 	mouseY: 0,
 	ctxScale: 1,
-	sel_ancestors: document.getElementById("sel_ancestors").checked,
+	selectAncestors: document.getElementById("selectAncestors").checked,
 }
 
 let frameID = null;

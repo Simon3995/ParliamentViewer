@@ -83,22 +83,22 @@ function left_parl_table() {
 	// find parties that left parliament
 	let parliament = S.originalParliament;
 	let fracs = [...S.ordTab];
-	let left_plm = [];
+	let leftParliament = [];
 	const prev_idx = (S.currentTimeline.parliaments.indexOf(parliament) + 1);
 	const prev_parl = S.currentTimeline.parliaments[prev_idx];
 	if (prev_parl) {
 		const curr_party_names = new Set(S.currentParliament.fractions.map(f => f.party.name));
-		left_plm = prev_parl.fractions
+		leftParliament = prev_parl.fractions
 			.filter(f => !curr_party_names.has(f.party.name))
 			.filter(f => !fracs.some(x => x.party.established === parliament.description && x.party.foundedBy?.includes(f.party.id)))
 			.map(f => f.party);
 	} else {
-		left_plm = [];
+		leftParliament = [];
 	}
-	if (left_plm.length) {
+	if (leftParliament.length) {
 		let left_string = '<h2>&#8618; Left Parliament</h2>';
 		left_string += '<table><tr><th class="col_l">Party</th><th class="col_m">Full Name</th><th class="col_r">Seats</th></tr>';
-		for (const party of left_plm) {
+		for (const party of leftParliament) {
 			left_string += '<tr>';
 			left_string += `<td>${party.name}</td>`;
 			left_string += `<td>${party.fullname}</td>`;
@@ -107,9 +107,9 @@ function left_parl_table() {
 			left_string += '</tr>';
 		}
 		left_string += '</table>';
-		document.getElementById("left_plm").innerHTML = left_string;
+		document.getElementById("leftParliament").innerHTML = left_string;
 	} else {
-		document.getElementById("left_plm").innerHTML = '';
+		document.getElementById("leftParliament").innerHTML = '';
 	}
 }
 
@@ -162,9 +162,9 @@ function changes_table() {
 		full_str += '<table><tr><th class="col_l">New party</th><th class="col_m">How</th><th class="col_r">Previously</th></tr>';
 		full_str += str;
 		full_str += '</table>';
-		document.getElementById("party_changes").innerHTML = full_str;
+		document.getElementById("partyChanges").innerHTML = full_str;
 	} else {
-		document.getElementById("party_changes").innerHTML = '';
+		document.getElementById("partyChanges").innerHTML = '';
 	}
 }
 
@@ -229,7 +229,7 @@ function table_editMode() {
 	
 	// insert HTML string into document
 	document.getElementById("table").innerHTML = string;
-	document.getElementById("left_plm").innerHTML = '';
+	document.getElementById("leftParliament").innerHTML = '';
 
 	make_table_sortable();
 }
