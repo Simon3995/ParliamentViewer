@@ -5,11 +5,11 @@ import "./controller.js";
 export const S = {
 	ordTab: [],        // party order in the table
 	ordVis: [],        // party order left-right in the chart
-	cur_tml: null,      // current timeline object
-	cur_plm: null,      // current (editable) parliament object
-	ori_plm: null,      // original unedited parliament object
+	currentTimeline: null,      // current timeline object
+	currentParliament: null,      // current (editable) parliament object
+	originalParliament: null,      // original unedited parliament object
 	currentHighlight: [],        // current highlighted parties
-	edit_mode: false,   // whether edit mode is enabled
+	editMode: false,   // whether edit mode is enabled
 	dragging: false,    // whether a dragging action is currently happening
 	partyImgs: null,   // array of icons for all parties in current parliament
 	mouseX: 0,
@@ -33,7 +33,7 @@ function update() {
 	ctx.clearRect(0, 0, c.width, c.height);
 	ctx.restore();
 
-	S.cur_plm?.draw();
+	S.currentParliament?.draw();
 
 	// clean up scheduled frame
 	frameID = null;

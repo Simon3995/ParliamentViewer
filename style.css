@@ -273,7 +273,7 @@ button:active:enabled {
 	flex-direction: row;
 }
 
-#plm_selector {
+#parliamentSelector {
 	flex: 1;
 	min-width: 0;
 	padding: 0px 6px;
@@ -285,7 +285,7 @@ button:active:enabled {
 		flex-wrap: wrap;
 	}
 
-	#plm_selector {
+	#parliamentSelector {
 		order: -1;
 		width: 100%;
 		flex-basis: 100%;
@@ -346,7 +346,7 @@ span.icon {
 	width: 25px;
 }
 
-#add_party {
+#addParty {
 	background-color: #483d8b;
 	border: 5px solid #2a273d;
 	font-size: 18px;
@@ -355,7 +355,7 @@ span.icon {
 	width: 100%;
 }
 
-#add_party input[type=color] {
+#addParty input[type=color] {
 	height: 20px;
 	vertical-align: middle;
 	border: none;
@@ -364,7 +364,7 @@ span.icon {
 	min-width: 0;
 }
 
-#add_party input[type=text] {
+#addParty input[type=text] {
 	flex: 1;
 	margin-left: 12px;
 	font-size: 18px;
@@ -374,7 +374,7 @@ span.icon {
 	color: white;
 }
 
-#add_party p {
+#addParty p {
 	line-height: 20px;
 	margin-bottom: 10px;
 	display: flex;

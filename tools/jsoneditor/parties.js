@@ -1,5 +1,5 @@
 // add a new party (+editor menu) to the list
-function add_party(data, suppressRefresh = false) {
+function addParty(data, suppressRefresh = false) {
 	const id = new_party_index();
 	parties[id] = data ? { ...data } : {};
 	const p = parties[id];

@@ -24,7 +24,7 @@
 			<img src="./imgs/parliament95.svg">
 			<p>This is a tool to view current and historical seat distributions of various parliaments, senates, congresses, and other political bodies from around the world.</p>
 			<p>Choose a parliament from the list to get started.</p>
-			<select id="select-timeline" autocomplete="off">
+			<select id="selectTimeline" autocomplete="off">
 				<option value="" selected disabled hidden>Select Parliament</option>
 				<optgroup label="Europe">
 					<option value="be_federalparliament">🇧🇪 Belgium - Federaal Parlement/Parlement Fédéral</option>
@@ -63,17 +63,17 @@
 		<!-- Navigation -->
 		<div class="navbar">
 			<div class="lbutton">
-				<button title="Go to first parliament in timeline" id="btn_first" autocomplete="off" disabled><span class="icon first"></span></button>
-				<button title="Go to previous parliament in timeline" id="btn_prev" autocomplete="off" disabled><span class="icon prev"></span></button>
+				<button title="Go to first parliament in timeline" id="btnFirst" autocomplete="off" disabled><span class="icon first"></span></button>
+				<button title="Go to previous parliament in timeline" id="btnPrev" autocomplete="off" disabled><span class="icon prev"></span></button>
 			</div>
 			
-			<div id="plm_selector">
+			<div id="parliamentSelector">
 				<!-- Parliament selector goes here -->
 			</div>
 			
 			<div class="rbutton">
-				<button title="Go to next parliament in timeline" id="btn_next" autocomplete="off" disabled><span class="icon next"></span></button>
-				<button title="Go to last parliament in timeline" id="btn_last" autocomplete="off" disabled><span class="icon last"></span></button>
+				<button title="Go to next parliament in timeline" id="btnNext" autocomplete="off" disabled><span class="icon next"></span></button>
+				<button title="Go to last parliament in timeline" id="btnLast" autocomplete="off" disabled><span class="icon last"></span></button>
 			</div>
 		</div>
 
@@ -82,21 +82,21 @@
 		<div id="table"></div>
 		
 		<!-- Edit mode buttons -->
-		<button title="Edit Mode" id="btn_edit" autocomplete="off"><span class="icon edit"></span></button>
-		<button title="Reset" id="btn_reset" disabled autocomplete="off"><span class="icon reset"></span></button>
-		<button title="Add Party" id="btn_add" disabled autocomplete="off"><span class="icon add" autocomplete="off"></span></button>
-		<button title="Delete Selected" id="btn_del" disabled autocomplete="off"><span class="icon delete"></span></button>
-		<button title="Move Party Left" id="btn_left" disabled autocomplete="off"><span class="icon left"></span></button>
-		<button title="Move Party Right" id="btn_right" disabled autocomplete="off"><span class="icon right"></span></button>
-		<button title="Sort Table" id="btn_sort" disabled autocomplete="off"><span class="icon sort"></span></button>
+		<button title="Edit Mode" id="btnEdit" autocomplete="off"><span class="icon edit"></span></button>
+		<button title="Reset" id="btnReset" disabled autocomplete="off"><span class="icon reset"></span></button>
+		<button title="Add Party" id="btnAdd" disabled autocomplete="off"><span class="icon add" autocomplete="off"></span></button>
+		<button title="Delete Selected" id="btnDelete" disabled autocomplete="off"><span class="icon delete"></span></button>
+		<button title="Move Party Left" id="btnLeft" disabled autocomplete="off"><span class="icon left"></span></button>
+		<button title="Move Party Right" id="btnRight" disabled autocomplete="off"><span class="icon right"></span></button>
+		<button title="Sort Table" id="btnSort" disabled autocomplete="off"><span class="icon sort"></span></button>
 		
 		<!-- Party adding menu -->
-		<div id="add_party" style="display: none">
-			<p>Short Name:<input id="add_shortname" type="text" autocomplete="off"></p>
-			<p>Full Name:<input id="add_fullname" type="text" autocomplete="off"></p>
-			<p>Color: <input id="add_color" type="color" autocomplete="off"></p>
-			<button id="btn_confirm_add">Add</button>
-			<button id="btn_cancel_add">Cancel</button>
+		<div id="addParty" style="display: none">
+			<p>Short Name:<input id="addShortname" type="text" autocomplete="off"></p>
+			<p>Full Name:<input id="addFullname" type="text" autocomplete="off"></p>
+			<p>Color: <input id="addColor" type="color" autocomplete="off"></p>
+			<button id="btnConfirmAdd">Add</button>
+			<button id="btnCancelAdd">Cancel</button>
 		</div>
 		
 		<!-- Left parliament table -->
@@ -107,9 +107,9 @@
 		
 		<hr>
 
-		<h2>Settings <button id="btn_reset_settings" title="Reset Settings"><span class="icon reset"></span></button></h2>
+		<h2>Settings <button id="btnResetSettings" title="Reset Settings"><span class="icon reset"></span></button></h2>
 		<p><div class="fixwidth">Diagram inner radius:</div><input id="inner_radius" type="range" value="0.4" min="0.1" max="0.9" step="0.02" autocomplete="off" oninput="this.nextElementSibling.value = this.value"><output>0.4</output></p>
-		<p><div class="fixwidth">Diagram span angle:</div><input id="span_angle" type="range" value="180" min="10" max="360" step="5" autocomplete="off" oninput="this.nextElementSibling.value = this.value"><output>180</output></p>
+		<p><div class="fixwidth">Diagram span angle:</div><input id="spanAngle" type="range" value="180" min="10" max="360" step="5" autocomplete="off" oninput="this.nextElementSibling.value = this.value"><output>180</output></p>
 		<p><div class="fixwidth">Auto-select ancestors:</div><input id="sel_ancestors" type="checkbox" autocomplete="off"></p>
 		<hr>
 

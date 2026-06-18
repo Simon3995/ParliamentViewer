@@ -110,7 +110,7 @@ function importJSON(text) {
 		div_plms.innerHTML    = '';
 
 		for (const [id, p] of Object.entries(obj.parties || {})) {
-			add_party({
+			addParty({
 				id, name: p.name || id,
 				fullname: p.fullname || '', fullname_rm: p.fullname_rm || '',
 				fullname_en: p.fullname_en || '', color: p.color || '#ffffff',
