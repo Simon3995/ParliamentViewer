@@ -1,5 +1,5 @@
 import { S } from "./main.js";
-import { get_highlighted, is_highlighted } from "./controller.js";
+import { getHighlighted, isHighlighted } from "./controller.js";
 
 // generate all tables in the sidebar
 function build_sidebar() {
@@ -10,14 +10,14 @@ function build_sidebar() {
 
 // generate a seat table for the current parliament object
 function seat_dist_table() {
-	let parliament = S.ori_plm;
+	let parliament = S.originalParliament;
 	let string = "";
 	let total_seats = 0;
 	let total_hlt = 0;
 	string += `<table>`;
 	string += `<thead>`
 
-	let fracs = [...S.ord_tab];
+	let fracs = [...S.ordTab];
 
 	string += '<tr>';
 	string += '<th class="col_l">Party</th>';
@@ -34,21 +34,21 @@ function seat_dist_table() {
 
 		// find difference
 		let diff = 0;
-		const prevIdx = (S.cur_tml.parliaments.indexOf(parliament) + 1);
-		const prevParl = S.cur_tml.parliaments[prevIdx];
+		const prevIdx = (S.currentTimeline.parliaments.indexOf(parliament) + 1);
+		const prevParl = S.currentTimeline.parliaments[prevIdx];
 		if (prevParl) {
 			const prevFrac = prevParl.fractions.find(f => f.party.name === frac.party.name);
-			diff = prevFrac ? frac.seat_amt - prevFrac.seat_amt : frac.seat_amt;
+			diff = prevFrac ? frac.seatAmt - prevFrac.seatAmt : frac.seatAmt;
 			// subtract seats from diff if party is a merger or rebrand this election
-			if (frac.party.established === S.cur_plm.description && frac.party.founded_by) {
+			if (frac.party.established === S.currentParliament.description && frac.party.foundedBy) {
 				for (const ancestor of prevParl.fractions) {
-					if (!frac.party.founded_by.includes(ancestor.party.id)) continue;
-					diff -= ancestor.seat_amt;
+					if (!frac.party.foundedBy.includes(ancestor.party.id)) continue;
+					diff -= ancestor.seatAmt;
 				}
 			}
 		}
 
-		if (diff == frac.seat_amt) {
+		if (diff == frac.seatAmt) {
 			diff = `<span class="greener">&#9650;${diff}</span>`;
 		} else if (diff > 0) {
 			diff = '<span class="green">&#9650;' + diff + '</span>';
@@ -64,10 +64,10 @@ function seat_dist_table() {
 		string += `<tr ${id} class="tablerow">`;
 		string += "<td>" + frac.party.name + "</td>";
 		string += "<td>" + frac.party.fullname + "</td>";
-		string += `<td>${frac.seat_amt} (${diff})</td>`;
+		string += `<td>${frac.seatAmt} (${diff})</td>`;
 
-		total_seats += frac.seat_amt;
-		if (get_highlighted().includes(frac.party.id)) total_hlt += frac.seat_amt;
+		total_seats += frac.seatAmt;
+		if (getHighlighted().includes(frac.party.id)) total_hlt += frac.seatAmt;
 	}
 
 	string += `</tbody>`;
@@ -81,79 +81,79 @@ function seat_dist_table() {
 // generate the table of parties that have left parliament if available
 function left_parl_table() {
 	// find parties that left parliament
-	let parliament = S.ori_plm;
-	let fracs = [...S.ord_tab];
-	let left_plm = [];
-	const prev_idx = (S.cur_tml.parliaments.indexOf(parliament) + 1);
-	const prev_parl = S.cur_tml.parliaments[prev_idx];
+	let parliament = S.originalParliament;
+	let fracs = [...S.ordTab];
+	let leftParliament = [];
+	const prev_idx = (S.currentTimeline.parliaments.indexOf(parliament) + 1);
+	const prev_parl = S.currentTimeline.parliaments[prev_idx];
 	if (prev_parl) {
-		const curr_party_names = new Set(S.cur_plm.fractions.map(f => f.party.name));
-		left_plm = prev_parl.fractions
+		const curr_party_names = new Set(S.currentParliament.fractions.map(f => f.party.name));
+		leftParliament = prev_parl.fractions
 			.filter(f => !curr_party_names.has(f.party.name))
-			.filter(f => !fracs.some(x => x.party.established === parliament.description && x.party.founded_by?.includes(f.party.id)))
+			.filter(f => !fracs.some(x => x.party.established === parliament.description && x.party.foundedBy?.includes(f.party.id)))
 			.map(f => f.party);
 	} else {
-		left_plm = [];
+		leftParliament = [];
 	}
-	if (left_plm.length) {
+	if (leftParliament.length) {
 		let left_string = '<h2>&#8618; Left Parliament</h2>';
 		left_string += '<table><tr><th class="col_l">Party</th><th class="col_m">Full Name</th><th class="col_r">Seats</th></tr>';
-		for (const party of left_plm) {
+		for (const party of leftParliament) {
 			left_string += '<tr>';
 			left_string += `<td>${party.name}</td>`;
 			left_string += `<td>${party.fullname}</td>`;
 			const prev_frac = prev_parl.fractions.find(f => f.party.name === party.name);
-			left_string += `<td>0 (<span class="red">&#9660;${prev_frac ? prev_frac.seat_amt : 0}</span>)</td>`;
+			left_string += `<td>0 (<span class="red">&#9660;${prev_frac ? prev_frac.seatAmt : 0}</span>)</td>`;
 			left_string += '</tr>';
 		}
 		left_string += '</table>';
-		document.getElementById("left_plm").innerHTML = left_string;
+		document.getElementById("leftParliament").innerHTML = left_string;
 	} else {
-		document.getElementById("left_plm").innerHTML = '';
+		document.getElementById("leftParliament").innerHTML = '';
 	}
 }
 
 
 // generate the table indicating party mergers, rebrands and splits
 function changes_table() { 
-	const parliament = S.ori_plm;
-	const fracs = [...S.ord_tab];
+	const parliament = S.originalParliament;
+	const fracs = [...S.ordTab];
 	let str = "";
 	for (const frac of fracs) {
 		const party = frac.party;
 		if (party.established !== parliament.description) {
 			continue;
 		}
-		if (party.founded_by?.length === 1 && !party.split_from) {
+		if (party.foundedBy?.length === 1 && !party.splitFrom) {
 			// case 1: single party rebranded
 			str += '<tr>';
 			str += `<td>${party.name}</td>`;
 			str += '<td>Rebranded from</td>';
-			str += `<td>${S.cur_tml.parties[party.founded_by[0]].name}</td>`;
+			str += `<td>${S.currentTimeline.parties[party.foundedBy[0]].name}</td>`;
 			str += '</tr>';
 		}
-		if (party.founded_by?.length > 1 && !party.split_from) {
+		if (party.foundedBy?.length > 1 && !party.splitFrom) {
 			// case 2: parties merged
 			str += '<tr>';
 			str += `<td>${party.name}</td>`;
 			str += '<td>Merged from</td>';
-			str += `<td>${party.founded_by.map(p => S.cur_tml.parties[p].name).join(', ')}</td>`;
+			str += `<td>${party.foundedBy.map(p => S.currentTimeline.parties[p].name).join(', ')}</td>`;
 			str += '</tr>';
 		}
-		if (party.split_from && !party.founded_by) {
+		if (party.splitFrom && !party.foundedBy) {
 			// case 3: party split
 			str += '<tr>';
 			str += `<td>${party.name}</td>`;
 			str += '<td>Split from</td>';
-			str += `<td>${party.split_from.map(p => S.cur_tml.parties[p].name).join(', ')}</td>`;
+			str += `<td>${party.splitFrom.map(p => S.currentTimeline.parties[p].name).join(', ')}</td>`;
 			str += '</tr>';
 		}
-		if (party.split_from && party.founded_by) {
+		if (party.splitFrom && party.foundedBy) {
 			// case 4: split & merge
 			str += '<tr>';
 			str += `<td>${party.name}</td>`;
 			str += '<td>Split & Merged from</td>';
-			str += `<td>${[...party.split_from, ...party.founded_by].map(p => S.cur_tml.parties[p].name).join(', ')}</td>`;
+			str += `<td>${[...party.splitFrom, ...party.foundedBy].map(p => S.currentTimeline.parties[p].name).join(', ')}</td>`;
 			str += '</tr>';
 		}
 	}
@@ -162,46 +162,46 @@ function changes_table() {
 		full_str += '<table><tr><th class="col_l">New party</th><th class="col_m">How</th><th class="col_r">Previously</th></tr>';
 		full_str += str;
 		full_str += '</table>';
-		document.getElementById("party_changes").innerHTML = full_str;
+		document.getElementById("partyChanges").innerHTML = full_str;
 	} else {
-		document.getElementById("party_changes").innerHTML = '';
+		document.getElementById("partyChanges").innerHTML = '';
 	}
 }
 
 // generate an editable seat table for the current parliament object
-function table_edit_mode() {
-	let parliament = S.ori_plm;
+function table_editMode() {
+	let parliament = S.originalParliament;
 	let string = "";
 	let total_seats = 0;
 	let total_hlt = 0;
 	string += `<table class="sortable">`;
 	string += `<thead>`
 	
-	let fracs = [...S.ord_tab];
+	let fracs = [...S.ordTab];
 	
 	string += '<tr>';
 	string += '<th class="col_l">Party</th>';
-    string += '<th class="col_m">Full Name</th>';
-    string += '<th class="col_r">Seats</th>';
-    string += '</tr>';
+	string += '<th class="col_m">Full Name</th>';
+	string += '<th class="col_r">Seats</th>';
+	string += '</tr>';
 
 	string += `</thead><tbody>`;
 
-    // write all table HTML to a string
+	// write all table HTML to a string
 	for (let i in fracs) {
 		i = Number(i);
-        const frac = fracs[i];
+		const frac = fracs[i];
 
 		// find difference
 		let diff = 0;
-		const prevIdx = (S.cur_tml.parliaments.indexOf(parliament) + 1);
-		const prevParl = S.cur_tml.parliaments[prevIdx];
+		const prevIdx = (S.currentTimeline.parliaments.indexOf(parliament) + 1);
+		const prevParl = S.currentTimeline.parliaments[prevIdx];
 		if (prevParl) {
 			const prevFrac = prevParl.fractions.find(f => f.party.name === frac.party.name);
-			diff = prevFrac ? frac.seat_amt - prevFrac.seat_amt : frac.seat_amt;
+			diff = prevFrac ? frac.seatAmt - prevFrac.seatAmt : frac.seatAmt;
 		}
 		
-		if (diff == frac.seat_amt) {
+		if (diff == frac.seatAmt) {
 			diff = `<span class="greener">&#9650;${diff}</span>`;
 		} else if (diff > 0) {
 			diff = '<span class="green">&#9650;' + diff + '</span>';
@@ -217,10 +217,10 @@ function table_edit_mode() {
 		string += `<tr ${id} class="tablerow">`;
 		string += "<td>" + frac.party.name + "</td>";
 		string += "<td>" + frac.party.fullname + "</td>";
-		string += `<td><input name="${frac.party.id}" type="number" value="${frac.seat_amt}" min="0" max="10000"></td>`;
+		string += `<td><input name="${frac.party.id}" type="number" value="${frac.seatAmt}" min="0" max="10000"></td>`;
 
-		total_seats += frac.seat_amt;
-		if (get_highlighted().includes(frac.party.id)) total_hlt += frac.seat_amt;
+		total_seats += frac.seatAmt;
+		if (getHighlighted().includes(frac.party.id)) total_hlt += frac.seatAmt;
 	}
 
 	string += `</tbody>`;
@@ -229,7 +229,7 @@ function table_edit_mode() {
 	
 	// insert HTML string into document
 	document.getElementById("table").innerHTML = string;
-	document.getElementById("left_plm").innerHTML = '';
+	document.getElementById("leftParliament").innerHTML = '';
 
 	make_table_sortable();
 }
@@ -255,21 +255,21 @@ function make_table_sortable() {
 		helper: fix_width,  // keeps the row from collapsing while dragging
 		cursor: "move",
 		update: function(event, ui) {
-			// sort S.ord_tab to match the new table order
+			// sort S.ordTab to match the new table order
 			const new_order = [...event.target.childNodes].map(x => x.id);
-			S.ord_tab.sort((a, b) => { return new_order.indexOf(a.party.id) - new_order.indexOf(b.party.id) });
+			S.ordTab.sort((a, b) => { return new_order.indexOf(a.party.id) - new_order.indexOf(b.party.id) });
 		}
 	}).disableSelection();
 }
 
 // update table footer with seat totals and minority/majority stats
-export function update_table_footer() {
+export function updateTableFooter() {
 	const footer = document.getElementById("footer");
-	const total_seats = S.cur_plm.seat_amt();
+	const total_seats = S.currentParliament.seatAmt();
 	let total_hlt = 0;
-	for (const frac of S.cur_plm.fractions)
-		if (is_highlighted(frac.party.id))
-			total_hlt += frac.seat_amt;
+	for (const frac of S.currentParliament.fractions)
+		if (isHighlighted(frac.party.id))
+			total_hlt += frac.seatAmt;
 	let string = "";
 	
 	string += '<th>Total</th>';
@@ -292,14 +292,14 @@ export function update_table_footer() {
 }
 
 // set the correct rows of the table as highlighted
-export function table_highlight() {
+export function tableHighlight() {
 	document.querySelectorAll("tr.highlighted").forEach(row => {
 		row.classList.remove("highlighted");
 	});
 
-	for (const frac of S.cur_plm.fractions) {
+	for (const frac of S.currentParliament.fractions) {
 		const pid = frac.party.id;
-		if (!is_highlighted(pid)) continue;
+		if (!isHighlighted(pid)) continue;
 		const hl_row = document.getElementById(pid);
 		if (hl_row && hl_row.tagName === 'TR') {
 			hl_row.classList.add("highlighted");
@@ -308,39 +308,39 @@ export function table_highlight() {
 }
 
 // update all buttons enabled/disabled based on context
-export function update_buttons() {
-	const btn_edit = document.getElementById("btn_edit");
-	const btn_add = document.getElementById("btn_add");
-	const btn_del = document.getElementById("btn_del");
-	const btn_left = document.getElementById("btn_left");
-	const btn_right = document.getElementById("btn_right");
-	const btn_sort = document.getElementById("btn_sort");
+export function updateButtons() {
+	const btnEdit = document.getElementById("btnEdit");
+	const btnAdd = document.getElementById("btnAdd");
+	const btnDelete = document.getElementById("btnDelete");
+	const btnLeft = document.getElementById("btnLeft");
+	const btnRight = document.getElementById("btnRight");
+	const btnSort = document.getElementById("btnSort");
 
-	if (S.edit_mode) {
-		btn_edit.style.backgroundColor = "#488cae";
-		btn_add.disabled = false;
-		btn_sort.disabled = false;
-		btn_left.disabled = (S.cur_hlt.length != 1);
-		btn_right.disabled = (S.cur_hlt.length != 1);
-		btn_del.disabled = (S.cur_hlt.length == 0);
+	if (S.editMode) {
+		btnEdit.style.backgroundColor = "#488cae";
+		btnAdd.disabled = false;
+		btnSort.disabled = false;
+		btnLeft.disabled = (S.currentHighlight.length != 1);
+		btnRight.disabled = (S.currentHighlight.length != 1);
+		btnDelete.disabled = (S.currentHighlight.length == 0);
 	} else {
-		btn_edit.style.backgroundColor = "#483d8b";
-		btn_add.disabled = true;
-		btn_del.disabled = true;
-		btn_left.disabled = true;
-		btn_right.disabled = true;
-		btn_sort.disabled = true;
+		btnEdit.style.backgroundColor = "#483d8b";
+		btnAdd.disabled = true;
+		btnDelete.disabled = true;
+		btnLeft.disabled = true;
+		btnRight.disabled = true;
+		btnSort.disabled = true;
 	}
 }
 
 // update all sidebar info
-export function update_sidebar() {
-	if (S.edit_mode) {
-		table_edit_mode();
+export function updateSidebar() {
+	if (S.editMode) {
+		table_editMode();
 	} else {
 		build_sidebar();
 	}
-	table_highlight();
-	update_table_footer();
-	update_buttons();
+	tableHighlight();
+	updateTableFooter();
+	updateButtons();
 }

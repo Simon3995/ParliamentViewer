@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>JSON Editor</title>
-        <link rel="stylesheet" href="./style.css">
-    </head>
-    <body>
-        <div class="sticky">
-            <button onclick="exportJSON()">EXPORT JSON</button>
-             --- Import JSON: <input type="file" id="import" autocomplete="off">
-        </div>
+	<head>
+		<title>JSON Editor</title>
+		<link rel="stylesheet" href="./style.css">
+	</head>
+	<body>
+		<div class="sticky">
+			<button onclick="exportJSON()">EXPORT JSON</button>
+				--- Import JSON: <input type="file" id="import" autocomplete="off">
+		</div>
 
-        <br>
+		<br>
 
-        <h1>GENERAL INFO</h1>
-        <p class="row"><label>Name: </label><input placeholder="e.g. nl_tweedekamer" id="name" autocomplete="off"></p>
-        <p class="row"><label>Title: </label><input placeholder="e.g. Tweede Kamer" id="title" autocomplete="off"></p>
-        <p class="row"><label>Country: </label><input placeholder="e.g. Netherlands" id="country" autocomplete="off"></p>
-        <br>
+		<h1>GENERAL INFO</h1>
+		<p class="row"><label>Name: </label><input placeholder="e.g. nl_tweedekamer" id="name" autocomplete="off"></p>
+		<p class="row"><label>Title: </label><input placeholder="e.g. Tweede Kamer" id="title" autocomplete="off"></p>
+		<p class="row"><label>Country: </label><input placeholder="e.g. Netherlands" id="country" autocomplete="off"></p>
+		<br>
 
-        <h1>PARTIES</h1>
-        <div id="parties"></div>
-        <button onclick="add_party()">ADD PARTY</button>
-        <br><br>
+		<h1>PARTIES</h1>
+		<div id="parties"></div>
+		<button onclick="addParty()">ADD PARTY</button>
+		<br><br>
 
-        <h1>PARLIAMENTS</h1>
-        <div id="parliaments"></div>
-        <button onclick="add_plm()">ADD PARLIAMENT</button>
-        <br><br>
-    </body>
+		<h1>PARLIAMENTS</h1>
+		<div id="parliaments"></div>
+		<button onclick="add_plm()">ADD PARLIAMENT</button>
+		<br><br>
+	</body>
 </html>
 
 <script src="./main.js"></script>
