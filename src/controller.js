@@ -98,7 +98,7 @@ $(document).on("click", "tbody tr", function(e) {
 });
 
 function show_sidebar() {
-	document.getElementById("sidebar_hidden").style.display = "inline-block";
+	document.getElementById("sidebar").style.display = "inline-block";
 	document.getElementById("welcome").style.display = "none";
 	document.getElementById("plm_selector").appendChild(document.getElementById("select-timeline"));
 }
