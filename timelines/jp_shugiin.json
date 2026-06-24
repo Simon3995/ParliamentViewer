@@ -1,0 +1,134 @@
+{
+ "name": "jp_shugiin",
+ "title": "Shūgiin",
+ "country": "Japan",
+ "parties": {
+  "ldp": {
+   "name": "LDP",
+   "fullname": "自由民主党",
+   "fullname_rm": "Jiyū-Minshutō",
+   "fullname_en": "Liberal Democratic Party",
+   "color": "#d7003a",
+   "image": "/logos/jp/ldp.png"
+  },
+  "cra": {
+   "name": "CRA",
+   "fullname": "中道改革連合",
+   "fullname_rm": "Chūdō Kaikaku Rengō",
+   "fullname_en": "Centrist Reform Alliance",
+   "color": "#2161c0",
+   "image": "/logos/jp/cra.png"
+  },
+  "dpp": {
+   "name": "DPP",
+   "fullname": "国民民主党",
+   "fullname_rm": "Kokumin Minshu-tō",
+   "fullname_en": "Democratic Party For the People",
+   "color": "#ffc300",
+   "image": "/logos/jp/dpp.png"
+  },
+  "jip": {
+   "name": "JIP",
+   "fullname": "日本維新の会",
+   "fullname_rm": "Nippon Ishin no Kai",
+   "fullname_en": "Japan Innovation Party",
+   "color": "#a3e734",
+   "image": "/logos/jp/jip.png"
+  },
+  "diy": {
+   "name": "DIY",
+   "fullname": "参政党",
+   "fullname_rm": "Sanseitō",
+   "fullname_en": "Party of Do It Yourself",
+   "color": "#ee7300",
+   "image": "/logos/jp/diy.png"
+  },
+  "tm": {
+   "name": "TM",
+   "fullname": "チームみらい",
+   "fullname_rm": "Chīmu Mirai",
+   "fullname_en": "Team Mirai",
+   "color": "#7bedce",
+   "image": "/logos/jp/tm.png"
+  },
+  "jcp": {
+   "name": "JCP",
+   "fullname": "日本共産党",
+   "fullname_rm": "Nihon Kyōsan-tō",
+   "fullname_en": "Japanese Communist Party",
+   "color": "#ff0071",
+   "image": "/logos/jp/jcp.png"
+  },
+  "rs": {
+   "name": "RS",
+   "fullname": "れいわ新選組",
+   "fullname_rm": "Reiwa Shinsengumi",
+   "fullname_en": "Reiwa Shinsengumi",
+   "color": "#f9007b",
+   "image": "/logos/jp/rs.png"
+  },
+  "tcjya": {
+   "name": "TCJ-YA",
+   "fullname": "減税日本・ゆうこく連合",
+   "fullname_rm": "Genzei Nippon Yūkoku Rengō",
+   "fullname_en": "Tax Cuts Japan and Yukoku Alliance",
+   "color": "#18378a",
+   "image": "/logos/jp/tcjya.png"
+  },
+  "ind": {
+   "name": "Ind",
+   "fullname": "Independent",
+   "fullname_en": "Independent",
+   "color": "#9a9996"
+  }
+ },
+ "parliaments": [
+  {
+   "name": "2026 General Election",
+   "date": "2026-02-08",
+   "fractions": [
+    {
+     "id": "jcp",
+     "seats": 4
+    },
+    {
+     "id": "rs",
+     "seats": 1
+    },
+    {
+     "id": "tm",
+     "seats": 11
+    },
+    {
+     "id": "cra",
+     "seats": 49
+    },
+    {
+     "id": "tcjya",
+     "seats": 1
+    },
+    {
+     "id": "jip",
+     "seats": 36
+    },
+    {
+     "id": "dpp",
+     "seats": 28
+    },
+    {
+     "id": "ldp",
+     "seats": 316
+    },
+    {
+     "id": "diy",
+     "seats": 15
+    },
+    {
+     "id": "ind",
+     "seats": 4
+    }
+   ],
+   "source": "https://www.soumu.go.jp/main_content/001055230.pdf"
+  }
+ ]
+}
