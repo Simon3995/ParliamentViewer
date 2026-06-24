@@ -1,0 +1,184 @@
+{
+ "name": "it_cameradeideputati",
+ "title": "Camera dei Deputati",
+ "country": "Italy",
+ "parties": {
+  "fdi": {
+   "name": "FdI",
+   "fullname": "Fratelli d'Italia",
+   "fullname_rm": "",
+   "fullname_en": "Brothers of Italy",
+   "color": "#03386a",
+   "image": "/logos/it/fdi.png"
+  },
+  "lega": {
+   "name": "Lega",
+   "fullname": "Lega per Salvini Premier",
+   "fullname_rm": "",
+   "fullname_en": "League for Salvini Premier",
+   "color": "#eefa00",
+   "image": "/logos/it/lega.png"
+  },
+  "fi": {
+   "name": "FI",
+   "fullname": "Forza Italia",
+   "fullname_rm": "",
+   "fullname_en": "Forward Italy",
+   "color": "#00a840",
+   "image": "/logos/it/fi.png"
+  },
+  "nm": {
+   "name": "NM",
+   "fullname": "Noi moderati",
+   "fullname_rm": "",
+   "fullname_en": "Us Moderates",
+   "color": "#24115e",
+   "image": "/logos/it/nm.png"
+  },
+  "pdidp": {
+   "name": "PD-IDP",
+   "fullname": "Partito Democratico – Italia Democratica e Progressista",
+   "fullname_rm": "",
+   "fullname_en": "Democratic Party - Democratic and Progressive Italy",
+   "color": "#f30000",
+   "image": "/logos/it/pdidp.png"
+  },
+  "avs": {
+   "name": "AVS",
+   "fullname": "Alleanza Verdi e Sinistra",
+   "fullname_rm": "",
+   "fullname_en": "Greens and Left Alliance",
+   "color": "#ff0023",
+   "image": "/logos/it/avs.png"
+  },
+  "peu": {
+   "name": "+Eu",
+   "fullname": "Più Europa",
+   "fullname_rm": "",
+   "fullname_en": "More Europe",
+   "color": "#ffbf00",
+   "image": "/logos/it/peu.png"
+  },
+  "ic": {
+   "name": "IC",
+   "fullname": "Impegno Civico",
+   "fullname_rm": "",
+   "fullname_en": "Civic Commitment",
+   "color": "#1e889d",
+   "image": "/logos/it/ic.png"
+  },
+  "m5s": {
+   "name": "M5S",
+   "fullname": "Movimento 5 Stelle",
+   "fullname_rm": "",
+   "fullname_en": "Five Star Movement",
+   "color": "#f50000",
+   "image": "/logos/it/m5s.png"
+  },
+  "aiv": {
+   "name": "A-IV",
+   "fullname": "Azione – Italia Viva",
+   "fullname_rm": "",
+   "fullname_en": "Action – Italia Viva",
+   "color": "#243683",
+   "image": "/logos/it/aiv.png"
+  },
+  "svp": {
+   "name": "SVP",
+   "fullname": "Südtiroler Volkspartei",
+   "fullname_rm": "",
+   "fullname_en": "South Tyrolean People's Party",
+   "color": "#231f20",
+   "image": "/logos/it/svp.png"
+  },
+  "scn": {
+   "name": "ScN",
+   "fullname": "Sud chiama Nord",
+   "fullname_rm": "",
+   "fullname_en": "South calls North",
+   "color": "#ffd533",
+   "image": "/logos/it/scn.png"
+  },
+  "vda": {
+   "name": "VdA",
+   "fullname": "Vallée d'Aoste",
+   "fullname_rm": "",
+   "fullname_en": "Aosta Valley",
+   "color": "#8bc3e6",
+   "image": "/logos/it/vda.png"
+  },
+  "maie": {
+   "name": "MAIE",
+   "fullname": "Movimento Associativo Italiani all'Estero",
+   "fullname_rm": "",
+   "fullname_en": "Associative Movement of Italians Abroad",
+   "color": "#333b8e",
+   "image": "/logos/it/maie.png"
+  }
+ },
+ "parliaments": [
+  {
+   "name": "2022 General Election",
+   "date": "2022-09-25",
+   "fractions": [
+    {
+     "id": "avs",
+     "seats": 12
+    },
+    {
+     "id": "pdidp",
+     "seats": 69
+    },
+    {
+     "id": "peu",
+     "seats": 2
+    },
+    {
+     "id": "ic",
+     "seats": 1
+    },
+    {
+     "id": "vda",
+     "seats": 1
+    },
+    {
+     "id": "aiv",
+     "seats": 21
+    },
+    {
+     "id": "svp",
+     "seats": 3
+    },
+    {
+     "id": "scn",
+     "seats": 1
+    },
+    {
+     "id": "m5s",
+     "seats": 52
+    },
+    {
+     "id": "maie",
+     "seats": 1
+    },
+    {
+     "id": "nm",
+     "seats": 7
+    },
+    {
+     "id": "fi",
+     "seats": 45
+    },
+    {
+     "id": "lega",
+     "seats": 66
+    },
+    {
+     "id": "fdi",
+     "seats": 119
+    }
+   ],
+   "source": "https://elezionistorico.interno.gov.it/index.php?tpel=C&dtel=25/09/2022&es0=S&tpa=I&lev0=0&levsut0=0&ms=S&tpe=A"
+  }
+ ]
+}
