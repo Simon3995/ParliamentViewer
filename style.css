@@ -280,6 +280,10 @@ button:active:enabled {
 	margin: auto 0;
 }
 
+#selectTimeline {
+	width: 100%;
+}
+
 @media (max-width: 500px) {
 	.navbar {
 		flex-wrap: wrap;
@@ -294,7 +298,6 @@ button:active:enabled {
 }
 
 select {
-	width: 100%;
 	min-width: 0;
 	padding: 1px 3px;
 	font-size: 16px;

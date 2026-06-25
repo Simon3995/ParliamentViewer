@@ -1,7 +1,7 @@
 import { S, scheduleFrame } from "./main.js";
 import { c, ctx, resizeCanvas, transformCtx, RES_MULT } from "./canvas.js";
 import { loadParliament, loadTimeline } from "./loading.js";
-import { tableHighlight, updateTableFooter, updateButtons } from "./sidebar.js";
+import { tableHighlight, updateTableFooter, updateButtons, updateSidebar } from "./sidebar.js";
 import { addParty, cancelAddParty, deleteHighlight, movePartyLeft, movePartyRight, resetParliament, showAddMenu, sortTableBySeats, toggleEditMode } from "./editing.js";
 import { setSpanAngle, setInnerRadius } from "./geometry.js";
 import { getQueryParam, setQueryParam } from "./query.js";
@@ -221,6 +221,10 @@ document.getElementById("innerRadius").onchange = function(e) {
 
 document.getElementById("selectAncestors").onchange = function(e) {
 	S.selectAncestors = document.getElementById("selectAncestors").checked;
+}
+
+document.getElementById("partyLang").onchange = function(e) {
+	updateSidebar();
 }
 
 // go to previous parliament in the timeline
