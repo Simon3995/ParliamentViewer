@@ -45,7 +45,7 @@ export async function loadTimeline(name) {
 	// construct list of parties
 	for (const partyId in data.parties) {
 		const pdata = data.parties[partyId];
-		const party = new Party(pdata.name, pdata.fullname, partyId, pdata.color, new Image(), pdata.established, pdata.foundedBy, pdata.splitFrom);
+		const party = new Party(pdata.name, pdata.fullname, pdata.fullname_rm, pdata.fullname_en, partyId, pdata.color, new Image(), pdata.established, pdata.foundedBy, pdata.splitFrom);
 		image_promises.push(loadImage(party, pdata.image));
 		S.currentTimeline.parties[partyId] = party;
 	}

@@ -204,9 +204,15 @@ export class Fraction {
 
 // a class for a political party, independent of year or election
 export class Party {
-	constructor(name, fullname, id, color = "#000000", image = null, established = null, foundedBy = null, splitFrom = null) {
+	#fullname;
+	#fullname_rm;
+	#fullname_en;
+
+	constructor(name, fullname, fullname_rm, fullname_en, id, color = "#000000", image = null, established = null, foundedBy = null, splitFrom = null) {
 		this.name = name;
-		this.fullname = fullname;
+		this.#fullname = fullname;
+		this.#fullname_rm = fullname_rm;
+		this.#fullname_en = fullname_en;
 		this.id = id;
 		this.color = color;
 		this.image = image;
@@ -217,6 +223,20 @@ export class Party {
 
 	// clone this party without reference to the original
 	clone() {
-		return new Party(this.name, this.fullname, this.id, this.color, this.image, this.established, this.foundedBy, this.splitFrom);
+		return new Party(this.name, this.#fullname, this.#fullname_rm, this.#fullname_en, this.id, this.color, this.image, this.established, this.foundedBy, this.splitFrom);
+	}
+
+	get fullname() {
+		const lang = document.getElementById("partyLang").value;
+		switch (lang) {
+			case "fullname":
+				return this.#fullname || this.#fullname_en;
+			case "fullname_en":
+				return this.#fullname_en || this.#fullname;
+			case "fullname_rm":
+				return this.#fullname_rm || this.#fullname || this.#fullname_en;
+			default:
+				throw("Invalid party name language");
+		}
 	}
 }
