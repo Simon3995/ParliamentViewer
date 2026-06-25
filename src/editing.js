@@ -64,7 +64,7 @@ export function addParty() {
 	while (S.currentTimeline.parties[id+num]) num++;
 
 	// apply
-	const new_party = new Party(addShortname, addFullname, id+num, addColor, new Image());
+	const new_party = new Party(addShortname, addFullname, addFullname, addFullname, id+num, addColor, new Image());
 	S.currentTimeline.parties[id+num] = new_party;
 	const new_frac = new Fraction(new_party, 1);
 	S.ordTab.push(new_frac);
