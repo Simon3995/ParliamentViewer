@@ -6,7 +6,7 @@
   "ldp": {
    "name": "LDP",
    "fullname": "自由民主党",
-   "fullname_rm": "Jiyū-Minshutō",
+   "fullname_rm": "Jiyū Minshutō",
    "fullname_en": "Liberal Democratic Party",
    "color": "#d7003a",
    "image": "/logos/jp/ldp.png"
@@ -17,12 +17,16 @@
    "fullname_rm": "Chūdō Kaikaku Rengō",
    "fullname_en": "Centrist Reform Alliance",
    "color": "#2161c0",
-   "image": "/logos/jp/cra.png"
+   "image": "/logos/jp/cra.png",
+   "foundedBy": [
+    "cdp",
+    "komei"
+   ]
   },
   "dpp": {
    "name": "DPP",
    "fullname": "国民民主党",
-   "fullname_rm": "Kokumin Minshu-tō",
+   "fullname_rm": "Kokumin Minshutō",
    "fullname_en": "Democratic Party For the People",
    "color": "#ffc300",
    "image": "/logos/jp/dpp.png"
@@ -78,8 +82,38 @@
   "ind": {
    "name": "Ind",
    "fullname": "Independent",
+   "fullname_rm": "",
    "fullname_en": "Independent",
-   "color": "#9a9996"
+   "color": "#9a9996",
+   "image": ""
+  },
+  "cdp": {
+   "name": "CDP",
+   "fullname": "立憲民主党",
+   "fullname_rm": "Rikken Minshutō",
+   "fullname_en": "Constitutional Democratic Party of Japan",
+   "color": "#03598d"
+  },
+  "komei": {
+   "name": "Komei",
+   "fullname": "公明党",
+   "fullname_rm": "Kōmeitō",
+   "fullname_en": "Komeito",
+   "color": "#ff80c0"
+  },
+  "sdp": {
+   "name": "SDP",
+   "fullname": "社会民主党",
+   "fullname_rm": "Shakai Minshutō",
+   "fullname_en": "Social Democratic Party",
+   "color": "#42a0ff"
+  },
+  "cpj": {
+   "name": "CPJ",
+   "fullname": "日本保守党",
+   "fullname_rm": "Nippon Hoshutō",
+   "fullname_en": "Conservative Party of Japan",
+   "color": "#0080ff"
   }
  },
  "parliaments": [
@@ -129,6 +163,100 @@
     }
    ],
    "source": "https://www.soumu.go.jp/main_content/001055230.pdf"
+  },
+  {
+   "name": "2024 General Election",
+   "date": "2024-10-27",
+   "fractions": [
+    {
+     "id": "jcp",
+     "seats": 8
+    },
+    {
+     "id": "rs",
+     "seats": 9
+    },
+    {
+     "id": "sdp",
+     "seats": 1
+    },
+    {
+     "id": "komei",
+     "seats": 24
+    },
+    {
+     "id": "cdp",
+     "seats": 148
+    },
+    {
+     "id": "jip",
+     "seats": 38
+    },
+    {
+     "id": "dpp",
+     "seats": 28
+    },
+    {
+     "id": "ldp",
+     "seats": 191
+    },
+    {
+     "id": "diy",
+     "seats": 3
+    },
+    {
+     "id": "cpj",
+     "seats": 3
+    },
+    {
+     "id": "ind",
+     "seats": 12
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2024_Japanese_general_election"
+  },
+  {
+   "name": "2021 General Election",
+   "date": "2021-10-31",
+   "fractions": [
+    {
+     "id": "jcp",
+     "seats": 10
+    },
+    {
+     "id": "rs",
+     "seats": 3
+    },
+    {
+     "id": "sdp",
+     "seats": 1
+    },
+    {
+     "id": "komei",
+     "seats": 32
+    },
+    {
+     "id": "cdp",
+     "seats": 96
+    },
+    {
+     "id": "jip",
+     "seats": 41
+    },
+    {
+     "id": "dpp",
+     "seats": 11
+    },
+    {
+     "id": "ldp",
+     "seats": 259
+    },
+    {
+     "id": "ind",
+     "seats": 12
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2021_Japanese_general_election"
   }
  ]
 }
