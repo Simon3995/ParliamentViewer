@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Info | Parliament Viewer</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="main">
+			<p><a href="/"><-- Return to Parliament Viewer</a></p>
+			<h1>Parliament Viewer - Info</h1>
+
+			<h2>What is Parliament Viewer?</h2>
+			<img src="./imgs/tweedekamer.png">
+			<p>Parliament Viewer is a tool to visualise current and historical seat distributions of various parliaments, senates, congresses, and other political bodies from around the world.</p>
+			<p>Features include:</p>
+			<ul>
+				<li>Majority checking - Select one or more parties in the chart or in the table, and see whether these parties together have a majority of seats</li>
+				<li>Historical seat distributions - Use the previous/next buttons to flip through a timeline of different election results</li>
+				<li>Edit mode - Create and view hypothetical results by changing seat amounts, party order, and adding/removing parties</li>
+			</ul>
+
+			<h2>How do I use it?</h2>
+			<h3>Navigation</h3>
+			<img src="./imgs/nav.png">
+			<p>Select a parliament timeline from the dropdown menu. Each of these corresponds to a specific political governing body, like the US House of Representatives or the UK House of Commons.</p>
+			<p>The left and right arrows next to the dropdown menu move you through time. Left for the previous election result, right for the next. The double arrows take you all the way to the start or end of the timeline. The data may be incomplete; hitting the limit of election data included in Parliament Viewer does not necessarily mean that there is no more data.</p>
+
+			<h3>Selecting Parties</h3>
+			<img src="./imgs/tweedekamer_select.png">
+			<p>To select a party, click one of its seats in the diagram, or click its name in the table. Multiple parties can be selected at the same time this way. To deselect a party, click it again. To deselect all parties, click somewhere outside the diagram.</p>
+			<img src="./imgs/minority.png">
+			<p>When you've selected at least one party, the bottom of the table shows the total added seat count of the selected parties, and whether those parties together hold a minority, half, or majority of the seats.</p>
+
+			<h3>Edit Mode</h3>
+			<img src="/icons/edit.svg">
+			<p>By clicking the pencil icon below the party table, you can edit the parties and their seat counts, e.g. to simulate a hypothetical election result.</p>
+			<img src="./imgs/dragging.png" style="height:500px">
+			<p>When edit mode is active, parties in the table can be dragged and reordered, and their seat counts can now be edited. Aside from the pencil icon, there are six other buttons in edit mode:</p>
+			<table>
+				<tr>
+					<td><img class="icon" src="/icons/edit.svg"></td>
+					<td>Toggles edit mode on and off.</td>
+				</tr>
+				<tr>
+					<td><img class="icon" src="/icons/reset.svg"></td>
+					<td>Discards all changes made in edit mode.</td>
+				</tr>
+				<tr>
+					<td><img class="icon" src="/icons/add.svg"></td>
+					<td>Brings up the party adding menu, which allows adding a custom party.</td>
+				</tr>
+				<tr>
+					<td><img class="icon" src="/icons/delete.svg"></td>
+					<td>Deletes all currently selected parties.</td>
+				</tr> 
+				<tr>
+					<td><img class="icon" src="/icons/left.svg"></td>
+					<td>Moves the party to the left in the diagram by swapping it with its left neighbour (if it exists).</td>
+				</tr>
+				<tr>
+					<td><img class="icon" src="/icons/right.svg"></td>
+					<td>Moves the party to the right in the diagram by swapping it with its right neighbour (if it exists).</td>
+				</tr>
+				<tr>
+					<td><img class="icon" src="/icons/sort.svg"></td>
+					<td>Sorts the table by seat count, in descending order.</td>
+				</tr>
+			</table>
+
+			<h3>Settings</h3>
+			<p>By changing these settings, you can influence the appearance of the diagram and the behaviour of the program:</p>
+			<table>
+				<tr>
+					<td>Diagram inner radius</td>
+					<td>The seat diagram is enclosed between two circular arcs. This setting determines the radius of the inner arc, assuming the outer arc has radius 1.</td>
+					<td>
+						<img src="./imgs/radius_low.png">
+						<img src="./imgs/radius_high.png">
+					</td>
+				</tr>
+				<tr>
+					<td>Diagram span angle</td>
+					<td>This setting determines the span angle (in degrees) of the two circular arcs enclosing the diagram.</td>
+					<td>
+						<img src="./imgs/angle_low.png">
+						<img src="./imgs/angle_high.png">
+					</td>
+				</tr>
+				<tr>
+					<td>Auto-select ancestors</td>
+					<td>If this option is enabled, when a party known to be a rebrand or merger of earlier parties is selected, its ancestors are automatically selected too (which can be seen when moving through the timeline).</td>
+					<td>
+						<img src="./imgs/ancestors_a.png">
+						<img src="./imgs/ancestors_b.png">
+					</td>
+				</tr>
+				<tr>
+					<td>Party name language</td>
+					<td>Determines whether party names are displayed in their own native language or in English. 'Local (Romanized)' only differs from 'Local' for languages not written using the Latin Script.</td>
+				</tr>
+			</table>
+
+			<h2>There's parliaments/data missing!</h2>
+			<p>Yep. This is currently a project we are working on with two people, and there's a <em>lot</em> of election data out there. Have a look at our <a href="https://github.com/Simon3995/ParliamentViewer">GitHub page</a> if you'd like to contribute, whether it's by suggesting new features, reporting bugs, or adding more data!</p>
+			<p>To help contributors (including ourselves), we've made a simple <a href="/tools/jsoneditor/">JSON editor</a> and a <a href="/tools/logomaker/">logo maker</a> specifically for speeding up the process of adding new parties and data.</p>
+		</div>
+	</body>
+</html>

@@ -9,19 +9,20 @@
 @media (max-width: 1000px) {
 	#sidebar {
 		position: relative;
+		width: fit-content;
 		max-width: 800px;
 		padding: 0 20px;
+		margin: 0 auto;
 	}
 
 	#canvas {
 		position: relative;
-		width: 100vw;
+		width: 100%;
 		height: 50vh;
 	}
 
 	body {
 		overflow: auto;
-		text-align: center;
 	}
 
 	#welcome {

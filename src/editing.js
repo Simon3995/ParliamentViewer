@@ -45,7 +45,7 @@ export function movePartyRight() {
 
 // show the dialog for adding a new party
 export function showAddMenu() {
-	document.getElementById("addParty").style.display = "inline-block";
+	document.getElementById("addParty").style.display = "block";
 }
 
 // add a new party to the current parliament
