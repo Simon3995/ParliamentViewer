@@ -310,6 +310,7 @@ export function tableHighlight() {
 // update all buttons enabled/disabled based on context
 export function updateButtons() {
 	const btnEdit = document.getElementById("btnEdit");
+	const btnReset = document.getElementById("btnReset");
 	const btnAdd = document.getElementById("btnAdd");
 	const btnDelete = document.getElementById("btnDelete");
 	const btnLeft = document.getElementById("btnLeft");
@@ -318,18 +319,25 @@ export function updateButtons() {
 
 	if (S.editMode) {
 		btnEdit.style.backgroundColor = "#488cae";
+		btnReset.style.display = "inline-block";
+		btnAdd.style.display = "inline-block";
 		btnAdd.disabled = false;
+		btnSort.style.display = "inline-block";
 		btnSort.disabled = false;
+		btnLeft.style.display = "inline-block";
 		btnLeft.disabled = (S.currentHighlight.length != 1);
+		btnRight.style.display = "inline-block";
 		btnRight.disabled = (S.currentHighlight.length != 1);
+		btnDelete.style.display = "inline-block";
 		btnDelete.disabled = (S.currentHighlight.length == 0);
 	} else {
 		btnEdit.style.backgroundColor = "#483d8b";
-		btnAdd.disabled = true;
-		btnDelete.disabled = true;
-		btnLeft.disabled = true;
-		btnRight.disabled = true;
-		btnSort.disabled = true;
+		btnReset.style.display = "none";
+		btnAdd.style.display = "none";
+		btnDelete.style.display = "none";
+		btnLeft.style.display = "none";
+		btnRight.style.display = "none";
+		btnSort.style.display = "none";
 	}
 }
 
