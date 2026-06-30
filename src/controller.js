@@ -22,6 +22,7 @@ let mouseupFunc = null;
 
 function onClick(btn, fn) {
 	btn.addEventListener('pointerdown', function (e) {
+		if (btn.disabled) return;
 		pressedRect = btn.getBoundingClientRect();
 		mouseupFunc = fn;
 	});
