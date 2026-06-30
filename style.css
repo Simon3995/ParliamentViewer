@@ -153,6 +153,12 @@ hr {
 	font-size: 12pt;
 	filter: drop-shadow(3px 3px 1px #adb5ffa0);
 	user-select: none;
+	cursor: pointer;
+}
+
+#logo a {
+	text-decoration: none;
+	color: white;
 }
 
 .highlighted {
