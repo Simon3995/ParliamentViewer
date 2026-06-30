@@ -99,7 +99,7 @@ $(document).on("click", "tbody tr", function(e) {
 });
 
 function show_sidebar() {
-	document.getElementById("sidebar").style.display = "inline-block";
+	document.getElementById("sidebar").style.display = "block";
 	document.getElementById("welcome").style.display = "none";
 	document.getElementById("parliamentSelector").appendChild(document.getElementById("selectTimeline"));
 }

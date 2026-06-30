@@ -1,0 +1,69 @@
+* {
+	box-sizing: border-box;
+	font-family: Atkinson, sans-serif;
+}
+
+body {
+	background-color: #1b1b23;
+	color: white;
+}
+
+.main {
+	background-color: #ffffff20;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 16px 32px 32px 32px;
+	border-radius: 10px;
+	margin-top: 40px;
+	margin-bottom: 70px;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 8px;
+}
+
+h1 {
+	color: #60c2ff;
+	margin-top: 0px;
+}
+
+h2 {
+	color: #81a3ff;
+}
+
+h3 {
+	color: #b18aff;
+	margin-bottom: 10px;
+}
+
+p, li, td {
+	line-height: 24px;
+	font-size: 18px;
+}
+
+a {
+	color: #ffdc7c;
+}
+
+td {
+	padding: 0px 10px;
+}
+
+td .icon {
+	height: 40px;
+}
+
+@font-face {
+	font-family: Atkinson;
+	src: url(/fonts/AtkinsonHyperlegible-Regular.ttf);
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: Atkinson;
+	src: url(/fonts/AtkinsonHyperlegible-Bold.ttf);
+	font-weight: bold;
+}
