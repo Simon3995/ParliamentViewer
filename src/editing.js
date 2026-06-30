@@ -9,7 +9,13 @@ import { highlight, getHighlighted } from "./controller.js";
 // toggle edit mode on/off and update the sidebar
 export function toggleEditMode() {
 	S.editMode = !S.editMode;
-	if (S.editMode) document.getElementById("title_ps").innerHTML = " (Edited)";
+	if (S.editMode) {
+		// steps to take if edit mode has just been turned on
+		document.getElementById("title_ps").innerHTML = " (Edited)";
+	} else {
+		// steps to take if edit mode has just been disabled
+		cancelAddParty();
+	}
 	document.getElementById("btnReset").disabled = false;
 	document.getElementById("source").innerHTML = "";
 	updateSidebar();
@@ -99,9 +105,11 @@ export function deleteHighlight() {
 export function resetParliament() {
 	document.getElementById("title_ps").innerHTML = "";
 	document.getElementById("btnReset").disabled = true;
+	document.getElementById("btnReset").style.display = "none";
 	S.currentParliament = S.originalParliament.clone();
 	loadParliament(S.currentParliament);
 	S.editMode = false;
+	cancelAddParty();
 	updateSidebar();
 	S.currentParliament.distributeSeats();
 }
