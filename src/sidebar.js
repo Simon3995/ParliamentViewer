@@ -96,7 +96,7 @@ function left_parl_table() {
 		leftParliament = [];
 	}
 	if (leftParliament.length) {
-		let left_string = '<h2>&#8618; Left Parliament</h2>';
+		let left_string = '<h2>&#8618; No longer in parliament</h2>';
 		left_string += '<table><tr><th class="col_l">Party</th><th class="col_m">Full Name</th><th class="col_r">Seats</th></tr>';
 		for (const party of leftParliament) {
 			left_string += '<tr>';
