@@ -10,7 +10,6 @@
    "fullname_en": "BIJ1 (TOGETHER)",
    "color": "#000000",
    "image": "/logos/nl/BIJ1.png",
-   "established": null,
    "splitFrom": [
     "denk"
    ]
@@ -46,7 +45,6 @@
    "fullname_en": "GreenLeft",
    "color": "#00cc00",
    "image": "/logos/nl/GL.png",
-   "established": null,
    "foundedBy": [
     "cpn",
     "psp",
@@ -61,7 +59,6 @@
    "fullname_en": "GreenLeft / Labour Party",
    "color": "#01af40",
    "image": "/logos/nl/GLPvdA.png",
-   "established": null,
    "foundedBy": [
     "pvda",
     "gl"
@@ -74,7 +71,6 @@
    "fullname_en": "Progressive Netherlands",
    "color": "#e82323",
    "image": "/logos/nl/PRO.png",
-   "established": null,
    "foundedBy": [
     "glpvda"
    ]
@@ -86,7 +82,6 @@
    "fullname_en": "Labour Party",
    "color": "#ff0000",
    "image": "/logos/nl/PvdA.png",
-   "established": null,
    "foundedBy": [
     "sdap",
     "vdb",
@@ -100,7 +95,6 @@
    "fullname_en": "DENK (THINK)",
    "color": "#38bfc2",
    "image": "/logos/nl/DENK.png",
-   "established": null,
    "splitFrom": [
     "pvda"
    ]
@@ -128,7 +122,6 @@
    "fullname_en": "Christian Union",
    "color": "#8fd1eb",
    "image": "/logos/nl/CU.png",
-   "established": null,
    "foundedBy": [
     "rpf",
     "gpv"
@@ -149,7 +142,6 @@
    "fullname_en": "Christian-Democratic Appeal",
    "color": "#007c5e",
    "image": "/logos/nl/CDA.png",
-   "established": null,
    "foundedBy": [
     "kvp",
     "chu",
@@ -163,7 +155,6 @@
    "fullname_en": "New Social Contract",
    "color": "#181d57",
    "image": "/logos/nl/NSC.png",
-   "established": null,
    "splitFrom": [
     "cda"
    ]
@@ -183,7 +174,6 @@
    "fullname_en": "People's Party for Freedom and Democracy",
    "color": "#21276a",
    "image": "/logos/nl/VVD.png",
-   "established": null,
    "foundedBy": [
     "pvdv"
    ],
@@ -206,7 +196,6 @@
    "fullname_en": "Right Answer 2021",
    "color": "#21276a",
    "image": "/logos/nl/JA21.png",
-   "established": null,
    "splitFrom": [
     "fvd"
    ]
@@ -226,7 +215,6 @@
    "fullname_en": "Party for Freedom",
    "color": "#82b2ff",
    "image": "/logos/nl/PVV.png",
-   "established": null,
    "splitFrom": [
     "vvd"
    ]
@@ -238,7 +226,6 @@
    "fullname_en": "Markuszower Group",
    "color": "#169793ff",
    "image": "",
-   "established": null,
    "splitFrom": [
     "pvv"
    ]
@@ -258,7 +245,6 @@
    "fullname_en": "Pim Fortuyn List",
    "color": "rgb(18, 74, 158)",
    "image": "/logos/nl/LPF.png",
-   "established": null,
    "splitFrom": [
     "ln"
    ]
@@ -286,7 +272,6 @@
    "fullname_en": "Reformed Political League",
    "color": "#ff7b00",
    "image": "/logos/nl/GPV.png",
-   "established": null,
    "splitFrom": [
     "arp"
    ]
@@ -314,7 +299,6 @@
    "fullname_en": "Centre Democrats",
    "color": "#c9dfff",
    "image": "/logos/nl/CD.png",
-   "established": null,
    "splitFrom": [
     "cp"
    ]
@@ -342,7 +326,6 @@
    "fullname_en": "Political Party of Radicals",
    "color": "#e92f7cff",
    "image": "/logos/nl/PPR.png",
-   "established": null,
    "splitFrom": [
     "kvp"
    ]
@@ -354,7 +337,6 @@
    "fullname_en": "Evangelical People's Party",
    "color": "rgb(240, 176, 0)",
    "image": "",
-   "established": null,
    "foundedBy": [],
    "splitFrom": [
     "cda",
@@ -368,7 +350,6 @@
    "fullname_en": "Communist Party of the Netherlands",
    "color": "#ff0000",
    "image": "/logos/nl/CPN.png",
-   "established": null,
    "foundedBy": [
     "sdp"
    ]
@@ -396,7 +377,6 @@
    "fullname_en": "Democratic Socialists '70",
    "color": "#d40000ff",
    "image": "/logos/nl/DS70.png",
-   "established": null,
    "splitFrom": [
     "pvda"
    ]
@@ -408,7 +388,6 @@
    "fullname_en": "Catholic People's Party",
    "color": "#362511ff",
    "image": "/logos/nl/KVP.png",
-   "established": null,
    "foundedBy": [
     "rksp"
    ]
@@ -460,7 +439,6 @@
    "fullname_en": "Freedom Party",
    "color": "#092447ff",
    "image": "/logos/nl/PvdV.png",
-   "established": null,
    "foundedBy": [
     "vb"
    ]
@@ -472,7 +450,6 @@
    "fullname_en": "Roman Catholic State Party",
    "color": "rgb(187, 90, 0)",
    "image": "",
-   "established": null,
    "foundedBy": [
     "ab"
    ]
@@ -508,7 +485,6 @@
    "fullname_en": "Freedom League",
    "color": "#0d6486ff",
    "image": "",
-   "established": null,
    "foundedBy": [
     "lu",
     "bvl",
@@ -540,7 +516,6 @@
    "fullname_en": "National Farmers', Horticulturists' and Middle Class Party",
    "color": "#79aa4aff",
    "image": "",
-   "established": null,
    "foundedBy": [
     "pb"
    ]
@@ -560,7 +535,6 @@
    "fullname_en": "Roman Catholic People's Party",
    "color": "#802008ff",
    "image": "",
-   "established": null,
    "splitFrom": [
     "ab"
    ]
@@ -588,7 +562,6 @@
    "fullname_en": "Member Keijzer",
    "color": "#378747ff",
    "image": "",
-   "established": null,
    "splitFrom": [
     "bbb"
    ]
@@ -600,7 +573,6 @@
    "fullname_en": "Middle Party for City and Country",
    "color": "#000000FF",
    "image": "",
-   "established": null,
    "foundedBy": [
     "mp"
    ],

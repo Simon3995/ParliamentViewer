@@ -7,7 +7,6 @@ function exportJSON() {
 		const { id, ...rest } = p;
 		if (rest.foundedBy) rest.foundedBy = rest.foundedBy.map(i => parties[i]?.id).filter(Boolean);
 		if (rest.splitFrom) rest.splitFrom = rest.splitFrom.map(i => parties[i]?.id).filter(Boolean);
-		if (rest.established != null) rest.established = plms[rest.established]?.name ?? null;
 		partiesObj[id] = rest;
 	}
 
@@ -114,16 +113,9 @@ function importJSON(text) {
 				id, name: p.name || id,
 				fullname: p.fullname || '', fullname_rm: p.fullname_rm || '',
 				fullname_en: p.fullname_en || '', color: p.color || '#ffffff',
-				image: p.image || '', established: p.established,
+				image: p.image || '', 
 				foundedBy: p.foundedBy, splitFrom: p.splitFrom,
 			}, true);
-		}
-
-		// convert established strings to plm array indices
-		for (const p of Object.values(parties)) {
-			if (!p || !p.established) continue;
-			p.established = plms.findIndex(q => q && q.name === p.established);
-			if (p.established === -1) p.established = null;
 		}
 
 		// resolve string IDs to actual party IDs
@@ -144,7 +136,6 @@ function importJSON(text) {
 
 		refresh_all_checkbox_lists();
 		refresh_all_fraction_dropdowns();
-		refresh_all_established_dropdowns();
 	} catch(e) {
 		alert('Invalid JSON file:' + e);
 	}

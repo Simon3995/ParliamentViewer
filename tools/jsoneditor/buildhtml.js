@@ -66,18 +66,3 @@ function refresh_all_fraction_dropdowns() {
 		}
 	}
 }
-
-// rebuild all 'established' dropdowns in party editor menu
-function refresh_all_established_dropdowns() {
-	for (const [id, p] of Object.entries(parties)) {
-		if (!p) continue;
-		const select = document.getElementById('established-' + id);
-		if (!select) continue;
-		const cur = select.value;
-		select.innerHTML = '<option value="">-- NONE --</option>';
-		for (const [i, q] of Object.entries(plms)) {
-			if (!q) continue;
-			select.appendChild(make_plm_option(q, i, cur || p.established));
-		}
-	}
-}

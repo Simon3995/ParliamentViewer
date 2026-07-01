@@ -13,7 +13,6 @@ function addParty(data, suppressRefresh = false) {
 			<div class="row"><label>Full Name (English):</label><input type="text" value="${esc(p.fullname_en || '')}" onchange="parties[${id}].fullname_en=this.value"></div>
 			<div class="row"><label>Color:</label><input type="color" value="${p.color || '#ffffff'}" onchange="parties[${id}].color=this.value;document.getElementById('img-${id}').style.backgroundColor=this.value"></div>
 			<div class="row"><label>Logo URL:</label><input type="text" placeholder="/logos/..." value="${esc(p.image || '')}" onchange="parties[${id}].image=this.value;document.getElementById('img-${id}').src=this.value"></div>
-			<div class="row"><label>Established (parliament):</label><select id="established-${id}" onchange="parties[${id}].established=+this.value||null"><option value="">-- NONE --</option></select></div>
 			<div class="row">
 				<span class="collapsible-label">Founded by:</span>
 				<div class="collapse-wrap">
@@ -37,12 +36,6 @@ function addParty(data, suppressRefresh = false) {
 	// populate this party's own "Founded by" and "Split from" lists
 	build_checkbox_list('merged-list-' + id, id, 'foundedBy', p.foundedBy || []);
 	build_checkbox_list('split-list-'  + id, id, 'splitFrom', p.splitFrom || []);
-
-	// populate this party's "Established" dropdown with existing parliaments
-	const estSelect = document.getElementById('established-' + id);
-	for (const [i, q] of Object.entries(plms)) {
-		if (q) estSelect.appendChild(make_plm_option(q, i, p.established));
-	}
 
 	// insert this new party into all existing other lists / dropdowns
 	insert_party_everywhere(id);

@@ -45,7 +45,20 @@ export async function loadTimeline(name) {
 	// construct list of parties
 	for (const partyId in data.parties) {
 		const pdata = data.parties[partyId];
-		const party = new Party(pdata.name, pdata.fullname, pdata.fullname_rm, pdata.fullname_en, partyId, pdata.color, new Image(), pdata.established, pdata.foundedBy, pdata.splitFrom);
+
+		// dynamically determine in which parliament the party was established
+		let established;
+		if (pdata.foundedBy !== null || pdata.splitFrom !== null) {
+			const plm = data.parliaments.findLastIndex(plm => plm.fractions.some(frac => frac.id === partyId));
+			if (plm === -1) {
+				established = -1;
+			} else {
+				established = data.parliaments[plm].name;
+			}
+		} else {
+			established = null
+		}
+		const party = new Party(pdata.name, pdata.fullname, pdata.fullname_rm, pdata.fullname_en, partyId, pdata.color, new Image(), established, pdata.foundedBy, pdata.splitFrom);
 		image_promises.push(loadImage(party, pdata.image));
 		S.currentTimeline.parties[partyId] = party;
 	}
