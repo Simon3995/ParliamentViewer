@@ -20,9 +20,6 @@ function add_plm(data, suppressRefresh = false) {
 	for (const fraction of (data?.fractions || [])) addFraction(id, fraction);
 
 	if (suppressRefresh) return;
-
-	// insert this new parliament into every party's 'established' dropdown
-	insert_plm_everywhere(id);
 }
 
 function rename_parliament(id, newName) {
@@ -34,26 +31,6 @@ function rename_parliament(id, newName) {
 function delete_plm(id) {
 	const plm = plms[id];
 	if (!confirm(`Delete parliament "${plm.name}"?`)) return;
-	remove_plm_everywhere(id);
 	document.getElementById('plm-' + id).remove();
 	delete plms[id];
-}
-
-// insert this new parliament into every 'established' dropdown on parties.
-function insert_plm_everywhere(new_id) {
-	const q = plms[new_id];
-	for (const [id, p] of Object.entries(parties)) {
-		if (!p) continue;
-		const select = document.getElementById('established-' + id);
-		if (select) select.appendChild(make_plm_option(q, new_id, select.value));
-	}
-}
-
-// remove this parliament from every 'established' dropdown on parties.
-function remove_plm_everywhere(plm_id) {
-	for (const [id, p] of Object.entries(parties)) {
-		if (!p) continue;
-		const select = document.getElementById('established-' + id);
-		select?.querySelector(`[data-plm-ref="${plm_id}"]`)?.remove();
-	}
 }
