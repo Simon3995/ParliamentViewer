@@ -20,7 +20,7 @@
    "image": "/logos/eu/epp.png"
   },
   "sd": {
-   "name": "SD",
+   "name": "S&D",
    "fullname": "Progressive Alliance of Socialists and Democrats",
    "fullname_rm": "",
    "fullname_en": "Progressive Alliance of Socialists and Democrats",
@@ -33,7 +33,10 @@
    "fullname_rm": "",
    "fullname_en": "Patriots for Europe",
    "color": "#013366",
-   "image": "/logos/eu/pfe.png"
+   "image": "/logos/eu/pfe.png",
+   "foundedBy": [
+    "id"
+   ]
   },
   "ecr": {
    "name": "ECR",
@@ -49,7 +52,10 @@
    "fullname_rm": "",
    "fullname_en": "Renew Europe",
    "color": "#ffbf00",
-   "image": "/logos/eu/renew.png"
+   "image": "/logos/eu/renew.png",
+   "foundedBy": [
+    "alde"
+   ]
   },
   "greens": {
    "name": "Greens",
@@ -60,12 +66,15 @@
    "image": "/logos/eu/greens.png"
   },
   "left": {
-   "name": "Left",
+   "name": "The Left - GUE/NGL",
    "fullname": "The Left in the European Parliament - GUE/NGL",
    "fullname_rm": "",
    "fullname_en": "The Left in the European Parliament - GUE/NGL",
    "color": "#e71f1f",
-   "image": "/logos/eu/left.png"
+   "image": "/logos/eu/left.png",
+   "foundedBy": [
+    "guengl"
+   ]
   },
   "esn": {
    "name": "ESN",
@@ -81,7 +90,10 @@
    "fullname_rm": "",
    "fullname_en": "Identity and Democracy",
    "color": "#164289",
-   "image": "/logos/eu/id.png"
+   "image": "/logos/eu/id.png",
+   "foundedBy": [
+    "enf"
+   ]
   },
   "alde": {
    "name": "ALDE",
@@ -105,7 +117,10 @@
    "fullname_rm": "",
    "fullname_en": "Europe of Freedom and Direct Democracy",
    "color": "#24B9B9",
-   "image": "/logos/eu/efdd.png"
+   "image": "/logos/eu/efdd.png",
+   "foundedBy": [
+    "efd"
+   ]
   },
   "enf": {
    "name": "ENF",
