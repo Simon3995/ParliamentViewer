@@ -25,7 +25,13 @@
    "fullname_rm": "",
    "fullname_en": "GreenLeft",
    "color": "#00cc00",
-   "image": "/logos/nl/GL.png"
+   "image": "/logos/nl/GL.png",
+   "foundedBy": [
+    "evp",
+    "ppr",
+    "cpn",
+    "psp"
+   ]
   },
   "glpvda": {
    "name": "GL/PvdA",
@@ -33,7 +39,11 @@
    "fullname_rm": "",
    "fullname_en": "GreenLeft / Labour Party",
    "color": "#01af40",
-   "image": "/logos/nl/GLPvdA.png"
+   "image": "/logos/nl/GLPvdA.png",
+   "foundedBy": [
+    "gl",
+    "pvda"
+   ]
   },
   "pvda": {
    "name": "PvdA",
@@ -41,7 +51,12 @@
    "fullname_rm": "",
    "fullname_en": "Labour Party",
    "color": "#ff0000",
-   "image": "/logos/nl/PvdA.png"
+   "image": "/logos/nl/PvdA.png",
+   "foundedBy": [
+    "sdap",
+    "cdu",
+    "vdb"
+   ]
   },
   "denk": {
    "name": "DENK",
@@ -49,7 +64,10 @@
    "fullname_rm": "",
    "fullname_en": "DENK (THINK)",
    "color": "#38bfc2",
-   "image": "/logos/nl/DENK.png"
+   "image": "/logos/nl/DENK.png",
+   "splitFrom": [
+    "pvda"
+   ]
   },
   "volt": {
    "name": "Volt",
@@ -73,7 +91,11 @@
    "fullname_rm": "",
    "fullname_en": "ChristianUnion",
    "color": "#8fd1eb",
-   "image": "/logos/nl/CU.png"
+   "image": "/logos/nl/CU.png",
+   "foundedBy": [
+    "rpf",
+    "gpv"
+   ]
   },
   "cda": {
    "name": "CDA",
@@ -81,7 +103,12 @@
    "fullname_rm": "",
    "fullname_en": "Christian-Democratic Appeal",
    "color": "#007c5e",
-   "image": "/logos/nl/CDA.png"
+   "image": "/logos/nl/CDA.png",
+   "foundedBy": [
+    "chu",
+    "arp",
+    "kvp"
+   ]
   },
   "nsc": {
    "name": "NSC",
@@ -89,7 +116,10 @@
    "fullname_rm": "",
    "fullname_en": "New Social Contract",
    "color": "#181d57",
-   "image": "/logos/nl/NSC.png"
+   "image": "/logos/nl/NSC.png",
+   "splitFrom": [
+    "cda"
+   ]
   },
   "50plus": {
    "name": "50PLUS",
@@ -105,7 +135,13 @@
    "fullname_rm": "",
    "fullname_en": "People's Party for Freedom and Democracy",
    "color": "#21276a",
-   "image": "/logos/nl/VVD.png"
+   "image": "/logos/nl/VVD.png",
+   "foundedBy": [
+    "pvdv"
+   ],
+   "splitFrom": [
+    "pvda"
+   ]
   },
   "bbb": {
    "name": "BBB",
@@ -121,7 +157,10 @@
    "fullname_rm": "",
    "fullname_en": "Right Answer 2021",
    "color": "#21276a",
-   "image": "/logos/nl/JA21.png"
+   "image": "/logos/nl/JA21.png",
+   "splitFrom": [
+    "fvd"
+   ]
   },
   "sgp": {
    "name": "SGP",
@@ -137,7 +176,10 @@
    "fullname_rm": "",
    "fullname_en": "Party for Freedom",
    "color": "#82b2ff",
-   "image": "/logos/nl/PVV.png"
+   "image": "/logos/nl/PVV.png",
+   "splitFrom": [
+    "vvd"
+   ]
   },
   "gm": {
    "name": "GM",
@@ -145,7 +187,10 @@
    "fullname_rm": "",
    "fullname_en": "Markuszower Group",
    "color": "#169793ff",
-   "image": ""
+   "image": "",
+   "splitFrom": [
+    "pvv"
+   ]
   },
   "fvd": {
    "name": "FvD",
@@ -161,7 +206,10 @@
    "fullname_rm": "",
    "fullname_en": "Pim Fortuyn List",
    "color": "rgb(18, 74, 158)",
-   "image": "/logos/nl/LPF.png"
+   "image": "/logos/nl/LPF.png",
+   "splitFrom": [
+    "ln"
+   ]
   },
   "ln": {
    "name": "LN",
@@ -185,7 +233,10 @@
    "fullname_rm": "",
    "fullname_en": "Reformed Political League",
    "color": "#ff7b00",
-   "image": "/logos/nl/GPV.png"
+   "image": "/logos/nl/GPV.png",
+   "splitFrom": [
+    "arp"
+   ]
   },
   "rpfgpv": {
    "name": "RPF/GPV",
@@ -193,7 +244,11 @@
    "fullname_rm": "",
    "fullname_en": "Reformatory Political Federation / Reformed Political League",
    "color": "#000080",
-   "image": ""
+   "image": "",
+   "foundedBy": [
+    "rpf",
+    "gpv"
+   ]
   },
   "aov": {
    "name": "AOV",
@@ -233,7 +288,10 @@
    "fullname_rm": "",
    "fullname_en": "Political Party of Radicals",
    "color": "#e92f7cff",
-   "image": "/logos/nl/PPR.png"
+   "image": "/logos/nl/PPR.png",
+   "splitFrom": [
+    "kvp"
+   ]
   },
   "evp": {
    "name": "EVP",
@@ -249,7 +307,10 @@
    "fullname_rm": "",
    "fullname_en": "Communist Party of the Netherlands",
    "color": "#ff0000",
-   "image": "/logos/nl/CPN.png"
+   "image": "/logos/nl/CPN.png",
+   "foundedBy": [
+    "sdp"
+   ]
   },
   "sdp": {
    "name": "SDP",
@@ -273,7 +334,10 @@
    "fullname_rm": "",
    "fullname_en": "Democratic Socialists '70",
    "color": "#d40000ff",
-   "image": "/logos/nl/DS70.png"
+   "image": "/logos/nl/DS70.png",
+   "splitFrom": [
+    "pvda"
+   ]
   },
   "kvp": {
    "name": "KVP",
@@ -281,7 +345,10 @@
    "fullname_rm": "",
    "fullname_en": "Catholic People's Party",
    "color": "#362511ff",
-   "image": "/logos/nl/KVP.png"
+   "image": "/logos/nl/KVP.png",
+   "foundedBy": [
+    "rksp"
+   ]
   },
   "chu": {
    "name": "CHU",
@@ -329,7 +396,10 @@
    "fullname_rm": "",
    "fullname_en": "Party for Freedom",
    "color": "#092447ff",
-   "image": "/logos/nl/PvdV.png"
+   "image": "/logos/nl/PvdV.png",
+   "foundedBy": [
+    "lsp"
+   ]
   },
   "rksp": {
    "name": "RKSP",
@@ -337,7 +407,10 @@
    "fullname_rm": "",
    "fullname_en": "Roman Catholic State Party",
    "color": "rgb(187, 90, 0)",
-   "image": ""
+   "image": "",
+   "foundedBy": [
+    "ab"
+   ]
   },
   "sdap": {
    "name": "SDAP",
@@ -369,7 +442,14 @@
    "fullname_rm": "",
    "fullname_en": "Liberal State Party",
    "color": "#0d6486ff",
-   "image": ""
+   "image": "",
+   "foundedBy": [
+    "lu",
+    "bvl",
+    "eb",
+    "np",
+    "mp"
+   ]
   },
   "cdu": {
    "name": "CDU",
@@ -393,7 +473,10 @@
    "fullname_rm": "",
    "fullname_en": "National Farmers' Horticulturists' and Middle Class Party",
    "color": "#79aa4aff",
-   "image": ""
+   "image": "",
+   "foundedBy": [
+    "pb"
+   ]
   },
   "pb": {
    "name": "PB",
@@ -409,7 +492,10 @@
    "fullname_rm": "",
    "fullname_en": "Roman Catholic People's Party",
    "color": "#802008ff",
-   "image": ""
+   "image": "",
+   "splitFrom": [
+    "ab"
+   ]
   },
   "hgsp": {
    "name": "HGSP",
@@ -433,7 +519,13 @@
    "fullname_rm": "",
    "fullname_en": "Middle Party for City and Country",
    "color": "#000000FF",
-   "image": ""
+   "image": "",
+   "foundedBy": [
+    "mp"
+   ],
+   "splitFrom": [
+    "lsp"
+   ]
   },
   "ab": {
    "name": "AB",
@@ -537,7 +629,10 @@
    "fullname_rm": "",
    "fullname_en": "Independent Politics Netherlands",
    "color": "#505050",
-   "image": "/logos/nl/OPNL.png"
+   "image": "/logos/nl/OPNL.png",
+   "foundedBy": [
+    "osf"
+   ]
   },
   "osf": {
    "name": "OSF",
@@ -558,8 +653,8 @@
  },
  "parliaments": [
   {
-   "name": "Current Situation",
-   "date": "",
+   "name": "Current Situation (2 July 2026)",
+   "date": "2026-07-02",
    "source": "https://www.eerstekamer.nl/fracties",
    "fractions": [
     {
