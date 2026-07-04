@@ -149,7 +149,7 @@
  },
  "parliaments": [
   {
-   "name": "2024 European Parliament Elections",
+   "name": "2024 European Parliament Election",
    "date": "2024-06-09",
    "source": "https://results.elections.europa.eu/en/european-results/2024-2029/",
    "fractions": [
@@ -192,48 +192,48 @@
    ]
   },
   {
-   "name": "2019 European Parliament Elections",
+   "name": "2019 European Parliament Election",
    "date": "2019-05-26",
-   "source": "https://results.elections.europa.eu/en/european-results/2019-2024/outgoing-parliament/",
+   "source": "https://results.elections.europa.eu/en/european-results/2019-2024/constitutive-session/",
    "fractions": [
     {
-     "id": "left",
-     "seats": 37
+     "id": "guengl",
+     "seats": 41
     },
     {
      "id": "sd",
-     "seats": 138
+     "seats": 154
     },
     {
      "id": "greens",
-     "seats": 70
+     "seats": 74
     },
     {
      "id": "re",
-     "seats": 98
+     "seats": 108
     },
     {
      "id": "epp",
-     "seats": 179
+     "seats": 182
     },
     {
      "id": "ecr",
-     "seats": 69
+     "seats": 62
     },
     {
      "id": "id",
-     "seats": 49
+     "seats": 73
     },
     {
      "id": "ni",
-     "seats": 63
+     "seats": 57
     }
    ]
   },
   {
-   "name": "2014 European Parliament Elections",
+   "name": "2014 European Parliament Election",
    "date": "2014-05-25",
-   "source": "https://results.elections.europa.eu/en/european-results/2014-2019/outgoing-parliament/",
+   "source": "https://results.elections.europa.eu/en/european-results/2014-2019/constitutive-session/",
    "fractions": [
     {
      "id": "guengl",
@@ -241,42 +241,38 @@
     },
     {
      "id": "sd",
-     "seats": 185
+     "seats": 191
     },
     {
      "id": "greens",
-     "seats": 52
+     "seats": 50
     },
     {
      "id": "alde",
-     "seats": 69
+     "seats": 67
     },
     {
      "id": "epp",
-     "seats": 216
+     "seats": 221
     },
     {
      "id": "ecr",
-     "seats": 77
+     "seats": 70
     },
     {
      "id": "efdd",
-     "seats": 42
-    },
-    {
-     "id": "enf",
-     "seats": 36
+     "seats": 48
     },
     {
      "id": "ni",
-     "seats": 20
+     "seats": 52
     }
    ]
   },
   {
-   "name": "2009 European Parliament Elections",
+   "name": "2009 European Parliament Election",
    "date": "2009-06-07",
-   "source": "https://results.elections.europa.eu/en/european-results/2009-2014/outgoing-parliament/",
+   "source": "https://results.elections.europa.eu/en/european-results/2009-2014/constitutive-session/",
    "fractions": [
     {
      "id": "guengl",
@@ -284,31 +280,31 @@
     },
     {
      "id": "sd",
-     "seats": 195
+     "seats": 184
     },
     {
      "id": "greens",
-     "seats": 57
+     "seats": 55
     },
     {
      "id": "alde",
-     "seats": 83
+     "seats": 84
     },
     {
      "id": "epp",
-     "seats": 273
+     "seats": 265
     },
     {
      "id": "ecr",
-     "seats": 57
+     "seats": 54
     },
     {
      "id": "efd",
-     "seats": 31
+     "seats": 32
     },
     {
      "id": "ni",
-     "seats": 33
+     "seats": 27
     }
    ]
   }
