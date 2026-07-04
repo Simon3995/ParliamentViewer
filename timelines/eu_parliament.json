@@ -17,7 +17,10 @@
    "fullname_rm": "",
    "fullname_en": "European People's Party Group",
    "color": "#3399FF",
-   "image": "/logos/eu/epp.png"
+   "image": "/logos/eu/epp.png",
+   "foundedBy": [
+    "epped"
+   ]
   },
   "sd": {
    "name": "S&D",
@@ -92,7 +95,7 @@
    "color": "#164289",
    "image": "/logos/eu/id.png",
    "foundedBy": [
-    "enf"
+    "epped"
    ]
   },
   "alde": {
@@ -122,13 +125,13 @@
     "efd"
    ]
   },
-  "enf": {
-   "name": "ENF",
-   "fullname": "Europe of Nations and Freedom",
+  "epped": {
+   "name": "EPP-ED",
+   "fullname": "Group of the European People's Party (Christan Democrats) and European Democrats",
    "fullname_rm": "",
-   "fullname_en": "Europe of Nations and Freedom",
-   "color": "#2B3856",
-   "image": "/logos/eu/enf.png"
+   "fullname_en": "Group of the European People's Party (Christan Democrats) and European Democrats",
+   "color": "#002d85",
+   "image": "/logos/eu/epped.png"
   },
   "efd": {
    "name": "EFD",
@@ -136,7 +139,10 @@
    "fullname_rm": "",
    "fullname_en": "Europe of Freedom and Democracy",
    "color": "#24B9B9",
-   "image": "/logos/eu/efd.png"
+   "image": "/logos/eu/efd.png",
+   "foundedBy": [
+    "inddem"
+   ]
   },
   "pse": {
    "name": "PSE",
@@ -145,6 +151,22 @@
    "fullname_en": "Socialist Group in the European Parliament",
    "color": "#ff0000",
    "image": ""
+  },
+  "uen": {
+   "name": "UEN",
+   "fullname": "Union for Europe of the Nations Group",
+   "fullname_rm": "",
+   "fullname_en": "Union for Europe of the Nations Group",
+   "color": "#585981",
+   "image": "/logos/eu/uen.png"
+  },
+  "inddem": {
+   "name": "IND/DEM",
+   "fullname": "Independence/Democracy Group",
+   "fullname_rm": "",
+   "fullname_en": "Independence/Democracy Group",
+   "color": "#8cb3c8",
+   "image": "/logos/eu/inddem.png"
   }
  },
  "parliaments": [
@@ -307,6 +329,45 @@
      "seats": 27
     }
    ]
+  },
+  {
+   "name": "2004 European Parliament Election",
+   "date": "2004-06-13",
+   "fractions": [
+    {
+     "id": "guengl",
+     "seats": 41
+    },
+    {
+     "id": "pse",
+     "seats": 200
+    },
+    {
+     "id": "greens",
+     "seats": 42
+    },
+    {
+     "id": "alde",
+     "seats": 88
+    },
+    {
+     "id": "epped",
+     "seats": 268
+    },
+    {
+     "id": "uen",
+     "seats": 27
+    },
+    {
+     "id": "inddem",
+     "seats": 37
+    },
+    {
+     "id": "ni",
+     "seats": 29
+    }
+   ],
+   "source": "https://results.elections.europa.eu/en/european-results/2004-2009/constitutive-session/"
   }
  ]
 }
