@@ -104,7 +104,10 @@
    "fullname_rm": "",
    "fullname_en": "Alliance of Liberals and Democrats for Europe Group",
    "color": "#36A9E0",
-   "image": "/logos/eu/alde.png"
+   "image": "/logos/eu/alde.png",
+   "foundedBy": [
+    "eldr"
+   ]
   },
   "guengl": {
    "name": "GUE/NGL",
@@ -166,7 +169,28 @@
    "fullname_rm": "",
    "fullname_en": "Independence/Democracy Group",
    "color": "#8cb3c8",
-   "image": "/logos/eu/inddem.png"
+   "image": "/logos/eu/inddem.png",
+   "foundedBy": [
+    "edd"
+   ]
+  },
+  "eldr": {
+   "name": "ELDR",
+   "fullname": "Group of the European Liberal, Democrat and Reform Party",
+   "fullname_en": "Group of the European Liberal, Democrat and Reform Party",
+   "color": "#f6d32d"
+  },
+  "tdi": {
+   "name": "TDI",
+   "fullname": "Technical Group of Independent Members - mixed group",
+   "fullname_en": "Technical Group of Independent Members - mixed group",
+   "color": "#c0bfbc"
+  },
+  "edd": {
+   "name": "EDD",
+   "fullname": "Group for a Europe of Democracies and Diversities ",
+   "fullname_en": "Group for a Europe of Democracies and Diversities ",
+   "color": "#8cb3c8"
   }
  },
  "parliaments": [
@@ -368,6 +392,49 @@
     }
    ],
    "source": "https://results.elections.europa.eu/en/european-results/2004-2009/constitutive-session/"
+  },
+  {
+   "name": "1999 European Parliament Election",
+   "date": "1999-06-13",
+   "fractions": [
+    {
+     "id": "guengl",
+     "seats": 42
+    },
+    {
+     "id": "pse",
+     "seats": 180
+    },
+    {
+     "id": "greens",
+     "seats": 48
+    },
+    {
+     "id": "eldr",
+     "seats": 50
+    },
+    {
+     "id": "epped",
+     "seats": 232
+    },
+    {
+     "id": "uen",
+     "seats": 31
+    },
+    {
+     "id": "edd",
+     "seats": 16
+    },
+    {
+     "id": "tdi",
+     "seats": 18
+    },
+    {
+     "id": "ni",
+     "seats": 9
+    }
+   ],
+   "source": "https://results.elections.europa.eu/en/european-results/1999-2004/constitutive-session/"
   }
  ]
 }
