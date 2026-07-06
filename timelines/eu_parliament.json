@@ -216,15 +216,16 @@
     "edn"
    ]
   },
-  "gue": {
-   "name": "GUE",
+  "eul": {
+   "name": "EUL",
    "fullname": "Confederal Group of the European United Left",
    "fullname_rm": "",
    "fullname_en": "Confederal Group of the European United Left",
    "color": "#e01b24",
    "image": "/logos/eu/gue.png",
-   "foundedBy": [
-    "lu"
+   "foundedBy": [],
+   "splitFrom": [
+    "com"
    ]
   },
   "fe": {
@@ -241,7 +242,10 @@
    "fullname_rm": "",
    "fullname_en": "Group of the European Democratic Alliance",
    "color": "#c0bfbc",
-   "image": ""
+   "image": "",
+   "foundedBy": [
+    "epd"
+   ]
   },
   "v": {
    "name": "V",
@@ -277,32 +281,68 @@
   "s": {
    "name": "S",
    "fullname": "Socialist Group",
+   "fullname_rm": "",
    "fullname_en": "Socialist Group",
-   "color": "#e01b24"
+   "color": "#e01b24",
+   "image": ""
   },
   "ed": {
    "name": "ED",
    "fullname": "European Democratic Group",
+   "fullname_rm": "",
    "fullname_en": "European Democratic Group",
-   "color": "#f5c211"
+   "color": "#f5c211",
+   "image": ""
   },
   "er": {
    "name": "ER",
    "fullname": "Technical Group of the European Right",
+   "fullname_rm": "",
    "fullname_en": "Technical Group of the European Right",
-   "color": "#363f4f"
+   "color": "#363f4f",
+   "image": ""
   },
   "lu": {
    "name": "LU",
    "fullname": "Left Unity",
+   "fullname_rm": "",
    "fullname_en": "Left Unity",
-   "color": "#a51d2d"
+   "color": "#a51d2d",
+   "image": "",
+   "splitFrom": [
+    "com"
+   ]
   },
   "rbw": {
    "name": "RBW",
    "fullname": "Rainbow Group in the European Parliament",
+   "fullname_rm": "",
    "fullname_en": "Rainbow Group in the European Parliament",
-   "color": "#8ff0a4"
+   "color": "#8ff0a4",
+   "image": "",
+   "foundedBy": [
+    "cdi"
+   ]
+  },
+  "com": {
+   "name": "COM",
+   "fullname": "Communist and Allies Group",
+   "fullname_rm": "",
+   "fullname_en": "Communist and Allies Group",
+   "color": "#a51d2d",
+   "image": ""
+  },
+  "epd": {
+   "name": "EPD",
+   "fullname": "Group of European Progressive Democrats",
+   "fullname_en": "Group of European Progressive Democrats",
+   "color": "#9a9996"
+  },
+  "cdi": {
+   "name": "CDI",
+   "fullname": "Group for the Technical Coordination and Defence of Independent Groups and Members",
+   "fullname_en": "Group for the Technical Coordination and Defence of Independent Groups and Members",
+   "color": "#8cb3c8"
   }
  },
  "parliaments": [
@@ -553,7 +593,7 @@
    "date": "1994-06-12",
    "fractions": [
     {
-     "id": "gue",
+     "id": "eul",
      "seats": 28
     },
     {
@@ -604,7 +644,7 @@
      "seats": 14
     },
     {
-     "id": "gue",
+     "id": "eul",
      "seats": 28
     },
     {
@@ -645,6 +685,88 @@
     }
    ],
    "source": "https://results.elections.europa.eu/en/european-results/1989-1994/constitutive-session/"
+  },
+  {
+   "name": "1984 European Parliament Election",
+   "date": "1984-06-17",
+   "fractions": [
+    {
+     "id": "com",
+     "seats": 41
+    },
+    {
+     "id": "s",
+     "seats": 130
+    },
+    {
+     "id": "rbw",
+     "seats": 20
+    },
+    {
+     "id": "eldr",
+     "seats": 31
+    },
+    {
+     "id": "eda",
+     "seats": 29
+    },
+    {
+     "id": "epp",
+     "seats": 110
+    },
+    {
+     "id": "ed",
+     "seats": 50
+    },
+    {
+     "id": "er",
+     "seats": 16
+    },
+    {
+     "id": "ni",
+     "seats": 7
+    }
+   ],
+   "source": "https://results.elections.europa.eu/en/european-results/1984-1989/constitutive-session/"
+  },
+  {
+   "name": "1979 European Parliament Election",
+   "date": "1979-06-10",
+   "fractions": [
+    {
+     "id": "com",
+     "seats": 44
+    },
+    {
+     "id": "s",
+     "seats": 112
+    },
+    {
+     "id": "cdi",
+     "seats": 11
+    },
+    {
+     "id": "epd",
+     "seats": 22
+    },
+    {
+     "id": "eldr",
+     "seats": 40
+    },
+    {
+     "id": "epp",
+     "seats": 108
+    },
+    {
+     "id": "ed",
+     "seats": 63
+    },
+    {
+     "id": "ni",
+     "seats": 10
+    }
+   ],
+   "source": "https://results.elections.europa.eu/en/european-results/1979-1984/constitutive-session/"
   }
  ]
 }
