@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	<url>
-		<loc>https://parliamentviewer.org</loc>
-	</url>
+<urlset
+	xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+		http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://parliamentviewer.org/</loc>
+  <priority>1.0</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://parliamentviewer.org/info/</loc>
+  <priority>0.7</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://parliamentviewer.org/tools/jsoneditor/</loc>
+  <priority>0.3</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://parliamentviewer.org/tools/logomaker/</loc>
+  <priority>0.3</priority>
+  <changefreq>weekly</changefreq>
+</url>
+
 </urlset>
