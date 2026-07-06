@@ -167,7 +167,7 @@
    "color": "#585981",
    "image": "/logos/eu/uen.png",
    "foundedBy": [
-    "rde",
+    "eda",
     "fe"
    ]
   },
@@ -187,8 +187,8 @@
    "fullname": "Group of the European Liberal, Democrat and Reform Party",
    "fullname_rm": "",
    "fullname_en": "Group of the European Liberal, Democrat and Reform Party",
-   "color": "#f6d32d",
-   "image": ""
+   "color": "#b2ebff",
+   "image": "/logos/eu/eldr.png"
   },
   "tdi": {
    "name": "TDI",
@@ -204,7 +204,7 @@
    "fullname_rm": "",
    "fullname_en": "Group for a Europe of Democracies and Diversities ",
    "color": "#8cb3c8",
-   "image": "",
+   "image": "/logos/eu/edd.png",
    "foundedBy": [
     "edn"
    ]
@@ -212,38 +212,50 @@
   "gue": {
    "name": "GUE",
    "fullname": "Confederal Group of the European United Left",
+   "fullname_rm": "",
    "fullname_en": "Confederal Group of the European United Left",
-   "color": "#e01b24"
+   "color": "#e01b24",
+   "image": "/logos/eu/gue.png"
   },
   "fe": {
    "name": "FE",
    "fullname": "Forza Europa Group",
+   "fullname_rm": "",
    "fullname_en": "Forza Europa Group",
-   "color": "#8c5c6e"
+   "color": "#8c5c6e",
+   "image": ""
   },
-  "rde": {
-   "name": "RDE",
+  "eda": {
+   "name": "EDA",
    "fullname": "Group of the European Democratic Alliance",
+   "fullname_rm": "",
    "fullname_en": "Group of the European Democratic Alliance",
-   "color": "#c0bfbc"
+   "color": "#c0bfbc",
+   "image": ""
   },
   "v": {
    "name": "V",
    "fullname": "The Green Group in the European Parliament",
+   "fullname_rm": "",
    "fullname_en": "The Green Group in the European Parliament",
-   "color": "#2ec27e"
+   "color": "#2ec27e",
+   "image": ""
   },
   "era": {
    "name": "ERA",
    "fullname": "Group of the European Radical Alliance",
+   "fullname_rm": "",
    "fullname_en": "Group of the European Radical Alliance",
-   "color": "#87bec4"
+   "color": "#87bec4",
+   "image": "/logos/eu/era.png"
   },
   "edn": {
    "name": "EDN",
    "fullname": "Europe of Nations Group (Coordination Group)",
+   "fullname_rm": "",
    "fullname_en": "Europe of Nations Group (Coordination Group)",
-   "color": "#65a8ba"
+   "color": "#65a8ba",
+   "image": ""
   }
  },
  "parliaments": [
@@ -514,7 +526,7 @@
      "seats": 44
     },
     {
-     "id": "rde",
+     "id": "eda",
      "seats": 26
     },
     {
