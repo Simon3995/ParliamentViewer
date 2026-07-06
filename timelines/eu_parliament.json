@@ -138,7 +138,11 @@
    "fullname_rm": "",
    "fullname_en": "Group of the European People's Party (Christan Democrats) and European Democrats",
    "color": "#002d85",
-   "image": "/logos/eu/epped.png"
+   "image": "/logos/eu/epped.png",
+   "foundedBy": [
+    "epp",
+    "ed"
+   ]
   },
   "efd": {
    "name": "EFD",
@@ -157,7 +161,10 @@
    "fullname_rm": "",
    "fullname_en": "Socialist Group in the European Parliament",
    "color": "#ff0000",
-   "image": ""
+   "image": "",
+   "foundedBy": [
+    "s"
+   ]
   },
   "uen": {
    "name": "UEN",
@@ -215,7 +222,10 @@
    "fullname_rm": "",
    "fullname_en": "Confederal Group of the European United Left",
    "color": "#e01b24",
-   "image": "/logos/eu/gue.png"
+   "image": "/logos/eu/gue.png",
+   "foundedBy": [
+    "lu"
+   ]
   },
   "fe": {
    "name": "FE",
@@ -239,7 +249,10 @@
    "fullname_rm": "",
    "fullname_en": "The Green Group in the European Parliament",
    "color": "#2ec27e",
-   "image": ""
+   "image": "",
+   "splitFrom": [
+    "rbw"
+   ]
   },
   "era": {
    "name": "ERA",
@@ -247,7 +260,11 @@
    "fullname_rm": "",
    "fullname_en": "Group of the European Radical Alliance",
    "color": "#87bec4",
-   "image": "/logos/eu/era.png"
+   "image": "/logos/eu/era.png",
+   "foundedBy": [
+    "rbw"
+   ],
+   "splitFrom": []
   },
   "edn": {
    "name": "EDN",
@@ -256,6 +273,36 @@
    "fullname_en": "Europe of Nations Group (Coordination Group)",
    "color": "#65a8ba",
    "image": ""
+  },
+  "s": {
+   "name": "S",
+   "fullname": "Socialist Group",
+   "fullname_en": "Socialist Group",
+   "color": "#e01b24"
+  },
+  "ed": {
+   "name": "ED",
+   "fullname": "European Democratic Group",
+   "fullname_en": "European Democratic Group",
+   "color": "#f5c211"
+  },
+  "er": {
+   "name": "ER",
+   "fullname": "Technical Group of the European Right",
+   "fullname_en": "Technical Group of the European Right",
+   "color": "#363f4f"
+  },
+  "lu": {
+   "name": "LU",
+   "fullname": "Left Unity",
+   "fullname_en": "Left Unity",
+   "color": "#a51d2d"
+  },
+  "rbw": {
+   "name": "RBW",
+   "fullname": "Rainbow Group in the European Parliament",
+   "fullname_en": "Rainbow Group in the European Parliament",
+   "color": "#8ff0a4"
   }
  },
  "parliaments": [
@@ -502,7 +549,7 @@
    "source": "https://results.elections.europa.eu/en/european-results/1999-2004/constitutive-session/"
   },
   {
-   "name": "1994 European Parliament",
+   "name": "1994 European Parliament Election",
    "date": "1994-06-12",
    "fractions": [
     {
@@ -547,6 +594,57 @@
     }
    ],
    "source": "https://results.elections.europa.eu/en/european-results/1994-1999/constitutive-session/"
+  },
+  {
+   "name": "1989 European Parliament Election",
+   "date": "1989-06-18",
+   "fractions": [
+    {
+     "id": "lu",
+     "seats": 14
+    },
+    {
+     "id": "gue",
+     "seats": 28
+    },
+    {
+     "id": "s",
+     "seats": 180
+    },
+    {
+     "id": "v",
+     "seats": 30
+    },
+    {
+     "id": "rbw",
+     "seats": 13
+    },
+    {
+     "id": "eldr",
+     "seats": 49
+    },
+    {
+     "id": "eda",
+     "seats": 20
+    },
+    {
+     "id": "epp",
+     "seats": 121
+    },
+    {
+     "id": "ed",
+     "seats": 34
+    },
+    {
+     "id": "er",
+     "seats": 17
+    },
+    {
+     "id": "ni",
+     "seats": 12
+    }
+   ],
+   "source": "https://results.elections.europa.eu/en/european-results/1989-1994/constitutive-session/"
   }
  ]
 }
