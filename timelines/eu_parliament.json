@@ -66,7 +66,11 @@
    "fullname_rm": "",
    "fullname_en": "The Greens/European Free Alliance",
    "color": "#009900",
-   "image": "/logos/eu/greens.png"
+   "image": "/logos/eu/greens.png",
+   "foundedBy": [
+    "v",
+    "era"
+   ]
   },
   "left": {
    "name": "Left",
@@ -161,7 +165,11 @@
    "fullname_rm": "",
    "fullname_en": "Union for Europe of the Nations Group",
    "color": "#585981",
-   "image": "/logos/eu/uen.png"
+   "image": "/logos/eu/uen.png",
+   "foundedBy": [
+    "rde",
+    "fe"
+   ]
   },
   "inddem": {
    "name": "IND/DEM",
@@ -177,20 +185,65 @@
   "eldr": {
    "name": "ELDR",
    "fullname": "Group of the European Liberal, Democrat and Reform Party",
+   "fullname_rm": "",
    "fullname_en": "Group of the European Liberal, Democrat and Reform Party",
-   "color": "#f6d32d"
+   "color": "#f6d32d",
+   "image": ""
   },
   "tdi": {
    "name": "TDI",
    "fullname": "Technical Group of Independent Members - mixed group",
+   "fullname_rm": "",
    "fullname_en": "Technical Group of Independent Members - mixed group",
-   "color": "#c0bfbc"
+   "color": "#c0bfbc",
+   "image": ""
   },
   "edd": {
    "name": "EDD",
    "fullname": "Group for a Europe of Democracies and Diversities ",
+   "fullname_rm": "",
    "fullname_en": "Group for a Europe of Democracies and Diversities ",
-   "color": "#8cb3c8"
+   "color": "#8cb3c8",
+   "image": "",
+   "foundedBy": [
+    "edn"
+   ]
+  },
+  "gue": {
+   "name": "GUE",
+   "fullname": "Confederal Group of the European United Left",
+   "fullname_en": "Confederal Group of the European United Left",
+   "color": "#e01b24"
+  },
+  "fe": {
+   "name": "FE",
+   "fullname": "Forza Europa Group",
+   "fullname_en": "Forza Europa Group",
+   "color": "#8c5c6e"
+  },
+  "rde": {
+   "name": "RDE",
+   "fullname": "Group of the European Democratic Alliance",
+   "fullname_en": "Group of the European Democratic Alliance",
+   "color": "#c0bfbc"
+  },
+  "v": {
+   "name": "V",
+   "fullname": "The Green Group in the European Parliament",
+   "fullname_en": "The Green Group in the European Parliament",
+   "color": "#2ec27e"
+  },
+  "era": {
+   "name": "ERA",
+   "fullname": "Group of the European Radical Alliance",
+   "fullname_en": "Group of the European Radical Alliance",
+   "color": "#87bec4"
+  },
+  "edn": {
+   "name": "EDN",
+   "fullname": "Europe of Nations Group (Coordination Group)",
+   "fullname_en": "Europe of Nations Group (Coordination Group)",
+   "color": "#65a8ba"
   }
  },
  "parliaments": [
@@ -435,6 +488,53 @@
     }
    ],
    "source": "https://results.elections.europa.eu/en/european-results/1999-2004/constitutive-session/"
+  },
+  {
+   "name": "1994 European Parliament",
+   "date": "1994-06-12",
+   "fractions": [
+    {
+     "id": "gue",
+     "seats": 28
+    },
+    {
+     "id": "pse",
+     "seats": 198
+    },
+    {
+     "id": "v",
+     "seats": 23
+    },
+    {
+     "id": "era",
+     "seats": 19
+    },
+    {
+     "id": "eldr",
+     "seats": 44
+    },
+    {
+     "id": "rde",
+     "seats": 26
+    },
+    {
+     "id": "epp",
+     "seats": 156
+    },
+    {
+     "id": "fe",
+     "seats": 27
+    },
+    {
+     "id": "edn",
+     "seats": 19
+    },
+    {
+     "id": "ni",
+     "seats": 27
+    }
+   ],
+   "source": "https://results.elections.europa.eu/en/european-results/1994-1999/constitutive-session/"
   }
  ]
 }
