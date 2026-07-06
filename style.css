@@ -52,6 +52,13 @@
 	#welcome img {
 		height: 15vh;
 	}
+
+	#btnInfo {
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		z-index: 3;
+	}
 }
 
 /* DEFAULT DESKTOP VERSION */
@@ -100,6 +107,13 @@
 
 	#welcome img {
 		height: 15vh;
+	}
+
+	#btnInfo {
+		position: fixed;
+		bottom: 10px;
+		left: 10px;
+		z-index: 3;
 	}
 }
 
@@ -416,6 +430,7 @@ span.first { background: url(./icons/first.svg) no-repeat; }
 span.last { background: url(./icons/last.svg) no-repeat; }
 span.prev { background: url(./icons/prev.svg) no-repeat; }
 span.next { background: url(./icons/next.svg) no-repeat; }
+span.info { background: url(./icons/info.svg) no-repeat; }
 
 @keyframes pulseColor {
 	0% {
