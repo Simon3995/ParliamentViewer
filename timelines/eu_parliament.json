@@ -18,9 +18,7 @@
    "fullname_en": "European People's Party Group",
    "color": "#3399FF",
    "image": "/logos/eu/epp.png",
-   "foundedBy": [
-    "epped"
-   ]
+   "foundedBy": []
   },
   "sd": {
    "name": "S&D",
@@ -335,14 +333,18 @@
   "epd": {
    "name": "EPD",
    "fullname": "Group of European Progressive Democrats",
+   "fullname_rm": "",
    "fullname_en": "Group of European Progressive Democrats",
-   "color": "#9a9996"
+   "color": "#9a9996",
+   "image": ""
   },
   "cdi": {
    "name": "CDI",
    "fullname": "Group for the Technical Coordination and Defence of Independent Groups and Members",
+   "fullname_rm": "",
    "fullname_en": "Group for the Technical Coordination and Defence of Independent Groups and Members",
-   "color": "#8cb3c8"
+   "color": "#8cb3c8",
+   "image": ""
   }
  },
  "parliaments": [
