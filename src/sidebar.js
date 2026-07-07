@@ -2,18 +2,18 @@ import { S } from "./main.js";
 import { getHighlighted, isHighlighted } from "./controller.js";
 
 // generate all tables in the sidebar
-function build_sidebar() {
-	seat_dist_table();
-	left_parl_table();
-	changes_table();
+function buildSidebar() {
+	seatDistTable();
+	leftParliamentTable();
+	changesTable();
 }
 
 // generate a seat table for the current parliament object
-function seat_dist_table() {
+function seatDistTable() {
 	let parliament = S.originalParliament;
 	let string = "";
-	let total_seats = 0;
-	let total_hlt = 0;
+	let totalSeats = 0;
+	let totalHighlight = 0;
 	string += `<table>`;
 	string += `<thead>`
 
@@ -66,8 +66,8 @@ function seat_dist_table() {
 		string += "<td>" + frac.party.fullname + "</td>";
 		string += `<td>${frac.seatAmt} (${diff})</td>`;
 
-		total_seats += frac.seatAmt;
-		if (getHighlighted().includes(frac.party.id)) total_hlt += frac.seatAmt;
+		totalSeats += frac.seatAmt;
+		if (getHighlighted().includes(frac.party.id)) totalHighlight += frac.seatAmt;
 	}
 
 	string += `</tbody>`;
@@ -79,7 +79,7 @@ function seat_dist_table() {
 }
 
 // generate the table of parties that have left parliament if available
-function left_parl_table() {
+function leftParliamentTable() {
 	// find parties that left parliament
 	let parliament = S.originalParliament;
 	let fracs = [...S.ordTab];
@@ -96,18 +96,18 @@ function left_parl_table() {
 		leftParliament = [];
 	}
 	if (leftParliament.length) {
-		let left_string = '<h2>&#8618; No longer in parliament</h2>';
-		left_string += '<table><tr><th class="col_l">Party</th><th class="col_m">Full Name</th><th class="col_r">Seats</th></tr>';
+		let leftString = '<h2>&#8618; No longer in parliament</h2>';
+		leftString += '<table><tr><th class="col_l">Party</th><th class="col_m">Full Name</th><th class="col_r">Seats</th></tr>';
 		for (const party of leftParliament) {
-			left_string += '<tr>';
-			left_string += `<td>${party.name}</td>`;
-			left_string += `<td>${party.fullname}</td>`;
+			leftString += '<tr>';
+			leftString += `<td>${party.name}</td>`;
+			leftString += `<td>${party.fullname}</td>`;
 			const prev_frac = prev_parl.fractions.find(f => f.party.name === party.name);
-			left_string += `<td>0 (<span class="red">&#9660;${prev_frac ? prev_frac.seatAmt : 0}</span>)</td>`;
-			left_string += '</tr>';
+			leftString += `<td>0 (<span class="red">&#9660;${prev_frac ? prev_frac.seatAmt : 0}</span>)</td>`;
+			leftString += '</tr>';
 		}
-		left_string += '</table>';
-		document.getElementById("leftParliament").innerHTML = left_string;
+		leftString += '</table>';
+		document.getElementById("leftParliament").innerHTML = leftString;
 	} else {
 		document.getElementById("leftParliament").innerHTML = '';
 	}
@@ -115,7 +115,7 @@ function left_parl_table() {
 
 
 // generate the table indicating party mergers, rebrands and splits
-function changes_table() { 
+function changesTable() { 
 	const parliament = S.originalParliament;
 	const fracs = [...S.ordTab];
 	let str = "";
@@ -158,22 +158,22 @@ function changes_table() {
 		}
 	}
 	if (str) {
-		let full_str = '<h2>Party Changes</h2>';
-		full_str += '<table><tr><th class="col_l">New party</th><th class="col_m">How</th><th class="col_r">Previously</th></tr>';
-		full_str += str;
-		full_str += '</table>';
-		document.getElementById("partyChanges").innerHTML = full_str;
+		let fullString = '<h2>Party Changes</h2>';
+		fullString += '<table><tr><th class="col_l">New party</th><th class="col_m">How</th><th class="col_r">Previously</th></tr>';
+		fullString += str;
+		fullString += '</table>';
+		document.getElementById("partyChanges").innerHTML = fullString;
 	} else {
 		document.getElementById("partyChanges").innerHTML = '';
 	}
 }
 
 // generate an editable seat table for the current parliament object
-function table_editMode() {
+function tableEditMode() {
 	let parliament = S.originalParliament;
 	let string = "";
-	let total_seats = 0;
-	let total_hlt = 0;
+	let totalSeats = 0;
+	let totalHighlight = 0;
 	string += `<table class="sortable">`;
 	string += `<thead>`
 	
@@ -219,8 +219,8 @@ function table_editMode() {
 		string += "<td>" + frac.party.fullname + "</td>";
 		string += `<td><input name="${frac.party.id}" type="number" value="${frac.seatAmt}" min="0" max="10000"></td>`;
 
-		total_seats += frac.seatAmt;
-		if (getHighlighted().includes(frac.party.id)) total_hlt += frac.seatAmt;
+		totalSeats += frac.seatAmt;
+		if (getHighlighted().includes(frac.party.id)) totalHighlight += frac.seatAmt;
 	}
 
 	string += `</tbody>`;
@@ -231,11 +231,11 @@ function table_editMode() {
 	document.getElementById("table").innerHTML = string;
 	document.getElementById("leftParliament").innerHTML = '';
 
-	make_table_sortable();
+	makeTableSortable();
 }
 
 // jQuery sortable table
-function make_table_sortable() {
+function makeTableSortable() {
 	// helper function to keep table cell widths consistent during drag
 	function fix_width(e, ui) {
 		ui.children().each(function() {
@@ -265,27 +265,27 @@ function make_table_sortable() {
 // update table footer with seat totals and minority/majority stats
 export function updateTableFooter() {
 	const footer = document.getElementById("footer");
-	const total_seats = S.currentParliament.seatAmt();
-	let total_hlt = 0;
+	const totalSeats = S.currentParliament.seatAmt();
+	let totalHighlight = 0;
 	for (const frac of S.currentParliament.fractions)
 		if (isHighlighted(frac.party.id))
-			total_hlt += frac.seatAmt;
+			totalHighlight += frac.seatAmt;
 	let string = "";
 	
 	string += '<th>Total</th>';
-	if (total_hlt > 0) {
-		let coalition_comment;
-		if (total_hlt * 2 == total_seats) {
-			coalition_comment = "<span class='chlf'>Half</span>";
-		} else if (total_hlt * 2 < total_seats) {
-			coalition_comment = "<span class='cmin'>Minority</span>";
-			coalition_comment +=  `, ${Math.ceil((total_seats / 2) + 0.2)} needed for majority`;
+	if (totalHighlight > 0) {
+		let coalitionComment;
+		if (totalHighlight * 2 == totalSeats) {
+			coalitionComment = "<span class='chlf'>Half</span>";
+		} else if (totalHighlight * 2 < totalSeats) {
+			coalitionComment = "<span class='cmin'>Minority</span>";
+			coalitionComment +=  `, ${Math.ceil((totalSeats / 2) + 0.2)} needed for majority`;
 		} else {
-			coalition_comment = "<span class='cmaj'>Majority</span>";
+			coalitionComment = "<span class='cmaj'>Majority</span>";
 		}
-		string += `<th class="ralign" colspan="2">${total_hlt}/${total_seats} (${coalition_comment})</th>`;
+		string += `<th class="ralign" colspan="2">${totalHighlight}/${totalSeats} (${coalitionComment})</th>`;
 	} else {
-		string += '<th class="ralign" colspan="2">' + total_seats + '</th>';
+		string += '<th class="ralign" colspan="2">' + totalSeats + '</th>';
 	}
 
 	footer.innerHTML = string;
@@ -344,9 +344,9 @@ export function updateButtons() {
 // update all sidebar info
 export function updateSidebar() {
 	if (S.editMode) {
-		table_editMode();
+		tableEditMode();
 	} else {
-		build_sidebar();
+		buildSidebar();
 	}
 	tableHighlight();
 	updateTableFooter();

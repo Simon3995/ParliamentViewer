@@ -12,7 +12,7 @@ export function getQueryParam(key) {
 }
 
 // delete an existing query parameter from the URL
-export function delete_query_param(key) {
+export function deleteQueryParam(key) {
 	const url = new URL(window.location.href);
 	url.searchParams.delete(key);
 }
