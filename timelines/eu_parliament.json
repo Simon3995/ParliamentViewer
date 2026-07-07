@@ -17,7 +17,8 @@
    "fullname_rm": "",
    "fullname_en": "European People's Party Group",
    "color": "#3399FF",
-   "image": "/logos/eu/epp.png"
+   "image": "/logos/eu/epp.png",
+   "foundedBy": []
   },
   "sd": {
    "name": "S&D",
@@ -63,7 +64,11 @@
    "fullname_rm": "",
    "fullname_en": "The Greens/European Free Alliance",
    "color": "#009900",
-   "image": "/logos/eu/greens.png"
+   "image": "/logos/eu/greens.png",
+   "foundedBy": [
+    "v",
+    "era"
+   ]
   },
   "left": {
    "name": "Left",
@@ -92,7 +97,7 @@
    "color": "#164289",
    "image": "/logos/eu/id.png",
    "foundedBy": [
-    "enf"
+    "epped"
    ]
   },
   "alde": {
@@ -101,7 +106,10 @@
    "fullname_rm": "",
    "fullname_en": "Alliance of Liberals and Democrats for Europe Group",
    "color": "#36A9E0",
-   "image": "/logos/eu/alde.png"
+   "image": "/logos/eu/alde.png",
+   "foundedBy": [
+    "eldr"
+   ]
   },
   "guengl": {
    "name": "GUE/NGL",
@@ -122,13 +130,17 @@
     "efd"
    ]
   },
-  "enf": {
-   "name": "ENF",
-   "fullname": "Europe of Nations and Freedom",
+  "epped": {
+   "name": "EPP-ED",
+   "fullname": "Group of the European People's Party (Christan Democrats) and European Democrats",
    "fullname_rm": "",
-   "fullname_en": "Europe of Nations and Freedom",
-   "color": "#2B3856",
-   "image": "/logos/eu/enf.png"
+   "fullname_en": "Group of the European People's Party (Christan Democrats) and European Democrats",
+   "color": "#002d85",
+   "image": "/logos/eu/epped.png",
+   "foundedBy": [
+    "epp",
+    "ed"
+   ]
   },
   "efd": {
    "name": "EFD",
@@ -136,7 +148,10 @@
    "fullname_rm": "",
    "fullname_en": "Europe of Freedom and Democracy",
    "color": "#24B9B9",
-   "image": "/logos/eu/efd.png"
+   "image": "/logos/eu/efd.png",
+   "foundedBy": [
+    "inddem"
+   ]
   },
   "pse": {
    "name": "PSE",
@@ -144,12 +159,197 @@
    "fullname_rm": "",
    "fullname_en": "Socialist Group in the European Parliament",
    "color": "#ff0000",
+   "image": "",
+   "foundedBy": [
+    "s"
+   ]
+  },
+  "uen": {
+   "name": "UEN",
+   "fullname": "Union for Europe of the Nations Group",
+   "fullname_rm": "",
+   "fullname_en": "Union for Europe of the Nations Group",
+   "color": "#585981",
+   "image": "/logos/eu/uen.png",
+   "foundedBy": [
+    "eda",
+    "fe"
+   ]
+  },
+  "inddem": {
+   "name": "IND/DEM",
+   "fullname": "Independence/Democracy Group",
+   "fullname_rm": "",
+   "fullname_en": "Independence/Democracy Group",
+   "color": "#8cb3c8",
+   "image": "/logos/eu/inddem.png",
+   "foundedBy": [
+    "edd"
+   ]
+  },
+  "eldr": {
+   "name": "ELDR",
+   "fullname": "Group of the European Liberal, Democrat and Reform Party",
+   "fullname_rm": "",
+   "fullname_en": "Group of the European Liberal, Democrat and Reform Party",
+   "color": "#b2ebff",
+   "image": "/logos/eu/eldr.png"
+  },
+  "tdi": {
+   "name": "TDI",
+   "fullname": "Technical Group of Independent Members - mixed group",
+   "fullname_rm": "",
+   "fullname_en": "Technical Group of Independent Members - mixed group",
+   "color": "#c0bfbc",
+   "image": ""
+  },
+  "edd": {
+   "name": "EDD",
+   "fullname": "Group for a Europe of Democracies and Diversities ",
+   "fullname_rm": "",
+   "fullname_en": "Group for a Europe of Democracies and Diversities ",
+   "color": "#8cb3c8",
+   "image": "/logos/eu/edd.png",
+   "foundedBy": [
+    "edn"
+   ]
+  },
+  "eul": {
+   "name": "EUL",
+   "fullname": "Confederal Group of the European United Left",
+   "fullname_rm": "",
+   "fullname_en": "Confederal Group of the European United Left",
+   "color": "#e01b24",
+   "image": "/logos/eu/gue.png",
+   "foundedBy": [],
+   "splitFrom": [
+    "com"
+   ]
+  },
+  "fe": {
+   "name": "FE",
+   "fullname": "Forza Europa Group",
+   "fullname_rm": "",
+   "fullname_en": "Forza Europa Group",
+   "color": "#8c5c6e",
+   "image": ""
+  },
+  "eda": {
+   "name": "EDA",
+   "fullname": "Group of the European Democratic Alliance",
+   "fullname_rm": "",
+   "fullname_en": "Group of the European Democratic Alliance",
+   "color": "#c0bfbc",
+   "image": "",
+   "foundedBy": [
+    "epd"
+   ]
+  },
+  "v": {
+   "name": "V",
+   "fullname": "The Green Group in the European Parliament",
+   "fullname_rm": "",
+   "fullname_en": "The Green Group in the European Parliament",
+   "color": "#2ec27e",
+   "image": "",
+   "splitFrom": [
+    "rbw"
+   ]
+  },
+  "era": {
+   "name": "ERA",
+   "fullname": "Group of the European Radical Alliance",
+   "fullname_rm": "",
+   "fullname_en": "Group of the European Radical Alliance",
+   "color": "#87bec4",
+   "image": "/logos/eu/era.png",
+   "foundedBy": [
+    "rbw"
+   ],
+   "splitFrom": []
+  },
+  "edn": {
+   "name": "EDN",
+   "fullname": "Europe of Nations Group (Coordination Group)",
+   "fullname_rm": "",
+   "fullname_en": "Europe of Nations Group (Coordination Group)",
+   "color": "#65a8ba",
+   "image": ""
+  },
+  "s": {
+   "name": "S",
+   "fullname": "Socialist Group",
+   "fullname_rm": "",
+   "fullname_en": "Socialist Group",
+   "color": "#e01b24",
+   "image": ""
+  },
+  "ed": {
+   "name": "ED",
+   "fullname": "European Democratic Group",
+   "fullname_rm": "",
+   "fullname_en": "European Democratic Group",
+   "color": "#f5c211",
+   "image": ""
+  },
+  "er": {
+   "name": "ER",
+   "fullname": "Technical Group of the European Right",
+   "fullname_rm": "",
+   "fullname_en": "Technical Group of the European Right",
+   "color": "#363f4f",
+   "image": ""
+  },
+  "lu": {
+   "name": "LU",
+   "fullname": "Left Unity",
+   "fullname_rm": "",
+   "fullname_en": "Left Unity",
+   "color": "#a51d2d",
+   "image": "",
+   "splitFrom": [
+    "com"
+   ]
+  },
+  "rbw": {
+   "name": "RBW",
+   "fullname": "Rainbow Group in the European Parliament",
+   "fullname_rm": "",
+   "fullname_en": "Rainbow Group in the European Parliament",
+   "color": "#8ff0a4",
+   "image": "",
+   "foundedBy": [
+    "cdi"
+   ]
+  },
+  "com": {
+   "name": "COM",
+   "fullname": "Communist and Allies Group",
+   "fullname_rm": "",
+   "fullname_en": "Communist and Allies Group",
+   "color": "#a51d2d",
+   "image": ""
+  },
+  "epd": {
+   "name": "EPD",
+   "fullname": "Group of European Progressive Democrats",
+   "fullname_rm": "",
+   "fullname_en": "Group of European Progressive Democrats",
+   "color": "#9a9996",
+   "image": ""
+  },
+  "cdi": {
+   "name": "CDI",
+   "fullname": "Group for the Technical Coordination and Defence of Independent Groups and Members",
+   "fullname_rm": "",
+   "fullname_en": "Group for the Technical Coordination and Defence of Independent Groups and Members",
+   "color": "#8cb3c8",
    "image": ""
   }
  },
  "parliaments": [
   {
-   "name": "2024 European Parliament Elections",
+   "name": "2024 European Parliament Election",
    "date": "2024-06-09",
    "source": "https://results.elections.europa.eu/en/european-results/2024-2029/",
    "fractions": [
@@ -192,48 +392,48 @@
    ]
   },
   {
-   "name": "2019 European Parliament Elections",
+   "name": "2019 European Parliament Election",
    "date": "2019-05-26",
-   "source": "https://results.elections.europa.eu/en/european-results/2019-2024/outgoing-parliament/",
+   "source": "https://results.elections.europa.eu/en/european-results/2019-2024/constitutive-session/",
    "fractions": [
     {
-     "id": "left",
-     "seats": 37
+     "id": "guengl",
+     "seats": 41
     },
     {
      "id": "sd",
-     "seats": 138
+     "seats": 154
     },
     {
      "id": "greens",
-     "seats": 70
+     "seats": 74
     },
     {
      "id": "re",
-     "seats": 98
+     "seats": 108
     },
     {
      "id": "epp",
-     "seats": 179
+     "seats": 182
     },
     {
      "id": "ecr",
-     "seats": 69
+     "seats": 62
     },
     {
      "id": "id",
-     "seats": 49
+     "seats": 73
     },
     {
      "id": "ni",
-     "seats": 63
+     "seats": 57
     }
    ]
   },
   {
-   "name": "2014 European Parliament Elections",
+   "name": "2014 European Parliament Election",
    "date": "2014-05-25",
-   "source": "https://results.elections.europa.eu/en/european-results/2014-2019/outgoing-parliament/",
+   "source": "https://results.elections.europa.eu/en/european-results/2014-2019/constitutive-session/",
    "fractions": [
     {
      "id": "guengl",
@@ -241,42 +441,38 @@
     },
     {
      "id": "sd",
-     "seats": 185
+     "seats": 191
     },
     {
      "id": "greens",
-     "seats": 52
+     "seats": 50
     },
     {
      "id": "alde",
-     "seats": 69
+     "seats": 67
     },
     {
      "id": "epp",
-     "seats": 216
+     "seats": 221
     },
     {
      "id": "ecr",
-     "seats": 77
+     "seats": 70
     },
     {
      "id": "efdd",
-     "seats": 42
-    },
-    {
-     "id": "enf",
-     "seats": 36
+     "seats": 48
     },
     {
      "id": "ni",
-     "seats": 20
+     "seats": 52
     }
    ]
   },
   {
-   "name": "2009 European Parliament Elections",
+   "name": "2009 European Parliament Election",
    "date": "2009-06-07",
-   "source": "https://results.elections.europa.eu/en/european-results/2009-2014/outgoing-parliament/",
+   "source": "https://results.elections.europa.eu/en/european-results/2009-2014/constitutive-session/",
    "fractions": [
     {
      "id": "guengl",
@@ -284,33 +480,295 @@
     },
     {
      "id": "sd",
-     "seats": 195
+     "seats": 184
     },
     {
      "id": "greens",
-     "seats": 57
+     "seats": 55
     },
     {
      "id": "alde",
-     "seats": 83
+     "seats": 84
     },
     {
      "id": "epp",
-     "seats": 273
+     "seats": 265
     },
     {
      "id": "ecr",
-     "seats": 57
+     "seats": 54
     },
     {
      "id": "efd",
-     "seats": 31
+     "seats": 32
     },
     {
      "id": "ni",
-     "seats": 33
+     "seats": 27
     }
    ]
+  },
+  {
+   "name": "2004 European Parliament Election",
+   "date": "2004-06-13",
+   "fractions": [
+    {
+     "id": "guengl",
+     "seats": 41
+    },
+    {
+     "id": "pse",
+     "seats": 200
+    },
+    {
+     "id": "greens",
+     "seats": 42
+    },
+    {
+     "id": "alde",
+     "seats": 88
+    },
+    {
+     "id": "epped",
+     "seats": 268
+    },
+    {
+     "id": "uen",
+     "seats": 27
+    },
+    {
+     "id": "inddem",
+     "seats": 37
+    },
+    {
+     "id": "ni",
+     "seats": 29
+    }
+   ],
+   "source": "https://results.elections.europa.eu/en/european-results/2004-2009/constitutive-session/"
+  },
+  {
+   "name": "1999 European Parliament Election",
+   "date": "1999-06-13",
+   "fractions": [
+    {
+     "id": "guengl",
+     "seats": 42
+    },
+    {
+     "id": "pse",
+     "seats": 180
+    },
+    {
+     "id": "greens",
+     "seats": 48
+    },
+    {
+     "id": "eldr",
+     "seats": 50
+    },
+    {
+     "id": "epped",
+     "seats": 232
+    },
+    {
+     "id": "uen",
+     "seats": 31
+    },
+    {
+     "id": "edd",
+     "seats": 16
+    },
+    {
+     "id": "tdi",
+     "seats": 18
+    },
+    {
+     "id": "ni",
+     "seats": 9
+    }
+   ],
+   "source": "https://results.elections.europa.eu/en/european-results/1999-2004/constitutive-session/"
+  },
+  {
+   "name": "1994 European Parliament Election",
+   "date": "1994-06-12",
+   "fractions": [
+    {
+     "id": "eul",
+     "seats": 28
+    },
+    {
+     "id": "pse",
+     "seats": 198
+    },
+    {
+     "id": "v",
+     "seats": 23
+    },
+    {
+     "id": "era",
+     "seats": 19
+    },
+    {
+     "id": "eldr",
+     "seats": 44
+    },
+    {
+     "id": "eda",
+     "seats": 26
+    },
+    {
+     "id": "epp",
+     "seats": 156
+    },
+    {
+     "id": "fe",
+     "seats": 27
+    },
+    {
+     "id": "edn",
+     "seats": 19
+    },
+    {
+     "id": "ni",
+     "seats": 27
+    }
+   ],
+   "source": "https://results.elections.europa.eu/en/european-results/1994-1999/constitutive-session/"
+  },
+  {
+   "name": "1989 European Parliament Election",
+   "date": "1989-06-18",
+   "fractions": [
+    {
+     "id": "lu",
+     "seats": 14
+    },
+    {
+     "id": "eul",
+     "seats": 28
+    },
+    {
+     "id": "s",
+     "seats": 180
+    },
+    {
+     "id": "v",
+     "seats": 30
+    },
+    {
+     "id": "rbw",
+     "seats": 13
+    },
+    {
+     "id": "eldr",
+     "seats": 49
+    },
+    {
+     "id": "eda",
+     "seats": 20
+    },
+    {
+     "id": "epp",
+     "seats": 121
+    },
+    {
+     "id": "ed",
+     "seats": 34
+    },
+    {
+     "id": "er",
+     "seats": 17
+    },
+    {
+     "id": "ni",
+     "seats": 12
+    }
+   ],
+   "source": "https://results.elections.europa.eu/en/european-results/1989-1994/constitutive-session/"
+  },
+  {
+   "name": "1984 European Parliament Election",
+   "date": "1984-06-17",
+   "fractions": [
+    {
+     "id": "com",
+     "seats": 41
+    },
+    {
+     "id": "s",
+     "seats": 130
+    },
+    {
+     "id": "rbw",
+     "seats": 20
+    },
+    {
+     "id": "eldr",
+     "seats": 31
+    },
+    {
+     "id": "eda",
+     "seats": 29
+    },
+    {
+     "id": "epp",
+     "seats": 110
+    },
+    {
+     "id": "ed",
+     "seats": 50
+    },
+    {
+     "id": "er",
+     "seats": 16
+    },
+    {
+     "id": "ni",
+     "seats": 7
+    }
+   ],
+   "source": "https://results.elections.europa.eu/en/european-results/1984-1989/constitutive-session/"
+  },
+  {
+   "name": "1979 European Parliament Election",
+   "date": "1979-06-10",
+   "fractions": [
+    {
+     "id": "com",
+     "seats": 44
+    },
+    {
+     "id": "s",
+     "seats": 112
+    },
+    {
+     "id": "cdi",
+     "seats": 11
+    },
+    {
+     "id": "epd",
+     "seats": 22
+    },
+    {
+     "id": "eldr",
+     "seats": 40
+    },
+    {
+     "id": "epp",
+     "seats": 108
+    },
+    {
+     "id": "ed",
+     "seats": 63
+    },
+    {
+     "id": "ni",
+     "seats": 10
+    }
+   ],
+   "source": "https://results.elections.europa.eu/en/european-results/1979-1984/constitutive-session/"
   }
  ]
 }
