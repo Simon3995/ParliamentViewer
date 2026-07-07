@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h2>Generate manifest.json from /logos</h2>
+	<p>Select /logos/ directory: <input type="file" id="folderInput" webkitdirectory directory multiple autocomplete="off"></p>
+	<div id="preview"></div>
+	<button id="downloadBtn" style="display:none;">Download manifest.json</button>
+</body>
+</html>
+
+<script>
+	let manifestData = null;
+
+	document.getElementById('folderInput').addEventListener('change', (e) => {
+		const files = Array.from(e.target.files);
+		const countries = {};
+
+		files.forEach(file => {
+			const rel = file.webkitRelativePath; // e.g. "logos/de/cdu.png"
+			const parts = rel.split('/');
+			if (parts.length < 3) return;        // not inside a country subfolder, skip
+			const country = parts[1];
+			const filename = parts[parts.length - 1];
+			if (!/\.(png|jpg|jpeg|svg|webp)$/i.test(filename)) return; // skip non-image files
+
+			(countries[country] = countries[country] || []).push(filename);
+		});
+
+		manifestData = Object.keys(countries).sort().map(country => ({
+			country,
+			parties: countries[country].sort().map(f => ({
+			id: f.replace(/\.[^.]+$/, ''),  // filename without extension
+			iconUrl: `/logos/${country}/${f}`
+			}))
+		}));
+
+		// preview before downloading
+		const preview = document.getElementById('preview');
+		if (!manifestData.length){
+			preview.innerHTML = '<p>No country subfolders with images found. Did you select the right folder?</p>';
+			document.getElementById('downloadBtn').style.display = 'none';
+			return;
+		}
+		preview.innerHTML = manifestData.map(c =>
+			`<strong>${c.country}</strong> — ${c.parties.length} icon(s)<ul>${
+			c.parties.map(p => `<li>${p.id}</li>`).join('')
+			}</ul>`
+		).join('');
+		document.getElementById('downloadBtn').style.display = 'inline-block';
+	});
+
+	document.getElementById('downloadBtn').addEventListener('click', () => {
+		const blob = new Blob([JSON.stringify(manifestData, null, 1)], { type: 'application/json' });
+		const a = document.createElement('a');
+		a.href = URL.createObjectURL(blob);
+		a.download = 'manifest.json';
+		a.click();
+	});
+</script>

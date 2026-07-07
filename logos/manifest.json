@@ -1,0 +1,1012 @@
+[
+ {
+  "code": "be",
+  "parties": [
+   {
+    "id": "anders.png",
+    "name": "anders",
+    "iconUrl": "/logos/be/anders.png"
+   },
+   {
+    "id": "cdv.png",
+    "name": "cdv",
+    "iconUrl": "/logos/be/cdv.png"
+   },
+   {
+    "id": "defi.png",
+    "name": "defi",
+    "iconUrl": "/logos/be/defi.png"
+   },
+   {
+    "id": "ecolo.png",
+    "name": "ecolo",
+    "iconUrl": "/logos/be/ecolo.png"
+   },
+   {
+    "id": "groen.png",
+    "name": "groen",
+    "iconUrl": "/logos/be/groen.png"
+   },
+   {
+    "id": "le.png",
+    "name": "le",
+    "iconUrl": "/logos/be/le.png"
+   },
+   {
+    "id": "mr.png",
+    "name": "mr",
+    "iconUrl": "/logos/be/mr.png"
+   },
+   {
+    "id": "nva.png",
+    "name": "nva",
+    "iconUrl": "/logos/be/nva.png"
+   },
+   {
+    "id": "openvld.png",
+    "name": "openvld",
+    "iconUrl": "/logos/be/openvld.png"
+   },
+   {
+    "id": "ps.png",
+    "name": "ps",
+    "iconUrl": "/logos/be/ps.png"
+   },
+   {
+    "id": "pvdaptb.png",
+    "name": "pvdaptb",
+    "iconUrl": "/logos/be/pvdaptb.png"
+   },
+   {
+    "id": "vb.png",
+    "name": "vb",
+    "iconUrl": "/logos/be/vb.png"
+   },
+   {
+    "id": "vooruit.png",
+    "name": "vooruit",
+    "iconUrl": "/logos/be/vooruit.png"
+   }
+  ]
+ },
+ {
+  "code": "ca",
+  "parties": [
+   {
+    "id": "bq.png",
+    "name": "bq",
+    "iconUrl": "/logos/ca/bq.png"
+   },
+   {
+    "id": "ca.png",
+    "name": "ca",
+    "iconUrl": "/logos/ca/ca.png"
+   },
+   {
+    "id": "cpc.png",
+    "name": "cpc",
+    "iconUrl": "/logos/ca/cpc.png"
+   },
+   {
+    "id": "green.png",
+    "name": "green",
+    "iconUrl": "/logos/ca/green.png"
+   },
+   {
+    "id": "lpc.png",
+    "name": "lpc",
+    "iconUrl": "/logos/ca/lpc.png"
+   },
+   {
+    "id": "ndp.png",
+    "name": "ndp",
+    "iconUrl": "/logos/ca/ndp.png"
+   },
+   {
+    "id": "pc.png",
+    "name": "pc",
+    "iconUrl": "/logos/ca/pc.png"
+   },
+   {
+    "id": "reform.png",
+    "name": "reform",
+    "iconUrl": "/logos/ca/reform.png"
+   }
+  ]
+ },
+ {
+  "code": "de",
+  "parties": [
+   {
+    "id": "afd.png",
+    "name": "afd",
+    "iconUrl": "/logos/de/afd.png"
+   },
+   {
+    "id": "cducsu.png",
+    "name": "cducsu",
+    "iconUrl": "/logos/de/cducsu.png"
+   },
+   {
+    "id": "fdp.png",
+    "name": "fdp",
+    "iconUrl": "/logos/de/fdp.png"
+   },
+   {
+    "id": "grune.png",
+    "name": "grune",
+    "iconUrl": "/logos/de/grune.png"
+   },
+   {
+    "id": "linke.png",
+    "name": "linke",
+    "iconUrl": "/logos/de/linke.png"
+   },
+   {
+    "id": "pds.png",
+    "name": "pds",
+    "iconUrl": "/logos/de/pds.png"
+   },
+   {
+    "id": "spd.png",
+    "name": "spd",
+    "iconUrl": "/logos/de/spd.png"
+   },
+   {
+    "id": "ssw.png",
+    "name": "ssw",
+    "iconUrl": "/logos/de/ssw.png"
+   }
+  ]
+ },
+ {
+  "code": "dk",
+  "parties": [
+   {
+    "id": "a.png",
+    "name": "a",
+    "iconUrl": "/logos/dk/a.png"
+   },
+   {
+    "id": "b.png",
+    "name": "b",
+    "iconUrl": "/logos/dk/b.png"
+   },
+   {
+    "id": "c.png",
+    "name": "c",
+    "iconUrl": "/logos/dk/c.png"
+   },
+   {
+    "id": "df.png",
+    "name": "df",
+    "iconUrl": "/logos/dk/df.png"
+   },
+   {
+    "id": "h.png",
+    "name": "h",
+    "iconUrl": "/logos/dk/h.png"
+   },
+   {
+    "id": "ia.png",
+    "name": "ia",
+    "iconUrl": "/logos/dk/ia.png"
+   },
+   {
+    "id": "jf.png",
+    "name": "jf",
+    "iconUrl": "/logos/dk/jf.png"
+   },
+   {
+    "id": "la.png",
+    "name": "la",
+    "iconUrl": "/logos/dk/la.png"
+   },
+   {
+    "id": "m.png",
+    "name": "m",
+    "iconUrl": "/logos/dk/m.png"
+   },
+   {
+    "id": "n.png",
+    "name": "n",
+    "iconUrl": "/logos/dk/n.png"
+   },
+   {
+    "id": "rv.png",
+    "name": "rv",
+    "iconUrl": "/logos/dk/rv.png"
+   },
+   {
+    "id": "sf.png",
+    "name": "sf",
+    "iconUrl": "/logos/dk/sf.png"
+   },
+   {
+    "id": "v.png",
+    "name": "v",
+    "iconUrl": "/logos/dk/v.png"
+   },
+   {
+    "id": "å.png",
+    "name": "å",
+    "iconUrl": "/logos/dk/å.png"
+   },
+   {
+    "id": "æ.png",
+    "name": "æ",
+    "iconUrl": "/logos/dk/æ.png"
+   },
+   {
+    "id": "ø.png",
+    "name": "ø",
+    "iconUrl": "/logos/dk/ø.png"
+   }
+  ]
+ },
+ {
+  "code": "eu",
+  "parties": [
+   {
+    "id": "alde.png",
+    "name": "alde",
+    "iconUrl": "/logos/eu/alde.png"
+   },
+   {
+    "id": "ecr.png",
+    "name": "ecr",
+    "iconUrl": "/logos/eu/ecr.png"
+   },
+   {
+    "id": "edd.png",
+    "name": "edd",
+    "iconUrl": "/logos/eu/edd.png"
+   },
+   {
+    "id": "efd.png",
+    "name": "efd",
+    "iconUrl": "/logos/eu/efd.png"
+   },
+   {
+    "id": "efdd.png",
+    "name": "efdd",
+    "iconUrl": "/logos/eu/efdd.png"
+   },
+   {
+    "id": "eldr.png",
+    "name": "eldr",
+    "iconUrl": "/logos/eu/eldr.png"
+   },
+   {
+    "id": "enf.png",
+    "name": "enf",
+    "iconUrl": "/logos/eu/enf.png"
+   },
+   {
+    "id": "epp.png",
+    "name": "epp",
+    "iconUrl": "/logos/eu/epp.png"
+   },
+   {
+    "id": "epped.png",
+    "name": "epped",
+    "iconUrl": "/logos/eu/epped.png"
+   },
+   {
+    "id": "era.png",
+    "name": "era",
+    "iconUrl": "/logos/eu/era.png"
+   },
+   {
+    "id": "esn.png",
+    "name": "esn",
+    "iconUrl": "/logos/eu/esn.png"
+   },
+   {
+    "id": "greens.png",
+    "name": "greens",
+    "iconUrl": "/logos/eu/greens.png"
+   },
+   {
+    "id": "gue.png",
+    "name": "gue",
+    "iconUrl": "/logos/eu/gue.png"
+   },
+   {
+    "id": "guengl.png",
+    "name": "guengl",
+    "iconUrl": "/logos/eu/guengl.png"
+   },
+   {
+    "id": "id.png",
+    "name": "id",
+    "iconUrl": "/logos/eu/id.png"
+   },
+   {
+    "id": "inddem.png",
+    "name": "inddem",
+    "iconUrl": "/logos/eu/inddem.png"
+   },
+   {
+    "id": "left.png",
+    "name": "left",
+    "iconUrl": "/logos/eu/left.png"
+   },
+   {
+    "id": "pfe.png",
+    "name": "pfe",
+    "iconUrl": "/logos/eu/pfe.png"
+   },
+   {
+    "id": "renew.png",
+    "name": "renew",
+    "iconUrl": "/logos/eu/renew.png"
+   },
+   {
+    "id": "sd.png",
+    "name": "sd",
+    "iconUrl": "/logos/eu/sd.png"
+   },
+   {
+    "id": "uen.png",
+    "name": "uen",
+    "iconUrl": "/logos/eu/uen.png"
+   }
+  ]
+ },
+ {
+  "code": "fi",
+  "parties": [
+   {
+    "id": "kd.png",
+    "name": "kd",
+    "iconUrl": "/logos/fi/kd.png"
+   },
+   {
+    "id": "kesk.png",
+    "name": "kesk",
+    "iconUrl": "/logos/fi/kesk.png"
+   },
+   {
+    "id": "kok.png",
+    "name": "kok",
+    "iconUrl": "/logos/fi/kok.png"
+   },
+   {
+    "id": "liik.png",
+    "name": "liik",
+    "iconUrl": "/logos/fi/liik.png"
+   },
+   {
+    "id": "ps.png",
+    "name": "ps",
+    "iconUrl": "/logos/fi/ps.png"
+   },
+   {
+    "id": "sdp.png",
+    "name": "sdp",
+    "iconUrl": "/logos/fi/sdp.png"
+   },
+   {
+    "id": "sfp.png",
+    "name": "sfp",
+    "iconUrl": "/logos/fi/sfp.png"
+   },
+   {
+    "id": "vas.png",
+    "name": "vas",
+    "iconUrl": "/logos/fi/vas.png"
+   },
+   {
+    "id": "vihr.png",
+    "name": "vihr",
+    "iconUrl": "/logos/fi/vihr.png"
+   },
+   {
+    "id": "vkk.png",
+    "name": "vkk",
+    "iconUrl": "/logos/fi/vkk.png"
+   }
+  ]
+ },
+ {
+  "code": "hu",
+  "parties": [
+   {
+    "id": "em.png",
+    "name": "em",
+    "iconUrl": "/logos/hu/em.png"
+   },
+   {
+    "id": "fidesz.png",
+    "name": "fidesz",
+    "iconUrl": "/logos/hu/fidesz.png"
+   },
+   {
+    "id": "ldu.png",
+    "name": "ldu",
+    "iconUrl": "/logos/hu/ldu.png"
+   },
+   {
+    "id": "mh.png",
+    "name": "mh",
+    "iconUrl": "/logos/hu/mh.png"
+   },
+   {
+    "id": "tisza.png",
+    "name": "tisza",
+    "iconUrl": "/logos/hu/tisza.png"
+   }
+  ]
+ },
+ {
+  "code": "it",
+  "parties": [
+   {
+    "id": "aiv.png",
+    "name": "aiv",
+    "iconUrl": "/logos/it/aiv.png"
+   },
+   {
+    "id": "avs.png",
+    "name": "avs",
+    "iconUrl": "/logos/it/avs.png"
+   },
+   {
+    "id": "fdi.png",
+    "name": "fdi",
+    "iconUrl": "/logos/it/fdi.png"
+   },
+   {
+    "id": "fi.png",
+    "name": "fi",
+    "iconUrl": "/logos/it/fi.png"
+   },
+   {
+    "id": "ic.png",
+    "name": "ic",
+    "iconUrl": "/logos/it/ic.png"
+   },
+   {
+    "id": "lega.png",
+    "name": "lega",
+    "iconUrl": "/logos/it/lega.png"
+   },
+   {
+    "id": "m5s.png",
+    "name": "m5s",
+    "iconUrl": "/logos/it/m5s.png"
+   },
+   {
+    "id": "maie.png",
+    "name": "maie",
+    "iconUrl": "/logos/it/maie.png"
+   },
+   {
+    "id": "nm.png",
+    "name": "nm",
+    "iconUrl": "/logos/it/nm.png"
+   },
+   {
+    "id": "pdidp.png",
+    "name": "pdidp",
+    "iconUrl": "/logos/it/pdidp.png"
+   },
+   {
+    "id": "peu.png",
+    "name": "peu",
+    "iconUrl": "/logos/it/peu.png"
+   },
+   {
+    "id": "scn.png",
+    "name": "scn",
+    "iconUrl": "/logos/it/scn.png"
+   },
+   {
+    "id": "svp.png",
+    "name": "svp",
+    "iconUrl": "/logos/it/svp.png"
+   },
+   {
+    "id": "vda.png",
+    "name": "vda",
+    "iconUrl": "/logos/it/vda.png"
+   }
+  ]
+ },
+ {
+  "code": "jp",
+  "parties": [
+   {
+    "id": "cra.png",
+    "name": "cra",
+    "iconUrl": "/logos/jp/cra.png"
+   },
+   {
+    "id": "diy.png",
+    "name": "diy",
+    "iconUrl": "/logos/jp/diy.png"
+   },
+   {
+    "id": "dpp.png",
+    "name": "dpp",
+    "iconUrl": "/logos/jp/dpp.png"
+   },
+   {
+    "id": "jcp.png",
+    "name": "jcp",
+    "iconUrl": "/logos/jp/jcp.png"
+   },
+   {
+    "id": "jip.png",
+    "name": "jip",
+    "iconUrl": "/logos/jp/jip.png"
+   },
+   {
+    "id": "ldp.png",
+    "name": "ldp",
+    "iconUrl": "/logos/jp/ldp.png"
+   },
+   {
+    "id": "rs.png",
+    "name": "rs",
+    "iconUrl": "/logos/jp/rs.png"
+   },
+   {
+    "id": "tcjya.png",
+    "name": "tcjya",
+    "iconUrl": "/logos/jp/tcjya.png"
+   },
+   {
+    "id": "tm.png",
+    "name": "tm",
+    "iconUrl": "/logos/jp/tm.png"
+   }
+  ]
+ },
+ {
+  "code": "nl",
+  "parties": [
+   {
+    "id": "50PLUS.png",
+    "name": "50PLUS",
+    "iconUrl": "/logos/nl/50PLUS.png"
+   },
+   {
+    "id": "AOV.png",
+    "name": "AOV",
+    "iconUrl": "/logos/nl/AOV.png"
+   },
+   {
+    "id": "ARP.png",
+    "name": "ARP",
+    "iconUrl": "/logos/nl/ARP.png"
+   },
+   {
+    "id": "BBB.png",
+    "name": "BBB",
+    "iconUrl": "/logos/nl/BBB.png"
+   },
+   {
+    "id": "BIJ1.png",
+    "name": "BIJ1",
+    "iconUrl": "/logos/nl/BIJ1.png"
+   },
+   {
+    "id": "BvNL.png",
+    "name": "BvNL",
+    "iconUrl": "/logos/nl/BvNL.png"
+   },
+   {
+    "id": "CD.png",
+    "name": "CD",
+    "iconUrl": "/logos/nl/CD.png"
+   },
+   {
+    "id": "CDA.png",
+    "name": "CDA",
+    "iconUrl": "/logos/nl/CDA.png"
+   },
+   {
+    "id": "CHU.png",
+    "name": "CHU",
+    "iconUrl": "/logos/nl/CHU.png"
+   },
+   {
+    "id": "CP.png",
+    "name": "CP",
+    "iconUrl": "/logos/nl/CP.png"
+   },
+   {
+    "id": "CPN.png",
+    "name": "CPN",
+    "iconUrl": "/logos/nl/CPN.png"
+   },
+   {
+    "id": "CU.png",
+    "name": "CU",
+    "iconUrl": "/logos/nl/CU.png"
+   },
+   {
+    "id": "D66.png",
+    "name": "D66",
+    "iconUrl": "/logos/nl/D66.png"
+   },
+   {
+    "id": "DENK.png",
+    "name": "DENK",
+    "iconUrl": "/logos/nl/DENK.png"
+   },
+   {
+    "id": "DS70.png",
+    "name": "DS70",
+    "iconUrl": "/logos/nl/DS70.png"
+   },
+   {
+    "id": "FNP.png",
+    "name": "FNP",
+    "iconUrl": "/logos/nl/FNP.png"
+   },
+   {
+    "id": "FvD.png",
+    "name": "FvD",
+    "iconUrl": "/logos/nl/FvD.png"
+   },
+   {
+    "id": "GL.png",
+    "name": "GL",
+    "iconUrl": "/logos/nl/GL.png"
+   },
+   {
+    "id": "GLPvdA.png",
+    "name": "GLPvdA",
+    "iconUrl": "/logos/nl/GLPvdA.png"
+   },
+   {
+    "id": "GPV.png",
+    "name": "GPV",
+    "iconUrl": "/logos/nl/GPV.png"
+   },
+   {
+    "id": "JA21.png",
+    "name": "JA21",
+    "iconUrl": "/logos/nl/JA21.png"
+   },
+   {
+    "id": "JL.png",
+    "name": "JL",
+    "iconUrl": "/logos/nl/JL.png"
+   },
+   {
+    "id": "KVP.png",
+    "name": "KVP",
+    "iconUrl": "/logos/nl/KVP.png"
+   },
+   {
+    "id": "LN.png",
+    "name": "LN",
+    "iconUrl": "/logos/nl/LN.png"
+   },
+   {
+    "id": "LPF.png",
+    "name": "LPF",
+    "iconUrl": "/logos/nl/LPF.png"
+   },
+   {
+    "id": "NSB.png",
+    "name": "NSB",
+    "iconUrl": "/logos/nl/NSB.png"
+   },
+   {
+    "id": "NSC.png",
+    "name": "NSC",
+    "iconUrl": "/logos/nl/NSC.png"
+   },
+   {
+    "id": "OPNL.png",
+    "name": "OPNL",
+    "iconUrl": "/logos/nl/OPNL.png"
+   },
+   {
+    "id": "Omtzigt.png",
+    "name": "Omtzigt",
+    "iconUrl": "/logos/nl/Omtzigt.png"
+   },
+   {
+    "id": "PPNL.png",
+    "name": "PPNL",
+    "iconUrl": "/logos/nl/PPNL.png"
+   },
+   {
+    "id": "PPR.png",
+    "name": "PPR",
+    "iconUrl": "/logos/nl/PPR.png"
+   },
+   {
+    "id": "PRO.png",
+    "name": "PRO",
+    "iconUrl": "/logos/nl/PRO.png"
+   },
+   {
+    "id": "PSP.png",
+    "name": "PSP",
+    "iconUrl": "/logos/nl/PSP.png"
+   },
+   {
+    "id": "PVV.png",
+    "name": "PVV",
+    "iconUrl": "/logos/nl/PVV.png"
+   },
+   {
+    "id": "PvdA.png",
+    "name": "PvdA",
+    "iconUrl": "/logos/nl/PvdA.png"
+   },
+   {
+    "id": "PvdD.png",
+    "name": "PvdD",
+    "iconUrl": "/logos/nl/PvdD.png"
+   },
+   {
+    "id": "PvdV.png",
+    "name": "PvdV",
+    "iconUrl": "/logos/nl/PvdV.png"
+   },
+   {
+    "id": "RPF.png",
+    "name": "RPF",
+    "iconUrl": "/logos/nl/RPF.png"
+   },
+   {
+    "id": "SDAP.png",
+    "name": "SDAP",
+    "iconUrl": "/logos/nl/SDAP.png"
+   },
+   {
+    "id": "SGP.png",
+    "name": "SGP",
+    "iconUrl": "/logos/nl/SGP.png"
+   },
+   {
+    "id": "SP.png",
+    "name": "SP",
+    "iconUrl": "/logos/nl/SP.png"
+   },
+   {
+    "id": "Unie55+.png",
+    "name": "Unie55+",
+    "iconUrl": "/logos/nl/Unie55+.png"
+   },
+   {
+    "id": "VDB.png",
+    "name": "VDB",
+    "iconUrl": "/logos/nl/VDB.png"
+   },
+   {
+    "id": "VVD.png",
+    "name": "VVD",
+    "iconUrl": "/logos/nl/VVD.png"
+   },
+   {
+    "id": "Volt.png",
+    "name": "Volt",
+    "iconUrl": "/logos/nl/Volt.png"
+   }
+  ]
+ },
+ {
+  "code": "no",
+  "parties": [
+   {
+    "id": "ap.png",
+    "name": "ap",
+    "iconUrl": "/logos/no/ap.png"
+   },
+   {
+    "id": "frp.png",
+    "name": "frp",
+    "iconUrl": "/logos/no/frp.png"
+   },
+   {
+    "id": "h.png",
+    "name": "h",
+    "iconUrl": "/logos/no/h.png"
+   },
+   {
+    "id": "krf.png",
+    "name": "krf",
+    "iconUrl": "/logos/no/krf.png"
+   },
+   {
+    "id": "mdg.png",
+    "name": "mdg",
+    "iconUrl": "/logos/no/mdg.png"
+   },
+   {
+    "id": "rodt.png",
+    "name": "rodt",
+    "iconUrl": "/logos/no/rodt.png"
+   },
+   {
+    "id": "sp.png",
+    "name": "sp",
+    "iconUrl": "/logos/no/sp.png"
+   },
+   {
+    "id": "sv.png",
+    "name": "sv",
+    "iconUrl": "/logos/no/sv.png"
+   },
+   {
+    "id": "v.png",
+    "name": "v",
+    "iconUrl": "/logos/no/v.png"
+   }
+  ]
+ },
+ {
+  "code": "nz",
+  "parties": [
+   {
+    "id": "act.png",
+    "name": "act",
+    "iconUrl": "/logos/nz/act.png"
+   },
+   {
+    "id": "green.png",
+    "name": "green",
+    "iconUrl": "/logos/nz/green.png"
+   },
+   {
+    "id": "lab.png",
+    "name": "lab",
+    "iconUrl": "/logos/nz/lab.png"
+   },
+   {
+    "id": "maori.png",
+    "name": "maori",
+    "iconUrl": "/logos/nz/maori.png"
+   },
+   {
+    "id": "nats.png",
+    "name": "nats",
+    "iconUrl": "/logos/nz/nats.png"
+   },
+   {
+    "id": "nzf.png",
+    "name": "nzf",
+    "iconUrl": "/logos/nz/nzf.png"
+   }
+  ]
+ },
+ {
+  "code": "se",
+  "parties": [
+   {
+    "id": "c.png",
+    "name": "c",
+    "iconUrl": "/logos/se/c.png"
+   },
+   {
+    "id": "kd.png",
+    "name": "kd",
+    "iconUrl": "/logos/se/kd.png"
+   },
+   {
+    "id": "l.png",
+    "name": "l",
+    "iconUrl": "/logos/se/l.png"
+   },
+   {
+    "id": "m.png",
+    "name": "m",
+    "iconUrl": "/logos/se/m.png"
+   },
+   {
+    "id": "mp.png",
+    "name": "mp",
+    "iconUrl": "/logos/se/mp.png"
+   },
+   {
+    "id": "s.png",
+    "name": "s",
+    "iconUrl": "/logos/se/s.png"
+   },
+   {
+    "id": "sd.png",
+    "name": "sd",
+    "iconUrl": "/logos/se/sd.png"
+   },
+   {
+    "id": "v.png",
+    "name": "v",
+    "iconUrl": "/logos/se/v.png"
+   }
+  ]
+ },
+ {
+  "code": "uk",
+  "parties": [
+   {
+    "id": "apni.png",
+    "name": "apni",
+    "iconUrl": "/logos/uk/apni.png"
+   },
+   {
+    "id": "cns.png",
+    "name": "cns",
+    "iconUrl": "/logos/uk/cns.png"
+   },
+   {
+    "id": "dup.png",
+    "name": "dup",
+    "iconUrl": "/logos/uk/dup.png"
+   },
+   {
+    "id": "greens.png",
+    "name": "greens",
+    "iconUrl": "/logos/uk/greens.png"
+   },
+   {
+    "id": "lab.png",
+    "name": "lab",
+    "iconUrl": "/logos/uk/lab.png"
+   },
+   {
+    "id": "libdem.png",
+    "name": "libdem",
+    "iconUrl": "/logos/uk/libdem.png"
+   },
+   {
+    "id": "plaid.png",
+    "name": "plaid",
+    "iconUrl": "/logos/uk/plaid.png"
+   },
+   {
+    "id": "reform.png",
+    "name": "reform",
+    "iconUrl": "/logos/uk/reform.png"
+   },
+   {
+    "id": "sdlp.png",
+    "name": "sdlp",
+    "iconUrl": "/logos/uk/sdlp.png"
+   },
+   {
+    "id": "sf.png",
+    "name": "sf",
+    "iconUrl": "/logos/uk/sf.png"
+   },
+   {
+    "id": "snp.png",
+    "name": "snp",
+    "iconUrl": "/logos/uk/snp.png"
+   },
+   {
+    "id": "tuv.png",
+    "name": "tuv",
+    "iconUrl": "/logos/uk/tuv.png"
+   },
+   {
+    "id": "uup.png",
+    "name": "uup",
+    "iconUrl": "/logos/uk/uup.png"
+   }
+  ]
+ },
+ {
+  "code": "us",
+  "parties": [
+   {
+    "id": "dem.png",
+    "name": "dem",
+    "iconUrl": "/logos/us/dem.png"
+   },
+   {
+    "id": "rep.png",
+    "name": "rep",
+    "iconUrl": "/logos/us/rep.png"
+   }
+  ]
+ }
+]
