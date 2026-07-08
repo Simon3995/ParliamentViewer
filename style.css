@@ -329,6 +329,12 @@ button:active:enabled {
 	vertical-align: middle;
 }
 
+#icon-grid {
+	padding-top: 15px;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
 @media (max-width: 500px) {
 	.navbar {
 		flex-wrap: wrap;
