@@ -105,7 +105,10 @@
 			<p>Color: <input id="addColor" type="color" autocomplete="off"></p>
 			<div id="iconPicker">
 				<label for="country-select">Icon Category:</label>
-				<select id="country-select"></select>
+				<select id="country-select">
+					<option value="" selected disabled hidden>Select Icon Category</option>
+					<div id="country-select-options"></div>
+				</select>
 				<div id="icon-grid"></div>
 			</div>
 			<button id="btnConfirmAdd">Add</button>

@@ -361,6 +361,7 @@ export async function buildIconPickerMenu() {
 	const select = document.getElementById("country-select");
 	const grid = document.getElementById("icon-grid");
 	let countries = [];
+	renderIcons();
 
 	// fetch manifest.json
 	try {
@@ -371,7 +372,7 @@ export async function buildIconPickerMenu() {
 	}
 
 	// build country selector dropdown
-	select.innerHTML = "";
+	select.innerHTML = `<option value="" selected disabled hidden>Select Icon Category</option>`;
 	for (const c of countries) {
 		const opt = document.createElement("option");
 		opt.value = c.country;

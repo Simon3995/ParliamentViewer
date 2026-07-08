@@ -1,5 +1,5 @@
 import { S } from "./main.js";
-import { setIconButtonColor, updateSidebar, selectedIcon } from "./sidebar.js";
+import { setIconButtonColor, updateSidebar, selectedIcon, buildIconPickerMenu } from "./sidebar.js";
 import { loadParliament } from "./loading.js";
 import { Party, Fraction, Parliament, Timeline } from "./classes.js";
 import { generatePartyImgs, loadImage } from "./loading.js";
@@ -91,6 +91,7 @@ export function cancelAddParty() {
 	document.getElementById("addFullname").value = "";
 	document.getElementById("addColor").value = "#000000";
 	document.getElementById("addParty").style.display = "none";
+	buildIconPickerMenu();
 }
 
 // delete all currently highlighted parties
