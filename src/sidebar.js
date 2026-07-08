@@ -362,6 +362,7 @@ export async function buildIconPickerMenu() {
 	const grid = document.getElementById("icon-grid");
 	let countries = [];
 	renderIcons();
+	selectedIcon = null;
 
 	// fetch manifest.json
 	try {
