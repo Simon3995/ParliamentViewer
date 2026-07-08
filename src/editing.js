@@ -1,5 +1,5 @@
 import { S } from "./main.js";
-import { updateSidebar } from "./sidebar.js";
+import { setIconButtonColor, updateSidebar } from "./sidebar.js";
 import { loadParliament } from "./loading.js";
 import { Party, Fraction, Parliament, Timeline } from "./classes.js";
 import { generatePartyImgs } from "./loading.js";
@@ -46,6 +46,9 @@ export function movePartyRight() {
 // show the dialog for adding a new party
 export function showAddMenu() {
 	document.getElementById("addParty").style.display = "block";
+	document.getElementById("addColor").onchange = e => {
+		setIconButtonColor(e.currentTarget.value);
+	}
 }
 
 // add a new party to the current parliament
