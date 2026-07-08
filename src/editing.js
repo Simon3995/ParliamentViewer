@@ -56,7 +56,6 @@ export function addParty() {
 	const addShortname = document.getElementById("addShortname").value;
 	const addFullname = document.getElementById("addFullname").value;
 	const addColor = document.getElementById("addColor").value;
-	const addIcon = selectedIcon.src;
 
 	if (addShortname === '') {
 		alert("No short name entered!");
@@ -75,7 +74,7 @@ export function addParty() {
 
 	// apply
 	const new_party = new Party(addShortname, addFullname, addFullname, addFullname, id+num, addColor, new Image());
-	loadImage(new_party, addIcon);
+	if (selectedIcon) loadImage(new_party, selectedIcon.src);
 	S.currentTimeline.parties[id+num] = new_party;
 	const new_frac = new Fraction(new_party, 1);
 	S.ordTab.push(new_frac);
