@@ -334,6 +334,27 @@
   ]
  },
  {
+  "country": "general",
+  "parties": [
+   {
+    "id": "anarchy",
+    "src": "/logos/general/anarchy.png"
+   },
+   {
+    "id": "communism",
+    "src": "/logos/general/communism.png"
+   },
+   {
+    "id": "peace",
+    "src": "/logos/general/peace.png"
+   },
+   {
+    "id": "socialism",
+    "src": "/logos/general/socialism.png"
+   }
+  ]
+ },
+ {
   "country": "hu",
   "parties": [
    {
