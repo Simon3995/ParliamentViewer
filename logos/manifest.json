@@ -345,12 +345,24 @@
     "src": "/logos/general/communism.png"
    },
    {
+    "id": "feminism",
+    "src": "/logos/general/feminism.png"
+   },
+   {
+    "id": "fist",
+    "src": "/logos/general/fist.png"
+   },
+   {
     "id": "peace",
     "src": "/logos/general/peace.png"
    },
    {
     "id": "socialism",
     "src": "/logos/general/socialism.png"
+   },
+   {
+    "id": "star",
+    "src": "/logos/general/star.png"
    }
   ]
  },
