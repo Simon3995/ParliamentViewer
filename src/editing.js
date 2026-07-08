@@ -1,8 +1,8 @@
 import { S } from "./main.js";
-import { setIconButtonColor, updateSidebar } from "./sidebar.js";
+import { setIconButtonColor, updateSidebar, selectedIcon } from "./sidebar.js";
 import { loadParliament } from "./loading.js";
 import { Party, Fraction, Parliament, Timeline } from "./classes.js";
-import { generatePartyImgs } from "./loading.js";
+import { generatePartyImgs, loadImage } from "./loading.js";
 import { highlight, getHighlighted } from "./controller.js";
 
 
@@ -56,6 +56,7 @@ export function addParty() {
 	const addShortname = document.getElementById("addShortname").value;
 	const addFullname = document.getElementById("addFullname").value;
 	const addColor = document.getElementById("addColor").value;
+	const addIcon = selectedIcon.src;
 
 	if (addShortname === '') {
 		alert("No short name entered!");
@@ -74,6 +75,7 @@ export function addParty() {
 
 	// apply
 	const new_party = new Party(addShortname, addFullname, addFullname, addFullname, id+num, addColor, new Image());
+	loadImage(new_party, addIcon);
 	S.currentTimeline.parties[id+num] = new_party;
 	const new_frac = new Fraction(new_party, 1);
 	S.ordTab.push(new_frac);

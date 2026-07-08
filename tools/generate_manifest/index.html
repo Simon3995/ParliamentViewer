@@ -30,7 +30,7 @@
 			country,
 			parties: countries[country].sort().map(f => ({
 			id: f.replace(/\.[^.]+$/, ''),  // filename without extension
-			iconUrl: `/logos/${country}/${f}`
+			src: `/logos/${country}/${f}`
 			}))
 		}));
 

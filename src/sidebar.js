@@ -1,6 +1,8 @@
 import { S } from "./main.js";
 import { getHighlighted, isHighlighted } from "./controller.js";
 
+export let selectedIcon = null;
+
 // generate all tables in the sidebar
 function buildSidebar() {
 	seatDistTable();
@@ -359,7 +361,6 @@ export async function buildIconPickerMenu() {
 	const select = document.getElementById("country-select");
 	const grid = document.getElementById("icon-grid");
 	let countries = [];
-	let selectedValue = null;
 
 	// fetch manifest.json
 	try {
@@ -374,7 +375,6 @@ export async function buildIconPickerMenu() {
 	for (const c of countries) {
 		const opt = document.createElement("option");
 		opt.value = c.country;
-		console.log("c", c);
 		opt.textContent = c.country;
 		select.appendChild(opt);
 	}
@@ -382,7 +382,7 @@ export async function buildIconPickerMenu() {
 	// render the icon list when a new country is selected
 	select.addEventListener("change", () => renderIcons(select.value));
 
-	// function to render the icon list
+	// render the icon list
 	function renderIcons(countryCode) {
 		grid.innerHTML = "";
 		if (!countryCode) return;
@@ -406,14 +406,15 @@ export async function buildIconPickerMenu() {
 			btn.type = "button";
 			btn.title = country.country + "-" + party.id;
 			btn.style.backgroundColor = document.getElementById("addColor").value;
-			btn.innerHTML = `<img src="${party.iconUrl}" alt="${party.id}">`;
+			btn.innerHTML = `<img src="${party.src}" alt="${party.id}">`;
 			btn.addEventListener("click", () => selectValue(party, btn));
 			grid.appendChild(btn);
 		}
 	}
 
+	// select a new value and update classes
 	function selectValue(value, button) {
-		selectedValue = value;
+		selectedIcon = value;
 		grid.querySelectorAll(".icon-btn").forEach(b => b.classList.remove("selected"));
 		button.classList.add("selected");
 	}
