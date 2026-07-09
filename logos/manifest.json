@@ -1,0 +1,926 @@
+[
+ {
+  "country": "be",
+  "parties": [
+   {
+    "id": "anders",
+    "src": "/logos/be/anders.png"
+   },
+   {
+    "id": "cdv",
+    "src": "/logos/be/cdv.png"
+   },
+   {
+    "id": "defi",
+    "src": "/logos/be/defi.png"
+   },
+   {
+    "id": "ecolo",
+    "src": "/logos/be/ecolo.png"
+   },
+   {
+    "id": "groen",
+    "src": "/logos/be/groen.png"
+   },
+   {
+    "id": "le",
+    "src": "/logos/be/le.png"
+   },
+   {
+    "id": "mr",
+    "src": "/logos/be/mr.png"
+   },
+   {
+    "id": "nva",
+    "src": "/logos/be/nva.png"
+   },
+   {
+    "id": "openvld",
+    "src": "/logos/be/openvld.png"
+   },
+   {
+    "id": "ps",
+    "src": "/logos/be/ps.png"
+   },
+   {
+    "id": "pvdaptb",
+    "src": "/logos/be/pvdaptb.png"
+   },
+   {
+    "id": "vb",
+    "src": "/logos/be/vb.png"
+   },
+   {
+    "id": "vooruit",
+    "src": "/logos/be/vooruit.png"
+   }
+  ]
+ },
+ {
+  "country": "ca",
+  "parties": [
+   {
+    "id": "bq",
+    "src": "/logos/ca/bq.png"
+   },
+   {
+    "id": "ca",
+    "src": "/logos/ca/ca.png"
+   },
+   {
+    "id": "cpc",
+    "src": "/logos/ca/cpc.png"
+   },
+   {
+    "id": "green",
+    "src": "/logos/ca/green.png"
+   },
+   {
+    "id": "lpc",
+    "src": "/logos/ca/lpc.png"
+   },
+   {
+    "id": "ndp",
+    "src": "/logos/ca/ndp.png"
+   },
+   {
+    "id": "pc",
+    "src": "/logos/ca/pc.png"
+   },
+   {
+    "id": "reform",
+    "src": "/logos/ca/reform.png"
+   }
+  ]
+ },
+ {
+  "country": "de",
+  "parties": [
+   {
+    "id": "afd",
+    "src": "/logos/de/afd.png"
+   },
+   {
+    "id": "cducsu",
+    "src": "/logos/de/cducsu.png"
+   },
+   {
+    "id": "fdp",
+    "src": "/logos/de/fdp.png"
+   },
+   {
+    "id": "grune",
+    "src": "/logos/de/grune.png"
+   },
+   {
+    "id": "linke",
+    "src": "/logos/de/linke.png"
+   },
+   {
+    "id": "pds",
+    "src": "/logos/de/pds.png"
+   },
+   {
+    "id": "spd",
+    "src": "/logos/de/spd.png"
+   },
+   {
+    "id": "ssw",
+    "src": "/logos/de/ssw.png"
+   }
+  ]
+ },
+ {
+  "country": "dk",
+  "parties": [
+   {
+    "id": "a",
+    "src": "/logos/dk/a.png"
+   },
+   {
+    "id": "b",
+    "src": "/logos/dk/b.png"
+   },
+   {
+    "id": "c",
+    "src": "/logos/dk/c.png"
+   },
+   {
+    "id": "df",
+    "src": "/logos/dk/df.png"
+   },
+   {
+    "id": "h",
+    "src": "/logos/dk/h.png"
+   },
+   {
+    "id": "ia",
+    "src": "/logos/dk/ia.png"
+   },
+   {
+    "id": "jf",
+    "src": "/logos/dk/jf.png"
+   },
+   {
+    "id": "la",
+    "src": "/logos/dk/la.png"
+   },
+   {
+    "id": "m",
+    "src": "/logos/dk/m.png"
+   },
+   {
+    "id": "n",
+    "src": "/logos/dk/n.png"
+   },
+   {
+    "id": "rv",
+    "src": "/logos/dk/rv.png"
+   },
+   {
+    "id": "sf",
+    "src": "/logos/dk/sf.png"
+   },
+   {
+    "id": "v",
+    "src": "/logos/dk/v.png"
+   },
+   {
+    "id": "å",
+    "src": "/logos/dk/å.png"
+   },
+   {
+    "id": "æ",
+    "src": "/logos/dk/æ.png"
+   },
+   {
+    "id": "ø",
+    "src": "/logos/dk/ø.png"
+   }
+  ]
+ },
+ {
+  "country": "eu",
+  "parties": [
+   {
+    "id": "alde",
+    "src": "/logos/eu/alde.png"
+   },
+   {
+    "id": "ecr",
+    "src": "/logos/eu/ecr.png"
+   },
+   {
+    "id": "edd",
+    "src": "/logos/eu/edd.png"
+   },
+   {
+    "id": "efd",
+    "src": "/logos/eu/efd.png"
+   },
+   {
+    "id": "efdd",
+    "src": "/logos/eu/efdd.png"
+   },
+   {
+    "id": "eldr",
+    "src": "/logos/eu/eldr.png"
+   },
+   {
+    "id": "enf",
+    "src": "/logos/eu/enf.png"
+   },
+   {
+    "id": "epp",
+    "src": "/logos/eu/epp.png"
+   },
+   {
+    "id": "epped",
+    "src": "/logos/eu/epped.png"
+   },
+   {
+    "id": "era",
+    "src": "/logos/eu/era.png"
+   },
+   {
+    "id": "esn",
+    "src": "/logos/eu/esn.png"
+   },
+   {
+    "id": "greens",
+    "src": "/logos/eu/greens.png"
+   },
+   {
+    "id": "gue",
+    "src": "/logos/eu/gue.png"
+   },
+   {
+    "id": "guengl",
+    "src": "/logos/eu/guengl.png"
+   },
+   {
+    "id": "id",
+    "src": "/logos/eu/id.png"
+   },
+   {
+    "id": "inddem",
+    "src": "/logos/eu/inddem.png"
+   },
+   {
+    "id": "left",
+    "src": "/logos/eu/left.png"
+   },
+   {
+    "id": "pfe",
+    "src": "/logos/eu/pfe.png"
+   },
+   {
+    "id": "renew",
+    "src": "/logos/eu/renew.png"
+   },
+   {
+    "id": "sd",
+    "src": "/logos/eu/sd.png"
+   },
+   {
+    "id": "uen",
+    "src": "/logos/eu/uen.png"
+   }
+  ]
+ },
+ {
+  "country": "fi",
+  "parties": [
+   {
+    "id": "kd",
+    "src": "/logos/fi/kd.png"
+   },
+   {
+    "id": "kesk",
+    "src": "/logos/fi/kesk.png"
+   },
+   {
+    "id": "kok",
+    "src": "/logos/fi/kok.png"
+   },
+   {
+    "id": "liik",
+    "src": "/logos/fi/liik.png"
+   },
+   {
+    "id": "ps",
+    "src": "/logos/fi/ps.png"
+   },
+   {
+    "id": "sdp",
+    "src": "/logos/fi/sdp.png"
+   },
+   {
+    "id": "sfp",
+    "src": "/logos/fi/sfp.png"
+   },
+   {
+    "id": "vas",
+    "src": "/logos/fi/vas.png"
+   },
+   {
+    "id": "vihr",
+    "src": "/logos/fi/vihr.png"
+   },
+   {
+    "id": "vkk",
+    "src": "/logos/fi/vkk.png"
+   }
+  ]
+ },
+ {
+  "country": "general",
+  "parties": [
+   {
+    "id": "anarchy",
+    "src": "/logos/general/anarchy.png"
+   },
+   {
+    "id": "communism",
+    "src": "/logos/general/communism.png"
+   },
+   {
+    "id": "cross",
+    "src": "/logos/general/cross.png"
+   },
+   {
+    "id": "fasces",
+    "src": "/logos/general/fasces.png"
+   },
+   {
+    "id": "feminism",
+    "src": "/logos/general/feminism.png"
+   },
+   {
+    "id": "fist",
+    "src": "/logos/general/fist.png"
+   },
+   {
+    "id": "flower",
+    "src": "/logos/general/flower.png"
+   },
+   {
+    "id": "globe",
+    "src": "/logos/general/globe.png"
+   },
+   {
+    "id": "hinduism",
+    "src": "/logos/general/hinduism.png"
+   },
+   {
+    "id": "islam",
+    "src": "/logos/general/islam.png"
+   },
+   {
+    "id": "mtg_black",
+    "src": "/logos/general/mtg_black.png"
+   },
+   {
+    "id": "mtg_blue",
+    "src": "/logos/general/mtg_blue.png"
+   },
+   {
+    "id": "mtg_green",
+    "src": "/logos/general/mtg_green.png"
+   },
+   {
+    "id": "mtg_phyrexia",
+    "src": "/logos/general/mtg_phyrexia.png"
+   },
+   {
+    "id": "mtg_red",
+    "src": "/logos/general/mtg_red.png"
+   },
+   {
+    "id": "mtg_white",
+    "src": "/logos/general/mtg_white.png"
+   },
+   {
+    "id": "peace",
+    "src": "/logos/general/peace.png"
+   },
+   {
+    "id": "rebelalliance",
+    "src": "/logos/general/rebelalliance.png"
+   },
+   {
+    "id": "scale",
+    "src": "/logos/general/scale.png"
+   },
+   {
+    "id": "socialism",
+    "src": "/logos/general/socialism.png"
+   },
+   {
+    "id": "star",
+    "src": "/logos/general/star.png"
+   },
+   {
+    "id": "starofdavid",
+    "src": "/logos/general/starofdavid.png"
+   },
+   {
+    "id": "swastika",
+    "src": "/logos/general/swastika.png"
+   },
+   {
+    "id": "torch",
+    "src": "/logos/general/torch.png"
+   }
+  ]
+ },
+ {
+  "country": "hu",
+  "parties": [
+   {
+    "id": "em",
+    "src": "/logos/hu/em.png"
+   },
+   {
+    "id": "fidesz",
+    "src": "/logos/hu/fidesz.png"
+   },
+   {
+    "id": "ldu",
+    "src": "/logos/hu/ldu.png"
+   },
+   {
+    "id": "mh",
+    "src": "/logos/hu/mh.png"
+   },
+   {
+    "id": "tisza",
+    "src": "/logos/hu/tisza.png"
+   }
+  ]
+ },
+ {
+  "country": "it",
+  "parties": [
+   {
+    "id": "aiv",
+    "src": "/logos/it/aiv.png"
+   },
+   {
+    "id": "avs",
+    "src": "/logos/it/avs.png"
+   },
+   {
+    "id": "fdi",
+    "src": "/logos/it/fdi.png"
+   },
+   {
+    "id": "fi",
+    "src": "/logos/it/fi.png"
+   },
+   {
+    "id": "ic",
+    "src": "/logos/it/ic.png"
+   },
+   {
+    "id": "lega",
+    "src": "/logos/it/lega.png"
+   },
+   {
+    "id": "m5s",
+    "src": "/logos/it/m5s.png"
+   },
+   {
+    "id": "maie",
+    "src": "/logos/it/maie.png"
+   },
+   {
+    "id": "nm",
+    "src": "/logos/it/nm.png"
+   },
+   {
+    "id": "pdidp",
+    "src": "/logos/it/pdidp.png"
+   },
+   {
+    "id": "peu",
+    "src": "/logos/it/peu.png"
+   },
+   {
+    "id": "scn",
+    "src": "/logos/it/scn.png"
+   },
+   {
+    "id": "svp",
+    "src": "/logos/it/svp.png"
+   },
+   {
+    "id": "vda",
+    "src": "/logos/it/vda.png"
+   }
+  ]
+ },
+ {
+  "country": "jp",
+  "parties": [
+   {
+    "id": "cra",
+    "src": "/logos/jp/cra.png"
+   },
+   {
+    "id": "diy",
+    "src": "/logos/jp/diy.png"
+   },
+   {
+    "id": "dpp",
+    "src": "/logos/jp/dpp.png"
+   },
+   {
+    "id": "jcp",
+    "src": "/logos/jp/jcp.png"
+   },
+   {
+    "id": "jip",
+    "src": "/logos/jp/jip.png"
+   },
+   {
+    "id": "ldp",
+    "src": "/logos/jp/ldp.png"
+   },
+   {
+    "id": "rs",
+    "src": "/logos/jp/rs.png"
+   },
+   {
+    "id": "tcjya",
+    "src": "/logos/jp/tcjya.png"
+   },
+   {
+    "id": "tm",
+    "src": "/logos/jp/tm.png"
+   }
+  ]
+ },
+ {
+  "country": "nl",
+  "parties": [
+   {
+    "id": "50PLUS",
+    "src": "/logos/nl/50PLUS.png"
+   },
+   {
+    "id": "AOV",
+    "src": "/logos/nl/AOV.png"
+   },
+   {
+    "id": "ARP",
+    "src": "/logos/nl/ARP.png"
+   },
+   {
+    "id": "BBB",
+    "src": "/logos/nl/BBB.png"
+   },
+   {
+    "id": "BIJ1",
+    "src": "/logos/nl/BIJ1.png"
+   },
+   {
+    "id": "BvNL",
+    "src": "/logos/nl/BvNL.png"
+   },
+   {
+    "id": "CD",
+    "src": "/logos/nl/CD.png"
+   },
+   {
+    "id": "CDA",
+    "src": "/logos/nl/CDA.png"
+   },
+   {
+    "id": "CHU",
+    "src": "/logos/nl/CHU.png"
+   },
+   {
+    "id": "CP",
+    "src": "/logos/nl/CP.png"
+   },
+   {
+    "id": "CPN",
+    "src": "/logos/nl/CPN.png"
+   },
+   {
+    "id": "CU",
+    "src": "/logos/nl/CU.png"
+   },
+   {
+    "id": "D66",
+    "src": "/logos/nl/D66.png"
+   },
+   {
+    "id": "DENK",
+    "src": "/logos/nl/DENK.png"
+   },
+   {
+    "id": "DS70",
+    "src": "/logos/nl/DS70.png"
+   },
+   {
+    "id": "FNP",
+    "src": "/logos/nl/FNP.png"
+   },
+   {
+    "id": "FvD",
+    "src": "/logos/nl/FvD.png"
+   },
+   {
+    "id": "GL",
+    "src": "/logos/nl/GL.png"
+   },
+   {
+    "id": "GLPvdA",
+    "src": "/logos/nl/GLPvdA.png"
+   },
+   {
+    "id": "GPV",
+    "src": "/logos/nl/GPV.png"
+   },
+   {
+    "id": "JA21",
+    "src": "/logos/nl/JA21.png"
+   },
+   {
+    "id": "JL",
+    "src": "/logos/nl/JL.png"
+   },
+   {
+    "id": "KVP",
+    "src": "/logos/nl/KVP.png"
+   },
+   {
+    "id": "LN",
+    "src": "/logos/nl/LN.png"
+   },
+   {
+    "id": "LPF",
+    "src": "/logos/nl/LPF.png"
+   },
+   {
+    "id": "NSB",
+    "src": "/logos/nl/NSB.png"
+   },
+   {
+    "id": "NSC",
+    "src": "/logos/nl/NSC.png"
+   },
+   {
+    "id": "OPNL",
+    "src": "/logos/nl/OPNL.png"
+   },
+   {
+    "id": "Omtzigt",
+    "src": "/logos/nl/Omtzigt.png"
+   },
+   {
+    "id": "PPNL",
+    "src": "/logos/nl/PPNL.png"
+   },
+   {
+    "id": "PPR",
+    "src": "/logos/nl/PPR.png"
+   },
+   {
+    "id": "PRO",
+    "src": "/logos/nl/PRO.png"
+   },
+   {
+    "id": "PSP",
+    "src": "/logos/nl/PSP.png"
+   },
+   {
+    "id": "PVV",
+    "src": "/logos/nl/PVV.png"
+   },
+   {
+    "id": "PvdA",
+    "src": "/logos/nl/PvdA.png"
+   },
+   {
+    "id": "PvdD",
+    "src": "/logos/nl/PvdD.png"
+   },
+   {
+    "id": "PvdV",
+    "src": "/logos/nl/PvdV.png"
+   },
+   {
+    "id": "RPF",
+    "src": "/logos/nl/RPF.png"
+   },
+   {
+    "id": "SDAP",
+    "src": "/logos/nl/SDAP.png"
+   },
+   {
+    "id": "SGP",
+    "src": "/logos/nl/SGP.png"
+   },
+   {
+    "id": "SP",
+    "src": "/logos/nl/SP.png"
+   },
+   {
+    "id": "Unie55+",
+    "src": "/logos/nl/Unie55+.png"
+   },
+   {
+    "id": "VDB",
+    "src": "/logos/nl/VDB.png"
+   },
+   {
+    "id": "VVD",
+    "src": "/logos/nl/VVD.png"
+   },
+   {
+    "id": "Volt",
+    "src": "/logos/nl/Volt.png"
+   }
+  ]
+ },
+ {
+  "country": "no",
+  "parties": [
+   {
+    "id": "ap",
+    "src": "/logos/no/ap.png"
+   },
+   {
+    "id": "frp",
+    "src": "/logos/no/frp.png"
+   },
+   {
+    "id": "h",
+    "src": "/logos/no/h.png"
+   },
+   {
+    "id": "krf",
+    "src": "/logos/no/krf.png"
+   },
+   {
+    "id": "mdg",
+    "src": "/logos/no/mdg.png"
+   },
+   {
+    "id": "rodt",
+    "src": "/logos/no/rodt.png"
+   },
+   {
+    "id": "sp",
+    "src": "/logos/no/sp.png"
+   },
+   {
+    "id": "sv",
+    "src": "/logos/no/sv.png"
+   },
+   {
+    "id": "v",
+    "src": "/logos/no/v.png"
+   }
+  ]
+ },
+ {
+  "country": "nz",
+  "parties": [
+   {
+    "id": "act",
+    "src": "/logos/nz/act.png"
+   },
+   {
+    "id": "green",
+    "src": "/logos/nz/green.png"
+   },
+   {
+    "id": "lab",
+    "src": "/logos/nz/lab.png"
+   },
+   {
+    "id": "maori",
+    "src": "/logos/nz/maori.png"
+   },
+   {
+    "id": "nats",
+    "src": "/logos/nz/nats.png"
+   },
+   {
+    "id": "nzf",
+    "src": "/logos/nz/nzf.png"
+   }
+  ]
+ },
+ {
+  "country": "se",
+  "parties": [
+   {
+    "id": "c",
+    "src": "/logos/se/c.png"
+   },
+   {
+    "id": "kd",
+    "src": "/logos/se/kd.png"
+   },
+   {
+    "id": "l",
+    "src": "/logos/se/l.png"
+   },
+   {
+    "id": "m",
+    "src": "/logos/se/m.png"
+   },
+   {
+    "id": "mp",
+    "src": "/logos/se/mp.png"
+   },
+   {
+    "id": "s",
+    "src": "/logos/se/s.png"
+   },
+   {
+    "id": "sd",
+    "src": "/logos/se/sd.png"
+   },
+   {
+    "id": "v",
+    "src": "/logos/se/v.png"
+   }
+  ]
+ },
+ {
+  "country": "uk",
+  "parties": [
+   {
+    "id": "apni",
+    "src": "/logos/uk/apni.png"
+   },
+   {
+    "id": "cns",
+    "src": "/logos/uk/cns.png"
+   },
+   {
+    "id": "dup",
+    "src": "/logos/uk/dup.png"
+   },
+   {
+    "id": "greens",
+    "src": "/logos/uk/greens.png"
+   },
+   {
+    "id": "lab",
+    "src": "/logos/uk/lab.png"
+   },
+   {
+    "id": "libdem",
+    "src": "/logos/uk/libdem.png"
+   },
+   {
+    "id": "plaid",
+    "src": "/logos/uk/plaid.png"
+   },
+   {
+    "id": "reform",
+    "src": "/logos/uk/reform.png"
+   },
+   {
+    "id": "sdlp",
+    "src": "/logos/uk/sdlp.png"
+   },
+   {
+    "id": "sf",
+    "src": "/logos/uk/sf.png"
+   },
+   {
+    "id": "snp",
+    "src": "/logos/uk/snp.png"
+   },
+   {
+    "id": "tuv",
+    "src": "/logos/uk/tuv.png"
+   },
+   {
+    "id": "uup",
+    "src": "/logos/uk/uup.png"
+   }
+  ]
+ },
+ {
+  "country": "us",
+  "parties": [
+   {
+    "id": "dem",
+    "src": "/logos/us/dem.png"
+   },
+   {
+    "id": "rep",
+    "src": "/logos/us/rep.png"
+   }
+  ]
+ }
+]

@@ -311,6 +311,34 @@ button:active:enabled {
 	width: 100%;
 }
 
+.icon-btn {
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+	filter: none;
+	border: none;
+}
+
+.icon-btn.selected {
+	border: 3px solid white;
+}
+
+.icon-btn img {
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.icon-btn:active {
+	transform: none !important;
+}
+
+#icon-grid {
+	padding-top: 15px;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
 @media (max-width: 500px) {
 	.navbar {
 		flex-wrap: wrap;

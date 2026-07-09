@@ -1,8 +1,8 @@
 import { S } from "./main.js";
-import { updateSidebar } from "./sidebar.js";
+import { setIconButtonColor, updateSidebar, selectedIcon, buildIconPickerMenu } from "./sidebar.js";
 import { loadParliament } from "./loading.js";
 import { Party, Fraction, Parliament, Timeline } from "./classes.js";
-import { generatePartyImgs } from "./loading.js";
+import { generatePartyImgs, loadImage } from "./loading.js";
 import { highlight, getHighlighted } from "./controller.js";
 
 
@@ -46,11 +46,14 @@ export function movePartyRight() {
 // show the dialog for adding a new party
 export function showAddMenu() {
 	document.getElementById("addParty").style.display = "block";
+	document.getElementById("addColor").onchange = e => {
+		setIconButtonColor(e.currentTarget.value);
+	}
 }
 
 // add a new party to the current parliament
 export function addParty() {
-	const addShortname = document.getElementById("addShortname").value;
+	const addShortname = document.getElementById("addShortname").value.split(" ").join("_");
 	const addFullname = document.getElementById("addFullname").value;
 	const addColor = document.getElementById("addColor").value;
 
@@ -71,6 +74,7 @@ export function addParty() {
 
 	// apply
 	const new_party = new Party(addShortname, addFullname, addFullname, addFullname, id+num, addColor, new Image());
+	if (selectedIcon) loadImage(new_party, selectedIcon.src);
 	S.currentTimeline.parties[id+num] = new_party;
 	const new_frac = new Fraction(new_party, 1);
 	S.ordTab.push(new_frac);
@@ -87,6 +91,7 @@ export function cancelAddParty() {
 	document.getElementById("addFullname").value = "";
 	document.getElementById("addColor").value = "#000000";
 	document.getElementById("addParty").style.display = "none";
+	buildIconPickerMenu();
 }
 
 // delete all currently highlighted parties

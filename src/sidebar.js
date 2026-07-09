@@ -1,11 +1,14 @@
 import { S } from "./main.js";
 import { getHighlighted, isHighlighted } from "./controller.js";
 
+export let selectedIcon = null;
+
 // generate all tables in the sidebar
 function buildSidebar() {
 	seatDistTable();
 	leftParliamentTable();
 	changesTable();
+	buildIconPickerMenu();
 }
 
 // generate a seat table for the current parliament object
@@ -351,4 +354,83 @@ export function updateSidebar() {
 	tableHighlight();
 	updateTableFooter();
 	updateButtons();
+}
+
+export async function buildIconPickerMenu() {
+	const PATH = "/logos/manifest.json";
+	const select = document.getElementById("country-select");
+	const grid = document.getElementById("icon-grid");
+	let countries = [];
+	renderIcons();
+	selectedIcon = null;
+
+	// fetch manifest.json
+	try {
+		const res = await fetch(PATH);
+		countries = await res.json();
+	} catch (e) {
+		console.error("Failed to load manifest.json:", e);
+	}
+
+	// fetch data that pairs country codes with their full names
+	let names = {};
+	try {
+		const res = await fetch("/countries.json");
+		names = await res.json();
+	} catch (e) {
+		console.error("Failed to load countries.json:", e);
+	}
+
+	// build country selector dropdown
+	select.innerHTML = `<option value="" selected disabled hidden>Select Icon Category</option>`;
+	for (const c of countries) {
+		const opt = document.createElement("option");
+		opt.value = c.country;
+		opt.textContent = names[c.country] ?? c.country;
+		(opt.value === "general") ? select.prepend(opt) : select.append(opt);  // general option goes first
+	}
+
+	// render the icon list when a new country is selected
+	select.addEventListener("change", () => renderIcons(select.value));
+
+	// render the icon list
+	function renderIcons(countryCode) {
+		grid.innerHTML = "";
+		if (!countryCode) return;
+
+		const country = countries.find(c => c.country === countryCode);
+		if (!country) return;
+
+		// 'no icon' option
+		const noneBtn = document.createElement("button");
+		noneBtn.className = 'icon-btn none-btn selected';
+		noneBtn.type = "button";
+		noneBtn.title = "No icon";
+		noneBtn.style.backgroundColor = document.getElementById("addColor").value;
+		noneBtn.addEventListener("click", () => selectValue(null, noneBtn));
+		grid.appendChild(noneBtn);
+
+		// remaining options
+		for (const party of country.parties) {
+			const btn = document.createElement("button");
+			btn.className = "icon-btn";
+			btn.type = "button";
+			btn.title = country.country + "-" + party.id;
+			btn.style.backgroundColor = document.getElementById("addColor").value;
+			btn.innerHTML = `<img src="${party.src}" alt="${party.id}">`;
+			btn.addEventListener("click", () => selectValue(party, btn));
+			grid.appendChild(btn);
+		}
+	}
+
+	// select a new value and update classes
+	function selectValue(value, button) {
+		selectedIcon = value;
+		grid.querySelectorAll(".icon-btn").forEach(b => b.classList.remove("selected"));
+		button.classList.add("selected");
+	}
+}
+
+export function setIconButtonColor(color) {
+	document.querySelectorAll(".icon-btn").forEach(b => b.style.backgroundColor = color);
 }

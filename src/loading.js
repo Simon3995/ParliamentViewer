@@ -80,7 +80,7 @@ export async function loadTimeline(name) {
 }
 
 // return a promise for loading an image
-function loadImage(party, src) {
+export function loadImage(party, src) {
 	return new Promise((resolve) => {
 		if (!src) {
 			party.imageLoaded = false;
@@ -113,6 +113,8 @@ export function generatePartyImgs() {
 			buildPartySprite(party);
 		}
 	}
+
+	// generate images for custom 
 }
 
 // generates a base sprite for a party with no logo loaded
