@@ -53,7 +53,7 @@ export function showAddMenu() {
 
 // add a new party to the current parliament
 export function addParty() {
-	const addShortname = document.getElementById("addShortname").value;
+	const addShortname = document.getElementById("addShortname").value.split(" ").join("_");
 	const addFullname = document.getElementById("addFullname").value;
 	const addColor = document.getElementById("addColor").value;
 
