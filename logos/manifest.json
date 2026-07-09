@@ -345,6 +345,14 @@
     "src": "/logos/general/communism.png"
    },
    {
+    "id": "cross",
+    "src": "/logos/general/cross.png"
+   },
+   {
+    "id": "fasces",
+    "src": "/logos/general/fasces.png"
+   },
+   {
     "id": "feminism",
     "src": "/logos/general/feminism.png"
    },
@@ -353,8 +361,56 @@
     "src": "/logos/general/fist.png"
    },
    {
+    "id": "flower",
+    "src": "/logos/general/flower.png"
+   },
+   {
+    "id": "globe",
+    "src": "/logos/general/globe.png"
+   },
+   {
+    "id": "hinduism",
+    "src": "/logos/general/hinduism.png"
+   },
+   {
+    "id": "islam",
+    "src": "/logos/general/islam.png"
+   },
+   {
+    "id": "mtg_black",
+    "src": "/logos/general/mtg_black.png"
+   },
+   {
+    "id": "mtg_blue",
+    "src": "/logos/general/mtg_blue.png"
+   },
+   {
+    "id": "mtg_green",
+    "src": "/logos/general/mtg_green.png"
+   },
+   {
+    "id": "mtg_phyrexia",
+    "src": "/logos/general/mtg_phyrexia.png"
+   },
+   {
+    "id": "mtg_red",
+    "src": "/logos/general/mtg_red.png"
+   },
+   {
+    "id": "mtg_white",
+    "src": "/logos/general/mtg_white.png"
+   },
+   {
     "id": "peace",
     "src": "/logos/general/peace.png"
+   },
+   {
+    "id": "rebelalliance",
+    "src": "/logos/general/rebelalliance.png"
+   },
+   {
+    "id": "scale",
+    "src": "/logos/general/scale.png"
    },
    {
     "id": "socialism",
@@ -363,6 +419,18 @@
    {
     "id": "star",
     "src": "/logos/general/star.png"
+   },
+   {
+    "id": "starofdavid",
+    "src": "/logos/general/starofdavid.png"
+   },
+   {
+    "id": "swastika",
+    "src": "/logos/general/swastika.png"
+   },
+   {
+    "id": "torch",
+    "src": "/logos/general/torch.png"
    }
   ]
  },

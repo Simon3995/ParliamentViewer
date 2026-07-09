@@ -372,13 +372,22 @@ export async function buildIconPickerMenu() {
 		console.error("Failed to load manifest.json:", e);
 	}
 
+	// fetch data that pairs country codes with their full names
+	let names = {};
+	try {
+		const res = await fetch("/countries.json");
+		names = await res.json();
+	} catch (e) {
+		console.error("Failed to load countries.json:", e);
+	}
+
 	// build country selector dropdown
 	select.innerHTML = `<option value="" selected disabled hidden>Select Icon Category</option>`;
 	for (const c of countries) {
 		const opt = document.createElement("option");
 		opt.value = c.country;
-		opt.textContent = c.country;
-		select.appendChild(opt);
+		opt.textContent = names[c.country] ?? c.country;
+		(opt.value === "general") ? select.prepend(opt) : select.append(opt);  // general option goes first
 	}
 
 	// render the icon list when a new country is selected

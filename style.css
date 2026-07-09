@@ -329,6 +329,10 @@ button:active:enabled {
 	vertical-align: middle;
 }
 
+.icon-btn:active {
+	transform: none !important;
+}
+
 #icon-grid {
 	padding-top: 15px;
 	text-align: center;
