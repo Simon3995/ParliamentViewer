@@ -199,11 +199,11 @@ document.addEventListener('keydown', (e) => {
 	
 	if (e.key === 'ArrowLeft') {
 		e.preventDefault();
-		prev();
+		S.editMode ? movePartyLeft() : prev();
 	}
 	if (e.key === 'ArrowRight') {
 		e.preventDefault();
-		next();
+		S.editMode ? movePartyRight() : next();
 	}
 });
 
