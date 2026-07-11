@@ -2,7 +2,7 @@ import { S, scheduleFrame } from "./main.js";
 import { c, ctx, resizeCanvas, transformCtx, RES_MULT } from "./canvas.js";
 import { loadParliament, loadTimeline } from "./loading.js";
 import { tableHighlight, updateTableFooter, updateButtons, updateSidebar } from "./sidebar.js";
-import { addParty, cancelAddParty, deleteHighlight, movePartyLeft, movePartyRight, resetParliament, showAddMenu, sortTableBySeats, toggleEditMode } from "./editing.js";
+import { addParty, cancelAddParty, deleteHighlight, movePartyLeft, movePartyRight, resetParliament, showAddMenu, sortTableBySeats, toggleEditMode, isEdited } from "./editing.js";
 import { setSpanAngle, setInnerRadius } from "./geometry.js";
 import { getQueryParam, setQueryParam } from "./query.js";
 
@@ -228,8 +228,14 @@ document.getElementById("partyLang").onchange = function(e) {
 	updateSidebar();
 }
 
+// warning message for when user tries to navigate away from an edited parliament
+const navigationWarning = "Navigating to different election data will lose edits you made to the current seat distribution. Do you want to continue?";
+
 // go to previous parliament in the timeline
 export function prev() {
+	if (isEdited()) {
+		if (!confirm(navigationWarning)) return;
+	}
 	const idx = S.currentTimeline.parliaments.indexOf(S.originalParliament);
 	const newIdx = Math.min(idx + 1, S.currentTimeline.parliaments.length - 1);
 	navigate(newIdx);
@@ -237,16 +243,25 @@ export function prev() {
 
 // go to next parliament in the timeline
 export function next() {
+	if (isEdited()) {
+		if (!confirm(navigationWarning)) return;
+	}
 	const idx = S.currentTimeline.parliaments.indexOf(S.originalParliament);
 	const newIdx = Math.max(idx - 1, 0);
 	navigate(newIdx);
 }
 
 export function first() {
+	if (isEdited()) {
+		if (!confirm(navigationWarning)) return;
+	}
 	navigate(S.currentTimeline.parliaments.length - 1);
 }
 
 export function last() {
+	if (isEdited()) {
+		if (!confirm(navigationWarning)) return;
+	}
 	navigate(0);
 }
 
