@@ -145,7 +145,7 @@ hr {
 }
 
 #welcome p {
-	margin: 10px 0px;
+	margin: 16px 0px;
 }
 
 #welcome hr {
@@ -337,6 +337,10 @@ button:active:enabled {
 	padding-top: 15px;
 	text-align: center;
 	padding-bottom: 10px;
+}
+
+#icon-grid p {
+	margin-top: 6px;
 }
 
 @media (max-width: 500px) {

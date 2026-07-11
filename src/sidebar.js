@@ -421,6 +421,10 @@ export async function buildIconPickerMenu() {
 			btn.addEventListener("click", () => selectValue(party, btn));
 			grid.appendChild(btn);
 		}
+
+		const disclaimer = document.createElement("p");
+		disclaimer.innerHTML = `Note: Some icon categories may include icons and symbolism considered shocking or offensive. This site is in no way an endorsement of any political ideology depicted, and is meant purely for educational purposes.`;
+		grid.appendChild(disclaimer);
 	}
 
 	// select a new value and update classes
