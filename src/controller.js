@@ -59,7 +59,7 @@ onClick(document.getElementById("btnRight"), movePartyRight);
 onClick(document.getElementById("btnSort"), sortTableBySeats);
 onClick(document.getElementById("btnConfirmAdd"), addParty);
 onClick(document.getElementById("btnCancelAdd"), cancelAddParty);
-onClick(document.getElementById("btnResetSettings"), reset_settings);
+onClick(document.getElementById("btnResetSettings"), resetSettings);
 
 // lose focus on enter press in number input
 $(document).on("keyup", "input", function(e) {
@@ -319,7 +319,7 @@ export function getHighlighted() {
 	return S.currentHighlight;
 }
 
-export function reset_settings() {
+export function resetSettings() {
 	setInnerRadius(0.4);
 	document.getElementById("innerRadius").value = 0.4;
 	document.getElementById("innerRadius").oninput();
@@ -329,6 +329,9 @@ export function reset_settings() {
 
 	S.selectAncestors = document.getElementById("selectAncestors").checked = false;
 
+	document.getElementById("partyLang").value = "fullname";
+
 	S.currentParliament.distributeSeats();
 	transformCtx();
+	updateSidebar();
 }
