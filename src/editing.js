@@ -123,8 +123,5 @@ export function resetParliament() {
 
 // checks if the current parliament has been edited from its original
 export function isEdited() {
-	const simplify = p => { return {party: p.party.id, seatAmt: p.seatAmt} };
-	const current = S.currentParliament.fractions.map(simplify);
-	const original = S.originalParliament.fractions.map(simplify);
-	return JSON.stringify(current) !== JSON.stringify(original);
+	return document.getElementById("title_ps").innerHTML === " (Edited)";
 }
