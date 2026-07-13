@@ -111,6 +111,9 @@ function show_sidebar() {
 
 // when timeline is selected, show sidebar and hide welcome message
 document.getElementById("selectTimeline").onchange = (e) => {
+	if (isEdited()) {
+		if (!confirm(navigationWarning)) return;
+	}
 	show_sidebar();
 	loadTimeline(e.target.value);
 }
