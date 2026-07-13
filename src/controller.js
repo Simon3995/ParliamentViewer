@@ -20,6 +20,11 @@ let pointerMovement = 0;
 let pressedRect = null;
 let mouseupFunc = null;
 
+
+// warning message for when user tries to navigate away from an edited parliament
+const navigationWarning = "Changes will be lost. Continue?";
+
+
 function onClick(btn, fn) {
 	btn.addEventListener('pointerdown', function (e) {
 		if (btn.disabled) return;
@@ -227,9 +232,6 @@ document.getElementById("selectAncestors").onchange = function(e) {
 document.getElementById("partyLang").onchange = function(e) {
 	updateSidebar();
 }
-
-// warning message for when user tries to navigate away from an edited parliament
-const navigationWarning = "Navigating to different election data will lose edits you made to the current seat distribution. Do you want to continue?";
 
 // go to previous parliament in the timeline
 export function prev() {
