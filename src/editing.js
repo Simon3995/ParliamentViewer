@@ -29,6 +29,7 @@ export function sortTableBySeats() {
 
 // move the selected party one step to the left on the parliament chart
 export function movePartyLeft() {
+	if (S.currentHighlight.length !== 1) return;
 	const idx = S.ordVis.findIndex(elem => elem.party.id === S.currentHighlight[0]);
 	if (idx <= 0) return; // can't move further left
 	[S.ordVis[idx - 1], S.ordVis[idx]] = [S.ordVis[idx], S.ordVis[idx - 1]];
@@ -37,6 +38,7 @@ export function movePartyLeft() {
 
 // move the selected party one step to the right on the parliament chart
 export function movePartyRight() {
+	if (S.currentHighlight.length !== 1) return;
 	const idx = S.ordVis.findIndex(elem => elem.party.id === S.currentHighlight[0]);
 	if (idx === -1 || idx >= S.ordVis.length - 1) return; // can´t move further right
 	[S.ordVis[idx + 1], S.ordVis[idx]] = [S.ordVis[idx], S.ordVis[idx + 1]];
@@ -117,4 +119,9 @@ export function resetParliament() {
 	cancelAddParty();
 	updateSidebar();
 	S.currentParliament.distributeSeats();
+}
+
+// checks if the current parliament has been edited from its original
+export function isEdited() {
+	return document.getElementById("title_ps").innerHTML === " (Edited)";
 }
