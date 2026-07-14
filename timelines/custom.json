@@ -1,0 +1,11 @@
+{
+ "name": "custom",
+ "title": "Custom Parliament",
+ "parties": {},
+ "parliaments": [
+  {
+   "name": "Custom Parliament",
+   "fractions": []
+  }
+ ]
+}
