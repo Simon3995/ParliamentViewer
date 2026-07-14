@@ -565,180 +565,180 @@
   "country": "nl",
   "parties": [
    {
-    "id": "50PLUS",
-    "src": "/logos/nl/50PLUS.png"
+    "id": "50plus",
+    "src": "/logos/nl/50plus.png"
    },
    {
-    "id": "AOV",
-    "src": "/logos/nl/AOV.png"
+    "id": "aov",
+    "src": "/logos/nl/aov.png"
    },
    {
-    "id": "ARP",
-    "src": "/logos/nl/ARP.png"
+    "id": "arp",
+    "src": "/logos/nl/arp.png"
    },
    {
-    "id": "BBB",
-    "src": "/logos/nl/BBB.png"
+    "id": "bbb",
+    "src": "/logos/nl/bbb.png"
    },
    {
-    "id": "BIJ1",
-    "src": "/logos/nl/BIJ1.png"
+    "id": "bij1",
+    "src": "/logos/nl/bij1.png"
    },
    {
-    "id": "BvNL",
-    "src": "/logos/nl/BvNL.png"
+    "id": "bvnl",
+    "src": "/logos/nl/bvnl.png"
    },
    {
-    "id": "CD",
-    "src": "/logos/nl/CD.png"
+    "id": "cd",
+    "src": "/logos/nl/cd.png"
    },
    {
-    "id": "CDA",
-    "src": "/logos/nl/CDA.png"
+    "id": "cda",
+    "src": "/logos/nl/cda.png"
    },
    {
-    "id": "CHU",
-    "src": "/logos/nl/CHU.png"
+    "id": "chu",
+    "src": "/logos/nl/chu.png"
    },
    {
-    "id": "CP",
-    "src": "/logos/nl/CP.png"
+    "id": "cp",
+    "src": "/logos/nl/cp.png"
    },
    {
-    "id": "CPN",
-    "src": "/logos/nl/CPN.png"
+    "id": "cpn",
+    "src": "/logos/nl/cpn.png"
    },
    {
-    "id": "CU",
-    "src": "/logos/nl/CU.png"
+    "id": "cu",
+    "src": "/logos/nl/cu.png"
    },
    {
-    "id": "D66",
-    "src": "/logos/nl/D66.png"
+    "id": "d66",
+    "src": "/logos/nl/d66.png"
    },
    {
-    "id": "DENK",
-    "src": "/logos/nl/DENK.png"
+    "id": "denk",
+    "src": "/logos/nl/denk.png"
    },
    {
-    "id": "DS70",
-    "src": "/logos/nl/DS70.png"
+    "id": "ds70",
+    "src": "/logos/nl/ds70.png"
    },
    {
-    "id": "FNP",
-    "src": "/logos/nl/FNP.png"
+    "id": "fnp",
+    "src": "/logos/nl/fnp.png"
    },
    {
-    "id": "FvD",
-    "src": "/logos/nl/FvD.png"
+    "id": "fvd",
+    "src": "/logos/nl/fvd.png"
    },
    {
-    "id": "GL",
-    "src": "/logos/nl/GL.png"
+    "id": "gl",
+    "src": "/logos/nl/gl.png"
    },
    {
-    "id": "GLPvdA",
-    "src": "/logos/nl/GLPvdA.png"
+    "id": "glpvda",
+    "src": "/logos/nl/glpvda.png"
    },
    {
-    "id": "GPV",
-    "src": "/logos/nl/GPV.png"
+    "id": "gpv",
+    "src": "/logos/nl/gpv.png"
    },
    {
-    "id": "JA21",
-    "src": "/logos/nl/JA21.png"
+    "id": "ja21",
+    "src": "/logos/nl/ja21.png"
    },
    {
-    "id": "JL",
-    "src": "/logos/nl/JL.png"
+    "id": "jl",
+    "src": "/logos/nl/jl.png"
    },
    {
-    "id": "KVP",
-    "src": "/logos/nl/KVP.png"
+    "id": "kvp",
+    "src": "/logos/nl/kvp.png"
    },
    {
-    "id": "LN",
-    "src": "/logos/nl/LN.png"
+    "id": "ln",
+    "src": "/logos/nl/ln.png"
    },
    {
-    "id": "LPF",
-    "src": "/logos/nl/LPF.png"
+    "id": "lpf",
+    "src": "/logos/nl/lpf.png"
    },
    {
-    "id": "NSB",
-    "src": "/logos/nl/NSB.png"
+    "id": "nsb",
+    "src": "/logos/nl/nsb.png"
    },
    {
-    "id": "NSC",
-    "src": "/logos/nl/NSC.png"
+    "id": "nsc",
+    "src": "/logos/nl/nsc.png"
    },
    {
-    "id": "OPNL",
-    "src": "/logos/nl/OPNL.png"
+    "id": "opnl",
+    "src": "/logos/nl/opnl.png"
    },
    {
-    "id": "PPNL",
-    "src": "/logos/nl/PPNL.png"
+    "id": "ppnl",
+    "src": "/logos/nl/ppnl.png"
    },
    {
-    "id": "PPR",
-    "src": "/logos/nl/PPR.png"
+    "id": "ppr",
+    "src": "/logos/nl/ppr.png"
    },
    {
-    "id": "PRO",
-    "src": "/logos/nl/PRO.png"
+    "id": "pro",
+    "src": "/logos/nl/pro.png"
    },
    {
-    "id": "PSP",
-    "src": "/logos/nl/PSP.png"
+    "id": "psp",
+    "src": "/logos/nl/psp.png"
    },
    {
-    "id": "PVV",
-    "src": "/logos/nl/PVV.png"
+    "id": "pvda",
+    "src": "/logos/nl/pvda.png"
    },
    {
-    "id": "PvdA",
-    "src": "/logos/nl/PvdA.png"
+    "id": "pvdd",
+    "src": "/logos/nl/pvdd.png"
    },
    {
-    "id": "PvdD",
-    "src": "/logos/nl/PvdD.png"
+    "id": "pvdv",
+    "src": "/logos/nl/pvdv.png"
    },
    {
-    "id": "PvdV",
-    "src": "/logos/nl/PvdV.png"
+    "id": "pvv",
+    "src": "/logos/nl/pvv.png"
    },
    {
-    "id": "RPF",
-    "src": "/logos/nl/RPF.png"
+    "id": "rpf",
+    "src": "/logos/nl/rpf.png"
    },
    {
-    "id": "SDAP",
-    "src": "/logos/nl/SDAP.png"
+    "id": "sdap",
+    "src": "/logos/nl/sdap.png"
    },
    {
-    "id": "SGP",
-    "src": "/logos/nl/SGP.png"
+    "id": "sgp",
+    "src": "/logos/nl/sgp.png"
    },
    {
-    "id": "SP",
-    "src": "/logos/nl/SP.png"
+    "id": "sp",
+    "src": "/logos/nl/sp.png"
    },
    {
-    "id": "Unie55+",
-    "src": "/logos/nl/Unie55+.png"
+    "id": "u55",
+    "src": "/logos/nl/u55.png"
    },
    {
-    "id": "VDB",
-    "src": "/logos/nl/VDB.png"
+    "id": "vdb",
+    "src": "/logos/nl/vdb.png"
    },
    {
-    "id": "VVD",
-    "src": "/logos/nl/VVD.png"
+    "id": "volt",
+    "src": "/logos/nl/volt.png"
    },
    {
-    "id": "Volt",
-    "src": "/logos/nl/Volt.png"
+    "id": "vvd",
+    "src": "/logos/nl/vvd.png"
    }
   ]
  },
