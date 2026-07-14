@@ -9,7 +9,7 @@
    "fullname_rm": "",
    "fullname_en": "Socialist Party",
    "color": "#ed1b24",
-   "image": "/logos/nl/SP.png"
+   "image": "/logos/nl/sp.png"
   },
   "pvdd": {
    "name": "PvdD",
@@ -17,7 +17,7 @@
    "fullname_rm": "",
    "fullname_en": "Party for the Animals",
    "color": "#016b2d",
-   "image": "/logos/nl/PvdD.png"
+   "image": "/logos/nl/pvdd.png"
   },
   "gl": {
    "name": "GL",
@@ -25,7 +25,7 @@
    "fullname_rm": "",
    "fullname_en": "GreenLeft",
    "color": "#00cc00",
-   "image": "/logos/nl/GL.png",
+   "image": "/logos/nl/gl.png",
    "foundedBy": [
     "evp",
     "ppr",
@@ -39,7 +39,7 @@
    "fullname_rm": "",
    "fullname_en": "GreenLeft / Labour Party",
    "color": "#01af40",
-   "image": "/logos/nl/GLPvdA.png",
+   "image": "/logos/nl/glpvda.png",
    "foundedBy": [
     "gl",
     "pvda"
@@ -51,7 +51,7 @@
    "fullname_rm": "",
    "fullname_en": "Labour Party",
    "color": "#ff0000",
-   "image": "/logos/nl/PvdA.png",
+   "image": "/logos/nl/pvda.png",
    "foundedBy": [
     "sdap",
     "cdu",
@@ -64,7 +64,7 @@
    "fullname_rm": "",
    "fullname_en": "DENK (THINK)",
    "color": "#38bfc2",
-   "image": "/logos/nl/DENK.png",
+   "image": "/logos/nl/denk.png",
    "splitFrom": [
     "pvda"
    ]
@@ -75,7 +75,7 @@
    "fullname_rm": "",
    "fullname_en": "Volt",
    "color": "#683ba8",
-   "image": "/logos/nl/Volt.png"
+   "image": "/logos/nl/volt.png"
   },
   "d66": {
    "name": "D66",
@@ -83,7 +83,7 @@
    "fullname_rm": "",
    "fullname_en": "Democrats 66",
    "color": "#01af40",
-   "image": "/logos/nl/D66.png"
+   "image": "/logos/nl/d66.png"
   },
   "cu": {
    "name": "CU",
@@ -91,7 +91,7 @@
    "fullname_rm": "",
    "fullname_en": "ChristianUnion",
    "color": "#8fd1eb",
-   "image": "/logos/nl/CU.png",
+   "image": "/logos/nl/cu.png",
    "foundedBy": [
     "rpf",
     "gpv"
@@ -103,7 +103,7 @@
    "fullname_rm": "",
    "fullname_en": "Christian-Democratic Appeal",
    "color": "#007c5e",
-   "image": "/logos/nl/CDA.png",
+   "image": "/logos/nl/cda.png",
    "foundedBy": [
     "chu",
     "arp",
@@ -116,7 +116,7 @@
    "fullname_rm": "",
    "fullname_en": "New Social Contract",
    "color": "#181d57",
-   "image": "/logos/nl/NSC.png",
+   "image": "/logos/nl/nsc.png",
    "splitFrom": [
     "cda"
    ]
@@ -127,7 +127,7 @@
    "fullname_rm": "",
    "fullname_en": "50PLUS",
    "color": "#92278f",
-   "image": "/logos/nl/50PLUS.png"
+   "image": "/logos/nl/50plus.png"
   },
   "vvd": {
    "name": "VVD",
@@ -135,7 +135,7 @@
    "fullname_rm": "",
    "fullname_en": "People's Party for Freedom and Democracy",
    "color": "#21276a",
-   "image": "/logos/nl/VVD.png",
+   "image": "/logos/nl/vvd.png",
    "foundedBy": [
     "pvdv"
    ],
@@ -149,7 +149,7 @@
    "fullname_rm": "",
    "fullname_en": "Farmer-Citizen Movement",
    "color": "#8fbb1f",
-   "image": "/logos/nl/BBB.png"
+   "image": "/logos/nl/bbb.png"
   },
   "ja21": {
    "name": "JA21",
@@ -157,7 +157,7 @@
    "fullname_rm": "",
    "fullname_en": "Right Answer 2021",
    "color": "#21276a",
-   "image": "/logos/nl/JA21.png",
+   "image": "/logos/nl/ja21.png",
    "splitFrom": [
     "fvd"
    ]
@@ -168,7 +168,7 @@
    "fullname_rm": "",
    "fullname_en": "Reformed Party",
    "color": "#e95d0e",
-   "image": "/logos/nl/SGP.png"
+   "image": "/logos/nl/sgp.png"
   },
   "pvv": {
    "name": "PVV",
@@ -176,7 +176,7 @@
    "fullname_rm": "",
    "fullname_en": "Party for Freedom",
    "color": "#82b2ff",
-   "image": "/logos/nl/PVV.png",
+   "image": "/logos/nl/pvv.png",
    "splitFrom": [
     "vvd"
    ]
@@ -198,7 +198,7 @@
    "fullname_rm": "",
    "fullname_en": "Forum for Democracy",
    "color": "#841818",
-   "image": "/logos/nl/FvD.png"
+   "image": "/logos/nl/fvd.png"
   },
   "lpf": {
    "name": "LPF",
@@ -206,7 +206,7 @@
    "fullname_rm": "",
    "fullname_en": "Pim Fortuyn List",
    "color": "rgb(18, 74, 158)",
-   "image": "/logos/nl/LPF.png",
+   "image": "/logos/nl/lpf.png",
    "splitFrom": [
     "ln"
    ]
@@ -217,7 +217,7 @@
    "fullname_rm": "",
    "fullname_en": "Livable Netherlands",
    "color": "#ff6600ff",
-   "image": "/logos/nl/LN.png"
+   "image": "/logos/nl/ln.png"
   },
   "rpf": {
    "name": "RPF",
@@ -225,7 +225,7 @@
    "fullname_rm": "",
    "fullname_en": "Reformatory Political Federation",
    "color": "#000080",
-   "image": "/logos/nl/RPF.png"
+   "image": "/logos/nl/rpf.png"
   },
   "gpv": {
    "name": "GPV",
@@ -233,7 +233,7 @@
    "fullname_rm": "",
    "fullname_en": "Reformed Political League",
    "color": "#ff7b00",
-   "image": "/logos/nl/GPV.png",
+   "image": "/logos/nl/gpv.png",
    "splitFrom": [
     "arp"
    ]
@@ -256,7 +256,7 @@
    "fullname_rm": "",
    "fullname_en": "General Elderly Alliance",
    "color": "#3083ff",
-   "image": "/logos/nl/AOV.png"
+   "image": "/logos/nl/aov.png"
   },
   "u55p": {
    "name": "U55+",
@@ -264,7 +264,7 @@
    "fullname_rm": "",
    "fullname_en": "Union 55+",
    "color": "#62a0ea",
-   "image": "/logos/nl/Unie55+.png"
+   "image": "/logos/nl/u55.png"
   },
   "cd": {
    "name": "CD",
@@ -272,7 +272,7 @@
    "fullname_rm": "",
    "fullname_en": "Centre Democrats",
    "color": "#c9dfff",
-   "image": "/logos/nl/CD.png"
+   "image": "/logos/nl/cd.png"
   },
   "psp": {
    "name": "PSP",
@@ -280,7 +280,7 @@
    "fullname_rm": "",
    "fullname_en": "Pacifist Socialist Party",
    "color": "#e62525ff",
-   "image": "/logos/nl/PSP.png"
+   "image": "/logos/nl/psp.png"
   },
   "ppr": {
    "name": "PPR",
@@ -288,7 +288,7 @@
    "fullname_rm": "",
    "fullname_en": "Political Party of Radicals",
    "color": "#e92f7cff",
-   "image": "/logos/nl/PPR.png",
+   "image": "/logos/nl/ppr.png",
    "splitFrom": [
     "kvp"
    ]
@@ -307,7 +307,7 @@
    "fullname_rm": "",
    "fullname_en": "Communist Party of the Netherlands",
    "color": "#ff0000",
-   "image": "/logos/nl/CPN.png",
+   "image": "/logos/nl/cpn.png",
    "foundedBy": [
     "sdp"
    ]
@@ -334,7 +334,7 @@
    "fullname_rm": "",
    "fullname_en": "Democratic Socialists '70",
    "color": "#d40000ff",
-   "image": "/logos/nl/DS70.png",
+   "image": "/logos/nl/ds70.png",
    "splitFrom": [
     "pvda"
    ]
@@ -345,7 +345,7 @@
    "fullname_rm": "",
    "fullname_en": "Catholic People's Party",
    "color": "#362511ff",
-   "image": "/logos/nl/KVP.png",
+   "image": "/logos/nl/kvp.png",
    "foundedBy": [
     "rksp"
    ]
@@ -356,7 +356,7 @@
    "fullname_rm": "",
    "fullname_en": "Christian-Historic Union",
    "color": "#0f1e53ff",
-   "image": "/logos/nl/CHU.png"
+   "image": "/logos/nl/chu.png"
   },
   "arp": {
    "name": "ARP",
@@ -364,7 +364,7 @@
    "fullname_rm": "",
    "fullname_en": "Anti-Revolutionary Party",
    "color": "#638ec5",
-   "image": "/logos/nl/ARP.png"
+   "image": "/logos/nl/arp.png"
   },
   "rkpn": {
    "name": "RKPN",
@@ -396,7 +396,7 @@
    "fullname_rm": "",
    "fullname_en": "Party for Freedom",
    "color": "#092447ff",
-   "image": "/logos/nl/PvdV.png",
+   "image": "/logos/nl/pvdv.png",
    "foundedBy": [
     "lsp"
    ]
@@ -418,7 +418,7 @@
    "fullname_rm": "",
    "fullname_en": "Social-Democratic Workers' Party",
    "color": "#e41919ff",
-   "image": "/logos/nl/SDAP.png"
+   "image": "/logos/nl/sdap.png"
   },
   "vdb": {
    "name": "VDB",
@@ -426,7 +426,7 @@
    "fullname_rm": "",
    "fullname_en": "Free-Thinking Democratic League",
    "color": "#6e0e0eff",
-   "image": "/logos/nl/VDB.png"
+   "image": "/logos/nl/vdb.png"
   },
   "nsb": {
    "name": "NSB",
@@ -434,7 +434,7 @@
    "fullname_rm": "",
    "fullname_en": "National-Socialist Movement",
    "color": "#000000ff",
-   "image": "/logos/nl/NSB.png"
+   "image": "/logos/nl/nsb.png"
   },
   "lsp": {
    "name": "LSP",
@@ -629,7 +629,7 @@
    "fullname_rm": "",
    "fullname_en": "Independent Politics Netherlands",
    "color": "#505050",
-   "image": "/logos/nl/OPNL.png",
+   "image": "/logos/nl/opnl.png",
    "foundedBy": [
     "osf"
    ]
@@ -640,7 +640,7 @@
    "fullname_rm": "",
    "fullname_en": "Independent Senate Fraction",
    "color": "#505050",
-   "image": "/logos/nl/OPNL.png"
+   "image": "/logos/nl/opnl.png"
   },
   "ind": {
    "name": "Ind",

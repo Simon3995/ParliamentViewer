@@ -31,10 +31,7 @@ function seatDistTable() {
 	string += `</thead><tbody>`;
 
 	// write all table HTML to a string
-	for (let i in fracs) {
-		i = Number(i);
-		const frac = fracs[i];
-
+	for (const [i, frac] of Object.entries(fracs)) {
 		// find difference
 		let diff = 0;
 		const prevIdx = (S.currentTimeline.parliaments.indexOf(parliament) + 1);
@@ -191,10 +188,7 @@ function tableEditMode() {
 	string += `</thead><tbody>`;
 
 	// write all table HTML to a string
-	for (let i in fracs) {
-		i = Number(i);
-		const frac = fracs[i];
-
+	for (const [i, frac] of Object.entries(fracs)) {
 		// find difference
 		let diff = 0;
 		const prevIdx = (S.currentTimeline.parliaments.indexOf(parliament) + 1);
