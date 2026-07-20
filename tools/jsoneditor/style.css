@@ -74,7 +74,20 @@ img {
 }
 
 .checkbox-list.open {
-	display: inline-block;
+	display: block;
+	width: 100%;
+	min-width: 0;
+	box-sizing: border-box;
+	column-width: 110px;
+	column-gap: 1.5rem;
+}
+
+.checkbox-list label {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+	break-inside: avoid;
+	white-space: nowrap;
 }
 
 .fraction-arrows {
