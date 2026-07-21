@@ -66,6 +66,14 @@
    "fullname_en": "Party of Democratic Socialism",
    "color": "#ff5e00",
    "image": "/logos/de/pds.png"
+  },
+  "b90": {
+   "name": "B90",
+   "fullname": "Bündnis 90",
+   "fullname_rm": "",
+   "fullname_en": "Alliance 90",
+   "color": "#0a5f04",
+   "image": "/logos/de/b90.png"
   }
  },
  "parliaments": [
@@ -323,6 +331,33 @@
      "seats": 294
     }
    ]
+  },
+  {
+   "name": "1990 Federal Election",
+   "date": "1990-12-02",
+   "fractions": [
+    {
+     "id": "pds",
+     "seats": 17
+    },
+    {
+     "id": "spd",
+     "seats": 239
+    },
+    {
+     "id": "b90",
+     "seats": 8
+    },
+    {
+     "id": "fdp",
+     "seats": 79
+    },
+    {
+     "id": "cducsu",
+     "seats": 319
+    }
+   ],
+   "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/1990.html"
   }
  ]
 }
