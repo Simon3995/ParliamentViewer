@@ -32,7 +32,8 @@ function build_checkbox_list(container_id, partyId, field, selected_ids) {
 	const container = document.getElementById(container_id);
 	if (!container) return;
 	container.innerHTML = '';
-	for (const [i, p] of Object.entries(parties)) {
+	const orderedParties = parties.toSorted((a, b) => (a.id > b.id) - 0.5);
+	for (const [i, p] of Object.entries(orderedParties)) {
 		if (!p || i == partyId) continue;
 		const label = make_party_checkbox(partyId, field, p, i);
 		label.querySelector('input').checked = selected_ids.includes(Number(i));
