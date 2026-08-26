@@ -1,0 +1,56 @@
+{
+ "name": "fr_assembleenationale",
+ "title": "Assemblée nationale",
+ "country": "France",
+ "parties": {
+  "rn": {
+   "name": "RN",
+   "fullname": "Rassemblement National",
+   "fullname_en": "National Rally",
+   "color": "#1d4a7d"
+  },
+  "uxd": {
+   "name": "UXD",
+   "fullname": "Union de l'extrême droite",
+   "fullname_en": "Union of the Far-Right",
+   "color": "#241f31"
+  },
+  "nfp": {
+   "name": "NFP",
+   "fullname": "Nouveau Front populaire",
+   "fullname_en": "New Popular Front",
+   "color": "#e4032e"
+  },
+  "eplr": {
+   "name": "EplR",
+   "fullname": "Ensemble pour la République",
+   "fullname_en": "Together for the Republic",
+   "color": "#ffd600"
+  },
+  "lr": {
+   "name": "LR",
+   "fullname": "Les Républicains",
+   "fullname_en": "The Republicans",
+   "color": "#0045ae"
+  },
+  "dvd": {
+   "name": "DVD",
+   "fullname": "Divers droite",
+   "fullname_en": "Miscellaneous Right",
+   "color": "#62a0ea"
+  },
+  "dvg": {
+   "name": "DVG",
+   "fullname": "Divers gauche",
+   "fullname_en": "Miscellaneous Left",
+   "color": "#ff7272"
+  },
+  "dvc": {
+   "name": "DVC",
+   "fullname": "Divers centre",
+   "fullname_en": "Miscellaneous Centre",
+   "color": "#f9f06b"
+  }
+ },
+ "parliaments": []
+}
