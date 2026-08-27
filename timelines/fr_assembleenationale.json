@@ -1,0 +1,152 @@
+{
+ "name": "fr_assembleenationale",
+ "title": "Assemblée nationale",
+ "country": "France",
+ "parties": {
+  "rn": {
+   "name": "RN",
+   "fullname": "Rassemblement National",
+   "fullname_rm": "",
+   "fullname_en": "National Rally",
+   "color": "#1d4a7d",
+   "image": ""
+  },
+  "uxd": {
+   "name": "UXD",
+   "fullname": "Union de l'extrême droite",
+   "fullname_rm": "",
+   "fullname_en": "Union of the Far-Right",
+   "color": "#241f31",
+   "image": ""
+  },
+  "nfp": {
+   "name": "NFP",
+   "fullname": "Nouveau Front populaire",
+   "fullname_rm": "",
+   "fullname_en": "New Popular Front",
+   "color": "#e4032e",
+   "image": ""
+  },
+  "eplr": {
+   "name": "EplR",
+   "fullname": "Ensemble pour la République",
+   "fullname_rm": "",
+   "fullname_en": "Together for the Republic",
+   "color": "#ffd600",
+   "image": ""
+  },
+  "lr": {
+   "name": "LR",
+   "fullname": "Les Républicains",
+   "fullname_rm": "",
+   "fullname_en": "The Republicans",
+   "color": "#0045ae",
+   "image": ""
+  },
+  "dvd": {
+   "name": "DVD",
+   "fullname": "Divers droite",
+   "fullname_rm": "",
+   "fullname_en": "Miscellaneous Right",
+   "color": "#62a0ea",
+   "image": ""
+  },
+  "dvg": {
+   "name": "DVG",
+   "fullname": "Divers gauche",
+   "fullname_rm": "",
+   "fullname_en": "Miscellaneous Left",
+   "color": "#ff7272",
+   "image": ""
+  },
+  "dvc": {
+   "name": "DVC",
+   "fullname": "Divers centre",
+   "fullname_rm": "",
+   "fullname_en": "Miscellaneous Centre",
+   "color": "#f9f06b",
+   "image": ""
+  },
+  "reg": {
+   "name": "Reg",
+   "fullname": "Régionaliste",
+   "fullname_en": "Regionalists",
+   "color": "#ffcd06"
+  },
+  "eco": {
+   "name": "ECO",
+   "fullname": "Écologistes",
+   "fullname_en": "Ecologists",
+   "color": "#78c57a"
+  },
+  "div": {
+   "name": "DIV",
+   "fullname": "Divers",
+   "fullname_en": "Miscellaneous",
+   "color": "#c0c0c0"
+  },
+  "exd": {
+   "color": "#626262",
+   "name": "EXD",
+   "fullname": "Extrême droite",
+   "fullname_en": "Miscellaneous far-right"
+  }
+ },
+ "parliaments": [
+  {
+   "name": "2024 French Legislative Election",
+   "date": "2024-07-07",
+   "fractions": [
+    {
+     "id": "nfp",
+     "seats": 180
+    },
+    {
+     "id": "dvg",
+     "seats": 12
+    },
+    {
+     "id": "eco",
+     "seats": 1
+    },
+    {
+     "id": "reg",
+     "seats": 9
+    },
+    {
+     "id": "div",
+     "seats": 1
+    },
+    {
+     "id": "dvc",
+     "seats": 6
+    },
+    {
+     "id": "eplr",
+     "seats": 159
+    },
+    {
+     "id": "dvd",
+     "seats": 27
+    },
+    {
+     "id": "lr",
+     "seats": 39
+    },
+    {
+     "id": "rn",
+     "seats": 125
+    },
+    {
+     "id": "uxd",
+     "seats": 17
+    },
+    {
+     "id": "exd",
+     "seats": 1
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2024_French_legislative_election"
+  }
+ ]
+}
