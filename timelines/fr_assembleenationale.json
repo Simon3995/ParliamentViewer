@@ -9,7 +9,7 @@
    "fullname_rm": "",
    "fullname_en": "National Rally",
    "color": "#1d4a7d",
-   "image": ""
+   "image": "/logos/fr/rn.png"
   },
   "uxd": {
    "name": "UXD",
@@ -25,15 +25,15 @@
    "fullname_rm": "",
    "fullname_en": "New Popular Front",
    "color": "#e4032e",
-   "image": ""
+   "image": "/logos/fr/nfp.png"
   },
   "eplr": {
-   "name": "EplR",
+   "name": "EPR",
    "fullname": "Ensemble pour la République",
    "fullname_rm": "",
    "fullname_en": "Together for the Republic",
-   "color": "#ffd600",
-   "image": ""
+   "color": "#0092e6",
+   "image": "/logos/fr/epr.png"
   },
   "lr": {
    "name": "LR",
@@ -41,7 +41,7 @@
    "fullname_rm": "",
    "fullname_en": "The Republicans",
    "color": "#0045ae",
-   "image": ""
+   "image": "/logos/fr/lr.png"
   },
   "dvd": {
    "name": "DVD",
@@ -68,7 +68,7 @@
    "image": ""
   },
   "reg": {
-   "name": "Reg",
+   "name": "REG",
    "fullname": "Régionaliste",
    "fullname_en": "Regionalists",
    "color": "#ffcd06"
@@ -126,12 +126,12 @@
      "seats": 159
     },
     {
-     "id": "dvd",
-     "seats": 27
-    },
-    {
      "id": "lr",
      "seats": 39
+    },
+	{
+     "id": "dvd",
+     "seats": 27
     },
     {
      "id": "rn",
