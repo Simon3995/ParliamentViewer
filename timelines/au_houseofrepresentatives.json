@@ -59,6 +59,18 @@
    "fullname": "Nick Xenophon Team",
    "fullname_en": "Nick Xenophon Team",
    "color": "#fe6707"
+  },
+  "pup": {
+   "name": "PUP",
+   "fullname": "Palmer United Party",
+   "fullname_en": "Palmer United Party",
+   "color": "#f5ff00"
+  },
+  "clp": {
+   "name": "CLP",
+   "fullname": "Country Liberal Party",
+   "fullname_en": "Country Liberal Party",
+   "color": "#fe6707"
   }
  },
  "parliaments": [
@@ -217,6 +229,49 @@
     }
    ],
    "source": "https://en.wikipedia.org/wiki/2016_Australian_federal_election"
+  },
+  {
+   "name": "2013 Federal Election",
+   "date": "2013-09-07",
+   "fractions": [
+    {
+     "id": "grn",
+     "seats": 1
+    },
+    {
+     "id": "alp",
+     "seats": 55
+    },
+    {
+     "id": "lib",
+     "seats": 58
+    },
+    {
+     "id": "clp",
+     "seats": 1
+    },
+    {
+     "id": "lnp",
+     "seats": 22
+    },
+    {
+     "id": "nat",
+     "seats": 9
+    },
+    {
+     "id": "kap",
+     "seats": 1
+    },
+    {
+     "id": "pup",
+     "seats": 1
+    },
+    {
+     "id": "ind",
+     "seats": 2
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2013_Australian_federal_election"
   }
  ]
 }
