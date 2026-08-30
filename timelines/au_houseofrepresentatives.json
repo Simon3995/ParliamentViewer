@@ -1,0 +1,96 @@
+{
+ "name": "au_houseofrepresentatives",
+ "title": "House of Representatives",
+ "country": "Australia",
+ "parties": {
+  "alp": {
+   "name": "ALP",
+   "fullname": "Australian Labor Party",
+   "fullname_en": "Australian Labor Party",
+   "color": "#f00011"
+  },
+  "lib": {
+   "name": "LIB",
+   "fullname": "Liberal Party of Australia",
+   "fullname_en": "Liberal Party of Australia",
+   "color": "#1c4f9c"
+  },
+  "lnp": {
+   "name": "LNP",
+   "fullname": "Liberal National Party of Queensland",
+   "fullname_en": "Liberal National Party of Queensland",
+   "color": "#00508e"
+  },
+  "nat": {
+   "name": "NAT",
+   "fullname": "National Party of Australia",
+   "fullname_en": "National Party of Australia",
+   "color": "#047c46"
+  },
+  "ca": {
+   "name": "CA",
+   "fullname": "Centre Alliance",
+   "fullname_en": "Centre Alliance",
+   "color": "#fe6707"
+  },
+  "grn": {
+   "name": "GRN",
+   "fullname": "Australian Greens",
+   "fullname_en": "Australian Greens",
+   "color": "#009c3d"
+  },
+  "ind": {
+   "name": "Ind",
+   "fullname": "Independent",
+   "fullname_en": "Independent",
+   "color": "#9a9996"
+  },
+  "kap": {
+   "name": "KAP",
+   "fullname": "Katter's Australian Party",
+   "fullname_en": "Katter's Australian Party",
+   "color": "#b50204"
+  }
+ },
+ "parliaments": [
+  {
+   "name": "2025 Federal Election",
+   "date": "2025-05-03",
+   "fractions": [
+    {
+     "id": "grn",
+     "seats": 1
+    },
+    {
+     "id": "alp",
+     "seats": 94
+    },
+    {
+     "id": "ca",
+     "seats": 1
+    },
+    {
+     "id": "lib",
+     "seats": 18
+    },
+    {
+     "id": "lnp",
+     "seats": 16
+    },
+    {
+     "id": "nat",
+     "seats": 9
+    },
+    {
+     "id": "kap",
+     "seats": 1
+    },
+    {
+     "id": "ind",
+     "seats": 10
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2025_Australian_federal_election"
+  }
+ ]
+}
