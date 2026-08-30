@@ -1,0 +1,239 @@
+{
+ "name": "fr_assembleenationale",
+ "title": "Assemblée nationale",
+ "country": "France",
+ "parties": {
+  "rn": {
+   "name": "RN",
+   "fullname": "Rassemblement National",
+   "fullname_rm": "",
+   "fullname_en": "National Rally",
+   "color": "#1d4a7d",
+   "image": "/logos/fr/rn.png"
+  },
+  "uxd": {
+   "name": "UXD",
+   "fullname": "Union de l'extrême droite",
+   "fullname_rm": "",
+   "fullname_en": "Union of the Far-Right",
+   "color": "#241f31",
+   "image": ""
+  },
+  "nfp": {
+   "name": "NFP",
+   "fullname": "Nouveau Front populaire",
+   "fullname_rm": "",
+   "fullname_en": "New Popular Front",
+   "color": "#e4032e",
+   "image": "/logos/fr/nfp.png"
+  },
+  "epr": {
+   "name": "EPR",
+   "fullname": "Ensemble pour la République",
+   "fullname_rm": "",
+   "fullname_en": "Together for the Republic",
+   "color": "#0092e6",
+   "image": "/logos/fr/epr.png"
+  },
+  "lr": {
+   "name": "LR",
+   "fullname": "Les Républicains",
+   "fullname_rm": "",
+   "fullname_en": "The Republicans",
+   "color": "#0045ae",
+   "image": "/logos/fr/lr.png"
+  },
+  "dvd": {
+   "name": "DVD",
+   "fullname": "Divers droite",
+   "fullname_rm": "",
+   "fullname_en": "Miscellaneous Right",
+   "color": "#62a0ea",
+   "image": ""
+  },
+  "dvg": {
+   "name": "DVG",
+   "fullname": "Divers gauche",
+   "fullname_rm": "",
+   "fullname_en": "Miscellaneous Left",
+   "color": "#ff7272",
+   "image": ""
+  },
+  "dvc": {
+   "name": "DVC",
+   "fullname": "Divers centre",
+   "fullname_rm": "",
+   "fullname_en": "Miscellaneous Centre",
+   "color": "#f6d32d",
+   "image": ""
+  },
+  "reg": {
+   "name": "REG",
+   "fullname": "Régionaliste",
+   "fullname_rm": "",
+   "fullname_en": "Regionalists",
+   "color": "#ffa723",
+   "image": ""
+  },
+  "eco": {
+   "name": "ECO",
+   "fullname": "Écologistes",
+   "fullname_rm": "",
+   "fullname_en": "Ecologists",
+   "color": "#78c57a",
+   "image": ""
+  },
+  "div": {
+   "name": "DIV",
+   "fullname": "Divers",
+   "fullname_rm": "",
+   "fullname_en": "Miscellaneous",
+   "color": "#c0c0c0",
+   "image": ""
+  },
+  "exd": {
+   "name": "EXD",
+   "fullname": "Extrême droite",
+   "fullname_rm": "",
+   "fullname_en": "Miscellaneous far-right",
+   "color": "#626262",
+   "image": ""
+  },
+  "nupes": {
+   "name": "NUPES",
+   "fullname": "Nouvelle Union populaire écologique et sociale",
+   "fullname_rm": "",
+   "fullname_en": "New Ecological and Social People's Union",
+   "color": "#c061cb",
+   "image": ""
+  },
+  "udc": {
+   "name": "UDC",
+   "fullname": "Union de la droite et du centre",
+   "fullname_rm": "",
+   "fullname_en": "Union of the Right and Centre",
+   "color": "#65b6dd",
+   "image": ""
+  },
+  "dsv": {
+   "name": "DSV",
+   "fullname": "Droite souverainiste",
+   "fullname_en": "Sovereigntist Right",
+   "color": "#1c71d8"
+  },
+  "prg": {
+   "name": "PRG",
+   "fullname": "Parti radical de gauche",
+   "fullname_en": "Radical Party of the Left",
+   "color": "#f6d32d"
+  }
+ },
+ "parliaments": [
+  {
+   "name": "2024 Legislative Election",
+   "date": "2024-07-07",
+   "fractions": [
+    {
+     "id": "nfp",
+     "seats": 180
+    },
+    {
+     "id": "dvg",
+     "seats": 12
+    },
+    {
+     "id": "eco",
+     "seats": 1
+    },
+    {
+     "id": "reg",
+     "seats": 9
+    },
+    {
+     "id": "div",
+     "seats": 1
+    },
+    {
+     "id": "dvc",
+     "seats": 6
+    },
+    {
+     "id": "epr",
+     "seats": 159
+    },
+    {
+     "id": "lr",
+     "seats": 39
+    },
+    {
+     "id": "dvd",
+     "seats": 27
+    },
+    {
+     "id": "rn",
+     "seats": 125
+    },
+    {
+     "id": "uxd",
+     "seats": 17
+    },
+    {
+     "id": "exd",
+     "seats": 1
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2024_French_legislative_election"
+  },
+  {
+   "name": "2022 Legislative Election",
+   "date": "2022-06-19",
+   "fractions": [
+    {
+     "id": "nupes",
+     "seats": 131
+    },
+    {
+     "id": "dvg",
+     "seats": 21
+    },
+    {
+     "id": "prg",
+     "seats": 1
+    },
+    {
+     "id": "reg",
+     "seats": 10
+    },
+    {
+     "id": "div",
+     "seats": 1
+    },
+    {
+     "id": "dvc",
+     "seats": 4
+    },
+    {
+     "id": "epr",
+     "seats": 245
+    },
+    {
+     "id": "udc",
+     "seats": 64
+    },
+    {
+     "id": "dvd",
+     "seats": 10
+    },
+    {
+     "id": "dsv",
+     "seats": 1
+    },
+    {
+     "id": "rn",
+     "seats": 89
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2022_French_legislative_election"
+  }
+ ]
+}
