@@ -31,7 +31,10 @@
    "name": "CA",
    "fullname": "Centre Alliance",
    "fullname_en": "Centre Alliance",
-   "color": "#fe6707"
+   "color": "#fe6707",
+   "foundedBy": [
+    "nxt"
+   ]
   },
   "grn": {
    "name": "GRN",
@@ -50,6 +53,12 @@
    "fullname": "Katter's Australian Party",
    "fullname_en": "Katter's Australian Party",
    "color": "#b50204"
+  },
+  "nxt": {
+   "name": "NXT",
+   "fullname": "Nick Xenophon Team",
+   "fullname_en": "Nick Xenophon Team",
+   "color": "#fe6707"
   }
  },
  "parliaments": [
@@ -169,6 +178,45 @@
     }
    ],
    "source": "https://en.wikipedia.org/wiki/2019_Australian_federal_election"
+  },
+  {
+   "name": "2016 Federal Election",
+   "date": "2016-07-02",
+   "fractions": [
+    {
+     "id": "grn",
+     "seats": 1
+    },
+    {
+     "id": "alp",
+     "seats": 69
+    },
+    {
+     "id": "nxt",
+     "seats": 1
+    },
+    {
+     "id": "lib",
+     "seats": 45
+    },
+    {
+     "id": "lnp",
+     "seats": 21
+    },
+    {
+     "id": "nat",
+     "seats": 10
+    },
+    {
+     "id": "kap",
+     "seats": 1
+    },
+    {
+     "id": "ind",
+     "seats": 2
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2016_Australian_federal_election"
   }
  ]
 }
