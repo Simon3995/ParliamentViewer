@@ -71,6 +71,12 @@
    "fullname": "Country Liberal Party",
    "fullname_en": "Country Liberal Party",
    "color": "#fe6707"
+  },
+  "nwa": {
+   "name": "NWA",
+   "fullname": "Western Australian National Party",
+   "fullname_en": "Western Australian National Party",
+   "color": "#00774e"
   }
  },
  "parliaments": [
@@ -272,6 +278,45 @@
     }
    ],
    "source": "https://en.wikipedia.org/wiki/2013_Australian_federal_election"
+  },
+  {
+   "name": "2010 Federal Election",
+   "date": "2010-08-21",
+   "fractions": [
+    {
+     "id": "grn",
+     "seats": 1
+    },
+    {
+     "id": "alp",
+     "seats": 72
+    },
+    {
+     "id": "lib",
+     "seats": 44
+    },
+    {
+     "id": "clp",
+     "seats": 1
+    },
+    {
+     "id": "lnp",
+     "seats": 21
+    },
+    {
+     "id": "nwa",
+     "seats": 1
+    },
+    {
+     "id": "nat",
+     "seats": 6
+    },
+    {
+     "id": "ind",
+     "seats": 4
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2010_Australian_federal_election"
   }
  ]
 }
