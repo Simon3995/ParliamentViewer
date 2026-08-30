@@ -91,6 +91,84 @@
     }
    ],
    "source": "https://en.wikipedia.org/wiki/2025_Australian_federal_election"
+  },
+  {
+   "name": "2022 Federal Election",
+   "date": "2022-05-21",
+   "fractions": [
+    {
+     "id": "grn",
+     "seats": 4
+    },
+    {
+     "id": "alp",
+     "seats": 77
+    },
+    {
+     "id": "ca",
+     "seats": 1
+    },
+    {
+     "id": "lib",
+     "seats": 27
+    },
+    {
+     "id": "lnp",
+     "seats": 21
+    },
+    {
+     "id": "nat",
+     "seats": 10
+    },
+    {
+     "id": "kap",
+     "seats": 1
+    },
+    {
+     "id": "ind",
+     "seats": 10
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2022_Australian_federal_election"
+  },
+  {
+   "name": "2019 Federal Election",
+   "date": "2019-05-18",
+   "fractions": [
+    {
+     "id": "grn",
+     "seats": 1
+    },
+    {
+     "id": "alp",
+     "seats": 68
+    },
+    {
+     "id": "ca",
+     "seats": 1
+    },
+    {
+     "id": "lib",
+     "seats": 44
+    },
+    {
+     "id": "lnp",
+     "seats": 23
+    },
+    {
+     "id": "nat",
+     "seats": 10
+    },
+    {
+     "id": "kap",
+     "seats": 1
+    },
+    {
+     "id": "ind",
+     "seats": 3
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2019_Australian_federal_election"
   }
  ]
 }
