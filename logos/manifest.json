@@ -1,5 +1,50 @@
 [
  {
+  "country": "au",
+  "parties": [
+   {
+    "id": "alp",
+    "src": "/logos/au/alp.png"
+   },
+   {
+    "id": "ca",
+    "src": "/logos/au/ca.png"
+   },
+   {
+    "id": "clp",
+    "src": "/logos/au/clp.png"
+   },
+   {
+    "id": "grn",
+    "src": "/logos/au/grn.png"
+   },
+   {
+    "id": "kap",
+    "src": "/logos/au/kap.png"
+   },
+   {
+    "id": "lib",
+    "src": "/logos/au/lib.png"
+   },
+   {
+    "id": "lnp",
+    "src": "/logos/au/lnp.png"
+   },
+   {
+    "id": "nat",
+    "src": "/logos/au/nat.png"
+   },
+   {
+    "id": "nwa",
+    "src": "/logos/au/nwa.png"
+   },
+   {
+    "id": "pup",
+    "src": "/logos/au/pup.png"
+   }
+  ]
+ },
+ {
   "country": "be",
   "parties": [
    {
@@ -99,6 +144,10 @@
    {
     "id": "afd",
     "src": "/logos/de/afd.png"
+   },
+   {
+    "id": "b90",
+    "src": "/logos/de/b90.png"
    },
    {
     "id": "cducsu",
@@ -330,6 +379,27 @@
    {
     "id": "vkk",
     "src": "/logos/fi/vkk.png"
+   }
+  ]
+ },
+ {
+  "country": "fr",
+  "parties": [
+   {
+    "id": "epr",
+    "src": "/logos/fr/epr.png"
+   },
+   {
+    "id": "lr",
+    "src": "/logos/fr/lr.png"
+   },
+   {
+    "id": "nfp",
+    "src": "/logos/fr/nfp.png"
+   },
+   {
+    "id": "rn",
+    "src": "/logos/fr/rn.png"
    }
   ]
  },
