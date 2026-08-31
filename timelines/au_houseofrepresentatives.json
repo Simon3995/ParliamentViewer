@@ -1,0 +1,432 @@
+{
+ "name": "au_houseofrepresentatives",
+ "title": "House of Representatives",
+ "country": "Australia",
+ "parties": {
+  "alp": {
+   "name": "ALP",
+   "fullname": "Australian Labor Party",
+   "fullname_en": "Australian Labor Party",
+   "color": "#f00011",
+   "image": "/logos/au/alp.png"
+  },
+  "lib": {
+   "name": "LIB",
+   "fullname": "Liberal Party of Australia",
+   "fullname_en": "Liberal Party of Australia",
+   "color": "#1c4f9c",
+   "image": "/logos/au/lib.png"
+  },
+  "lnp": {
+   "name": "LNP",
+   "fullname": "Liberal National Party of Queensland",
+   "fullname_en": "Liberal National Party of Queensland",
+   "color": "#00508e",
+   "image": "/logos/au/lnp.png"
+  },
+  "nat": {
+   "name": "NAT",
+   "fullname": "National Party of Australia",
+   "fullname_en": "National Party of Australia",
+   "color": "#047c46",
+   "image": "/logos/au/nat.png"
+  },
+  "ca": {
+   "name": "CA",
+   "fullname": "Centre Alliance",
+   "fullname_en": "Centre Alliance",
+   "color": "#fe6707",
+   "foundedBy": [
+    "nxt"
+   ],
+   "image": "/logos/au/ca.png"
+  },
+  "grn": {
+   "name": "GRN",
+   "fullname": "Australian Greens",
+   "fullname_en": "Australian Greens",
+   "color": "#009c3d",
+   "image": "/logos/au/grn.png"
+  },
+  "ind": {
+   "name": "Ind",
+   "fullname": "Independent",
+   "fullname_en": "Independent",
+   "color": "#9a9996"
+  },
+  "kap": {
+   "name": "KAP",
+   "fullname": "Katter's Australian Party",
+   "fullname_en": "Katter's Australian Party",
+   "color": "#b50204",
+   "image": "/logos/au/kap.png"
+  },
+  "nxt": {
+   "name": "NXT",
+   "fullname": "Nick Xenophon Team",
+   "fullname_en": "Nick Xenophon Team",
+   "color": "#fe6707"
+  },
+  "pup": {
+   "name": "PUP",
+   "fullname": "Palmer United Party",
+   "fullname_en": "Palmer United Party",
+   "color": "#2e2b7c",
+   "image": "/logos/au/pup.png"
+  },
+  "clp": {
+   "name": "CLP",
+   "fullname": "Country Liberal Party",
+   "fullname_en": "Country Liberal Party",
+   "color": "#e95605",
+   "image": "/logos/au/clp.png"
+  },
+  "nwa": {
+   "name": "NWA",
+   "fullname": "Western Australian National Party",
+   "fullname_en": "Western Australian National Party",
+   "color": "#00774e",
+   "image": "/logos/au/nwa.png"
+  }
+ },
+ "parliaments": [
+  {
+   "name": "2025 Federal Election",
+   "date": "2025-05-03",
+   "fractions": [
+    {
+     "id": "grn",
+     "seats": 1
+    },
+    {
+     "id": "alp",
+     "seats": 94
+    },
+    {
+     "id": "ca",
+     "seats": 1
+    },
+    {
+     "id": "lib",
+     "seats": 18
+    },
+    {
+     "id": "lnp",
+     "seats": 16
+    },
+    {
+     "id": "nat",
+     "seats": 9
+    },
+    {
+     "id": "kap",
+     "seats": 1
+    },
+    {
+     "id": "ind",
+     "seats": 10
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2025_Australian_federal_election"
+  },
+  {
+   "name": "2022 Federal Election",
+   "date": "2022-05-21",
+   "fractions": [
+    {
+     "id": "grn",
+     "seats": 4
+    },
+    {
+     "id": "alp",
+     "seats": 77
+    },
+    {
+     "id": "ca",
+     "seats": 1
+    },
+    {
+     "id": "lib",
+     "seats": 27
+    },
+    {
+     "id": "lnp",
+     "seats": 21
+    },
+    {
+     "id": "nat",
+     "seats": 10
+    },
+    {
+     "id": "kap",
+     "seats": 1
+    },
+    {
+     "id": "ind",
+     "seats": 10
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2022_Australian_federal_election"
+  },
+  {
+   "name": "2019 Federal Election",
+   "date": "2019-05-18",
+   "fractions": [
+    {
+     "id": "grn",
+     "seats": 1
+    },
+    {
+     "id": "alp",
+     "seats": 68
+    },
+    {
+     "id": "ca",
+     "seats": 1
+    },
+    {
+     "id": "lib",
+     "seats": 44
+    },
+    {
+     "id": "lnp",
+     "seats": 23
+    },
+    {
+     "id": "nat",
+     "seats": 10
+    },
+    {
+     "id": "kap",
+     "seats": 1
+    },
+    {
+     "id": "ind",
+     "seats": 3
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2019_Australian_federal_election"
+  },
+  {
+   "name": "2016 Federal Election",
+   "date": "2016-07-02",
+   "fractions": [
+    {
+     "id": "grn",
+     "seats": 1
+    },
+    {
+     "id": "alp",
+     "seats": 69
+    },
+    {
+     "id": "nxt",
+     "seats": 1
+    },
+    {
+     "id": "lib",
+     "seats": 45
+    },
+    {
+     "id": "lnp",
+     "seats": 21
+    },
+    {
+     "id": "nat",
+     "seats": 10
+    },
+    {
+     "id": "kap",
+     "seats": 1
+    },
+    {
+     "id": "ind",
+     "seats": 2
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2016_Australian_federal_election"
+  },
+  {
+   "name": "2013 Federal Election",
+   "date": "2013-09-07",
+   "fractions": [
+    {
+     "id": "grn",
+     "seats": 1
+    },
+    {
+     "id": "alp",
+     "seats": 55
+    },
+    {
+     "id": "lib",
+     "seats": 58
+    },
+    {
+     "id": "clp",
+     "seats": 1
+    },
+    {
+     "id": "lnp",
+     "seats": 22
+    },
+    {
+     "id": "nat",
+     "seats": 9
+    },
+    {
+     "id": "kap",
+     "seats": 1
+    },
+    {
+     "id": "pup",
+     "seats": 1
+    },
+    {
+     "id": "ind",
+     "seats": 2
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2013_Australian_federal_election"
+  },
+  {
+   "name": "2010 Federal Election",
+   "date": "2010-08-21",
+   "fractions": [
+    {
+     "id": "grn",
+     "seats": 1
+    },
+    {
+     "id": "alp",
+     "seats": 72
+    },
+    {
+     "id": "lib",
+     "seats": 44
+    },
+    {
+     "id": "clp",
+     "seats": 1
+    },
+    {
+     "id": "lnp",
+     "seats": 21
+    },
+    {
+     "id": "nwa",
+     "seats": 1
+    },
+    {
+     "id": "nat",
+     "seats": 6
+    },
+    {
+     "id": "ind",
+     "seats": 4
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2010_Australian_federal_election"
+  },
+  {
+   "name": "2007 Federal Election",
+   "date": "2007-11-24",
+   "fractions": [
+    {
+     "id": "alp",
+     "seats": 83
+    },
+    {
+     "id": "lib",
+     "seats": 55
+    },
+    {
+     "id": "nat",
+     "seats": 10
+    },
+    {
+     "id": "ind",
+     "seats": 2
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2007_Australian_federal_election"
+  },
+  {
+   "name": "2004 Federal Election",
+   "date": "2004-10-09",
+   "fractions": [
+    {
+     "id": "alp",
+     "seats": 60
+    },
+    {
+     "id": "lib",
+     "seats": 74
+    },
+    {
+     "id": "clp",
+     "seats": 1
+    },
+    {
+     "id": "nat",
+     "seats": 12
+    },
+    {
+     "id": "ind",
+     "seats": 3
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2004_Australian_federal_election"
+  },
+  {
+   "name": "2001 Federal Election",
+   "date": "2001-11-10",
+   "fractions": [
+    {
+     "id": "alp",
+     "seats": 65
+    },
+    {
+     "id": "lib",
+     "seats": 68
+    },
+    {
+     "id": "clp",
+     "seats": 1
+    },
+    {
+     "id": "nat",
+     "seats": 13
+    },
+    {
+     "id": "ind",
+     "seats": 3
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2001_Australian_federal_election"
+  },
+  {
+   "name": "1998 Federal Election",
+   "date": "1998-10-03",
+   "fractions": [
+    {
+     "id": "alp",
+     "seats": 67
+    },
+    {
+     "id": "lib",
+     "seats": 64
+    },
+    {
+     "id": "nat",
+     "seats": 16
+    },
+    {
+     "id": "ind",
+     "seats": 1
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/1998_Australian_federal_election"
+  }
+ ]
+}
