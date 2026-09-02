@@ -127,6 +127,9 @@ function importJSON(text) {
 			}
 		}
 
+		// sort parliaments by date on load
+		obj.parliaments.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+
 		for (const q of (obj.parliaments || [])) {
 			for (const f of q.fractions) {
 				f.id = parties.findIndex(q => q && q.id === f.id);

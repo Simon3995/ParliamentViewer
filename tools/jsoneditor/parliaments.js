@@ -6,6 +6,10 @@ function add_plm(data, suppressRefresh = false) {
 
 	div_plms.insertAdjacentHTML('beforeend', `
 		<div id="plm-${id}" class="plm">
+			<div class="move-arrows">
+				<button onclick="move_plm(${id}, -1)">▲</button>
+				<button onclick="move_plm(${id},  1)">▼</button>
+			</div>
 			<div class="row"><label>Name:</label><input type="text" value="${esc(q.name || '')}" onchange="rename_parliament(${id}, this.value)"></div>
 			<div class="row"><label>Date (YYYY-MM-DD):</label><input type="text" value="${esc(q.date || '')}" onchange="plms[${id}].date=this.value"></div>
 			<div class="row"><label>Source:</label><textarea rows="2" cols="40" onchange="plms[${id}].source=this.value">${esc(q.source || '')}</textarea>
@@ -22,6 +26,16 @@ function add_plm(data, suppressRefresh = false) {
 	if (suppressRefresh) return;
 }
 
+// move a parliament up or down one step in the list
+function move_plm(plm_id, direction) {
+    console.log("plm_id", plm_id);
+	console.log("direction", direction);
+	const target = plm_id + direction;
+    if (target < 0 || target >= plms.length) return;
+    [plms[plm_id], plms[target]] = [plms[target], plms[plm_id]];
+    rebuild_plms();
+}
+
 function rename_parliament(id, newName) {
 	plms[id].name = newName;
 	document.querySelectorAll(`[data-plm-ref="${id}"]`).forEach(s => s.textContent = newName);
@@ -33,4 +47,15 @@ function delete_plm(id) {
 	if (!confirm(`Delete parliament "${plm.name}"?`)) return;
 	document.getElementById('plm-' + id).remove();
 	delete plms[id];
+}
+
+// Helper function to re-render the list of parliaments after reordering
+function rebuild_plms() {
+    div_plms.innerHTML = '';
+    const current_plms = [...plms];
+    plms.length = 0; // Clear the array to rebuild with fresh indices
+    
+    for (const data of current_plms) {
+        add_plm(data, true);
+    }
 }
