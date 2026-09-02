@@ -20,7 +20,7 @@ function addFraction(plm_id, data) {
 	}
 
 	el.innerHTML = `
-		<div class="fraction-arrows">
+		<div class="move-arrows">
 			<button onclick="move_fraction(${plm_id}, ${fraction_id}, -1)">▲</button>
 			<button onclick="move_fraction(${plm_id}, ${fraction_id},  1)">▼</button>
 		</div>
