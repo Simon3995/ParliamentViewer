@@ -857,6 +857,10 @@
   "country": "nz",
   "parties": [
    {
+    "id": "a",
+    "src": "/logos/nz/a.png"
+   },
+   {
     "id": "act",
     "src": "/logos/nz/act.png"
    },
@@ -869,6 +873,10 @@
     "src": "/logos/nz/lab.png"
    },
    {
+    "id": "mana",
+    "src": "/logos/nz/mana.png"
+   },
+   {
     "id": "maori",
     "src": "/logos/nz/maori.png"
    },
@@ -879,6 +887,18 @@
    {
     "id": "nzf",
     "src": "/logos/nz/nzf.png"
+   },
+   {
+    "id": "prog",
+    "src": "/logos/nz/prog.png"
+   },
+   {
+    "id": "uf",
+    "src": "/logos/nz/uf.png"
+   },
+   {
+    "id": "unz",
+    "src": "/logos/nz/unz.png"
    }
   ]
  },
