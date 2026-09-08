@@ -50,6 +50,41 @@
    "fullname_en": "Te Pāti Māori",
    "color": "#000000",
    "image": "/logos/nz/maori.png"
+  },
+  "uf": {
+   "name": "UF",
+   "fullname": "United Future New Zealand",
+   "fullname_en": "United Future New Zealand",
+   "color": "#5b0093",
+   "image": "/logos/nz/uf.png"
+  },
+  "mana": {
+   "color": "#770808",
+   "name": "Mana",
+   "fullname": "Mana Movement",
+   "fullname_en": "Mana Movement",
+   "image": "/logos/nz/mana.png"
+  },
+  "prog": {
+   "name": "Prog",
+   "fullname": "Jim Anderton's Progressive Party",
+   "fullname_en": "Jim Anderton's Progressive Party",
+   "color": "#9b2c2c",
+   "image": "/logos/nz/prog.png"
+  },
+  "unz": {
+   "name": "UNZ",
+   "fullname": "United New Zealand",
+   "fullname_en": "United New Zealand",
+   "color": "#663377",
+   "image": "/logos/nz/unz.png"
+  },
+  "a": {
+   "name": "A",
+   "fullname": "Alliance",
+   "fullname_en": "Alliance",
+   "color": "#0b8a77",
+   "image": "/logos/nz/a.png"
   }
  },
  "parliaments": [
@@ -83,6 +118,278 @@
      "seats": 8
     }
    ]
+  },
+  {
+   "name": "2020 General Election",
+   "date": "2020-10-17",
+   "fractions": [
+    {
+     "id": "green",
+     "seats": 10
+    },
+    {
+     "id": "maori",
+     "seats": 2
+    },
+    {
+     "id": "lab",
+     "seats": 65
+    },
+    {
+     "id": "nats",
+     "seats": 33
+    },
+    {
+     "id": "act",
+     "seats": 10
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2020_New_Zealand_general_election"
+  },
+  {
+   "name": "2017 General Election",
+   "date": "2017-09-23",
+   "fractions": [
+    {
+     "id": "green",
+     "seats": 8
+    },
+    {
+     "id": "lab",
+     "seats": 46
+    },
+    {
+     "id": "nats",
+     "seats": 56
+    },
+    {
+     "id": "act",
+     "seats": 1
+    },
+    {
+     "id": "nzf",
+     "seats": 9
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2017_New_Zealand_general_election"
+  },
+  {
+   "name": "2014 General Election",
+   "date": "2014-09-20",
+   "fractions": [
+    {
+     "id": "green",
+     "seats": 14
+    },
+    {
+     "id": "maori",
+     "seats": 2
+    },
+    {
+     "id": "lab",
+     "seats": 32
+    },
+    {
+     "id": "uf",
+     "seats": 1
+    },
+    {
+     "id": "nats",
+     "seats": 60
+    },
+    {
+     "id": "act",
+     "seats": 1
+    },
+    {
+     "id": "nzf",
+     "seats": 11
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2014_New_Zealand_general_election"
+  },
+  {
+   "name": "2011 General Election",
+   "date": "2011-11-26",
+   "fractions": [
+    {
+     "id": "mana",
+     "seats": 1
+    },
+    {
+     "id": "green",
+     "seats": 14
+    },
+    {
+     "id": "maori",
+     "seats": 3
+    },
+    {
+     "id": "lab",
+     "seats": 34
+    },
+    {
+     "id": "uf",
+     "seats": 1
+    },
+    {
+     "id": "nats",
+     "seats": 59
+    },
+    {
+     "id": "act",
+     "seats": 1
+    },
+    {
+     "id": "nzf",
+     "seats": 8
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2011_New_Zealand_general_election"
+  },
+  {
+   "name": "2008 General Election",
+   "date": "2008-11-08",
+   "fractions": [
+    {
+     "id": "green",
+     "seats": 9
+    },
+    {
+     "id": "maori",
+     "seats": 5
+    },
+    {
+     "id": "prog",
+     "seats": 1
+    },
+    {
+     "id": "lab",
+     "seats": 43
+    },
+    {
+     "id": "uf",
+     "seats": 1
+    },
+    {
+     "id": "nats",
+     "seats": 58
+    },
+    {
+     "id": "act",
+     "seats": 5
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2008_New_Zealand_general_election"
+  },
+  {
+   "name": "2005 General Election",
+   "date": "2005-09-17",
+   "fractions": [
+    {
+     "id": "green",
+     "seats": 6
+    },
+    {
+     "id": "maori",
+     "seats": 4
+    },
+    {
+     "id": "prog",
+     "seats": 1
+    },
+    {
+     "id": "lab",
+     "seats": 50
+    },
+    {
+     "id": "uf",
+     "seats": 3
+    },
+    {
+     "id": "nats",
+     "seats": 48
+    },
+    {
+     "id": "act",
+     "seats": 2
+    },
+    {
+     "id": "nzf",
+     "seats": 7
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2005_New_Zealand_general_election"
+  },
+  {
+   "name": "2002 General Election",
+   "date": "2002-07-27",
+   "fractions": [
+    {
+     "id": "green",
+     "seats": 9
+    },
+    {
+     "id": "prog",
+     "seats": 2
+    },
+    {
+     "id": "lab",
+     "seats": 52
+    },
+    {
+     "id": "uf",
+     "seats": 8
+    },
+    {
+     "id": "nats",
+     "seats": 27
+    },
+    {
+     "id": "act",
+     "seats": 9
+    },
+    {
+     "id": "nzf",
+     "seats": 13
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/2002_New_Zealand_general_election"
+  },
+  {
+   "name": "1999 General Election",
+   "date": "1999-11-27",
+   "fractions": [
+    {
+     "id": "green",
+     "seats": 7
+    },
+    {
+     "id": "a",
+     "seats": 10
+    },
+    {
+     "id": "lab",
+     "seats": 49
+    },
+    {
+     "id": "unz",
+     "seats": 1
+    },
+    {
+     "id": "nats",
+     "seats": 39
+    },
+    {
+     "id": "act",
+     "seats": 9
+    },
+    {
+     "id": "nzf",
+     "seats": 5
+    }
+   ],
+   "source": "https://en.wikipedia.org/wiki/1999_New_Zealand_general_election"
   }
  ]
 }
