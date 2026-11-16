@@ -498,6 +498,6 @@ span.info { background: url(./icons/info.svg) no-repeat; }
 
 @font-face {
 	font-family: 'Noto Color Emoji Flags';
-	src: url('noto-color-emoji-flags/dist/noto-color-emoji-flags.woff2') format('woff2');
+	src: url('./fonts/noto-color-emoji-flags.woff2') format('woff2');
 	font-display: swap;
 }
