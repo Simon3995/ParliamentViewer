@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: Atkinson, sans-serif;
+	font-family: 'Noto Color Emoji Flags', Atkinson, sans-serif;
 }
 
 /* MOBILE / COMPACT VERSION */
@@ -136,7 +136,7 @@ hr {
 }
 
 .small {
-	font-size: 15px;
+	font-size: 14px;
 }
 
 .small p {
@@ -148,7 +148,7 @@ hr {
 }
 
 #welcome p {
-	margin: 16px 0px;
+	margin: 14px 0px;
 }
 
 #welcome hr {
@@ -491,4 +491,10 @@ span.info { background: url(./icons/info.svg) no-repeat; }
 	font-family: Atkinson;
 	src: url(./fonts/AtkinsonHyperlegible-Bold.ttf);
 	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'Noto Color Emoji Flags';
+	src: url('noto-color-emoji-flags/dist/noto-color-emoji-flags.woff2') format('woff2');
+	font-display: swap;
 }
