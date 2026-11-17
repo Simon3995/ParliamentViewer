@@ -101,7 +101,7 @@
 
 	#welcome div {
 		background-color: #483d8b;
-		padding: 20px 30px;
+		padding: 16px 30px;
 		border: 5px solid #2a273d;
 		filter: drop-shadow(5px 5px 0px #2a273d);
 		width: 700px;
@@ -144,11 +144,11 @@ hr {
 }
 
 #welcome h2 {
-	margin-bottom: 8px;
+	margin: 8px 0px;
 }
 
 #welcome p {
-	margin: 14px 0px;
+	margin: 10px 0px;
 }
 
 #welcome hr {
