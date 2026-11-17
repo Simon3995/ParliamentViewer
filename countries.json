@@ -17,5 +17,8 @@
 	"uk": "🇬🇧 United Kingdom",
 	"us": "🇺🇸 United States",
 
-	"general": "General"
+	"misc": "Miscellaneous",
+	"mtg": "Magic: the Gathering",
+	"political": "Political",
+	"religion": "Religion"
 }
